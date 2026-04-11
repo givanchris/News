@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daily Brief — Christopher Givan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --white:   #ffffff;
+      --off:     #f5f7fa;
+      --light:   #edf1f8;
+      --border:  #d8dfe9;
+      --navy:    #0e2240;
+      --navy2:   #152d52;
+      --navy3:   #1c3a68;
+      --blue:    #1a5fd4;
+      --blue2:   #2e74e8;
+      --blue-lt: #e8f0fc;
+      --text:    #0e2240;
+      --muted:   #5a6f87;
+      --green:   #117a44;
+      --green-lt:#e4f4ec;
+      --red:     #bf3232;
+      --red-lt:  #fce8e8;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--white);
+      color: var(--text);
+      font-family: 'Barlow', system-ui, sans-serif;
+      font-size: 15px;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 200;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 3rem;
+      height: 56px;
+      background: rgba(255,255,255,0.94);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px; height: 36px;
+      border: 1.5px solid var(--navy);
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 800;
+      color: var(--navy);
+      text-decoration: none;
+      letter-spacing: 0.04em;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2.5rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      font-weight: 500;
+      color: var(--muted);
+      text-decoration: none;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      transition: color 0.15s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active { color: var(--navy); }
+
+    .nav-cta {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      padding: 0.45rem 1rem;
+      border: 1.5px solid var(--navy);
+      color: var(--navy);
+      text-decoration: none;
+      transition: all 0.15s;
+    }
+
+    .nav-cta:hover { background: var(--navy); color: var(--white); }
+
+    /* ── BRIEF HERO ── */
+    .brief-hero {
+      background: var(--navy);
+      padding-top: 56px;
+    }
+
+    .brief-hero-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 3.5rem 3rem 0;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .brief-eyebrow {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--blue2);
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .brief-eyebrow::before {
+      content: '';
+      display: inline-block;
+      width: 22px;
+      height: 1.5px;
+      background: var(--blue2);
+    }
+
+    .brief-hero-title {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800;
+      font-size: clamp(3.5rem, 7vw, 6rem);
+      line-height: 0.9;
+      letter-spacing: -0.01em;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 1.25rem;
+    }
+
+    .brief-hero-title span { color: var(--blue2); }
+
+    .brief-hero-meta {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      padding-bottom: 2rem;
+    }
+
+    .brief-date-display {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.45);
+      letter-spacing: 0.05em;
+    }
+
+    .brief-updated-display {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.68rem;
+      color: rgba(255,255,255,0.3);
+      letter-spacing: 0.04em;
+    }
+
+    .brief-stale-badge {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.65rem;
+      color: #e8a030;
+      letter-spacing: 0.04em;
+    }
+
+    .brief-hero-nav {
+      display: flex;
+      gap: 0;
+      border: 1px solid var(--navy3);
+      align-self: flex-end;
+      margin-bottom: 2rem;
+    }
+
+    .brief-nav-tab {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.5rem 1.1rem;
+      color: rgba(255,255,255,0.3);
+      text-decoration: none;
+      border-right: 1px solid var(--navy3);
+      transition: all 0.15s;
+      cursor: pointer;
+    }
+
+    .brief-nav-tab:last-child { border-right: none; }
+    .brief-nav-tab:hover { color: var(--white); background: rgba(255,255,255,0.05); }
+    .brief-nav-tab.active { color: var(--blue2); background: rgba(46,116,232,0.08); }
+
+    /* ── MARKET STRIP ── */
+    .mkt-strip {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      border-bottom: 1px solid var(--navy3);
+      border-top: 1px solid var(--navy3);
+      background: var(--navy);
+    }
+
+    .mkt-tile {
+      padding: 1rem 1.5rem;
+      border-right: 1px solid var(--navy3);
+      background: rgba(0,0,0,0.15);
+    }
+
+    .mkt-tile:last-child { border-right: none; }
+
+    .mkt-ticker {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.58rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+      margin-bottom: 0.3rem;
+    }
+
+    .mkt-price {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--white);
+      line-height: 1;
+    }
+
+    .mkt-chg {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.67rem;
+      margin-top: 0.2rem;
+    }
+
+    .up   { color: #3ec97a; }
+    .down { color: #e05a5a; }
+    .flat { color: rgba(255,255,255,0.3); }
+
+    /* ── BRIEF BODY (navy section) ── */
+    .brief-section { background: var(--navy); }
+
+    .brief-body {
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+
+    .brief-main {
+      padding: 2rem 2.5rem 2.5rem;
+      border-right: 1px solid var(--navy3);
+    }
+
+    .brief-sidebar {
+      padding: 1.75rem 1.5rem;
+    }
+
+    .brief-col-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.3);
+      margin-bottom: 1rem;
+      padding-bottom: 0.6rem;
+      border-bottom: 1px solid var(--navy3);
+    }
+
+    /* Stories */
+    .b-story {
+      padding: 1.1rem 0;
+      border-bottom: 1px solid var(--navy3);
+    }
+
+    .b-story:last-child { border-bottom: none; }
+
+    .b-cat {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.57rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--blue2);
+      margin-bottom: 0.3rem;
+    }
+
+    .b-hed {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--white);
+      line-height: 1.1;
+      margin-bottom: 0.4rem;
+    }
+
+    .b-body {
+      font-size: 0.86rem;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.7;
+    }
+
+    /* Sports sidebar */
+    .sport-item {
+      padding: 0.85rem 0;
+      border-bottom: 1px solid var(--navy3);
+    }
+
+    .sport-item:last-child { border-bottom: none; }
+
+    .sport-name {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--white);
+      letter-spacing: 0.02em;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .s-pill {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.55rem;
+      padding: 0.1rem 0.32rem;
+      border-radius: 2px;
+      letter-spacing: 0.04em;
+    }
+
+    .s-w  { background: rgba(62,201,122,0.15); color: #3ec97a; }
+    .s-l  { background: rgba(224,90,90,0.15);  color: #e05a5a; }
+    .s-up { background: rgba(46,116,232,0.15); color: var(--blue2); }
+
+    .sport-detail {
+      font-size: 0.76rem;
+      color: rgba(255,255,255,0.4);
+      line-height: 1.5;
+    }
+
+    /* Watch bar */
+    .brief-watch {
+      background: rgba(0,0,0,0.2);
+      border-top: 1px solid var(--navy3);
+      padding: 1rem 2.5rem;
+      display: flex;
+      gap: 2rem;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      max-width: 100%;
+    }
+
+    .watch-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--blue2);
+      white-space: nowrap;
+      padding-top: 0.1rem;
+    }
+
+    .watch-items {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .watch-item {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.4);
+      display: flex;
+      align-items: baseline;
+      gap: 0.4rem;
+    }
+
+    .watch-item::before {
+      content: '→';
+      color: var(--blue2);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.65rem;
+    }
+
+    /* ── DEEP DIVE ── */
+    .deep-dive {
+      background: var(--white);
+      border-top: 3px solid var(--blue);
+    }
+
+    .deep-dive-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 4rem 3rem;
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    .deep-dive-left {
+      position: sticky;
+      top: 80px;
+    }
+
+    .deep-dive-eyebrow {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.62rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 0.6rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .deep-dive-eyebrow::before {
+      content: '';
+      width: 20px;
+      height: 1.5px;
+      background: var(--blue);
+      display: inline-block;
+    }
+
+    .deep-dive-label {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 2rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--navy);
+      line-height: 0.95;
+      margin-bottom: 1rem;
+      letter-spacing: -0.01em;
+    }
+
+    .deep-dive-label span { color: var(--blue); }
+
+    .deep-dive-readtime {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      padding: 0.3rem 0.7rem;
+      border: 1px solid var(--border);
+      display: inline-block;
+    }
+
+    .deep-dive-title {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: clamp(1.75rem, 3vw, 2.5rem);
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--navy);
+      line-height: 1;
+      letter-spacing: -0.01em;
+      margin-bottom: 2rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .deep-dive-body p {
+      font-size: 0.97rem;
+      color: var(--muted);
+      line-height: 1.85;
+      margin-bottom: 1.25rem;
+    }
+
+    .deep-dive-body p:last-child { margin-bottom: 0; }
+
+    /* ── LOADING / ERROR ── */
+    .brief-no-data {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.2);
+      padding: 1.5rem 0;
+      letter-spacing: 0.04em;
+    }
+
+    /* ── TICKER ── */
+    .ticker-wrap {
+      background: var(--navy);
+      border-top: 1px solid var(--navy3);
+      padding: 0.6rem 0;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .ticker-track {
+      display: inline-block;
+      animation: ticker 30s linear infinite;
+    }
+
+    .ticker-track span {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.2);
+      padding: 0 2.5rem;
+    }
+
+    .ticker-track span.accent { color: var(--blue2); }
+
+    @keyframes ticker {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--navy);
+      border-top: 1px solid var(--navy3);
+      padding: 1.5rem 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    footer .f-left, footer .f-right {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.05em;
+      color: rgba(255,255,255,0.25);
+    }
+
+    footer .f-logo {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: rgba(255,255,255,0.5);
+      letter-spacing: 0.06em;
+    }
+
+    ::-webkit-scrollbar { width: 5px; }
+    ::-webkit-scrollbar-track { background: var(--white); }
+    ::-webkit-scrollbar-thumb { background: var(--border); }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">CG</a>
+  <ul class="nav-links">
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#projects">Projects</a></li>
+    <li><a href="brief.html" class="active">Brief</a></li>
+    <li><a href="index.html#resume">Resume</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+  <a href="mailto:givanchris@icloud.com" class="nav-cta">Get in Touch →</a>
+</nav>
+
+<!-- BRIEF HERO -->
+<div class="brief-hero">
+  <div class="brief-hero-inner">
+    <div class="brief-hero-left">
+      <div class="brief-eyebrow">Markets · Macro · Geopolitics</div>
+      <h1 class="brief-hero-title">DAILY<br><span>BRIEF</span></h1>
+      <div class="brief-hero-meta">
+        <span class="brief-date-display" id="brief-date">—</span>
+        <span class="brief-updated-display" id="brief-meta"></span>
+      </div>
+    </div>
+    <div class="brief-hero-nav">
+      <a class="brief-nav-tab active" onclick="scrollToSection('brief-section', this)">Brief</a>
+      <a class="brief-nav-tab" onclick="scrollToSection('deep-dive-section', this)">Deep Dive</a>
+    </div>
+  </div>
+</div>
+
+<!-- MARKET STRIP -->
+<div class="mkt-strip">
+  <div class="mkt-tile">
+    <div class="mkt-ticker">S&amp;P 500</div>
+    <div class="mkt-price" id="sp500-price">—</div>
+    <div class="mkt-chg flat" id="sp500-chg">—</div>
+  </div>
+  <div class="mkt-tile">
+    <div class="mkt-ticker">Nasdaq</div>
+    <div class="mkt-price" id="nasdaq-price">—</div>
+    <div class="mkt-chg flat" id="nasdaq-chg">—</div>
+  </div>
+  <div class="mkt-tile">
+    <div class="mkt-ticker">10Y Yield</div>
+    <div class="mkt-price" id="yield-price">—</div>
+    <div class="mkt-chg flat" id="yield-chg">—</div>
+  </div>
+  <div class="mkt-tile">
+    <div class="mkt-ticker">WTI Crude</div>
+    <div class="mkt-price" id="wti-price">—</div>
+    <div class="mkt-chg flat" id="wti-chg">—</div>
+  </div>
+  <div class="mkt-tile">
+    <div class="mkt-ticker">Gold</div>
+    <div class="mkt-price" id="gold-price">—</div>
+    <div class="mkt-chg flat" id="gold-chg">—</div>
+  </div>
+  <div class="mkt-tile">
+    <div class="mkt-ticker">DXY</div>
+    <div class="mkt-price" id="dxy-price">—</div>
+    <div class="mkt-chg flat" id="dxy-chg">—</div>
+  </div>
+</div>
+
+<!-- BRIEF SECTION -->
+<div class="brief-section" id="brief-section">
+  <div class="brief-body">
+    <div class="brief-main">
+      <div class="brief-col-label">Finance · Macro · Geopolitics</div>
+      <div id="brief-stories"><p class="brief-no-data">Loading…</p></div>
+    </div>
+    <div class="brief-sidebar">
+      <div class="brief-col-label">Scoreboard</div>
+      <div id="brief-sports"><p class="brief-no-data">Loading…</p></div>
+    </div>
+  </div>
+  <div class="brief-watch" id="brief-watchlist"></div>
+</div>
+
+<!-- DEEP DIVE SECTION -->
+<div class="deep-dive" id="deep-dive-section">
+  <div class="deep-dive-inner">
+    <div class="deep-dive-left">
+      <div class="deep-dive-eyebrow">Daily Learning</div>
+      <div class="deep-dive-label">DEEP<br><span>DIVE</span></div>
+      <div class="deep-dive-readtime" id="deep-dive-readtime">Read: ~3 min</div>
+    </div>
+    <div class="deep-dive-right">
+      <div class="deep-dive-title" id="deep-dive-title">Loading…</div>
+      <div class="deep-dive-body" id="deep-dive-body"></div>
+    </div>
+  </div>
+</div>
+
+<!-- TICKER -->
+<div class="ticker-wrap">
+  <div class="ticker-track">
+    <span>Daily Brief</span><span class="accent">◆</span>
+    <span>Markets</span><span class="accent">◆</span>
+    <span>Macro</span><span class="accent">◆</span>
+    <span>Geopolitics</span><span class="accent">◆</span>
+    <span>Fixed Income</span><span class="accent">◆</span>
+    <span>Deep Dive</span><span class="accent">◆</span>
+    <span>Christopher Givan</span><span class="accent">◆</span>
+    <span>CU Boulder</span><span class="accent">◆</span>
+    <span>Daily Brief</span><span class="accent">◆</span>
+    <span>Markets</span><span class="accent">◆</span>
+    <span>Macro</span><span class="accent">◆</span>
+    <span>Geopolitics</span><span class="accent">◆</span>
+    <span>Fixed Income</span><span class="accent">◆</span>
+    <span>Deep Dive</span><span class="accent">◆</span>
+    <span>Christopher Givan</span><span class="accent">◆</span>
+    <span>CU Boulder</span><span class="accent">◆</span>
+  </div>
+</div>
+
+<footer>
+  <div class="f-left">© 2026 Christopher Givan</div>
+  <div class="f-logo">CG</div>
+  <div class="f-right">Economics · Finance · Markets</div>
+</footer>
+
+<script>
+(function () {
+  var DAYS   = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  var MONTHS = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+
+  function fmtDate(d) {
+    return DAYS[d.getDay()] + ', ' + MONTHS[d.getMonth()] + ' ' + d.getDate() + ', ' + d.getFullYear();
+  }
+
+  function setTile(id, data) {
+    var p = document.getElementById(id + '-price');
+    var c = document.getElementById(id + '-chg');
+    if (p) p.textContent = data.price;
+    if (c) { c.textContent = data.change; c.className = 'mkt-chg ' + (data.dir || 'flat'); }
+  }
+
+  function renderBrief(d) {
+    // Date
+    var dateEl = document.getElementById('brief-date');
+    if (dateEl) dateEl.textContent = fmtDate(new Date(d.lastUpdated));
+
+    // Last updated + stale check
+    var metaEl = document.getElementById('brief-meta');
+    if (metaEl) {
+      var updated  = new Date(d.lastUpdated);
+      var hoursAgo = (Date.now() - updated.getTime()) / 3600000;
+      var timeStr  = updated.toLocaleString('en-US', {
+        month: 'short', day: 'numeric',
+        hour: 'numeric', minute: '2-digit', timeZoneName: 'short'
+      });
+      metaEl.innerHTML = 'Updated ' + timeStr;
+      if (hoursAgo > 36) {
+        metaEl.innerHTML += ' &nbsp;<span class="brief-stale-badge">⚠ may be stale</span>';
+      }
+    }
+
+    // Market strip
+    var m = d.market || {};
+    ['sp500','nasdaq','yield','wti','gold','dxy'].forEach(function(k) {
+      if (m[k]) setTile(k, m[k]);
+    });
+
+    // Stories
+    var storiesEl = document.getElementById('brief-stories');
+    if (storiesEl && d.stories && d.stories.length) {
+      storiesEl.innerHTML = d.stories.map(function(s) {
+        return '<div class="b-story">'
+          + '<div class="b-cat">' + s.cat + '</div>'
+          + '<div class="b-hed">' + s.headline + '</div>'
+          + '<div class="b-body">' + s.body + '</div>'
+          + '</div>';
+      }).join('');
+    } else if (storiesEl) {
+      storiesEl.innerHTML = '<p class="brief-no-data">No stories yet — check back tonight at 7 PM MT.</p>';
+    }
+
+    // Sports
+    var sportsEl = document.getElementById('brief-sports');
+    if (sportsEl && d.sports && d.sports.length) {
+      sportsEl.innerHTML = d.sports.map(function(s) {
+        return '<div class="sport-item">'
+          + '<div class="sport-name">' + s.team
+          + ' <span class="s-pill ' + s.pillClass + '">' + s.pill + '</span></div>'
+          + '<div class="sport-detail">' + s.detail + '</div>'
+          + '</div>';
+      }).join('');
+    }
+
+    // Watchlist
+    var watchEl = document.getElementById('brief-watchlist');
+    if (watchEl && d.watchlist && d.watchlist.length) {
+      var items = d.watchlist.map(function(w) {
+        return '<span class="watch-item">' + w + '</span>';
+      }).join('');
+      watchEl.innerHTML = '<span class="watch-label">Watch →</span>'
+        + '<div class="watch-items">' + items + '</div>';
+    }
+
+    // Deep Dive
+    if (d.deepDive) {
+      var titleEl = document.getElementById('deep-dive-title');
+      var bodyEl  = document.getElementById('deep-dive-body');
+      var rtEl    = document.getElementById('deep-dive-readtime');
+      if (titleEl) titleEl.textContent = d.deepDive.title;
+      if (bodyEl && d.deepDive.content && d.deepDive.content.length) {
+        bodyEl.innerHTML = d.deepDive.content.map(function(p) {
+          return '<p>' + p + '</p>';
+        }).join('');
+        var wordCount = d.deepDive.content.join(' ').split(/\s+/).length;
+        var mins = Math.max(1, Math.round(wordCount / 200));
+        if (rtEl) rtEl.textContent = 'Read: ~' + mins + ' min';
+      }
+    }
+  }
+
+  function showError() {
+    var dateEl = document.getElementById('brief-date');
+    if (dateEl) dateEl.textContent = fmtDate(new Date());
+    var metaEl = document.getElementById('brief-meta');
+    if (metaEl) metaEl.innerHTML = '<span class="brief-stale-badge">Brief unavailable — check back tonight at 7 PM MT</span>';
+    var storiesEl = document.getElementById('brief-stories');
+    if (storiesEl) storiesEl.innerHTML = '<p class="brief-no-data">Could not load brief data.</p>';
+    var titleEl = document.getElementById('deep-dive-title');
+    if (titleEl) titleEl.textContent = 'Deep Dive unavailable';
+  }
+
+  fetch('data/brief.json?_=' + Date.now())
+    .then(function(r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then(renderBrief)
+    .catch(showError);
+})();
+
+function scrollToSection(id, tab) {
+  var el = document.getElementById(id);
+  if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  document.querySelectorAll('.brief-nav-tab').forEach(function(t) { t.classList.remove('active'); });
+  if (tab) tab.classList.add('active');
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,1131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Christopher Givan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --white:   #ffffff;
+      --off:     #f5f7fa;
+      --light:   #edf1f8;
+      --border:  #d8dfe9;
+      --navy:    #0e2240;
+      --navy2:   #152d52;
+      --navy3:   #1c3a68;
+      --blue:    #1a5fd4;
+      --blue2:   #2e74e8;
+      --blue-lt: #e8f0fc;
+      --text:    #0e2240;
+      --muted:   #5a6f87;
+      --green:   #117a44;
+      --green-lt:#e4f4ec;
+      --red:     #bf3232;
+      --red-lt:  #fce8e8;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--white);
+      color: var(--text);
+      font-family: 'Barlow', system-ui, sans-serif;
+      font-size: 15px;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 200;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 3rem;
+      height: 56px;
+      background: rgba(255,255,255,0.94);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px; height: 36px;
+      border: 1.5px solid var(--navy);
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 800;
+      color: var(--navy);
+      text-decoration: none;
+      letter-spacing: 0.04em;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2.5rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      font-weight: 500;
+      color: var(--muted);
+      text-decoration: none;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      transition: color 0.15s;
+    }
+
+    .nav-links a:hover { color: var(--navy); }
+
+    .nav-cta {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      padding: 0.45rem 1rem;
+      border: 1.5px solid var(--navy);
+      color: var(--navy);
+      text-decoration: none;
+      transition: all 0.15s;
+    }
+
+    .nav-cta:hover {
+      background: var(--navy);
+      color: var(--white);
+    }
+
+    /* ── HERO ── */
+    #hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 0 3rem;
+      background: var(--white);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      width: 100%;
+      padding-top: 56px;
+    }
+
+    .hero-eyebrow {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      color: var(--blue);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .hero-eyebrow::before {
+      content: '';
+      display: inline-block;
+      width: 28px;
+      height: 1.5px;
+      background: var(--blue);
+    }
+
+    .hero-name {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800;
+      font-size: clamp(5.5rem, 11vw, 9.5rem);
+      line-height: 0.88;
+      letter-spacing: -0.01em;
+      text-transform: uppercase;
+      color: var(--navy);
+      margin-bottom: 2.5rem;
+    }
+
+    .hero-name .line2 {
+      color: var(--blue);
+      display: block;
+    }
+
+    .hero-bottom {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: end;
+      border-top: 1px solid var(--border);
+      padding-top: 2rem;
+    }
+
+    .hero-bio {
+      font-size: 1.05rem;
+      color: var(--muted);
+      line-height: 1.75;
+    }
+
+    .hero-bio strong { color: var(--text); font-weight: 500; }
+
+    .hero-right-block {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      align-items: flex-start;
+    }
+
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 0.28rem 0.65rem;
+      border: 1px solid var(--border);
+      color: var(--muted);
+      background: var(--white);
+    }
+
+    .hero-btns {
+      display: flex;
+      gap: 0.75rem;
+    }
+
+    .btn {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      padding: 0.65rem 1.3rem;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      transition: all 0.15s;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .btn-navy  { background: var(--navy); color: var(--white); }
+    .btn-navy:hover { background: var(--navy2); }
+    .btn-outline { background: transparent; border: 1.5px solid var(--border); color: var(--text); }
+    .btn-outline:hover { border-color: var(--navy); color: var(--navy); }
+
+    /* ── ABOUT ── */
+    #about {
+      background: var(--navy);
+      padding: 0;
+    }
+
+    .about-bento {
+      display: grid;
+      grid-template-columns: 380px 1fr;
+      grid-template-rows: auto auto;
+      min-height: 560px;
+    }
+
+    /* Photo cell */
+    .about-photo-cell {
+      grid-row: 1 / 3;
+      position: relative;
+      overflow: hidden;
+      background: var(--navy2);
+    }
+
+    .about-photo-cell img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+      filter: grayscale(10%);
+    }
+
+    .about-photo-cell .photo-placeholder {
+      width: 100%;
+      height: 100%;
+      min-height: 560px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--navy3);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.06em;
+    }
+
+    /* Bio cell */
+    .about-bio-cell {
+      padding: 3.5rem 3.5rem 2.5rem;
+      border-bottom: 1px solid var(--navy3);
+    }
+
+    .about-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--blue2);
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .about-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--navy3);
+    }
+
+    .about-bio-cell h2 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 2.25rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--white);
+      letter-spacing: 0.01em;
+      margin-bottom: 1.5rem;
+      line-height: 1;
+    }
+
+    .about-bio-cell h2 span { color: var(--blue2); }
+
+    .about-text {
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.8;
+      margin-bottom: 0.85rem;
+      max-width: 560px;
+    }
+
+    .about-text strong { color: rgba(255,255,255,0.9); font-weight: 500; }
+
+    /* Facts row */
+    .about-facts-cell {
+      padding: 2rem 3.5rem;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+    }
+
+    .fact-tile {
+      padding: 0 1.5rem 0 0;
+      border-right: 1px solid var(--navy3);
+    }
+
+    .fact-tile:first-child { padding-left: 0; }
+    .fact-tile:last-child { border-right: none; padding-right: 0; padding-left: 1.5rem; }
+    .fact-tile:not(:first-child):not(:last-child) { padding-left: 1.5rem; }
+
+    .fact-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--blue2);
+      margin-bottom: 0.35rem;
+    }
+
+    .fact-value {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--white);
+      letter-spacing: 0.01em;
+      line-height: 1.2;
+    }
+
+    /* ── SECTION WRAPPER ── */
+    .section-white { background: var(--white); padding: 6rem 3rem; }
+    .section-off    { background: var(--off);   padding: 6rem 3rem; }
+    .section-navy   { background: var(--navy);  padding: 6rem 3rem; }
+
+    .inner { max-width: 1080px; margin: 0 auto; }
+
+    .section-eyebrow {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .section-eyebrow-light { color: var(--blue2); }
+    .section-eyebrow-light::after { background: var(--navy3) !important; }
+
+    .section-eyebrow::after {
+      content: '';
+      width: 40px;
+      height: 1px;
+      background: var(--border);
+    }
+
+    .section-heading {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800;
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      text-transform: uppercase;
+      letter-spacing: -0.01em;
+      line-height: 0.95;
+      margin-bottom: 2.5rem;
+    }
+
+    /* ── PROJECTS ── */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+    }
+
+    .project-card {
+      background: var(--white);
+      padding: 2rem;
+      min-height: 200px;
+      text-decoration: none;
+      display: block;
+      transition: background 0.15s;
+    }
+
+    .project-card:hover { background: var(--off); }
+
+    .project-cat {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 0.6rem;
+    }
+
+    .project-card h3 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.3rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--navy);
+    }
+
+    .project-card p {
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-top: 0.4rem;
+      line-height: 1.6;
+    }
+
+    .placeholder-card {
+      background: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 200px;
+      border: 1.5px dashed var(--border);
+    }
+
+    .placeholder-card span {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--border);
+    }
+
+    /* ── BRIEF ── */
+    #brief { background: var(--navy); }
+
+    .brief-header {
+      background: var(--navy);
+      border-bottom: 1px solid var(--navy3);
+      padding: 1.1rem 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .brief-badge {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.62rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--blue2);
+      border: 1px solid var(--navy3);
+      padding: 0.22rem 0.6rem;
+      background: rgba(255,255,255,0.04);
+    }
+
+    .brief-date {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      color: rgba(255,255,255,0.35);
+      letter-spacing: 0.04em;
+    }
+
+    /* Market strip */
+    .mkt-strip {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      border-bottom: 1px solid var(--navy3);
+    }
+
+    .mkt-tile {
+      padding: 1rem 1.5rem;
+      border-right: 1px solid var(--navy3);
+      background: rgba(0,0,0,0.15);
+    }
+
+    .mkt-tile:last-child { border-right: none; }
+
+    .mkt-ticker {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.58rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+      margin-bottom: 0.3rem;
+    }
+
+    .mkt-price {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: var(--white);
+      line-height: 1;
+    }
+
+    .mkt-chg {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.67rem;
+      margin-top: 0.2rem;
+    }
+
+    .up   { color: #3ec97a; }
+    .down { color: #e05a5a; }
+    .flat { color: rgba(255,255,255,0.3); }
+
+    /* Brief body */
+    .brief-body {
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+
+    .brief-main {
+      padding: 2rem 2.5rem;
+      border-right: 1px solid var(--navy3);
+    }
+
+    .brief-sidebar {
+      padding: 1.5rem;
+    }
+
+    .brief-col-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.3);
+      margin-bottom: 1rem;
+      padding-bottom: 0.6rem;
+      border-bottom: 1px solid var(--navy3);
+    }
+
+    .b-story {
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--navy3);
+    }
+
+    .b-story:last-child { border-bottom: none; }
+
+    .b-cat {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.57rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--blue2);
+      margin-bottom: 0.3rem;
+    }
+
+    .b-hed {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--white);
+      line-height: 1.1;
+      margin-bottom: 0.3rem;
+    }
+
+    .b-body {
+      font-size: 0.83rem;
+      color: rgba(255,255,255,0.5);
+      line-height: 1.65;
+    }
+
+    /* Sports sidebar */
+    .sport-item {
+      padding: 0.8rem 0;
+      border-bottom: 1px solid var(--navy3);
+    }
+
+    .sport-item:last-child { border-bottom: none; }
+
+    .sport-name {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--white);
+      letter-spacing: 0.02em;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .s-pill {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.55rem;
+      padding: 0.1rem 0.32rem;
+      border-radius: 2px;
+      letter-spacing: 0.04em;
+    }
+
+    .s-w   { background: rgba(62,201,122,0.15); color: #3ec97a; }
+    .s-l   { background: rgba(224,90,90,0.15);  color: #e05a5a; }
+    .s-up  { background: rgba(46,116,232,0.15); color: var(--blue2); }
+
+    .sport-detail {
+      font-size: 0.76rem;
+      color: rgba(255,255,255,0.4);
+      line-height: 1.5;
+    }
+
+    /* Watch bar */
+    .brief-watch {
+      background: rgba(0,0,0,0.2);
+      border-top: 1px solid var(--navy3);
+      padding: 1rem 2.5rem;
+      display: flex;
+      gap: 2rem;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+
+    .watch-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--blue2);
+      white-space: nowrap;
+      padding-top: 0.1rem;
+    }
+
+    .watch-items {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .watch-item {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.4);
+      display: flex;
+      align-items: baseline;
+      gap: 0.4rem;
+    }
+
+    .watch-item::before {
+      content: '→';
+      color: var(--blue2);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.65rem;
+    }
+
+    /* ── RESUME ── */
+    .resume-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      margin-top: 3rem;
+    }
+
+    .resume-col-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.62rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 1.25rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .re-entry { margin-bottom: 1.75rem; }
+
+    .re-date {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.62rem;
+      letter-spacing: 0.06em;
+      color: var(--blue);
+      margin-bottom: 0.3rem;
+    }
+
+    .re-entry h3 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--navy);
+      letter-spacing: 0.01em;
+    }
+
+    .re-org {
+      font-size: 0.88rem;
+      color: var(--muted);
+      margin-top: 0.2rem;
+    }
+
+    .re-entry ul {
+      padding-left: 1rem;
+      margin-top: 0.5rem;
+    }
+
+    .re-entry ul li {
+      font-size: 0.88rem;
+      color: var(--muted);
+      margin-bottom: 0.25rem;
+    }
+
+    /* ── CONTACT ── */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: start;
+    }
+
+    .contact-heading {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: clamp(2.5rem, 5vw, 4.5rem);
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--white);
+      line-height: 0.95;
+      margin-bottom: 1.5rem;
+    }
+
+    .contact-heading span { color: var(--blue2); }
+
+    .contact-sub {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.45);
+      line-height: 1.7;
+    }
+
+    .contact-links { margin-bottom: 1.5rem; }
+
+    .contact-link {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 0;
+      border-top: 1px solid var(--navy3);
+      text-decoration: none;
+      transition: opacity 0.15s;
+    }
+
+    .contact-link:last-child { border-bottom: 1px solid var(--navy3); }
+    .contact-link:hover { opacity: 0.65; }
+
+    .cl-name {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.3rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--white);
+      letter-spacing: 0.01em;
+    }
+
+    .cl-action {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.62rem;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.3);
+    }
+
+    .info-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--navy3);
+      padding: 1.5rem;
+    }
+
+    .info-card-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--blue2);
+      margin-bottom: 0.6rem;
+    }
+
+    .info-card-city {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 0.4rem;
+    }
+
+    .info-card-detail {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.4);
+      line-height: 1.6;
+    }
+
+    /* ── TICKER ── */
+    .ticker-wrap {
+      background: var(--navy);
+      border-top: 1px solid var(--navy3);
+      padding: 0.6rem 0;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .ticker-track {
+      display: inline-block;
+      animation: ticker 30s linear infinite;
+    }
+
+    .ticker-track span {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.2);
+      padding: 0 2.5rem;
+    }
+
+    .ticker-track span.accent { color: var(--blue2); }
+
+    @keyframes ticker {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--navy);
+      border-top: 1px solid var(--navy3);
+      padding: 1.5rem 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    footer .f-left, footer .f-right {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.05em;
+      color: rgba(255,255,255,0.25);
+    }
+
+    footer .f-logo {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: rgba(255,255,255,0.5);
+      letter-spacing: 0.06em;
+    }
+
+    hr.divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+
+    ::-webkit-scrollbar { width: 5px; }
+    ::-webkit-scrollbar-track { background: var(--white); }
+    ::-webkit-scrollbar-thumb { background: var(--border); }
+
+    /* ── BRIEF META ── */
+    .brief-updated {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.04em;
+      color: rgba(255,255,255,0.35);
+    }
+    .brief-stale {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.04em;
+      color: #e8a030;
+      margin-left: 0.75rem;
+    }
+    .brief-no-data {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.25);
+      padding: 2rem 0;
+      letter-spacing: 0.04em;
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#hero" class="nav-logo">CG</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="brief.html">Brief</a></li>
+    <li><a href="#resume">Resume</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="mailto:givanchris@icloud.com" class="nav-cta">Get in Touch →</a>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Economics · Finance · Markets</div>
+    <h1 class="hero-name">
+      CHRISTOPHER<br>
+      <span class="line2">GIVAN</span>
+    </h1>
+    <div class="hero-bottom">
+      <p class="hero-bio">
+        <strong>I'm finishing a BA in Economics</strong> at CU Boulder and heading into an MS in Finance &amp; Investment Management.
+        I focus on macro, markets, and the analytical side of capital allocation, where data meets decisions.
+      </p>
+      <div class="hero-right-block">
+        <div class="hero-tags">
+          <span class="tag">Macroeconomics</span>
+          <span class="tag">Investment Mgmt</span>
+          <span class="tag">Fixed Income</span>
+          <span class="tag">Markets</span>
+        </div>
+        <div class="hero-btns">
+          <a href="#projects" class="btn btn-navy">View Projects →</a>
+          <a href="brief.html" class="btn btn-outline">Daily Brief</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-bento">
+
+    <!-- Photo -->
+    <div class="about-photo-cell">
+      <img src="headshot.jpg" alt="Christopher Givan"
+           onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+      <div class="photo-placeholder" style="display:none;">Photo</div>
+    </div>
+
+    <!-- Bio -->
+    <div class="about-bio-cell">
+      <div class="about-label section-eyebrow-light">Background</div>
+      <h2>CHRISTOPHER <span>GIVAN</span></h2>
+      <p class="about-text">
+        I grew up on <strong>Mercer Island, Washington</strong> and moved to Colorado for my
+        <strong>BA in Economics</strong> at the University of Colorado Boulder, finishing in 2026.
+        I'm starting an <strong>MS in Finance &amp; Investment Management</strong> that same year.
+      </p>
+      <p class="about-text">
+        My focus is on how macroeconomic forces shape asset prices and capital flows.
+        I'm drawn to the analytical side, building models, reading the data, and understanding
+        what central banks are actually signaling versus what markets hear.
+      </p>
+      <p class="about-text">
+        This is my working space. I share daily market briefs, projects, and research here as I develop them.
+      </p>
+    </div>
+
+    <!-- Facts row -->
+    <div class="about-facts-cell">
+      <div class="fact-tile">
+        <div class="fact-label">Hometown</div>
+        <div class="fact-value">Mercer Island, WA</div>
+      </div>
+      <div class="fact-tile">
+        <div class="fact-label">Current</div>
+        <div class="fact-value">Boulder, CO</div>
+      </div>
+      <div class="fact-tile">
+        <div class="fact-label">BA Economics</div>
+        <div class="fact-value">CU Boulder · 2026</div>
+      </div>
+      <div class="fact-tile">
+        <div class="fact-label">MS Finance</div>
+        <div class="fact-value">Starting 2026</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<div class="section-white" id="projects">
+  <div class="inner">
+    <div class="section-eyebrow">Projects</div>
+    <div class="section-heading" style="color:var(--navy);">WORK</div>
+    <div class="projects-grid">
+
+      <a href="brief.html" class="project-card">
+        <div class="project-cat">Automation · Data</div>
+        <h3>Daily Brief Pipeline</h3>
+        <p>I built an automated nightly pipeline that pulls macro news, market closes, and sports scores into a structured JSON feed, rendered live on brief.html every evening at 7 PM MT.</p>
+      </a>
+
+      <div class="project-card" style="cursor:default;">
+        <div class="project-cat">Research · Fixed Income</div>
+        <h3>Fed Signal Tracker</h3>
+        <p>I'm cross-referencing FOMC statement language shifts against subsequent rate moves and yield curve behavior, identifying which forward-guidance phrases carry the most predictive weight. In progress.</p>
+      </div>
+
+      <div class="placeholder-card"><span>More Coming</span></div>
+
+    </div>
+  </div>
+</div>
+
+<!-- RESUME -->
+<div class="section-off" id="resume">
+  <div class="inner">
+    <div class="section-eyebrow">Resume</div>
+    <div class="section-heading" style="color:var(--navy);">EXPERIENCE</div>
+    <div class="resume-grid">
+      <div>
+        <div class="resume-col-label">Education</div>
+        <div class="re-entry">
+          <div class="re-date">2026 – 2027 (Expected)</div>
+          <h3>MS in Finance &amp; Investment Management</h3>
+          <div class="re-org">To be announced</div>
+        </div>
+        <div class="re-entry">
+          <div class="re-date">2022 – 2026</div>
+          <h3>BA in Economics</h3>
+          <div class="re-org">University of Colorado Boulder · In Progress</div>
+        </div>
+      </div>
+      <div>
+        <div class="resume-col-label">Skills &amp; Focus Areas</div>
+        <div class="re-entry">
+          <ul>
+            <li>Macroeconomic analysis &amp; monetary policy</li>
+            <li>Financial modeling &amp; valuation</li>
+            <li>Quantitative methods &amp; data analysis</li>
+            <li>Market research &amp; investment thesis development</li>
+            <li>Fixed income &amp; equity markets</li>
+          </ul>
+        </div>
+        <div style="margin-top:1.5rem;">
+          <a href="/resume.pdf" target="_blank" class="btn btn-navy">View Resume →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<div class="section-navy" id="contact">
+  <div class="inner">
+    <div class="contact-grid">
+      <div>
+        <div class="contact-heading">LET'S<br><span>CONNECT</span></div>
+        <p class="contact-sub">I'm open to conversations about finance, markets, research, and opportunities. Reach out directly.</p>
+      </div>
+      <div>
+        <div class="contact-links">
+          <a href="mailto:givanchris@icloud.com" class="contact-link">
+            <span class="cl-name">Email</span>
+            <span class="cl-action">Direct →</span>
+          </a>
+          <a href="https://www.linkedin.com/in/christopher-givan-b216a4267" target="_blank" class="contact-link">
+            <span class="cl-name">LinkedIn</span>
+            <span class="cl-action">Connect →</span>
+          </a>
+          <a href="/resume.pdf" target="_blank" class="contact-link">
+            <span class="cl-name">Resume</span>
+            <span class="cl-action">View →</span>
+          </a>
+        </div>
+        <div class="info-card">
+          <div class="info-card-label">// Based In</div>
+          <div class="info-card-city">Boulder, Colorado</div>
+          <div class="info-card-detail">
+            BA Economics · Graduating 2026<br>
+            MS Finance &amp; Investment Management · Starting 2026
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TICKER -->
+<div class="ticker-wrap">
+  <div class="ticker-track">
+    <span>Christopher Givan</span><span class="accent">◆</span>
+    <span>Economics</span><span class="accent">◆</span>
+    <span>Finance</span><span class="accent">◆</span>
+    <span>Investment Management</span><span class="accent">◆</span>
+    <span>Macroeconomics</span><span class="accent">◆</span>
+    <span>Capital Markets</span><span class="accent">◆</span>
+    <span>CU Boulder</span><span class="accent">◆</span>
+    <span>Mercer Island</span><span class="accent">◆</span>
+    <span>Christopher Givan</span><span class="accent">◆</span>
+    <span>Economics</span><span class="accent">◆</span>
+    <span>Finance</span><span class="accent">◆</span>
+    <span>Investment Management</span><span class="accent">◆</span>
+    <span>Macroeconomics</span><span class="accent">◆</span>
+    <span>Capital Markets</span><span class="accent">◆</span>
+    <span>CU Boulder</span><span class="accent">◆</span>
+    <span>Mercer Island</span><span class="accent">◆</span>
+  </div>
+</div>
+
+<footer>
+  <div class="f-left">© 2026 Christopher Givan</div>
+  <div class="f-logo">CG</div>
+  <div class="f-right">Economics · Finance · Markets</div>
+</footer>
+
+
+</body>
+</html>
