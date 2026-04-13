@@ -1,1 +1,31 @@
-[paste the entire JSON block here]
+{
+  "updated": "2026-04-12T20:10:09-06:00",
+  "market": {
+    "sp500": {"price": "6,816", "change": "▼ 8.52 (-0.12%)", "dir": "down"},
+    "nasdaq": {"price": "13,401", "change": "▼ 45.23 (-0.34%)", "dir": "down"},
+    "yield": {"price": "4.23%", "change": "▲ 0.08", "dir": "up"},
+    "wti": {"price": "$82.45", "change": "▲ 1.23 (1.52%)", "dir": "up"},
+    "gold": {"price": "$2,412", "change": "▲ 18 (0.75%)", "dir": "up"},
+    "dxy": {"price": "105.32", "change": "▲ 0.31 (0.29%)", "dir": "up"}
+  },
+  "stories": [
+    {"cat": "GEOPOLITICS", "headline": "Iran negotiations collapse; market futures drop on Middle East uncertainty", "body": "Peace talks between U.S. and Iranian officials broke down, prompting futures markets to decline and widening risk premia. Oil and gold prices surged as investors seek safe-haven assets. Elevated uncertainty around energy supply and military escalation is weighing on equities and broad risk sentiment this week."},
+    {"cat": "MACRO", "headline": "Fed holds rates steady; inflation expectations jump in recent survey", "body": "The Federal Reserve maintained its target range at 3.50–3.75% through March, holding pat amid mixed economic signals. New York Fed consumer inflation expectations ticked up sharply, driven by energy price concerns tied to Middle East developments. Labor gains remain soft, keeping the rate path uncertain."},
+    {"cat": "MACRO", "headline": "Central banks diverge on policy; divergence creating asset class opportunities", "body": "Global monetary authorities are moving at different speeds—some still tightening while others prepare to pivot. This divergence is driving relative value opportunities in cross-asset pairs and currency markets. Investors must carefully track policy telegraphing from major central banks."},
+    {"cat": "TECH", "headline": "AI capex supercycle continues; double-digit earnings growth likely this year", "body": "Record capital expenditure on artificial intelligence infrastructure and model training is fueling technology earnings growth. Analysts project double-digit S&P 500 earnings growth for the third consecutive year in 2026. CoreWeave shares surged 10.87% on strong customer backlog reports."},
+    {"cat": "ENERGY", "headline": "Energy sector surges 37.91% in Q1; crude and natural gas rally on supply fears", "body": "Oil and energy equities were the clear winners in Q1 2026, up 37.91% as Middle East tensions drive supply concerns. WTI crude broke above $82, with geopolitical risk premia fully embedded in forward contracts. Investors rotating into energy as inflation hedge."},
+    {"cat": "MARKETS", "headline": "Big banks kick off earnings season; Goldman, JPMorgan, Citi report this week", "body": "Goldman Sachs, Citigroup, JPMorgan Chase, and Morgan Stanley are among the first to report Q1 results. Earnings season will clarify credit stress, trading revenue, and wealth management trends. Markets are pricing in resilient profitability despite rate uncertainty."},
+    {"cat": "MARKETS", "headline": "Grantham warns AI bubble poses severe downside risk to equities", "body": "Jeremy Grantham, GMO co-founder, told investors the AI boom masks deeper structural risks and a \"slim to none\" chance the bubble avoids bursting. He predicts a potential crash to 1920s-style bear market lows. His commentary has sparked debate among value and growth investors."}
+  ],
+  "sports": [],
+  "deepDive": {
+    "title": "Duration Risk: The Bond Market's Hidden Leverage",
+    "content": [
+      "Duration measures how sensitive a bond's price is to changes in interest rates. Formally, it quantifies the percentage change in a bond's price for each 1% change in yield. A bond with 5-year duration will fall roughly 5% in price if yields rise 1%, and rise 5% if yields fall 1%. This simple leverage exists even in high-grade government securities, yet many investors underestimate its impact on portfolio volatility.",
+      "Duration risk becomes particularly acute during periods of rate uncertainty. When the Federal Reserve signals rate hikes, investors holding longer-dated bonds face immediate mark-to-market losses. For example, a 10-year Treasury with 9 years of duration can depreciate sharply if the market reprices inflation expectations or growth forecasts. Conversely, in a risk-off environment where rates plummet, duration becomes an asset: high-duration bonds deliver outsized capital gains. This asymmetry is why duration positioning matters as much as credit selection in fixed income portfolios.",
+      "The duration calculation incorporates coupon timing and yield-to-maturity, making it more nuanced than simple maturity. A 30-year zero-coupon bond has high duration because all cash flows arrive at maturity, while a high-coupon bond of the same maturity has lower duration because cash arrives incrementally. Central banks' actions directly impact reinvestment rates, affecting the effective duration of floating-rate instruments. During periods of quantitative easing, central bank buying can artificially suppress duration risk premiums, distorting price discovery.",
+      "Portfolio managers hedge duration risk through several channels. Interest rate swaps allow durations to be adjusted without trading bonds directly. Short-duration bond funds rotate toward floating-rate debt when rates are expected to rise. Convexity—the curvature of the price-yield relationship—provides additional protection: positive convexity means price appreciation accelerates as yields fall, limiting downside in rally scenarios. Mortgages, however, suffer negative convexity: homeowners refinance when rates fall, capping price gains.",
+      "Today's environment underscores duration risk's relevance. With central banks worldwide at different stages of policy normalization, curve steepness fluctuates, making duration selection a critical alpha driver. A portfolio tilted toward longer-dated bonds in a rising-rate environment will underperform significantly. Conversely, being too short-duration in a deflationary crisis leaves returns on the table. Sophisticated investors track not just their portfolio's duration but also the duration of their liability streams, matching them to minimize reinvestment and interest rate risk."
+    ]
+  }
+}
