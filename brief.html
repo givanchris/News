@@ -155,6 +155,16 @@
 
     .brief-hero-title span { color: var(--blue2); }
 
+    .brief-subtitle {
+      font-family: 'Barlow', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 400;
+      color: rgba(255,255,255,0.38);
+      letter-spacing: 0.02em;
+      margin-bottom: 1.25rem;
+      max-width: 400px;
+    }
+
     .brief-hero-meta {
       display: flex;
       align-items: center;
@@ -210,6 +220,21 @@
     .brief-nav-tab.active { color: var(--blue2); background: rgba(46,116,232,0.08); }
 
     /* ── MARKET STRIP ── */
+    .mkt-strip-wrap {
+      background: var(--navy);
+    }
+
+    .mkt-strip-header {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0.6rem 1.5rem 0;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.58rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.22);
+    }
+
     .mkt-strip {
       display: grid;
       grid-template-columns: repeat(6, 1fr);
@@ -219,7 +244,7 @@
     }
 
     .mkt-tile {
-      padding: 1rem 1.5rem;
+      padding: 1.1rem 1.5rem 1rem;
       border-right: 1px solid var(--navy3);
       background: rgba(0,0,0,0.15);
     }
@@ -266,10 +291,11 @@
     .brief-main {
       padding: 2rem 2.5rem 2.5rem;
       border-right: 1px solid var(--navy3);
+      max-width: 680px;
     }
 
     .brief-sidebar {
-      padding: 1.75rem 1.5rem;
+      padding: 1.75rem 1.5rem 1.75rem 1.75rem;
     }
 
     .brief-col-label {
@@ -283,10 +309,26 @@
       border-bottom: 1px solid var(--navy3);
     }
 
+    .brief-theme-bar {
+      margin-bottom: 1.25rem;
+    }
+
+    .brief-theme-chip {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--blue2);
+      background: rgba(46,116,232,0.1);
+      border: 1px solid rgba(46,116,232,0.25);
+      padding: 0.25rem 0.6rem;
+      display: inline-block;
+    }
+
     /* Stories */
     .b-story {
-      padding: 1.1rem 0;
-      border-bottom: 1px solid var(--navy3);
+      padding: 1.4rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
     }
 
     .b-story:last-child { border-bottom: none; }
@@ -297,29 +339,29 @@
       letter-spacing: 0.08em;
       text-transform: uppercase;
       color: var(--blue2);
-      margin-bottom: 0.3rem;
+      margin-bottom: 0.45rem;
     }
 
     .b-hed {
       font-family: 'Barlow Condensed', sans-serif;
-      font-size: 1.05rem;
+      font-size: 1.12rem;
       font-weight: 800;
       text-transform: uppercase;
       color: var(--white);
       line-height: 1.1;
-      margin-bottom: 0.4rem;
+      margin-bottom: 0.55rem;
     }
 
     .b-body {
       font-size: 0.86rem;
-      color: rgba(255,255,255,0.55);
-      line-height: 1.7;
+      color: rgba(255,255,255,0.48);
+      line-height: 1.75;
     }
 
     /* Sports sidebar */
     .sport-item {
-      padding: 0.85rem 0;
-      border-bottom: 1px solid var(--navy3);
+      padding: 1rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
     }
 
     .sport-item:last-child { border-bottom: none; }
@@ -350,9 +392,9 @@
     .s-up { background: rgba(46,116,232,0.15); color: var(--blue2); }
 
     .sport-detail {
-      font-size: 0.76rem;
-      color: rgba(255,255,255,0.4);
-      line-height: 1.5;
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.38);
+      line-height: 1.55;
     }
 
     /* Watch bar */
@@ -575,6 +617,7 @@
     <div class="brief-hero-left">
       <div class="brief-eyebrow">Markets · Macro · Geopolitics</div>
       <h1 class="brief-hero-title">DAILY<br><span>BRIEF</span></h1>
+      <p class="brief-subtitle">A concise daily read on markets, macro, and what matters.</p>
       <div class="brief-hero-meta">
         <span class="brief-date-display" id="brief-date">—</span>
         <span class="brief-updated-display" id="brief-meta"></span>
@@ -588,7 +631,9 @@
 </div>
 
 <!-- MARKET STRIP -->
-<div class="mkt-strip">
+<div class="mkt-strip-wrap">
+  <div class="mkt-strip-header">Market Snapshot</div>
+  <div class="mkt-strip">
   <div class="mkt-tile">
     <div class="mkt-ticker">S&amp;P 500</div>
     <div class="mkt-price" id="sp500-price">—</div>
@@ -619,6 +664,7 @@
     <div class="mkt-price" id="dxy-price">—</div>
     <div class="mkt-chg flat" id="dxy-chg">—</div>
   </div>
+  </div>
 </div>
 
 <!-- BRIEF SECTION -->
@@ -626,10 +672,13 @@
   <div class="brief-body">
     <div class="brief-main">
       <div class="brief-col-label">Finance · Macro · Geopolitics</div>
+      <div class="brief-theme-bar" id="brief-theme-bar" style="display:none;">
+        <span class="brief-theme-chip" id="brief-theme-text"></span>
+      </div>
       <div id="brief-stories"><p class="brief-no-data">Loading…</p></div>
     </div>
     <div class="brief-sidebar">
-      <div class="brief-col-label">Scoreboard</div>
+      <div class="brief-col-label">Scoreboard — Personal Watchlist</div>
       <div id="brief-sports"><p class="brief-no-data">Loading…</p></div>
     </div>
   </div>
@@ -720,6 +769,16 @@
     ['sp500','nasdaq','yield','wti','gold','dxy'].forEach(function(k) {
       if (m[k]) setTile(k, m[k]);
     });
+
+    // Theme bar (optional field in brief.json)
+    if (d.theme) {
+      var themeBar = document.getElementById('brief-theme-bar');
+      var themeText = document.getElementById('brief-theme-text');
+      if (themeBar && themeText) {
+        themeText.textContent = d.theme;
+        themeBar.style.display = 'block';
+      }
+    }
 
     // Stories
     var storiesEl = document.getElementById('brief-stories');
