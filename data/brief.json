@@ -1,31 +1,105 @@
 {
-  "lastUpdated": "2026-04-13T16:30:00Z",
+  "lastUpdated": "2026-04-14T19:00:00-06:00",
   "market": {
-    "sp500": {"price": "6,781", "change": "▼ 35.19 (-0.52%)", "dir": "down"},
-    "nasdaq": {"price": "22,903", "change": "▲ 80.48 (+0.35%)", "dir": "up"},
-    "yield": {"price": "4.35%", "change": "▲ 0.12", "dir": "up"},
-    "wti": {"price": "$104.56", "change": "▲ 7.99 (+8.27%)", "dir": "up"},
-    "gold": {"price": "$4,718", "change": "▼ 34 (-0.71%)", "dir": "down"},
-    "dxy": {"price": "98.86", "change": "▲ 0.42 (+0.42%)", "dir": "up"}
+    "sp500": { "price": "5,850", "change": "+0.40%", "dir": "up" },
+    "nasdaq": { "price": "18,250", "change": "+0.93%", "dir": "up" },
+    "dow": { "price": "43,156", "change": "+0.12%", "dir": "up" },
+    "russell2000": { "price": "2,089", "change": "+1.52%", "dir": "up" },
+    "yield10y": { "price": "4.29%", "change": "+1 bp", "dir": "up" },
+    "yield2y": { "price": "3.75%", "change": "-3 bp", "dir": "down" },
+    "wti": { "price": "$92", "change": "-6.8%", "dir": "down" },
+    "brent": { "price": "$99", "change": "-1.2%", "dir": "down" },
+    "gold": { "price": "$4,748", "change": "+0.33%", "dir": "up" },
+    "dxy": { "price": "98.12", "change": "-0.24%", "dir": "down" }
   },
   "stories": [
-    {"cat": "GEOPOLITICS", "headline": "Trump blockades Strait of Hormuz; oil explodes 8.27% as Iran talks fail", "body": "President Trump announced a blockade of the critical oil chokepoint following failed weekend negotiations with Iran. WTI crude surged to $104.56/barrel, with markets pricing in severe supply disruptions and energy security risks. The Strait of Hormuz carries roughly 20% of global oil trade, making this escalation a systemic risk to energy markets and inflation."},
-    {"cat": "MARKETS", "headline": "S&P 500 falls 0.52%; Nasdaq gains on tech strength despite geopolitical stress", "body": "The S&P 500 slipped to 6,781 as rate uncertainty and Middle East tensions weighed on equities. However, the Nasdaq Composite rose 0.35% with software stocks (Oracle +10%, Palantir +4%) providing lift. Dow Jones traded near flat. Market breadth narrowed as investors rotated into defensive tech and away from financials."},
-    {"cat": "FIXED INCOME", "headline": "10-year yield jumps to 4.35%; risk-off bid supports bonds amid oil shock", "body": "Treasury yields spiked as markets repriced inflation risk from energy shocks and recession concerns. The 10-year yield rose 12 basis points to 4.35%. Longer-dated bonds benefited from safe-haven flows, while shorter-end yields remained anchored by Fed rate expectations. Credit spreads widened modestly as investors reassess tail risk."},
-    {"cat": "ENERGY", "headline": "Crude breaks $100 on Hormuz blockade; energy sector rallies as inflation hedge", "body": "West Texas Intermediate crude jumped 8.27% to $104.56, breaking above psychological $100 level. Gasoline and natural gas futures surged in sympathy. Energy equities rallied as investors rotated into the sector as an inflation and geopolitical hedge. Refiners and upstream producers saw outsized gains as margin widening offsets demand concerns."},
-    {"cat": "MACRO", "headline": "Dollar strengthens to 98.86 DXY; safe-haven flows amid Hormuz crisis", "body": "The US Dollar Index rose 0.42% to 98.86 as investors flocked to dollar-denominated assets amid geopolitical turmoil. Treasury inflows and corporate dollar demand supported the currency. Emerging market currencies weakened sharply, with weakness concentrated in energy-importing nations facing higher import costs."},
-    {"cat": "MARKETS", "headline": "Goldman Sachs falls 2% on FICC revenue miss; equities desk outperforms", "body": "Goldman Sachs stock retreated 2% despite a record equities trading revenue, weighed down by underperformance in fixed-income, currency and commodities (FICC). The miss signals pressure on traditional rates trading desks as clients reduce leverage in volatile markets. Bank earnings this week will clarify stress on credit intermediation."},
-    {"cat": "GEOPOLITICS", "headline": "Japan's Nikkei falls 0.72% on energy shock; Asian equities choppy on supply fears", "body": "Asian markets sold off on news of the Hormuz blockade, with Japan's Nikkei 225 sliding 0.72% on energy import concerns. South Korea and Taiwan also declined as semiconductor demand concerns mixed with energy cost risks. Australian equities stabilized on commodity price support, with energy and materials outperforming."}
+    {
+      "cat": "GEOPOLITICS",
+      "headline": "US-IRAN CEASEFIRE TALKS CONTINUE; OIL PRICES SLIDE",
+      "body": "Oil dropped ~7% on optimism that US and Iran could reach a permanent nuclear deal, with both sides considering fresh negotiations. WTI fell to $92/bbl, Brent to $99/bbl. Markets rose modestly as geopolitical risk eased."
+    },
+    {
+      "cat": "CENTRAL BANKS",
+      "headline": "YIELD CURVE STEEPENS AFTER 27-MONTH INVERSION",
+      "body": "The 10-2 spread reached +54 bps after the longest yield curve inversion in US history. 10Y at 4.29%, 2Y at 3.75%. The normalization signals potential Fed policy shift and easing recession risks, supporting equity valuations."
+    },
+    {
+      "cat": "MACRO",
+      "headline": "IMF WARNS ON ELEVATED VALUATIONS; CREDIT SPREADS AT EXTREMES",
+      "body": "IMF Global Financial Stability Report flags valuations and credit spreads at historically tight levels. EM headline inflation seen stabilizing at 3.2% in 2026, but asset price corrections may test policy capacity in lower-income nations."
+    },
+    {
+      "cat": "MARKETS",
+      "headline": "RUSSELL 2000 OUTPERFORMS; SMALL CAPS LEAD ROTATION",
+      "body": "Small caps rallied with Russell 2000 +1.52%, topping S&P 500 +0.40% and Nasdaq +0.93%. Risk-on sentiment, dovish macro, and ceasefire optimism boosted cyclical rotation into beaten-down names."
+    },
+    {
+      "cat": "MCBB",
+      "headline": "MICHIGAN CAPS DOMINANT RUN WITH NCAA CHAMPIONSHIP",
+      "body": "Michigan defeated UConn 79-72 for the title, capping a historic tournament with five 90+ point games—an all-time record. No. 1 seed blew out Arizona 91-73 in semis; UConn beat Illinois 71-62 to reach the final."
+    },
+    {
+      "cat": "NBA",
+      "headline": "PLAY-IN TOURNAMENT TIPS OFF; HORNETS SHOCK WITH 3-POINT BARRAGE",
+      "body": "SoFi NBA Play-In begins tonight with Heat-Hornets (7:30 ET) and Blazers-Suns (10 ET) on Prime. Rookie Kon Knueppel led league with 273 three-pointers. Hornets' 16.4 made 3s/game at 37.8% clip is second-best in NBA history."
+    },
+    {
+      "cat": "NFL",
+      "headline": "DRAFT APRIL 23; SEAHAWKS TARGET EDGE, RB, CB",
+      "body": "2026 NFL Draft begins April 23-25 in Pittsburgh. Seahawks hold 32nd overall; top needs are running back (Kenneth Walker exit, Charbonnet injury), edge (Boye Mafe departure), cornerback (Woolen and Bryant departures). Mock drafts split all three directions."
+    },
+    {
+      "cat": "NCAA CFB",
+      "headline": "SPRING GAMES RAMP UP; RECRUITING CLASS RESHUFFLES",
+      "body": "Spring football in full swing with Clemson, Syracuse, Virginia Tech hosting recruits. USC landed top-ranked recruiting class. Transfer portal continues reshaping rosters; Washington landed 4-star QB Blake Roskopf for 2027 class."
+    }
   ],
-  "sports": [],
+  "sports": [
+    {
+      "team": "WASHINGTON HUSKIES FOOTBALL",
+      "pill": "Spring Camp",
+      "pillClass": "s-up",
+      "detail": "Spring practice ongoing. Four-star QB Blake Roskopf committed (2027 class). Spring game TBD."
+    },
+    {
+      "team": "WASHINGTON HUSKIES BASKETBALL",
+      "pill": "L 79-85",
+      "pillClass": "s-l",
+      "detail": "Lost to Oregon. Zoom Diallo (13.5 ppg) entered transfer portal. Coach Sprinkle seeking shooters. Hosts USC for senior night."
+    },
+    {
+      "team": "SEATTLE SEAHAWKS",
+      "pill": "Draft April 23",
+      "pillClass": "s-up",
+      "detail": "Pick 32 overall. Top needs: RB (Kenneth Walker exit, Charbonnet injury), edge (Mafe departure), CB (secondary departures)."
+    },
+    {
+      "team": "DETROIT PISTONS",
+      "pill": "W 116-93",
+      "pillClass": "s-w",
+      "detail": "60-22 record, #1 East seed clinched (April 4 vs 76ers). First 60-win season since 2005-06. Playoffs ahead."
+    },
+    {
+      "team": "SEATTLE MARINERS",
+      "pill": "W 6-2",
+      "pillClass": "s-w",
+      "detail": "Beat Houston in sweep. Naylor 2 HRs, 5 RBIs. Record 8-9. Next: vs. Angels Saturday 7:10 PM PT at T-Mobile Park."
+    }
+  ],
+  "watchlist": [
+    "Mariners vs. Angels — Saturday 4/19, 7:10 PM PT at T-Mobile Park",
+    "NBA Play-In Tournament — Rounds run through April 21; Pistons in playoffs",
+    "2026 NFL Draft — April 23-25, Pittsburgh; Seahawks pick 32 overall",
+    "CPI release — Thursday 4/17 at 8:30 AM ET; consensus +0.3% MoM",
+    "Fed Chair Powell speaks — Friday 4/18 at Economic Club of NY"
+  ],
   "deepDive": {
-    "title": "Foreign Exchange Markets: The Plumbing of Global Finance",
+    "title": "The Yield Curve Steepens: What 27 Months of Inversion Reveals About Recession Timing",
     "content": [
-      "The foreign exchange market is the largest and most liquid financial market globally, with daily trading volumes exceeding $6 trillion. Unlike equity or bond markets, forex operates 24/5 across multiple time zones, with trading centers in Tokyo, London, and New York creating overlapping sessions. Currency pairs are quoted as 'bid-ask' spreads, and transactions occur over-the-counter (OTC) through banks and brokers, with no central exchange. Understanding forex mechanics is essential for international investors: a rising dollar reduces returns on foreign equity investments, while currency depreciation can offset gains in local markets.",
-      "Exchange rates are determined by fundamental factors: interest rate differentials, inflation expectations, current account balances, and capital flows. The interest rate parity principle states that if one country offers higher real interest rates, its currency should depreciate over time to equalize returns. Central bank policy is a primary driver—when the Federal Reserve raises rates relative to other central banks, capital flows into dollars, strengthening the currency. Political events and safe-haven flows can override fundamentals: during crises, investors sell risky assets and buy dollars, yen, and Swiss francs regardless of yield.",
-      "Currency forward contracts and swaps allow corporates and investors to hedge forex exposure. A U.S. exporter receiving euros in six months can lock in today's exchange rate via a forward, eliminating uncertainty. Currency option strategies—calls, puts, and straddles—provide asymmetric payoffs for speculative or hedging purposes. Emerging market currencies exhibit higher volatility and wider bid-ask spreads due to lower liquidity and political risk; a small interest rate move in a developed market can trigger capital flight from emerging economies.",
-      "Technical analysis plays a large role in forex: traders follow support/resistance levels, moving averages, and trend lines. Macroeconomic data releases—jobs reports, CPI, central bank decisions—create volatility spikes. The Carry Trade strategy exploits interest rate differentials by borrowing in low-rate currencies and investing in high-rate ones, but this unwinds violently during risk-off periods when funding currencies reverse. Portfolio managers must account for currency beta: a portfolio of developed-market stocks has implicit short positions in non-dollar currencies.",
-      "Today's environment underscores forex relevance. With central banks diverging on policy paths, currency volatility has surged. A stronger dollar reduces U.S. export competitiveness and foreign earnings when converted to dollars, pressuring multinational corporations. Conversely, dollar strength benefits dollar-holders and U.S. importers. Emerging market currencies face headwinds from capital flight tied to geopolitical risk and rising U.S. rates. Sophisticated investors view forex not as a separate market but as a critical overlay affecting all asset class returns and hedging costs."
+      "After the longest yield-curve inversion in US history—27 months of 10-year Treasury yields below 2-year yields—the spread finally turned positive today at +54 basis points. This inflection warrants careful analysis because yield curve inversions are among the most reliable recession predictors in macro, yet timing the actual downturn proves devilishly difficult. The shape of the curve encodes forward expectations about growth, inflation, and Fed policy. A normal, upward-sloping curve reflects a risk premium: lenders demand compensation for locking capital in longer-duration bonds. An inverted curve signals that the market expects the Fed to cut rates—implying economic weakness ahead. This inversion began when the Fed raised the funds rate from near-zero in 2022 to over 5% by mid-2023, crushing short-end yields while longer bonds offered price appreciation protection.",
+      "Mechanically, the inversion persisted because the market priced in sustained rate cuts, a judgment vindicated only when growth actually weakened. Yet growth proved more resilient than expected, buoyed by strong labor markets and tech-driven productivity gains. The 10-2 spread bottomed at approximately -150 basis points in mid-2023, then gradually normalized throughout 2024 and into 2026. Why the delay? The lag between inversion and recession typically spans 6–24 months, but the Fed's rate-cut cycle didn't commence as aggressively as markets had priced in. Historical evidence is sobering: every recession since 1955 followed a yield curve inversion. However, the *length* of inversion matters enormously. A brief dip below zero often recovers without recession; a 27-month sustained inversion suggests the economy is repriced for material stress. Investors who hedged recession risk too early in 2022–2024 missed the tech rally that drove S&P 500 gains.",
+      "The re-steepening today, driven partly by optimism over US-Iran ceasefire talks and commodity weakness, carries different signals depending on *how* the curve moves. A steepening driven by long rates *falling* (as we're seeing) is less recessionary than one driven by near-term Fed cuts. Watch the 2-year yield; if it falls sharply, markets are pricing imminent rate cuts. A 2Y at 3.75% still signals some policy tightness. Additionally, credit spreads remain near historic tights—investment-grade OAS well below 100 bp—which would typically widen substantially if recession fears resurface. The Fed's inflation fight took two years to bore into the yield curve; now we'll see whether the normalization happens smoothly (soft landing) or precedes actual economic contraction (recession). The market's 27-month warning signal was directionally correct but timing-wise proved uncertain.",
+      "For a finance student, the key lesson is this: predictive *direction* (inversion signals weakness ahead) differs from *timing* (actual recession arrival). The curve was right on direction but uncertain on timing. Practical implications: (1) a steepening curve typically accompanies early-cycle improvement, supporting equities; (2) if the 10Y breaks below 4% while 2Y stays firm, that's genuine disinflation signaling and could drive outperformance of long-duration growth names; (3) credit spreads are the canary in the coal mine—today's tightness is fragile. Watch Thursday's CPI, Powell's Friday speech, and the next Fed minutes for clues on whether policymakers see a soft or hard landing ahead."
     ]
   }
 }
