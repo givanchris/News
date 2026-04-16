@@ -1,0 +1,258 @@
+{
+  "meta": {
+    "title": "Fed Signal Tracker",
+    "description": "Curated FOMC meeting log cross-referencing statement language shifts with rate outcomes and Treasury-market reactions.",
+    "author": "Christopher Givan",
+    "methodology": "Same-day (2pm statement to 3pm close) yield changes sourced from Treasury.gov H.15 series and cross-checked against Fed statement archive. Stance reflects the statement + SEP composite, not just the decision. This dataset is curated by hand — not an automated feed.",
+    "last_curated": "2026-04-10",
+    "coverage": "Selected inflection meetings from the 2022 hiking cycle through the 2024 cut cycle."
+  },
+  "meetings": [
+    {
+      "id": "2022-03",
+      "date": "2022-03-16",
+      "target_range": "0.25–0.50%",
+      "stance": "hawkish",
+      "statement_summary": "Liftoff after two years at the zero lower bound. Signals an extended tightening path with multiple hikes through year-end.",
+      "phrase_changes": [
+        { "type": "added", "phrase": "Ongoing increases in the target range will be appropriate" },
+        { "type": "removed", "phrase": "Expects to maintain this target range" }
+      ],
+      "decision": "+25 bp",
+      "next_decision": "+50 bp (May 2022)",
+      "y2_bp": 13,
+      "y10_bp": 14,
+      "curve_bp": 1,
+      "curve_direction": "steepening",
+      "notes": "Statement delivered as expected but Powell's hawkish press conference pulled the entire curve higher. Dissent from Bullard for +50."
+    },
+    {
+      "id": "2022-06",
+      "date": "2022-06-15",
+      "target_range": "1.50–1.75%",
+      "stance": "hawkish",
+      "statement_summary": "First 75 bp hike since 1994. Statement pivots from forward-guided hikes to data-dependence as May CPI printed 8.6%.",
+      "phrase_changes": [
+        { "type": "added", "phrase": "Strongly committed to returning inflation to its 2 percent objective" },
+        { "type": "removed", "phrase": "Ongoing increases in the target range" }
+      ],
+      "decision": "+75 bp",
+      "next_decision": "+75 bp (July 2022)",
+      "y2_bp": -23,
+      "y10_bp": -18,
+      "curve_bp": 5,
+      "curve_direction": "steepening",
+      "notes": "Counterintuitive rally — Powell's line that 75 bp 'would not be common' was read as a ceiling. Market was already priced for 75 via the WSJ leak."
+    },
+    {
+      "id": "2022-11",
+      "date": "2022-11-02",
+      "target_range": "3.75–4.00%",
+      "stance": "hawkish",
+      "statement_summary": "Delivers fourth consecutive 75 bp hike but introduces 'cumulative tightening' and 'lags' language, flagging a slowdown in pace.",
+      "phrase_changes": [
+        { "type": "added", "phrase": "Cumulative tightening of monetary policy, the lags with which monetary policy affects economic activity" },
+        { "type": "added", "phrase": "Determining the pace of future increases" }
+      ],
+      "decision": "+75 bp",
+      "next_decision": "+50 bp (Dec 2022)",
+      "y2_bp": 17,
+      "y10_bp": 5,
+      "curve_bp": -12,
+      "curve_direction": "flattening",
+      "notes": "Statement read dovish on first pass; Powell's presser erased it by flagging a higher terminal rate. Classic pace-vs-destination disconnect."
+    },
+    {
+      "id": "2023-02",
+      "date": "2023-02-01",
+      "target_range": "4.50–4.75%",
+      "stance": "neutral",
+      "statement_summary": "Downshifts to 25 bp. Statement replaces 'pace' of future increases with 'extent' — hinting the end of the cycle is in view.",
+      "phrase_changes": [
+        { "type": "changed", "phrase": "Pace of future increases → extent of future increases" },
+        { "type": "retained", "phrase": "Ongoing increases in the target range will be appropriate" }
+      ],
+      "decision": "+25 bp",
+      "next_decision": "+25 bp (March 2023)",
+      "y2_bp": -9,
+      "y10_bp": -13,
+      "curve_bp": -4,
+      "curve_direction": "flattening",
+      "notes": "Powell's acknowledgment that the 'disinflationary process has started' drove a risk-on rally. Widely cited as the dovish pivot that aged poorly."
+    },
+    {
+      "id": "2023-06",
+      "date": "2023-06-14",
+      "target_range": "5.00–5.25%",
+      "stance": "hawkish",
+      "statement_summary": "First hold of the cycle paired with a hawkish SEP — median dot moves to 5.6% implying two more hikes. Labeled 'skip' in the press conference.",
+      "phrase_changes": [
+        { "type": "added", "phrase": "Holding the target range steady at this meeting allows the Committee to assess additional information" },
+        { "type": "removed", "phrase": "Additional policy firming may be appropriate" }
+      ],
+      "decision": "Hold",
+      "next_decision": "+25 bp (July 2023)",
+      "y2_bp": -4,
+      "y10_bp": -3,
+      "curve_bp": 1,
+      "curve_direction": "steepening",
+      "notes": "Market largely priced the hold; the hawkish dots barely moved terminal rate pricing. The 'skip' framing let the Fed preserve optionality."
+    },
+    {
+      "id": "2023-12",
+      "date": "2023-12-13",
+      "target_range": "5.25–5.50%",
+      "stance": "dovish",
+      "statement_summary": "Pivot meeting. Inserts 'any' before 'additional policy firming' and the dot plot pencils in three 25 bp cuts for 2024.",
+      "phrase_changes": [
+        { "type": "changed", "phrase": "Additional policy firming → any additional policy firming" },
+        { "type": "added", "phrase": "In determining the extent of any additional policy firming" }
+      ],
+      "decision": "Hold",
+      "next_decision": "Hold (Jan 2024)",
+      "y2_bp": -30,
+      "y10_bp": -18,
+      "curve_bp": 12,
+      "curve_direction": "steepening",
+      "notes": "The 'any' is the highest-signal single word of the cycle. Two-year dropped nearly a basis point per minute for an hour. Powell did not push back on easing financial conditions."
+    },
+    {
+      "id": "2024-03",
+      "date": "2024-03-20",
+      "target_range": "5.25–5.50%",
+      "stance": "dovish",
+      "statement_summary": "Holds. SEP retains three cuts for 2024 despite hotter-than-expected Jan/Feb CPI. Powell stresses the bar to re-hike is high.",
+      "phrase_changes": [
+        { "type": "retained", "phrase": "Inflation has eased over the past year but remains elevated" },
+        { "type": "added", "phrase": "Risks to achieving its employment and inflation goals are moving into better balance" }
+      ],
+      "decision": "Hold",
+      "next_decision": "Hold (May 2024)",
+      "y2_bp": -8,
+      "y10_bp": -2,
+      "curve_bp": 6,
+      "curve_direction": "steepening",
+      "notes": "Market feared the dots would drop to two cuts; the 3-cut hold was received as a dovish surprise. Curve bull-steepened."
+    },
+    {
+      "id": "2024-09",
+      "date": "2024-09-18",
+      "target_range": "4.75–5.00%",
+      "stance": "dovish",
+      "statement_summary": "First cut of the easing cycle and it's a 50 bp 'insurance' move. Statement reframes mandate language as 'gained greater confidence' on inflation.",
+      "phrase_changes": [
+        { "type": "added", "phrase": "Gained greater confidence that inflation is moving sustainably toward 2 percent" },
+        { "type": "added", "phrase": "Judges that the risks to achieving its employment and inflation goals are roughly in balance" }
+      ],
+      "decision": "−50 bp",
+      "next_decision": "−25 bp (Nov 2024)",
+      "y2_bp": 6,
+      "y10_bp": 5,
+      "curve_bp": -1,
+      "curve_direction": "flattening",
+      "notes": "Classic buy-the-rumor, sell-the-news. The front end backed up despite the larger cut because the SEP dots showed only 50 bp more in 2024. Dissent from Bowman for 25 bp."
+    },
+    {
+      "id": "2024-12",
+      "date": "2024-12-18",
+      "target_range": "4.25–4.50%",
+      "stance": "hawkish",
+      "statement_summary": "Third straight cut paired with a hawkish SEP — 2025 median moved from four cuts to two. Statement adds 'extent and timing' hedge.",
+      "phrase_changes": [
+        { "type": "changed", "phrase": "Additional adjustments → extent and timing of additional adjustments" },
+        { "type": "retained", "phrase": "Carefully assess incoming data" }
+      ],
+      "decision": "−25 bp",
+      "next_decision": "Hold (Jan 2025)",
+      "y2_bp": 11,
+      "y10_bp": 13,
+      "curve_bp": 2,
+      "curve_direction": "steepening",
+      "notes": "Hawkish cut. Hammack dissented for a hold. The 'extent and timing' insertion mirrored the 'any' move in Dec 2023 but in reverse — same linguistic tell, opposite direction."
+    }
+  ],
+  "predictive_phrases": [
+    {
+      "phrase": "any additional policy firming",
+      "first_seen": "2023-12-13",
+      "signal": "Regime-change dovish",
+      "reliability": "High",
+      "rank": 1,
+      "interpretation": "Inserting 'any' before a tightening phrase is the Fed's most reliable public tell for an imminent pivot. Historically precedes the end of a hike cycle by 0–1 meetings."
+    },
+    {
+      "phrase": "extent and timing of additional adjustments",
+      "first_seen": "2024-12-18",
+      "signal": "Pause incoming",
+      "reliability": "High",
+      "rank": 2,
+      "interpretation": "Hedging both magnitude and schedule is a stronger slowdown signal than hedging magnitude alone. Coincided with a multi-meeting hold starting Jan 2025."
+    },
+    {
+      "phrase": "gained greater confidence",
+      "first_seen": "2024-09-18",
+      "signal": "Action is imminent",
+      "reliability": "High",
+      "rank": 3,
+      "interpretation": "Confidence language has a short half-life — it shows up in the statement that contains the policy move, not the ones leading up to it."
+    },
+    {
+      "phrase": "cumulative tightening, lags",
+      "first_seen": "2022-11-02",
+      "signal": "Slowdown in pace",
+      "reliability": "Medium",
+      "rank": 4,
+      "interpretation": "Flags a pace change, not a direction change. Easy to misread as dovish when it is really a pivot to smaller, longer-duration hikes."
+    },
+    {
+      "phrase": "strongly committed to returning inflation",
+      "first_seen": "2022-06-15",
+      "signal": "Credibility reinforcement",
+      "reliability": "Medium",
+      "rank": 5,
+      "interpretation": "Appears when the Fed wants to reassert its anti-inflation mandate. Usually coincides with an upside policy surprise."
+    },
+    {
+      "phrase": "pace → extent",
+      "first_seen": "2023-02-01",
+      "signal": "Cycle winding down",
+      "reliability": "Medium",
+      "rank": 6,
+      "interpretation": "Shifts the conversation from 'how fast' to 'how much more.' Historically signals 1–2 hikes remaining."
+    },
+    {
+      "phrase": "risks are roughly in balance",
+      "first_seen": "2024-09-18",
+      "signal": "Dual-mandate symmetry",
+      "reliability": "Medium",
+      "rank": 7,
+      "interpretation": "Signals that labor-market weakness is now weighted alongside inflation. Precedes easing bias."
+    },
+    {
+      "phrase": "determining the pace of future increases",
+      "first_seen": "2022-11-02",
+      "signal": "Pace shift",
+      "reliability": "Low",
+      "rank": 8,
+      "interpretation": "Often gets headline treatment but does little to move the terminal rate. Better read as cover for the next SEP than as policy guidance."
+    }
+  ],
+  "research_notes": [
+    {
+      "title": "The 'any' tell",
+      "body": "The December 2023 insertion of 'any' before 'additional policy firming' is the cleanest single-word signal in the modern statement era. It traveled roughly -30 bp in the 2Y within minutes. The symmetric move in Dec 2024 ('extent and timing') produced the opposite trade with similar magnitude. Single-word edits in the forward-guidance paragraph tend to outperform SEP changes on same-day reaction."
+    },
+    {
+      "title": "Statement vs. presser",
+      "body": "Statements are drafted by committee; press conferences are Powell. The Nov 2022 meeting is the textbook case — statement added dovish language ('cumulative tightening, lags') but Powell's presser flagged a higher terminal, flattening the curve 12 bp. The signal lives in both documents and the gap between them matters."
+    },
+    {
+      "title": "Buy the rumor, sell the dots",
+      "body": "When markets have fully priced a decision, the reaction runs entirely through the SEP dot plot. Sept 2024 delivered a larger-than-expected cut but the dots showed only 50 more bp in 2024 — the front end sold off despite the dovish action. The dots are the marginal information when the decision itself is priced."
+    },
+    {
+      "title": "Data caveat",
+      "body": "This dataset is hand-curated from the Federal Reserve statement archive and Treasury H.15 daily yields. It is not an automated feed. Each entry is verifiable against the FOMC statement and next-day H.15 release. Expansion targets: 2025 meetings, intraday reaction windows (30-min, 60-min), and Fed funds futures repricing."
+    }
+  ]
+}
