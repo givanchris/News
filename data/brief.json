@@ -1,53 +1,58 @@
 {
-  "lastUpdated": "2026-04-23T19:00:00-06:00",
+  "lastUpdated": "2026-04-24T19:00:00-06:00",
   "market": {
-    "sp500":  { "price": "7,108",   "change": "-0.41%",  "dir": "down" },
-    "nasdaq": { "price": "24,439",  "change": "-0.89%",  "dir": "down" },
-    "yield":  { "price": "4.32%",   "change": "+3 bps",  "dir": "down" },
-    "wti":    { "price": "$96.50",  "change": "+4.0%",   "dir": "down" },
-    "gold":   { "price": "$4,736",  "change": "-0.4%",   "dir": "down" },
-    "dxy":    { "price": "98.57",   "change": "-0.02%",  "dir": "flat" }
+    "sp500":  { "price": "7,082",  "change": "-0.37%",  "dir": "down" },
+    "nasdaq": { "price": "24,315", "change": "-0.51%",  "dir": "down" },
+    "yield":  { "price": "4.38%",  "change": "+7 bps",  "dir": "up"   },
+    "wti":    { "price": "$96.07", "change": "+2.6%",   "dir": "up"   },
+    "gold":   { "price": "$4,689", "change": "-1.0%",   "dir": "down" },
+    "dxy":    { "price": "98.82",  "change": "+0.3%",   "dir": "up"   }
   },
   "stories": [
     {
-      "cat": "MARKETS",
-      "headline": "SERVICENOW PLUNGES 18%, IBM DROPS 9% AS AI DISRUPTION FEARS HAMMER SOFTWARE SECTOR",
-      "body": "ServiceNow cratered ~18% and IBM fell ~9% after both reported earnings, with ServiceNow flagging delayed Middle East enterprise deals and investors questioning SaaS margin durability in an AI substitution environment. The S&P 500 Software & Services index shed more than 4%, dragging the S&P 500 down 0.41% to 7,108 and the Nasdaq down 0.89% to 24,439 — pulling back from Wednesday's record highs."
+      "cat": "COMMODITIES",
+      "headline": "BRENT CRACKS $106 AS STRAIT OF HORMUZ STAYS FUNCTIONALLY CLOSED",
+      "body": "Brent topped $106/bbl and WTI pushed to $96 after the U.S. Navy seized an Iranian-flagged cargo ship, escalating the 'dual blockade.' The IEA is now calling the Hormuz closure the largest supply disruption in oil-market history — roughly 20% of global crude flow and significant LNG volumes are offline. Brent is up ~55% since the war began."
     },
     {
       "cat": "GEOPOLITICS",
-      "headline": "IRAN CEASEFIRE STALLS; BRENT CRUDE SURGES BACK ABOVE $100 AS VESSEL SEIZURES REPORTED",
-      "body": "Brent crude rose 3.5% to $105.27/bbl and WTI jumped 4.0% to $96.50 after reports of Iranian vessel seizures in the Strait of Hormuz with no diplomatic progress in Islamabad. The move reverses a large portion of the April 8 ceasefire-relief rally and is now directly hitting corporate guidance — ServiceNow explicitly cited Middle East uncertainty as a driver of delayed Q1 enterprise deals."
-    },
-    {
-      "cat": "EARNINGS",
-      "headline": "TEXAS INSTRUMENTS SURGES 18% ON DATA CENTER CHIP DEMAND; 81% OF S&P 500 BEATS ESTIMATES",
-      "body": "TI raised Q2 revenue and profit guidance above consensus on robust industrial and data center chip demand, surging 18% and lifting the broader semiconductor sector — the clearest sign yet that AI infrastructure spending remains intact even as application-layer software struggles. Of 87 S&P 500 companies reporting, 81% have beaten earnings estimates, but markets are ruthlessly punishing slowing growth or uncertain forward guidance."
+      "headline": "U.S.–IRAN DEADLOCK DRIVES RISK-OFF INTO WEEKEND",
+      "body": "Equities faded and Treasuries sold off in tandem as traders priced supply-side inflation alongside growth risk. S&P 500 closed -0.37%, Nasdaq -0.51%, with energy and defensives leading while megacap tech lagged. Global bond markets continued to weaken on stagflation concerns reminiscent of the 1970s shock."
     },
     {
       "cat": "MACRO",
-      "headline": "APRIL 30 DOUBLE-HEADER: Q1 GDP AND MARCH PCE PRINT SIMULTANEOUSLY; STAGFLATION RISK RISING",
-      "body": "The BEA releases Q1 GDP and March PCE inflation together at 8:30 AM ET next Thursday — the most consequential dual data print of the year. Core PCE was last at 2.7%; with Brent near $105 and tariff pass-through accelerating, a hot inflation print alongside slowing growth would force markets to price a genuine stagflation scenario, pushing the first Fed cut even further off the table. FOMC meets May 5-6."
+      "headline": "10Y YIELD JUMPS TO 4.38% AS OIL SHOCK REPRICES INFLATION PATH",
+      "body": "The 10Y climbed ~7 bps to 4.38% and the 2Y held near 3.85%, flattening slightly but with both ends higher. Breakevens widened sharply — the market is now doing the Fed's tightening for it via the term premium, even as real activity indicators soften."
+    },
+    {
+      "cat": "CENTRAL BANKS",
+      "headline": "FED STILL PENCILED IN ONE CUT AS POWELL FACES SUPPLY-SHOCK DILEMMA",
+      "body": "The FOMC held at 3.50–3.75% in March and the dot plot still projected one 2026 cut, but fed funds futures now imply the first cut pushed to September or later. Powell's challenge: a classic supply shock lifts inflation and hurts growth simultaneously — the textbook 'do nothing and look through it' answer is politically harder when headline CPI is visibly spiking at the pump."
+    },
+    {
+      "cat": "MARKETS",
+      "headline": "GOLD COOLS FROM RECORD AFTER $4,738 PEAK; DXY BOUNCES",
+      "body": "Spot gold slipped ~1% to $4,689 after printing an all-time high of $4,738 yesterday, as the dollar index rebounded +0.3% to 98.82 on safe-haven bid and higher real yields. The move suggests tactical profit-taking rather than a regime change — gold's year-to-date move remains the dominant macro trade."
     },
     {
       "cat": "MCBB",
-      "headline": "NCAA BASKETBALL TRANSFER PORTAL CLOSES TODAY; WASHINGTON, OTHER PROGRAMS FINALIZE 2026-27 ROSTERS",
-      "body": "The NCAA men's basketball transfer portal closed Thursday, ending the offseason roster-building window following Michigan's April 6 national championship (69-63 over UConn). Danny Sprinkle's Washington Huskies added four portal transfers — F LeJuan Watts (Texas Tech, 11.8 ppg/6.0 rpg), SG Parker Friedrichsen (Davidson), SF Steele Venters (Gonzaga), and PG Ryan Beasley (USF) — as top-five recruit Tyran Stokes cut UW from his final three in favor of Oregon, Kentucky, and Kansas."
+      "headline": "NBA DRAFT DECLARATION DEADLINE TONIGHT AS PORTAL CLOSES",
+      "body": "Underclassmen have until 11:59 PM ET tonight to declare for the NBA Draft, following Tuesday's transfer portal deadline. Six of 247Sports' top 10 transfers remain uncommitted, headlined by Iowa State sharpshooter Milan Momcilovic. Notable landing spots: JT Toppin to Houston, Jackson Shelstad to Louisville, Haggerty (23.4 PPG, 4th in NCAA) to Texas A&M."
     },
     {
       "cat": "NBA",
-      "headline": "SGA DROPS 37 AS THUNDER ROUT SUNS 120-107; OKC TAKES COMMANDING 2-0 FIRST-ROUND LEAD",
-      "body": "Shai Gilgeous-Alexander poured in 37 points as Oklahoma City dominated Phoenix 120-107 to seize a 2-0 series lead and cement themselves as the West's clear top seed. In the East, Detroit's Cade Cunningham (27 pts, 11 ast) powered the Pistons to a 98-83 Game 2 win over Orlando to even that series 1-1. Victor Wembanyama's availability for Game 3 remains uncertain following his second-quarter concussion in San Antonio's Game 2 loss to Portland."
+      "headline": "HAWKS TAKE 2-1 SERIES LEAD; RAPTORS AVOID SWEEP WITH 126-104 BLOWOUT",
+      "body": "Atlanta beat the Knicks in Game 3 behind Jalen Johnson's 24-10-8 and 21 from Jonathan Kuminga, with CJ McCollum's late clutch bucket sealing it. Toronto thumped Cleveland 126-104 on 33-point games from Scottie Barnes (11 ast) and RJ Barrett (6 threes). Timberwolves also took a 2-1 lead on the Nuggets."
     },
     {
       "cat": "NFL",
-      "headline": "NFL DRAFT OPENS IN PITTSBURGH; RAIDERS SELECT HEISMAN QB FERNANDO MENDOZA #1 OVERALL",
-      "body": "The 2026 NFL Draft kicked off Thursday night at Acrisure Stadium in Pittsburgh with Las Vegas taking Indiana Heisman winner Fernando Mendoza — who led the Hoosiers to their first-ever national championship — with the top pick. The Seattle Seahawks, reigning Super Bowl 60 champions holding the league-minimum four picks, are on the clock at #32 tonight; GM John Schneider has publicly signaled intent to trade back for additional Rounds 2-3 picks on Friday."
+      "headline": "DRAFT DAY 2 OPENS AFTER MENDOZA GOES #1, SEAHAWKS GRAB JADARIAN PRICE AT 32",
+      "body": "Rounds 2-3 begin tonight. Round 1 saw Fernando Mendoza (Indiana QB) go #1 to the Raiders, David Bailey (Texas Tech EDGE) #2 to the Jets, and Jeremiyah Love (Notre Dame RB) #3 to Arizona. Seattle closed Round 1 by taking Love's Irish teammate Jadarian Price at #32 to replace Kenneth Walker III, who left for KC in free agency."
     },
     {
       "cat": "NCAA CFB",
-      "headline": "POST-SPRING QUESTIONS HAUNT CFP CONTENDERS; SPRING PORTAL WINDOW ELIMINATED FOR 2026",
-      "body": "ESPN flagged 11 CFP contenders — including Alabama, Georgia, Oregon, and BYU — entering summer with unresolved depth gaps exposed in spring practice. The NCAA's elimination of the spring football transfer window means programs cannot fill those holes until January 2027, making current spring evaluations unusually high-stakes for development and coaching. Washington's spring game, Dawgs After Dark, is set for May 1."
+      "headline": "SPRING WRAPS UNDER NEW SINGLE-WINDOW PORTAL REGIME",
+      "body": "With the NCAA's elimination of the spring transfer portal this year, April is the first true off-season in a decade without roster churn — forcing programs to lock in their depth during the January window. Compliance eyes are on schools suspected of circumventing rules via post-spring-game 'withdrawals,' with the NCAA set to vote on harsher penalties soon."
     }
   ],
   "sports": [
@@ -55,47 +60,47 @@
       "team": "DETROIT PISTONS",
       "pill": "W 98-83",
       "pillClass": "s-w",
-      "detail": "Beat Orlando Magic in Game 2, series tied 1-1. Cade Cunningham: 27 pts, 6 reb, 11 ast. Game 3 at Orlando Friday."
-    },
-    {
-      "team": "SEATTLE SEAHAWKS",
-      "pill": "NFL Draft",
-      "pillClass": "s-up",
-      "detail": "On the clock at pick #32 tonight in Pittsburgh (Super Bowl 60 champs). GM Schneider signals trade-back. Top needs: RB (Charbonnet ACL), CB. Rounds 2-3 Friday."
+      "detail": "Beat Magic in Game 2 to even series 1-1. Cunningham 27/11 ast, team blocked 11 shots. Game 3 Saturday in Orlando."
     },
     {
       "team": "SEATTLE MARINERS",
-      "pill": "L 5-2",
+      "pill": "11-15",
       "pillClass": "s-l",
-      "detail": "Dropped A's series finale 5-2 (Apr 22). Record 11-16. Off day today; new series begins Apr 24."
+      "detail": "Rough start to the season, currently below .500. Series vs. Athletics ongoing. Offense inconsistent; rotation holding up."
     },
     {
-      "team": "WASHINGTON HUSKIES FOOTBALL",
-      "pill": "Spring Prac",
+      "team": "SEATTLE SEAHAWKS",
+      "pill": "PICK: PRICE RB",
       "pillClass": "s-up",
-      "detail": "15 spring sessions underway through May 1. Dawgs After Dark spring game May 1. WR Jonah Coleman, CB Carver Willis in tonight's NFL Draft."
+      "detail": "Selected Jadarian Price (Notre Dame RB) at #32 to replace Kenneth Walker III. Round 2 pick at #64 tonight; also hold picks at #96 and #188."
     },
     {
-      "team": "WASHINGTON HUSKIES BASKETBALL",
-      "pill": "Offseason",
+      "team": "UW HUSKIES FOOTBALL",
+      "pill": "SPRING WRAPPED",
       "pillClass": "s-up",
-      "detail": "Portal closed today. Added F Watts (Texas Tech), G Friedrichsen (Davidson), F Venters (Gonzaga), G Beasley (USF) under coach Sprinkle."
+      "detail": "Spring practice complete. RB Jayden Limar out recovering from ankle surgery. HC Jedd Fisch taking over as OC after parting with Jimmie Dougherty."
+    },
+    {
+      "team": "UW HUSKIES BASKETBALL",
+      "pill": "2 PORTAL ADDS",
+      "pillClass": "s-up",
+      "detail": "Sprinkle signed G Parker Friedrichsen (Davidson, 3 yrs D1) and G Steele Venters (Gonzaga, 36.7% 3PT). Roster rebuild ongoing after Diallo, Mandaquit, Steinbach, Tucker departures."
     }
   ],
   "watchlist": [
-    "Q1 GDP advance + March PCE — Thursday Apr 30, 8:30 AM ET — core PCE last at 2.7%; hot print deepens Fed hold",
-    "FOMC meeting May 5-6 — market pricing hold through at least June; Brent near $105 narrows any cut window",
-    "NFL Draft Rounds 2-3 — Friday Apr 24 in Pittsburgh; Seahawks trade-back strategy pivotal with only 4 picks",
-    "Iran ceasefire talks — Islamabad negotiations stalled; sustained Brent above $100 = CPI upside risk",
-    "Mariners next series — team 11-16 starts new opponent Apr 24; rotation depth under scrutiny"
+    "Core PCE release Thursday 4/30 — market looking for any signal of oil pass-through into core services",
+    "May 5-6 FOMC meeting — no cut expected; watch statement language on supply shocks and Powell presser",
+    "NFL Draft Day 2 tonight 7 PM ET (Rounds 2-3) — Seahawks on the clock at #64",
+    "Pistons vs. Magic Game 3 Saturday — must-win territory for road team Detroit",
+    "Mariners vs. Athletics Saturday — Castillo expected to start, bullpen thin going into weekend"
   ],
   "deepDive": {
-    "title": "How AI Reprices SaaS Multiples: The NRR Mechanism Behind Today's Software Selloff",
+    "title": "Why an Oil Supply Shock Is the Hardest Call the Fed Ever Faces",
     "content": [
-      "ServiceNow fell nearly 18% and IBM dropped 9% Thursday despite both reporting results roughly in line with consensus. The headline explanation — 'guidance uncertainty' — understates what actually happened in the market's calculus. Today's selloff is a textbook example of multiple compression triggered by a shift in long-run revenue quality assumptions, not just a near-term earnings miss. Understanding that distinction is central to analyzing any high-multiple growth sector, and it explains why a company can 'beat' and still lose a fifth of its market cap in a single session.",
-      "SaaS companies trade primarily on ARR growth and NRR (net dollar retention). NRR measures how existing customers spend year-over-year: if they expand contracts, NRR exceeds 100%; if they cut seats or churn, it falls below. Wall Street values SaaS at a premium EV/ARR multiple — ServiceNow traded near 18x — because high NRR implies compounding, sticky revenue. AI disruption directly threatens NRR: enterprises can now automate workflows that previously required expanding seat counts. When ServiceNow's guidance implied subscription growth slowing from ~23% to ~20%, the market didn't trim earnings by 3 percentage points. It re-rated the entire forward multiple, asking: if NRR structurally compresses over time, what is the correct terminal value?",
-      "Most observers miss the rule-of-40 dynamic embedded in buyside SaaS valuation. Rule-of-40 (revenue growth% + FCF margin%) is the primary screen analysts use to rank software names. ServiceNow at 60+ was in 'elite' territory commanding premium multiples. A guidance cut that shaves even 3-5 points off the growth component drops a company out of the top-tier bucket, triggering systematic re-allocation by quant funds that use rule-of-40 as a filter. The result is non-linear: a 3% growth miss can produce a 15-20% stock move because it crosses a classification threshold. The 2001 analog is instructive — Oracle fell 30%+ not because revenues collapsed but because the market re-underpriced terminal growth as the client-server software wave peaked.",
-      "For today's portfolio setup, the bifurcation is now explicit: Texas Instruments surged 18% on data center chip demand while ServiceNow fell 18% on AI substitution risk. Both carry 'AI' exposure in the popular narrative, but the market is pricing them through opposite lenses — TI as AI infrastructure enabler, ServiceNow as a potential AI target. If you're evaluating software sector exposure, the key discriminator is whether a company sits on the enabling layer (semis, hyperscalers, networking) or the application layer (workflow automation, CRM, collaboration) where AI substitution is most credible. The April 30 PCE/GDP print adds a second headwind: if growth slows while rates stay elevated, high-multiple software names face both discount rate expansion and growth premium compression simultaneously."
+      "The Strait of Hormuz closure is a textbook supply-side shock, and today's tape — equities down, yields up, gold off its high as the dollar firms — is the market trying to price a policy regime that hasn't existed in four decades. The FOMC held at 3.50–3.75% in March with one cut still in the dots, but fed funds futures are now pushing the first cut to September. The question isn't where rates go next; it's which leg of the dual mandate Powell chooses to defend when the shock forces a trade-off between them. Understanding why that trade-off is so brutal requires unpacking what a supply shock actually does to the Phillips-curve framework the Fed operates in.",
+      "A demand shock moves output and inflation in the same direction — recession cools both, boom heats both — so the Fed's reaction function is unambiguous. A supply shock moves them in opposite directions. When Brent rallies 55% because barrels are physically stuck, headline CPI rises (oil is ~3% of the core PCE basket but passes through to transport, food, and manufactured goods) while real disposable income falls, crimping demand for everything else. The Fed can raise rates to crush the secondary inflation (inflation expectations, wage demands) but that deepens the output hit. Or it can cut to cushion growth but risk un-anchoring the expectations it spent 2022–24 re-anchoring. Neither tool fixes the actual problem, which is that oil tankers aren't moving.",
+      "The historical template most invoked is 1973–74, when OPEC's embargo quadrupled crude and Arthur Burns kept policy too easy, arguably seeding the Great Inflation. The less-discussed counter-example is 1990–91: Iraq invaded Kuwait, oil doubled in three months, and Greenspan explicitly looked through it — he cut rates into the shock because the Fed judged the price move as transitory and demand as already weakening. Core inflation stayed contained, the recession was mild, and the credibility gamble paid off. The difference wasn't the size of the shock; it was the starting point. Burns inherited un-anchored expectations and a loose fiscal stance. Greenspan had residual disinflation credibility from Volcker. Powell's starting point is somewhere in between — expectations are anchored but barely, after the 2022 spike, and fiscal policy is expansionary.",
+      "That's why the 10Y jumped 7 bps today while equities sold off: bond traders are pricing the Fed to choose credibility over growth, which means 'higher for longer' even if the real economy softens. Watch three things into the May 5-6 meeting. First, the statement's treatment of 'supply-side' language — explicit acknowledgment signals the Fed is preparing to look through headline CPI. Second, the dot plot's 2027 terminal rate, which tells you whether officials think this is a one-off price level reset or a persistent regime change. Third, breakeven inflation at the 5Y5Y point — if it stays anchored near 2.3%, Powell has room to cut when growth rolls over. If it breaks above 2.6%, he's locked into hikes regardless of what GDP does. The whole policy path runs through that number."
     ]
   }
 }
