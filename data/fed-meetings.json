@@ -4,8 +4,8 @@
     "description": "Curated FOMC meeting log cross-referencing statement language shifts with rate outcomes and Treasury-market reactions.",
     "author": "Christopher Givan",
     "methodology": "Same-day (2pm statement to 3pm close) yield changes sourced from Treasury.gov H.15 series and cross-checked against Fed statement archive. Stance reflects the statement + SEP composite, not just the decision. This dataset is curated by hand — not an automated feed.",
-    "last_curated": "2026-04-10",
-    "coverage": "Selected inflection meetings from the 2022 hiking cycle through the 2024 cut cycle."
+    "last_curated": "2026-04-24",
+    "coverage": "Selected inflection meetings from the 2022 hiking cycle through the 2025 cut cycle."
   },
   "meetings": [
     {
@@ -169,6 +169,149 @@
       "curve_bp": 2,
       "curve_direction": "steepening",
       "notes": "Hawkish cut. Hammack dissented for a hold. The 'extent and timing' insertion mirrored the 'any' move in Dec 2023 but in reverse — same linguistic tell, opposite direction."
+    },
+    {
+      "id": "2025-01",
+      "date": "2025-01-29",
+      "target_range": "4.25–4.50%",
+      "stance": "neutral",
+      "statement_summary": "First 2025 meeting. Holds after three consecutive 2024 cuts. Removes 'made progress toward 2 percent' phrase without adding a replacement — Powell calls it statement shortening, not a signal change.",
+      "phrase_changes": [
+        { "type": "removed", "phrase": "inflation has made progress toward the Committee's 2 percent objective" },
+        { "type": "retained", "phrase": "inflation remains somewhat elevated" }
+      ],
+      "decision": "Hold",
+      "next_decision": "Hold (Mar 2025)",
+      "y2_bp": 2,
+      "y10_bp": 0,
+      "curve_bp": -2,
+      "curve_direction": "flattening",
+      "notes": "Powell explicitly downplayed the language removal in the press conference — 'shortening the statement, not meant to send a signal.' Market initially sold off, then fully reversed during the presser. End-of-day moves were small (2Y +2 bp, 10Y flat), consistent with the neutral read."
+    },
+    {
+      "id": "2025-03",
+      "date": "2025-03-19",
+      "target_range": "4.25–4.50%",
+      "stance": "hawkish",
+      "statement_summary": "Adds uncertainty language and announces a large QT slowdown — Treasury redemption cap cut from $25B to $5B/month starting April. Powell flags tariffs as an inflation driver. GDP forecast cut to 1.7% from 2.1%.",
+      "phrase_changes": [
+        { "type": "added", "phrase": "uncertainty around the economic outlook has increased" },
+        { "type": "added", "phrase": "Treasury securities redemption cap reduced to $5 billion per month" }
+      ],
+      "decision": "Hold",
+      "next_decision": "Hold (May 2025)",
+      "y2_bp": -5,
+      "y10_bp": -4,
+      "curve_bp": 1,
+      "curve_direction": "steepening",
+      "notes": "Statement stance labeled hawkish on tariff inflation framing, but the yield reaction was dovish — QT slowdown (largest since 2019) and the GDP downgrade brought both 2Y and 10Y down 4–5 bp. Waller dissented, preferring to hold the existing QT pace. The market read the QT cut as more meaningful than the rhetorical hawkishness."
+    },
+    {
+      "id": "2025-05",
+      "date": "2025-05-07",
+      "target_range": "4.25–4.50%",
+      "stance": "neutral",
+      "statement_summary": "First explicit dual-mandate tension in the statement: heightened risks of both higher unemployment and higher inflation simultaneously — the Fed's clearest stagflation acknowledgment. Uncertainty language upgraded to 'increased further.'",
+      "phrase_changes": [
+        { "type": "changed", "phrase": "uncertainty about the economic outlook has increased → has increased further" },
+        { "type": "added", "phrase": "risks to both sides of our dual mandate have risen" }
+      ],
+      "decision": "Hold",
+      "next_decision": "Hold (Jun 2025)",
+      "y2_bp": 0,
+      "y10_bp": -4,
+      "curve_bp": -4,
+      "curve_direction": "flattening",
+      "notes": "Decision was fully priced; same-day reaction was muted. The 10Y fell 4 bp on the day — the stagflation framing was read as growth-negative enough to bring long rates down despite inflation risk. 2Y flat. Volatile intermeeting period driven by the April tariff shock; the May statement itself was a non-event relative to what had already been priced."
+    },
+    {
+      "id": "2025-06",
+      "date": "2025-06-18",
+      "target_range": "4.25–4.50%",
+      "stance": "neutral",
+      "statement_summary": "Slight de-escalation: uncertainty language softens from 'increased further' to 'remains elevated.' Fiscal concerns drove the 10Y notably higher over the intermeeting period per FOMC minutes, but the statement itself was a non-event.",
+      "phrase_changes": [
+        { "type": "changed", "phrase": "uncertainty about the economic outlook has increased further → uncertainty about the economic outlook remains elevated" }
+      ],
+      "decision": "Hold",
+      "next_decision": "Hold (Jul 2025)",
+      "y2_bp": 0,
+      "y10_bp": -1,
+      "curve_bp": -1,
+      "curve_direction": "flattening",
+      "notes": "The softening of uncertainty language (from 'increased further' to 'remains elevated') was the dovish tell — signaling the peak of the dual-mandate tension framing. Same-day yield reaction was essentially flat. The FOMC minutes attributed the intermeeting 10Y rise to fiscal concerns rather than Fed signaling."
+    },
+    {
+      "id": "2025-07",
+      "date": "2025-07-30",
+      "target_range": "4.25–4.50%",
+      "stance": "dovish",
+      "statement_summary": "Holds but two members dissent for a cut — Bowman and Waller, the first simultaneous double dissent since 1993. Statement language acknowledges the first-half growth moderation for the first time.",
+      "phrase_changes": [
+        { "type": "changed", "phrase": "economic activity has continued to expand at a solid pace → growth of economic activity moderated in the first half of the year" }
+      ],
+      "decision": "Hold",
+      "next_decision": "−25 bp (Sep 2025)",
+      "y2_bp": 8,
+      "y10_bp": 4,
+      "curve_bp": -4,
+      "curve_direction": "flattening",
+      "notes": "Market was surprised the majority held. The hawkish surprise drove a bear flattening — 2Y surged 8 bp as a cut was repriced out of near-term expectations; 10Y rose only 4 bp. The dual dissent (Bowman and Waller) was the strongest leading indicator of an imminent September cut: two dissents for easier policy is the highest-reliability pre-cut signal in the modern FOMC era."
+    },
+    {
+      "id": "2025-09",
+      "date": "2025-09-17",
+      "target_range": "4.00–4.25%",
+      "stance": "dovish",
+      "statement_summary": "First cut of the 2025 easing cycle. Statement adds formal labor weakness language — job gains slowed, unemployment edged up — and explicitly flags rising downside employment risks. Miran dissented for -50bp.",
+      "phrase_changes": [
+        { "type": "added", "phrase": "Job gains have slowed, and the unemployment rate has edged up but remains low" },
+        { "type": "added", "phrase": "downside risks to employment have risen" },
+        { "type": "changed", "phrase": "Inflation remains somewhat elevated → Inflation has moved up and remains somewhat elevated" }
+      ],
+      "decision": "−25 bp",
+      "next_decision": "−25 bp (Oct 2025)",
+      "y2_bp": 1,
+      "y10_bp": 2,
+      "curve_bp": 1,
+      "curve_direction": "steepening",
+      "notes": "Buy the rumor, sell the news — the cut was fully priced after the July double dissent, so same-day reaction was minimal (2Y +1 bp, 10Y +2 bp). The curious language change on inflation ('has moved up') alongside dovish employment additions created a mixed read. Miran's -50bp dissent signaled internal dovish pressure that would not materialize until the dot plot shifted."
+    },
+    {
+      "id": "2025-10",
+      "date": "2025-10-29",
+      "target_range": "3.75–4.00%",
+      "stance": "hawkish",
+      "statement_summary": "Cuts -25bp but delivers a hawkish presser surprise — Powell states December cut is 'not a foregone conclusion.' Statement announces QT end date of December 1. December cut probability collapses from ~98% to ~67% post-statement.",
+      "phrase_changes": [
+        { "type": "added", "phrase": "Committee will conclude the reduction of its aggregate securities holdings on December 1" },
+        { "type": "changed", "phrase": "downside risks to employment rose in recent months (upgraded framing)" }
+      ],
+      "decision": "−25 bp",
+      "next_decision": "−25 bp (Dec 2025)",
+      "y2_bp": 9,
+      "y10_bp": 5,
+      "curve_bp": -4,
+      "curve_direction": "flattening",
+      "notes": "Hawkish cut — Powell's 'not a foregone conclusion' line on December was the headline surprise. Bear flattening: 2Y +9 bp (December cut removed), 10Y +5 bp. Dissents from Miran (-50bp) and Schmid (hold) — the first two-dissent meeting since July, but in opposite directions. QT end announcement was the dovish offset but was overshadowed by the presser guidance."
+    },
+    {
+      "id": "2025-12",
+      "date": "2025-12-10",
+      "target_range": "3.50–3.75%",
+      "stance": "dovish",
+      "statement_summary": "Cuts -25bp but dot plot is aggressively hawkish — median 2026 rate revised to 3.4% (one cut) from September's 2.9% (four cuts). Three dissents, most since September 2019. Statement adds reserve adequacy language and announces shorter-term Treasury purchases.",
+      "phrase_changes": [
+        { "type": "added", "phrase": "reserve balances have declined to ample levels" },
+        { "type": "added", "phrase": "initiating purchases of shorter-term Treasury securities to maintain adequate reserves" }
+      ],
+      "decision": "−25 bp",
+      "next_decision": "Hold (Jan 2026)",
+      "y2_bp": -7,
+      "y10_bp": -3,
+      "curve_bp": 4,
+      "curve_direction": "steepening",
+      "notes": "Dovish cut, hawkish dots — the mirror of December 2023. Front end rallied (2Y −7 bp) despite the hawkish dot plot revision, as Powell emphasized labor weakness as the primary rationale for cutting. Curve steepened +4 bp (bull steepening). Dissents from Miran (-50bp), Goolsbee (hold), and Schmid (hold) — the three-way split reflects genuine internal disagreement about the pace of easing."
     }
   ],
   "predictive_phrases": [
