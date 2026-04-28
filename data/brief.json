@@ -1,101 +1,106 @@
 {
-  "lastUpdated": "2026-04-27T19:00:00-06:00",
+  "lastUpdated": "2026-04-28T19:00:00-06:00",
   "market": {
-    "sp500":  { "price": "7,165",   "change": "+0.11%",   "dir": "up"   },
-    "nasdaq": { "price": "24,025",  "change": "+0.19%",   "dir": "up"   },
-    "yield":  { "price": "4.32%",   "change": "-1 bps",   "dir": "up"   },
-    "wti":    { "price": "$95.50",  "change": "+3.8%",    "dir": "down" },
-    "gold":   { "price": "$4,688",  "change": "-0.25%",   "dir": "down" },
-    "dxy":    { "price": "97.8",    "change": "-0.7%",    "dir": "down" }
+    "sp500":  { "price": "7,138",   "change": "-0.49%",  "dir": "down" },
+    "nasdaq": { "price": "24,663",  "change": "-0.90%",  "dir": "down" },
+    "yield":  { "price": "4.35%",   "change": "+3 bps",  "dir": "down" },
+    "wti":    { "price": "$101",    "change": "+5.8%",   "dir": "down" },
+    "gold":   { "price": "$4,577",  "change": "-2.1%",   "dir": "down" },
+    "dxy":    { "price": "98.7",    "change": "+0.9%",   "dir": "up"   }
   },
   "stories": [
     {
+      "cat": "MARKETS",
+      "headline": "OPENAI REVENUE MISS TRIGGERS AI INFRASTRUCTURE ROUT — NVIDIA AND BROADCOM EACH DOWN 3-4%, NASDAQ -0.90%",
+      "body": "A WSJ report revealed OpenAI has missed internal user-growth and revenue projections, sparking a broad selloff across the AI supply chain: Nvidia, Broadcom, and AMD each fell 3-4%; Oracle (a $300B five-year OpenAI compute partner) dropped 3%+; neocloud CoreWeave shed 4%+; SoftBank — OpenAI's largest outside investor — sank ~10% in Tokyo. The S&P 500 fell 0.49% to 7,138 and the Russell 2000 dropped 1.15%, as investors rotated out of AI-exposed names and into defensive sectors."
+    },
+    {
+      "cat": "COMMODITIES",
+      "headline": "WTI SURGES TO $101 — SEVENTH STRAIGHT GAIN — AS IRAN STRAIT TRAFFIC COLLAPSES TO NEAR ZERO",
+      "body": "WTI crude rose to $101/bbl and Brent touched $111.57, both hitting their highest levels since early April, as mutual US-Iran restrictions have effectively shut tanker traffic through the Strait of Hormuz — which carries ~20% of global petroleum liquids daily. Supply anxiety is building a steep risk premium into the forward curve, with front-month backwardation widening on fears of prolonged disruption."
+    },
+    {
       "cat": "CENTRAL BANKS",
-      "headline": "FOMC OPENS APRIL MEETING TOMORROW WITH OIL-DRIVEN CPI AT 3.3% — POWELL'S WEDNESDAY GUIDANCE IS THE REAL EVENT",
-      "body": "The Fed begins its April 28–29 meeting with the federal funds rate at 3.50–3.75%; markets price a 99.9% probability of a hold. March CPI re-accelerated to 3.3% YoY (vs. 2.4% prior), well above target, driven largely by $107 Brent crude and energy pass-through into transportation costs. Wednesday's 2:30 PM ET Powell press conference will be parsed for whether the pause extends into 2027 or a 2026 cut remains alive."
+      "headline": "FED OPENS TWO-DAY MEETING — 100% ODDS OF HOLD AT 3.50-3.75%; WEDNESDAY PRESSER IS THE REAL EVENT",
+      "body": "The FOMC's April 28-29 meeting opens with CME FedWatch pricing a 100% probability of a third consecutive hold at 3.50-3.75%. The real market event is Wednesday's 2:30 PM ET Powell press conference — likely his final as chair — where investors will parse whether $101 WTI is treated as a transitory supply shock (keeping H2 2026 cuts alive) or a persistent inflation driver (pushing the first cut to 2027)."
     },
     {
       "cat": "GEOPOLITICS",
-      "headline": "BRENT SURGES TO $107, WTI TO $95.50 AS U.S.-IRAN TALKS STALL AND STRAIT OF HORMUZ REMAINS AT RISK",
-      "body": "Stalled U.S.-Iran peace negotiations and effective closure of the Strait of Hormuz — through which ~20% of global seaborne oil transits — sent Brent crude up 3.8% to $107/bbl Monday, its highest level since 2022. Every $10/bbl move in crude adds ~20-25 bps to headline U.S. CPI within 60-90 days, meaning the current spike alone contributes roughly 50 bps of incremental inflation pressure directly into the Fed's target overshoot."
-    },
-    {
-      "cat": "MARKETS",
-      "headline": "S&P 500 AND NASDAQ NOTCH ALL-TIME HIGHS AT 7,165 AND 24,025 AS MICROSOFT ENDS EXCLUSIVE OPENAI PARTNERSHIP",
-      "body": "Equities hit fresh records Monday despite oil-driven inflation concerns, with Microsoft's announcement it is ending its exclusive partnership with OpenAI boosting broad AI sector sentiment. The S&P 500 edged up +0.11% to 7,165 and the Nasdaq gained +0.19% to 24,025; the Dow underperformed, dragged by transportation and consumer discretionary stocks sensitive to energy costs. A split tape — tech up, economically-sensitive names down — is the signature of an oil supply shock."
+      "headline": "US-IRAN CEASEFIRE STALLS; HORMUZ CLOSURE THREATENS TO EMBED OIL SHOCK INTO CORE CPI",
+      "body": "Despite a ceasefire nominally holding since early April, mutual restrictions have choked the Strait of Hormuz to near-zero tanker traffic. With Brent at $111.57 and WTI at $101 — roughly $15/bbl above early-April levels — the energy pass-through to headline CPI is accelerating. Every $10/bbl move in crude adds an estimated 20-25 bps to US headline inflation within 60-90 days, meaning the current spike alone contributes ~35 bps of incremental upward pressure into the Fed's already-missed target."
     },
     {
       "cat": "MACRO",
-      "headline": "IMF'S APRIL 2026 WORLD ECONOMIC OUTLOOK CUTS GLOBAL GROWTH AS TARIFF RESIDUALS AND ENERGY SPIKE COMPOUND",
-      "body": "The IMF's April 2026 WEO, titled 'Global Economy Tested Again,' trimmed its 2026 global growth baseline, citing tariff-driven friction (still responsible for roughly half of excess CPI above 2%) and the new energy supply shock. The IMF projects core PCE edging toward 2% in H2 2026 only if oil normalizes — a condition now deeply in doubt with the Strait of Hormuz disruption showing no near-term resolution."
+      "headline": "IMF APRIL 2026 WEO: 'GLOBAL ECONOMY TESTED AGAIN' — TARIFFS AND ENERGY SHOCK COMPOUND INTO STAGFLATION RISK",
+      "body": "The IMF's April 2026 World Economic Outlook trimmed its global growth baseline as Trump tariffs — the largest US tax increase as a share of GDP since 1993, costing ~$1,500/US household this year — combine with the Iran energy shock. The Fund projects the US economy is persistently 0.1% smaller (~$30B/year) in the long run due to tariff drag, and warns core PCE normalization toward 2% is now contingent on oil reversing — a condition in serious doubt."
     },
     {
       "cat": "MCBB",
-      "headline": "COLLEGE HOOPS OFFSEASON IN MOTION: NBA DRAFT DECLARATIONS FINALIZED, TRANSFER PORTAL RESHAPING ROSTERS FOR 2026-27",
-      "body": "Three weeks after Michigan defeated UConn 69-63 to claim the 2026 NCAA Championship — the Big Ten's first title since Michigan State in 2000 — rosters across college basketball continue to shift. NBA Draft early entry deadlines have passed, and programs are filling holes through the transfer portal. Washington added transfers LeJuan Watts (Texas Tech) and Steele Venters (Gonzaga) this week as programs firm up their 2026-27 rosters."
+      "headline": "MICHIGAN CHAMPIONSHIP ROSTER FRAGMENTS AS NBA EARLY ENTRY WINDOW CLOSES — BIG TEN STARS DECLARE",
+      "body": "Three weeks after Michigan defeated UConn in the 2026 NCAA title game — the Wolverines dominated with a 91-73 semifinal win over Arizona before topping the Huskies in the final — multiple key contributors have declared for the NBA Draft as the late-April early entry deadline passes. Michigan's first championship since 1989 accelerated interest in its frontcourt and backcourt stars, with several projected as first-round talents in early mock drafts."
     },
     {
       "cat": "NBA",
-      "headline": "SPURS MAKE NBA PLAYOFF HISTORY WITH +15-HALFTIME-DEFICIT TO +15-WIN SWING; CELTICS CRUSH 76ERS 128-96 FOR 3-1 LEAD",
-      "body": "San Antonio became the first team in NBA playoff history to trail by 15+ points at halftime and win by 15+ points, as De'Aaron Fox (28 pts) and Victor Wembanyama (27 pts, 7 BLK, 4 STL) led a stunning Game 4 reversal. In the East, Payton Pritchard's playoff career-high 32 off the bench — alongside Jayson Tatum's 30 pts, 11 AST — powered Boston to a 128-96 dismantling of Philadelphia, giving the Celtics a commanding 3-1 series lead."
+      "headline": "MAGIC PUSH PISTONS TO BRINK (3-1); THREE GAME 5S TONIGHT — CELTICS-76ERS, KNICKS-HAWKS, SPURS-BLAZERS",
+      "body": "Orlando defeated Detroit 94-88 in Game 4 — Desmond Bane led with 22 pts while the Pistons shot 37.8% from the field and missed 8 free throws — giving the Magic a commanding 3-1 lead. Tonight's slate features three elimination-adjacent Game 5s: Celtics vs. 76ers (7 ET, ESPN), Knicks vs. Hawks (8 ET, NBC), and Spurs vs. Blazers (9:30 ET, ESPN), where San Antonio can close out after their historic 38-point halftime-to-final swing in Game 4."
     },
     {
       "cat": "NFL",
-      "headline": "2026 NFL DRAFT GRADES ARRIVE: CHIEFS AND BUCS EARN TOP MARKS; FERNANDO MENDOZA ERA BEGINS IN LAS VEGAS",
-      "body": "The 2026 NFL Draft concluded Saturday in Pittsburgh with IU quarterback Fernando Mendoza going No. 1 overall to Las Vegas — and nine offensive linemen taken in Round 1. CBS Sports and NBC Sports award the Chiefs and Buccaneers top draft grades; the Jaguars drew sharp criticism. Teams are now in the undrafted free agent window, with all 32 rosters building toward the 90-man offseason roster limit."
+      "headline": "2026 NFL DRAFT COMPLETE: SEAHAWKS TAP RB JADARIAN PRICE AT #32; UDFA MARKET MOVES FAST",
+      "body": "The 2026 NFL Draft concluded April 25 in Pittsburgh with IU QB Fernando Mendoza going #1 overall to Las Vegas. The Seahawks — picking last as defending Super Bowl champions — selected Notre Dame RB Jadarian Price at #32 to replace the departed Kenneth Walker III. Teams are now aggressively signing undrafted free agents: the Ravens inked QB Diego Pavia (Vanderbilt) to a three-year deal, and more than 200 UDFA agreements have been reported league-wide."
     },
     {
       "cat": "NCAA CFB",
-      "headline": "TRANSFER QB MARKET HITS RECORD NIL PRICES AS SPRING PORTAL CLOSES; OKLAHOMA STATE LEADS FBS WITH 50 INCOMING",
-      "body": "ESPN reports college football's spring transfer portal cycle set records for quarterback NIL costs, with top signal-callers commanding multi-million dollar packages. Oklahoma State leads all FBS programs with 50 incoming transfers under new coach Eric Morris from North Texas. Oregon locked in Dylan Raiola via the portal while LSU's pursuit of ESPN's No. 3 transfer Sam Leavitt — over Miami and Tennessee — headlined the most consequential moves for 2026 title contenders."
+      "headline": "SPRING BALL CONCLUDES NATIONWIDE; UW QB DEMOND WILLIAMS JR. EMERGES STRONGER AFTER PORTAL SCARE",
+      "body": "Spring practices are wrapping up across Power Four programs as depth charts crystallize ahead of summer camp. At Washington, QB Demond Williams Jr. — who briefly entered the transfer portal in January before reversing course within 48 hours — has been praised by coaches for a markedly more vocal and intentional approach, and holds the QB1 role firmly. The 2026 Huskies open September 5 vs. Washington State under a new offensive coordinator after parting ways with Jimmie Dougherty."
     }
   ],
   "sports": [
     {
       "team": "DETROIT PISTONS",
-      "pill": "G4 Tonight",
-      "pillClass": "s-up",
-      "detail": "vs. Orlando Magic, 8 PM ET. Magic lead series 2-1. #1 seed (60-22) in historic upset danger — must-win."
+      "pill": "L 88-94",
+      "pillClass": "s-l",
+      "detail": "Lost Game 4 to Magic on April 27. Tobias Harris 20 pts/6 reb; Duren 12 pts/8 reb but 4 TOs. Shot 37.8% from field, missed 8 FTs. Magic lead series 3-1; Pistons face elimination in Game 5."
     },
     {
       "team": "SEATTLE MARINERS",
-      "pill": "@ MIN Tonight",
-      "pillClass": "s-up",
-      "detail": "At Twins, 7:40 PM ET (Target Field). Record 14-15 after 11-9 win vs. STL on Sunday. Series runs Apr 27-29."
+      "pill": "L 4-11",
+      "pillClass": "s-l",
+      "detail": "Hammered at Target Field on April 27 — Twins' Kody Clemens homered and drove in 5 runs, Connor Prielipp earned his first MLB win. Record now 14-16. Tonight's game vs. Minnesota (7:40 PM CT) in progress."
     },
     {
       "team": "SEATTLE SEAHAWKS",
       "pill": "Post-Draft",
       "pillClass": "s-up",
-      "detail": "Drafted RB Jadarian Price (Notre Dame) #32 overall. Lost SB MVP RB Kenneth Walker III to KC. Now signing UDFAs."
+      "detail": "Draft complete (April 23-25). Selected RB Jadarian Price (Notre Dame) at #32 overall to replace SB MVP Kenneth Walker III. Converted two picks into five on Day 3. Now in UDFA signing window; training camp opens July."
     },
     {
       "team": "WASHINGTON HUSKIES FOOTBALL",
       "pill": "Spring Ball",
       "pillClass": "s-up",
-      "detail": "Demond Williams Jr. holds QB1 role. Roster returns 297 combined starts from 2025 LA Bowl. 4-star WR Tre Moore visiting campus."
+      "detail": "Spring practices wrapping up. QB Demond Williams Jr. back as QB1 after brief portal stint, described as more vocal and intentional. New OC hired after Dougherty departure. Season opener: Sept. 5 vs. Washington State."
     },
     {
       "team": "WASHINGTON HUSKIES BASKETBALL",
       "pill": "Off-Season",
       "pillClass": "s-up",
-      "detail": "Added G LeJuan Watts (Texas Tech, Apr 25) and G Steele Venters (Gonzaga). 10 of 15 roster spots filled for 2026-27."
+      "detail": "Major roster overhaul underway. Added transfers Steele Venters (Gonzaga), LeJuan Watts (Texas Tech, Apr 25), Ryan Beasley and Parker Friedrichsen (San Francisco). First HS commit: Mount Si F Lattimore Ford. 10 of 15 spots filled."
     }
   ],
   "watchlist": [
-    "FOMC rate decision Wednesday Apr 29, 2 PM ET — hold certain; Powell press conference 2:30 PM ET is the real signal on inflation duration",
-    "Q1 2026 GDP advance estimate Thursday Apr 30 — oil shock may weigh on real growth even as nominal stays elevated",
-    "Core PCE Friday May 1 — Fed's preferred inflation gauge; elevated print could extinguish remaining 2026 cut expectations",
-    "Pistons vs. Magic Game 5 — Wednesday Apr 29, 7 PM ET if Detroit wins tonight; series on the line",
-    "Mariners at Twins series — Apr 27-29 at Target Field; M's (14-15) need wins to stay in AL West conversation"
+    "Fed rate decision Wednesday Apr 29, 2 PM ET — 100% hold at 3.50-3.75%; Powell presser 2:30 PM ET — watch 'transitory' vs. 'persistent' framing on oil/inflation",
+    "Q1 2026 GDP advance estimate Thursday Apr 30 — energy shock and tariff drag expected to weigh on real growth print",
+    "Core PCE Friday May 1 — Fed's preferred gauge; elevated print could extinguish remaining 2026 cut expectations entirely",
+    "Pistons-Magic Game 5 — Wednesday Apr 29, must-win for Detroit (down 3-1); elimination game",
+    "Mariners vs. Twins — series continues Apr 28-29 at Target Field; M's (14-16) need wins to stay in AL West conversation"
   ],
   "deepDive": {
-    "title": "The Fed's Oil-Shock Policy Bind: Why Rate Hikes Can't Fix a Supply Problem — and Why That's Dangerous in 2026",
+    "title": "The AI Capex Flywheel: Why One OpenAI Revenue Miss Crashed the Entire Chip Sector",
     "content": [
-      "Today's S&P 500 record at 7,165 sits alongside $107 Brent crude and a 3.3% headline CPI — a combination that captures the Federal Reserve's central dilemma heading into tomorrow's FOMC meeting. The Strait of Hormuz crisis and stalled US-Iran negotiations have pushed energy costs to multiyear highs just as the Fed had hoped its long pause at 3.50-3.75% would allow inflation to drift back toward 2%. Markets price a 99.9% probability of a hold on Wednesday, but the real question is not whether Powell holds — it's what he signals about duration, and whether he acknowledges that the primary inflation driver is a supply shock that monetary policy cannot cure.",
-      "The transmission mechanism from oil to CPI runs in two channels. The direct channel is arithmetic: energy is roughly 7% of CPI, and every $10/barrel move in crude adds approximately 20-25 basis points to headline inflation within 60-90 days. With Brent up ~$22 from early-2026 levels, that alone contributes 45-55 bps of mechanical upward pressure before any secondary effects. The indirect channel unfolds over 3-6 months: transportation costs in trucking, airlines, and shipping reprice higher, feeding into core goods and services with a lag. What begins as energy CPI becomes stickier core inflation — the worst outcome for a Fed trying to declare victory on price stability without triggering a recession.",
-      "The canonical mistake in supply-shock monetary policy is the Fed's response to the 1973 OPEC embargo: aggressive tightening into a supply disruption deepened recession without fully resolving inflation, because rate hikes suppress demand but cannot create oil supply. The 1990 Gulf War spike — when Brent surged roughly 90% in four months — offered a more successful template: the Fed held steady, the shock faded in ~six months, and core inflation normalized. The critical variable in both cases was whether inflation expectations remained anchored. In 1973 they broke; in 1990 they held. Today's 5-year breakeven inflation rates hovering around 2.7% and deteriorating consumer survey confidence suggest expectations are under pressure — which is precisely why the Fed cannot simply 'look through' this shock the way classical theory prescribes.",
-      "The 2026 setup introduces two complications absent from prior analogues. First, the Fed has been on hold for multiple consecutive meetings with inflation already above target — each passing meeting without progress erodes the credibility of the 'temporary pause' narrative and raises the risk that markets reprice to a persistently higher-for-longer baseline, lifting long-end yields and compressing equity multiples. Second, Powell's term as chair is ending soon, creating institutional uncertainty about the Fed's 2% commitment that the bond market will independently price into inflation expectations. If Wednesday's statement leans hawkish — emphasizing inflation persistence — expect the 2-year Treasury yield to rise and 2026 cut bets to shift to 2027. If Powell frames this as a supply-side shock and preserves H2 2026 optionality, equities stay bid. Watch the 2-year yield in the first ten minutes after 2 PM ET: that move tells you which scenario the bond market believes."
+      "A single Wall Street Journal report — that OpenAI missed internal user-growth and revenue projections, with CFO Sarah Friar warning colleagues that slower growth could constrain future compute commitments — sent Nvidia, Broadcom, and AMD each down 3-4%, Oracle down 3%+, and neocloud CoreWeave down 4%+, all on a Tuesday with no macro catalyst. The Nasdaq closed at 24,663, off 0.9%. The cascade looks outsized for news about one private startup, but it exposes a specific structural vulnerability in how the entire AI infrastructure trade is priced: a chain of multi-year compute agreements whose unit economics depend on AI application revenue growing fast enough to service enormous upfront costs.",
+      "The core mechanism is the AI capex flywheel. OpenAI and peer AI labs commit to massive multi-year compute agreements — the OpenAI-Oracle partnership alone spans $300 billion over five years — premised on continued rapid revenue growth to justify that spend. Chip manufacturers (Nvidia, Broadcom) and infrastructure providers (Oracle, CoreWeave, Microsoft Azure) price their stocks on forward expectations of that demand. The chain is reflexive: AI lab revenue → renewed compute commitments → chip and infrastructure forward order books → forward earnings estimates for public vendors. When one lab's revenue growth decelerates, every upstream vendor's forward demand assumptions weaken simultaneously, which is why a private company missing internal targets can move billions in public-market cap.",
+      "What most coverage misses is that this is a comps problem, not an earnings problem. OpenAI has no quarterly report — there's no official earnings miss, only a trajectory shift. The strongest historical analogue is the 1999-2001 telecom buildout: carriers committed $400B+ in combined network capex premised on internet traffic doubling every 90 days. When growth decelerated from exponential to merely extraordinary, the entire supply chain — fiber, optical components, routers — repriced violently. Cisco lost 89% of its value. The 2026 question is structurally identical: is AI compute demand an S-curve still on its steep mid-slope, or a near-exponential already approaching an inflection where growth rates moderate even as absolute levels remain high?",
+      "Today's market action contains a key signal: the S&P 500 fell only 0.49% while chip-specific names fell 3-4% — a relative underperformance consistent with a sector re-rating, not a broad macro panic. Nvidia currently trades around 30x forward earnings, a multiple that embeds a specific compound growth rate assumption for data center revenue. If OpenAI's miss suggests AI revenue is running one or two quarters behind plan, that multiple is vulnerable to compression even without an earnings cut. The next hard data points are Nvidia's upcoming earnings print and Q2 capex guidance from the hyperscalers (Amazon, Microsoft, Google). If those reaffirm AI buildout plans, today is a single-data-point overreaction. If they soften, this is the beginning of a structural re-rating."
     ]
   }
 }
