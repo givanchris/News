@@ -1,106 +1,100 @@
 {
-  "lastUpdated": "2026-04-28T19:00:00-06:00",
+  "lastUpdated": "2026-04-29T19:00:00-06:00",
   "market": {
-    "sp500":  { "price": "7,138",   "change": "-0.49%",  "dir": "down" },
-    "nasdaq": { "price": "24,663",  "change": "-0.90%",  "dir": "down" },
-    "yield":  { "price": "4.35%",   "change": "+3 bps",  "dir": "down" },
-    "wti":    { "price": "$101",    "change": "+5.8%",   "dir": "down" },
-    "gold":   { "price": "$4,577",  "change": "-2.1%",   "dir": "down" },
-    "dxy":    { "price": "98.7",    "change": "+0.9%",   "dir": "up"   }
+    "sp500":  { "price": "7,213",   "change": "+1.05%",  "dir": "up"   },
+    "nasdaq": { "price": "25,067",  "change": "+1.64%",  "dir": "up"   },
+    "yield":  { "price": "4.33%",   "change": "-2 bps",  "dir": "up"   },
+    "wti":    { "price": "$99.32",  "change": "-1.7%",   "dir": "down" },
+    "gold":   { "price": "$4,569",  "change": "-0.2%",   "dir": "down" },
+    "dxy":    { "price": "98.4",    "change": "-0.3%",   "dir": "down" }
   },
   "stories": [
     {
+      "cat": "MACRO",
+      "headline": "MARKETS REBOUND 1%+ AHEAD OF FOMC AND Q1 GDP — VISA SURGES 6% ON BLOWOUT EARNINGS",
+      "body": "S&P 500 rose 1.05% and Nasdaq climbed 1.64%, snapping Tuesday's tech selloff. Visa jumped 6% after reporting 17% revenue growth — its strongest quarter since 2022. Starbucks added 5% on an earnings beat. The FOMC begins its two-day meeting today; no rate change expected from the current 3.5–3.75% target range."
+    },
+    {
       "cat": "MARKETS",
-      "headline": "OPENAI REVENUE MISS TRIGGERS AI INFRASTRUCTURE ROUT — NVIDIA AND BROADCOM EACH DOWN 3-4%, NASDAQ -0.90%",
-      "body": "A WSJ report revealed OpenAI has missed internal user-growth and revenue projections, sparking a broad selloff across the AI supply chain: Nvidia, Broadcom, and AMD each fell 3-4%; Oracle (a $300B five-year OpenAI compute partner) dropped 3%+; neocloud CoreWeave shed 4%+; SoftBank — OpenAI's largest outside investor — sank ~10% in Tokyo. The S&P 500 fell 0.49% to 7,138 and the Russell 2000 dropped 1.15%, as investors rotated out of AI-exposed names and into defensive sectors."
+      "headline": "Q1 GDP ADVANCE ESTIMATE DUE TOMORROW — TARIFF IMPORT SURGE MAY PRODUCE MISLEADING CONTRACTION",
+      "body": "The BEA releases the Q1 2026 GDP advance estimate at 8:30 AM ET Thursday alongside the FOMC decision at 2 PM ET. Imports reportedly surged at a ~38% annualized rate in Q1 as companies front-ran April tariff hikes, which mechanically drags net exports and could produce a negative headline print even if domestic demand held firm."
+    },
+    {
+      "cat": "EARNINGS",
+      "headline": "VISA BEATS ON REVENUE AND EARNINGS — SPENDING DURABILITY INTACT DESPITE TARIFF ENVIRONMENT",
+      "body": "Visa's 17% revenue growth — the fastest since 2022 — signals that consumer spending has held up despite tariff-driven price pressures and slowing GDP forecasts. The print is a key early read on discretionary demand with four Magnificent Seven companies still set to report this week."
     },
     {
       "cat": "COMMODITIES",
-      "headline": "WTI SURGES TO $101 — SEVENTH STRAIGHT GAIN — AS IRAN STRAIT TRAFFIC COLLAPSES TO NEAR ZERO",
-      "body": "WTI crude rose to $101/bbl and Brent touched $111.57, both hitting their highest levels since early April, as mutual US-Iran restrictions have effectively shut tanker traffic through the Strait of Hormuz — which carries ~20% of global petroleum liquids daily. Supply anxiety is building a steep risk premium into the forward curve, with front-month backwardation widening on fears of prolonged disruption."
-    },
-    {
-      "cat": "CENTRAL BANKS",
-      "headline": "FED OPENS TWO-DAY MEETING — 100% ODDS OF HOLD AT 3.50-3.75%; WEDNESDAY PRESSER IS THE REAL EVENT",
-      "body": "The FOMC's April 28-29 meeting opens with CME FedWatch pricing a 100% probability of a third consecutive hold at 3.50-3.75%. The real market event is Wednesday's 2:30 PM ET Powell press conference — likely his final as chair — where investors will parse whether $101 WTI is treated as a transitory supply shock (keeping H2 2026 cuts alive) or a persistent inflation driver (pushing the first cut to 2027)."
-    },
-    {
-      "cat": "GEOPOLITICS",
-      "headline": "US-IRAN CEASEFIRE STALLS; HORMUZ CLOSURE THREATENS TO EMBED OIL SHOCK INTO CORE CPI",
-      "body": "Despite a ceasefire nominally holding since early April, mutual restrictions have choked the Strait of Hormuz to near-zero tanker traffic. With Brent at $111.57 and WTI at $101 — roughly $15/bbl above early-April levels — the energy pass-through to headline CPI is accelerating. Every $10/bbl move in crude adds an estimated 20-25 bps to US headline inflation within 60-90 days, meaning the current spike alone contributes ~35 bps of incremental upward pressure into the Fed's already-missed target."
-    },
-    {
-      "cat": "MACRO",
-      "headline": "IMF APRIL 2026 WEO: 'GLOBAL ECONOMY TESTED AGAIN' — TARIFFS AND ENERGY SHOCK COMPOUND INTO STAGFLATION RISK",
-      "body": "The IMF's April 2026 World Economic Outlook trimmed its global growth baseline as Trump tariffs — the largest US tax increase as a share of GDP since 1993, costing ~$1,500/US household this year — combine with the Iran energy shock. The Fund projects the US economy is persistently 0.1% smaller (~$30B/year) in the long run due to tariff drag, and warns core PCE normalization toward 2% is now contingent on oil reversing — a condition in serious doubt."
+      "headline": "OIL GIVES BACK SOME OF TUESDAY'S 5.8% SPIKE — WTI SETTLES AT $99.32 AS IRAN TENSIONS SIMMER",
+      "body": "WTI crude fell 1.7% to $99.32 after surging 5.8% on Monday on Iranian supply concerns. Gold dipped to $4,569 (-0.2%) as investors rotated into equities on the risk-on session. The dollar weakened slightly with DXY at 98.4, extending its retreat below the psychologically important 100 level."
     },
     {
       "cat": "MCBB",
-      "headline": "MICHIGAN CHAMPIONSHIP ROSTER FRAGMENTS AS NBA EARLY ENTRY WINDOW CLOSES — BIG TEN STARS DECLARE",
-      "body": "Three weeks after Michigan defeated UConn in the 2026 NCAA title game — the Wolverines dominated with a 91-73 semifinal win over Arizona before topping the Huskies in the final — multiple key contributors have declared for the NBA Draft as the late-April early entry deadline passes. Michigan's first championship since 1989 accelerated interest in its frontcourt and backcourt stars, with several projected as first-round talents in early mock drafts."
+      "headline": "MICHIGAN WINS 2026 NCAA CHAMPIONSHIP — FIRST TITLE SINCE 1989, BEATS UCONN 69-63",
+      "body": "The Wolverines captured their first national championship in 37 years, defeating UConn 69-63 in the title game. Michigan knocked off No. 1 seed Arizona in the Final Four to reach the championship and then held off a late Husky rally to seal the program's second title in the modern era."
     },
     {
       "cat": "NBA",
-      "headline": "MAGIC PUSH PISTONS TO BRINK (3-1); THREE GAME 5S TONIGHT — CELTICS-76ERS, KNICKS-HAWKS, SPURS-BLAZERS",
-      "body": "Orlando defeated Detroit 94-88 in Game 4 — Desmond Bane led with 22 pts while the Pistons shot 37.8% from the field and missed 8 free throws — giving the Magic a commanding 3-1 lead. Tonight's slate features three elimination-adjacent Game 5s: Celtics vs. 76ers (7 ET, ESPN), Knicks vs. Hawks (8 ET, NBC), and Spurs vs. Blazers (9:30 ET, ESPN), where San Antonio can close out after their historic 38-point halftime-to-final swing in Game 4."
+      "headline": "FIVE PLAYOFF SERIES IN ACTION TONIGHT — PISTONS, RAPTORS, ROCKETS ALL FACING ELIMINATION OR MUST-WIN SPOTS",
+      "body": "Wednesday's slate features five high-stakes games: Pistons host Magic in a do-or-die Game 5 (ORL leads 3-1, 7 PM ET); Cavaliers host Raptors in a tied Game 5 (7:30 PM ET); Knicks hold 3-2 series lead vs. Hawks; Lakers lead Rockets 3-1; Thunder (already advanced) cleared the way for a wide-open West bracket."
     },
     {
       "cat": "NFL",
-      "headline": "2026 NFL DRAFT COMPLETE: SEAHAWKS TAP RB JADARIAN PRICE AT #32; UDFA MARKET MOVES FAST",
-      "body": "The 2026 NFL Draft concluded April 25 in Pittsburgh with IU QB Fernando Mendoza going #1 overall to Las Vegas. The Seahawks — picking last as defending Super Bowl champions — selected Notre Dame RB Jadarian Price at #32 to replace the departed Kenneth Walker III. Teams are now aggressively signing undrafted free agents: the Ravens inked QB Diego Pavia (Vanderbilt) to a three-year deal, and more than 200 UDFA agreements have been reported league-wide."
+      "headline": "2026 NFL DRAFT COMPLETE — RAIDERS SELECT INDIANA QB FERNANDO MENDOZA #1 OVERALL",
+      "body": "Las Vegas took Fernando Mendoza with the top pick in Pittsburgh, making him the first Hoosier QB ever drafted first overall. Nine offensive linemen went in Round 1 — the most in a single round in recent memory. The Seahawks selected Notre Dame RB Jadarian Price at #32; the Cardinals added Carson Beck in Round 3."
     },
     {
       "cat": "NCAA CFB",
-      "headline": "SPRING BALL CONCLUDES NATIONWIDE; UW QB DEMOND WILLIAMS JR. EMERGES STRONGER AFTER PORTAL SCARE",
-      "body": "Spring practices are wrapping up across Power Four programs as depth charts crystallize ahead of summer camp. At Washington, QB Demond Williams Jr. — who briefly entered the transfer portal in January before reversing course within 48 hours — has been praised by coaches for a markedly more vocal and intentional approach, and holds the QB1 role firmly. The 2026 Huskies open September 5 vs. Washington State under a new offensive coordinator after parting ways with Jimmie Dougherty."
+      "headline": "SPRING CAMPS WRAPPING ACROSS POWER FOUR — CLEMSON DROPS FIVE IN WAY-TOO-EARLY TOP 25",
+      "body": "Power Four programs are completing spring practices. ESPN's updated way-too-early rankings show Clemson falling five spots to No. 24 following a disappointing spring. Defending national champion Indiana is positioned as a top-10 team and visits Washington on Nov. 21 — the third straight year the Huskies host the defending champs."
     }
   ],
   "sports": [
     {
       "team": "DETROIT PISTONS",
-      "pill": "L 88-94",
-      "pillClass": "s-l",
-      "detail": "Lost Game 4 to Magic on April 27. Tobias Harris 20 pts/6 reb; Duren 12 pts/8 reb but 4 TOs. Shot 37.8% from field, missed 8 FTs. Magic lead series 3-1; Pistons face elimination in Game 5."
+      "pill": "GAME 5 TONIGHT",
+      "pillClass": "s-up",
+      "detail": "Do-or-die at home vs. Magic (ORL leads 3-1). 7 PM ET on Prime Video. Last game: L 88-94 vs. Orlando on Apr 27. Season on the line."
     },
     {
       "team": "SEATTLE MARINERS",
       "pill": "L 4-11",
       "pillClass": "s-l",
-      "detail": "Hammered at Target Field on April 27 — Twins' Kody Clemens homered and drove in 5 runs, Connor Prielipp earned his first MLB win. Record now 14-16. Tonight's game vs. Minnesota (7:40 PM CT) in progress."
+      "detail": "Lost to Twins in Minnesota on Apr 28. Luis Castillo surrendered 7 runs; Cal Raleigh hit HR #7. Series continues at Target Field; game likely in progress now."
     },
     {
       "team": "SEATTLE SEAHAWKS",
-      "pill": "Post-Draft",
+      "pill": "DRAFT DONE",
       "pillClass": "s-up",
-      "detail": "Draft complete (April 23-25). Selected RB Jadarian Price (Notre Dame) at #32 overall to replace SB MVP Kenneth Walker III. Converted two picks into five on Day 3. Now in UDFA signing window; training camp opens July."
+      "detail": "Selected RB Jadarian Price (Notre Dame) at #32 overall. Eight picks total: 3 offense, 5 defense. Expert grades mixed; OTAs begin in May."
     },
     {
-      "team": "WASHINGTON HUSKIES FOOTBALL",
-      "pill": "Spring Ball",
+      "team": "WASHINGTON HUSKIES FB",
+      "pill": "SPRING CAMP",
       "pillClass": "s-up",
-      "detail": "Spring practices wrapping up. QB Demond Williams Jr. back as QB1 after brief portal stint, described as more vocal and intentional. New OC hired after Dougherty departure. Season opener: Sept. 5 vs. Washington State."
+      "detail": "Jedd Fisch takes over play-calling duties after parting with OC Jimmie Dougherty. New commit: 3-star TE Zach Albright (Glacier Peak HS). Opens 2026 vs. Indiana (champs) on Nov. 21."
     },
     {
-      "team": "WASHINGTON HUSKIES BASKETBALL",
-      "pill": "Off-Season",
+      "team": "WASHINGTON HUSKIES BBall",
+      "pill": "PORTAL MOVES",
       "pillClass": "s-up",
-      "detail": "Major roster overhaul underway. Added transfers Steele Venters (Gonzaga), LeJuan Watts (Texas Tech, Apr 25), Ryan Beasley and Parker Friedrichsen (San Francisco). First HS commit: Mount Si F Lattimore Ford. 10 of 15 spots filled."
+      "detail": "Adding LeJuan Watts (Texas Tech), Steele Venters (Gonzaga), Ryan Beasley and Parker Friedrichsen (SF). Building 2026-27 roster through active transfer portal work."
     }
   ],
   "watchlist": [
-    "Fed rate decision Wednesday Apr 29, 2 PM ET — 100% hold at 3.50-3.75%; Powell presser 2:30 PM ET — watch 'transitory' vs. 'persistent' framing on oil/inflation",
-    "Q1 2026 GDP advance estimate Thursday Apr 30 — energy shock and tariff drag expected to weigh on real growth print",
-    "Core PCE Friday May 1 — Fed's preferred gauge; elevated print could extinguish remaining 2026 cut expectations entirely",
-    "Pistons-Magic Game 5 — Wednesday Apr 29, must-win for Detroit (down 3-1); elimination game",
-    "Mariners vs. Twins — series continues Apr 28-29 at Target Field; M's (14-16) need wins to stay in AL West conversation"
+    "Q1 GDP advance estimate — tomorrow Apr 30 at 8:30 AM ET; import surge may produce misleading contraction",
+    "FOMC rate decision — tomorrow Apr 30 at 2 PM ET; hold expected, watch Powell on tariff path",
+    "Pistons vs. Magic Game 5 — tonight 7 PM ET (Prime Video); Detroit must win to extend series",
+    "Mariners vs. Twins — series continues in Minnesota; in progress tonight"
   ],
   "deepDive": {
-    "title": "The AI Capex Flywheel: Why One OpenAI Revenue Miss Crashed the Entire Chip Sector",
+    "title": "How Tariff Front-Running Distorts GDP — Why Tomorrow's Number May Mislead",
     "content": [
-      "A single Wall Street Journal report — that OpenAI missed internal user-growth and revenue projections, with CFO Sarah Friar warning colleagues that slower growth could constrain future compute commitments — sent Nvidia, Broadcom, and AMD each down 3-4%, Oracle down 3%+, and neocloud CoreWeave down 4%+, all on a Tuesday with no macro catalyst. The Nasdaq closed at 24,663, off 0.9%. The cascade looks outsized for news about one private startup, but it exposes a specific structural vulnerability in how the entire AI infrastructure trade is priced: a chain of multi-year compute agreements whose unit economics depend on AI application revenue growing fast enough to service enormous upfront costs.",
-      "The core mechanism is the AI capex flywheel. OpenAI and peer AI labs commit to massive multi-year compute agreements — the OpenAI-Oracle partnership alone spans $300 billion over five years — premised on continued rapid revenue growth to justify that spend. Chip manufacturers (Nvidia, Broadcom) and infrastructure providers (Oracle, CoreWeave, Microsoft Azure) price their stocks on forward expectations of that demand. The chain is reflexive: AI lab revenue → renewed compute commitments → chip and infrastructure forward order books → forward earnings estimates for public vendors. When one lab's revenue growth decelerates, every upstream vendor's forward demand assumptions weaken simultaneously, which is why a private company missing internal targets can move billions in public-market cap.",
-      "What most coverage misses is that this is a comps problem, not an earnings problem. OpenAI has no quarterly report — there's no official earnings miss, only a trajectory shift. The strongest historical analogue is the 1999-2001 telecom buildout: carriers committed $400B+ in combined network capex premised on internet traffic doubling every 90 days. When growth decelerated from exponential to merely extraordinary, the entire supply chain — fiber, optical components, routers — repriced violently. Cisco lost 89% of its value. The 2026 question is structurally identical: is AI compute demand an S-curve still on its steep mid-slope, or a near-exponential already approaching an inflection where growth rates moderate even as absolute levels remain high?",
-      "Today's market action contains a key signal: the S&P 500 fell only 0.49% while chip-specific names fell 3-4% — a relative underperformance consistent with a sector re-rating, not a broad macro panic. Nvidia currently trades around 30x forward earnings, a multiple that embeds a specific compound growth rate assumption for data center revenue. If OpenAI's miss suggests AI revenue is running one or two quarters behind plan, that multiple is vulnerable to compression even without an earnings cut. The next hard data points are Nvidia's upcoming earnings print and Q2 capex guidance from the hyperscalers (Amazon, Microsoft, Google). If those reaffirm AI buildout plans, today is a single-data-point overreaction. If they soften, this is the beginning of a structural re-rating."
+      "Tomorrow's Q1 2026 GDP advance estimate arrives with an important asterisk. The quarter coincides precisely with the window when U.S. companies raced to import goods before April's tariff hikes took effect — and preliminary data suggest imports surged at roughly a 38% annualized rate. If confirmed in the official BEA release, the headline GDP figure could print negative or near-zero — not because the domestic economy collapsed, but because of how the national accounts are arithmetically constructed. Markets rallied today partly on the premise that savvy investors will look past the distorted headline.",
+      "The mechanism is purely mechanical. GDP is defined as C + I + G + NX, where NX (net exports) equals exports minus imports. When imports spike for any reason, NX becomes more negative, directly subtracting from the total. A firm that imported $500 million in steel ahead of a tariff deadline registers as a $500 million drag on that quarter's GDP — even though that steel will enter domestic production and appear as positive investment activity in Q2. The national accounts record flows as they occur with no adjustment for the underlying motive. This is why economists consistently flag 'real final sales to domestic purchasers' — a metric that strips out the volatile net exports component entirely — as a cleaner proxy for underlying demand when trade distortions are large. Watch that sub-component specifically in tomorrow's release.",
+      "Historical precedent supports skepticism about the headline. In Q1 2022, GDP printed -1.5% annualized, triggering recession warnings across Wall Street. Yet the economy added 1.7 million jobs that same quarter — the labor market and the GDP headline were telling completely different stories, largely because a post-pandemic import surge was mechanically crushing net exports. The pattern repeated in Q1 2025, when the Atlanta Fed's GDPNow briefly tracked below zero on similar front-running dynamics before Q2 data fully reversed the trade drag. Goldman Sachs estimated the Q1 2026 trade distortion alone could subtract 3–4 percentage points from the annualized growth rate, implying an 'underlying' economy growing closer to 2% may still print as a contraction.",
+      "For markets, interpretation will hinge on the internal breakdown. If gross private domestic investment and consumer spending components look solid, a bad headline print may actually trigger a rally — it signals mean-reversion ahead as imports normalize and net exports swing back positive in Q2. The Fed, announcing at 2 PM ET the same day, will almost certainly signal it sees through the distortion and reaffirm its data-dependent hold. The strategic setup heading into Q2 is arguably bullish: firms that pre-loaded inventories are better positioned against the tariff shock, import volumes will mechanically normalize, and any Q2 GDP print is likely to look significantly stronger — setting up a narrative of recovery even as underlying conditions may not have changed materially."
     ]
   }
 }
