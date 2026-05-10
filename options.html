@@ -1,0 +1,1456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Options Sentiment Dashboard — Christopher Givan</title>
+  <meta name="description" content="Derivatives-focused market sentiment dashboard: put/call ratios, implied volatility, skew, sector positioning, and VIX term structure." />
+  <meta name="author" content="Christopher Givan" />
+  <meta name="theme-color" content="#0e2240" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Options Sentiment Dashboard — Christopher Givan" />
+  <meta property="og:description" content="Put/call ratios, implied volatility, skew, sector positioning, and VIX term structure." />
+  <meta property="og:image" content="headshot.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Options Sentiment Dashboard — Christopher Givan" />
+  <meta name="twitter:description" content="Put/call ratios, implied volatility, skew, sector positioning, and VIX term structure." />
+  <meta name="twitter:image" content="headshot.jpg" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230e2240'/%3E%3Ctext x='16' y='22' font-family='-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif' font-size='14' font-weight='800' fill='white' text-anchor='middle'%3ECG%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js" defer></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --white:   #ffffff;
+      --off:     #f5f7fa;
+      --light:   #edf1f8;
+      --border:  #d8dfe9;
+      --navy:    #0e2240;
+      --navy2:   #152d52;
+      --navy3:   #1c3a68;
+      --blue:    #1a5fd4;
+      --blue2:   #2e74e8;
+      --blue-lt: #e8f0fc;
+      --text:    #0e2240;
+      --muted:   #5a6f87;
+      --green:   #117a44;
+      --green-lt:#e4f4ec;
+      --red:     #bf3232;
+      --red-lt:  #fce8e8;
+      --amber:   #a05a00;
+      --amber-lt:#fbefd9;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--white);
+      color: var(--text);
+      font-family: 'Barlow', system-ui, sans-serif;
+      font-size: 15px;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* ── NAV (shared) ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 200;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 3rem;
+      height: 56px;
+      background: rgba(255,255,255,0.94);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo {
+      display: flex; align-items: center; justify-content: center;
+      width: 36px; height: 36px;
+      border: 1.5px solid var(--navy);
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.9rem; font-weight: 800;
+      color: var(--navy); text-decoration: none; letter-spacing: 0.04em;
+    }
+    .nav-links { display: flex; align-items: center; gap: 2.5rem; list-style: none; }
+    .nav-links a {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem; font-weight: 500;
+      color: var(--muted); text-decoration: none;
+      letter-spacing: 0.07em; text-transform: uppercase;
+      transition: color 0.15s;
+    }
+    .nav-links a:hover { color: var(--navy); }
+    .nav-links a.active { color: var(--navy); }
+    .nav-cta {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem; font-weight: 500;
+      letter-spacing: 0.07em; text-transform: uppercase;
+      padding: 0.45rem 1rem;
+      border: 1.5px solid var(--navy); color: var(--navy);
+      text-decoration: none; transition: all 0.15s;
+    }
+    .nav-cta:hover { background: var(--navy); color: var(--white); }
+
+    /* ── PAGE HEADER ── */
+    .page-header {
+      padding: 8rem 3rem 3rem;
+      background: var(--white);
+    }
+    .page-header-inner { max-width: 1240px; margin: 0 auto; }
+
+    .ph-eyebrow {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      color: var(--blue);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      display: flex; align-items: center; gap: 0.75rem;
+    }
+    .ph-eyebrow::before {
+      content: ''; display: inline-block;
+      width: 28px; height: 1.5px; background: var(--blue);
+    }
+
+    .ph-title {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800;
+      font-size: clamp(3rem, 7vw, 5.5rem);
+      line-height: 0.9;
+      letter-spacing: -0.01em;
+      text-transform: uppercase;
+      color: var(--navy);
+      margin-bottom: 1rem;
+    }
+    .ph-title span { color: var(--blue); }
+
+    .ph-sub {
+      font-size: 1.05rem;
+      color: var(--muted);
+      max-width: 720px;
+      line-height: 1.7;
+    }
+
+    .ph-meta {
+      margin-top: 1.5rem;
+      display: flex; gap: 1.5rem; flex-wrap: wrap;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .ph-meta strong { color: var(--navy); font-weight: 500; }
+
+    .mock-banner {
+      max-width: 1240px;
+      margin: 1.5rem auto 0;
+      padding: 0.75rem 1rem;
+      background: var(--amber-lt);
+      border: 1px solid var(--amber);
+      border-left-width: 3px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.04em;
+      color: var(--amber);
+    }
+    .mock-banner strong { letter-spacing: 0.08em; text-transform: uppercase; margin-right: 0.5rem; }
+
+    .ph-actions {
+      margin-top: 1.5rem;
+      display: flex;
+      gap: 0.75rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .fetch-btn {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.55rem 1.1rem;
+      background: var(--navy);
+      color: var(--white);
+      border: none;
+      cursor: pointer;
+      transition: background 0.15s;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+    }
+    .fetch-btn:hover { background: var(--navy2); }
+    .fetch-btn:disabled { background: var(--muted); cursor: wait; }
+    .fetch-btn .spinner {
+      display: inline-block;
+      width: 10px; height: 10px;
+      border: 1.5px solid currentColor;
+      border-right-color: transparent;
+      border-radius: 50%;
+      animation: spin 0.7s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .fetch-status {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.06em;
+      color: var(--muted);
+    }
+    .fetch-status.ok { color: var(--green); }
+    .fetch-status.err { color: var(--red); }
+
+    /* ── DASHBOARD GRID ── */
+    .dash {
+      padding: 2rem 3rem 5rem;
+      background: var(--off);
+      border-top: 1px solid var(--border);
+    }
+    .dash-inner { max-width: 1240px; margin: 0 auto; display: flex; flex-direction: column; gap: 1.5rem; }
+
+    .panel {
+      background: var(--white);
+      border: 1px solid var(--border);
+    }
+    .panel-head {
+      padding: 0.9rem 1.25rem;
+      border-bottom: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 1rem;
+    }
+    .panel-title {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--navy);
+    }
+    .panel-sub {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.62rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .panel-body { padding: 1.25rem; }
+    .panel-body.tight { padding: 0; }
+
+    /* Row 1: VIX + Regime */
+    .row-top {
+      display: grid;
+      grid-template-columns: 1.1fr 1.5fr;
+      gap: 1.5rem;
+    }
+    @media (max-width: 900px) { .row-top { grid-template-columns: 1fr; } }
+
+    /* VIX panel */
+    .vix-row {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 1.5rem;
+      align-items: center;
+    }
+    .vix-num-block .vix-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 0.3rem;
+    }
+    .vix-num {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800;
+      font-size: 3.6rem;
+      color: var(--navy);
+      line-height: 1;
+    }
+    .vix-chg {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.85rem;
+      margin-top: 0.4rem;
+    }
+    .vix-term {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      border-left: 1px solid var(--border);
+    }
+    .vix-term-tile {
+      padding: 0.5rem 0.75rem;
+      border-right: 1px solid var(--border);
+      text-align: center;
+    }
+    .vix-term-tile:last-child { border-right: none; }
+    .vix-term-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.55rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 0.25rem;
+    }
+    .vix-term-value {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--navy);
+    }
+    .panel-explainer {
+      font-size: 0.78rem;
+      color: var(--muted);
+      line-height: 1.6;
+      margin-top: 1rem;
+      padding-top: 0.85rem;
+      border-top: 1px dashed var(--border);
+    }
+
+    /* Regime panel */
+    .regime-block { display: flex; flex-direction: column; gap: 0.85rem; }
+    .regime-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.45rem 0.9rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      width: fit-content;
+    }
+    .regime-pill.risk-on  { background: var(--green-lt); color: var(--green); border: 1px solid var(--green); }
+    .regime-pill.risk-off { background: var(--red-lt);   color: var(--red);   border: 1px solid var(--red);   }
+    .regime-pill.mixed    { background: var(--amber-lt); color: var(--amber); border: 1px solid var(--amber); }
+    .regime-pill::before {
+      content: ''; display: inline-block;
+      width: 8px; height: 8px; border-radius: 50%;
+      background: currentColor;
+    }
+    .regime-summary {
+      font-size: 0.92rem;
+      color: var(--text);
+      line-height: 1.65;
+    }
+    .regime-indices {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+      margin-top: 0.5rem;
+      border-top: 1px solid var(--border);
+    }
+    .regime-idx {
+      padding: 0.85rem 1rem;
+      border-right: 1px solid var(--border);
+    }
+    .regime-idx:last-child { border-right: none; }
+    .regime-idx-tk {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.08em;
+      color: var(--blue);
+      margin-bottom: 0.2rem;
+    }
+    .regime-idx-px {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800;
+      font-size: 1.3rem;
+      color: var(--navy);
+      line-height: 1.1;
+    }
+    .regime-idx-pc {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      color: var(--muted);
+      margin-top: 0.25rem;
+    }
+    .regime-idx-pc strong { color: var(--text); font-weight: 500; }
+
+    /* ── TICKER SEARCH ── */
+    .search-row { display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap; }
+    .search-input {
+      flex: 1;
+      min-width: 240px;
+      padding: 0.6rem 0.85rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.85rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--navy);
+      background: var(--white);
+      border: 1.5px solid var(--border);
+      outline: none;
+      transition: border-color 0.15s;
+    }
+    .search-input:focus { border-color: var(--navy); }
+    .search-input::placeholder { color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; }
+
+    .search-btn {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.6rem 1.1rem;
+      background: var(--navy);
+      color: var(--white);
+      border: none;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+    .search-btn:hover { background: var(--navy2); }
+
+    .search-quick {
+      display: flex; gap: 0.4rem; flex-wrap: wrap;
+      margin-top: 0.85rem;
+    }
+    .quick-chip {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.06em;
+      padding: 0.3rem 0.7rem;
+      border: 1px solid var(--border);
+      background: var(--white);
+      color: var(--muted);
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .quick-chip:hover, .quick-chip.active {
+      border-color: var(--navy); color: var(--navy); background: var(--light);
+    }
+
+    .search-error {
+      margin-top: 0.85rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      color: var(--red);
+      letter-spacing: 0.04em;
+      display: none;
+    }
+    .search-error.show { display: block; }
+
+    /* ── TICKER DETAIL ── */
+    .tk-head {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 1.5rem;
+      align-items: end;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 1rem;
+    }
+    .tk-head-left { display: flex; flex-direction: column; gap: 0.3rem; }
+    .tk-symbol {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 2.4rem;
+      font-weight: 800;
+      color: var(--navy);
+      line-height: 1;
+      letter-spacing: 0.01em;
+    }
+    .tk-name { font-size: 0.9rem; color: var(--muted); }
+    .tk-head-right { text-align: right; }
+    .tk-price {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--navy);
+      line-height: 1;
+    }
+    .tk-chg {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.85rem;
+      margin-top: 0.3rem;
+    }
+    .tk-vol {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.65rem;
+      color: var(--muted);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-top: 0.15rem;
+    }
+
+    .metric-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+    }
+    @media (max-width: 900px) { .metric-grid { grid-template-columns: repeat(2, 1fr); } }
+
+    .metric {
+      background: var(--white);
+      padding: 1rem 1.1rem;
+    }
+    .metric-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 0.4rem;
+    }
+    .metric-value {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--navy);
+      line-height: 1;
+    }
+    .metric-value.bullish { color: var(--green); }
+    .metric-value.bearish { color: var(--red); }
+    .metric-value.neutral { color: var(--navy); }
+    .metric-note {
+      font-size: 0.72rem;
+      color: var(--muted);
+      margin-top: 0.5rem;
+      line-height: 1.5;
+    }
+
+    .sentiment-row {
+      margin-top: 1rem;
+      padding: 1rem 1.25rem;
+      background: var(--light);
+      border-left: 3px solid var(--blue);
+      display: flex; flex-direction: column; gap: 0.4rem;
+    }
+    .sentiment-tag {
+      display: inline-flex;
+      align-items: center; gap: 0.45rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.35rem 0.8rem;
+      width: fit-content;
+    }
+    .sentiment-tag.bullish { background: var(--green-lt); color: var(--green); border: 1px solid var(--green); }
+    .sentiment-tag.bearish { background: var(--red-lt);   color: var(--red);   border: 1px solid var(--red); }
+    .sentiment-tag.neutral { background: var(--blue-lt);  color: var(--blue);  border: 1px solid var(--blue); }
+    .sentiment-tag::before {
+      content: ''; display: inline-block;
+      width: 7px; height: 7px; border-radius: 50%;
+      background: currentColor;
+    }
+    .sentiment-reason { font-size: 0.88rem; color: var(--text); line-height: 1.6; }
+
+    .unusual-flag {
+      display: inline-flex;
+      align-items: center; gap: 0.4rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.62rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.25rem 0.6rem;
+      background: var(--amber-lt);
+      color: var(--amber);
+      border: 1px solid var(--amber);
+      margin-left: 0.5rem;
+      vertical-align: middle;
+    }
+
+    /* History charts */
+    .history-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      margin-top: 1rem;
+    }
+    .history-cell {
+      background: var(--white);
+      padding: 0.85rem 1rem 0.5rem;
+      display: flex; flex-direction: column; gap: 0.4rem;
+      min-height: 130px;
+    }
+    .history-head {
+      display: flex; align-items: baseline; justify-content: space-between;
+      gap: 0.5rem;
+    }
+    .history-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .history-current {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: var(--navy);
+      line-height: 1;
+    }
+    .history-canvas-wrap {
+      position: relative;
+      flex: 1;
+      min-height: 80px;
+    }
+    .history-canvas-wrap canvas {
+      position: absolute;
+      inset: 0;
+      width: 100% !important;
+      height: 100% !important;
+    }
+    .history-empty {
+      flex: 1;
+      display: flex; align-items: center; justify-content: center;
+      background: repeating-linear-gradient(
+        45deg,
+        var(--off), var(--off) 6px,
+        var(--white) 6px, var(--white) 12px
+      );
+      border: 1px dashed var(--border);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-align: center;
+      padding: 0.5rem;
+    }
+
+    /* VIX history mini-chart */
+    .vix-history {
+      margin-top: 1rem;
+      padding-top: 0.85rem;
+      border-top: 1px dashed var(--border);
+    }
+    .vix-history-head {
+      display: flex; justify-content: space-between; align-items: baseline;
+      margin-bottom: 0.4rem;
+    }
+    .vix-history-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .vix-history-meta {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.6rem;
+      color: var(--muted);
+    }
+    .vix-history-wrap {
+      position: relative;
+      height: 70px;
+    }
+    .vix-history-wrap canvas {
+      position: absolute;
+      inset: 0;
+      width: 100% !important;
+      height: 100% !important;
+    }
+
+    /* ── SECTOR HEATMAP ── */
+    .sector-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+    }
+    @media (max-width: 900px) { .sector-grid { grid-template-columns: repeat(2, 1fr); } }
+
+    .sector-cell {
+      background: var(--white);
+      padding: 1rem 1.1rem;
+      display: flex; flex-direction: column; gap: 0.4rem;
+      min-height: 130px;
+      position: relative;
+      transition: background 0.15s;
+    }
+    .sector-cell.bullish { background: var(--green-lt); }
+    .sector-cell.bearish { background: var(--red-lt); }
+    .sector-cell.neutral { background: var(--white); }
+    .sector-cell:hover { filter: brightness(0.97); }
+    .sec-tk {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.08em;
+      color: var(--navy);
+      font-weight: 500;
+    }
+    .sec-name {
+      font-size: 0.78rem;
+      color: var(--muted);
+      line-height: 1.3;
+    }
+    .sec-pc {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: var(--navy);
+      line-height: 1;
+      margin-top: auto;
+    }
+    .sec-pc-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.55rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .sec-iv {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.65rem;
+      color: var(--muted);
+    }
+
+    .up { color: var(--green); }
+    .down { color: var(--red); }
+    .flat { color: var(--muted); }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--navy);
+      border-top: 1px solid var(--navy3);
+      padding: 1.5rem 3rem;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    footer .f-left, footer .f-right {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.05em;
+      color: rgba(255,255,255,0.25);
+    }
+    footer .f-logo {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: rgba(255,255,255,0.5);
+      letter-spacing: 0.06em;
+    }
+
+    ::-webkit-scrollbar { width: 5px; }
+    ::-webkit-scrollbar-track { background: var(--white); }
+    ::-webkit-scrollbar-thumb { background: var(--border); }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html#hero" class="nav-logo">CG</a>
+  <ul class="nav-links">
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#projects">Projects</a></li>
+    <li><a href="brief.html">Brief</a></li>
+    <li><a href="fed-signal.html">Fed Signal</a></li>
+    <li><a href="options.html" class="active">Options</a></li>
+    <li><a href="index.html#resume">Resume</a></li>
+  </ul>
+  <a href="mailto:givanchris@icloud.com" class="nav-cta">Get in Touch →</a>
+</nav>
+
+<!-- HEADER -->
+<section class="page-header">
+  <div class="page-header-inner">
+    <div class="ph-eyebrow">Derivatives · Sentiment</div>
+    <h1 class="ph-title">OPTIONS<br><span>SENTIMENT</span></h1>
+    <p class="ph-sub">
+      A derivatives-focused read on market positioning. Put/call ratios, implied volatility, skew, and unusual flow
+      — synthesized into a single sentiment label per ticker. Sector heatmap and VIX term structure provide market-wide context.
+    </p>
+    <div class="ph-meta">
+      <span>As of <strong id="meta-asof">—</strong></span>
+      <span>Last loaded <strong id="meta-ago">—</strong></span>
+      <span>Source <strong id="meta-source">yfinance</strong></span>
+      <span>Auto-update <strong>Weekdays · 4:30 PM MT</strong></span>
+    </div>
+    <div class="ph-actions">
+      <button id="fetch-btn" class="fetch-btn" type="button" title="Reload latest snapshot from the server">
+        <span id="fetch-btn-icon">↻</span>
+        <span id="fetch-btn-label">Fetch Latest</span>
+      </button>
+      <span id="fetch-status" class="fetch-status"></span>
+    </div>
+  </div>
+  <div class="mock-banner" id="mock-banner" style="display:none;">
+    <strong>Showing mock data</strong> — run <code style="font-family:'JetBrains Mono',monospace;">python pipeline/run.py market</code> or wait for the daily GitHub Action.
+  </div>
+</section>
+
+<!-- DASHBOARD -->
+<section class="dash">
+  <div class="dash-inner">
+
+    <!-- Row 1: VIX + Regime -->
+    <div class="row-top">
+
+      <!-- VIX -->
+      <div class="panel">
+        <div class="panel-head">
+          <span class="panel-title">// VIX · Volatility Index</span>
+          <span class="panel-sub">Term Structure</span>
+        </div>
+        <div class="panel-body">
+          <div class="vix-row">
+            <div class="vix-num-block">
+              <div class="vix-label">Spot</div>
+              <div class="vix-num" id="vix-num">—</div>
+              <div class="vix-chg" id="vix-chg">—</div>
+            </div>
+            <div class="vix-term" id="vix-term"></div>
+          </div>
+          <div class="panel-explainer">
+            VIX measures expected 30-day S&amp;P 500 volatility. A rising term structure (front &lt; back) signals contango / calm;
+            inversion (front &gt; back) signals near-term fear.
+          </div>
+          <div class="vix-history">
+            <div class="vix-history-head">
+              <span class="vix-history-label">VIX · 30-day history</span>
+              <span class="vix-history-meta" id="vix-history-meta">—</span>
+            </div>
+            <div class="vix-history-wrap" id="vix-history-wrap">
+              <canvas id="vix-history-chart"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Regime -->
+      <div class="panel">
+        <div class="panel-head">
+          <span class="panel-title">// Market Regime</span>
+          <span class="panel-sub">SPY · QQQ · IWM</span>
+        </div>
+        <div class="panel-body">
+          <div class="regime-block">
+            <div id="regime-pill" class="regime-pill mixed">—</div>
+            <p class="regime-summary" id="regime-summary">—</p>
+            <div class="regime-indices" id="regime-indices"></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Ticker search + detail -->
+    <div class="panel">
+      <div class="panel-head">
+        <span class="panel-title">// Ticker Search</span>
+        <span class="panel-sub">Type any U.S. equity symbol</span>
+      </div>
+      <div class="panel-body">
+        <form class="search-row" id="search-form" onsubmit="return false;">
+          <input class="search-input" id="search-input" type="text" placeholder="Enter ticker (e.g. AAPL, TSLA)" maxlength="6" autocomplete="off" />
+          <button class="search-btn" id="search-btn" type="submit">Lookup →</button>
+        </form>
+        <div class="search-quick" id="search-quick"></div>
+        <div class="search-error" id="search-error">Ticker not found in current snapshot. Phase 2 will fetch any U.S. ticker on demand.</div>
+      </div>
+    </div>
+
+    <!-- Selected ticker detail -->
+    <div class="panel" id="ticker-panel">
+      <div class="panel-head">
+        <span class="panel-title">// Ticker Detail</span>
+        <span class="panel-sub" id="ticker-detail-sub">—</span>
+      </div>
+      <div class="panel-body" id="ticker-body">
+        <div class="tk-head">
+          <div class="tk-head-left">
+            <div class="tk-symbol" id="tk-symbol">—</div>
+            <div class="tk-name" id="tk-name">—</div>
+          </div>
+          <div class="tk-head-right">
+            <div class="tk-price" id="tk-price">—</div>
+            <div class="tk-chg" id="tk-chg">—</div>
+            <div class="tk-vol" id="tk-vol">—</div>
+          </div>
+        </div>
+
+        <div class="metric-grid">
+          <div class="metric">
+            <div class="metric-label">P/C Volume</div>
+            <div class="metric-value" id="m-pcv">—</div>
+            <div class="metric-note">Today's put volume divided by call volume. &gt;1.20 bearish, &lt;0.80 bullish.</div>
+          </div>
+          <div class="metric">
+            <div class="metric-label">P/C Open Interest</div>
+            <div class="metric-value" id="m-pcoi">—</div>
+            <div class="metric-note">Total put OI / call OI. Persistent positioning, slower-moving than volume.</div>
+          </div>
+          <div class="metric">
+            <div class="metric-label">IV (ATM)</div>
+            <div class="metric-value" id="m-iv">—</div>
+            <div class="metric-note">Implied volatility on at-the-money options. Higher = more priced-in movement.</div>
+          </div>
+          <div class="metric">
+            <div class="metric-label">IV Rank</div>
+            <div class="metric-value" id="m-ivr">—</div>
+            <div class="metric-note">Where current IV sits within its 52-week range. &gt;70 = elevated fear.</div>
+          </div>
+          <div class="metric">
+            <div class="metric-label">IV Percentile</div>
+            <div class="metric-value" id="m-ivp">—</div>
+            <div class="metric-note">% of past year IV was below current level. Complement to IV Rank.</div>
+          </div>
+          <div class="metric">
+            <div class="metric-label">25-Δ Skew</div>
+            <div class="metric-value" id="m-skew">—</div>
+            <div class="metric-note">OTM put IV minus OTM call IV. Positive = downside hedging premium.</div>
+          </div>
+          <div class="metric">
+            <div class="metric-label">Volume</div>
+            <div class="metric-value" id="m-vol">—</div>
+            <div class="metric-note">Today's stock volume. Context for unusual flow detection.</div>
+          </div>
+          <div class="metric">
+            <div class="metric-label">Unusual Flow</div>
+            <div class="metric-value" id="m-unusual">—</div>
+            <div class="metric-note">Flagged when option volume exceeds 2× open interest at any strike.</div>
+          </div>
+        </div>
+
+        <div class="sentiment-row">
+          <div id="sentiment-tag" class="sentiment-tag neutral">—</div>
+          <div class="sentiment-reason" id="sentiment-reason">—</div>
+        </div>
+
+        <div class="history-grid">
+          <div class="history-cell">
+            <div class="history-head">
+              <span class="history-label">P/C Volume · 30d</span>
+              <span class="history-current" id="hist-pc-cur">—</span>
+            </div>
+            <div class="history-canvas-wrap" id="hist-pc-wrap">
+              <canvas id="hist-pc-chart"></canvas>
+            </div>
+          </div>
+          <div class="history-cell">
+            <div class="history-head">
+              <span class="history-label">IV (ATM) · 30d</span>
+              <span class="history-current" id="hist-iv-cur">—</span>
+            </div>
+            <div class="history-canvas-wrap" id="hist-iv-wrap">
+              <canvas id="hist-iv-chart"></canvas>
+            </div>
+          </div>
+          <div class="history-cell">
+            <div class="history-head">
+              <span class="history-label">25-Δ Skew · 30d</span>
+              <span class="history-current" id="hist-skew-cur">—</span>
+            </div>
+            <div class="history-canvas-wrap" id="hist-skew-wrap">
+              <canvas id="hist-skew-chart"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sector heatmap -->
+    <div class="panel">
+      <div class="panel-head">
+        <span class="panel-title">// Sector Heatmap · Put/Call by SPDR</span>
+        <span class="panel-sub">Green = bullish · Red = bearish</span>
+      </div>
+      <div class="panel-body tight">
+        <div class="sector-grid" id="sector-grid"></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="f-left">© 2026 Christopher Givan</div>
+  <div class="f-logo">CG</div>
+  <div class="f-right">Options · Sentiment · Markets</div>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+
+  // Self-contained CG helpers (Assets/site.js is shared but optional).
+  window.CG = window.CG || {};
+  if (!CG.fetchJSON) {
+    CG.fetchJSON = function (url) {
+      var sep = url.indexOf('?') === -1 ? '?' : '&';
+      return fetch(url + sep + '_=' + Date.now()).then(function (r) {
+        if (!r.ok) throw new Error('HTTP ' + r.status + ' from ' + url);
+        return r.json();
+      });
+    };
+  }
+  if (!CG.fmtDate) {
+    var _DAYS = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+    var _MONTHS = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+    CG.fmtDate = function (d) {
+      if (!(d instanceof Date)) d = new Date(d);
+      return _DAYS[d.getDay()] + ', ' + _MONTHS[d.getMonth()] + ' ' + d.getDate() + ', ' + d.getFullYear();
+    };
+  }
+
+  var DATA_URL = 'data/options/latest.json';
+  var TICKER_HIST_URL = function (sym) { return 'data/options/tickers/' + sym + '.json'; };
+  var VIX_HIST_URL = 'data/options/vix.json';
+
+  var state = {
+    data: null,
+    currentTicker: null,
+    lastLoadedAt: null,
+    charts: {},
+    tickerHistoryCache: {}
+  };
+
+  // ── Helpers ─────────────────────────────────────────────────────────────
+  function fmtPrice(n)  { return (n == null) ? '—' : Number(n).toFixed(2); }
+  function fmtRatio(n)  { return (n == null) ? '—' : Number(n).toFixed(2); }
+  function fmtPct(n)    { return (n == null) ? '—' : (n > 0 ? '+' : '') + Number(n).toFixed(2) + '%'; }
+  function fmtSign(n)   { return (n == null) ? '—' : (n > 0 ? '+' : '') + Number(n).toFixed(2); }
+  function fmtIVPct(n)  { return (n == null) ? '—' : Number(n).toFixed(1) + '%'; }
+  function fmtVol(n) {
+    if (n == null) return '—';
+    if (n >= 1e9) return (n / 1e9).toFixed(2) + 'B';
+    if (n >= 1e6) return (n / 1e6).toFixed(2) + 'M';
+    if (n >= 1e3) return (n / 1e3).toFixed(1) + 'K';
+    return String(n);
+  }
+  function chgClass(n)  { return (n == null) ? 'flat' : (n > 0 ? 'up' : (n < 0 ? 'down' : 'flat')); }
+  function arrow(n)     { return (n == null) ? '' : (n > 0 ? '▲' : (n < 0 ? '▼' : '·')); }
+
+  function pcSentimentClass(pc) {
+    if (pc == null) return 'neutral';
+    if (pc < 0.80) return 'bullish';
+    if (pc > 1.20) return 'bearish';
+    return 'neutral';
+  }
+
+  // ── Render: VIX ─────────────────────────────────────────────────────────
+  function renderVIX(market) {
+    var vix = market.vix || {};
+    document.getElementById('vix-num').textContent = fmtPrice(vix.value);
+    var chg = document.getElementById('vix-chg');
+    chg.textContent = arrow(vix.change) + ' ' + fmtSign(vix.change) + ' (' + fmtPct(vix.change_pct) + ')';
+    chg.className = 'vix-chg ' + chgClass(vix.change);
+
+    var term = document.getElementById('vix-term');
+    term.innerHTML = '';
+    (market.vix_term_structure || []).forEach(function (t) {
+      var div = document.createElement('div');
+      div.className = 'vix-term-tile';
+      div.innerHTML =
+        '<div class="vix-term-label">' + t.label + '</div>' +
+        '<div class="vix-term-value">' + fmtPrice(t.value) + '</div>';
+      term.appendChild(div);
+    });
+  }
+
+  // ── Render: Regime ──────────────────────────────────────────────────────
+  function renderRegime(market) {
+    var pill = document.getElementById('regime-pill');
+    var regime = (market.regime || 'mixed').toLowerCase().replace(/\s+/g, '-');
+    var label = (market.regime || 'Mixed').toUpperCase();
+    pill.className = 'regime-pill ' + regime;
+    pill.textContent = label;
+
+    document.getElementById('regime-summary').textContent = market.regime_summary || '—';
+
+    var grid = document.getElementById('regime-indices');
+    grid.innerHTML = '';
+    (market.indices || []).forEach(function (ix) {
+      var div = document.createElement('div');
+      div.className = 'regime-idx';
+      div.innerHTML =
+        '<div class="regime-idx-tk">' + ix.ticker + ' · ' + (ix.name || '') + '</div>' +
+        '<div class="regime-idx-px">$' + fmtPrice(ix.price) + '</div>' +
+        '<div class="regime-idx-pc"><span class="' + chgClass(ix.change) + '">' + arrow(ix.change) + ' ' + fmtPct(ix.change_pct) + '</span> · ' +
+        'P/C <strong>' + fmtRatio(ix.pc_volume) + '</strong></div>';
+      grid.appendChild(div);
+    });
+  }
+
+  // ── Render: Sector heatmap ──────────────────────────────────────────────
+  function renderSectors(sectors) {
+    var grid = document.getElementById('sector-grid');
+    grid.innerHTML = '';
+    (sectors || []).forEach(function (s) {
+      var cell = document.createElement('div');
+      cell.className = 'sector-cell ' + (s.sentiment || 'neutral');
+      cell.innerHTML =
+        '<div class="sec-tk">' + s.ticker + '</div>' +
+        '<div class="sec-name">' + (s.name || '') + '</div>' +
+        '<div>' +
+          '<div class="sec-pc-label">P/C Volume</div>' +
+          '<div class="sec-pc">' + fmtRatio(s.pc_volume) + '</div>' +
+          '<div class="sec-iv">IV Rank ' + (s.iv_rank != null ? s.iv_rank : '—') + '</div>' +
+        '</div>';
+      grid.appendChild(cell);
+    });
+  }
+
+  // ── Charts ──────────────────────────────────────────────────────────────
+  function fmtChartDate(s) {
+    if (!s || s.indexOf('-') === -1) return s || '';
+    var p = s.split('-');
+    return p[1].replace(/^0/, '') + '/' + p[2].replace(/^0/, '');
+  }
+  function lastNonNull(arr) {
+    for (var i = arr.length - 1; i >= 0; i--) {
+      var v = arr[i];
+      if (v !== null && v !== undefined && !Number.isNaN(v)) return v;
+    }
+    return null;
+  }
+  function destroyChart(key) {
+    if (state.charts[key]) {
+      try { state.charts[key].destroy(); } catch (_) {}
+      delete state.charts[key];
+    }
+  }
+  function ensureCanvas(wrapId, canvasId) {
+    var wrap = document.getElementById(wrapId);
+    if (!wrap) return null;
+    var canvas = document.getElementById(canvasId);
+    if (!canvas || canvas.parentElement !== wrap) {
+      wrap.innerHTML = '<canvas id="' + canvasId + '"></canvas>';
+      canvas = document.getElementById(canvasId);
+    }
+    return canvas;
+  }
+  function showEmpty(wrapId, msg) {
+    var wrap = document.getElementById(wrapId);
+    if (!wrap) return;
+    wrap.innerHTML = '<div class="history-empty">' + (msg || 'No history yet — accumulating from today') + '</div>';
+  }
+
+  function createSparkline(canvas, key, labels, data, opts) {
+    if (!canvas || typeof Chart === 'undefined') return;
+    destroyChart(key);
+    var lineColor = opts.lineColor || '#0e2240';
+    var fillColor = opts.fillColor || 'rgba(14,34,64,0.08)';
+    var fmtTooltip = opts.fmtTooltip || function (v) { return Number(v).toFixed(2); };
+    state.charts[key] = new Chart(canvas.getContext('2d'), {
+      type: 'line',
+      data: {
+        labels: labels,
+        datasets: [{
+          data: data,
+          borderColor: lineColor,
+          backgroundColor: fillColor,
+          fill: true,
+          tension: 0.25,
+          pointRadius: 1.5,
+          pointHoverRadius: 4,
+          borderWidth: 1.5,
+          spanGaps: true
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        animation: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            backgroundColor: '#0e2240',
+            titleFont: { family: 'JetBrains Mono', size: 10, weight: '500' },
+            bodyFont:  { family: 'JetBrains Mono', size: 10 },
+            padding: 6,
+            displayColors: false,
+            callbacks: {
+              label: function (c) { return fmtTooltip(c.parsed.y); }
+            }
+          }
+        },
+        scales: {
+          x: {
+            grid: { display: false },
+            border: { color: '#d8dfe9' },
+            ticks: {
+              maxRotation: 0, autoSkipPadding: 14,
+              font: { family: 'JetBrains Mono', size: 9 },
+              color: '#5a6f87'
+            }
+          },
+          y: {
+            grid: { color: '#edf1f8' },
+            border: { display: false },
+            ticks: {
+              font: { family: 'JetBrains Mono', size: 9 },
+              color: '#5a6f87',
+              maxTicksLimit: 4
+            }
+          }
+        }
+      }
+    });
+  }
+
+  // Render one history sparkline + current value, or an empty state.
+  function renderHistoryCell(spec) {
+    var hasAny = spec.data.some(function (v) { return v !== null && v !== undefined; });
+    var curEl = document.getElementById(spec.curId);
+    if (!hasAny) {
+      showEmpty(spec.wrapId);
+      if (curEl) curEl.textContent = '—';
+      destroyChart(spec.key);
+      return;
+    }
+    var cur = lastNonNull(spec.data);
+    if (curEl) curEl.textContent = cur != null ? spec.fmtCur(cur) : '—';
+    var canvas = ensureCanvas(spec.wrapId, spec.canvasId);
+    createSparkline(canvas, spec.key, spec.labels, spec.data, {
+      lineColor: spec.lineColor,
+      fillColor: spec.fillColor,
+      fmtTooltip: spec.fmtTooltip
+    });
+  }
+
+  function renderTickerHistory(ticker) {
+    var cached = state.tickerHistoryCache[ticker];
+    var p = cached ? Promise.resolve(cached)
+                   : CG.fetchJSON(TICKER_HIST_URL(ticker)).catch(function () { return []; });
+    return p.then(function (history) {
+      state.tickerHistoryCache[ticker] = history;
+      var last30 = (history || []).slice(-30);
+      var labels = last30.map(function (h) { return fmtChartDate(h.date); });
+
+      renderHistoryCell({
+        wrapId: 'hist-pc-wrap', canvasId: 'hist-pc-chart', key: 'pc-' + ticker,
+        labels: labels,
+        data: last30.map(function (h) { return h.pc_volume_ratio; }),
+        curId: 'hist-pc-cur',
+        lineColor: '#0e2240', fillColor: 'rgba(14,34,64,0.08)',
+        fmtCur: function (v) { return Number(v).toFixed(2); },
+        fmtTooltip: function (v) { return 'P/C ' + Number(v).toFixed(2); }
+      });
+      renderHistoryCell({
+        wrapId: 'hist-iv-wrap', canvasId: 'hist-iv-chart', key: 'iv-' + ticker,
+        labels: labels,
+        data: last30.map(function (h) { return h.iv_atm; }),
+        curId: 'hist-iv-cur',
+        lineColor: '#1a5fd4', fillColor: 'rgba(26,95,212,0.10)',
+        fmtCur: function (v) { return Number(v).toFixed(1) + '%'; },
+        fmtTooltip: function (v) { return 'IV ' + Number(v).toFixed(1) + '%'; }
+      });
+      renderHistoryCell({
+        wrapId: 'hist-skew-wrap', canvasId: 'hist-skew-chart', key: 'skew-' + ticker,
+        labels: labels,
+        data: last30.map(function (h) { return h.skew_25d; }),
+        curId: 'hist-skew-cur',
+        lineColor: '#117a44', fillColor: 'rgba(17,122,68,0.10)',
+        fmtCur: function (v) { return (v > 0 ? '+' : '') + Number(v).toFixed(1); },
+        fmtTooltip: function (v) { return 'Skew ' + (v > 0 ? '+' : '') + Number(v).toFixed(1); }
+      });
+    });
+  }
+
+  function renderVixHistory() {
+    CG.fetchJSON(VIX_HIST_URL).catch(function () { return []; }).then(function (history) {
+      var meta = document.getElementById('vix-history-meta');
+      var arr = history || [];
+      if (!arr.length) {
+        showEmpty('vix-history-wrap', 'No VIX history yet — accumulates daily');
+        if (meta) meta.textContent = '0 days';
+        destroyChart('vix-history');
+        return;
+      }
+      var last30 = arr.slice(-30);
+      if (meta) meta.textContent = last30.length + (last30.length === 1 ? ' day' : ' days');
+      var labels = last30.map(function (h) { return fmtChartDate(h.date); });
+      var data = last30.map(function (h) { return h.value; });
+      var canvas = ensureCanvas('vix-history-wrap', 'vix-history-chart');
+      createSparkline(canvas, 'vix-history', labels, data, {
+        lineColor: '#0e2240',
+        fillColor: 'rgba(14,34,64,0.08)',
+        fmtTooltip: function (v) { return 'VIX ' + Number(v).toFixed(2); }
+      });
+    });
+  }
+
+  // ── Render: Ticker detail ───────────────────────────────────────────────
+  function renderTicker(t) {
+    if (!t) return;
+    state.currentTicker = t.ticker;
+    document.getElementById('ticker-detail-sub').textContent = t.ticker;
+    document.getElementById('tk-symbol').textContent = t.ticker;
+    document.getElementById('tk-name').textContent   = t.name || '';
+    document.getElementById('tk-price').textContent  = '$' + fmtPrice(t.price);
+
+    var chg = document.getElementById('tk-chg');
+    chg.textContent = arrow(t.change) + ' ' + fmtSign(t.change) + ' (' + fmtPct(t.change_pct) + ')';
+    chg.className = 'tk-chg ' + chgClass(t.change);
+    document.getElementById('tk-vol').textContent = 'Vol ' + fmtVol(t.volume);
+
+    var pcv = document.getElementById('m-pcv');
+    pcv.textContent = fmtRatio(t.pc_volume_ratio);
+    pcv.className = 'metric-value ' + pcSentimentClass(t.pc_volume_ratio);
+
+    var pcoi = document.getElementById('m-pcoi');
+    pcoi.textContent = fmtRatio(t.pc_oi_ratio);
+    pcoi.className = 'metric-value ' + pcSentimentClass(t.pc_oi_ratio);
+
+    document.getElementById('m-iv').textContent   = fmtIVPct(t.iv_atm);
+    document.getElementById('m-ivr').textContent  = (t.iv_rank != null ? t.iv_rank : '—');
+    document.getElementById('m-ivp').textContent  = (t.iv_percentile != null ? t.iv_percentile : '—');
+    document.getElementById('m-skew').textContent = (t.skew_25d != null ? (t.skew_25d > 0 ? '+' : '') + Number(t.skew_25d).toFixed(1) : '—');
+    document.getElementById('m-vol').textContent  = fmtVol(t.volume);
+
+    var unusual = document.getElementById('m-unusual');
+    unusual.textContent = t.unusual_activity ? 'YES' : 'NO';
+    unusual.className = 'metric-value ' + (t.unusual_activity ? 'bearish' : 'neutral');
+
+    var tag = document.getElementById('sentiment-tag');
+    var sent = (t.sentiment || 'neutral').toLowerCase();
+    tag.className = 'sentiment-tag ' + sent;
+    tag.textContent = sent.toUpperCase();
+    document.getElementById('sentiment-reason').textContent = t.sentiment_reason || '';
+
+    // active chip
+    document.querySelectorAll('.quick-chip').forEach(function (c) {
+      c.classList.toggle('active', c.dataset.ticker === t.ticker);
+    });
+
+    // Historical charts
+    renderTickerHistory(t.ticker);
+  }
+
+  // ── Search ──────────────────────────────────────────────────────────────
+  function findTicker(sym) {
+    if (!state.data || !sym) return null;
+    var s = sym.toUpperCase().trim();
+    return (state.data.tickers || []).find(function (t) { return t.ticker === s; }) || null;
+  }
+
+  function handleSearch() {
+    var input = document.getElementById('search-input');
+    var err = document.getElementById('search-error');
+    var t = findTicker(input.value);
+    if (t) {
+      err.classList.remove('show');
+      renderTicker(t);
+      input.value = '';
+    } else {
+      err.classList.add('show');
+    }
+  }
+
+  function buildQuickChips(tickers) {
+    var wrap = document.getElementById('search-quick');
+    wrap.innerHTML = '';
+    tickers.forEach(function (t) {
+      var chip = document.createElement('button');
+      chip.type = 'button';
+      chip.className = 'quick-chip';
+      chip.dataset.ticker = t.ticker;
+      chip.textContent = t.ticker;
+      chip.addEventListener('click', function () { renderTicker(t); });
+      wrap.appendChild(chip);
+    });
+  }
+
+  // ── Relative time ───────────────────────────────────────────────────────
+  function timeAgo(d) {
+    if (!d) return '—';
+    var sec = Math.floor((Date.now() - d.getTime()) / 1000);
+    if (sec < 5)    return 'just now';
+    if (sec < 60)   return sec + 's ago';
+    if (sec < 3600) return Math.floor(sec / 60) + 'm ago';
+    if (sec < 86400) return Math.floor(sec / 3600) + 'h ago';
+    return Math.floor(sec / 86400) + 'd ago';
+  }
+  function tickAgoDisplay() {
+    var el = document.getElementById('meta-ago');
+    if (el) el.textContent = timeAgo(state.lastLoadedAt);
+  }
+  setInterval(tickAgoDisplay, 15000);
+
+  // ── Render full payload ─────────────────────────────────────────────────
+  function applyData(data) {
+    state.data = data;
+    state.lastLoadedAt = new Date();
+
+    document.getElementById('mock-banner').style.display = data.is_mock ? 'block' : 'none';
+    if (data.as_of) {
+      document.getElementById('meta-asof').textContent = CG.fmtDate(new Date(data.as_of));
+    }
+    tickAgoDisplay();
+
+    // Invalidate caches so a Fetch reloads fresh history
+    state.tickerHistoryCache = {};
+
+    renderVIX(data.market || {});
+    renderRegime(data.market || {});
+    renderSectors(data.sectors || []);
+    renderVixHistory();
+    buildQuickChips(data.tickers || []);
+
+    var keep = state.currentTicker;
+    var match = (data.tickers || []).find(function (t) { return t.ticker === keep; });
+    renderTicker(match || (data.tickers && data.tickers[0]));
+  }
+
+  // ── Fetch button ────────────────────────────────────────────────────────
+  function setFetchStatus(text, cls) {
+    var el = document.getElementById('fetch-status');
+    el.textContent = text || '';
+    el.className = 'fetch-status' + (cls ? ' ' + cls : '');
+  }
+  function setFetchLoading(on) {
+    var btn = document.getElementById('fetch-btn');
+    var icon = document.getElementById('fetch-btn-icon');
+    var label = document.getElementById('fetch-btn-label');
+    btn.disabled = on;
+    if (on) {
+      icon.outerHTML = '<span id="fetch-btn-icon" class="spinner"></span>';
+      label.textContent = 'Fetching…';
+    } else {
+      var newIcon = document.getElementById('fetch-btn-icon');
+      if (newIcon) newIcon.outerHTML = '<span id="fetch-btn-icon">↻</span>';
+      label.textContent = 'Fetch Latest';
+    }
+  }
+  function fetchLatest() {
+    setFetchLoading(true);
+    setFetchStatus('Loading…');
+    CG.fetchJSON(DATA_URL).then(function (data) {
+      applyData(data);
+      setFetchStatus('Loaded · ' + (data.is_mock ? 'mock data' : 'live snapshot'), 'ok');
+    }).catch(function (err) {
+      console.error(err);
+      setFetchStatus('Fetch failed — see console', 'err');
+    }).finally(function () {
+      setFetchLoading(false);
+    });
+  }
+
+  // ── Boot ────────────────────────────────────────────────────────────────
+  function boot() {
+    document.getElementById('search-btn').addEventListener('click', handleSearch);
+    document.getElementById('search-form').addEventListener('submit', handleSearch);
+    document.getElementById('fetch-btn').addEventListener('click', fetchLatest);
+
+    CG.fetchJSON(DATA_URL).then(function (data) {
+      applyData(data);
+    }).catch(function (err) {
+      console.error('Failed to load options data:', err);
+      document.getElementById('mock-banner').style.display = 'block';
+      document.getElementById('mock-banner').innerHTML =
+        '<strong>Data load failed.</strong> Check that data/options/latest.json exists.';
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', boot);
+  } else {
+    boot();
+  }
+})();
+</script>
+</body>
+</html>
