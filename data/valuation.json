@@ -1,0 +1,105 @@
+{
+  "lastUpdated": "2026-04-16T19:00:00-06:00",
+  "source": "manual-seed",
+  "asOf": "2026-04-16",
+  "summary": {
+    "score": 7.4,
+    "label": "Rich",
+    "headline": "Equity valuations sit roughly one standard deviation above long-run averages. The equity risk premium has compressed to ~65 bps as the 10Y trades at 4.31% while earnings yields have fallen. Markets are not in bubble territory but leave little margin for multiple expansion.",
+    "scoreLabels": ["Cheap", "Fair", "Rich", "Expensive"]
+  },
+  "metrics": [
+    {
+      "id": "forward_pe",
+      "name": "S&P 500 Forward P/E",
+      "subtitle": "Next 12-month earnings estimate",
+      "value": 21.4,
+      "display": "21.4×",
+      "historical": {
+        "mean": 16.3,
+        "stdev": 3.0,
+        "windowStart": "1990"
+      },
+      "series": [16.8, 17.2, 18.1, 18.6, 19.2, 19.8, 20.3, 20.1, 20.5, 20.9, 21.2, 21.4],
+      "label": "rich",
+      "interpretation": "1.7 standard deviations above the 35-year mean. Only the 1999 dot-com peak and 2020-21 stimulus era were materially richer. Requires sustained earnings growth to justify."
+    },
+    {
+      "id": "earnings_yield",
+      "name": "Earnings Yield",
+      "subtitle": "Inverse of forward P/E",
+      "value": 4.67,
+      "display": "4.67%",
+      "historical": {
+        "mean": 6.15,
+        "stdev": 1.15,
+        "windowStart": "1990"
+      },
+      "series": [5.95, 5.81, 5.52, 5.38, 5.21, 5.05, 4.93, 4.98, 4.88, 4.78, 4.72, 4.67],
+      "label": "rich",
+      "interpretation": "Near 35-year lows outside of the tech bubble. Investors are accepting lower earnings compensation for equity risk."
+    },
+    {
+      "id": "equity_risk_premium",
+      "name": "Equity Risk Premium",
+      "subtitle": "Earnings yield minus 10Y Treasury",
+      "value": 0.36,
+      "display": "36 bps",
+      "historical": {
+        "mean": 2.85,
+        "stdev": 1.35,
+        "windowStart": "1990"
+      },
+      "series": [1.45, 1.28, 0.98, 0.82, 0.71, 0.55, 0.48, 0.52, 0.44, 0.38, 0.35, 0.36],
+      "label": "expensive",
+      "interpretation": "Compensation for holding stocks over bonds has collapsed. Historically this configuration preceded either rate cuts or equity drawdowns; today it reflects faith in AI-driven earnings acceleration."
+    },
+    {
+      "id": "buffett",
+      "name": "Market Cap / GDP",
+      "subtitle": "Wilshire 5000 / Nominal GDP (Buffett Indicator)",
+      "value": 212.0,
+      "display": "212%",
+      "historical": {
+        "mean": 104.0,
+        "stdev": 38.0,
+        "windowStart": "1975"
+      },
+      "series": [180, 184, 189, 192, 195, 198, 201, 203, 206, 209, 211, 212],
+      "label": "expensive",
+      "interpretation": "Roughly 2.8 standard deviations above the 50-year mean. Even adjusting for structurally higher tech margins and foreign revenue, this is in the most extreme decile of readings."
+    },
+    {
+      "id": "cape",
+      "name": "Shiller CAPE",
+      "subtitle": "Cyclically adjusted P/E (10-year real earnings)",
+      "value": 36.2,
+      "display": "36.2×",
+      "historical": {
+        "mean": 17.1,
+        "stdev": 7.2,
+        "windowStart": "1881"
+      },
+      "series": [29.8, 30.6, 31.5, 32.4, 33.0, 33.7, 34.4, 34.9, 35.3, 35.6, 35.9, 36.2],
+      "label": "expensive",
+      "interpretation": "Above every historical reading except 1999 (peak 44). CAPE is a blunt instrument over short horizons but has consistently predicted lower forward 10-year returns when above 30."
+    },
+    {
+      "id": "dividend_yield",
+      "name": "S&P 500 Dividend Yield",
+      "subtitle": "Trailing 12-month dividends / price",
+      "value": 1.22,
+      "display": "1.22%",
+      "historical": {
+        "mean": 2.85,
+        "stdev": 1.2,
+        "windowStart": "1990"
+      },
+      "series": [1.48, 1.44, 1.40, 1.37, 1.33, 1.30, 1.28, 1.26, 1.25, 1.24, 1.23, 1.22],
+      "label": "rich",
+      "interpretation": "Dividend yields are compressed by buyback-heavy capital return policies and elevated share prices. Less reliable as a valuation signal post-2000, but still directionally informative."
+    }
+  ],
+  "methodology": "Each metric is compared to its own historical distribution. A z-score is computed as (current - mean) / stdev. Metrics where higher values imply richer valuations (P/E, CAPE, cap/GDP) are labeled cheap (z < -1), fair (-1 ≤ z < 0), rich (0 ≤ z ≤ 1), or expensive (z > 1). Yield-type metrics where lower values imply richer valuations (earnings yield, ERP, dividend yield) use the inverse sign. The composite score is the mean z-score across all metrics, mapped to 0-10 via a sigmoid.",
+  "disclaimer": "Valuation signals have historically predicted 10+ year forward returns reasonably well but are poor timing indicators. Expensive markets can remain expensive for years. This is a research tool, not investment advice."
+}
