@@ -19,6 +19,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="Assets/site.css" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -246,6 +247,38 @@
       text-transform: uppercase;
     }
     .filter-select:focus { outline: 2px solid var(--blue); outline-offset: -1px; }
+
+    .filter-input {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.04em;
+      color: var(--navy);
+      background: var(--white);
+      border: 1px solid var(--border);
+      padding: 0.4rem 0.65rem;
+      width: 180px;
+    }
+    .filter-input:focus { outline: 2px solid var(--blue); outline-offset: -1px; }
+    .filter-input::placeholder { color: var(--muted); opacity: 0.7; }
+
+    .dissent-badge {
+      display: inline-block;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.52rem;
+      letter-spacing: 0.06em;
+      padding: 0.1rem 0.3rem;
+      margin-left: 0.4rem;
+      background: var(--amber-lt);
+      color: var(--amber);
+      border: 1px solid var(--amber);
+      cursor: help;
+      vertical-align: middle;
+      white-space: nowrap;
+    }
+
+    .phrase-diff del { color: var(--red); text-decoration: line-through; font-style: normal; }
+    .phrase-diff ins { color: var(--green); text-decoration: none; font-style: normal; }
+    .phrase-diff-sep { color: var(--muted); margin: 0 0.25rem; font-size: 0.7rem; }
 
     .filter-reset {
       margin-left: auto;
@@ -791,6 +824,10 @@
           <option value="cut">Cut</option>
         </select>
       </div>
+      <div class="filter-group">
+        <label for="f-search" class="filter-label">Search</label>
+        <input type="text" id="f-search" class="filter-input" placeholder="phrase, name…" autocomplete="off" />
+      </div>
       <button class="filter-reset" id="f-reset" type="button">Reset filters ×</button>
     </div>
 
@@ -801,14 +838,14 @@
       <table class="fed-table" id="fed-table" aria-label="FOMC meetings">
         <thead>
           <tr>
-            <th class="sortable" data-sort="date">Date <span class="arrow" id="arr-date">▼</span></th>
-            <th>Stance</th>
-            <th>Decision</th>
-            <th>Next Move</th>
-            <th class="num">2Y Δ</th>
-            <th class="num">10Y Δ</th>
-            <th>2s10s</th>
-            <th></th>
+            <th class="sortable" data-sort="date" scope="col">Date <span class="arrow">▼</span></th>
+            <th scope="col">Stance</th>
+            <th scope="col">Decision</th>
+            <th scope="col">Next Move</th>
+            <th class="num sortable" data-sort="y2" scope="col">2Y Δ <span class="arrow">↕</span></th>
+            <th class="num sortable" data-sort="y10" scope="col">10Y Δ <span class="arrow">↕</span></th>
+            <th scope="col">2s10s</th>
+            <th scope="col"></th>
           </tr>
         </thead>
         <tbody id="fed-tbody"></tbody>
@@ -825,6 +862,7 @@
   <div class="inner">
     <div class="section-eyebrow">Language Shifts</div>
     <h2 class="section-heading">NOTABLE PHRASE CHANGES</h2>
+    <p style="font-family:'JetBrains Mono',monospace;font-size:0.72rem;letter-spacing:0.05em;color:var(--muted);margin-bottom:1.5rem;">Six most recent non-retained phrase edits across tracked meetings.</p>
     <div class="shifts-grid" id="shifts-grid"></div>
   </div>
 </section>
@@ -876,23 +914,36 @@
 <script>
 (() => {
   const DATA_URL = 'data/fed-meetings.json';
-
   const $ = sel => document.querySelector(sel);
+
+  const MONTHS = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
   const fmtDate = iso => {
     const [y, m, d] = iso.split('-').map(Number);
-    const months = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
-    return `${months[m-1]} ${d} · ${y}`;
+    return `${MONTHS[m-1]} ${d} · ${y}`;
   };
   const shortDate = iso => {
     const [y, m, d] = iso.split('-').map(Number);
-    const months = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
-    return `${months[m-1]} ${d}, ${y}`;
+    return `${MONTHS[m-1]} ${d}, ${y}`;
   };
-  const signBp = n => {
-    if (n === 0) return '±0 bp';
-    return `${n > 0 ? '+' : ''}${n} bp`;
-  };
+  const signBp = n => n === 0 ? '±0 bp' : `${n > 0 ? '+' : ''}${n} bp`;
   const yieldClass = n => n > 0 ? 'y-up' : n < 0 ? 'y-down' : 'y-flat';
+
+  const renderPhrase = (pc) => {
+    if (pc.type === 'changed' && pc.phrase.includes(' → ')) {
+      const idx = pc.phrase.indexOf(' → ');
+      const from = pc.phrase.slice(0, idx);
+      const to   = pc.phrase.slice(idx + 3);
+      return `<span class="phrase-diff"><del>${from}</del><span class="phrase-diff-sep">→</span><ins>${to}</ins></span>`;
+    }
+    return `<span>${pc.phrase}</span>`;
+  };
+
+  const dissentBadge = (m) => {
+    if (!m.dissents || !m.dissents.length) return '';
+    const tip = m.dissents.map(d => `${d.name}: ${d.preference}`).join(' · ');
+    return `<span class="dissent-badge" title="${tip}">${m.dissents.length}d</span>`;
+  };
+
   const decisionType = d => {
     if (!d || /hold/i.test(d)) return 'hold';
     if (/^[-−]/.test(d)) return 'cut';
@@ -902,17 +953,16 @@
 
   let STATE = {
     data: null,
-    filters: { year: '', stance: '', move: '' },
-    sortDir: 'desc',
+    filters: { year: '', stance: '', move: '', search: '' },
+    sort: { col: 'date', dir: 'desc' },
     expanded: new Set()
   };
 
   async function load() {
     try {
-      const res = await fetch(DATA_URL, { cache: 'no-cache' });
+      const res = await fetch(DATA_URL);
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
-      const data = await res.json();
-      STATE.data = data;
+      STATE.data = await res.json();
       render();
     } catch (e) {
       $('#result-count').textContent = 'Could not load fed-meetings.json — open this page over http:// (not file://) so fetch is allowed.';
@@ -932,25 +982,41 @@
   }
 
   function filterMeetings() {
-    const { year, stance, move } = STATE.filters;
-    return STATE.data.meetings.filter(m => {
+    const { year, stance, move, search } = STATE.filters;
+    let rows = STATE.data.meetings.filter(m => {
       if (year && m.date.slice(0, 4) !== year) return false;
       if (stance && m.stance !== stance) return false;
       if (move && decisionType(m.decision) !== move) return false;
       return true;
     });
+    if (search) {
+      const q = search.toLowerCase();
+      rows = rows.filter(m =>
+        m.statement_summary.toLowerCase().includes(q) ||
+        m.notes.toLowerCase().includes(q) ||
+        m.phrase_changes.some(pc => pc.phrase.toLowerCase().includes(q)) ||
+        (m.dissents || []).some(d => d.name.toLowerCase().includes(q))
+      );
+    }
+
+    const { col, dir } = STATE.sort;
+    rows.sort((a, b) => {
+      const va = col === 'y2' ? a.y2_bp : col === 'y10' ? a.y10_bp : a.date;
+      const vb = col === 'y2' ? b.y2_bp : col === 'y10' ? b.y10_bp : b.date;
+      if (typeof va === 'number') return dir === 'asc' ? va - vb : vb - va;
+      return dir === 'asc' ? va.localeCompare(vb) : vb.localeCompare(va);
+    });
+
+    return rows;
   }
 
   function renderKpis() {
     const ms = STATE.data.meetings;
     $('#kpi-count').textContent = ms.length;
-    const first = ms[ms.length - 1]?.date?.slice(0, 4);
-    const last = ms[0]?.date?.slice(0, 4);
-    // Sort copy by date to be safe
+
     const sorted = [...ms].sort((a, b) => a.date.localeCompare(b.date));
     $('#kpi-span').textContent = `${sorted[0].date.slice(0,4)} – ${sorted[sorted.length-1].date.slice(0,4)}`;
 
-    // Cycle status = type of most recent decision
     const latest = sorted[sorted.length - 1];
     const type = decisionType(latest.decision);
     $('#kpi-cycle').textContent = type === 'cut' ? 'Easing' : type === 'hike' ? 'Tightening' : 'Hold';
@@ -964,14 +1030,44 @@
     $('#meta-line').textContent = `Curated by Christopher Givan · Updated ${shortDate(lc)}`;
   }
 
+  function renderSortArrows() {
+    document.querySelectorAll('th.sortable').forEach(th => {
+      const arrow = th.querySelector('.arrow');
+      if (!arrow) return;
+      const isActive = th.dataset.sort === STATE.sort.col;
+      arrow.textContent = isActive ? (STATE.sort.dir === 'asc' ? '▲' : '▼') : '↕';
+      arrow.style.color = isActive ? 'var(--blue)' : 'var(--border)';
+    });
+  }
+
+  function detailHTML(m) {
+    return `<td colspan="8">
+      <div class="detail-grid">
+        <div>
+          <div class="detail-label">// Statement Summary</div>
+          <p class="detail-body">${m.statement_summary}</p>
+          <div class="detail-label" style="margin-top:1rem;">// Notes</div>
+          <p class="detail-body">${m.notes}</p>
+        </div>
+        <div>
+          <div class="detail-label">// Notable Phrase Changes</div>
+          <ul class="phrase-list">
+            ${m.phrase_changes.map(pc => `
+              <li>
+                <span class="phrase-tag ${pc.type}">${pc.type}</span>
+                ${renderPhrase(pc)}
+              </li>
+            `).join('')}
+          </ul>
+        </div>
+      </div>
+    </td>`;
+  }
+
   function renderTable() {
     const rows = filterMeetings();
-    rows.sort((a, b) => STATE.sortDir === 'asc'
-      ? a.date.localeCompare(b.date)
-      : b.date.localeCompare(a.date));
-
     $('#result-count').textContent = `Showing ${rows.length} of ${STATE.data.meetings.length} meetings`;
-    $('#arr-date').textContent = STATE.sortDir === 'asc' ? '▲' : '▼';
+    renderSortArrows();
 
     const tbody = $('#fed-tbody');
     const cards = $('#fed-cards');
@@ -979,9 +1075,7 @@
     cards.innerHTML = '';
 
     if (rows.length === 0) {
-      const tr = document.createElement('tr');
-      tr.innerHTML = `<td colspan="8"><div class="empty-msg">No meetings match these filters.</div></td>`;
-      tbody.appendChild(tr);
+      tbody.innerHTML = `<tr><td colspan="8"><div class="empty-msg">No meetings match these filters.</div></td></tr>`;
       cards.innerHTML = `<div class="empty-msg">No meetings match these filters.</div>`;
       return;
     }
@@ -991,22 +1085,26 @@
       const curveArrow = m.curve_direction === 'steepening' ? '↗' : '↘';
       const curveClass = m.curve_direction === 'flattening' ? 'flat' : '';
       const expanded = STATE.expanded.has(m.id);
+      const preview = m.statement_summary.length > 80 ? m.statement_summary.slice(0, 80) + '…' : m.statement_summary;
+      const dateLabel = fmtDate(m.date);
 
-      // --- Desktop row ---
       const main = document.createElement('tr');
+      main.dataset.meetingId = m.id;
       main.innerHTML = `
         <td>
-          <div class="date-cell">${fmtDate(m.date)}</div>
+          <div class="date-cell">${dateLabel}</div>
           <div class="range-cell">${m.target_range}</div>
         </td>
         <td><span class="stance ${m.stance}">${m.stance}</span></td>
-        <td><span class="decision-cell ${type}">${m.decision}</span></td>
+        <td><span class="decision-cell ${type}">${m.decision}</span>${dissentBadge(m)}</td>
         <td><span class="decision-cell ${decisionType(m.next_decision)}">${m.next_decision}</span></td>
         <td class="num ${yieldClass(m.y2_bp)}">${signBp(m.y2_bp)}</td>
         <td class="num ${yieldClass(m.y10_bp)}">${signBp(m.y10_bp)}</td>
         <td><span class="curve ${curveClass}"><span class="arrow">${curveArrow}</span> ${m.curve_direction} · ${signBp(m.curve_bp)}</span></td>
         <td>
-          <button class="toggle-btn" type="button" data-id="${m.id}" aria-expanded="${expanded}">
+          <button class="toggle-btn" type="button" data-id="${m.id}"
+            aria-expanded="${expanded}"
+            aria-label="${expanded ? 'Hide' : 'Show'} detail for ${dateLabel}">
             ${expanded ? 'Hide' : 'Detail'}
           </button>
         </td>
@@ -1016,39 +1114,17 @@
       if (expanded) {
         const det = document.createElement('tr');
         det.className = 'detail-row';
-        det.innerHTML = `
-          <td colspan="8">
-            <div class="detail-grid">
-              <div>
-                <div class="detail-label">// Statement Summary</div>
-                <p class="detail-body">${m.statement_summary}</p>
-                <div class="detail-label" style="margin-top:1rem;">// Notes</div>
-                <p class="detail-body">${m.notes}</p>
-              </div>
-              <div>
-                <div class="detail-label">// Notable Phrase Changes</div>
-                <ul class="phrase-list">
-                  ${m.phrase_changes.map(pc => `
-                    <li>
-                      <span class="phrase-tag ${pc.type}">${pc.type}</span>
-                      <span>${pc.phrase}</span>
-                    </li>
-                  `).join('')}
-                </ul>
-              </div>
-            </div>
-          </td>
-        `;
+        det.dataset.detailFor = m.id;
+        det.innerHTML = detailHTML(m);
         tbody.appendChild(det);
       }
 
-      // --- Mobile card ---
       const card = document.createElement('div');
       card.className = 'fed-card';
       card.innerHTML = `
         <div class="fed-card-head">
           <div>
-            <div class="date-cell">${fmtDate(m.date)}</div>
+            <div class="date-cell">${dateLabel}</div>
             <div class="range-cell">${m.target_range}</div>
           </div>
           <span class="stance ${m.stance}">${m.stance}</span>
@@ -1056,7 +1132,7 @@
         <div class="fed-card-grid">
           <div class="fed-card-cell">
             <div class="label">Decision</div>
-            <div class="value"><span class="decision-cell ${type}">${m.decision}</span></div>
+            <div class="value"><span class="decision-cell ${type}">${m.decision}</span>${dissentBadge(m)}</div>
           </div>
           <div class="fed-card-cell">
             <div class="label">Next Move</div>
@@ -1075,21 +1151,25 @@
             <div class="value ${yieldClass(m.y10_bp)}">${signBp(m.y10_bp)}</div>
           </div>
           <div class="fed-card-cell">
-            <div class="label">Stance</div>
-            <div class="value" style="text-transform:uppercase;">${m.stance}</div>
+            <div class="label">Summary</div>
+            <div class="value" style="font-family:'Barlow',sans-serif;font-size:0.75rem;color:var(--muted);line-height:1.4;">${preview}</div>
           </div>
         </div>
         <div style="margin-top:0.9rem;">
-          <button class="toggle-btn" type="button" data-id="${m.id}" aria-expanded="${expanded}">${expanded ? 'Hide detail' : 'Show detail'}</button>
+          <button class="toggle-btn card-toggle" type="button" data-id="${m.id}"
+            aria-expanded="${expanded}"
+            aria-label="${expanded ? 'Hide' : 'Show'} detail for ${dateLabel}">
+            ${expanded ? 'Hide detail' : 'Show detail'}
+          </button>
         </div>
         ${expanded ? `
-          <div style="margin-top:1rem; padding-top:1rem; border-top:1px solid var(--border);">
+          <div class="card-detail" style="margin-top:1rem;padding-top:1rem;border-top:1px solid var(--border);">
             <div class="detail-label">// Statement Summary</div>
             <p class="detail-body" style="margin-bottom:0.85rem;">${m.statement_summary}</p>
             <div class="detail-label">// Phrase Changes</div>
             <ul class="phrase-list" style="margin-bottom:0.85rem;">
               ${m.phrase_changes.map(pc => `
-                <li><span class="phrase-tag ${pc.type}">${pc.type}</span><span>${pc.phrase}</span></li>
+                <li><span class="phrase-tag ${pc.type}">${pc.type}</span>${renderPhrase(pc)}</li>
               `).join('')}
             </ul>
             <div class="detail-label">// Notes</div>
@@ -1099,20 +1179,9 @@
       `;
       cards.appendChild(card);
     }
-
-    // wire toggles
-    document.querySelectorAll('.toggle-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const id = btn.dataset.id;
-        if (STATE.expanded.has(id)) STATE.expanded.delete(id);
-        else STATE.expanded.add(id);
-        renderTable();
-      });
-    });
   }
 
   function renderShifts() {
-    // Gather all phrase changes that are added/removed/changed, sort by meeting date (most recent first)
     const entries = [];
     for (const m of STATE.data.meetings) {
       for (const pc of m.phrase_changes) {
@@ -1121,10 +1190,8 @@
       }
     }
     entries.sort((a, b) => b.date.localeCompare(a.date));
-    const top = entries.slice(0, 6);
 
-    const grid = $('#shifts-grid');
-    grid.innerHTML = top.map(e => `
+    $('#shifts-grid').innerHTML = entries.slice(0, 6).map(e => `
       <div class="shift-cell">
         <div class="shift-date">${shortDate(e.date)} · ${e.type}</div>
         <div class="shift-quote">"${e.phrase}"</div>
@@ -1165,19 +1232,62 @@
     $('#f-year').addEventListener('change', e => { STATE.filters.year = e.target.value; renderTable(); });
     $('#f-stance').addEventListener('change', e => { STATE.filters.stance = e.target.value; renderTable(); });
     $('#f-move').addEventListener('change', e => { STATE.filters.move = e.target.value; renderTable(); });
+    $('#f-search').addEventListener('input', e => { STATE.filters.search = e.target.value; renderTable(); });
     $('#f-reset').addEventListener('click', () => {
-      STATE.filters = { year: '', stance: '', move: '' };
+      STATE.filters = { year: '', stance: '', move: '', search: '' };
       $('#f-year').value = '';
       $('#f-stance').value = '';
       $('#f-move').value = '';
+      $('#f-search').value = '';
       renderTable();
     });
 
-    document.querySelectorAll('th.sortable').forEach(th => {
-      th.addEventListener('click', () => {
-        STATE.sortDir = STATE.sortDir === 'asc' ? 'desc' : 'asc';
-        renderTable();
-      });
+    // Sort — delegated to thead, set up once
+    $('#fed-table thead').addEventListener('click', e => {
+      const th = e.target.closest('th.sortable');
+      if (!th) return;
+      const col = th.dataset.sort;
+      STATE.sort.dir = STATE.sort.col === col && STATE.sort.dir === 'desc' ? 'asc' : 'desc';
+      STATE.sort.col = col;
+      renderTable();
+    });
+
+    // Desktop detail toggle — delegated to tbody, no full re-render (no scroll jump)
+    $('#fed-tbody').addEventListener('click', e => {
+      const btn = e.target.closest('.toggle-btn');
+      if (!btn) return;
+      const id = btn.dataset.id;
+      const isExpanded = STATE.expanded.has(id);
+      const m = STATE.data.meetings.find(x => x.id === id);
+
+      if (isExpanded) {
+        STATE.expanded.delete(id);
+        const next = btn.closest('tr').nextElementSibling;
+        if (next?.dataset.detailFor === id) next.remove();
+        btn.textContent = 'Detail';
+        btn.setAttribute('aria-expanded', 'false');
+        btn.setAttribute('aria-label', `Show detail for ${fmtDate(m.date)}`);
+      } else {
+        STATE.expanded.add(id);
+        const det = document.createElement('tr');
+        det.className = 'detail-row';
+        det.dataset.detailFor = id;
+        det.innerHTML = detailHTML(m);
+        btn.closest('tr').after(det);
+        btn.textContent = 'Hide';
+        btn.setAttribute('aria-expanded', 'true');
+        btn.setAttribute('aria-label', `Hide detail for ${fmtDate(m.date)}`);
+      }
+    });
+
+    // Mobile card toggles — delegated, full re-render acceptable on mobile
+    $('#fed-cards').addEventListener('click', e => {
+      const btn = e.target.closest('.toggle-btn');
+      if (!btn) return;
+      const id = btn.dataset.id;
+      if (STATE.expanded.has(id)) STATE.expanded.delete(id);
+      else STATE.expanded.add(id);
+      renderTable();
     });
   }
 

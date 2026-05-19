@@ -4,8 +4,8 @@
     "description": "Curated FOMC meeting log cross-referencing statement language shifts with rate outcomes and Treasury-market reactions.",
     "author": "Christopher Givan",
     "methodology": "Same-day (2pm statement to 3pm close) yield changes sourced from Treasury.gov H.15 series and cross-checked against Fed statement archive. Stance reflects the statement + SEP composite, not just the decision. This dataset is curated by hand — not an automated feed.",
-    "last_curated": "2026-04-24",
-    "coverage": "Selected inflection meetings from the 2022 hiking cycle through the 2025 cut cycle."
+    "last_curated": "2026-05-18",
+    "coverage": "Selected inflection meetings from the 2022 hiking cycle through the 2026 hold cycle."
   },
   "meetings": [
     {
@@ -20,6 +20,9 @@
       ],
       "decision": "+25 bp",
       "next_decision": "+50 bp (May 2022)",
+      "dissents": [
+        { "name": "Bullard", "preference": "+50 bp" }
+      ],
       "y2_bp": 13,
       "y10_bp": 14,
       "curve_bp": 1,
@@ -38,6 +41,7 @@
       ],
       "decision": "+75 bp",
       "next_decision": "+75 bp (July 2022)",
+      "dissents": [],
       "y2_bp": -23,
       "y10_bp": -18,
       "curve_bp": 5,
@@ -56,6 +60,7 @@
       ],
       "decision": "+75 bp",
       "next_decision": "+50 bp (Dec 2022)",
+      "dissents": [],
       "y2_bp": 17,
       "y10_bp": 5,
       "curve_bp": -12,
@@ -74,6 +79,7 @@
       ],
       "decision": "+25 bp",
       "next_decision": "+25 bp (March 2023)",
+      "dissents": [],
       "y2_bp": -9,
       "y10_bp": -13,
       "curve_bp": -4,
@@ -92,6 +98,7 @@
       ],
       "decision": "Hold",
       "next_decision": "+25 bp (July 2023)",
+      "dissents": [],
       "y2_bp": -4,
       "y10_bp": -3,
       "curve_bp": 1,
@@ -110,6 +117,7 @@
       ],
       "decision": "Hold",
       "next_decision": "Hold (Jan 2024)",
+      "dissents": [],
       "y2_bp": -30,
       "y10_bp": -18,
       "curve_bp": 12,
@@ -128,6 +136,7 @@
       ],
       "decision": "Hold",
       "next_decision": "Hold (May 2024)",
+      "dissents": [],
       "y2_bp": -8,
       "y10_bp": -2,
       "curve_bp": 6,
@@ -146,6 +155,9 @@
       ],
       "decision": "−50 bp",
       "next_decision": "−25 bp (Nov 2024)",
+      "dissents": [
+        { "name": "Bowman", "preference": "−25 bp" }
+      ],
       "y2_bp": 6,
       "y10_bp": 5,
       "curve_bp": -1,
@@ -164,6 +176,9 @@
       ],
       "decision": "−25 bp",
       "next_decision": "Hold (Jan 2025)",
+      "dissents": [
+        { "name": "Hammack", "preference": "Hold" }
+      ],
       "y2_bp": 11,
       "y10_bp": 13,
       "curve_bp": 2,
@@ -182,6 +197,7 @@
       ],
       "decision": "Hold",
       "next_decision": "Hold (Mar 2025)",
+      "dissents": [],
       "y2_bp": 2,
       "y10_bp": 0,
       "curve_bp": -2,
@@ -200,6 +216,9 @@
       ],
       "decision": "Hold",
       "next_decision": "Hold (May 2025)",
+      "dissents": [
+        { "name": "Waller", "preference": "Hold (QT pace)" }
+      ],
       "y2_bp": -5,
       "y10_bp": -4,
       "curve_bp": 1,
@@ -218,6 +237,7 @@
       ],
       "decision": "Hold",
       "next_decision": "Hold (Jun 2025)",
+      "dissents": [],
       "y2_bp": 0,
       "y10_bp": -4,
       "curve_bp": -4,
@@ -235,6 +255,7 @@
       ],
       "decision": "Hold",
       "next_decision": "Hold (Jul 2025)",
+      "dissents": [],
       "y2_bp": 0,
       "y10_bp": -1,
       "curve_bp": -1,
@@ -252,6 +273,10 @@
       ],
       "decision": "Hold",
       "next_decision": "−25 bp (Sep 2025)",
+      "dissents": [
+        { "name": "Bowman", "preference": "−25 bp" },
+        { "name": "Waller", "preference": "−25 bp" }
+      ],
       "y2_bp": 8,
       "y10_bp": 4,
       "curve_bp": -4,
@@ -271,6 +296,9 @@
       ],
       "decision": "−25 bp",
       "next_decision": "−25 bp (Oct 2025)",
+      "dissents": [
+        { "name": "Miran", "preference": "−50 bp" }
+      ],
       "y2_bp": 1,
       "y10_bp": 2,
       "curve_bp": 1,
@@ -289,6 +317,10 @@
       ],
       "decision": "−25 bp",
       "next_decision": "−25 bp (Dec 2025)",
+      "dissents": [
+        { "name": "Miran", "preference": "−50 bp" },
+        { "name": "Schmid", "preference": "Hold" }
+      ],
       "y2_bp": 9,
       "y10_bp": 5,
       "curve_bp": -4,
@@ -307,11 +339,87 @@
       ],
       "decision": "−25 bp",
       "next_decision": "Hold (Jan 2026)",
+      "dissents": [
+        { "name": "Miran", "preference": "−50 bp" },
+        { "name": "Goolsbee", "preference": "Hold" },
+        { "name": "Schmid", "preference": "Hold" }
+      ],
       "y2_bp": -7,
       "y10_bp": -3,
       "curve_bp": 4,
       "curve_direction": "steepening",
       "notes": "Dovish cut, hawkish dots — the mirror of December 2023. Front end rallied (2Y −7 bp) despite the hawkish dot plot revision, as Powell emphasized labor weakness as the primary rationale for cutting. Curve steepened +4 bp (bull steepening). Dissents from Miran (-50bp), Goolsbee (hold), and Schmid (hold) — the three-way split reflects genuine internal disagreement about the pace of easing."
+    },
+    {
+      "id": "2026-01",
+      "date": "2026-01-28",
+      "target_range": "3.50–3.75%",
+      "stance": "neutral",
+      "statement_summary": "First 2026 meeting. Holds following three 2025 cuts. Labor language improved — 'edged up' replaced with 'stabilization.' Inflation de-escalated: 'has moved up' phrase removed. Balance-sheet language dropped as QT fully ended Dec 1. Two governors (Miran, Waller) dissented for cuts.",
+      "phrase_changes": [
+        { "type": "changed", "phrase": "Job gains have slowed, and the unemployment rate has edged up but remains low → Job gains have remained low, and the unemployment rate has shown some signs of stabilization" },
+        { "type": "changed", "phrase": "Inflation has moved up and remains somewhat elevated → Inflation remains somewhat elevated" },
+        { "type": "removed", "phrase": "reserve balances have declined to ample levels" },
+        { "type": "removed", "phrase": "initiating purchases of shorter-term Treasury securities to maintain adequate reserves" }
+      ],
+      "decision": "Hold",
+      "next_decision": "Hold (Mar 2026)",
+      "dissents": [
+        { "name": "Miran", "preference": "−25 bp" },
+        { "name": "Waller", "preference": "−25 bp" }
+      ],
+      "y2_bp": 2,
+      "y10_bp": 3,
+      "curve_bp": 1,
+      "curve_direction": "steepening",
+      "notes": "Soft landing optimism — labor market stabilizing, inflation de-escalating. Statement dropped the Dec QT/balance-sheet language now that those operations are complete. Two dovish dissents (Miran and Waller both preferred cuts) signal internal dovish pressure but majority comfortable pausing. Powell called economy on 'firm footing.' Yields moved modestly higher on the hold."
+    },
+    {
+      "id": "2026-03",
+      "date": "2026-03-18",
+      "target_range": "3.50–3.75%",
+      "stance": "hawkish",
+      "statement_summary": "Holds. First explicit mention of Middle East geopolitical risk in the statement. Hot PPI data (+0.7% vs 0.3% expected) drove a bear-flattening yield spike on the meeting day. SEP dot plot revised for lower-3% Fed Funds by 2027, but near-term cuts repriced out.",
+      "phrase_changes": [
+        { "type": "added", "phrase": "The implications of developments in the Middle East for the U.S. economy are uncertain" },
+        { "type": "changed", "phrase": "unemployment rate has shown some signs of stabilization → unemployment rate has been little changed in recent months" }
+      ],
+      "decision": "Hold",
+      "next_decision": "Hold (Apr 2026)",
+      "dissents": [
+        { "name": "Miran", "preference": "−25 bp" }
+      ],
+      "y2_bp": 10,
+      "y10_bp": 6,
+      "curve_bp": -4,
+      "curve_direction": "flattening",
+      "notes": "Geopolitical risk entered the statement for the first time in the cycle — energy price pass-through from Middle East conflict driving inflation concerns. Hot PPI print (+0.7%) landed the same day, reinforcing the hawkish read. 2Y spiked 10 bp as near-term cut pricing was removed. SEP dot plot saw Low-3% by 2027 but the 2026 path was revised higher. Only Miran dissented for a cut; the rest of the committee closed ranks around caution."
+    },
+    {
+      "id": "2026-04",
+      "date": "2026-04-29",
+      "target_range": "3.50–3.75%",
+      "stance": "hawkish",
+      "statement_summary": "Holds with a historic 8-4 dissent split — most since October 1992. Inflation language upgraded to 'is elevated' (dropping 'somewhat') and explicitly cites energy prices. Middle East uncertainty language escalated. Three hawkish dissenters (Hammack, Logan, Kashkari) opposed easing bias; one dovish dissenter (Miran) wanted a cut.",
+      "phrase_changes": [
+        { "type": "changed", "phrase": "Available indicators suggest → Recent indicators suggest" },
+        { "type": "changed", "phrase": "Inflation remains somewhat elevated → Inflation is elevated, in part reflecting the recent increase in global energy prices" },
+        { "type": "changed", "phrase": "The implications of developments in the Middle East for the U.S. economy are uncertain → Developments in the Middle East are contributing to a high level of uncertainty about the economic outlook" },
+        { "type": "removed", "phrase": "Uncertainty about the economic outlook remains elevated" }
+      ],
+      "decision": "Hold",
+      "next_decision": "Hold (Jun 2026)",
+      "dissents": [
+        { "name": "Miran", "preference": "−25 bp" },
+        { "name": "Hammack", "preference": "Hold (no easing bias)" },
+        { "name": "Logan", "preference": "Hold (no easing bias)" },
+        { "name": "Kashkari", "preference": "Hold (no easing bias)" }
+      ],
+      "y2_bp": 4,
+      "y10_bp": 2,
+      "curve_bp": -2,
+      "curve_direction": "flattening",
+      "notes": "The inflation language shift from 'remains somewhat elevated' to 'is elevated…in part reflecting the recent increase in global energy prices' is the starkest upgrade in the easing cycle — dropping 'somewhat' is a significant escalation. Three members dissented hawkishly against the easing bias ('extent and timing of additional adjustments') while Miran dissented dovishly for a cut — simultaneous both-direction dissents. Powell announced he will remain on the Board after his chair term expires in May, with Warsh's nomination advancing in the Senate. Market reaction was contained (2Y +4 bp, 10Y +2 bp) given the historic split vote."
     }
   ],
   "predictive_phrases": [
@@ -395,7 +503,7 @@
     },
     {
       "title": "Data caveat",
-      "body": "This dataset is hand-curated from the Federal Reserve statement archive and Treasury H.15 daily yields. It is not an automated feed. Each entry is verifiable against the FOMC statement and next-day H.15 release. Expansion targets: 2025 meetings, intraday reaction windows (30-min, 60-min), and Fed funds futures repricing."
+      "body": "This dataset is hand-curated from the Federal Reserve statement archive and Treasury H.15 daily yields. It is not an automated feed. Each entry is verifiable against the FOMC statement and next-day H.15 release. Expansion targets: intraday reaction windows (30-min, 60-min), Fed funds futures repricing, and dissent history visualizations."
     }
   ]
 }
