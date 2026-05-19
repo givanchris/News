@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio Lab — Christopher Givan</title>
+  <meta name="description" content="Personal Monte Carlo portfolio simulator: correlated GBM, historical risk model, what-if rebalancer, and institutional PDF report generation." />
+  <meta name="author" content="Christopher Givan" />
+  <meta name="theme-color" content="#0e2240" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Portfolio Lab — Christopher Givan" />
+  <meta property="og:description" content="Monte Carlo portfolio simulator with historical risk model, factor exposure, and institutional PDF reports." />
+  <meta property="og:image" content="headshot.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Portfolio Lab — Christopher Givan" />
+  <meta name="twitter:description" content="Monte Carlo portfolio simulator with historical risk model, factor exposure, and institutional PDF reports." />
+  <meta name="twitter:image" content="headshot.jpg" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230e2240'/%3E%3Ctext x='16' y='22' font-family='-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif' font-size='14' font-weight='800' fill='white' text-anchor='middle'%3ECG%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --white:   #ffffff;
+      --off:     #f5f7fa;
+      --light:   #edf1f8;
+      --border:  #d8dfe9;
+      --navy:    #0e2240;
+      --navy2:   #152d52;
+      --navy3:   #1c3a68;
+      --blue:    #1a5fd4;
+      --blue2:   #2e74e8;
+      --blue-lt: #e8f0fc;
+      --text:    #0e2240;
+      --muted:   #5a6f87;
+      --green:   #117a44;
+      --green-lt:#e4f4ec;
+      --red:     #bf3232;
+      --red-lt:  #fce8e8;
+      --amber:   #a05a00;
+      --amber-lt:#fbefd9;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--white);
+      color: var(--text);
+      font-family: 'Barlow', system-ui, sans-serif;
+      font-size: 15px;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 200;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 3rem;
+      height: 56px;
+      background: rgba(255,255,255,0.94);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo {
+      display: flex; align-items: center; justify-content: center;
+      width: 36px; height: 36px;
+      border: 1.5px solid var(--navy);
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.9rem; font-weight: 800;
+      color: var(--navy); text-decoration: none; letter-spacing: 0.04em;
+    }
+    .nav-links { display: flex; align-items: center; gap: 2.5rem; list-style: none; }
+    .nav-links a {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem; font-weight: 500;
+      color: var(--muted); text-decoration: none;
+      letter-spacing: 0.07em; text-transform: uppercase;
+      transition: color 0.15s;
+    }
+    .nav-links a:hover { color: var(--navy); }
+    .nav-links a.active { color: var(--navy); }
+    .nav-cta {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem; font-weight: 500;
+      letter-spacing: 0.07em; text-transform: uppercase;
+      padding: 0.45rem 1rem;
+      border: 1.5px solid var(--navy);
+      color: var(--navy); text-decoration: none;
+      transition: all 0.15s;
+    }
+    .nav-cta:hover { background: var(--navy); color: var(--white); }
+
+    /* ── PAGE HEADER (navy) ── */
+    .lab-header {
+      background: var(--navy);
+      padding: 7rem 3rem 3rem;
+      border-bottom: 1px solid var(--navy3);
+    }
+    .lab-header-inner { max-width: 1200px; margin: 0 auto; }
+
+    .lab-eyebrow {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--blue2);
+      display: flex; align-items: center; gap: 0.75rem;
+      margin-bottom: 1.5rem;
+    }
+    .lab-eyebrow::before {
+      content: '';
+      width: 28px; height: 1.5px; background: var(--blue2);
+    }
+
+    .lab-title {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800;
+      font-size: clamp(3rem, 7vw, 5.75rem);
+      line-height: 0.95;
+      letter-spacing: -0.005em;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 1.75rem;
+    }
+    .lab-title span { color: var(--blue2); }
+
+    .lab-sub {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.75;
+      max-width: 760px;
+      margin-bottom: 2.5rem;
+    }
+    .lab-sub strong { color: rgba(255,255,255,0.9); font-weight: 500; }
+
+    .lab-kpis {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border-top: 1px solid var(--navy3);
+      border-bottom: 1px solid var(--navy3);
+    }
+    .kpi {
+      padding: 1.5rem 1.75rem 1.5rem 0;
+      border-right: 1px solid var(--navy3);
+    }
+    .kpi:first-child { padding-left: 0; }
+    .kpi:last-child  { border-right: none; padding-left: 1.75rem; padding-right: 0; }
+    .kpi:not(:first-child):not(:last-child) { padding-left: 1.75rem; }
+    .kpi-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--blue2);
+      margin-bottom: 0.4rem;
+    }
+    .kpi-value {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.7rem;
+      font-weight: 800;
+      color: var(--white);
+      letter-spacing: 0.01em;
+      line-height: 1.1;
+      text-transform: uppercase;
+    }
+    .kpi-sub {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.4);
+      margin-top: 0.25rem;
+    }
+
+    /* ── COLD START NOTICE ── */
+    .cold-notice {
+      background: var(--amber-lt);
+      border-bottom: 1px solid var(--amber);
+      padding: 0.65rem 3rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.04em;
+      color: var(--amber);
+    }
+    .cold-notice strong {
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-right: 0.4rem;
+    }
+
+    /* ── IFRAME ── */
+    .lab-embed {
+      width: 100%;
+      height: calc(100vh - 56px);
+      min-height: 800px;
+      border: none;
+      display: block;
+      background: var(--off);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--navy);
+      border-top: 1px solid var(--navy3);
+      padding: 1.5rem 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    footer .f-left, footer .f-right {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.05em;
+      color: rgba(255,255,255,0.25);
+    }
+    footer .f-logo {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: rgba(255,255,255,0.5);
+      letter-spacing: 0.06em;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      nav { padding: 0 1.25rem; }
+      .nav-links { gap: 1.25rem; }
+      .lab-header { padding: 6rem 1.5rem 2.5rem; }
+      .cold-notice { padding: 0.65rem 1.5rem; }
+      footer { padding: 1.25rem 1.5rem; flex-wrap: wrap; gap: 0.5rem; }
+      .lab-kpis { grid-template-columns: repeat(2, 1fr); }
+      .kpi { border-right: 1px solid var(--navy3); padding: 1.25rem 1rem !important; }
+      .kpi:nth-child(2) { border-right: none; padding-right: 0 !important; }
+      .kpi:nth-child(3) { padding-left: 0 !important; border-top: 1px solid var(--navy3); }
+      .kpi:nth-child(4) { border-right: none; border-top: 1px solid var(--navy3); }
+    }
+
+    @media (max-width: 560px) {
+      .lab-title { font-size: 2.75rem; }
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html#hero" class="nav-logo">CG</a>
+  <ul class="nav-links">
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#projects" class="active">Projects</a></li>
+    <li><a href="brief.html">Brief</a></li>
+    <li><a href="index.html#resume">Resume</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+  <a href="mailto:givanchris@icloud.com" class="nav-cta">Get in Touch →</a>
+</nav>
+
+<!-- HEADER -->
+<header class="lab-header">
+  <div class="lab-header-inner">
+    <div class="lab-eyebrow">Quantitative Finance · Python</div>
+    <h1 class="lab-title">PORTFOLIO<br><span>LAB</span></h1>
+    <p class="lab-sub">
+      A personal <strong>Monte Carlo portfolio simulator</strong> built in Streamlit. Runs 10,000 correlated GBM paths across 21 positions, fits a <strong>historical risk model</strong> via OLS on market proxies, and generates an institutional-style <strong>PDF research note</strong> with drawdown analysis, stress tests, factor exposure, and a what-if rebalancer. Demo portfolio shown — fictional positions, real tickers.
+    </p>
+    <div class="lab-kpis">
+      <div class="kpi">
+        <div class="kpi-label">// Positions</div>
+        <div class="kpi-value">21</div>
+        <div class="kpi-sub">Demo portfolio</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">// Simulations</div>
+        <div class="kpi-value">10,000</div>
+        <div class="kpi-sub">Correlated GBM paths</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">// Horizon</div>
+        <div class="kpi-value">5 YR</div>
+        <div class="kpi-sub">Default, adjustable</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">// PDF Sections</div>
+        <div class="kpi-value">14</div>
+        <div class="kpi-sub">Institutional report</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- COLD START NOTICE -->
+<div class="cold-notice">
+  <strong>Note:</strong> App may take a moment to load on first visit.
+</div>
+
+<!-- EMBEDDED APP -->
+<iframe
+  src="https://ezstreams-729cmcayvbwmtbvalslchq.streamlit.app/?embedded=true"
+  class="lab-embed"
+  title="Portfolio Lab"
+  allow="fullscreen"
+></iframe>
+
+<!-- FOOTER -->
+<footer>
+  <span class="f-left">© 2026 Christopher Givan</span>
+  <span class="f-logo">CG</span>
+  <span class="f-right">Portfolio Lab · Demo</span>
+</footer>
+
+</body>
+</html>
