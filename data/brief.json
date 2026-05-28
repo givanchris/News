@@ -1,101 +1,95 @@
 {
-  "lastUpdated": "2026-05-27T19:00:00-06:00",
+  "lastUpdated": "2026-05-28T19:00:00-06:00",
   "market": {
-    "sp500":  { "price": "7,525", "change": "+0.09%", "dir": "up" },
-    "nasdaq": { "price": "26,655", "change": "+0.10%", "dir": "up" },
-    "yield":  { "price": "4.48%", "change": "-3 bps",  "dir": "up" },
-    "wti":    { "price": "$91",   "change": "-3.2%",   "dir": "down" },
-    "gold":   { "price": "$4,504","change": "-0.4%",   "dir": "down" },
-    "dxy":    { "price": "99.1",  "change": "-0.1%",   "dir": "down" }
+    "sp500":  { "price": "7,564",  "change": "+0.58%", "dir": "up"   },
+    "nasdaq": { "price": "26,917", "change": "+0.91%", "dir": "up"   },
+    "yield":  { "price": "4.47%",  "change": "-1 bps", "dir": "up"   },
+    "wti":    { "price": "$90",    "change": "+1.0%",  "dir": "up"   },
+    "gold":   { "price": "$4,470", "change": "-0.8%",  "dir": "down" },
+    "dxy":    { "price": "99.3",   "change": "+0.1%",  "dir": "up"   }
   },
   "stories": [
     {
+      "cat": "MACRO",
+      "headline": "PCE HITS 3.8%, HIGHEST SINCE MAY 2023, AS IRAN WAR DRIVES GASOLINE UP 5.5%",
+      "body": "April PCE rose 0.4% month-over-month, pushing the 12-month rate from 3.5% to 3.8% — the hottest reading in nearly three years. Goods prices jumped 0.7%, led by a 5.5% gasoline surge tied to Strait of Hormuz disruptions. Core PCE held at 3.3% YoY, suggesting energy shock hasn't yet embedded into services inflation, but the Fed remains frozen: FedWatch prices a 98.8% probability of a hold at the June meeting."
+    },
+    {
+      "cat": "MARKETS",
+      "headline": "SNOWFLAKE SURGES 36% ON $6B AWS AI DEAL, DRAGGING S&P 500 AND NASDAQ TO RECORD CLOSES",
+      "body": "Snowflake (SNOW) posted its best day ever after reporting Q1 FY27 revenue of $1.39B (+33% YoY) and a landmark $6B multi-year collaboration with AWS. The AI data platform rally lifted the broader software sector: ServiceNow and Oracle each gained 6%, Palantir jumped 8%, and Microsoft added 3%+. The S&P 500 closed at a record 7,564 (+0.58%) and Nasdaq hit 26,917 (+0.91%), defying the 3.8% PCE print."
+    },
+    {
       "cat": "GEOPOLITICS",
-      "headline": "WHITE HOUSE CONTRADICTS IRAN DEAL DRAFT, OIL WHIPSAWS TO $91",
-      "body": "A draft U.S.-Iran framework circulated before the open, briefly sending WTI below $90 on Strait of Hormuz reopening optimism — then the White House rejected key terms, demanding Iran fully dismantle its enrichment capacity. Oil snapped back to $91, still down 3.2% on the day. At $91, crude is pricing roughly a 50% deal probability; a finalized agreement would push WTI toward $72–75 by Q4 2026."
-    },
-    {
-      "cat": "MARKETS",
-      "headline": "DOW SETS NEW RECORD AT ~50,663 WHILE NASDAQ FLAT AS CHIP RALLY PAUSES",
-      "body": "The Dow Jones rose 201 points (+0.4%) to a new all-time high, lifted by oil-decline beneficiaries in consumer and industrial names. The S&P 500 and Nasdaq each gained just 0.1%, however, as semiconductor stocks retreated after leading the market's monthlong surge. The divergence illustrates the Dow's price-weighted construction: when high-priced chip stocks stall, the cap-weighted indexes barely move but the Dow can still rally on cheaper cyclicals."
-    },
-    {
-      "cat": "MARKETS",
-      "headline": "SPACEX IPO NOW 16 DAYS OUT; INSTITUTIONAL BOOK REPORTED OVERSUBSCRIBED",
-      "body": "The June 12 Nasdaq debut of SpaceX (SPCX) is generating the most pre-IPO buzz since Aramco's 2019 listing. At a $1.75 trillion target valuation, SPCX would instantly rank among the ten most valuable publicly traded companies globally. Institutional allocation demand is reportedly oversubscribed; Starlink subscriber growth will be the key metric watched at debut for earnings visibility."
-    },
-    {
-      "cat": "CENTRAL BANKS",
-      "headline": "10-YEAR YIELD EASES TO 4.48%, DXY SLIPS BELOW 99.1 AS RISK PREMIUM FADES",
-      "body": "The 10-year Treasury yield fell 3 bps to 4.48% and the DXY dollar index slipped to 99.1 as Iran deal optimism reduced the geopolitical risk premium embedded in both assets. Lower oil prices trim headline CPI expectations, giving the Fed marginally more flexibility. Markets still price one 25 bps cut by year-end — today's yield move was too small to shift that consensus, but sustained oil weakness could."
-    },
-    {
-      "cat": "NBA",
-      "headline": "SPURS SURVIVE ELIMINATION GAME 5, FORCE GAME 6; KNICKS AWAIT IN FINALS",
-      "body": "San Antonio won Game 5 last night to keep their WCF run alive at 3-2 vs. Oklahoma City; Game 6 is Thursday May 28. Meanwhile, the New York Knicks swept Cleveland 4-0 in the ECF to reach the NBA Finals for the first time since 1999. The Finals tip off June 3 on ABC — the Knicks' opponent TBD after Game 6."
-    },
-    {
-      "cat": "NFL",
-      "headline": "DERWIN JAMES SIGNS $75.6M EXTENSION AS OTA INJURIES HIT THE GIANTS",
-      "body": "Chargers safety Derwin James agreed to a 3-year, $75.6M contract extension making him the highest-paid safety in NFL history. Elsewhere in OTAs, the Giants lost projected starting DL Roy Robertson-Harris for the season to a torn Achilles, a blow to New York's rebuilt defensive line after Dexter Lawrence II was traded to Cincinnati in April."
-    },
-    {
-      "cat": "NCAA CFB",
-      "headline": "LSU CLAIMS TOP PORTAL CLASS WITH LEAVITT, SEATON, UMANMIELEN AMONG 8 TOP-100 ADDS",
-      "body": "As the 2026 portal window closes, LSU leads every ranking with QB Sam Leavitt (Arizona State), OT Jordan Seaton (Colorado), and edge Princewill Umanmielen (Ole Miss) among eight top-100 additions under Lane Kiffin. Washington begins official visits June 5, targeting 4-star safety Jayden Walk-Green (Corona Centennial HS, CA) among others."
+      "headline": "U.S. STRIKES IRAN MILITARY SITES AS HORMUZ CEASEFIRE DEAL REACHES DRAFT STAGE",
+      "body": "The U.S. carried out new airstrikes in southern Iran targeting sites threatening Strait of Hormuz maritime traffic, while U.S. and Iranian negotiators simultaneously finalized a draft framework to extend the ceasefire and gradually reopen the strait. Trump and Khamenei have not yet given final approval. WTI bounced to ~$90 on the strike news after falling 10%+ since May 18 on deal optimism."
     },
     {
       "cat": "MCBB",
-      "headline": "FLORIDA TOPS WAY-TOO-EARLY 2026-27 POLLS AS NBA EARLY-ENTRY DEADLINE CLOSES TODAY",
-      "body": "With today's NBA early-entry withdrawal deadline (May 27) finalizing college rosters, Florida sits No. 1 in early 2026-27 projections after retaining Thomas Haugh, Alex Condon, and Rueben Chinyelu — the same frontcourt that won a title two seasons ago. The 2026-27 championship game is set for Ford Field in Detroit on April 5, 2027."
+      "headline": "MICHIGAN WINS 2026 NCAA TITLE; PROGRAMS REBUILD ROSTERS THROUGH TRANSFER PORTAL",
+      "body": "The Michigan Wolverines claimed their second national championship on April 6, capping the 2026 season. With the portal now mostly closed (3,662 players entered; 76% committed), programs are finalizing lineups for 2026-27. Washington has filled 12 of 15 roster spots, including commitments from 3-star SF Lattimore Ford and Brazilian pro Wini Braga."
+    },
+    {
+      "cat": "NBA",
+      "headline": "OKC LEADS SPURS 3-2, GAME 6 TONIGHT; KNICKS SWEEP CAVS TO REACH FIRST FINALS SINCE 1999",
+      "body": "The Western Conference Finals continue tonight at 8:30 PM ET on NBC/Peacock as OKC hosts San Antonio in a potential closeout Game 6 (Spurs can force Game 7 on Saturday). In the East, the New York Knicks swept the Cleveland Cavaliers to clinch their first NBA Finals appearance since 1999. The Finals begin June 3."
+    },
+    {
+      "cat": "NFL",
+      "headline": "PACKERS RB JOSH JACOBS ARRESTED ON DOMESTIC ABUSE CHARGES DURING OTA WEEK",
+      "body": "Green Bay Packers running back Josh Jacobs was arrested Tuesday on five charges including domestic abuse battery, strangulation/suffocation, and intimidation of a victim. The Packers head coach deferred to the team's statement and said they will 'let the process play out.' Elsewhere, Raiders TE Brock Bowers declared himself 100% healthy after a knee injury limited him to 12 games in 2025."
+    },
+    {
+      "cat": "NCAA CFB",
+      "headline": "TEXAS TECH QB SORSBY ENTERS TREATMENT FOR GAMBLING ADDICTION; TRANSFER PORTAL CLOSES",
+      "body": "Texas Tech QB Brendan Sorsby — rated the No. 2 overall prospect in the 2026 transfer portal — took an indefinite leave to enter a residential treatment facility for a gambling addiction. In other portal news, Sam Leavitt (Arizona State QB who helped lead the team to the CFP) committed to LSU, joining OT Jordan Seaton (Colorado → LSU) in Lane Kiffin's major portal haul."
     }
   ],
   "sports": [
     {
       "team": "DETROIT PISTONS",
-      "pill": "L 94-125",
+      "pill": "ELIM R2",
       "pillClass": "s-l",
-      "detail": "Eliminated in East Semis, Game 7 blowout vs. CLE. Jalen Duren ($41M/yr max) free agent decision headlines the offseason."
+      "detail": "Season ended in Game 7 loss to Cavaliers (94-125). Offseason begins; targeting DeAndre Ayton in free agency per reports."
     },
     {
       "team": "SEATTLE MARINERS",
-      "pill": "vs. OAK",
+      "pill": "OFF DAY",
       "pillClass": "s-up",
-      "detail": "Game 3 vs. Athletics at Sutter Health Park today (3:05 PM PT, result pending). Won 4-1 on Tue. Record ~27-29. Series Game 4 Thu May 28."
+      "detail": "Beat Oakland 4-1 on May 27. 3-game series vs. Diamondbacks begins Friday at T-Mobile Park (7:10 PM PT)."
     },
     {
       "team": "SEATTLE SEAHAWKS",
-      "pill": "SB LX Champs",
+      "pill": "SB CHAMPS",
       "pillClass": "s-w",
-      "detail": "Defending champions. OTAs underway; signed S Bud Clark, 7/8 draft picks under contract. Mourning former captain Charle Young. Open Sept 9 vs. NE."
+      "detail": "Super Bowl LX champs in OTAs. 2026 schedule out: 6 primetime games, Wednesday night home opener Sept. 9 at Lumen Field."
     },
     {
       "team": "WASHINGTON HUSKIES FOOTBALL",
       "pill": "OFFSEASON",
       "pillClass": "s-up",
-      "detail": "Official visits begin June 5, incl. 4-star S Jayden Walk-Green. Landed in-state 4-star DL May 23. Season opener Sept 5 vs. WSU."
+      "detail": "Spring game wrapped (Purple 27-10 Gold). 2026 schedule features USC, Penn State, Nebraska, Oregon. Recruiting visits underway."
     },
     {
       "team": "WASHINGTON HUSKIES BASKETBALL",
       "pill": "OFFSEASON",
       "pillClass": "s-up",
-      "detail": "Transfers added from Texas Tech and San Francisco for 2026-27. Dawg Pack season tickets on sale. Season tips Nov 1, 2026."
+      "detail": "Building 2026-27 roster (12 of 15 spots filled). Committed 3-star SF Lattimore Ford and Brazilian pro Wini Braga for fall."
     }
   ],
   "watchlist": [
-    "Thunder vs. Spurs Game 6 — Thu May 28; OKC leads 3-2; winner faces Knicks in NBA Finals June 3",
-    "Iran nuclear deal — White House contradicted today's draft; WTI highly reactive to any update",
-    "SpaceX IPO (SPCX) — June 12 Nasdaq debut; $1.75T target valuation; book oversubscribed",
-    "Mariners vs. Athletics Game 4 — Thu May 28 at Sacramento; series ongoing",
-    "NBA early-entry withdrawal deadline — today May 27; 2026-27 college rosters now set"
+    "OKC vs. Spurs Game 6 tonight — 8:30 PM ET on NBC/Peacock (Thunder can close WCF; Spurs can force Game 7 Saturday)",
+    "Iran ceasefire deal — Trump and Khamenei yet to approve Hormuz draft; WTI could fall to $72-75 on agreement",
+    "Fed June meeting — PCE at 3.8%; FedWatch prices 98.8% hold; no cuts likely until Hormuz resolves and energy deflates",
+    "Mariners at Diamondbacks — 3-game series starts Friday May 29, 7:10 PM PT at T-Mobile Park"
   ],
   "deepDive": {
-    "title": "The Strait of Hormuz as a pricing mechanism — how Iran's return reshapes global crude",
+    "title": "How the Strait of Hormuz Keeps the Fed Frozen",
     "content": [
-      "Today's sharpest market move wasn't in equities — it was crude oil, which briefly fell below $90 on hopes of a U.S.-Iran nuclear deal before snapping back to $91 when the White House rejected key terms. The Strait of Hormuz, the 21-mile-wide chokepoint between the Persian Gulf and the Gulf of Oman, sits at the center of this volatility. Understanding how dramatically Iranian re-entry would shift global supply requires understanding exactly how much volume moves through it, and what happens to that volume when Iran is constrained.",
-      "The Strait handles roughly 20–21 million barrels of oil per day — approximately 20% of global petroleum liquids. Iran's pre-sanctions production capacity was about 3.8 million bbl/day; under the current sanctions regime, actual exports run closer to 1.3–1.5 million bbl/day. The gap has been absorbed by Saudi Arabia, UAE, and Iraq quietly expanding output to compensate. A deal that lifts sanctions would allow Iran to ramp exports within 3–6 months, adding roughly 1.5–2 million bbl/day to global supply. That incremental volume is equivalent to bringing a mid-tier OPEC producer from zero to full capacity — not a marginal adjustment, but a structural supply shift.",
-      "What most people miss is that the Iran story reshapes every other OPEC+ member's incentives simultaneously. When Iran was cut off, Saudi Arabia and the UAE captured market share and built leverage within the cartel. Bringing Iran back means they must either cut their own production to defend price, or accept a lower equilibrium — which strains cartel unity. The sharpest historical contrast is the September 2019 Abqaiq drone strike: a 5.7-million-bbl/day production disruption — roughly half of Saudi output — sent WTI up nearly 15% in a single session before recovering as spare capacity was deployed. Iran's return would apply comparable-magnitude downward pressure, but sustained over months rather than days, and with no offsetting demand shock to cushion it.",
-      "At today's WTI of $91, the market is embedding roughly a 50–60% deal probability, based on back-of-envelope math: Brent was around $95 before Iran talks began, and the market is pricing about half of the expected $8–10/barrel supply discount from Iranian re-entry. If a deal closes, most sell-side models cluster around $72–78 WTI equilibrium by Q4 2026. That lower-oil scenario matters well beyond energy stocks: a 1-million-bbl/day increase in Iranian supply historically reduces U.S. headline CPI by approximately 15–20 basis points over six months. Cheaper oil expands consumer purchasing power, reduces headline inflation, and gives the Fed more room to cut — which compresses discount rates and benefits rate-sensitive sectors like utilities, REITs, and long-duration technology."
+      "Today's PCE print — 3.8% year-over-year, the highest since May 2023 — landed with an important qualifier: the inflation wasn't broad-based. Gasoline surged 5.5% in April alone, driving goods prices up 0.7% while core PCE (excluding food and energy) came in at a still-elevated 3.3%. The engine behind that gasoline spike is a geography problem. Since late February, Iran has effectively blocked the Strait of Hormuz — the 33-mile-wide chokepoint through which roughly 20% of the world's seaborne oil supply flows. Until that changes, the Fed's rate path is essentially held hostage to a geopolitical negotiation.",
+      "Here's how oil reaches your PCE basket. Gasoline accounts for roughly 3.5% of the headline PCE weight. A 5.5% monthly surge in that sub-index adds approximately 0.19 percentage points to the monthly headline PCE reading — nearly half of the total 0.4% monthly gain. Beyond direct energy, oil flows into the cost of transporting goods, heating commercial space, and manufacturing inputs, creating secondary pressure across the basket. PCE's chain-weighting continuously adjusts for consumer substitution (shifting to cheaper fuel grades, carpooling), but it can't avoid the shock when all energy grades spike simultaneously, as they did in April.",
+      "The Federal Reserve's clearest precedent is the 1973-74 oil embargo. When OPEC cut exports, the Fed initially held back, treating energy inflation as a supply-side problem outside its mandate. Headline CPI surged past 12%, wages followed, and the Fed was forced into a brutal tightening cycle regardless. In 2022, facing Ukraine-driven energy inflation, the Fed moved early and aggressively to break the cycle before second-round wage effects set in — and it worked. Today, core PCE at 3.3% remains well above the 2% target, and CME FedWatch now prices just a 0.6% probability of any rate cut at the June meeting.",
+      "What makes the Hormuz situation analytically interesting is how directly a peace deal would show up in the numbers. If Trump and Khamenei approve the current draft ceasefire — which reportedly includes phased Strait reopening — WTI would likely fall toward $72-75 based on pre-crisis supply-demand models. At that price, the gasoline PCE sub-index would reverse 3-4 months of gains. Within two monthly PCE readings, headline inflation could mechanically drop 0.4-0.5 percentage points, bringing the annual rate closer to 3.3-3.4%. That's the single most powerful catalyst for a 2026 rate cut: not a GDP print, not a jobs number, but a ceasefire agreement. Watch the diplomacy as closely as the economic calendar."
     ]
   }
 }
