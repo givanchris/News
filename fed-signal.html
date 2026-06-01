@@ -714,6 +714,102 @@
       border: 1px dashed var(--border);
     }
 
+    /* ════════════ TAGS ════════════ */
+    .tag-row { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 1.75rem; }
+    .tag {
+      font-family: 'JetBrains Mono', monospace; font-size: 0.62rem; letter-spacing: 0.06em;
+      text-transform: uppercase; padding: 0.28rem 0.65rem;
+      border: 1px solid rgba(255,255,255,0.18); color: rgba(255,255,255,0.7);
+      background: rgba(255,255,255,0.03);
+    }
+    .tag.t-macro { color: var(--blue2); border-color: rgba(46,116,232,0.4); }
+    .tag.t-rates { color: #3ec97a; border-color: rgba(62,201,122,0.4); }
+
+    /* ════════════ VISUAL OUTPUT (chart cards) ════════════ */
+    .viz-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
+    .viz-card { background: var(--white); border: 1px solid var(--border); display: flex; flex-direction: column; }
+    .viz-card.wide { grid-column: 1 / -1; }
+    .viz-card-head {
+      padding: 1.15rem 1.35rem; border-bottom: 1px solid var(--border);
+      display: flex; align-items: baseline; justify-content: space-between; gap: 1rem;
+    }
+    .viz-card-title {
+      font-family: 'Barlow Condensed', sans-serif; font-size: 1.2rem; font-weight: 800;
+      text-transform: uppercase; color: var(--navy); letter-spacing: 0.01em; line-height: 1;
+    }
+    .viz-card-tag {
+      font-family: 'JetBrains Mono', monospace; font-size: 0.55rem; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--blue); white-space: nowrap;
+    }
+    .viz-figure { padding: 1.1rem 1.35rem 0.5rem; }
+    .viz-note { font-size: 0.84rem; color: var(--muted); line-height: 1.65; padding: 0.5rem 1.35rem 1.4rem; }
+    .viz-note strong { color: var(--navy); font-weight: 600; }
+    .illus-flag {
+      font-family: 'JetBrains Mono', monospace; font-size: 0.5rem; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--amber); background: var(--amber-lt);
+      border: 1px solid rgba(160,90,0,0.3); padding: 0.12rem 0.4rem;
+    }
+
+    /* statement comparison (diff) */
+    .cmp-card { grid-column: 1 / -1; background: var(--white); border: 1px solid var(--border); }
+    .cmp-head {
+      padding: 1.15rem 1.35rem; border-bottom: 1px solid var(--border);
+      display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; flex-wrap: wrap;
+    }
+    .cmp-cols { display: grid; grid-template-columns: 1fr 1fr; }
+    .cmp-col { padding: 1.5rem 1.35rem; }
+    .cmp-col + .cmp-col { border-left: 1px solid var(--border); }
+    .cmp-meta {
+      display: flex; align-items: center; gap: 0.6rem; margin-bottom: 1rem;
+      padding-bottom: 0.85rem; border-bottom: 1px dashed var(--border);
+    }
+    .cmp-date {
+      font-family: 'Barlow Condensed', sans-serif; font-size: 1.15rem; font-weight: 800;
+      text-transform: uppercase; color: var(--navy);
+    }
+    .cmp-line { font-size: 0.88rem; line-height: 1.7; color: var(--text); margin-bottom: 0.7rem; }
+    .cmp-line .ins { background: var(--green-lt); color: var(--green); padding: 0.05rem 0.2rem; font-weight: 500; }
+    .cmp-line .chg { background: var(--blue-lt); color: var(--blue); padding: 0.05rem 0.2rem; font-weight: 500; }
+    .cmp-line .del { background: var(--red-lt); color: var(--red); text-decoration: line-through; padding: 0.05rem 0.2rem; }
+    .cmp-legend {
+      display: flex; gap: 1rem; flex-wrap: wrap;
+      font-family: 'JetBrains Mono', monospace; font-size: 0.58rem; letter-spacing: 0.05em; color: var(--muted);
+    }
+    .cmp-legend span::before { content: '■ '; }
+    .cmp-legend .l-add::before { color: var(--green); }
+    .cmp-legend .l-chg::before { color: var(--blue); }
+    .cmp-legend .l-del::before { color: var(--red); }
+
+    /* ════════════ HOW IT WORKS ════════════ */
+    .howto { border: 1px solid var(--border); background: var(--white); margin-top: 1.5rem; }
+    .howto > summary {
+      cursor: pointer; list-style: none; padding: 1.3rem 1.5rem;
+      font-family: 'Barlow Condensed', sans-serif; font-size: 1.35rem; font-weight: 800;
+      text-transform: uppercase; color: var(--navy); letter-spacing: 0.01em;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .howto > summary::-webkit-details-marker { display: none; }
+    .howto > summary .chev { font-family: 'JetBrains Mono', monospace; font-size: 0.9rem; color: var(--blue); transition: transform 0.2s ease; }
+    .howto[open] > summary { border-bottom: 1px solid var(--border); }
+    .howto[open] > summary .chev { transform: rotate(45deg); }
+    .howto-body { padding: 1.75rem 1.5rem; display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.75rem 2.5rem; }
+    .howto-group h4 {
+      font-family: 'JetBrains Mono', monospace; font-size: 0.6rem; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--blue); margin-bottom: 0.75rem;
+      padding-bottom: 0.5rem; border-bottom: 1px solid var(--border);
+    }
+    .howto-group ul { list-style: none; }
+    .howto-group li { font-size: 0.86rem; color: var(--muted); line-height: 1.6; padding: 0.35rem 0 0.35rem 1rem; position: relative; }
+    .howto-group li::before { content: '–'; position: absolute; left: 0; color: var(--blue); }
+    .howto-group p { font-size: 0.86rem; color: var(--muted); line-height: 1.7; }
+
+    @media (max-width: 760px) {
+      .viz-grid { grid-template-columns: 1fr; }
+      .cmp-cols { grid-template-columns: 1fr; }
+      .cmp-col + .cmp-col { border-left: none; border-top: 1px solid var(--border); }
+      .howto-body { grid-template-columns: 1fr; gap: 1.5rem; }
+    }
+
     /* ── RESPONSIVE ── */
     @media (max-width: 900px) {
       nav { padding: 0 1.25rem; }
@@ -770,6 +866,13 @@
       A structured log of <strong>FOMC statement language shifts</strong>, paired with the policy decisions that followed and the <strong>Treasury-market reaction</strong> that priced them. The goal is to isolate which specific phrases — inserted, removed, or changed — carry genuine predictive weight, and which are noise.
     </p>
 
+    <div class="tag-row">
+      <span class="tag t-macro">Macro</span>
+      <span class="tag t-rates">Rates</span>
+      <span class="tag">Monetary Policy</span>
+      <span class="tag">Yield Curve</span>
+    </div>
+
     <div class="fed-kpis">
       <div class="kpi">
         <div class="kpi-label">// Meetings Tracked</div>
@@ -794,6 +897,136 @@
     </div>
   </div>
 </header>
+
+<!-- ════════════════════════════════════════════════════════════
+     VISUAL OUTPUT  —  curve, implied path, statement diff
+     ════════════════════════════════════════════════════════════ -->
+<section class="section-off" id="visual-output">
+  <div class="inner">
+    <div class="section-eyebrow">Visual Output</div>
+    <h2 class="section-heading">THE MARKET CONTEXT</h2>
+    <p style="font-size:0.95rem;color:var(--muted);line-height:1.75;max-width:700px;margin-bottom:2rem;">
+      The reaction data in the log only means something against the curve and the path the market is
+      pricing. <span class="illus-flag">Representative levels · current hold cycle</span>
+    </p>
+
+    <div class="viz-grid">
+
+      <!-- Yield curve -->
+      <div class="viz-card">
+        <div class="viz-card-head">
+          <span class="viz-card-title">Treasury Yield Curve</span>
+          <span class="viz-card-tag">Now vs 6M ago</span>
+        </div>
+        <div class="viz-figure">
+          <img src="charts/yield_curve.svg" alt="US Treasury par yield curve now versus six months ago, front end lower as cuts are delivered" loading="lazy" style="width:100%;height:auto;display:block" />
+        </div>
+        <p class="viz-note">
+          The front end has fallen as the Fed delivered cuts into the <strong>3.50–3.75%</strong> range, while
+          the long end held — leaving the <strong>2s10s positively sloped (+46bp)</strong> after a long inversion.
+        </p>
+      </div>
+
+      <!-- Implied cut path -->
+      <div class="viz-card">
+        <div class="viz-card-head">
+          <span class="viz-card-title">Implied Cut Probabilities</span>
+          <span class="viz-card-tag">By meeting</span>
+        </div>
+        <div class="viz-figure">
+          <img src="charts/fed_path.svg" alt="Bar chart of market-implied probability of a rate cut by each upcoming FOMC meeting, rising into 2027" loading="lazy" style="width:100%;height:auto;display:block" />
+        </div>
+        <p class="viz-note">
+          Futures-implied odds of a cut <strong>by</strong> each meeting. The market leans toward
+          patience near term and a higher cut probability into <strong>year-end and early 2027</strong>.
+        </p>
+      </div>
+
+      <!-- FOMC statement comparison (diff) -->
+      <div class="cmp-card">
+        <div class="cmp-head">
+          <span class="viz-card-title">FOMC Statement Comparison</span>
+          <div class="cmp-legend">
+            <span class="l-add">Added</span>
+            <span class="l-chg">Changed</span>
+            <span class="l-del">Removed</span>
+          </div>
+        </div>
+        <div class="cmp-cols">
+          <div class="cmp-col">
+            <div class="cmp-meta">
+              <span class="cmp-date">Dec 10, 2025</span>
+              <span class="stance dovish">dovish</span>
+              <span class="decision-cell cut">−25 bp</span>
+            </div>
+            <p class="cmp-line">
+              Cut delivered, but the statement <span class="ins">noted reserve balances have declined to ample levels</span> and began
+              <span class="ins">initiating purchases of shorter-term Treasury securities to maintain adequate reserves</span> — a technical, not dovish, signal.
+            </p>
+            <p class="cmp-line" style="color:var(--muted);font-size:0.82rem;">
+              The dot plot turned hawkish: 2026 median revised to one cut from four. Three dissents.
+            </p>
+          </div>
+          <div class="cmp-col">
+            <div class="cmp-meta">
+              <span class="cmp-date">Mar 18, 2026</span>
+              <span class="stance hawkish">hawkish</span>
+              <span class="decision-cell hold">Hold</span>
+            </div>
+            <p class="cmp-line">
+              First explicit risk language: <span class="ins">the implications of developments in the Middle East for the U.S. economy are uncertain</span>.
+              Labor read shifted — <span class="del">unemployment has shown signs of stabilization</span> <span class="chg">→ has been little changed</span>.
+            </p>
+            <p class="cmp-line" style="color:var(--muted);font-size:0.82rem;">
+              Hot PPI (+0.7% vs 0.3% exp.) drove a bear-flattening yield spike the same day.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- HOW IT WORKS -->
+    <details class="howto" id="how-it-works">
+      <summary>How it works <span class="chev">+</span></summary>
+      <div class="howto-body">
+        <div class="howto-group">
+          <h4>// Data Sources</h4>
+          <ul>
+            <li>FOMC statement archive (federalreserve.gov), read side-by-side</li>
+            <li>Same-day yield moves from the <strong>Treasury.gov H.15</strong> series</li>
+            <li>Decisions, target ranges, SEP dots, and dissents logged by hand</li>
+          </ul>
+        </div>
+        <div class="howto-group">
+          <h4>// Methodology</h4>
+          <ul>
+            <li>Each statement diffed against the prior: phrases tagged added / removed / changed / retained</li>
+            <li>Stance reflects the <strong>statement + SEP composite</strong>, not just the decision</li>
+            <li>Yield reaction measured 2pm statement → 3pm close (2Y, 10Y, 2s10s)</li>
+            <li>Phrases ranked by how consistently they preceded the next move</li>
+          </ul>
+        </div>
+        <div class="howto-group">
+          <h4>// Assumptions</h4>
+          <ul>
+            <li>Same-day move attributes the reaction to the statement (not later data)</li>
+            <li>Curated inflection meetings, not every meeting in the cycle</li>
+            <li>Implied-probability and curve figures here are representative, not a live feed</li>
+          </ul>
+        </div>
+        <div class="howto-group">
+          <h4>// Limitations</h4>
+          <p>
+            Language analysis is interpretive, and small samples mean "predictive" phrases are
+            suggestive, not statistically proven. The intraday window can capture coincident data
+            surprises. This is a <strong>research log</strong>, curated by hand — not an automated signal.
+          </p>
+        </div>
+      </div>
+    </details>
+  </div>
+</section>
 
 <!-- MEETINGS TABLE -->
 <section class="section-white" id="meetings">

@@ -734,6 +734,82 @@
     ::-webkit-scrollbar { width: 5px; }
     ::-webkit-scrollbar-track { background: var(--white); }
     ::-webkit-scrollbar-thumb { background: var(--border); }
+
+    /* ════════════ TAGS (light header) ════════════ */
+    .tag-row { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 1.5rem; }
+    .tag {
+      font-family: 'JetBrains Mono', monospace; font-size: 0.62rem; letter-spacing: 0.06em;
+      text-transform: uppercase; padding: 0.28rem 0.65rem;
+      border: 1px solid var(--border); color: var(--muted); background: var(--white);
+    }
+    .tag.t-options    { color: #7a3ec9; border-color: rgba(122,62,201,0.35); }
+    .tag.t-volatility { color: var(--red); border-color: rgba(191,50,50,0.3); }
+    .tag.t-equities   { color: var(--navy); }
+
+    /* ════════════ VISUAL OUTPUT (chart cards) ════════════ */
+    .viz-section { background: var(--off); padding: 4.5rem 3rem; border-top: 1px solid var(--border); }
+    .viz-inner { max-width: 1240px; margin: 0 auto; }
+    .viz-eyebrow {
+      font-family: 'JetBrains Mono', monospace; font-size: 0.62rem; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--blue); display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.65rem;
+    }
+    .viz-eyebrow::after { content: ''; width: 32px; height: 1px; background: var(--border); }
+    .viz-heading {
+      font-family: 'Barlow Condensed', sans-serif; font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 800; text-transform: uppercase; color: var(--navy); line-height: 0.95; margin-bottom: 0.75rem;
+    }
+    .viz-intro { font-size: 0.95rem; color: var(--muted); line-height: 1.75; max-width: 700px; margin-bottom: 2.5rem; }
+    .viz-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
+    .viz-card { background: var(--white); border: 1px solid var(--border); display: flex; flex-direction: column; }
+    .viz-card-head {
+      padding: 1.15rem 1.35rem; border-bottom: 1px solid var(--border);
+      display: flex; align-items: baseline; justify-content: space-between; gap: 1rem;
+    }
+    .viz-card-title {
+      font-family: 'Barlow Condensed', sans-serif; font-size: 1.2rem; font-weight: 800;
+      text-transform: uppercase; color: var(--navy); letter-spacing: 0.01em; line-height: 1;
+    }
+    .viz-card-tag {
+      font-family: 'JetBrains Mono', monospace; font-size: 0.55rem; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--blue); white-space: nowrap;
+    }
+    .viz-figure { padding: 1.1rem 1.35rem 0.5rem; }
+    .viz-note { font-size: 0.84rem; color: var(--muted); line-height: 1.65; padding: 0.5rem 1.35rem 1.4rem; }
+    .viz-note strong { color: var(--navy); font-weight: 600; }
+    .illus-flag {
+      font-family: 'JetBrains Mono', monospace; font-size: 0.5rem; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--amber); background: var(--amber-lt);
+      border: 1px solid rgba(160,90,0,0.3); padding: 0.12rem 0.4rem;
+    }
+
+    /* ════════════ HOW IT WORKS ════════════ */
+    .howto { border: 1px solid var(--border); background: var(--white); margin-top: 1.5rem; }
+    .howto > summary {
+      cursor: pointer; list-style: none; padding: 1.3rem 1.5rem;
+      font-family: 'Barlow Condensed', sans-serif; font-size: 1.35rem; font-weight: 800;
+      text-transform: uppercase; color: var(--navy); letter-spacing: 0.01em;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .howto > summary::-webkit-details-marker { display: none; }
+    .howto > summary .chev { font-family: 'JetBrains Mono', monospace; font-size: 0.9rem; color: var(--blue); transition: transform 0.2s ease; }
+    .howto[open] > summary { border-bottom: 1px solid var(--border); }
+    .howto[open] > summary .chev { transform: rotate(45deg); }
+    .howto-body { padding: 1.75rem 1.5rem; display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.75rem 2.5rem; }
+    .howto-group h4 {
+      font-family: 'JetBrains Mono', monospace; font-size: 0.6rem; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--blue); margin-bottom: 0.75rem;
+      padding-bottom: 0.5rem; border-bottom: 1px solid var(--border);
+    }
+    .howto-group ul { list-style: none; }
+    .howto-group li { font-size: 0.86rem; color: var(--muted); line-height: 1.6; padding: 0.35rem 0 0.35rem 1rem; position: relative; }
+    .howto-group li::before { content: '–'; position: absolute; left: 0; color: var(--blue); }
+    .howto-group p { font-size: 0.86rem; color: var(--muted); line-height: 1.7; }
+
+    @media (max-width: 760px) {
+      .viz-section { padding: 3.5rem 1.5rem; }
+      .viz-grid { grid-template-columns: 1fr; }
+      .howto-body { grid-template-columns: 1fr; gap: 1.5rem; }
+    }
   </style>
 </head>
 <body>
@@ -761,6 +837,12 @@
       A derivatives-focused read on market positioning. Put/call ratios, implied volatility, skew, and unusual flow
       — synthesized into a single sentiment label per ticker. Sector heatmap and VIX term structure provide market-wide context.
     </p>
+    <div class="tag-row">
+      <span class="tag t-options">Options</span>
+      <span class="tag t-volatility">Volatility</span>
+      <span class="tag t-equities">Equities</span>
+      <span class="tag">Sentiment</span>
+    </div>
     <div class="ph-meta">
       <span>As of <strong id="meta-asof">—</strong></span>
       <span>Last loaded <strong id="meta-ago">—</strong></span>
@@ -961,6 +1043,95 @@
       </div>
     </div>
 
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════════
+     VISUAL OUTPUT  —  positioning charts the dashboard distills
+     ════════════════════════════════════════════════════════════ -->
+<section class="viz-section" id="visual-output">
+  <div class="viz-inner">
+    <div class="viz-eyebrow">Visual Output</div>
+    <h2 class="viz-heading">Reading the Positioning</h2>
+    <p class="viz-intro">
+      The live dashboard above distills these views into a single label. The two charts that do most
+      of the work: where sentiment sits, and where dealers are forced to trade.
+      <span class="illus-flag">Illustrative snapshot</span>
+    </p>
+
+    <div class="viz-grid">
+
+      <!-- Put / Call -->
+      <div class="viz-card">
+        <div class="viz-card-head">
+          <span class="viz-card-title">Put / Call Ratio</span>
+          <span class="viz-card-tag">22 sessions</span>
+        </div>
+        <div class="viz-figure">
+          <img src="charts/put_call.svg" alt="Equity put to call ratio over 22 sessions oscillating around the 1.0 fear line" loading="lazy" style="width:100%;height:auto;display:block" />
+        </div>
+        <p class="viz-note">
+          A contrarian gauge. Readings pushing <strong>above 1.0</strong> mark hedging/fear spikes that often
+          precede relief; persistent lows flag complacency. The series currently sits in <strong>neutral-to-greedy</strong> territory.
+        </p>
+      </div>
+
+      <!-- Gamma exposure -->
+      <div class="viz-card">
+        <div class="viz-card-head">
+          <span class="viz-card-title">Dealer Gamma Exposure</span>
+          <span class="viz-card-tag">By strike</span>
+        </div>
+        <div class="viz-figure">
+          <img src="charts/gamma.svg" alt="Dealer gamma exposure by strike, negative below spot and positive above, with a gamma flip near 565" loading="lazy" style="width:100%;height:auto;display:block" />
+        </div>
+        <p class="viz-note">
+          Below the <strong>gamma flip (~565)</strong> dealers are short gamma — hedging amplifies moves and
+          volatility feeds on itself. Above it, hedging dampens moves. The flip is the level that matters.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- HOW IT WORKS -->
+    <details class="howto" id="how-it-works">
+      <summary>How it works <span class="chev">+</span></summary>
+      <div class="howto-body">
+        <div class="howto-group">
+          <h4>// Data Sources</h4>
+          <ul>
+            <li>Option chains &amp; quotes via <strong>yfinance</strong>, refreshed weekdays 4:30 PM MT</li>
+            <li>Per-ticker put/call (volume &amp; OI), IV, IV rank/percentile, skew</li>
+            <li>VIX term structure and sector ETF breadth for market context</li>
+          </ul>
+        </div>
+        <div class="howto-group">
+          <h4>// Methodology</h4>
+          <ul>
+            <li>Metrics normalized to <strong>rank/percentile</strong> so tickers are comparable</li>
+            <li>Weighted blend of P/C, IV rank, skew, and unusual volume → one sentiment score</li>
+            <li>Gamma exposure approximated from open interest and option gamma by strike</li>
+            <li>Score bucketed into a label: bullish / neutral / bearish</li>
+          </ul>
+        </div>
+        <div class="howto-group">
+          <h4>// Assumptions</h4>
+          <ul>
+            <li>End-of-day snapshot, not real-time streaming</li>
+            <li>Dealers assumed net short puts / long calls for the GEX sign convention</li>
+            <li>Skew measured at fixed deltas across the front expiries</li>
+          </ul>
+        </div>
+        <div class="howto-group">
+          <h4>// Limitations</h4>
+          <p>
+            Retail/free option data is noisy and can lag; GEX is an approximation without
+            dealer-position disclosure. Sentiment is a <strong>contrarian context tool</strong>, not a trade
+            signal — and the figures on this page are an illustrative snapshot, not live.
+          </p>
+        </div>
+      </div>
+    </details>
   </div>
 </section>
 

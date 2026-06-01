@@ -409,6 +409,124 @@
       letter-spacing: 0.06em;
     }
 
+    /* ════════════════════════════════════════════════════════
+       TAGS  (domain chips, reused on hero + cards)
+       ════════════════════════════════════════════════════════ */
+    .tag-row { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 1.75rem; }
+    .tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.62rem; letter-spacing: 0.06em; text-transform: uppercase;
+      padding: 0.28rem 0.65rem; border: 1px solid rgba(255,255,255,0.18);
+      color: rgba(255,255,255,0.7); background: rgba(255,255,255,0.03);
+    }
+    .tag.on-light { border-color: var(--border); color: var(--muted); background: var(--white); }
+    .tag.t-quant      { color: #4fd1c5; border-color: rgba(79,209,197,0.4); }
+    .tag.t-equities   { color: rgba(255,255,255,0.85); }
+    .tag.t-rates      { color: #3ec97a; border-color: rgba(62,201,122,0.4); }
+
+    /* ════════════════════════════════════════════════════════
+       VISUAL OUTPUT  (chart cards)
+       ════════════════════════════════════════════════════════ */
+    .viz-section { background: var(--off); padding: 5rem 3rem; border-bottom: 1px solid var(--border); }
+    .viz-inner { max-width: 1200px; margin: 0 auto; }
+    .viz-eyebrow {
+      font-family: 'JetBrains Mono', monospace; font-size: 0.62rem;
+      letter-spacing: 0.12em; text-transform: uppercase; color: var(--blue);
+      display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.65rem;
+    }
+    .viz-eyebrow::after { content: ''; width: 32px; height: 1px; background: var(--border); }
+    .viz-heading {
+      font-family: 'Barlow Condensed', sans-serif; font-size: clamp(2rem, 4vw, 3.25rem);
+      font-weight: 800; text-transform: uppercase; color: var(--navy);
+      line-height: 0.95; margin-bottom: 0.75rem;
+    }
+    .viz-intro { font-size: 0.95rem; color: var(--muted); line-height: 1.75; max-width: 680px; margin-bottom: 2.5rem; }
+    .viz-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
+    .viz-card { background: var(--white); border: 1px solid var(--border); display: flex; flex-direction: column; }
+    .viz-card.wide { grid-column: 1 / -1; }
+    .viz-card-head {
+      padding: 1.15rem 1.35rem; border-bottom: 1px solid var(--border);
+      display: flex; align-items: baseline; justify-content: space-between; gap: 1rem;
+    }
+    .viz-card-title {
+      font-family: 'Barlow Condensed', sans-serif; font-size: 1.2rem; font-weight: 800;
+      text-transform: uppercase; color: var(--navy); letter-spacing: 0.01em; line-height: 1;
+    }
+    .viz-card-tag {
+      font-family: 'JetBrains Mono', monospace; font-size: 0.55rem; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--blue); white-space: nowrap;
+    }
+    .viz-figure { padding: 1.1rem 1.35rem 0.5rem; }
+    .viz-note {
+      font-size: 0.84rem; color: var(--muted); line-height: 1.65;
+      padding: 0.5rem 1.35rem 1.4rem;
+    }
+    .viz-note strong { color: var(--navy); font-weight: 600; }
+
+    /* placeholder ribbon for any illustrative figure */
+    .illus-flag {
+      font-family: 'JetBrains Mono', monospace; font-size: 0.5rem; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--amber); background: var(--amber-lt);
+      border: 1px solid rgba(160,90,0,0.3); padding: 0.12rem 0.4rem;
+    }
+
+    /* sample-read callout + download CTA */
+    .sample-read {
+      grid-column: 1 / -1; background: var(--navy); border: 1px solid var(--navy3);
+      padding: 2rem 2.25rem; display: grid; grid-template-columns: 1fr auto;
+      gap: 2rem; align-items: center;
+    }
+    .sample-read h3 {
+      font-family: 'Barlow Condensed', sans-serif; font-size: 1.5rem; font-weight: 800;
+      text-transform: uppercase; color: var(--white); margin-bottom: 0.6rem; line-height: 1.05;
+    }
+    .sample-read p { font-size: 0.88rem; color: rgba(255,255,255,0.6); line-height: 1.7; max-width: 640px; }
+    .sample-read p strong { color: rgba(255,255,255,0.92); font-weight: 600; }
+    .dl-btn {
+      font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; font-weight: 500;
+      letter-spacing: 0.07em; text-transform: uppercase; padding: 0.85rem 1.4rem;
+      background: var(--blue); color: var(--white); text-decoration: none;
+      white-space: nowrap; transition: background 0.15s; display: inline-block;
+    }
+    .dl-btn:hover { background: var(--blue2); }
+
+    /* ════════════════════════════════════════════════════════
+       HOW IT WORKS  (collapsible)
+       ════════════════════════════════════════════════════════ */
+    .howto { border: 1px solid var(--border); background: var(--white); margin-top: 1.25rem; }
+    .howto > summary {
+      cursor: pointer; list-style: none; padding: 1.3rem 1.5rem;
+      font-family: 'Barlow Condensed', sans-serif; font-size: 1.35rem; font-weight: 800;
+      text-transform: uppercase; color: var(--navy); letter-spacing: 0.01em;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .howto > summary::-webkit-details-marker { display: none; }
+    .howto > summary .chev {
+      font-family: 'JetBrains Mono', monospace; font-size: 0.9rem; color: var(--blue);
+      transition: transform 0.2s ease;
+    }
+    .howto[open] > summary { border-bottom: 1px solid var(--border); }
+    .howto[open] > summary .chev { transform: rotate(45deg); }
+    .howto-body { padding: 1.75rem 1.5rem; display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.75rem 2.5rem; }
+    .howto-group h4 {
+      font-family: 'JetBrains Mono', monospace; font-size: 0.6rem; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--blue); margin-bottom: 0.75rem;
+      padding-bottom: 0.5rem; border-bottom: 1px solid var(--border);
+    }
+    .howto-group ul { list-style: none; }
+    .howto-group li {
+      font-size: 0.86rem; color: var(--muted); line-height: 1.6;
+      padding: 0.35rem 0 0.35rem 1rem; position: relative;
+    }
+    .howto-group li::before { content: '–'; position: absolute; left: 0; color: var(--blue); }
+    .howto-group p { font-size: 0.86rem; color: var(--muted); line-height: 1.7; }
+
+    @media (max-width: 760px) {
+      .viz-grid { grid-template-columns: 1fr; }
+      .sample-read { grid-template-columns: 1fr; gap: 1.25rem; }
+      .howto-body { grid-template-columns: 1fr; gap: 1.5rem; }
+    }
+
     /* ── RESPONSIVE ── */
     @media (max-width: 1060px) {
       .lab-hero-body { grid-template-columns: 1fr; gap: 2.5rem; }
@@ -463,6 +581,13 @@
         <p class="lab-sub">
           A personal <strong>Monte Carlo portfolio simulator</strong> built in Streamlit. Runs 10,000 correlated GBM paths, fits a <strong>historical risk model</strong> via OLS on factor proxies, and produces an institutional-style <strong>PDF research note</strong> with drawdown analysis, stress tests, and factor exposure.
         </p>
+        <div class="tag-row">
+          <span class="tag t-quant">Quant</span>
+          <span class="tag t-equities">Equities</span>
+          <span class="tag t-rates">Rates</span>
+          <span class="tag">Monte Carlo</span>
+          <span class="tag">Risk</span>
+        </div>
       </div>
       <div class="lab-checklist">
         <div class="lab-check"><span class="lab-check-dot"></span>Correlated GBM simulation engine</div>
@@ -556,6 +681,125 @@
       </div>
 
     </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════════
+     VISUAL OUTPUT  —  the charts the model produces
+     ════════════════════════════════════════════════════════════ -->
+<section class="viz-section" id="visual-output">
+  <div class="viz-inner">
+    <div class="viz-eyebrow">Visual Output</div>
+    <h2 class="viz-heading">What the Model Produces</h2>
+    <p class="viz-intro">
+      A single run turns a book of positions into a distribution of outcomes. These are the core
+      figures from the research note — projection, downside, and the correlation structure that
+      drives both. <span class="illus-flag">Illustrative demo book</span>
+    </p>
+
+    <div class="viz-grid">
+
+      <!-- Monte Carlo fan (wide) -->
+      <div class="viz-card wide">
+        <div class="viz-card-head">
+          <span class="viz-card-title">Monte Carlo Projection</span>
+          <span class="viz-card-tag">10,000 paths · 5Y horizon</span>
+        </div>
+        <div class="viz-figure">
+          <img src="charts/monte_carlo.svg" alt="Monte Carlo fan chart projecting indexed portfolio value over five years, median path compounding to roughly 1.46x with p5–p95 bands" loading="lazy" style="width:100%;height:auto;display:block" />
+        </div>
+        <p class="viz-note">
+          Each path is an independent draw from the joint return distribution, built from a
+          <strong>Cholesky-decomposed covariance matrix</strong>. The cone widens with √time; the median
+          compounds to <strong>≈ 1.46×</strong>, but the p5 band is where the risk decision actually lives.
+        </p>
+      </div>
+
+      <!-- Drawdown -->
+      <div class="viz-card">
+        <div class="viz-card-head">
+          <span class="viz-card-title">Drawdown Curve</span>
+          <span class="viz-card-tag">Peak-to-trough</span>
+        </div>
+        <div class="viz-figure">
+          <img src="charts/drawdown.svg" alt="Underwater drawdown curve over a 60-month path with a worst drawdown of negative 22 percent" loading="lazy" style="width:100%;height:auto;display:block" />
+        </div>
+        <p class="viz-note">
+          The underwater curve tracks how far the book sits below its prior high at every point.
+          Worst observed drawdown on this path: <strong>−22%</strong>.
+        </p>
+      </div>
+
+      <!-- Correlation heatmap -->
+      <div class="viz-card">
+        <div class="viz-card-head">
+          <span class="viz-card-title">Correlation Matrix</span>
+          <span class="viz-card-tag">2Y daily returns</span>
+        </div>
+        <div class="viz-figure">
+          <img src="charts/correlation.svg" alt="Correlation heatmap across eight holdings showing tight equity clustering and negative bond correlation" loading="lazy" style="width:100%;height:auto;display:block" />
+        </div>
+        <p class="viz-note">
+          Pairwise return correlation drives diversification. Note the tight <strong>equity/semis cluster</strong>
+          and <strong>TLT's negative correlation</strong> — the hedge the simulation leans on in stress.
+        </p>
+      </div>
+
+      <!-- Sample read + download -->
+      <div class="sample-read">
+        <div>
+          <h3>Sample Output → Research Note</h3>
+          <p>
+            Every run is exported as a <strong>14-section institutional PDF</strong>: executive summary,
+            holdings P&amp;L, concentration (HHI / Gini), factor exposure, the Monte Carlo output above,
+            drawdown distribution, and stress tests. The download is a <strong>real generated report</strong>.
+          </p>
+        </div>
+        <a href="Assets/sample-analysis.pdf" target="_blank" rel="noopener" class="dl-btn">Download Sample Analysis ↓</a>
+      </div>
+
+    </div>
+
+    <!-- HOW IT WORKS -->
+    <details class="howto" id="how-it-works">
+      <summary>How it works <span class="chev">+</span></summary>
+      <div class="howto-body">
+        <div class="howto-group">
+          <h4>// Data Sources</h4>
+          <ul>
+            <li>2 years of daily prices via <strong>yfinance</strong> for each holding</li>
+            <li>Factor proxies: SPY (market), SMH (semis), URA (uranium/energy)</li>
+            <li>3-tier live price resolver with cached fallbacks</li>
+          </ul>
+        </div>
+        <div class="howto-group">
+          <h4>// Model Assumptions</h4>
+          <ul>
+            <li>Returns follow correlated <strong>geometric Brownian motion</strong></li>
+            <li>Drift &amp; volatility estimated from the trailing window (not forecast)</li>
+            <li>Covariance held constant over the horizon</li>
+            <li>No transaction costs, taxes, or intra-horizon rebalancing</li>
+          </ul>
+        </div>
+        <div class="howto-group">
+          <h4>// Methodology</h4>
+          <ul>
+            <li>OLS factor regression, <strong>Gram–Schmidt orthogonalized</strong></li>
+            <li>Cholesky decomposition of the covariance matrix for correlated draws</li>
+            <li>10,000 paths; percentiles taken across the terminal distribution</li>
+            <li>What-if rebalancer re-runs the full simulation on adjusted weights</li>
+          </ul>
+        </div>
+        <div class="howto-group">
+          <h4>// Limitations</h4>
+          <p>
+            GBM understates fat tails and assumes stable correlations — both break in a crisis,
+            exactly when they matter most. Estimates are backward-looking. This is a
+            <strong>research &amp; learning tool</strong>, not investment advice, and the demo book is illustrative.
+          </p>
+        </div>
+      </div>
+    </details>
   </div>
 </section>
 

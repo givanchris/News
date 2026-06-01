@@ -901,6 +901,212 @@
     ::-webkit-scrollbar-track { background: var(--white); }
     ::-webkit-scrollbar-thumb { background: var(--border); }
 
+    /* ════════════════════════════════════════════════════════
+       PROJECT CARDS  (visual cards w/ thumbnail + tags + hover)
+       ════════════════════════════════════════════════════════ */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+    .pcard {
+      display: flex;
+      flex-direction: column;
+      background: var(--white);
+      border: 1px solid var(--border);
+      text-decoration: none;
+      overflow: hidden;
+      transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+    }
+    .pcard:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 18px 40px -22px rgba(14,34,64,0.45);
+      border-color: var(--navy);
+    }
+    /* thumbnail (SVG mini-chart, 16:9) */
+    .pcard-thumb {
+      position: relative;
+      aspect-ratio: 16 / 9;
+      background: var(--navy);
+      overflow: hidden;
+    }
+    .pcard-thumb svg { transition: transform 0.4s ease; }
+    .pcard:hover .pcard-thumb svg { transform: scale(1.04); }
+    .pcard-status {
+      position: absolute;
+      top: 0.85rem; right: 0.85rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.52rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.18rem 0.45rem;
+      border: 1px solid rgba(255,255,255,0.18);
+      color: rgba(255,255,255,0.7);
+      background: rgba(255,255,255,0.04);
+    }
+    .pcard-status.live { color: #3ec97a; border-color: rgba(62,201,122,0.4); }
+    .pcard-status.wip  { color: #e8a030; border-color: rgba(232,160,48,0.4); }
+    .pcard-body { padding: 1.6rem 1.7rem 0.4rem; flex: 1; }
+    .pcard-cat {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 0.55rem;
+    }
+    .pcard-body h3 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.55rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--navy);
+      line-height: 1;
+      margin-bottom: 0.6rem;
+    }
+    .pcard-body p {
+      font-size: 0.88rem;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+    .pcard-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+      padding: 1.1rem 1.7rem 0;
+    }
+    .pcard-foot {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.2rem 1.7rem 1.4rem;
+      margin-top: 1rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.62rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .pcard-foot .arrow { color: var(--blue); transition: transform 0.22s ease; }
+    .pcard:hover .pcard-foot .arrow { transform: translateX(5px); }
+
+    /* tag colour accents by domain */
+    .tag.t-macro       { color: var(--blue);  border-color: rgba(26,95,212,0.35); }
+    .tag.t-rates       { color: var(--green); border-color: rgba(17,122,68,0.35); }
+    .tag.t-equities    { color: var(--navy);  border-color: var(--border); }
+    .tag.t-options     { color: #7a3ec9;      border-color: rgba(122,62,201,0.3); }
+    .tag.t-volatility  { color: var(--red);   border-color: rgba(191,50,50,0.3); }
+    .tag.t-quant       { color: #0a6b78;      border-color: rgba(10,107,120,0.3); }
+
+    /* ════════════════════════════════════════════════════════
+       SELECTED OUTPUT  (analytical-proof showcase)
+       ════════════════════════════════════════════════════════ */
+    .output-grid {
+      display: grid;
+      grid-template-columns: 1.35fr 1fr;
+      gap: 0;
+      border: 1px solid var(--navy3);
+      background: var(--navy2);
+    }
+    .output-chart {
+      padding: 1.75rem;
+      border-right: 1px solid var(--navy3);
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .output-chart .chart-frame {
+      background: var(--white);
+      border: 1px solid var(--navy3);
+      padding: 0.5rem 0.65rem;
+    }
+    .output-caption {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.06em;
+      color: rgba(255,255,255,0.4);
+      line-height: 1.5;
+    }
+    .output-read { padding: 2rem 2.25rem; display: flex; flex-direction: column; }
+    .output-read .o-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--blue2);
+      margin-bottom: 0.9rem;
+    }
+    .output-read h3 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.7rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--white);
+      line-height: 1.05;
+      margin-bottom: 1rem;
+    }
+    .output-read p {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.75;
+      margin-bottom: 0.85rem;
+    }
+    .output-read p strong { color: rgba(255,255,255,0.92); font-weight: 600; }
+    .output-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border-top: 1px solid var(--navy3);
+      margin-top: auto;
+      padding-top: 1.25rem;
+      gap: 0.5rem;
+    }
+    .output-stat .v {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.75rem;
+      font-weight: 800;
+      color: var(--white);
+      line-height: 1;
+    }
+    .output-stat .v.up   { color: #3ec97a; }
+    .output-stat .v.down { color: #e05a5a; }
+    .output-stat .l {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.55rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.4);
+      margin-top: 0.35rem;
+    }
+    .btn-blue { background: var(--blue); color: var(--white); }
+    .btn-blue:hover { background: var(--blue2); }
+    .btn-ghost-light { background: transparent; border: 1.5px solid var(--navy3); color: rgba(255,255,255,0.85); }
+    .btn-ghost-light:hover { border-color: var(--blue2); color: var(--white); }
+
+    /* ════════════════════════════════════════════════════════
+       RESPONSIVE  (homepage additions)
+       ════════════════════════════════════════════════════════ */
+    @media (max-width: 900px) {
+      nav { padding: 0 1.25rem; }
+      .nav-links { gap: 1.1rem; }
+      #hero { padding: 0 1.5rem; }
+      .hero-bottom { grid-template-columns: 1fr; gap: 1.75rem; }
+      .section-white, .section-off, .section-navy { padding: 4rem 1.5rem; }
+      .about-bento { grid-template-columns: 1fr; }
+      .about-photo-cell { grid-row: auto; min-height: 320px; }
+      .about-facts-cell { grid-template-columns: repeat(2, 1fr); gap: 1.25rem 0; }
+      .cards-grid { grid-template-columns: 1fr; }
+      .output-grid { grid-template-columns: 1fr; }
+      .output-chart { border-right: none; border-bottom: 1px solid var(--navy3); }
+      .resume-grid, .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      footer { padding: 1.25rem 1.5rem; flex-wrap: wrap; gap: 0.5rem; }
+    }
+    @media (max-width: 600px) {
+      .nav-links { display: none; }
+      .hero-name { font-size: 4rem; }
+      .about-facts-cell { grid-template-columns: 1fr; }
+      .output-stats { grid-template-columns: 1fr; gap: 0.85rem; }
+    }
+
     /* ── BRIEF META ── */
     .brief-updated {
       font-family: 'JetBrains Mono', monospace;
@@ -932,8 +1138,8 @@
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#projects">Projects</a></li>
+    <li><a href="#output">Output</a></li>
     <li><a href="brief.html">Brief</a></li>
-    <li><a href="options.html">Options</a></li>
     <li><a href="#resume">Resume</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
@@ -1022,37 +1228,164 @@
   </div>
 </section>
 
-<!-- PROJECTS -->
+<!-- ════════════════════════════════════════════════════════════
+     PROJECTS  —  visual cards (thumbnail + tags), top priority
+     ════════════════════════════════════════════════════════════ -->
 <div class="section-white" id="projects">
   <div class="inner">
     <div class="section-eyebrow">Projects</div>
-    <div class="section-heading" style="color:var(--navy);">WORK</div>
-    <div class="projects-grid">
+    <div class="section-heading" style="color:var(--navy);">SELECTED WORK</div>
+    <div class="cards-grid">
 
-      <a href="brief.html" class="project-card">
-        <div class="project-cat">Automation · Data</div>
-        <h3>Daily Brief Pipeline</h3>
-        <p>I built an automated nightly pipeline that pulls macro news, market closes, and sports scores into a structured JSON feed, rendered live on brief.html every evening at 7 PM MT.</p>
+      <!-- Portfolio Lab -->
+      <a href="portfolio-lab.html" class="pcard">
+        <div class="pcard-thumb">
+          <span class="pcard-status live">Live demo</span>
+          <svg viewBox="0 0 320 180" preserveAspectRatio="xMidYMid slice" style="width:100%;height:100%;display:block" aria-hidden="true">
+            <rect width="320" height="180" fill="#0e2240"/>
+            <path d="M 20 140 L 76 116 L 132 90 L 188 64 L 244 40 L 300 28 L 300 153 L 244 152 L 188 151 L 132 149 L 76 145 L 20 140 Z" fill="#2e74e8" opacity="0.22"/>
+            <path d="M 20 140 L 76 132 L 132 123 L 188 113 L 244 103 L 300 93" fill="none" stroke="#2e74e8" stroke-width="2.4"/>
+            <text x="20" y="28" font-family="'JetBrains Mono', monospace" font-size="10" letter-spacing="0.12em" fill="#2e74e8">QUANT · MONTE CARLO</text>
+          </svg>
+        </div>
+        <div class="pcard-body">
+          <div class="pcard-cat">Quantitative Finance · Python</div>
+          <h3>Portfolio Lab</h3>
+          <p>A Monte Carlo portfolio simulator: 10,000 correlated GBM paths, an OLS factor-risk model, a what-if rebalancer, and a 14-section institutional PDF research note.</p>
+        </div>
+        <div class="pcard-tags">
+          <span class="tag t-quant">Quant</span>
+          <span class="tag t-equities">Equities</span>
+          <span class="tag t-rates">Rates</span>
+        </div>
+        <div class="pcard-foot"><span>View project</span><span class="arrow">→</span></div>
       </a>
 
-     <a href="fed-signal.html" class="project-card">
-  <div class="project-cat">Research · Fixed Income</div>
-  <h3>Fed Signal Tracker</h3>
- <p>I'm cross-referencing FOMC statement language shifts against subsequent rate moves and yield curve behavior, identifying which forward guidance phrases carry the most predictive weight. In progress.</p>
-</a>
-
-      <a href="options.html" class="project-card">
-        <div class="project-cat">Derivatives · Sentiment</div>
-        <h3>Options Sentiment Dashboard</h3>
-        <p>A derivatives-focused read on positioning: put/call ratios, implied volatility, skew, and unusual flow, synthesized into a per-ticker sentiment label. Sector heatmap and VIX term structure provide market-wide context.</p>
+      <!-- Fed Signal Tracker -->
+      <a href="fed-signal.html" class="pcard">
+        <div class="pcard-thumb">
+          <span class="pcard-status wip">In progress</span>
+          <svg viewBox="0 0 320 180" preserveAspectRatio="xMidYMid slice" style="width:100%;height:100%;display:block" aria-hidden="true">
+            <rect width="320" height="180" fill="#0e2240"/>
+            <path d="M 20 140 L 90 140 L 90 128 L 160 128 L 160 116 L 230 116 L 230 104 L 300 104" fill="none" stroke="#1c3a68" stroke-width="1.5"/>
+            <path d="M 20 120 L 70 108 L 120 116 L 170 100 L 220 88 L 270 70 L 300 60" fill="none" stroke="#2e74e8" stroke-width="2.4"/>
+            <circle cx="20" cy="120" r="2.6" fill="#2e74e8"/><circle cx="70" cy="108" r="2.6" fill="#2e74e8"/><circle cx="120" cy="116" r="2.6" fill="#2e74e8"/><circle cx="170" cy="100" r="2.6" fill="#2e74e8"/><circle cx="220" cy="88" r="2.6" fill="#2e74e8"/><circle cx="270" cy="70" r="2.6" fill="#2e74e8"/><circle cx="300" cy="60" r="2.6" fill="#2e74e8"/>
+            <text x="20" y="28" font-family="'JetBrains Mono', monospace" font-size="10" letter-spacing="0.12em" fill="#2e74e8">RATES · CURVE</text>
+          </svg>
+        </div>
+        <div class="pcard-body">
+          <div class="pcard-cat">Research · Fixed Income</div>
+          <h3>Fed Signal Tracker</h3>
+          <p>A hand-curated log of FOMC statement language shifts, paired with the policy decisions and Treasury-market reactions that followed — isolating which forward-guidance phrases carry real predictive weight.</p>
+        </div>
+        <div class="pcard-tags">
+          <span class="tag t-macro">Macro</span>
+          <span class="tag t-rates">Rates</span>
+        </div>
+        <div class="pcard-foot"><span>View project</span><span class="arrow">→</span></div>
       </a>
 
-      <a href="portfolio-lab.html" class="project-card">
-        <div class="project-cat">Quantitative Finance · Python</div>
-        <h3>Portfolio Lab</h3>
-        <p>A personal Monte Carlo portfolio simulator built in Streamlit. Runs correlated GBM simulations across 21 positions, fits a historical risk model via OLS on market proxies, and generates an institutional-style PDF research note with drawdown analysis, stress tests, factor exposure, and a what-if rebalancer.</p>
+      <!-- Options Sentiment -->
+      <a href="options.html" class="pcard">
+        <div class="pcard-thumb">
+          <span class="pcard-status live">Live data</span>
+          <svg viewBox="0 0 320 180" preserveAspectRatio="xMidYMid slice" style="width:100%;height:100%;display:block" aria-hidden="true">
+            <rect width="320" height="180" fill="#0e2240"/>
+            <line x1="20" y1="110" x2="300" y2="110" stroke="#1c3a68" stroke-width="1"/>
+            <rect x="30" y="110" width="26" height="54" fill="#e05a5a" opacity="0.85"/><rect x="64" y="110" width="26" height="43" fill="#e05a5a" opacity="0.85"/><rect x="98" y="110" width="26" height="58" fill="#e05a5a" opacity="0.85"/><rect x="132" y="110" width="26" height="25" fill="#e05a5a" opacity="0.85"/><rect x="166" y="99" width="26" height="11" fill="#2e74e8" opacity="0.85"/><rect x="200" y="70" width="26" height="40" fill="#2e74e8" opacity="0.85"/><rect x="234" y="56" width="26" height="54" fill="#2e74e8" opacity="0.85"/><rect x="268" y="78" width="26" height="32" fill="#2e74e8" opacity="0.85"/>
+            <text x="20" y="28" font-family="'JetBrains Mono', monospace" font-size="10" letter-spacing="0.12em" fill="#2e74e8">OPTIONS · GEX</text>
+          </svg>
+        </div>
+        <div class="pcard-body">
+          <div class="pcard-cat">Derivatives · Sentiment</div>
+          <h3>Options Sentiment Dashboard</h3>
+          <p>A derivatives read on positioning — put/call ratios, implied vol, skew, and unusual flow synthesized into a per-ticker sentiment label, with a sector heatmap and VIX term structure for context.</p>
+        </div>
+        <div class="pcard-tags">
+          <span class="tag t-options">Options</span>
+          <span class="tag t-volatility">Volatility</span>
+          <span class="tag t-equities">Equities</span>
+        </div>
+        <div class="pcard-foot"><span>View project</span><span class="arrow">→</span></div>
       </a>
 
+      <!-- Daily Brief Pipeline -->
+      <a href="brief.html" class="pcard">
+        <div class="pcard-thumb">
+          <span class="pcard-status live">Updated 7PM MT</span>
+          <svg viewBox="0 0 320 180" preserveAspectRatio="xMidYMid slice" style="width:100%;height:100%;display:block" aria-hidden="true">
+            <rect width="320" height="180" fill="#0e2240"/>
+            <line x1="20" y1="160" x2="300" y2="160" stroke="#1c3a68" stroke-width="1"/>
+            <rect x="26" y="120" width="14" height="40" fill="#2e74e8" opacity="0.35"/><rect x="52" y="90" width="14" height="70" fill="#2e74e8" opacity="0.40"/><rect x="78" y="105" width="14" height="55" fill="#2e74e8" opacity="0.45"/><rect x="104" y="70" width="14" height="90" fill="#2e74e8" opacity="0.50"/><rect x="130" y="98" width="14" height="62" fill="#2e74e8" opacity="0.55"/><rect x="156" y="50" width="14" height="110" fill="#2e74e8" opacity="0.60"/><rect x="182" y="80" width="14" height="80" fill="#2e74e8" opacity="0.65"/><rect x="208" y="30" width="14" height="130" fill="#2e74e8" opacity="0.70"/><rect x="234" y="60" width="14" height="100" fill="#2e74e8" opacity="0.75"/><rect x="260" y="10" width="14" height="150" fill="#2e74e8" opacity="0.80"/>
+            <text x="20" y="28" font-family="'JetBrains Mono', monospace" font-size="10" letter-spacing="0.12em" fill="#2e74e8">DAILY · FEED</text>
+          </svg>
+        </div>
+        <div class="pcard-body">
+          <div class="pcard-cat">Automation · Data</div>
+          <h3>Daily Brief Pipeline</h3>
+          <p>An automated nightly pipeline that pulls macro headlines, market closes, and scores into a structured JSON feed — rendered live every evening at 7 PM MT.</p>
+        </div>
+        <div class="pcard-tags">
+          <span class="tag t-macro">Macro</span>
+          <span class="tag t-equities">Equities</span>
+        </div>
+        <div class="pcard-foot"><span>View project</span><span class="arrow">→</span></div>
+      </a>
+
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════════
+     SELECTED OUTPUT  —  proof of analytical work (real chart)
+     ════════════════════════════════════════════════════════════ -->
+<div class="section-navy" id="output">
+  <div class="inner">
+    <div class="section-eyebrow section-eyebrow-light">Selected Output</div>
+    <div class="section-heading" style="color:var(--white);">WHAT THE WORK <span style="color:var(--blue2);">PRODUCES</span></div>
+    <div class="output-grid">
+
+      <!-- the chart -->
+      <div class="output-chart">
+        <div class="chart-frame">
+          <svg viewBox="0 0 620 340" role="img" aria-label="Monte Carlo simulation fan chart of portfolio value over 5 years" preserveAspectRatio="xMidYMid meet" style="width:100%;height:auto;display:block">
+            <rect x="0" y="0" width="620" height="340" fill="white"/>
+            <line x1="58" y1="279.9" x2="592" y2="279.9" stroke="#d8dfe9" stroke-width="1"/><text x="50" y="282.9" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="9" fill="#5a6f87">60</text><line x1="58" y1="231.1" x2="592" y2="231.1" stroke="#d8dfe9" stroke-width="1"/><text x="50" y="234.1" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="9" fill="#5a6f87">90</text><line x1="58" y1="182.4" x2="592" y2="182.4" stroke="#d8dfe9" stroke-width="1"/><text x="50" y="185.4" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="9" fill="#5a6f87">120</text><line x1="58" y1="133.6" x2="592" y2="133.6" stroke="#d8dfe9" stroke-width="1"/><text x="50" y="136.6" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="9" fill="#5a6f87">150</text><line x1="58" y1="84.9" x2="592" y2="84.9" stroke="#d8dfe9" stroke-width="1"/><text x="50" y="87.9" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="9" fill="#5a6f87">180</text><line x1="58" y1="36.1" x2="592" y2="36.1" stroke="#d8dfe9" stroke-width="1"/><text x="50" y="39.1" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="9" fill="#5a6f87">210</text>
+            <path d="M 58.0 214.9 L 164.8 171.0 L 271.6 130.4 L 378.4 91.4 L 485.2 54.0 L 592.0 31.2 L 592.0 236.8 L 485.2 235.2 L 378.4 232.8 L 271.6 228.7 L 164.8 223.0 L 58.0 214.9 Z" fill="#2e74e8" opacity="0.10"/>
+            <path d="M 58.0 214.9 L 164.8 188.9 L 271.6 164.5 L 378.4 138.5 L 485.2 110.9 L 592.0 81.6 L 592.0 198.6 L 485.2 202.7 L 378.4 206.8 L 271.6 210.0 L 164.8 212.4 L 58.0 214.9 Z" fill="#2e74e8" opacity="0.20"/>
+            <path d="M 58.0 214.9 L 164.8 201.1 L 271.6 186.4 L 378.4 171.0 L 485.2 154.8 L 592.0 137.7" fill="none" stroke="#1a5fd4" stroke-width="2.4"/>
+            <circle cx="592.0" cy="137.7" r="3.4" fill="#1a5fd4"/>
+            <line x1="58" y1="28" x2="58" y2="288" stroke="#0e2240" stroke-width="1"/>
+            <line x1="58" y1="288" x2="592" y2="288" stroke="#0e2240" stroke-width="1"/>
+            <text x="58.0" y="310" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="#5a6f87">Y0</text><text x="164.8" y="310" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="#5a6f87">Y1</text><text x="271.6" y="310" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="#5a6f87">Y2</text><text x="378.4" y="310" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="#5a6f87">Y3</text><text x="485.2" y="310" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="#5a6f87">Y4</text><text x="592.0" y="310" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="#5a6f87">Y5</text>
+            <text x="588.0" y="25.2" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="9" fill="#2e74e8">p95</text>
+            <text x="588.0" y="129.7" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="bold" fill="#1a5fd4">median</text>
+            <text x="588.0" y="248.8" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="9" fill="#5a6f87">p5</text>
+            <text x="58" y="16" font-family="'JetBrains Mono', monospace" font-size="9" letter-spacing="0.1em" fill="#0e2240">INDEXED VALUE · START = 100 · 10,000 PATHS</text>
+          </svg>
+        </div>
+        <div class="output-caption">Fig 1 — Monte Carlo projection of a demo portfolio over a 5-year horizon. Shaded bands are the p5–p95 and p25–p75 outcome ranges; the solid line is the median path. Generated by Portfolio Lab.</div>
+      </div>
+
+      <!-- the read -->
+      <div class="output-read">
+        <div class="o-label">// Reading the chart</div>
+        <h3>From a Simulation to a Decision</h3>
+        <p>The cone widens with the square root of time — the longer the horizon, the wider the dispersion of plausible outcomes. The <strong>median path compounds to ≈ 1.46×</strong> over five years, but the model's value is the <strong>downside tail</strong>, not the headline.</p>
+        <p>Even a portfolio with an attractive median can carry an uncomfortable <strong>p5 outcome</strong>. Quantifying that — and stress-testing how rebalancing changes it — is the difference between a forecast and a risk decision.</p>
+        <div class="output-stats">
+          <div class="output-stat"><div class="v up">+46%</div><div class="l">Median 5Y</div></div>
+          <div class="output-stat"><div class="v down">−13%</div><div class="l">p5 outcome</div></div>
+          <div class="output-stat"><div class="v">−22%</div><div class="l">Max drawdown</div></div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- output CTA row -->
+    <div class="hero-btns" style="margin-top:2rem;">
+      <a href="Assets/sample-analysis.pdf" target="_blank" rel="noopener" class="btn btn-blue">Download Sample Analysis ↓</a>
+      <a href="portfolio-lab.html" class="btn btn-ghost-light">Explore Portfolio Lab →</a>
     </div>
   </div>
 </div>
@@ -1087,8 +1420,9 @@
             <li>Fixed income &amp; equity markets</li>
           </ul>
         </div>
-        <div style="margin-top:1.5rem;">
-          <a href="./resume.pdf" target="_blank" class="btn btn-navy">View Resume →</a>
+        <div class="hero-btns" style="margin-top:1.5rem;">
+          <a href="./resume.pdf" target="_blank" rel="noopener" class="btn btn-navy">View Resume →</a>
+          <a href="Assets/sample-analysis.pdf" target="_blank" rel="noopener" class="btn btn-outline">Download Sample Analysis ↓</a>
         </div>
       </div>
     </div>
