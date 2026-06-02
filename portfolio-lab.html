@@ -386,6 +386,57 @@
       display: block;
     }
 
+    /* ── LAUNCH PANEL (click-to-launch live demo) ── */
+    .launch-panel {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      background: var(--navy);
+      min-height: 420px;
+    }
+    .launch-preview {
+      position: relative;
+      overflow: hidden;
+      border-right: 1px solid var(--navy3);
+      background: var(--navy2);
+    }
+    .launch-preview img { width: 100%; height: 100%; object-fit: cover; display: block; opacity: 0.92; }
+    .launch-preview::after {
+      content: 'PREVIEW';
+      position: absolute; bottom: 1rem; left: 1.25rem;
+      font-family: 'JetBrains Mono', monospace; font-size: 0.55rem; letter-spacing: 0.14em;
+      color: rgba(255,255,255,0.45);
+    }
+    .launch-cta {
+      padding: 3rem 3rem; display: flex; flex-direction: column;
+      align-items: flex-start; justify-content: center;
+    }
+    .launch-title {
+      font-family: 'Barlow Condensed', sans-serif; font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+      font-weight: 800; text-transform: uppercase; color: var(--white);
+      line-height: 1; margin-bottom: 1rem;
+    }
+    .launch-title span { color: var(--blue2); }
+    .launch-cta p {
+      font-size: 0.92rem; color: rgba(255,255,255,0.6); line-height: 1.75;
+      max-width: 440px; margin-bottom: 1.75rem;
+    }
+    .launch-btn {
+      font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; font-weight: 500;
+      letter-spacing: 0.07em; text-transform: uppercase; padding: 0.95rem 1.6rem;
+      background: var(--blue); color: var(--white); text-decoration: none;
+      display: inline-flex; align-items: center; gap: 0.6rem; transition: background 0.15s, transform 0.15s;
+    }
+    .launch-btn:hover { background: var(--blue2); transform: translateY(-2px); }
+    .launch-sub {
+      font-family: 'JetBrains Mono', monospace; font-size: 0.62rem; letter-spacing: 0.05em;
+      color: rgba(255,255,255,0.35); margin-top: 1rem;
+    }
+    @media (max-width: 760px) {
+      .launch-panel { grid-template-columns: 1fr; }
+      .launch-preview { min-height: 200px; border-right: none; border-bottom: 1px solid var(--navy3); }
+      .launch-cta { padding: 2.25rem 1.5rem; }
+    }
+
     /* ── FOOTER ── */
     footer {
       background: var(--navy);
@@ -803,21 +854,30 @@
   </div>
 </section>
 
-<!-- LIVE DEMO -->
-<section class="embed-section">
+<!-- LIVE DEMO (click-to-launch — avoids embedding a cold/sleeping app) -->
+<section class="embed-section" id="live-demo">
   <div class="embed-bar">
     <div class="embed-label">
       <div class="live-dot"></div>
       Live Demo
     </div>
-    <span class="embed-notice">May take a moment to load on cold start</span>
+    <span class="embed-notice">Hosted on Streamlit Cloud · free tier may take ~30s to wake</span>
   </div>
-  <iframe
-    src="https://portfolio-lab.streamlit.app/?embedded=true"
-    class="lab-embed"
-    title="Portfolio Lab"
-    allow="fullscreen"
-  ></iframe>
+  <div class="launch-panel">
+    <div class="launch-preview">
+      <img src="charts/monte_carlo.svg" alt="Preview of Portfolio Lab's Monte Carlo output" loading="lazy" />
+    </div>
+    <div class="launch-cta">
+      <div class="launch-title">Run Portfolio Lab <span>Live</span></div>
+      <p>
+        The full interactive app — Monte Carlo engine, efficient-frontier optimizer,
+        what-if rebalancer, factor diagnostics, and one-click PDF export. Loads a sample
+        portfolio; no real holdings.
+      </p>
+      <a href="https://portfolio-lab.streamlit.app" target="_blank" rel="noopener" class="launch-btn">▶ Launch Live Demo →</a>
+      <span class="launch-sub">Opens in a new tab · cold start ~30s</span>
+    </div>
+  </div>
 </section>
 
 <!-- FOOTER -->
