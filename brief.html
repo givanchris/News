@@ -380,6 +380,73 @@
       line-height: 1.75;
     }
 
+    .b-story.has-explain { cursor: pointer; }
+    .b-story.has-explain:hover { background: rgba(255,255,255,0.02); margin: 0 -0.75rem; padding-left: 0.75rem; padding-right: 0.75rem; border-radius: 2px; }
+
+    .b-hed-row {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .b-explain-toggle {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.57rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--blue2);
+      white-space: nowrap;
+      padding-top: 0.2rem;
+      opacity: 0.6;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+      transition: opacity 0.15s;
+    }
+
+    .b-story.has-explain:hover .b-explain-toggle { opacity: 1; }
+
+    .b-toggle-icon {
+      display: inline-block;
+      font-size: 0.8rem;
+      line-height: 1;
+      transition: transform 0.2s ease;
+    }
+
+    .b-story.open .b-toggle-icon { transform: rotate(45deg); }
+
+    .b-explain {
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height 0.32s ease, padding-top 0.32s ease;
+      padding-top: 0;
+    }
+
+    .b-story.open .b-explain {
+      max-height: 300px;
+      padding-top: 0.9rem;
+    }
+
+    .b-explain-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.55rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--blue2);
+      opacity: 0.7;
+      margin-bottom: 0.45rem;
+    }
+
+    .b-explain-text {
+      font-size: 0.84rem;
+      color: rgba(255,255,255,0.58);
+      line-height: 1.72;
+      border-left: 2px solid rgba(46,116,232,0.35);
+      padding-left: 0.85rem;
+    }
+
     /* Sports sidebar */
     .sport-item {
       padding: 1rem 0;
@@ -847,10 +914,25 @@
     var storiesEl = document.getElementById('brief-stories');
     if (storiesEl && d.stories && d.stories.length) {
       storiesEl.innerHTML = d.stories.map(function(s) {
-        return '<div class="b-story">'
+        var hasExplain = s.explain && s.explain.length;
+        var explainHtml = hasExplain
+          ? '<div class="b-explain">'
+            + '<div class="b-explain-label">Mechanism</div>'
+            + '<div class="b-explain-text">' + esc(s.explain) + '</div>'
+            + '</div>'
+          : '';
+        var toggleHtml = hasExplain
+          ? '<div class="b-explain-toggle">Explain <span class="b-toggle-icon">+</span></div>'
+          : '';
+        return '<div class="b-story' + (hasExplain ? ' has-explain' : '') + '"'
+          + (hasExplain ? ' onclick="toggleStory(this)"' : '') + '>'
           + '<div class="b-cat">' + esc(s.cat) + '</div>'
+          + '<div class="b-hed-row">'
           + '<div class="b-hed">' + esc(s.headline) + '</div>'
+          + toggleHtml
+          + '</div>'
           + '<div class="b-body">' + esc(s.body) + '</div>'
+          + explainHtml
           + '</div>';
       }).join('');
     } else if (storiesEl) {
@@ -962,6 +1044,10 @@
     renderBrief(merged);
   }).catch(showError);
 })();
+
+function toggleStory(el) {
+  el.classList.toggle('open');
+}
 
 function scrollToSection(id, tab) {
   var el = document.getElementById(id);
