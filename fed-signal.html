@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; frame-ancestors 'none';" />
   <title>Fed Signal Tracker — Christopher Givan</title>
   <meta name="description" content="FOMC statement language shifts cross-referenced against rate moves, 2Y/10Y reactions, and curve behavior." />
   <meta name="author" content="Christopher Givan" />
@@ -1149,6 +1150,10 @@
   const DATA_URL = 'data/fed-meetings.json';
   const $ = sel => document.querySelector(sel);
 
+  const esc = s => String(s == null ? '' : s)
+    .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
+    .replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+
   const MONTHS = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
   const fmtDate = iso => {
     const [y, m, d] = iso.split('-').map(Number);
@@ -1166,14 +1171,14 @@
       const idx = pc.phrase.indexOf(' → ');
       const from = pc.phrase.slice(0, idx);
       const to   = pc.phrase.slice(idx + 3);
-      return `<span class="phrase-diff"><del>${from}</del><span class="phrase-diff-sep">→</span><ins>${to}</ins></span>`;
+      return `<span class="phrase-diff"><del>${esc(from)}</del><span class="phrase-diff-sep">→</span><ins>${esc(to)}</ins></span>`;
     }
-    return `<span>${pc.phrase}</span>`;
+    return `<span>${esc(pc.phrase)}</span>`;
   };
 
   const dissentBadge = (m) => {
     if (!m.dissents || !m.dissents.length) return '';
-    const tip = m.dissents.map(d => `${d.name}: ${d.preference}`).join(' · ');
+    const tip = m.dissents.map(d => `${esc(d.name)}: ${esc(d.preference)}`).join(' · ');
     return `<span class="dissent-badge" title="${tip}">${m.dissents.length}d</span>`;
   };
 
@@ -1278,16 +1283,16 @@
       <div class="detail-grid">
         <div>
           <div class="detail-label">// Statement Summary</div>
-          <p class="detail-body">${m.statement_summary}</p>
+          <p class="detail-body">${esc(m.statement_summary)}</p>
           <div class="detail-label" style="margin-top:1rem;">// Notes</div>
-          <p class="detail-body">${m.notes}</p>
+          <p class="detail-body">${esc(m.notes)}</p>
         </div>
         <div>
           <div class="detail-label">// Notable Phrase Changes</div>
           <ul class="phrase-list">
             ${m.phrase_changes.map(pc => `
               <li>
-                <span class="phrase-tag ${pc.type}">${pc.type}</span>
+                <span class="phrase-tag ${esc(pc.type)}">${esc(pc.type)}</span>
                 ${renderPhrase(pc)}
               </li>
             `).join('')}
@@ -1325,19 +1330,19 @@
       main.dataset.meetingId = m.id;
       main.innerHTML = `
         <td>
-          <div class="date-cell">${dateLabel}</div>
-          <div class="range-cell">${m.target_range}</div>
+          <div class="date-cell">${esc(dateLabel)}</div>
+          <div class="range-cell">${esc(m.target_range)}</div>
         </td>
-        <td><span class="stance ${m.stance}">${m.stance}</span></td>
-        <td><span class="decision-cell ${type}">${m.decision}</span>${dissentBadge(m)}</td>
-        <td><span class="decision-cell ${decisionType(m.next_decision)}">${m.next_decision}</span></td>
+        <td><span class="stance ${esc(m.stance)}">${esc(m.stance)}</span></td>
+        <td><span class="decision-cell ${type}">${esc(m.decision)}</span>${dissentBadge(m)}</td>
+        <td><span class="decision-cell ${decisionType(m.next_decision)}">${esc(m.next_decision)}</span></td>
         <td class="num ${yieldClass(m.y2_bp)}">${signBp(m.y2_bp)}</td>
         <td class="num ${yieldClass(m.y10_bp)}">${signBp(m.y10_bp)}</td>
-        <td><span class="curve ${curveClass}"><span class="arrow">${curveArrow}</span> ${m.curve_direction} · ${signBp(m.curve_bp)}</span></td>
+        <td><span class="curve ${curveClass}"><span class="arrow">${curveArrow}</span> ${esc(m.curve_direction)} · ${signBp(m.curve_bp)}</span></td>
         <td>
-          <button class="toggle-btn" type="button" data-id="${m.id}"
+          <button class="toggle-btn" type="button" data-id="${esc(m.id)}"
             aria-expanded="${expanded}"
-            aria-label="${expanded ? 'Hide' : 'Show'} detail for ${dateLabel}">
+            aria-label="${expanded ? 'Hide' : 'Show'} detail for ${esc(dateLabel)}">
             ${expanded ? 'Hide' : 'Detail'}
           </button>
         </td>
@@ -1357,19 +1362,19 @@
       card.innerHTML = `
         <div class="fed-card-head">
           <div>
-            <div class="date-cell">${dateLabel}</div>
-            <div class="range-cell">${m.target_range}</div>
+            <div class="date-cell">${esc(dateLabel)}</div>
+            <div class="range-cell">${esc(m.target_range)}</div>
           </div>
-          <span class="stance ${m.stance}">${m.stance}</span>
+          <span class="stance ${esc(m.stance)}">${esc(m.stance)}</span>
         </div>
         <div class="fed-card-grid">
           <div class="fed-card-cell">
             <div class="label">Decision</div>
-            <div class="value"><span class="decision-cell ${type}">${m.decision}</span>${dissentBadge(m)}</div>
+            <div class="value"><span class="decision-cell ${type}">${esc(m.decision)}</span>${dissentBadge(m)}</div>
           </div>
           <div class="fed-card-cell">
             <div class="label">Next Move</div>
-            <div class="value"><span class="decision-cell ${decisionType(m.next_decision)}">${m.next_decision}</span></div>
+            <div class="value"><span class="decision-cell ${decisionType(m.next_decision)}">${esc(m.next_decision)}</span></div>
           </div>
           <div class="fed-card-cell">
             <div class="label">Curve</div>
@@ -1385,28 +1390,28 @@
           </div>
           <div class="fed-card-cell">
             <div class="label">Summary</div>
-            <div class="value" style="font-family:'Barlow',sans-serif;font-size:0.75rem;color:var(--muted);line-height:1.4;">${preview}</div>
+            <div class="value" style="font-family:'Barlow',sans-serif;font-size:0.75rem;color:var(--muted);line-height:1.4;">${esc(preview)}</div>
           </div>
         </div>
         <div style="margin-top:0.9rem;">
-          <button class="toggle-btn card-toggle" type="button" data-id="${m.id}"
+          <button class="toggle-btn card-toggle" type="button" data-id="${esc(m.id)}"
             aria-expanded="${expanded}"
-            aria-label="${expanded ? 'Hide' : 'Show'} detail for ${dateLabel}">
+            aria-label="${expanded ? 'Hide' : 'Show'} detail for ${esc(dateLabel)}">
             ${expanded ? 'Hide detail' : 'Show detail'}
           </button>
         </div>
         ${expanded ? `
           <div class="card-detail" style="margin-top:1rem;padding-top:1rem;border-top:1px solid var(--border);">
             <div class="detail-label">// Statement Summary</div>
-            <p class="detail-body" style="margin-bottom:0.85rem;">${m.statement_summary}</p>
+            <p class="detail-body" style="margin-bottom:0.85rem;">${esc(m.statement_summary)}</p>
             <div class="detail-label">// Phrase Changes</div>
             <ul class="phrase-list" style="margin-bottom:0.85rem;">
               ${m.phrase_changes.map(pc => `
-                <li><span class="phrase-tag ${pc.type}">${pc.type}</span>${renderPhrase(pc)}</li>
+                <li><span class="phrase-tag ${esc(pc.type)}">${esc(pc.type)}</span>${renderPhrase(pc)}</li>
               `).join('')}
             </ul>
             <div class="detail-label">// Notes</div>
-            <p class="detail-body">${m.notes}</p>
+            <p class="detail-body">${esc(m.notes)}</p>
           </div>
         ` : ''}
       `;
@@ -1426,11 +1431,11 @@
 
     $('#shifts-grid').innerHTML = entries.slice(0, 6).map(e => `
       <div class="shift-cell">
-        <div class="shift-date">${shortDate(e.date)} · ${e.type}</div>
-        <div class="shift-quote">"${e.phrase}"</div>
+        <div class="shift-date">${shortDate(e.date)} · ${esc(e.type)}</div>
+        <div class="shift-quote">"${esc(e.phrase)}"</div>
         <div class="shift-meta">
-          <span class="phrase-tag ${e.type}" style="margin-right:0.4rem;">${e.type}</span>
-          Context: <span style="text-transform:uppercase;">${e.stance}</span> statement
+          <span class="phrase-tag ${esc(e.type)}" style="margin-right:0.4rem;">${esc(e.type)}</span>
+          Context: <span style="text-transform:uppercase;">${esc(e.stance)}</span> statement
         </div>
       </div>
     `).join('');
@@ -1442,12 +1447,12 @@
       <tr>
         <td class="rank-num">${String(p.rank).padStart(2, '0')}</td>
         <td>
-          <div class="ph-phrase">"${p.phrase}"</div>
+          <div class="ph-phrase">"${esc(p.phrase)}"</div>
           <div class="ph-meta">First seen ${shortDate(p.first_seen)}</div>
         </td>
-        <td><span class="ph-signal">${p.signal}</span></td>
-        <td><span class="reliability ${p.reliability}">${p.reliability}</span></td>
-        <td><p class="ph-interp">${p.interpretation}</p></td>
+        <td><span class="ph-signal">${esc(p.signal)}</span></td>
+        <td><span class="reliability ${esc(p.reliability)}">${esc(p.reliability)}</span></td>
+        <td><p class="ph-interp">${esc(p.interpretation)}</p></td>
       </tr>
     `).join('');
   }
@@ -1455,8 +1460,8 @@
   function renderNotes() {
     $('#notes-grid').innerHTML = STATE.data.research_notes.map(n => `
       <div class="note">
-        <h3>${n.title}</h3>
-        <p>${n.body}</p>
+        <h3>${esc(n.title)}</h3>
+        <p>${esc(n.body)}</p>
       </div>
     `).join('');
   }

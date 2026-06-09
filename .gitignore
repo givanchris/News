@@ -7,3 +7,11 @@
 
 # Logs
 *.log
+
+# Secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets/

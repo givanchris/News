@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; frame-ancestors 'none';" />
   <title>Options Sentiment Dashboard — Christopher Givan</title>
   <meta name="description" content="Derivatives-focused market sentiment dashboard: put/call ratios, implied volatility, skew, sector positioning, and VIX term structure." />
   <meta name="author" content="Christopher Givan" />
@@ -19,7 +20,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js" integrity="sha384-9nhczxUqK87bcKHh20fSQcTGD4qq5GhayNYSYWqwBkINBhOfQLg/P5HG5lF1urn4" crossorigin="anonymous" defer></script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -1146,6 +1147,12 @@
 (function () {
   'use strict';
 
+  function esc(s) {
+    return String(s == null ? '' : s)
+      .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
+      .replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+  }
+
   // Self-contained CG helpers (Assets/site.js is shared but optional).
   window.CG = window.CG || {};
   if (!CG.fetchJSON) {
@@ -1215,7 +1222,7 @@
       var div = document.createElement('div');
       div.className = 'vix-term-tile';
       div.innerHTML =
-        '<div class="vix-term-label">' + t.label + '</div>' +
+        '<div class="vix-term-label">' + esc(t.label) + '</div>' +
         '<div class="vix-term-value">' + fmtPrice(t.value) + '</div>';
       term.appendChild(div);
     });
@@ -1237,7 +1244,7 @@
       var div = document.createElement('div');
       div.className = 'regime-idx';
       div.innerHTML =
-        '<div class="regime-idx-tk">' + ix.ticker + ' · ' + (ix.name || '') + '</div>' +
+        '<div class="regime-idx-tk">' + esc(ix.ticker) + ' · ' + esc(ix.name || '') + '</div>' +
         '<div class="regime-idx-px">$' + fmtPrice(ix.price) + '</div>' +
         '<div class="regime-idx-pc"><span class="' + chgClass(ix.change) + '">' + arrow(ix.change) + ' ' + fmtPct(ix.change_pct) + '</span> · ' +
         'P/C <strong>' + fmtRatio(ix.pc_volume) + '</strong></div>';
@@ -1253,8 +1260,8 @@
       var cell = document.createElement('div');
       cell.className = 'sector-cell ' + (s.sentiment || 'neutral');
       cell.innerHTML =
-        '<div class="sec-tk">' + s.ticker + '</div>' +
-        '<div class="sec-name">' + (s.name || '') + '</div>' +
+        '<div class="sec-tk">' + esc(s.ticker) + '</div>' +
+        '<div class="sec-name">' + esc(s.name || '') + '</div>' +
         '<div>' +
           '<div class="sec-pc-label">P/C Volume</div>' +
           '<div class="sec-pc">' + fmtRatio(s.pc_volume) + '</div>' +
