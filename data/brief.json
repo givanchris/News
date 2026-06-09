@@ -1,105 +1,104 @@
 {
-  "lastUpdated": "2026-06-08T19:00:00-06:00",
+  "lastUpdated": "2026-06-09T19:00:00-06:00",
   "market": {
-    "sp500":  { "price": "7,520",  "change": "+0.80%", "dir": "up"   },
-    "nasdaq": { "price": "29,392", "change": "+1.50%", "dir": "up"   },
-    "yield":  { "price": "4.54%",  "change": "+2 bps", "dir": "down" },
-    "wti":    { "price": "$93.60", "change": "+4.2%",  "dir": "up"   },
-    "gold":   { "price": "$4,320", "change": "-0.5%",  "dir": "down" },
-    "dxy":    { "price": "100.11", "change": "+0.04%", "dir": "up"   }
+    "sp500":  { "price": "7,330",  "change": "-2.5%",  "dir": "down" },
+    "nasdaq": { "price": "28,419", "change": "-3.4%",  "dir": "down" },
+    "yield":  { "price": "4.54%",  "change": "-2 bps", "dir": "up"   },
+    "wti":    { "price": "$89.38", "change": "-4.5%",  "dir": "down" },
+    "gold":   { "price": "$4,276", "change": "-1.0%",  "dir": "down" },
+    "dxy":    { "price": "99.73",  "change": "-0.4%",  "dir": "down" }
   },
   "stories": [
     {
       "cat": "MACRO",
-      "headline": "GOLDMAN PUSHES FED CUTS TO 2027 AS MAY PAYROLLS CRUSH EXPECTATIONS",
-      "body": "The U.S. added 172,000 jobs in May vs. an 85,000 consensus estimate, with the unemployment rate holding at 4.3%. Goldman Sachs now forecasts no Fed rate cuts until 2027, projecting core PCE above 3% through year-end; markets now price a 72% chance of a December rate hike — the highest probability since 2023.",
-      "explain": "172K vs. an 85K estimate isn't just a beat — it's nearly double consensus, which wipes out the 'weakening labor market' narrative the Fed would need to justify any cut. Goldman had been calling for two 2026 cuts as recently as March; one jobs print reversed that entirely, and December rate-hike odds jumped to 72% — the highest since 2023. The Fed's dual mandate is now one-sided: employment is at 4.3%, so inflation is the only variable left, and a tight labor market means wage pressure isn't going anywhere."
-    },
-    {
-      "cat": "GEOPOLITICS",
-      "headline": "IRAN-ISRAEL EXCHANGE WEEKEND STRIKES; WTI SURGES ABOVE $93",
-      "body": "Iran and Israel traded missile strikes for the first time since April's ceasefire, threatening President Trump's 60-day truce efforts. Continued near-closure of the Strait of Hormuz disrupted Persian Gulf supply; WTI crude jumped 4.2% to $93.60 and Brent topped $94, adding fresh inflationary pressure to an already hawkish Fed backdrop.",
-      "explain": "What makes this exchange hit harder than baseline Iran-Israel tension is the ceasefire context — April's truce had already been priced in as a de-escalation, so re-escalation now reprices the entire probability distribution of a prolonged conflict. Markets aren't reacting to one strike; they're reacting to the signal that the 60-day truce is failing. The $93.60 WTI print is particularly painful because it lands the same week as Wednesday's CPI — higher energy costs feed directly into headline inflation, giving the Fed one more reason to stay hawkish."
+      "headline": "MAY NFP +172K DOUBLES CONSENSUS — FED RATE HIKE ODDS SURGE TO 68%",
+      "body": "The U.S. economy added 172,000 jobs in May against a 95,000 consensus, with unemployment holding at 4.3%. CME FedWatch now prices a 68% probability of a 25 bps rate hike by December 2026, up from 52% pre-report — reversing the rate-cut narrative that opened the year.",
+      "explain": "The mechanism is discount rate repricing: equities are priced on discounted future cash flows, and a higher-than-expected rate path raises the 'r' in P = CF/(r − g), compressing valuations immediately. The Nasdaq 100's 3.4% decline outpaced the S&P 500's 2.5% drop because long-duration growth stocks have a greater share of their value in distant future earnings — the same earnings that get most penalized when discount rates rise. Today's selloff is not driven by bad fundamentals but by re-marking the assumed cost of capital upward by ~25 bps across all asset classes."
     },
     {
       "cat": "MARKETS",
-      "headline": "CHIP STOCKS POWER S&P REBOUND; BITCOIN RECLAIMS $63K AHEAD OF CPI",
-      "body": "The S&P 500 gained 0.8% and Nasdaq 100 surged 1.5% Monday, led by semiconductor names bouncing from last week's rate-shock selloff. Bitcoin climbed back above $63,000 after May saw $2.4B in net ETF outflows — the largest monthly drawdown since November 2025. Wednesday's CPI print is the week's defining catalyst.",
-      "explain": "Last week's rate-shock session took the Nasdaq down ~4.5% in a single day, so Monday's 1.5% bounce looks like a recovery — but it's a relief rally into Wednesday's CPI, not a fundamental re-rating. If CPI prints hot, the same rate-hike logic that triggered last week's selloff reasserts immediately. Bitcoin's $2.4B May ETF outflow — the largest monthly drawdown since November 2025 — matters because it signals institutional de-risking, not retail panic selling; that money doesn't come back fast, which is why the $63K reclaim is fragile."
+      "headline": "S&P 500 DROPS TO 7,330, NDX -3.4% AS RATE REPRICING EXTENDS INTO TUESDAY",
+      "body": "Equity markets extended Friday's post-NFP losses Tuesday, with the S&P 500 falling to 7,330 and the Nasdaq 100 shedding 3.4% to 28,419. Selling was broadest in high-multiple tech and growth names, which are most sensitive to changes in long-end yield expectations.",
+      "explain": "Even though the 10-year Treasury yield eased 2 basis points today to 4.54%, the terminal rate expectation — the peak rate priced into the forward curve — moved higher. This distinction matters: the spot yield fell slightly on safe-haven flows as equities sold off, but the forward rate path shifted up. Goldman Sachs acknowledged the NFP data increases the probability of a 'longer pause,' language markets are reading as hawkish. The NDX's outperformance to the downside reflects its concentration in mega-cap tech names trading at 30x+ forward earnings, where even small moves in the discount rate produce large absolute valuation changes."
     },
     {
-      "cat": "CENTRAL BANKS",
-      "headline": "GOLD AT TWO-MONTH LOW AS RATE-HIKE ODDS SURGE; ECB MEETS THURSDAY",
-      "body": "Gold slid to a two-month low near $4,314 as the stronger dollar (DXY 100.11) and surging rate expectations weighed on precious metals. Thursday brings the ECB rate decision alongside U.S. PPI and weekly jobless claims — a trifecta that could set the tone for risk assets heading into summer.",
-      "explain": "Here's the paradox: Iran-Israel missile strikes are exactly the kind of geopolitical shock that normally sends gold higher as a safe-haven. But gold is down today anyway. DXY at 100.11 (a strong-dollar level not seen during most of 2025) makes gold more expensive for foreign buyers, suppressing demand globally. More importantly, with December rate-hike odds at 72%, a 5.25% Treasury yields real income — gold yields nothing. When real rates are this elevated, the fear premium from a Middle East conflict simply isn't enough to offset the opportunity cost of holding a non-yielding asset."
+      "cat": "GEOPOLITICS",
+      "headline": "IRAN-ISRAEL AGREE TO HALT ATTACKS; WTI FALLS $4 TO $89",
+      "body": "Iran and Israel agreed to halt direct attacks against each other, deflating the Middle East risk premium that had pushed WTI to $93.60 Monday. Crude fell 4.5% to $89.38 as supply disruption fears eased; President Trump indicated a Strait of Hormuz reopening deal could be reached 'soon.'",
+      "explain": "WTI had spiked above $93 as the Iran-Israel conflict raised genuine risk of Strait of Hormuz closure — a chokepoint handling roughly 20% of global seaborne oil. The de-escalation deflated the geopolitical risk premium embedded in the price, which functions like a volatility component layered on top of the supply-demand equilibrium price. Risk premiums unwind faster than they build: buyers who added positions on supply-disruption fears have strong incentive to exit quickly once the catalyst resolves. The remaining $89 floor reflects the underlying tight physical market; if Hormuz reopens fully, the equilibrium price likely drops closer to $82-85."
+    },
+    {
+      "cat": "COMMODITIES",
+      "headline": "GOLD DROPS TO $4,276 AS SAFE-HAVEN DEMAND EVAPORATES ON IRAN CEASEFIRE",
+      "body": "Gold fell 1.0% to $4,276/oz as the Iran-Israel ceasefire drained geopolitical safe-haven demand, compounding pressure from the strong NFP print which elevated real rates. Gold is now down 9.7% over the past month from above $4,700 levels.",
+      "explain": "Gold faces a dual headwind today: the Iran-Israel de-escalation removes the geopolitical risk premium, while strong jobs data pushes real interest rates higher as the nominal rate path shifts up with inflation expectations roughly stable. Gold has no yield, so higher real rates raise its opportunity cost — holding gold means forgoing a higher risk-free return. The month-long -9.7% decline from $4,700+ illustrates how quickly the geopolitical premium added during the Iran conflict has unwound; the 28.5% year-over-year gain reflects the structural buying from central banks and de-dollarization flows that provide a durable price floor even in risk-off unwinds."
     },
     {
       "cat": "MCBB",
-      "headline": "NCAA PROPOSES NEW AGE-BASED ELIGIBILITY CLOCK; VOTE EXPECTED BY MONTH END",
-      "body": "The Division I Cabinet modified its age-based eligibility proposal, starting athletes' clocks at full-time enrollment or the academic year following their 19th birthday, whichever is sooner. The revision addresses concerns from men's basketball, ice hockey, and service academies; a final vote is expected before June 30."
+      "headline": "SUMMER PORTAL ACTIVITY RESHAPES PROGRAMS — WASHINGTON LOSES THREE GUARDS",
+      "body": "Washington dropped three key guards — Zoom Diallo (15.7 ppg), JJ Mandaquit, and Courtland Muldrew — to the transfer portal, leaving the Huskies at eight scholarship players. Coach Danny Sprinkle added Texas Tech's LeJuan Watts and Gonzaga grad Steele Venters but needs five to six more additions before fall workouts."
     },
     {
       "cat": "NBA",
-      "headline": "KNICKS LEAD FINALS 2-0; GAME 3 TONIGHT AT MADISON SQUARE GARDEN",
-      "body": "New York's 13-game postseason winning streak is second-longest in NBA history, trailing only the 1998-99 Spurs. Game 2 drew 16.93M viewers on ABC, up 90% from last year's Game 1. The Spurs face historic pressure — no team has rallied from 0-2 in the Finals without winning Game 3. Tip-off 8:30 PM ET."
+      "headline": "WEMBANYAMA 32/8/6 SILENCES MSG, SPURS WIN GAME 3 — SERIES 2-1 KNICKS",
+      "body": "Victor Wembanyama posted 32 points, 8 rebounds, 6 assists, and 3 blocks as San Antonio won 115-111 at Madison Square Garden Monday, cutting New York's series lead to 2-1 and ending the Knicks' 13-game winning streak. Wembanyama shot 11-for-18, with 22 points coming at the rim or the free throw line. Game 4 is Wednesday June 10 at 8:30 PM ET on ABC."
     },
     {
       "cat": "NFL",
-      "headline": "MANDATORY MINICAMP OPENS ACROSS NFL; PENIX KNEE RECOVERY ON TRACK",
-      "body": "All 32 teams begin mandatory minicamp this week. Falcons QB Michael Penix Jr. is hitting every rehab milestone but coach Kevin Stefanski gave a 'we'll see' on 11-on-11 clearance. Cardinals QB Jacoby Brissett is attending to avoid fines while seeking a new contract after skipping voluntary workouts."
+      "headline": "17 TEAMS OPEN MANDATORY MINICAMPS; SEAHAWKS BEGIN CHAMPIONSHIP DEFENSE",
+      "body": "Seattle opened mandatory minicamp Tuesday (June 9-11), signed OT Bobby Hart ahead of practice, and will hold their Super Bowl LX ring ceremony later this week. The Giants have Jaxson Dart and Jameis Winston both on the field adjusting to first-year coach John Harbaugh's offense. The regular season opens September 9 with a Super Bowl LX rematch."
     },
     {
       "cat": "NCAA CFB",
-      "headline": "COURT RESTORES TEXAS TECH QB SORSBY'S ELIGIBILITY FOR 2026 SEASON",
-      "body": "A district court in Lubbock County granted an injunction allowing Brendan Sorsby to play in 2026, ruling he would face 'probable, imminent and irreparable injury' without relief. The ruling is the latest in a wave of eligibility litigation reshaping the NCAA landscape ahead of the 12-team CFP's third season."
+      "headline": "INDIANA LANDS MICH. STATE WR NICK MARSH AS PROGRAMS FINALIZE SUMMER ROSTERS",
+      "body": "Indiana secured Michigan State wide receiver Nick Marsh — No. 3 WR and No. 12 overall in ESPN portal rankings — as programs make final roster moves before summer conditioning. Texas added No. 1 LB prospect Rasheem Biles. Washington's receiver corps remains thin after four portal exits this spring, though linebacker Isaiah Leilua committed to the Huskies."
     }
   ],
   "sports": [
     {
       "team": "DETROIT PISTONS",
-      "pill": "L G7",
-      "pillClass": "s-l",
-      "detail": "Lost to Cleveland in East Semis Game 7 (94-125). East's 1-seed; first playoff series win since 2008. NBA Draft June 26."
-    },
-    {
-      "team": "SEATTLE MARINERS",
-      "pill": "34-32",
+      "pill": "OFFSEASON",
       "pillClass": "s-up",
-      "detail": "34-32, 1st AL West. @ Baltimore tonight (7:05 PM ET). Lost to Tigers 5-4 Sunday."
+      "detail": "Lost to Cavaliers 4-3 as No. 1 seed (60-22). Isaiah Stewart drawing trade interest; Jalen Duren contract talks ongoing. Pre-draft workouts this week — hold pick No. 21."
     },
     {
       "team": "SEATTLE SEAHAWKS",
-      "pill": "SB CHAMPS",
+      "pill": "MINICAMP",
+      "pillClass": "s-up",
+      "detail": "Mandatory minicamp opens today (Jun 9-11). Ring ceremony this week. Signed OT Bobby Hart. Rookies report Jul 15, veterans Jul 22. Defending Super Bowl LX champions."
+    },
+    {
+      "team": "SEATTLE MARINERS",
+      "pill": "W 6-3",
       "pillClass": "s-w",
-      "detail": "Super Bowl LX champs. Hall re-signs 3yr/$42M. OTAs complete. Mandatory minicamp starts Tuesday."
+      "detail": "Beat Orioles 6-3 Mon (Naylor grand slam, 5-run 5th). Tonight at Baltimore, 6:35 PM ET — Logan Gilbert (4-4, 3.79 ERA) vs. Trevor Rogers."
     },
     {
-      "team": "UW HUSKIES FOOTBALL",
-      "pill": "Recruiting",
+      "team": "WASHINGTON HUSKIES FOOTBALL",
+      "pill": "OFFSEASON",
       "pillClass": "s-up",
-      "detail": "4-star WR Tre Moore commits over Ohio St, Miami. Opener Aug. 29. Apple Cup on NBC, Sept. 6."
+      "detail": "Spring game done, no major injuries. WR depth thin after four portal exits; LB Leilua committed inbound. Season opens vs. Washington State (Apple Cup). Veterans report Jul 22."
     },
     {
-      "team": "UW HUSKIES BASKETBALL",
-      "pill": "Offseason",
+      "team": "WASHINGTON HUSKIES BASKETBALL",
+      "pill": "PORTAL",
       "pillClass": "s-up",
-      "detail": "Steinbach declares for NBA Draft (projected 1st round). Beasley, Watts added via portal. 2026-27 rebuild underway."
+      "detail": "Diallo (15.7 ppg), Mandaquit, Muldrew left via portal. Added Watts (Texas Tech) and Venters (Gonzaga). Need 5-6 more players; at 8 scholarships under Sprinkle."
     }
   ],
   "watchlist": [
-    "CPI data Wednesday 8:30 AM ET — hot read could push Dec rate hike odds above 80%",
-    "ECB rate decision Thursday — plus U.S. PPI and weekly jobless claims",
-    "OPEC monthly oil market report Thursday — Brent near $94 on Middle East tensions",
-    "NBA Finals Game 3: Knicks vs. Spurs tonight at MSG, 8:30 PM ET",
-    "Mariners @ Orioles series continues through Wednesday in Baltimore"
+    "CPI data tomorrow Wed June 10, 8:30 AM ET — hot read could push Dec rate hike odds above 80%",
+    "NBA Finals Game 4: Spurs vs. Knicks — Wed June 10, 8:30 PM ET on ABC (NY leads 2-1)",
+    "Mariners at Orioles tonight, 6:35 PM ET — Logan Gilbert on the mound (in progress at briefing time)",
+    "FIFA World Cup 2026 opens Thursday June 11 in Mexico City"
   ],
   "deepDive": {
-    "title": "The Fed's Reaction Function: Why a Strong Jobs Report Can Hit Stocks Like a Rate Hike",
+    "title": "Why Good Jobs Data Tanks the Stock Market — The Rate Repricing Mechanism",
     "content": [
-      "Friday's May payrolls print — +172,000 vs. an 85,000 consensus — wasn't just a beat; it was a thesis-killer. Goldman Sachs, which had been forecasting multiple Fed cuts in 2026, pushed its timeline out to 2027 overnight. Rate-hike odds for December surged to 72%. Gold fell to a two-month low. The Nasdaq 100 lost nearly 4.5% in a single session. That kind of market response to a 'good' economic number only makes sense once you understand how the Fed's reaction function actually works.",
-      "The Fed targets two things simultaneously: maximum employment and price stability (2% inflation). When both objectives are in tension — strong jobs but sticky inflation — the Fed must choose. In mid-2026, that choice is stark: the labor market is robust (4.3% unemployment, solid wage growth), but core PCE remains above 3%. The Taylor Rule — a formula linking the policy rate to inflation and output gaps — would currently suggest a federal funds rate above 5.5%. With the effective rate at roughly 5.25%, the Fed is already behind the rule's prescription. A 172K print tightens labor further and removes any urgency to cut — or raises the case to hike.",
-      "This dynamic — strong growth tightening financial conditions through rate expectations — is sometimes called the 'good news is bad news' regime. It's not new: markets traded in this mode for most of 2022–23 as the Fed hiked aggressively. What's notable now is how quickly the market re-entered it. As recently as March, consensus called for two 2026 cuts. The May jobs shock reversed that in one session. Real yields (the 10Y TIPS breakeven is now above 2.5%) are at multi-year highs, meaning the discount rate applied to every future corporate cash flow just ratcheted up. Tech and growth stocks — whose valuations depend most heavily on long-duration discounting — took the biggest hit.",
-      "Wednesday's CPI print is now the week's most important data release. Core CPI ran at +0.3% MoM in April; if May prints +0.4% or above, expect rate-hike odds to surge past 80% and growth stocks to retest last week's lows. A soft +0.2% read would provide partial relief and could reprice some 2026 cuts back in — but Goldman and JPMorgan have already structurally revised their Fed calls, so any rally may be capped. The 'super-core' reading (services ex-shelter ex-energy) is what the Fed watches most carefully; that's where sticky inflation actually lives, and a sustained above-trend print there would make a rate hike before year-end a near-certainty."
+      "Friday's May NFP print came in at 172,000 jobs — nearly double the 95,000 consensus — and the equity market's immediate reaction was to sell off sharply, with losses extending into Tuesday. That seems backward. A strong labor market signals a healthy economy, higher corporate revenues, and stronger earnings. Yet the S&P 500 is down 2.5% and the Nasdaq 100 down 3.4% over the past two sessions. Understanding why requires tracing the precise channel through which employment data affects equity prices.",
+      "The mechanism runs through discount rates. Every stock's theoretical price is the present value of its future cash flows: P = CF / (r − g), where r is the discount rate and g is growth. The discount rate is built from the risk-free rate plus an equity risk premium. When markets price in a Fed rate hike, the risk-free component of r rises by ~25 bps — and that flows through to every equity valuation simultaneously. The Nasdaq 100 fell harder than the S&P 500 because growth stocks are 'long duration': most of their value sits in cash flows 10-20 years out, and compounding a higher discount rate over a longer horizon produces disproportionately larger present value reductions. A 25 bps rate increase might cut a 2-year DCF by 0.3%, but a 20-year DCF by closer to 4%.",
+      "This dynamic is what traders call 'bad news is good news' (and vice versa). During 2022-2023, equity markets reliably rallied on weak payrolls because soft labor data reduced rate hike expectations — demonstrating the inverse relationship. The 2026 version is more dangerous: this labor strength comes alongside Iran-driven energy inflation, raising the specter of stagflation — the Fed forced to hike into a slowing growth environment. In a clean rate cycle, only 'r' moves in the DCF model. In stagflation, 'g' also deteriorates simultaneously, a double compression on valuations that the 1970s demonstrated could be prolonged. Goldman Sachs flagged this explicitly: a rate hike is not their base case, but the risk of a 'longer pause' is now live.",
+      "The immediate market setup: CME FedWatch prices a 68% probability of a December 2026 hike, up from 52% pre-NFP. If this week's May CPI release shows inflation still above 3% — likely given WTI averaged $90+ in May — hike probability may push above 80%, triggering another leg lower for growth stocks. The 10-year yield at 4.54% is still well below the 5.0%+ highs of late 2023; if data continues to surprise hot, a move toward 4.75-5.00% is live. Every 25 bps higher in the 10-year directly compresses the Shiller CAPE on a mechanical basis — and the NDX's heavy concentration in 30x+ forward earnings names means it remains the most exposed index if the rate repricing has further to run."
     ]
   }
 }
