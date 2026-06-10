@@ -19,30 +19,30 @@
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230e2240'/%3E%3Ctext x='16' y='22' font-family='-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif' font-size='14' font-weight='800' fill='white' text-anchor='middle'%3ECG%3C/text%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500;1,6..72,600;1,6..72,700&display=swap" rel="stylesheet" />
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js" integrity="sha384-9nhczxUqK87bcKHh20fSQcTGD4qq5GhayNYSYWqwBkINBhOfQLg/P5HG5lF1urn4" crossorigin="anonymous" defer></script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --white:   #ffffff;
-      --off:     #f5f7fa;
-      --light:   #edf1f8;
-      --border:  #d8dfe9;
-      --navy:    #0e2240;
-      --navy2:   #152d52;
-      --navy3:   #1c3a68;
-      --blue:    #1a5fd4;
-      --blue2:   #2e74e8;
-      --blue-lt: #e8f0fc;
-      --text:    #0e2240;
-      --muted:   #5a6f87;
-      --green:   #117a44;
-      --green-lt:#e4f4ec;
-      --red:     #bf3232;
-      --red-lt:  #fce8e8;
-      --amber:   #a05a00;
-      --amber-lt:#fbefd9;
+      --white:   #f7f4ec;
+      --off:     #efeadd;
+      --light:   #e7e0cf;
+      --border:  #e2dbca;
+      --navy:    #16130d;
+      --navy2:   #1f1b13;
+      --navy3:   #2b2619;
+      --blue:    #b06a1f;
+      --blue2:   #dc9038;
+      --blue-lt: #f3e4cc;
+      --text:    #1b1810;
+      --muted:   #6b6353;
+      --green:   #2c7a57;
+      --green-lt:#dfeee4;
+      --red:     #b23b2e;
+      --red-lt:  #f6e2dd;
+      --amber:   #b06a1f;
+      --amber-lt:#f3e4cc;
     }
 
     html { scroll-behavior: smooth; }
@@ -50,7 +50,7 @@
     body {
       background: var(--white);
       color: var(--text);
-      font-family: 'Barlow', system-ui, sans-serif;
+      font-family: 'IBM Plex Sans', system-ui, sans-serif;
       font-size: 15px;
       line-height: 1.6;
       overflow-x: hidden;
@@ -65,8 +65,8 @@
       align-items: center;
       justify-content: space-between;
       padding: 0 3rem;
-      height: 56px;
-      background: rgba(255,255,255,0.94);
+      height: 60px;
+      background: rgba(247, 244, 236, 0.95);
       backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--border);
     }
@@ -74,13 +74,13 @@
       display: flex; align-items: center; justify-content: center;
       width: 36px; height: 36px;
       border: 1.5px solid var(--navy);
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 0.9rem; font-weight: 800;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
+      font-size: 0.72rem; font-weight: 600;
       color: var(--navy); text-decoration: none; letter-spacing: 0.04em;
     }
     .nav-links { display: flex; align-items: center; gap: 2.5rem; list-style: none; }
     .nav-links a {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
       font-size: 0.7rem; font-weight: 500;
       color: var(--muted); text-decoration: none;
       letter-spacing: 0.07em; text-transform: uppercase;
@@ -89,7 +89,7 @@
     .nav-links a:hover { color: var(--navy); }
     .nav-links a.active { color: var(--navy); }
     .nav-cta {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
       font-size: 0.7rem; font-weight: 500;
       letter-spacing: 0.07em; text-transform: uppercase;
       padding: 0.45rem 1rem;
@@ -106,7 +106,7 @@
     .page-header-inner { max-width: 1240px; margin: 0 auto; }
 
     .ph-eyebrow {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
       font-size: 0.7rem;
       color: var(--blue);
       letter-spacing: 0.12em;
@@ -120,12 +120,11 @@
     }
 
     .ph-title {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 800;
+      font-family: 'Newsreader', Georgia, 'Times New Roman', serif;
+      font-weight: 700;
       font-size: clamp(3rem, 7vw, 5.5rem);
-      line-height: 0.9;
-      letter-spacing: -0.01em;
-      text-transform: uppercase;
+      line-height: 0.95;
+      letter-spacing: -0.02em;
       color: var(--navy);
       margin-bottom: 1rem;
     }
@@ -141,7 +140,7 @@
     .ph-meta {
       margin-top: 1.5rem;
       display: flex; gap: 1.5rem; flex-wrap: wrap;
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
       font-size: 0.7rem;
       letter-spacing: 0.06em;
       text-transform: uppercase;
@@ -156,7 +155,7 @@
       background: var(--amber-lt);
       border: 1px solid var(--amber);
       border-left-width: 3px;
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
       font-size: 0.7rem;
       letter-spacing: 0.04em;
       color: var(--amber);
@@ -171,7 +170,7 @@
       flex-wrap: wrap;
     }
     .fetch-btn {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
       font-size: 0.7rem;
       font-weight: 500;
       letter-spacing: 0.08em;
@@ -198,7 +197,7 @@
     }
     @keyframes spin { to { transform: rotate(360deg); } }
     .fetch-status {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
       font-size: 0.65rem;
       letter-spacing: 0.06em;
       color: var(--muted);
@@ -225,14 +224,14 @@
       gap: 1rem;
     }
     .panel-title {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
       font-size: 0.65rem;
       letter-spacing: 0.12em;
       text-transform: uppercase;
       color: var(--navy);
     }
     .panel-sub {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
       font-size: 0.62rem;
       letter-spacing: 0.08em;
       text-transform: uppercase;
@@ -257,7 +256,7 @@
       align-items: center;
     }
     .vix-num-block .vix-label {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
       font-size: 0.6rem;
       letter-spacing: 0.1em;
       text-transform: uppercase;
@@ -265,14 +264,14 @@
       margin-bottom: 0.3rem;
     }
     .vix-num {
-      font-family: 'Barlow Condensed', sans-serif;
+      font-family: 'Newsreader', Georgia, 'Times New Roman', serif;
       font-weight: 800;
       font-size: 3.6rem;
       color: var(--navy);
       line-height: 1;
     }
     .vix-chg {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
       font-size: 0.85rem;
       margin-top: 0.4rem;
     }
@@ -289,7 +288,7 @@
     }
     .vix-term-tile:last-child { border-right: none; }
     .vix-term-label {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
       font-size: 0.55rem;
       letter-spacing: 0.08em;
       text-transform: uppercase;
@@ -297,7 +296,7 @@
       margin-bottom: 0.25rem;
     }
     .vix-term-value {
-      font-family: 'Barlow Condensed', sans-serif;
+      font-family: 'Newsreader', Georgia, 'Times New Roman', serif;
       font-size: 1.15rem;
       font-weight: 800;
       color: var(--navy);
@@ -318,7 +317,7 @@
       align-items: center;
       gap: 0.5rem;
       padding: 0.45rem 0.9rem;
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
       font-size: 0.72rem;
       letter-spacing: 0.1em;
       text-transform: uppercase;
@@ -350,21 +349,21 @@
     }
     .regime-idx:last-child { border-right: none; }
     .regime-idx-tk {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
       font-size: 0.65rem;
       letter-spacing: 0.08em;
       color: var(--blue);
       margin-bottom: 0.2rem;
     }
     .regime-idx-px {
-      font-family: 'Barlow Condensed', sans-serif;
+      font-family: 'Newsreader', Georgia, 'Times New Roman', serif;
       font-weight: 800;
       font-size: 1.3rem;
       color: var(--navy);
       line-height: 1.1;
     }
     .regime-idx-pc {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
       font-size: 0.7rem;
       color: var(--muted);
       margin-top: 0.25rem;
@@ -377,7 +376,7 @@
       flex: 1;
       min-width: 240px;
       padding: 0.6rem 0.85rem;
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
       font-size: 0.85rem;
       letter-spacing: 0.04em;
       text-transform: uppercase;
@@ -391,7 +390,7 @@
     .search-input::placeholder { color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; }
 
     .search-btn {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
       font-size: 0.7rem;
       font-weight: 500;
       letter-spacing: 0.08em;
@@ -410,7 +409,7 @@
       margin-top: 0.85rem;
     }
     .quick-chip {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
       font-size: 0.65rem;
       letter-spacing: 0.06em;
       padding: 0.3rem 0.7rem;
@@ -426,7 +425,7 @@
 
     .search-error {
       margin-top: 0.85rem;
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
       font-size: 0.7rem;
       color: var(--red);
       letter-spacing: 0.04em;
@@ -446,7 +445,7 @@
     }
     .tk-head-left { display: flex; flex-direction: column; gap: 0.3rem; }
     .tk-symbol {
-      font-family: 'Barlow Condensed', sans-serif;
+      font-family: 'Newsreader', Georgia, 'Times New Roman', serif;
       font-size: 2.4rem;
       font-weight: 800;
       color: var(--navy);
@@ -456,19 +455,19 @@
     .tk-name { font-size: 0.9rem; color: var(--muted); }
     .tk-head-right { text-align: right; }
     .tk-price {
-      font-family: 'Barlow Condensed', sans-serif;
+      font-family: 'Newsreader', Georgia, 'Times New Roman', serif;
       font-size: 2rem;
       font-weight: 800;
       color: var(--navy);
       line-height: 1;
     }
     .tk-chg {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
       font-size: 0.85rem;
       margin-top: 0.3rem;
     }
     .tk-vol {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
       font-size: 0.65rem;
       color: var(--muted);
       letter-spacing: 0.06em;
@@ -490,7 +489,7 @@
       padding: 1rem 1.1rem;
     }
     .metric-label {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
       font-size: 0.6rem;
       letter-spacing: 0.1em;
       text-transform: uppercase;
@@ -498,7 +497,7 @@
       margin-bottom: 0.4rem;
     }
     .metric-value {
-      font-family: 'Barlow Condensed', sans-serif;
+      font-family: 'Newsreader', Georgia, 'Times New Roman', serif;
       font-size: 1.6rem;
       font-weight: 800;
       color: var(--navy);
@@ -524,7 +523,7 @@
     .sentiment-tag {
       display: inline-flex;
       align-items: center; gap: 0.45rem;
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
       font-size: 0.72rem;
       font-weight: 500;
       letter-spacing: 0.1em;
@@ -545,7 +544,7 @@
     .unusual-flag {
       display: inline-flex;
       align-items: center; gap: 0.4rem;
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
       font-size: 0.62rem;
       letter-spacing: 0.08em;
       text-transform: uppercase;
@@ -577,14 +576,14 @@
       gap: 0.5rem;
     }
     .history-label {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
       font-size: 0.6rem;
       letter-spacing: 0.1em;
       text-transform: uppercase;
       color: var(--muted);
     }
     .history-current {
-      font-family: 'Barlow Condensed', sans-serif;
+      font-family: 'Newsreader', Georgia, 'Times New Roman', serif;
       font-size: 1.05rem;
       font-weight: 800;
       color: var(--navy);
@@ -610,7 +609,7 @@
         var(--white) 6px, var(--white) 12px
       );
       border: 1px dashed var(--border);
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
       font-size: 0.6rem;
       letter-spacing: 0.06em;
       text-transform: uppercase;
@@ -630,14 +629,14 @@
       margin-bottom: 0.4rem;
     }
     .vix-history-label {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
       font-size: 0.6rem;
       letter-spacing: 0.1em;
       text-transform: uppercase;
       color: var(--muted);
     }
     .vix-history-meta {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
       font-size: 0.6rem;
       color: var(--muted);
     }
@@ -675,7 +674,7 @@
     .sector-cell.neutral { background: var(--white); }
     .sector-cell:hover { filter: brightness(0.97); }
     .sec-tk {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
       font-size: 0.7rem;
       letter-spacing: 0.08em;
       color: var(--navy);
@@ -687,7 +686,7 @@
       line-height: 1.3;
     }
     .sec-pc {
-      font-family: 'Barlow Condensed', sans-serif;
+      font-family: 'Newsreader', Georgia, 'Times New Roman', serif;
       font-size: 1.4rem;
       font-weight: 800;
       color: var(--navy);
@@ -695,19 +694,19 @@
       margin-top: auto;
     }
     .sec-pc-label {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
       font-size: 0.55rem;
       letter-spacing: 0.08em;
       text-transform: uppercase;
       color: var(--muted);
     }
     .sec-iv {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
       font-size: 0.65rem;
       color: var(--muted);
     }
 
-    .up { color: var(--green); }
+    .up   { color: var(--green); }
     .down { color: var(--red); }
     .flat { color: var(--muted); }
 
@@ -719,13 +718,13 @@
       display: flex; align-items: center; justify-content: space-between;
     }
     footer .f-left, footer .f-right {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
       font-size: 0.65rem;
       letter-spacing: 0.05em;
       color: rgba(255,255,255,0.25);
     }
     footer .f-logo {
-      font-family: 'Barlow Condensed', sans-serif;
+      font-family: 'Newsreader', Georgia, 'Times New Roman', serif;
       font-size: 1.1rem;
       font-weight: 800;
       color: rgba(255,255,255,0.5);
@@ -739,7 +738,7 @@
     /* ════════════ TAGS (light header) ════════════ */
     .tag-row { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 1.5rem; }
     .tag {
-      font-family: 'JetBrains Mono', monospace; font-size: 0.62rem; letter-spacing: 0.06em;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 0.62rem; letter-spacing: 0.06em;
       text-transform: uppercase; padding: 0.28rem 0.65rem;
       border: 1px solid var(--border); color: var(--muted); background: var(--white);
     }
@@ -751,12 +750,12 @@
     .viz-section { background: var(--off); padding: 4.5rem 3rem; border-top: 1px solid var(--border); }
     .viz-inner { max-width: 1240px; margin: 0 auto; }
     .viz-eyebrow {
-      font-family: 'JetBrains Mono', monospace; font-size: 0.62rem; letter-spacing: 0.12em;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 0.62rem; letter-spacing: 0.12em;
       text-transform: uppercase; color: var(--blue); display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.65rem;
     }
     .viz-eyebrow::after { content: ''; width: 32px; height: 1px; background: var(--border); }
     .viz-heading {
-      font-family: 'Barlow Condensed', sans-serif; font-size: clamp(2rem, 4vw, 3rem);
+      font-family: 'Newsreader', Georgia, 'Times New Roman', serif; font-size: clamp(2rem, 4vw, 3rem);
       font-weight: 800; text-transform: uppercase; color: var(--navy); line-height: 0.95; margin-bottom: 0.75rem;
     }
     .viz-intro { font-size: 0.95rem; color: var(--muted); line-height: 1.75; max-width: 700px; margin-bottom: 2.5rem; }
@@ -767,18 +766,18 @@
       display: flex; align-items: baseline; justify-content: space-between; gap: 1rem;
     }
     .viz-card-title {
-      font-family: 'Barlow Condensed', sans-serif; font-size: 1.2rem; font-weight: 800;
+      font-family: 'Newsreader', Georgia, 'Times New Roman', serif; font-size: 1.2rem; font-weight: 800;
       text-transform: uppercase; color: var(--navy); letter-spacing: 0.01em; line-height: 1;
     }
     .viz-card-tag {
-      font-family: 'JetBrains Mono', monospace; font-size: 0.55rem; letter-spacing: 0.08em;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 0.55rem; letter-spacing: 0.08em;
       text-transform: uppercase; color: var(--blue); white-space: nowrap;
     }
     .viz-figure { padding: 1.1rem 1.35rem 0.5rem; }
     .viz-note { font-size: 0.84rem; color: var(--muted); line-height: 1.65; padding: 0.5rem 1.35rem 1.4rem; }
     .viz-note strong { color: var(--navy); font-weight: 600; }
     .illus-flag {
-      font-family: 'JetBrains Mono', monospace; font-size: 0.5rem; letter-spacing: 0.08em;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 0.5rem; letter-spacing: 0.08em;
       text-transform: uppercase; color: var(--amber); background: var(--amber-lt);
       border: 1px solid rgba(160,90,0,0.3); padding: 0.12rem 0.4rem;
     }
@@ -787,17 +786,17 @@
     .howto { border: 1px solid var(--border); background: var(--white); margin-top: 1.5rem; }
     .howto > summary {
       cursor: pointer; list-style: none; padding: 1.3rem 1.5rem;
-      font-family: 'Barlow Condensed', sans-serif; font-size: 1.35rem; font-weight: 800;
+      font-family: 'Newsreader', Georgia, 'Times New Roman', serif; font-size: 1.35rem; font-weight: 800;
       text-transform: uppercase; color: var(--navy); letter-spacing: 0.01em;
       display: flex; align-items: center; justify-content: space-between;
     }
     .howto > summary::-webkit-details-marker { display: none; }
-    .howto > summary .chev { font-family: 'JetBrains Mono', monospace; font-size: 0.9rem; color: var(--blue); transition: transform 0.2s ease; }
+    .howto > summary .chev { font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 0.9rem; color: var(--blue); transition: transform 0.2s ease; }
     .howto[open] > summary { border-bottom: 1px solid var(--border); }
     .howto[open] > summary .chev { transform: rotate(45deg); }
     .howto-body { padding: 1.75rem 1.5rem; display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.75rem 2.5rem; }
     .howto-group h4 {
-      font-family: 'JetBrains Mono', monospace; font-size: 0.6rem; letter-spacing: 0.1em;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 0.6rem; letter-spacing: 0.1em;
       text-transform: uppercase; color: var(--blue); margin-bottom: 0.75rem;
       padding-bottom: 0.5rem; border-bottom: 1px solid var(--border);
     }
@@ -833,7 +832,7 @@
 <section class="page-header">
   <div class="page-header-inner">
     <div class="ph-eyebrow">Derivatives · Sentiment</div>
-    <h1 class="ph-title">OPTIONS<br><span>SENTIMENT</span></h1>
+    <h1 class="ph-title">Options<br><span>Sentiment</span></h1>
     <p class="ph-sub">
       A derivatives-focused read on market positioning. Put/call ratios, implied volatility, skew, and unusual flow
       — synthesized into a single sentiment label per ticker. Sector heatmap and VIX term structure provide market-wide context.
@@ -859,7 +858,7 @@
     </div>
   </div>
   <div class="mock-banner" id="mock-banner" style="display:none;">
-    <strong>Showing mock data</strong> — run <code style="font-family:'JetBrains Mono',monospace;">python pipeline/run.py market</code> or wait for the daily GitHub Action.
+    <strong>Showing mock data</strong> — run <code style="font-family:'IBM Plex Mono',monospace;">python pipeline/run.py market</code> or wait for the daily GitHub Action.
   </div>
 </section>
 
@@ -1309,7 +1308,7 @@
   function createSparkline(canvas, key, labels, data, opts) {
     if (!canvas || typeof Chart === 'undefined') return;
     destroyChart(key);
-    var lineColor = opts.lineColor || '#0e2240';
+    var lineColor = opts.lineColor || '#16130d';
     var fillColor = opts.fillColor || 'rgba(14,34,64,0.08)';
     var fmtTooltip = opts.fmtTooltip || function (v) { return Number(v).toFixed(2); };
     state.charts[key] = new Chart(canvas.getContext('2d'), {
@@ -1335,9 +1334,9 @@
         plugins: {
           legend: { display: false },
           tooltip: {
-            backgroundColor: '#0e2240',
-            titleFont: { family: 'JetBrains Mono', size: 10, weight: '500' },
-            bodyFont:  { family: 'JetBrains Mono', size: 10 },
+            backgroundColor: '#16130d',
+            titleFont: { family: 'IBM Plex Mono', size: 10, weight: '500' },
+            bodyFont:  { family: 'IBM Plex Mono', size: 10 },
             padding: 6,
             displayColors: false,
             callbacks: {
@@ -1351,7 +1350,7 @@
             border: { color: '#d8dfe9' },
             ticks: {
               maxRotation: 0, autoSkipPadding: 14,
-              font: { family: 'JetBrains Mono', size: 9 },
+              font: { family: 'IBM Plex Mono', size: 9 },
               color: '#5a6f87'
             }
           },
@@ -1359,7 +1358,7 @@
             grid: { color: '#edf1f8' },
             border: { display: false },
             ticks: {
-              font: { family: 'JetBrains Mono', size: 9 },
+              font: { family: 'IBM Plex Mono', size: 9 },
               color: '#5a6f87',
               maxTicksLimit: 4
             }
@@ -1403,7 +1402,7 @@
         labels: labels,
         data: last30.map(function (h) { return h.pc_volume_ratio; }),
         curId: 'hist-pc-cur',
-        lineColor: '#0e2240', fillColor: 'rgba(14,34,64,0.08)',
+        lineColor: '#16130d', fillColor: 'rgba(22,19,13,0.08)',
         fmtCur: function (v) { return Number(v).toFixed(2); },
         fmtTooltip: function (v) { return 'P/C ' + Number(v).toFixed(2); }
       });
@@ -1412,7 +1411,7 @@
         labels: labels,
         data: last30.map(function (h) { return h.iv_atm; }),
         curId: 'hist-iv-cur',
-        lineColor: '#1a5fd4', fillColor: 'rgba(26,95,212,0.10)',
+        lineColor: '#b06a1f', fillColor: 'rgba(176,106,31,0.10)',
         fmtCur: function (v) { return Number(v).toFixed(1) + '%'; },
         fmtTooltip: function (v) { return 'IV ' + Number(v).toFixed(1) + '%'; }
       });
@@ -1421,7 +1420,7 @@
         labels: labels,
         data: last30.map(function (h) { return h.skew_25d; }),
         curId: 'hist-skew-cur',
-        lineColor: '#117a44', fillColor: 'rgba(17,122,68,0.10)',
+        lineColor: '#2c7a57', fillColor: 'rgba(44,122,87,0.10)',
         fmtCur: function (v) { return (v > 0 ? '+' : '') + Number(v).toFixed(1); },
         fmtTooltip: function (v) { return 'Skew ' + (v > 0 ? '+' : '') + Number(v).toFixed(1); }
       });
@@ -1444,7 +1443,7 @@
       var data = last30.map(function (h) { return h.value; });
       var canvas = ensureCanvas('vix-history-wrap', 'vix-history-chart');
       createSparkline(canvas, 'vix-history', labels, data, {
-        lineColor: '#0e2240',
+        lineColor: '#16130d',
         fillColor: 'rgba(14,34,64,0.08)',
         fmtTooltip: function (v) { return 'VIX ' + Number(v).toFixed(2); }
       });

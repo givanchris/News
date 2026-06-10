@@ -28,28 +28,28 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500;1,6..72,600;1,6..72,700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="Assets/site.css" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --white:   #ffffff;
-      --off:     #f5f7fa;
-      --light:   #edf1f8;
-      --border:  #d8dfe9;
-      --navy:    #0e2240;
-      --navy2:   #152d52;
-      --navy3:   #1c3a68;
-      --blue:    #1a5fd4;
-      --blue2:   #2e74e8;
-      --blue-lt: #e8f0fc;
-      --text:    #0e2240;
-      --muted:   #5a6f87;
-      --green:   #117a44;
-      --green-lt:#e4f4ec;
-      --red:     #bf3232;
-      --red-lt:  #fce8e8;
+      --white:   #f7f4ec;
+      --off:     #efeadd;
+      --light:   #e7e0cf;
+      --border:  #e2dbca;
+      --navy:    #16130d;
+      --navy2:   #1f1b13;
+      --navy3:   #2b2619;
+      --blue:    #b06a1f;
+      --blue2:   #dc9038;
+      --blue-lt: #f3e4cc;
+      --text:    #1b1810;
+      --muted:   #6b6353;
+      --green:   #2c7a57;
+      --green-lt:#dfeee4;
+      --red:     #b23b2e;
+      --red-lt:  #f6e2dd;
     }
 
     html { scroll-behavior: smooth; }
@@ -57,7 +57,7 @@
     body {
       background: var(--white);
       color: var(--text);
-      font-family: 'Barlow', system-ui, sans-serif;
+      font-family: 'IBM Plex Sans', system-ui, sans-serif;
       font-size: 15px;
       line-height: 1.6;
       overflow-x: hidden;
@@ -72,8 +72,8 @@
       align-items: center;
       justify-content: space-between;
       padding: 0 3rem;
-      height: 56px;
-      background: rgba(255,255,255,0.94);
+      height: 60px;
+      background: rgba(247, 244, 236, 0.95);
       backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--border);
     }
@@ -84,9 +84,9 @@
       justify-content: center;
       width: 36px; height: 36px;
       border: 1.5px solid var(--navy);
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 0.9rem;
-      font-weight: 800;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
+      font-size: 0.72rem;
+      font-weight: 600;
       color: var(--navy);
       text-decoration: none;
       letter-spacing: 0.04em;
@@ -100,7 +100,7 @@
     }
 
     .nav-links a {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
       font-size: 0.7rem;
       font-weight: 500;
       color: var(--muted);
@@ -114,7 +114,7 @@
     .nav-links a.active { color: var(--navy); }
 
     .nav-cta {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
       font-size: 0.7rem;
       font-weight: 500;
       letter-spacing: 0.07em;
@@ -131,7 +131,7 @@
     /* ── BRIEF HERO ── */
     .brief-hero {
       background: var(--navy);
-      padding-top: 56px;
+      padding-top: 60px;
     }
 
     .brief-hero-inner {
@@ -146,7 +146,7 @@
     }
 
     .brief-eyebrow {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
       font-size: 0.65rem;
       letter-spacing: 0.12em;
       text-transform: uppercase;
@@ -166,12 +166,11 @@
     }
 
     .brief-hero-title {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 800;
+      font-family: 'Newsreader', Georgia, 'Times New Roman', serif;
+      font-weight: 700;
       font-size: clamp(3.5rem, 7vw, 6rem);
       line-height: 0.9;
-      letter-spacing: -0.01em;
-      text-transform: uppercase;
+      letter-spacing: -0.02em;
       color: var(--white);
       margin-bottom: 1.25rem;
     }
@@ -179,7 +178,7 @@
     .brief-hero-title span { color: var(--blue2); }
 
     .brief-subtitle {
-      font-family: 'Barlow', sans-serif;
+      font-family: 'IBM Plex Sans', system-ui, sans-serif;
       font-size: 0.82rem;
       font-weight: 400;
       color: rgba(255,255,255,0.38);
@@ -197,21 +196,21 @@
     }
 
     .brief-date-display {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
       font-size: 0.72rem;
       color: rgba(255,255,255,0.45);
       letter-spacing: 0.05em;
     }
 
     .brief-updated-display {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
       font-size: 0.68rem;
-      color: rgba(255,255,255,0.3);
+      color: rgba(244, 239, 227, 0.35);
       letter-spacing: 0.04em;
     }
 
     .brief-stale-badge {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
       font-size: 0.65rem;
       color: #e8a030;
       letter-spacing: 0.04em;
@@ -226,12 +225,12 @@
     }
 
     .brief-nav-tab {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
       font-size: 0.65rem;
       letter-spacing: 0.08em;
       text-transform: uppercase;
       padding: 0.5rem 1.1rem;
-      color: rgba(255,255,255,0.3);
+      color: rgba(244, 239, 227, 0.35);
       text-decoration: none;
       border-right: 1px solid var(--navy3);
       transition: all 0.15s;
@@ -251,7 +250,7 @@
       max-width: 1080px;
       margin: 0 auto;
       padding: 0.6rem 1.5rem 0;
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
       font-size: 0.58rem;
       letter-spacing: 0.12em;
       text-transform: uppercase;
@@ -275,7 +274,7 @@
     .mkt-tile:last-child { border-right: none; }
 
     .mkt-ticker {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
       font-size: 0.58rem;
       letter-spacing: 0.1em;
       text-transform: uppercase;
@@ -284,7 +283,7 @@
     }
 
     .mkt-price {
-      font-family: 'Barlow Condensed', sans-serif;
+      font-family: 'Newsreader', Georgia, 'Times New Roman', serif;
       font-size: 1.25rem;
       font-weight: 800;
       color: var(--white);
@@ -292,14 +291,14 @@
     }
 
     .mkt-chg {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
       font-size: 0.67rem;
       margin-top: 0.2rem;
     }
 
-    .up   { color: #3ec97a; }
-    .down { color: #e05a5a; }
-    .flat { color: rgba(255,255,255,0.3); }
+    .up   { color: #54b083; }
+    .down { color: #dd7163; }
+    .flat { color: rgba(244, 239, 227, 0.35); }
 
     /* ── BRIEF BODY (navy section) ── */
     .brief-section { background: var(--navy); }
@@ -322,11 +321,11 @@
     }
 
     .brief-col-label {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
       font-size: 0.6rem;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: rgba(255,255,255,0.3);
+      color: rgba(244, 239, 227, 0.35);
       margin-bottom: 1rem;
       padding-bottom: 0.6rem;
       border-bottom: 1px solid var(--navy3);
@@ -337,7 +336,7 @@
     }
 
     .brief-theme-chip {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
       font-size: 0.6rem;
       letter-spacing: 0.08em;
       text-transform: uppercase;
@@ -357,7 +356,7 @@
     .b-story:last-child { border-bottom: none; }
 
     .b-cat {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
       font-size: 0.57rem;
       letter-spacing: 0.08em;
       text-transform: uppercase;
@@ -366,7 +365,7 @@
     }
 
     .b-hed {
-      font-family: 'Barlow Condensed', sans-serif;
+      font-family: 'Newsreader', Georgia, 'Times New Roman', serif;
       font-size: 1.12rem;
       font-weight: 800;
       text-transform: uppercase;
@@ -392,7 +391,7 @@
     }
 
     .b-explain-toggle {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
       font-size: 0.57rem;
       letter-spacing: 0.08em;
       text-transform: uppercase;
@@ -431,7 +430,7 @@
     }
 
     .b-explain-label {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
       font-size: 0.55rem;
       letter-spacing: 0.1em;
       text-transform: uppercase;
@@ -457,7 +456,7 @@
     .sport-item:last-child { border-bottom: none; }
 
     .sport-name {
-      font-family: 'Barlow Condensed', sans-serif;
+      font-family: 'Newsreader', Georgia, 'Times New Roman', serif;
       font-size: 0.88rem;
       font-weight: 700;
       text-transform: uppercase;
@@ -470,15 +469,15 @@
     }
 
     .s-pill {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
       font-size: 0.55rem;
       padding: 0.1rem 0.32rem;
       border-radius: 2px;
       letter-spacing: 0.04em;
     }
 
-    .s-w  { background: rgba(62,201,122,0.15); color: #3ec97a; }
-    .s-l  { background: rgba(224,90,90,0.15);  color: #e05a5a; }
+    .s-w  { background: rgba(62,201,122,0.15); color: #54b083; }
+    .s-l  { background: rgba(224,90,90,0.15);  color: #dd7163; }
     .s-up { background: rgba(46,116,232,0.15); color: var(--blue2); }
 
     .sport-detail {
@@ -494,11 +493,11 @@
       border-top: 1px solid var(--navy3);
     }
     .sports-headlines-label {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
       font-size: 0.6rem;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: rgba(255,255,255,0.3);
+      color: rgba(244, 239, 227, 0.35);
       margin-bottom: 0.75rem;
     }
     .sports-headline {
@@ -512,7 +511,7 @@
     }
     .sports-headline:last-child { border-bottom: none; }
     .sports-headline .sh-league {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
       font-size: 0.58rem;
       color: var(--blue2);
       letter-spacing: 0.06em;
@@ -533,7 +532,7 @@
     }
 
     .watch-label {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
       font-size: 0.6rem;
       letter-spacing: 0.1em;
       text-transform: uppercase;
@@ -559,7 +558,7 @@
     .watch-item::before {
       content: '→';
       color: var(--blue2);
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
       font-size: 0.65rem;
     }
 
@@ -585,7 +584,7 @@
     }
 
     .deep-dive-eyebrow {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
       font-size: 0.62rem;
       letter-spacing: 0.12em;
       text-transform: uppercase;
@@ -605,7 +604,7 @@
     }
 
     .deep-dive-label {
-      font-family: 'Barlow Condensed', sans-serif;
+      font-family: 'Newsreader', Georgia, 'Times New Roman', serif;
       font-size: 2rem;
       font-weight: 800;
       text-transform: uppercase;
@@ -618,7 +617,7 @@
     .deep-dive-label span { color: var(--blue); }
 
     .deep-dive-readtime {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
       font-size: 0.6rem;
       letter-spacing: 0.08em;
       text-transform: uppercase;
@@ -629,7 +628,7 @@
     }
 
     .deep-dive-title {
-      font-family: 'Barlow Condensed', sans-serif;
+      font-family: 'Newsreader', Georgia, 'Times New Roman', serif;
       font-size: clamp(1.75rem, 3vw, 2.5rem);
       font-weight: 800;
       text-transform: uppercase;
@@ -652,7 +651,7 @@
 
     /* ── LOADING / ERROR ── */
     .brief-no-data {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
       font-size: 0.72rem;
       color: rgba(255,255,255,0.2);
       padding: 1.5rem 0;
@@ -674,7 +673,7 @@
     }
 
     .ticker-track span {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
       font-size: 0.65rem;
       letter-spacing: 0.08em;
       text-transform: uppercase;
@@ -700,14 +699,14 @@
     }
 
     footer .f-left, footer .f-right {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
       font-size: 0.65rem;
       letter-spacing: 0.05em;
       color: rgba(255,255,255,0.25);
     }
 
     footer .f-logo {
-      font-family: 'Barlow Condensed', sans-serif;
+      font-family: 'Newsreader', Georgia, 'Times New Roman', serif;
       font-size: 1.1rem;
       font-weight: 800;
       color: rgba(255,255,255,0.5);
@@ -739,7 +738,7 @@
   <div class="brief-hero-inner">
     <div class="brief-hero-left">
       <div class="brief-eyebrow">Markets · Macro · Geopolitics</div>
-      <h1 class="brief-hero-title">DAILY<br><span>BRIEF</span></h1>
+      <h1 class="brief-hero-title">Daily<br><span>Brief</span></h1>
       <p class="brief-subtitle">A concise daily read on markets, macro, and what matters.</p>
       <div class="brief-hero-meta">
         <span class="brief-date-display" id="brief-date">—</span>

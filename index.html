@@ -28,28 +28,28 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500;1,6..72,600;1,6..72,700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="Assets/site.css" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --white:   #ffffff;
-      --off:     #f5f7fa;
-      --light:   #edf1f8;
-      --border:  #d8dfe9;
-      --navy:    #0e2240;
-      --navy2:   #152d52;
-      --navy3:   #1c3a68;
-      --blue:    #1a5fd4;
-      --blue2:   #2e74e8;
-      --blue-lt: #e8f0fc;
-      --text:    #0e2240;
-      --muted:   #5a6f87;
-      --green:   #117a44;
-      --green-lt:#e4f4ec;
-      --red:     #bf3232;
-      --red-lt:  #fce8e8;
+      --white:   #f7f4ec;
+      --off:     #efeadd;
+      --light:   #e7e0cf;
+      --border:  #e2dbca;
+      --navy:    #16130d;
+      --navy2:   #1f1b13;
+      --navy3:   #2b2619;
+      --blue:    #b06a1f;
+      --blue2:   #dc9038;
+      --blue-lt: #f3e4cc;
+      --text:    #1b1810;
+      --muted:   #6b6353;
+      --green:   #2c7a57;
+      --green-lt:#dfeee4;
+      --red:     #b23b2e;
+      --red-lt:  #f6e2dd;
     }
 
     html { scroll-behavior: smooth; }
@@ -57,7 +57,7 @@
     body {
       background: var(--white);
       color: var(--text);
-      font-family: 'Barlow', system-ui, sans-serif;
+      font-family: 'IBM Plex Sans', system-ui, sans-serif;
       font-size: 15px;
       line-height: 1.6;
       overflow-x: hidden;
@@ -72,8 +72,8 @@
       align-items: center;
       justify-content: space-between;
       padding: 0 3rem;
-      height: 56px;
-      background: rgba(255,255,255,0.94);
+      height: 60px;
+      background: rgba(247, 244, 236, 0.95);
       backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--border);
     }
@@ -84,9 +84,9 @@
       justify-content: center;
       width: 36px; height: 36px;
       border: 1.5px solid var(--navy);
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 0.9rem;
-      font-weight: 800;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
+      font-size: 0.72rem;
+      font-weight: 600;
       color: var(--navy);
       text-decoration: none;
       letter-spacing: 0.04em;
@@ -100,7 +100,7 @@
     }
 
     .nav-links a {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
       font-size: 0.7rem;
       font-weight: 500;
       color: var(--muted);
@@ -113,7 +113,7 @@
     .nav-links a:hover { color: var(--navy); }
 
     .nav-cta {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
       font-size: 0.7rem;
       font-weight: 500;
       letter-spacing: 0.07em;
@@ -145,11 +145,11 @@
       max-width: 1080px;
       margin: 0 auto;
       width: 100%;
-      padding-top: 56px;
+      padding-top: 60px;
     }
 
     .hero-eyebrow {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
       font-size: 0.7rem;
       color: var(--blue);
       letter-spacing: 0.12em;
@@ -169,11 +169,11 @@
     }
 
     .hero-name {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 800;
-      font-size: clamp(5.5rem, 11vw, 9.5rem);
-      line-height: 0.88;
-      letter-spacing: -0.01em;
+      font-family: 'Newsreader', Georgia, 'Times New Roman', serif;
+      font-weight: 700;
+      font-size: clamp(3.75rem, 8.5vw, 7.5rem);
+      line-height: 0.9;
+      letter-spacing: -0.02em;
       text-transform: uppercase;
       color: var(--navy);
       margin-bottom: 2.5rem;
@@ -215,7 +215,7 @@
     }
 
     .tag {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
       font-size: 0.65rem;
       letter-spacing: 0.06em;
       text-transform: uppercase;
@@ -231,7 +231,7 @@
     }
 
     .btn {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
       font-size: 0.7rem;
       font-weight: 500;
       letter-spacing: 0.07em;
@@ -289,7 +289,7 @@
       align-items: center;
       justify-content: center;
       color: var(--navy3);
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
       font-size: 0.7rem;
       letter-spacing: 0.06em;
     }
@@ -301,7 +301,7 @@
     }
 
     .about-label {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
       font-size: 0.65rem;
       letter-spacing: 0.12em;
       text-transform: uppercase;
@@ -320,14 +320,13 @@
     }
 
     .about-bio-cell h2 {
-      font-family: 'Barlow Condensed', sans-serif;
+      font-family: 'Newsreader', Georgia, 'Times New Roman', serif;
       font-size: 2.25rem;
-      font-weight: 800;
-      text-transform: uppercase;
+      font-weight: 600;
       color: var(--white);
-      letter-spacing: 0.01em;
+      letter-spacing: -0.01em;
       margin-bottom: 1.5rem;
-      line-height: 1;
+      line-height: 1.1;
     }
 
     .about-bio-cell h2 span { color: var(--blue2); }
@@ -360,7 +359,7 @@
     .fact-tile:not(:first-child):not(:last-child) { padding-left: 1.5rem; }
 
     .fact-label {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
       font-size: 0.6rem;
       letter-spacing: 0.1em;
       text-transform: uppercase;
@@ -369,7 +368,7 @@
     }
 
     .fact-value {
-      font-family: 'Barlow Condensed', sans-serif;
+      font-family: 'Newsreader', Georgia, 'Times New Roman', serif;
       font-size: 1.05rem;
       font-weight: 700;
       text-transform: uppercase;
@@ -386,7 +385,7 @@
     .inner { max-width: 1080px; margin: 0 auto; }
 
     .section-eyebrow {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
       font-size: 0.65rem;
       letter-spacing: 0.12em;
       text-transform: uppercase;
@@ -408,12 +407,11 @@
     }
 
     .section-heading {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 800;
-      font-size: clamp(2.5rem, 5vw, 4rem);
-      text-transform: uppercase;
-      letter-spacing: -0.01em;
-      line-height: 0.95;
+      font-family: 'Newsreader', Georgia, 'Times New Roman', serif;
+      font-weight: 600;
+      font-size: clamp(2.25rem, 5vw, 3.75rem);
+      letter-spacing: -0.02em;
+      line-height: 1.0;
       margin-bottom: 2.5rem;
     }
 
@@ -438,7 +436,7 @@
     .project-card:hover { background: var(--off); }
 
     .project-cat {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
       font-size: 0.6rem;
       letter-spacing: 0.08em;
       text-transform: uppercase;
@@ -447,10 +445,9 @@
     }
 
     .project-card h3 {
-      font-family: 'Barlow Condensed', sans-serif;
+      font-family: 'Newsreader', Georgia, 'Times New Roman', serif;
       font-size: 1.3rem;
-      font-weight: 800;
-      text-transform: uppercase;
+      font-weight: 600;
       color: var(--navy);
     }
 
@@ -471,7 +468,7 @@
     }
 
     .placeholder-card span {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
       font-size: 0.65rem;
       letter-spacing: 0.08em;
       text-transform: uppercase;
@@ -493,7 +490,7 @@
     }
 
     .brief-badge {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
       font-size: 0.62rem;
       letter-spacing: 0.1em;
       text-transform: uppercase;
@@ -504,7 +501,7 @@
     }
 
     .brief-date {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
       font-size: 0.7rem;
       color: rgba(255,255,255,0.35);
       letter-spacing: 0.04em;
@@ -526,7 +523,7 @@
     .mkt-tile:last-child { border-right: none; }
 
     .mkt-ticker {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
       font-size: 0.58rem;
       letter-spacing: 0.1em;
       text-transform: uppercase;
@@ -535,7 +532,7 @@
     }
 
     .mkt-price {
-      font-family: 'Barlow Condensed', sans-serif;
+      font-family: 'Newsreader', Georgia, 'Times New Roman', serif;
       font-size: 1.2rem;
       font-weight: 800;
       color: var(--white);
@@ -543,14 +540,14 @@
     }
 
     .mkt-chg {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
       font-size: 0.67rem;
       margin-top: 0.2rem;
     }
 
-    .up   { color: #3ec97a; }
-    .down { color: #e05a5a; }
-    .flat { color: rgba(255,255,255,0.3); }
+    .up   { color: #54b083; }
+    .down { color: #dd7163; }
+    .flat { color: rgba(244, 239, 227, 0.35); }
 
     /* Brief body */
     .brief-body {
@@ -570,7 +567,7 @@
     }
 
     .brief-col-label {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
       font-size: 0.6rem;
       letter-spacing: 0.1em;
       text-transform: uppercase;
@@ -588,7 +585,7 @@
     .b-story:last-child { border-bottom: none; }
 
     .b-cat {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
       font-size: 0.57rem;
       letter-spacing: 0.08em;
       text-transform: uppercase;
@@ -597,7 +594,7 @@
     }
 
     .b-hed {
-      font-family: 'Barlow Condensed', sans-serif;
+      font-family: 'Newsreader', Georgia, 'Times New Roman', serif;
       font-size: 1rem;
       font-weight: 800;
       text-transform: uppercase;
@@ -621,7 +618,7 @@
     .sport-item:last-child { border-bottom: none; }
 
     .sport-name {
-      font-family: 'Barlow Condensed', sans-serif;
+      font-family: 'Newsreader', Georgia, 'Times New Roman', serif;
       font-size: 0.88rem;
       font-weight: 700;
       text-transform: uppercase;
@@ -634,16 +631,16 @@
     }
 
     .s-pill {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
       font-size: 0.55rem;
       padding: 0.1rem 0.32rem;
       border-radius: 2px;
       letter-spacing: 0.04em;
     }
 
-    .s-w   { background: rgba(62,201,122,0.15); color: #3ec97a; }
-    .s-l   { background: rgba(224,90,90,0.15);  color: #e05a5a; }
-    .s-up  { background: rgba(46,116,232,0.15); color: var(--blue2); }
+    .s-w   { background: rgba(44,122,87,0.15);  color: var(--green); }
+    .s-l   { background: rgba(178,59,46,0.15);  color: var(--red); }
+    .s-up  { background: rgba(220,144,56,0.15); color: var(--blue2); }
 
     .sport-detail {
       font-size: 0.76rem;
@@ -663,7 +660,7 @@
     }
 
     .watch-label {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
       font-size: 0.6rem;
       letter-spacing: 0.1em;
       text-transform: uppercase;
@@ -689,7 +686,7 @@
     .watch-item::before {
       content: '→';
       color: var(--blue2);
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
       font-size: 0.65rem;
     }
 
@@ -702,7 +699,7 @@
     }
 
     .resume-col-label {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
       font-size: 0.62rem;
       letter-spacing: 0.1em;
       text-transform: uppercase;
@@ -715,7 +712,7 @@
     .re-entry { margin-bottom: 1.75rem; }
 
     .re-date {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
       font-size: 0.62rem;
       letter-spacing: 0.06em;
       color: var(--blue);
@@ -723,12 +720,11 @@
     }
 
     .re-entry h3 {
-      font-family: 'Barlow Condensed', sans-serif;
+      font-family: 'Newsreader', Georgia, 'Times New Roman', serif;
       font-size: 1.25rem;
-      font-weight: 800;
-      text-transform: uppercase;
+      font-weight: 600;
       color: var(--navy);
-      letter-spacing: 0.01em;
+      letter-spacing: -0.01em;
     }
 
     .re-org {
@@ -757,12 +753,12 @@
     }
 
     .contact-heading {
-      font-family: 'Barlow Condensed', sans-serif;
+      font-family: 'Newsreader', Georgia, 'Times New Roman', serif;
       font-size: clamp(2.5rem, 5vw, 4.5rem);
-      font-weight: 800;
-      text-transform: uppercase;
+      font-weight: 600;
       color: var(--white);
-      line-height: 0.95;
+      line-height: 1.0;
+      letter-spacing: -0.02em;
       margin-bottom: 1.5rem;
     }
 
@@ -790,16 +786,15 @@
     .contact-link:hover { opacity: 0.65; }
 
     .cl-name {
-      font-family: 'Barlow Condensed', sans-serif;
+      font-family: 'Newsreader', Georgia, 'Times New Roman', serif;
       font-size: 1.3rem;
-      font-weight: 800;
-      text-transform: uppercase;
+      font-weight: 500;
       color: var(--white);
-      letter-spacing: 0.01em;
+      letter-spacing: -0.01em;
     }
 
     .cl-action {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
       font-size: 0.62rem;
       letter-spacing: 0.07em;
       text-transform: uppercase;
@@ -813,7 +808,7 @@
     }
 
     .info-card-label {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
       font-size: 0.6rem;
       letter-spacing: 0.1em;
       text-transform: uppercase;
@@ -822,7 +817,7 @@
     }
 
     .info-card-city {
-      font-family: 'Barlow Condensed', sans-serif;
+      font-family: 'Newsreader', Georgia, 'Times New Roman', serif;
       font-size: 1.8rem;
       font-weight: 800;
       text-transform: uppercase;
@@ -851,7 +846,7 @@
     }
 
     .ticker-track span {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
       font-size: 0.65rem;
       letter-spacing: 0.08em;
       text-transform: uppercase;
@@ -877,14 +872,14 @@
     }
 
     footer .f-left, footer .f-right {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
       font-size: 0.65rem;
       letter-spacing: 0.05em;
       color: rgba(255,255,255,0.25);
     }
 
     footer .f-logo {
-      font-family: 'Barlow Condensed', sans-serif;
+      font-family: 'Newsreader', Georgia, 'Times New Roman', serif;
       font-size: 1.1rem;
       font-weight: 800;
       color: rgba(255,255,255,0.5);
@@ -936,7 +931,7 @@
     .pcard-status {
       position: absolute;
       top: 0.85rem; right: 0.85rem;
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
       font-size: 0.52rem;
       letter-spacing: 0.1em;
       text-transform: uppercase;
@@ -945,11 +940,11 @@
       color: rgba(255,255,255,0.7);
       background: rgba(255,255,255,0.04);
     }
-    .pcard-status.live { color: #3ec97a; border-color: rgba(62,201,122,0.4); }
-    .pcard-status.wip  { color: #e8a030; border-color: rgba(232,160,48,0.4); }
+    .pcard-status.live { color: var(--green); border-color: rgba(44,122,87,0.4); }
+    .pcard-status.wip  { color: var(--amber); border-color: rgba(176,106,31,0.4); }
     .pcard-body { padding: 1.6rem 1.7rem 0.4rem; flex: 1; }
     .pcard-cat {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
       font-size: 0.6rem;
       letter-spacing: 0.09em;
       text-transform: uppercase;
@@ -957,12 +952,11 @@
       margin-bottom: 0.55rem;
     }
     .pcard-body h3 {
-      font-family: 'Barlow Condensed', sans-serif;
+      font-family: 'Newsreader', Georgia, 'Times New Roman', serif;
       font-size: 1.55rem;
-      font-weight: 800;
-      text-transform: uppercase;
+      font-weight: 600;
       color: var(--navy);
-      line-height: 1;
+      line-height: 1.1;
       margin-bottom: 0.6rem;
     }
     .pcard-body p {
@@ -982,7 +976,7 @@
       justify-content: space-between;
       padding: 1.2rem 1.7rem 1.4rem;
       margin-top: 1rem;
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
       font-size: 0.62rem;
       letter-spacing: 0.08em;
       text-transform: uppercase;
@@ -1022,7 +1016,7 @@
       padding: 0.5rem 0.65rem;
     }
     .output-caption {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
       font-size: 0.6rem;
       letter-spacing: 0.06em;
       color: rgba(255,255,255,0.4);
@@ -1030,7 +1024,7 @@
     }
     .output-read { padding: 2rem 2.25rem; display: flex; flex-direction: column; }
     .output-read .o-label {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
       font-size: 0.6rem;
       letter-spacing: 0.12em;
       text-transform: uppercase;
@@ -1038,12 +1032,12 @@
       margin-bottom: 0.9rem;
     }
     .output-read h3 {
-      font-family: 'Barlow Condensed', sans-serif;
+      font-family: 'Newsreader', Georgia, 'Times New Roman', serif;
       font-size: 1.7rem;
-      font-weight: 800;
-      text-transform: uppercase;
+      font-weight: 600;
       color: var(--white);
-      line-height: 1.05;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
       margin-bottom: 1rem;
     }
     .output-read p {
@@ -1062,16 +1056,16 @@
       gap: 0.5rem;
     }
     .output-stat .v {
-      font-family: 'Barlow Condensed', sans-serif;
+      font-family: 'Newsreader', Georgia, 'Times New Roman', serif;
       font-size: 1.75rem;
       font-weight: 800;
       color: var(--white);
       line-height: 1;
     }
-    .output-stat .v.up   { color: #3ec97a; }
-    .output-stat .v.down { color: #e05a5a; }
+    .output-stat .v.up   { color: #54b083; }
+    .output-stat .v.down { color: #dd7163; }
     .output-stat .l {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
       font-size: 0.55rem;
       letter-spacing: 0.06em;
       text-transform: uppercase;
@@ -1110,20 +1104,20 @@
 
     /* ── BRIEF META ── */
     .brief-updated {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
       font-size: 0.65rem;
       letter-spacing: 0.04em;
       color: rgba(255,255,255,0.35);
     }
     .brief-stale {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
       font-size: 0.65rem;
       letter-spacing: 0.04em;
       color: #e8a030;
       margin-left: 0.75rem;
     }
     .brief-no-data {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
       font-size: 0.75rem;
       color: rgba(255,255,255,0.25);
       padding: 2rem 0;
@@ -1235,7 +1229,7 @@
 <div class="section-white" id="projects">
   <div class="inner">
     <div class="section-eyebrow">Projects</div>
-    <div class="section-heading" style="color:var(--navy);">SELECTED WORK</div>
+    <div class="section-heading" style="color:var(--navy);">Selected Work</div>
     <div class="cards-grid">
 
       <!-- Portfolio Lab -->
@@ -1243,10 +1237,10 @@
         <div class="pcard-thumb">
           <span class="pcard-status live">Live demo</span>
           <svg viewBox="0 0 320 180" preserveAspectRatio="xMidYMid slice" style="width:100%;height:100%;display:block" aria-hidden="true">
-            <rect width="320" height="180" fill="#0e2240"/>
-            <path d="M 20 140 L 76 116 L 132 90 L 188 64 L 244 40 L 300 28 L 300 153 L 244 152 L 188 151 L 132 149 L 76 145 L 20 140 Z" fill="#2e74e8" opacity="0.22"/>
-            <path d="M 20 140 L 76 132 L 132 123 L 188 113 L 244 103 L 300 93" fill="none" stroke="#2e74e8" stroke-width="2.4"/>
-            <text x="20" y="28" font-family="'JetBrains Mono', monospace" font-size="10" letter-spacing="0.12em" fill="#2e74e8">QUANT · MONTE CARLO</text>
+            <rect width="320" height="180" fill="#16130d"/>
+            <path d="M 20 140 L 76 116 L 132 90 L 188 64 L 244 40 L 300 28 L 300 153 L 244 152 L 188 151 L 132 149 L 76 145 L 20 140 Z" fill="#dc9038" opacity="0.22"/>
+            <path d="M 20 140 L 76 132 L 132 123 L 188 113 L 244 103 L 300 93" fill="none" stroke="#dc9038" stroke-width="2.4"/>
+            <text x="20" y="28" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="10" letter-spacing="0.12em" fill="#dc9038">QUANT · MONTE CARLO</text>
           </svg>
         </div>
         <div class="pcard-body">
@@ -1267,11 +1261,11 @@
         <div class="pcard-thumb">
           <span class="pcard-status wip">In progress</span>
           <svg viewBox="0 0 320 180" preserveAspectRatio="xMidYMid slice" style="width:100%;height:100%;display:block" aria-hidden="true">
-            <rect width="320" height="180" fill="#0e2240"/>
+            <rect width="320" height="180" fill="#16130d"/>
             <path d="M 20 140 L 90 140 L 90 128 L 160 128 L 160 116 L 230 116 L 230 104 L 300 104" fill="none" stroke="#1c3a68" stroke-width="1.5"/>
-            <path d="M 20 120 L 70 108 L 120 116 L 170 100 L 220 88 L 270 70 L 300 60" fill="none" stroke="#2e74e8" stroke-width="2.4"/>
-            <circle cx="20" cy="120" r="2.6" fill="#2e74e8"/><circle cx="70" cy="108" r="2.6" fill="#2e74e8"/><circle cx="120" cy="116" r="2.6" fill="#2e74e8"/><circle cx="170" cy="100" r="2.6" fill="#2e74e8"/><circle cx="220" cy="88" r="2.6" fill="#2e74e8"/><circle cx="270" cy="70" r="2.6" fill="#2e74e8"/><circle cx="300" cy="60" r="2.6" fill="#2e74e8"/>
-            <text x="20" y="28" font-family="'JetBrains Mono', monospace" font-size="10" letter-spacing="0.12em" fill="#2e74e8">RATES · CURVE</text>
+            <path d="M 20 120 L 70 108 L 120 116 L 170 100 L 220 88 L 270 70 L 300 60" fill="none" stroke="#dc9038" stroke-width="2.4"/>
+            <circle cx="20" cy="120" r="2.6" fill="#dc9038"/><circle cx="70" cy="108" r="2.6" fill="#dc9038"/><circle cx="120" cy="116" r="2.6" fill="#dc9038"/><circle cx="170" cy="100" r="2.6" fill="#dc9038"/><circle cx="220" cy="88" r="2.6" fill="#dc9038"/><circle cx="270" cy="70" r="2.6" fill="#dc9038"/><circle cx="300" cy="60" r="2.6" fill="#dc9038"/>
+            <text x="20" y="28" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="10" letter-spacing="0.12em" fill="#dc9038">RATES · CURVE</text>
           </svg>
         </div>
         <div class="pcard-body">
@@ -1291,10 +1285,10 @@
         <div class="pcard-thumb">
           <span class="pcard-status live">Live data</span>
           <svg viewBox="0 0 320 180" preserveAspectRatio="xMidYMid slice" style="width:100%;height:100%;display:block" aria-hidden="true">
-            <rect width="320" height="180" fill="#0e2240"/>
+            <rect width="320" height="180" fill="#16130d"/>
             <line x1="20" y1="110" x2="300" y2="110" stroke="#1c3a68" stroke-width="1"/>
-            <rect x="30" y="110" width="26" height="54" fill="#e05a5a" opacity="0.85"/><rect x="64" y="110" width="26" height="43" fill="#e05a5a" opacity="0.85"/><rect x="98" y="110" width="26" height="58" fill="#e05a5a" opacity="0.85"/><rect x="132" y="110" width="26" height="25" fill="#e05a5a" opacity="0.85"/><rect x="166" y="99" width="26" height="11" fill="#2e74e8" opacity="0.85"/><rect x="200" y="70" width="26" height="40" fill="#2e74e8" opacity="0.85"/><rect x="234" y="56" width="26" height="54" fill="#2e74e8" opacity="0.85"/><rect x="268" y="78" width="26" height="32" fill="#2e74e8" opacity="0.85"/>
-            <text x="20" y="28" font-family="'JetBrains Mono', monospace" font-size="10" letter-spacing="0.12em" fill="#2e74e8">OPTIONS · GEX</text>
+            <rect x="30" y="110" width="26" height="54" fill="#b23b2e" opacity="0.85"/><rect x="64" y="110" width="26" height="43" fill="#b23b2e" opacity="0.85"/><rect x="98" y="110" width="26" height="58" fill="#b23b2e" opacity="0.85"/><rect x="132" y="110" width="26" height="25" fill="#b23b2e" opacity="0.85"/><rect x="166" y="99" width="26" height="11" fill="#dc9038" opacity="0.85"/><rect x="200" y="70" width="26" height="40" fill="#dc9038" opacity="0.85"/><rect x="234" y="56" width="26" height="54" fill="#dc9038" opacity="0.85"/><rect x="268" y="78" width="26" height="32" fill="#dc9038" opacity="0.85"/>
+            <text x="20" y="28" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="10" letter-spacing="0.12em" fill="#dc9038">OPTIONS · GEX</text>
           </svg>
         </div>
         <div class="pcard-body">
@@ -1315,10 +1309,10 @@
         <div class="pcard-thumb">
           <span class="pcard-status live">Updated 7PM MT</span>
           <svg viewBox="0 0 320 180" preserveAspectRatio="xMidYMid slice" style="width:100%;height:100%;display:block" aria-hidden="true">
-            <rect width="320" height="180" fill="#0e2240"/>
+            <rect width="320" height="180" fill="#16130d"/>
             <line x1="20" y1="160" x2="300" y2="160" stroke="#1c3a68" stroke-width="1"/>
-            <rect x="26" y="120" width="14" height="40" fill="#2e74e8" opacity="0.35"/><rect x="52" y="90" width="14" height="70" fill="#2e74e8" opacity="0.40"/><rect x="78" y="105" width="14" height="55" fill="#2e74e8" opacity="0.45"/><rect x="104" y="70" width="14" height="90" fill="#2e74e8" opacity="0.50"/><rect x="130" y="98" width="14" height="62" fill="#2e74e8" opacity="0.55"/><rect x="156" y="50" width="14" height="110" fill="#2e74e8" opacity="0.60"/><rect x="182" y="80" width="14" height="80" fill="#2e74e8" opacity="0.65"/><rect x="208" y="30" width="14" height="130" fill="#2e74e8" opacity="0.70"/><rect x="234" y="60" width="14" height="100" fill="#2e74e8" opacity="0.75"/><rect x="260" y="10" width="14" height="150" fill="#2e74e8" opacity="0.80"/>
-            <text x="20" y="28" font-family="'JetBrains Mono', monospace" font-size="10" letter-spacing="0.12em" fill="#2e74e8">DAILY · FEED</text>
+            <rect x="26" y="120" width="14" height="40" fill="#dc9038" opacity="0.35"/><rect x="52" y="90" width="14" height="70" fill="#dc9038" opacity="0.40"/><rect x="78" y="105" width="14" height="55" fill="#dc9038" opacity="0.45"/><rect x="104" y="70" width="14" height="90" fill="#dc9038" opacity="0.50"/><rect x="130" y="98" width="14" height="62" fill="#dc9038" opacity="0.55"/><rect x="156" y="50" width="14" height="110" fill="#dc9038" opacity="0.60"/><rect x="182" y="80" width="14" height="80" fill="#dc9038" opacity="0.65"/><rect x="208" y="30" width="14" height="130" fill="#dc9038" opacity="0.70"/><rect x="234" y="60" width="14" height="100" fill="#dc9038" opacity="0.75"/><rect x="260" y="10" width="14" height="150" fill="#dc9038" opacity="0.80"/>
+            <text x="20" y="28" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="10" letter-spacing="0.12em" fill="#dc9038">DAILY · FEED</text>
           </svg>
         </div>
         <div class="pcard-body">
@@ -1343,7 +1337,7 @@
 <div class="section-navy" id="output">
   <div class="inner">
     <div class="section-eyebrow section-eyebrow-light">Selected Output</div>
-    <div class="section-heading" style="color:var(--white);">WHAT THE WORK <span style="color:var(--blue2);">PRODUCES</span></div>
+    <div class="section-heading" style="color:var(--white);">What the Work <span style="color:var(--blue2);">Produces</span></div>
     <div class="output-grid">
 
       <!-- the chart -->
@@ -1351,18 +1345,18 @@
         <div class="chart-frame">
           <svg viewBox="0 0 620 340" role="img" aria-label="Monte Carlo simulation fan chart of portfolio value over 5 years" preserveAspectRatio="xMidYMid meet" style="width:100%;height:auto;display:block">
             <rect x="0" y="0" width="620" height="340" fill="white"/>
-            <line x1="58" y1="279.9" x2="592" y2="279.9" stroke="#d8dfe9" stroke-width="1"/><text x="50" y="282.9" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="9" fill="#5a6f87">60</text><line x1="58" y1="231.1" x2="592" y2="231.1" stroke="#d8dfe9" stroke-width="1"/><text x="50" y="234.1" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="9" fill="#5a6f87">90</text><line x1="58" y1="182.4" x2="592" y2="182.4" stroke="#d8dfe9" stroke-width="1"/><text x="50" y="185.4" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="9" fill="#5a6f87">120</text><line x1="58" y1="133.6" x2="592" y2="133.6" stroke="#d8dfe9" stroke-width="1"/><text x="50" y="136.6" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="9" fill="#5a6f87">150</text><line x1="58" y1="84.9" x2="592" y2="84.9" stroke="#d8dfe9" stroke-width="1"/><text x="50" y="87.9" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="9" fill="#5a6f87">180</text><line x1="58" y1="36.1" x2="592" y2="36.1" stroke="#d8dfe9" stroke-width="1"/><text x="50" y="39.1" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="9" fill="#5a6f87">210</text>
-            <path d="M 58.0 214.9 L 164.8 171.0 L 271.6 130.4 L 378.4 91.4 L 485.2 54.0 L 592.0 31.2 L 592.0 236.8 L 485.2 235.2 L 378.4 232.8 L 271.6 228.7 L 164.8 223.0 L 58.0 214.9 Z" fill="#2e74e8" opacity="0.10"/>
-            <path d="M 58.0 214.9 L 164.8 188.9 L 271.6 164.5 L 378.4 138.5 L 485.2 110.9 L 592.0 81.6 L 592.0 198.6 L 485.2 202.7 L 378.4 206.8 L 271.6 210.0 L 164.8 212.4 L 58.0 214.9 Z" fill="#2e74e8" opacity="0.20"/>
-            <path d="M 58.0 214.9 L 164.8 201.1 L 271.6 186.4 L 378.4 171.0 L 485.2 154.8 L 592.0 137.7" fill="none" stroke="#1a5fd4" stroke-width="2.4"/>
-            <circle cx="592.0" cy="137.7" r="3.4" fill="#1a5fd4"/>
-            <line x1="58" y1="28" x2="58" y2="288" stroke="#0e2240" stroke-width="1"/>
-            <line x1="58" y1="288" x2="592" y2="288" stroke="#0e2240" stroke-width="1"/>
-            <text x="58.0" y="310" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="#5a6f87">Y0</text><text x="164.8" y="310" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="#5a6f87">Y1</text><text x="271.6" y="310" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="#5a6f87">Y2</text><text x="378.4" y="310" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="#5a6f87">Y3</text><text x="485.2" y="310" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="#5a6f87">Y4</text><text x="592.0" y="310" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="#5a6f87">Y5</text>
-            <text x="588.0" y="25.2" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="9" fill="#2e74e8">p95</text>
-            <text x="588.0" y="129.7" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="bold" fill="#1a5fd4">median</text>
-            <text x="588.0" y="248.8" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="9" fill="#5a6f87">p5</text>
-            <text x="58" y="16" font-family="'JetBrains Mono', monospace" font-size="9" letter-spacing="0.1em" fill="#0e2240">INDEXED VALUE · START = 100 · 10,000 PATHS</text>
+            <line x1="58" y1="279.9" x2="592" y2="279.9" stroke="#d8dfe9" stroke-width="1"/><text x="50" y="282.9" text-anchor="end" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" fill="#5a6f87">60</text><line x1="58" y1="231.1" x2="592" y2="231.1" stroke="#d8dfe9" stroke-width="1"/><text x="50" y="234.1" text-anchor="end" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" fill="#5a6f87">90</text><line x1="58" y1="182.4" x2="592" y2="182.4" stroke="#d8dfe9" stroke-width="1"/><text x="50" y="185.4" text-anchor="end" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" fill="#5a6f87">120</text><line x1="58" y1="133.6" x2="592" y2="133.6" stroke="#d8dfe9" stroke-width="1"/><text x="50" y="136.6" text-anchor="end" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" fill="#5a6f87">150</text><line x1="58" y1="84.9" x2="592" y2="84.9" stroke="#d8dfe9" stroke-width="1"/><text x="50" y="87.9" text-anchor="end" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" fill="#5a6f87">180</text><line x1="58" y1="36.1" x2="592" y2="36.1" stroke="#d8dfe9" stroke-width="1"/><text x="50" y="39.1" text-anchor="end" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" fill="#5a6f87">210</text>
+            <path d="M 58.0 214.9 L 164.8 171.0 L 271.6 130.4 L 378.4 91.4 L 485.2 54.0 L 592.0 31.2 L 592.0 236.8 L 485.2 235.2 L 378.4 232.8 L 271.6 228.7 L 164.8 223.0 L 58.0 214.9 Z" fill="#dc9038" opacity="0.10"/>
+            <path d="M 58.0 214.9 L 164.8 188.9 L 271.6 164.5 L 378.4 138.5 L 485.2 110.9 L 592.0 81.6 L 592.0 198.6 L 485.2 202.7 L 378.4 206.8 L 271.6 210.0 L 164.8 212.4 L 58.0 214.9 Z" fill="#dc9038" opacity="0.20"/>
+            <path d="M 58.0 214.9 L 164.8 201.1 L 271.6 186.4 L 378.4 171.0 L 485.2 154.8 L 592.0 137.7" fill="none" stroke="#b06a1f" stroke-width="2.4"/>
+            <circle cx="592.0" cy="137.7" r="3.4" fill="#b06a1f"/>
+            <line x1="58" y1="28" x2="58" y2="288" stroke="#16130d" stroke-width="1"/>
+            <line x1="58" y1="288" x2="592" y2="288" stroke="#16130d" stroke-width="1"/>
+            <text x="58.0" y="310" text-anchor="middle" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" fill="#5a6f87">Y0</text><text x="164.8" y="310" text-anchor="middle" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" fill="#5a6f87">Y1</text><text x="271.6" y="310" text-anchor="middle" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" fill="#5a6f87">Y2</text><text x="378.4" y="310" text-anchor="middle" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" fill="#5a6f87">Y3</text><text x="485.2" y="310" text-anchor="middle" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" fill="#5a6f87">Y4</text><text x="592.0" y="310" text-anchor="middle" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" fill="#5a6f87">Y5</text>
+            <text x="588.0" y="25.2" text-anchor="end" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" fill="#dc9038">p95</text>
+            <text x="588.0" y="129.7" text-anchor="end" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" font-weight="bold" fill="#b06a1f">median</text>
+            <text x="588.0" y="248.8" text-anchor="end" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" fill="#5a6f87">p5</text>
+            <text x="58" y="16" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9" letter-spacing="0.1em" fill="#16130d">INDEXED VALUE · START = 100 · 10,000 PATHS</text>
           </svg>
         </div>
         <div class="output-caption">Fig 1 — Monte Carlo projection of a demo portfolio over a 5-year horizon. Shaded bands are the p5–p95 and p25–p75 outcome ranges; the solid line is the median path. Generated by Portfolio Lab.</div>
@@ -1395,7 +1389,7 @@
 <div class="section-off" id="resume">
   <div class="inner">
     <div class="section-eyebrow">Resume</div>
-    <div class="section-heading" style="color:var(--navy);">EXPERIENCE</div>
+    <div class="section-heading" style="color:var(--navy);">Experience</div>
     <div class="resume-grid">
       <div>
         <div class="resume-col-label">Education</div>
@@ -1435,7 +1429,7 @@
   <div class="inner">
     <div class="contact-grid">
       <div>
-        <div class="contact-heading">LET'S<br><span>CONNECT</span></div>
+        <div class="contact-heading">Let's<br><span>Connect</span></div>
         <p class="contact-sub">I'm open to conversations about finance, markets, research, and opportunities. Reach out directly.</p>
       </div>
       <div>
