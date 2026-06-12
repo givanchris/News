@@ -1,57 +1,63 @@
 {
-  "lastUpdated": "2026-06-09T19:00:00-06:00",
+  "lastUpdated": "2026-06-12T19:00:00-06:00",
   "market": {
-    "sp500":  { "price": "7,330",  "change": "-2.5%",  "dir": "down" },
-    "nasdaq": { "price": "28,419", "change": "-3.4%",  "dir": "down" },
-    "yield":  { "price": "4.54%",  "change": "-2 bps", "dir": "up"   },
-    "wti":    { "price": "$89.38", "change": "-4.5%",  "dir": "down" },
-    "gold":   { "price": "$4,276", "change": "-1.0%",  "dir": "down" },
-    "dxy":    { "price": "99.73",  "change": "-0.4%",  "dir": "down" }
+    "sp500":  { "price": "7,402",  "change": "+0.10%",  "dir": "up"   },
+    "nasdaq": { "price": "29,620", "change": "+0.59%",  "dir": "up"   },
+    "yield":  { "price": "4.48%",  "change": "+1 bps",  "dir": "down" },
+    "wti":    { "price": "$85.65", "change": "-2.2%",   "dir": "down" },
+    "gold":   { "price": "$4,216", "change": "-0.1%",   "dir": "down" },
+    "dxy":    { "price": "99.86",  "change": "-0.1%",   "dir": "down" }
   },
   "stories": [
     {
-      "cat": "MACRO",
-      "headline": "MAY NFP +172K DOUBLES CONSENSUS — FED RATE HIKE ODDS SURGE TO 68%",
-      "body": "The U.S. economy added 172,000 jobs in May against a 95,000 consensus, with unemployment holding at 4.3%. CME FedWatch now prices a 68% probability of a 25 bps rate hike by December 2026, up from 52% pre-report — reversing the rate-cut narrative that opened the year.",
-      "explain": "The mechanism is discount rate repricing: equities are priced on discounted future cash flows, and a higher-than-expected rate path raises the 'r' in P = CF/(r − g), compressing valuations immediately. The Nasdaq 100's 3.4% decline outpaced the S&P 500's 2.5% drop because long-duration growth stocks have a greater share of their value in distant future earnings — the same earnings that get most penalized when discount rates rise. Today's selloff is not driven by bad fundamentals but by re-marking the assumed cost of capital upward by ~25 bps across all asset classes."
+      "cat": "GEOPOLITICS",
+      "headline": "US-IRAN DEAL ON VERGE OF SIGNING — OIL DROPS 2% AS HORMUZ REOPENING PRICED IN",
+      "body": "Trump announced a European signing ceremony Friday after Iran submitted a final draft agreement, effectively ending months of conflict that shut the Strait of Hormuz. WTI crude fell over 2% to $85.65 — its lowest in nearly two months — as traders priced in the pending release of an estimated 100 million barrels of stranded tanker cargo once the Strait reopens.",
+      "explain": "The Iran-oil link runs through the geopolitical risk premium: economists estimated Hormuz's closure added $15–25 per barrel to WTI above the supply-demand equilibrium price, and today's 2%+ drop is the market front-running the collapse of that premium well before a single new Iranian barrel flows. The strategic relevance for next week's Fed meeting is direct — May CPI came in at 4.2% YoY with energy accounting for over 60% of the monthly gain, and a sustained oil decline to $82–85 would mechanically subtract roughly 0.8–1.0 percentage point from annualized headline CPI, giving the Fed disinflation it didn't have to manufacture through rate hikes. This is the mechanism that pushed the September cut probability from 48% Thursday to 62% Friday — not optimism, but an arithmetic improvement in the inflation path."
     },
     {
       "cat": "MARKETS",
-      "headline": "S&P 500 DROPS TO 7,330, NDX -3.4% AS RATE REPRICING EXTENDS INTO TUESDAY",
-      "body": "Equity markets extended Friday's post-NFP losses Tuesday, with the S&P 500 falling to 7,330 and the Nasdaq 100 shedding 3.4% to 28,419. Selling was broadest in high-multiple tech and growth names, which are most sensitive to changes in long-end yield expectations.",
-      "explain": "Even though the 10-year Treasury yield eased 2 basis points today to 4.54%, the terminal rate expectation — the peak rate priced into the forward curve — moved higher. This distinction matters: the spot yield fell slightly on safe-haven flows as equities sold off, but the forward rate path shifted up. Goldman Sachs acknowledged the NFP data increases the probability of a 'longer pause,' language markets are reading as hawkish. The NDX's outperformance to the downside reflects its concentration in mega-cap tech names trading at 30x+ forward earnings, where even small moves in the discount rate produce large absolute valuation changes."
+      "headline": "SPACEX PRICES HISTORY'S LARGEST-EVER IPO AT $75B — SPCX SURGES 20% IN NASDAQ DEBUT",
+      "body": "SpaceX raised $75 billion at $135 per share in the largest IPO in history, trading under SPCX on the Nasdaq. Shares opened at $150 and hit a session high of $168.75 (+25%), valuing the company above $2 trillion and making Elon Musk the world's first individual trillionaire. The Nasdaq 100 gained 0.59% while the broader Nasdaq Composite fell as the IPO diverted capital from existing positions.",
+      "explain": "Funding a $75B IPO requires buyers to come up with $75B in cash, which means liquidating existing equity — that selling pressure explains why the Nasdaq Composite fell even as the NDX held up, since SPCX won't join the Nasdaq 100 until the September quarterly rebalance. The more durable market structure story is what happens at that rebalance: once SPCX clears float and profitability screens for S&P 500 and Nasdaq 100 inclusion, passive index funds face mandatory buying at any price — a known, scheduled demand event that typically creates 'pre-inclusion drift' as active traders front-run the forced flow weeks in advance, creating a potential second leg of appreciation for the stock."
     },
     {
-      "cat": "GEOPOLITICS",
-      "headline": "IRAN-ISRAEL AGREE TO HALT ATTACKS; WTI FALLS $4 TO $89",
-      "body": "Iran and Israel agreed to halt direct attacks against each other, deflating the Middle East risk premium that had pushed WTI to $93.60 Monday. Crude fell 4.5% to $89.38 as supply disruption fears eased; President Trump indicated a Strait of Hormuz reopening deal could be reached 'soon.'",
-      "explain": "WTI had spiked above $93 as the Iran-Israel conflict raised genuine risk of Strait of Hormuz closure — a chokepoint handling roughly 20% of global seaborne oil. The de-escalation deflated the geopolitical risk premium embedded in the price, which functions like a volatility component layered on top of the supply-demand equilibrium price. Risk premiums unwind faster than they build: buyers who added positions on supply-disruption fears have strong incentive to exit quickly once the catalyst resolves. The remaining $89 floor reflects the underlying tight physical market; if Hormuz reopens fully, the equilibrium price likely drops closer to $82-85."
+      "cat": "MACRO",
+      "headline": "MAY CPI HITS 4.2%, A THREE-YEAR HIGH — BUT CORE RUNS SOFTER THAN EXPECTED AT +2.9%",
+      "body": "The May Consumer Price Index (released Wednesday June 10) rose 0.5% MoM and 4.2% YoY — the highest annual rate since April 2023 — with energy accounting for over 60% of the monthly gain (+3.9% MoM, +23.5% YoY). Core CPI came in at +0.2% MoM (below the 0.3% estimate) and +2.9% YoY. Shelter inflation decelerated sharply to +0.3% MoM from April's +0.6%.",
+      "explain": "The split between a hot headline and a soft core tells the entire story: May's 4.2% CPI is almost entirely an energy problem, not a broad demand problem. Core at +2.9% and shelter decelerating toward +3.4% YoY are consistent with the Fed's disinflation thesis for non-energy components. What makes today's Iran deal transformative is that it attacks exactly the driver making headline CPI dangerous: if WTI settles at $82–85 through summer, energy makes a large negative contribution to June and July CPI prints, potentially pulling headline inflation back below 3.5% within two months — the scenario the bond market began pricing Friday afternoon."
     },
     {
-      "cat": "COMMODITIES",
-      "headline": "GOLD DROPS TO $4,276 AS SAFE-HAVEN DEMAND EVAPORATES ON IRAN CEASEFIRE",
-      "body": "Gold fell 1.0% to $4,276/oz as the Iran-Israel ceasefire drained geopolitical safe-haven demand, compounding pressure from the strong NFP print which elevated real rates. Gold is now down 9.7% over the past month from above $4,700 levels.",
-      "explain": "Gold faces a dual headwind today: the Iran-Israel de-escalation removes the geopolitical risk premium, while strong jobs data pushes real interest rates higher as the nominal rate path shifts up with inflation expectations roughly stable. Gold has no yield, so higher real rates raise its opportunity cost — holding gold means forgoing a higher risk-free return. The month-long -9.7% decline from $4,700+ illustrates how quickly the geopolitical premium added during the Iran conflict has unwound; the 28.5% year-over-year gain reflects the structural buying from central banks and de-dollarization flows that provide a durable price floor even in risk-off unwinds."
+      "cat": "MACRO",
+      "headline": "UMICH CONSUMER SENTIMENT REBOUNDS TO 48.9 IN JUNE — FIRST INCREASE SINCE JANUARY",
+      "body": "The preliminary June University of Michigan Consumer Sentiment index rose to 48.9 from 44.8 in May, the first monthly increase since January, with improvement broad-based across age, income, and party affiliation. Year-ahead inflation expectations eased from 4.8% to 4.6%; 5–10 year expectations fell more meaningfully from 3.9% to 3.4%. The index remains 19% below year-ago levels.",
+      "explain": "The Fed watches the 5–10 year inflation expectation as a canary for whether elevated near-term inflation is becoming structurally embedded in wage demands and pricing behavior — the precondition for a wage-price spiral. The drop from 3.9% to 3.4% today reduces that risk materially: workers demanding 4%+ wages because they expect 4%+ inflation is a self-fulfilling dynamic the Fed would have to break with aggressive hikes. That said, 3.4% sits well above the Fed's implicit comfort zone of 2.2–2.5%, so the direction is encouraging but the level still argues for hold, not cut — it's a yellow light dialing back from red."
     },
     {
-      "cat": "MCBB",
-      "headline": "SUMMER PORTAL ACTIVITY RESHAPES PROGRAMS — WASHINGTON LOSES THREE GUARDS",
-      "body": "Washington dropped three key guards — Zoom Diallo (15.7 ppg), JJ Mandaquit, and Courtland Muldrew — to the transfer portal, leaving the Huskies at eight scholarship players. Coach Danny Sprinkle added Texas Tech's LeJuan Watts and Gonzaga grad Steele Venters but needs five to six more additions before fall workouts."
+      "cat": "CENTRAL BANKS",
+      "headline": "FED MEETS NEXT WEEK — HOLD CERTAIN BUT DOT PLOT SIGNALS WHETHER SEPTEMBER CUT IS LIVE",
+      "body": "The Federal Reserve holds its June FOMC meeting next week with a rate decision expected Wednesday June 17. A hold is universally priced in, but the quarterly dot plot is the real market event: traders want to know whether the median member still sees at least one 25 bps cut in 2026 or has pushed easing to 2027. Markets now price 62% odds of a September cut, up from 48% Thursday, on the Iran deal and softer core CPI.",
+      "explain": "The dot plot functions as a commitment device: anonymous committee member forecasts shift market expectations without an actual policy move. The critical threshold is whether the median 2026 dot holds at the March projection of one cut. With energy-driven CPI now facing a direct supply catalyst (Iran normalization) and core running below consensus at 2.9%, at least two or three members who were previously on the fence may pencil in a September move. If the 2026 median still shows one cut, the 62% September probability stays anchored; if the median shifts to zero, expect 2-year yields to jump 10–15 bps immediately and rate-sensitive sectors — REITs, utilities, homebuilders — to sell off hard."
     },
     {
       "cat": "NBA",
-      "headline": "WEMBANYAMA 32/8/6 SILENCES MSG, SPURS WIN GAME 3 — SERIES 2-1 KNICKS",
-      "body": "Victor Wembanyama posted 32 points, 8 rebounds, 6 assists, and 3 blocks as San Antonio won 115-111 at Madison Square Garden Monday, cutting New York's series lead to 2-1 and ending the Knicks' 13-game winning streak. Wembanyama shot 11-for-18, with 22 points coming at the rim or the free throw line. Game 4 is Wednesday June 10 at 8:30 PM ET on ABC."
+      "headline": "KNICKS ERASE 29-POINT HALFTIME DEFICIT IN GAME 4, LEAD NBA FINALS 3-1; GAME 5 SATURDAY",
+      "body": "New York erased a 29-point halftime deficit — the largest comeback in NBA Finals history — to defeat San Antonio 107-106 in Game 4 on OG Anunoby's tip-in with 1.2 seconds remaining. Jalen Brunson led all scorers with 36 points; Anunoby added 33. The Knicks lead the series 3-1 and are one win from their first NBA championship since 1973. Game 5 is Saturday night in San Antonio."
     },
     {
       "cat": "NFL",
-      "headline": "17 TEAMS OPEN MANDATORY MINICAMPS; SEAHAWKS BEGIN CHAMPIONSHIP DEFENSE",
-      "body": "Seattle opened mandatory minicamp Tuesday (June 9-11), signed OT Bobby Hart ahead of practice, and will hold their Super Bowl LX ring ceremony later this week. The Giants have Jaxson Dart and Jameis Winston both on the field adjusting to first-year coach John Harbaugh's offense. The regular season opens September 9 with a Super Bowl LX rematch."
+      "headline": "MAHOMES EXTENDED THROUGH 2033 FOR $504.75M AS SEAHAWKS HOST SUPER BOWL RING CEREMONY",
+      "body": "Kansas City added two years to Patrick Mahomes' contract, now running through 2033 at a total value of $504.75 million. The Seahawks completed mandatory minicamp this week and hosted their Super Bowl LX ring ceremony, celebrating February's 29-13 win over New England. First-round pick Jadarian Price signed, making Seattle's entire 2026 draft class under contract."
     },
     {
       "cat": "NCAA CFB",
-      "headline": "INDIANA LANDS MICH. STATE WR NICK MARSH AS PROGRAMS FINALIZE SUMMER ROSTERS",
-      "body": "Indiana secured Michigan State wide receiver Nick Marsh — No. 3 WR and No. 12 overall in ESPN portal rankings — as programs make final roster moves before summer conditioning. Texas added No. 1 LB prospect Rasheem Biles. Washington's receiver corps remains thin after four portal exits this spring, though linebacker Isaiah Leilua committed to the Huskies."
+      "headline": "UW HUSKIES LAND 3-STAR EDGE CHAZ GRAY OVER TENNESSEE, CLEMSON, AND OHIO STATE",
+      "body": "Washington secured a commitment from Chaz Gray, a 3-star edge rusher from St. Joseph Regional HS in New Jersey ranked No. 33 nationally at his position by 247Sports. Gray chose UW over Tennessee, Clemson, and Ohio State — the Huskies' 18th commit in the 2027 recruiting class. Earlier in June, 4-star WR Tre Moore from Texas also committed to Washington over Ohio State and Miami."
+    },
+    {
+      "cat": "MCBB",
+      "headline": "SUMMER RECRUITING HEATS UP — PROGRAMS FINALIZING ROSTERS AHEAD OF JULY EVALUATION PERIOD",
+      "body": "With the spring transfer portal window closed, programs are locking in final roster spots before July. Washington Basketball hired former Marquette assistant DeAndre Haynes and added Texas Tech transfer LaJuan Watts, who joins his brother DeSean on the Husky roster. 2026 local prospect Lattimore Ford (Mount Si HS) is also committed to UW as Sprinkle continues rebuilding the roster."
     }
   ],
   "sports": [
@@ -59,46 +65,46 @@
       "team": "DETROIT PISTONS",
       "pill": "OFFSEASON",
       "pillClass": "s-up",
-      "detail": "Lost to Cavaliers 4-3 as No. 1 seed (60-22). Isaiah Stewart drawing trade interest; Jalen Duren contract talks ongoing. Pre-draft workouts this week — hold pick No. 21."
+      "detail": "Lost to Cavaliers in East Semis. Finished 60-22, East's No. 1 seed — first playoff series win since 2008. Priorities: draft pick No. 21, Duren/A. Thompson extensions, impact FA addition."
     },
     {
       "team": "SEATTLE SEAHAWKS",
-      "pill": "MINICAMP",
-      "pillClass": "s-up",
-      "detail": "Mandatory minicamp opens today (Jun 9-11). Ring ceremony this week. Signed OT Bobby Hart. Rookies report Jul 15, veterans Jul 22. Defending Super Bowl LX champions."
+      "pill": "RING CEREMONY",
+      "pillClass": "s-w",
+      "detail": "Super Bowl LX champions (29-13 over Patriots in Feb). Ring ceremony this week post-minicamp. Signed entire '26 draft class incl. 1st-rounder Jadarian Price. Season opener Sept. 9 vs. NE."
     },
     {
       "team": "SEATTLE MARINERS",
-      "pill": "W 6-3",
-      "pillClass": "s-w",
-      "detail": "Beat Orioles 6-3 Mon (Naylor grand slam, 5-run 5th). Tonight at Baltimore, 6:35 PM ET — Logan Gilbert (4-4, 3.79 ERA) vs. Trevor Rogers."
+      "pill": "IN PROGRESS",
+      "pillClass": "s-up",
+      "detail": "At Nationals Park, first pitch 6:45 PM ET — in progress at briefing time. Record 36-34. Series continues through Sunday. Check MLB.com for final score."
     },
     {
       "team": "WASHINGTON HUSKIES FOOTBALL",
-      "pill": "OFFSEASON",
+      "pill": "RECRUITING",
       "pillClass": "s-up",
-      "detail": "Spring game done, no major injuries. WR depth thin after four portal exits; LB Leilua committed inbound. Season opens vs. Washington State (Apple Cup). Veterans report Jul 22."
+      "detail": "Landed edge Chaz Gray (NJ, No. 33 nationally) over TN/Clemson/OSU — 18th commit in '27 class. 4-star WR Tre Moore (TX) also aboard. Season opener: Sept. 6 vs. WSU on NBC."
     },
     {
       "team": "WASHINGTON HUSKIES BASKETBALL",
       "pill": "PORTAL",
       "pillClass": "s-up",
-      "detail": "Diallo (15.7 ppg), Mandaquit, Muldrew left via portal. Added Watts (Texas Tech) and Venters (Gonzaga). Need 5-6 more players; at 8 scholarships under Sprinkle."
+      "detail": "Hired DeAndre Haynes (ex-Marquette asst). Added LaJuan Watts (Texas Tech) — joins brother DeSean. 2026 commit Lattimore Ford (Mt. Si HS) inbound. Still building roster under Sprinkle."
     }
   ],
   "watchlist": [
-    "CPI data tomorrow Wed June 10, 8:30 AM ET — hot read could push Dec rate hike odds above 80%",
-    "NBA Finals Game 4: Spurs vs. Knicks — Wed June 10, 8:30 PM ET on ABC (NY leads 2-1)",
-    "Mariners at Orioles tonight, 6:35 PM ET — Logan Gilbert on the mound (in progress at briefing time)",
-    "FIFA World Cup 2026 opens Thursday June 11 in Mexico City"
+    "FOMC rate decision est. Wed. June 17 — consensus hold; dot plot signals whether Sept. cut is on",
+    "NBA Finals Game 5 — Knicks vs. Spurs, Saturday June 13 in San Antonio; NY one win from first title since '73",
+    "Mariners at Nationals — series continues Saturday June 13",
+    "SpaceX (SPCX) first full trading session Monday June 15 after Friday's 20% debut pop"
   ],
   "deepDive": {
-    "title": "Why Good Jobs Data Tanks the Stock Market — The Rate Repricing Mechanism",
+    "title": "The Geopolitical Risk Premium in Oil — How Hormuz Priced Into Crude and What the Unwind Means for the Fed",
     "content": [
-      "Friday's May NFP print came in at 172,000 jobs — nearly double the 95,000 consensus — and the equity market's immediate reaction was to sell off sharply, with losses extending into Tuesday. That seems backward. A strong labor market signals a healthy economy, higher corporate revenues, and stronger earnings. Yet the S&P 500 is down 2.5% and the Nasdaq 100 down 3.4% over the past two sessions. Understanding why requires tracing the precise channel through which employment data affects equity prices.",
-      "The mechanism runs through discount rates. Every stock's theoretical price is the present value of its future cash flows: P = CF / (r − g), where r is the discount rate and g is growth. The discount rate is built from the risk-free rate plus an equity risk premium. When markets price in a Fed rate hike, the risk-free component of r rises by ~25 bps — and that flows through to every equity valuation simultaneously. The Nasdaq 100 fell harder than the S&P 500 because growth stocks are 'long duration': most of their value sits in cash flows 10-20 years out, and compounding a higher discount rate over a longer horizon produces disproportionately larger present value reductions. A 25 bps rate increase might cut a 2-year DCF by 0.3%, but a 20-year DCF by closer to 4%.",
-      "This dynamic is what traders call 'bad news is good news' (and vice versa). During 2022-2023, equity markets reliably rallied on weak payrolls because soft labor data reduced rate hike expectations — demonstrating the inverse relationship. The 2026 version is more dangerous: this labor strength comes alongside Iran-driven energy inflation, raising the specter of stagflation — the Fed forced to hike into a slowing growth environment. In a clean rate cycle, only 'r' moves in the DCF model. In stagflation, 'g' also deteriorates simultaneously, a double compression on valuations that the 1970s demonstrated could be prolonged. Goldman Sachs flagged this explicitly: a rate hike is not their base case, but the risk of a 'longer pause' is now live.",
-      "The immediate market setup: CME FedWatch prices a 68% probability of a December 2026 hike, up from 52% pre-NFP. If this week's May CPI release shows inflation still above 3% — likely given WTI averaged $90+ in May — hike probability may push above 80%, triggering another leg lower for growth stocks. The 10-year yield at 4.54% is still well below the 5.0%+ highs of late 2023; if data continues to surprise hot, a move toward 4.75-5.00% is live. Every 25 bps higher in the 10-year directly compresses the Shiller CAPE on a mechanical basis — and the NDX's heavy concentration in 30x+ forward earnings names means it remains the most exposed index if the rate repricing has further to run."
+      "WTI crude fell over 2% today to $85.65 as the US-Iran peace deal moved to its signing stage. The surface-level explanation — more supply equals lower prices — is obvious. The analytically interesting questions are: how did futures markets price the *possibility* of supply disruption months before resolution, why does the 2% drop today understate the eventual normalization, and why is the Iran peace deal likely the single most important input for next week's Federal Reserve decision?",
+      "A geopolitical risk premium is the per-barrel surcharge embedded in spot prices to compensate traders for the probability that supply gets disrupted. When Iran closed the Strait of Hormuz — taking roughly 20% of global seaborne oil offline — economists estimated the closure added $15–25 per barrel to WTI above the supply-demand equilibrium price. The mechanism is probabilistic: traders don't assume the closure is permanent; they apply a discount rate to the probability distribution of when supply normalizes. As the deal moved from rumored to likely to imminent, each step compressed that probability premium. Today's 2%+ move is front-running the remaining probability — markets aren't waiting for Iranian crude to actually flow before deflating the last $10–15 of premium.",
+      "The wrinkle most observers underestimate is the shadow inventory problem. During the Strait closure, an estimated 100 million barrels accumulated in tankers unable to transit — a floating armada. Historical precedent from the Gulf of Mexico reopening after Hurricane Katrina (2005) is instructive: crude fell approximately 8% in the first two weeks post-reopening not because demand dropped, but because the accumulated inventory created temporary oversupply even though underlying conditions were unchanged. The Iran situation is two to three times larger in volume. Traders who bought crude futures as a disruption hedge are now incentivized to sell *before* that supply wall hits markets — amplifying today's decline. Risk premiums don't decay linearly; they collapse as the settlement event approaches a known date.",
+      "For Fed positioning: May CPI hit 4.2% YoY, with energy accounting for over 60% of the monthly gain. If WTI settles at $82–85 through summer, the energy component of headline CPI makes a large *negative* contribution to June and July prints, potentially pulling headline inflation from 4.2% back toward 3.0–3.5% within two months — without a single rate hike. Watch the 5-year breakeven inflation rate (currently ~2.8%): if it drops toward 2.5% on oil normalization over the next two weeks, the bond market will reprice a September cut regardless of what the dot plot says Wednesday. Geopolitics just became the most important variable in U.S. monetary policy — and a $15-per-barrel risk premium unwinding is doing the Fed's work for it."
     ]
   }
 }
