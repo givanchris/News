@@ -1,110 +1,111 @@
 {
-  "lastUpdated": "2026-06-12T19:00:00-06:00",
+  "lastUpdated": "2026-06-16T16:30:00-06:00",
   "market": {
-    "sp500":  { "price": "7,402",  "change": "+0.10%",  "dir": "up"   },
-    "nasdaq": { "price": "29,620", "change": "+0.59%",  "dir": "up"   },
-    "yield":  { "price": "4.48%",  "change": "+1 bps",  "dir": "down" },
-    "wti":    { "price": "$85.65", "change": "-2.2%",   "dir": "down" },
-    "gold":   { "price": "$4,216", "change": "-0.1%",   "dir": "down" },
-    "dxy":    { "price": "99.86",  "change": "-0.1%",   "dir": "down" }
+    "sp500": {"price": "7523", "change": "-0.41%", "dir": "down"},
+    "nasdaq": {"price": "30350", "change": "-0.70%", "dir": "down"},
+    "yield": {"price": "4.47%", "change": "+1 bps", "dir": "up"},
+    "wti": {"price": "$77.50", "change": "-4.2%", "dir": "down"},
+    "gold": {"price": "$4340", "change": "+0.7%", "dir": "up"},
+    "dxy": {"price": "99.35", "change": "+0.3%", "dir": "up"}
   },
   "stories": [
     {
-      "cat": "GEOPOLITICS",
-      "headline": "US-IRAN DEAL ON VERGE OF SIGNING — OIL DROPS 2% AS HORMUZ REOPENING PRICED IN",
-      "body": "Trump announced a European signing ceremony Friday after Iran submitted a final draft agreement, effectively ending months of conflict that shut the Strait of Hormuz. WTI crude fell over 2% to $85.65 — its lowest in nearly two months — as traders priced in the pending release of an estimated 100 million barrels of stranded tanker cargo once the Strait reopens.",
-      "explain": "The Iran-oil link runs through the geopolitical risk premium: economists estimated Hormuz's closure added $15–25 per barrel to WTI above the supply-demand equilibrium price, and today's 2%+ drop is the market front-running the collapse of that premium well before a single new Iranian barrel flows. The strategic relevance for next week's Fed meeting is direct — May CPI came in at 4.2% YoY with energy accounting for over 60% of the monthly gain, and a sustained oil decline to $82–85 would mechanically subtract roughly 0.8–1.0 percentage point from annualized headline CPI, giving the Fed disinflation it didn't have to manufacture through rate hikes. This is the mechanism that pushed the September cut probability from 48% Thursday to 62% Friday — not optimism, but an arithmetic improvement in the inflation path."
-    },
-    {
-      "cat": "MARKETS",
-      "headline": "SPACEX PRICES HISTORY'S LARGEST-EVER IPO AT $75B — SPCX SURGES 20% IN NASDAQ DEBUT",
-      "body": "SpaceX raised $75 billion at $135 per share in the largest IPO in history, trading under SPCX on the Nasdaq. Shares opened at $150 and hit a session high of $168.75 (+25%), valuing the company above $2 trillion and making Elon Musk the world's first individual trillionaire. The Nasdaq 100 gained 0.59% while the broader Nasdaq Composite fell as the IPO diverted capital from existing positions.",
-      "explain": "Funding a $75B IPO requires buyers to come up with $75B in cash, which means liquidating existing equity — that selling pressure explains why the Nasdaq Composite fell even as the NDX held up, since SPCX won't join the Nasdaq 100 until the September quarterly rebalance. The more durable market structure story is what happens at that rebalance: once SPCX clears float and profitability screens for S&P 500 and Nasdaq 100 inclusion, passive index funds face mandatory buying at any price — a known, scheduled demand event that typically creates 'pre-inclusion drift' as active traders front-run the forced flow weeks in advance, creating a potential second leg of appreciation for the stock."
-    },
-    {
-      "cat": "MACRO",
-      "headline": "MAY CPI HITS 4.2%, A THREE-YEAR HIGH — BUT CORE RUNS SOFTER THAN EXPECTED AT +2.9%",
-      "body": "The May Consumer Price Index (released Wednesday June 10) rose 0.5% MoM and 4.2% YoY — the highest annual rate since April 2023 — with energy accounting for over 60% of the monthly gain (+3.9% MoM, +23.5% YoY). Core CPI came in at +0.2% MoM (below the 0.3% estimate) and +2.9% YoY. Shelter inflation decelerated sharply to +0.3% MoM from April's +0.6%.",
-      "explain": "The split between a hot headline and a soft core tells the entire story: May's 4.2% CPI is almost entirely an energy problem, not a broad demand problem. Core at +2.9% and shelter decelerating toward +3.4% YoY are consistent with the Fed's disinflation thesis for non-energy components. What makes today's Iran deal transformative is that it attacks exactly the driver making headline CPI dangerous: if WTI settles at $82–85 through summer, energy makes a large negative contribution to June and July CPI prints, potentially pulling headline inflation back below 3.5% within two months — the scenario the bond market began pricing Friday afternoon."
-    },
-    {
-      "cat": "MACRO",
-      "headline": "UMICH CONSUMER SENTIMENT REBOUNDS TO 48.9 IN JUNE — FIRST INCREASE SINCE JANUARY",
-      "body": "The preliminary June University of Michigan Consumer Sentiment index rose to 48.9 from 44.8 in May, the first monthly increase since January, with improvement broad-based across age, income, and party affiliation. Year-ahead inflation expectations eased from 4.8% to 4.6%; 5–10 year expectations fell more meaningfully from 3.9% to 3.4%. The index remains 19% below year-ago levels.",
-      "explain": "The Fed watches the 5–10 year inflation expectation as a canary for whether elevated near-term inflation is becoming structurally embedded in wage demands and pricing behavior — the precondition for a wage-price spiral. The drop from 3.9% to 3.4% today reduces that risk materially: workers demanding 4%+ wages because they expect 4%+ inflation is a self-fulfilling dynamic the Fed would have to break with aggressive hikes. That said, 3.4% sits well above the Fed's implicit comfort zone of 2.2–2.5%, so the direction is encouraging but the level still argues for hold, not cut — it's a yellow light dialing back from red."
+      "cat": "COMMODITIES",
+      "headline": "OIL EXTENDS ROUT, WTI SINKS BELOW $78 ON IRAN DEAL HOPES",
+      "body": "WTI fell more than 4% to roughly $77.50, a fourth straight losing session and the lowest since early March, after a 4.9% slide Monday. Crude has now shed over 9% in two days.",
+      "explain": "Traders are unwinding the geopolitical 'war premium' priced in after recent Gulf tensions. Reports of a preliminary U.S.-Iran framework that would keep the Strait of Hormuz open removed the tail risk of a supply shock through a chokepoint carrying roughly a fifth of seaborne oil, so the spot price reverts toward fundamentals-driven levels in the high-$70s."
     },
     {
       "cat": "CENTRAL BANKS",
-      "headline": "FED MEETS NEXT WEEK — HOLD CERTAIN BUT DOT PLOT SIGNALS WHETHER SEPTEMBER CUT IS LIVE",
-      "body": "The Federal Reserve holds its June FOMC meeting next week with a rate decision expected Wednesday June 17. A hold is universally priced in, but the quarterly dot plot is the real market event: traders want to know whether the median member still sees at least one 25 bps cut in 2026 or has pushed easing to 2027. Markets now price 62% odds of a September cut, up from 48% Thursday, on the Iran deal and softer core CPI.",
-      "explain": "The dot plot functions as a commitment device: anonymous committee member forecasts shift market expectations without an actual policy move. The critical threshold is whether the median 2026 dot holds at the March projection of one cut. With energy-driven CPI now facing a direct supply catalyst (Iran normalization) and core running below consensus at 2.9%, at least two or three members who were previously on the fence may pencil in a September move. If the 2026 median still shows one cut, the 62% September probability stays anchored; if the median shifts to zero, expect 2-year yields to jump 10–15 bps immediately and rate-sensitive sectors — REITs, utilities, homebuilders — to sell off hard."
+      "headline": "FED OPENS WARSH-ERA MEETING, HOLD WIDELY EXPECTED WEDNESDAY",
+      "body": "The FOMC began its first meeting under new Chair Kevin Warsh, with markets pricing a hold in the 3.50%-3.75% target range. The decision and Warsh's debut press conference land Wednesday.",
+      "explain": "Warsh has historically leaned hawkish on inflation and skeptical of large balance sheets, so the focus is less on this hold than on the dot plot and tone for cuts later in 2026. With the 10Y near 4.47% and oil's drop easing near-term inflation fears, any dovish signal on the path could steepen the curve and lift rate-sensitive equities."
     },
     {
-      "cat": "NBA",
-      "headline": "KNICKS ERASE 29-POINT HALFTIME DEFICIT IN GAME 4, LEAD NBA FINALS 3-1; GAME 5 SATURDAY",
-      "body": "New York erased a 29-point halftime deficit — the largest comeback in NBA Finals history — to defeat San Antonio 107-106 in Game 4 on OG Anunoby's tip-in with 1.2 seconds remaining. Jalen Brunson led all scorers with 36 points; Anunoby added 33. The Knicks lead the series 3-1 and are one win from their first NBA championship since 1973. Game 5 is Saturday night in San Antonio."
+      "cat": "MARKETS",
+      "headline": "DOW HITS RECORD ABOVE 52,000 AS TECH ROTATES LOWER",
+      "body": "The Dow rose 0.64% to a record 52,003 on strength in financials and industrials, while the S&P 500 slipped 0.41% to 7,523 and the Nasdaq Composite fell 0.86% as chip and megacap tech names led the pullback.",
+      "explain": "This is a classic rotation: capital is leaving crowded, high-multiple tech and flowing into cyclical and value names that benefit from falling energy costs and a steady-rate backdrop. The divergence — a record Dow against a weak Nasdaq — signals breadth broadening rather than an index-wide selloff, a healthier internal posture than narrow megacap leadership."
     },
     {
-      "cat": "NFL",
-      "headline": "MAHOMES EXTENDED THROUGH 2033 FOR $504.75M AS SEAHAWKS HOST SUPER BOWL RING CEREMONY",
-      "body": "Kansas City added two years to Patrick Mahomes' contract, now running through 2033 at a total value of $504.75 million. The Seahawks completed mandatory minicamp this week and hosted their Super Bowl LX ring ceremony, celebrating February's 29-13 win over New England. First-round pick Jadarian Price signed, making Seattle's entire 2026 draft class under contract."
+      "cat": "GEOPOLITICS",
+      "headline": "U.S.-IRAN FRAMEWORK EASES STRAIT OF HORMUZ SUPPLY FEARS",
+      "body": "Hopes for a preliminary U.S.-Iran agreement that keeps the Strait of Hormuz open drove the cross-asset move: oil down sharply, gold holding above $4,300, and the dollar firmer with DXY near 99.35.",
+      "explain": "The Strait is the single most important oil chokepoint, so removing the threat of closure compresses risk premia across energy, safe-haven gold, and FX simultaneously. Gold's resilience despite the de-escalation reflects persistent central-bank buying and rate-cut expectations, while the firmer dollar reflects relief flows back into U.S. assets."
     },
     {
-      "cat": "NCAA CFB",
-      "headline": "UW HUSKIES LAND 3-STAR EDGE CHAZ GRAY OVER TENNESSEE, CLEMSON, AND OHIO STATE",
-      "body": "Washington secured a commitment from Chaz Gray, a 3-star edge rusher from St. Joseph Regional HS in New Jersey ranked No. 33 nationally at his position by 247Sports. Gray chose UW over Tennessee, Clemson, and Ohio State — the Huskies' 18th commit in the 2027 recruiting class. Earlier in June, 4-star WR Tre Moore from Texas also committed to Washington over Ohio State and Miami."
+      "cat": "EARNINGS",
+      "headline": "WELLS FARGO LIFTS YEAR-END S&P 500 TARGET",
+      "body": "Wells Fargo raised its year-end S&P 500 target, citing improving earnings momentum and easing macro risks, even as strategists flagged crowded tech positioning and sticky inflation as lingering concerns.",
+      "explain": "Sell-side target hikes mid-year typically follow upward revisions to forward EPS estimates rather than multiple expansion. With energy costs falling and the Fed expected to hold, margin assumptions improve, but the explicit warning on 'crowded tech bets' echoes today's rotation and the broader caution that warning indicators are flashing."
     },
     {
       "cat": "MCBB",
-      "headline": "SUMMER RECRUITING HEATS UP — PROGRAMS FINALIZING ROSTERS AHEAD OF JULY EVALUATION PERIOD",
-      "body": "With the spring transfer portal window closed, programs are locking in final roster spots before July. Washington Basketball hired former Marquette assistant DeAndre Haynes and added Texas Tech transfer LaJuan Watts, who joins his brother DeSean on the Husky roster. 2026 local prospect Lattimore Ford (Mount Si HS) is also committed to UW as Sprinkle continues rebuilding the roster."
+      "headline": "KENTUCKY LANDS TOP TRANSFER MOMCILOVIC AS PORTAL CLOSES",
+      "body": "Kentucky won the recruitment of Iowa State's Milan Momcilovic, the No. 1-rated transfer (48.7% on threes), over Louisville and Arizona. Over 2,700 players entered the now-closed portal; the NBA Draft runs June 23-24."
+    },
+    {
+      "cat": "NBA",
+      "headline": "KNICKS WIN FIRST TITLE IN 53 YEARS, BRUNSON UNANIMOUS FINALS MVP",
+      "body": "New York beat San Antonio 4-1, rallying from double-digit deficits in all four wins. Jalen Brunson averaged 32.6 points and dropped 45 in the Game 5 clincher to take Finals MVP on all 11 votes."
+    },
+    {
+      "cat": "NFL",
+      "headline": "BLOCKBUSTER OFFSEASON: GARRETT TO RAMS, A.J. BROWN TO PATRIOTS",
+      "body": "Two June 1 trades sent edge rusher Myles Garrett from Cleveland to the Rams and receiver A.J. Brown from Philadelphia to New England, giving QB Drake Maye a No. 1 target. Teams now break until late-July camp."
+    },
+    {
+      "cat": "NCAA CFB",
+      "headline": "PORTAL CLOSES WITH LSU ON TOP; COACHES OPEN 2028 CONTACT",
+      "body": "Lane Kiffin's LSU holds the top-ranked transfer class after Auburn WR Cam Coleman, the No. 1 overall portal prospect, entered. June 15 marked the first day coaches could directly contact the class of 2028."
     }
   ],
   "sports": [
     {
+      "team": "SEATTLE MARINERS",
+      "pill": "L 3-8",
+      "pillClass": "s-l",
+      "detail": "37-36. Lost to Nationals; off day Mon. Next: home vs Orioles tonight."
+    },
+    {
       "team": "DETROIT PISTONS",
       "pill": "OFFSEASON",
       "pillClass": "s-up",
-      "detail": "Lost to Cavaliers in East Semis. Finished 60-22, East's No. 1 seed — first playoff series win since 2008. Priorities: draft pick No. 21, Duren/A. Thompson extensions, impact FA addition."
+      "detail": "Out vs Cavs in playoffs. Pick 21st in June 23 draft; Duren (All-NBA 3rd Team) a key RFA."
     },
     {
       "team": "SEATTLE SEAHAWKS",
-      "pill": "RING CEREMONY",
-      "pillClass": "s-w",
-      "detail": "Super Bowl LX champions (29-13 over Patriots in Feb). Ring ceremony this week post-minicamp. Signed entire '26 draft class incl. 1st-rounder Jadarian Price. Season opener Sept. 9 vs. NE."
+      "pill": "OFFSEASON",
+      "pillClass": "s-up",
+      "detail": "Defending champs. Minicamp wrapped June 9-11; on break until late-July camp."
     },
     {
-      "team": "SEATTLE MARINERS",
-      "pill": "IN PROGRESS",
+      "team": "WASHINGTON HUSKIES FB",
+      "pill": "OFFSEASON",
       "pillClass": "s-up",
-      "detail": "At Nationals Park, first pitch 6:45 PM ET — in progress at briefing time. Record 36-34. Series continues through Sunday. Check MLB.com for final score."
+      "detail": "4-star edge Chaz Gray committed June 10. Opens vs Washington State (Apple Cup) Sept 5."
     },
     {
-      "team": "WASHINGTON HUSKIES FOOTBALL",
-      "pill": "RECRUITING",
+      "team": "WASHINGTON HUSKIES BB",
+      "pill": "OFFSEASON",
       "pillClass": "s-up",
-      "detail": "Landed edge Chaz Gray (NJ, No. 33 nationally) over TN/Clemson/OSU — 18th commit in '27 class. 4-star WR Tre Moore (TX) also aboard. Season opener: Sept. 6 vs. WSU on NBC."
-    },
-    {
-      "team": "WASHINGTON HUSKIES BASKETBALL",
-      "pill": "PORTAL",
-      "pillClass": "s-up",
-      "detail": "Hired DeAndre Haynes (ex-Marquette asst). Added LaJuan Watts (Texas Tech) — joins brother DeSean. 2026 commit Lattimore Ford (Mt. Si HS) inbound. Still building roster under Sprinkle."
+      "detail": "Big Ten offseason under Danny Sprinkle; reloading roster via portal and recruiting."
     }
   ],
   "watchlist": [
-    "FOMC rate decision est. Wed. June 17 — consensus hold; dot plot signals whether Sept. cut is on",
-    "NBA Finals Game 5 — Knicks vs. Spurs, Saturday June 13 in San Antonio; NY one win from first title since '73",
-    "Mariners at Nationals — series continues Saturday June 13",
-    "SpaceX (SPCX) first full trading session Monday June 15 after Friday's 20% debut pop"
+    "FOMC decision & Warsh's first presser — Wed June 17",
+    "WTI crude — watch for a base near $75 if Iran deal firms",
+    "10Y Treasury yield reaction to the dot plot",
+    "NBA Draft — Pistons pick 21st, June 23",
+    "Mariners open homestand vs Orioles tonight"
   ],
   "deepDive": {
-    "title": "The Geopolitical Risk Premium in Oil — How Hormuz Priced Into Crude and What the Unwind Means for the Fed",
+    "title": "Unwinding the War Premium: How Geopolitics Gets Priced Into Crude",
     "content": [
-      "WTI crude fell over 2% today to $85.65 as the US-Iran peace deal moved to its signing stage. The surface-level explanation — more supply equals lower prices — is obvious. The analytically interesting questions are: how did futures markets price the *possibility* of supply disruption months before resolution, why does the 2% drop today understate the eventual normalization, and why is the Iran peace deal likely the single most important input for next week's Federal Reserve decision?",
-      "A geopolitical risk premium is the per-barrel surcharge embedded in spot prices to compensate traders for the probability that supply gets disrupted. When Iran closed the Strait of Hormuz — taking roughly 20% of global seaborne oil offline — economists estimated the closure added $15–25 per barrel to WTI above the supply-demand equilibrium price. The mechanism is probabilistic: traders don't assume the closure is permanent; they apply a discount rate to the probability distribution of when supply normalizes. As the deal moved from rumored to likely to imminent, each step compressed that probability premium. Today's 2%+ move is front-running the remaining probability — markets aren't waiting for Iranian crude to actually flow before deflating the last $10–15 of premium.",
-      "The wrinkle most observers underestimate is the shadow inventory problem. During the Strait closure, an estimated 100 million barrels accumulated in tankers unable to transit — a floating armada. Historical precedent from the Gulf of Mexico reopening after Hurricane Katrina (2005) is instructive: crude fell approximately 8% in the first two weeks post-reopening not because demand dropped, but because the accumulated inventory created temporary oversupply even though underlying conditions were unchanged. The Iran situation is two to three times larger in volume. Traders who bought crude futures as a disruption hedge are now incentivized to sell *before* that supply wall hits markets — amplifying today's decline. Risk premiums don't decay linearly; they collapse as the settlement event approaches a known date.",
-      "For Fed positioning: May CPI hit 4.2% YoY, with energy accounting for over 60% of the monthly gain. If WTI settles at $82–85 through summer, the energy component of headline CPI makes a large *negative* contribution to June and July prints, potentially pulling headline inflation from 4.2% back toward 3.0–3.5% within two months — without a single rate hike. Watch the 5-year breakeven inflation rate (currently ~2.8%): if it drops toward 2.5% on oil normalization over the next two weeks, the bond market will reprice a September cut regardless of what the dot plot says Wednesday. Geopolitics just became the most important variable in U.S. monetary policy — and a $15-per-barrel risk premium unwinding is doing the Fed's work for it."
+      "Crude oil rarely moves on barrels alone. Over two sessions WTI shed more than 9%, falling below $78, not because supply suddenly surged or demand collapsed, but because a single tail risk was repriced. Reports of a preliminary U.S.-Iran framework that would keep the Strait of Hormuz open pulled the rug from under the 'war premium' — the extra dollars traders pay to insure against a supply shock that may never arrive. Watching the tape today is a lesson in how expectations, not just physical fundamentals, set the marginal price of a commodity.",
+      "The mechanism runs through expected value. A price reflects probability-weighted outcomes: if markets assign, say, a 20% chance to a Hormuz disruption that would spike oil $30, the spot price carries roughly $6 of embedded insurance. Collapse that probability toward zero and the premium evaporates almost instantly, even though not one extra barrel has shipped. That is why crude can crater 5% in a single session on a headline — the adjustment is to the distribution of outcomes, and option-implied volatility deflates alongside it as the fat left tail is trimmed.",
+      "The Strait of Hormuz is the reason this chokepoint matters more than most. Roughly a fifth of the world's seaborne oil threads through a passage only about 21 miles wide at its narrowest, with no easy substitute route for much of that flow. Economists call this convenience yield — the premium holders pay for physical oil precisely because it cannot be instantly replaced if a chokepoint closes. History rhymes here: the 1980s Tanker War and repeated Gulf flashpoints all show the same pattern of premium inflating on threat and bleeding out on de-escalation.",
+      "Tie it back to today's screen and the cross-asset coherence is the tell. Oil collapses, the dollar firms toward 99.35, and gold holds above $4,300 rather than tumbling — each asset repricing the same easing of geopolitical risk through its own channel. For the Fed opening its meeting under Kevin Warsh, cheaper energy quietly loosens the near-term inflation constraint, giving cover for a steadier rate path. One diplomatic headline thus ripples from a Gulf shipping lane to Treasury yields and a future mortgage rate."
     ]
   }
 }
