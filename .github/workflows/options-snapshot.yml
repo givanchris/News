@@ -4,9 +4,8 @@ name: Options Snapshot
 # refreshed JSON snapshots into data/options/. Anyone can also trigger it
 # manually from the Actions tab via "Run workflow".
 on:
-  schedule:
-    # 22:30 UTC → 4:30 PM MDT (summer) / 3:30 PM MST (winter). Weekdays only.
-    - cron: '30 22 * * 1-5'
+  # Schedule disabled — Mac Mini runs this via cron at 4:30 PM MDT weekdays.
+  # Manual trigger kept for emergencies.
   workflow_dispatch:
 
 permissions:
