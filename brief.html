@@ -953,14 +953,18 @@
   var MONTHS = ['January','February','March','April','May','June','July','August','September','October','November','December'];
   var NEWS_REFRESH_MS = 5 * 60 * 1000; // 5 min
 
-  // ── Time gate: rolling news active 7:00 AM – midnight MT
-  function getMTHour() {
-    var s = new Date().toLocaleString('en-US', { timeZone: 'America/Denver', hour: 'numeric', hour12: false });
-    return parseInt(s, 10);
+  // ── Time gate: rolling news active 7:00 AM – 4:30 PM MT only
+  function getMTMinutes() {
+    var s = new Date().toLocaleString('en-US', {
+      timeZone: 'America/Denver', hour: '2-digit', minute: '2-digit', hour12: false
+    });
+    var parts = s.split(':');
+    return parseInt(parts[0], 10) * 60 + parseInt(parts[1], 10);
   }
 
   function isRollingNewsActive() {
-    return getMTHour() >= 7;
+    var m = getMTMinutes();
+    return m >= 7 * 60 && m < 16 * 60 + 30; // 7:00 AM to 4:30 PM MT
   }
 
   // ── Apply layout mode based on time
@@ -982,7 +986,10 @@
       if (rnw) rnw.style.display = 'none';
       if (emw) emw.style.display = 'block';
       if (esw) esw.style.display = 'none';
-      if (sub) sub.textContent = 'Curated daily brief. Rolling news starts at 7:00 AM MT.';
+      var m = getMTMinutes();
+      if (sub) sub.textContent = m < 7 * 60
+        ? 'Curated daily brief. Rolling news starts at 7:00 AM MT.'
+        : 'Markets · Macro · Geopolitics. Published at 4:30 PM MT daily.';
       if (tab) tab.textContent = 'Today\'s Brief';
     }
   }
