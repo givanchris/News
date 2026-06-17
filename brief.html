@@ -302,7 +302,7 @@
       margin: 0 auto;
     }
 
-    /* ── MAIN: ROLLING NEWS ── */
+    /* ── MAIN: ROLLING NEWS / SNAPSHOT ── */
     .brief-main {
       padding: 1.75rem 2.5rem 2.5rem;
       border-right: 1px solid var(--navy3);
@@ -327,6 +327,44 @@
       font-size: 0.57rem;
       color: rgba(244, 239, 227, 0.28);
       letter-spacing: 0.04em;
+    }
+
+    /* ── MAIN COLUMN SNAPSHOT STORIES ── */
+    .main-story {
+      padding: 1.25rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .main-story:last-child { border-bottom: none; }
+    .main-story-cat {
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
+      font-size: 0.55rem;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: var(--blue2);
+      margin-bottom: 0.35rem;
+    }
+    .main-story-hed {
+      font-family: 'Newsreader', Georgia, 'Times New Roman', serif;
+      font-size: 1.08rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--white);
+      line-height: 1.22;
+      margin-bottom: 0.45rem;
+    }
+    .main-story-body {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.5);
+      line-height: 1.65;
+    }
+    .main-story-explain {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.3);
+      line-height: 1.65;
+      margin-top: 0.55rem;
+      font-style: italic;
+      padding-left: 0.8rem;
+      border-left: 2px solid rgba(176,106,31,0.35);
     }
 
     /* News feed items */
@@ -771,14 +809,14 @@
     <div class="brief-hero-left">
       <div class="brief-eyebrow">Markets · Macro · Geopolitics</div>
       <h1 class="brief-hero-title">Daily<br><span>Brief</span></h1>
-      <p class="brief-subtitle">Rolling news updated every 30 minutes. Curated editorial at 4:30 PM MT daily.</p>
+      <p class="brief-subtitle" id="brief-subtitle-text">Curated daily brief. Rolling news starts at 7:00 AM MT.</p>
       <div class="brief-hero-meta">
         <span class="brief-date-display" id="brief-date">—</span>
         <span class="brief-updated-display" id="brief-meta"></span>
       </div>
     </div>
     <div class="brief-hero-nav">
-      <a class="brief-nav-tab active" onclick="scrollToSection('brief-section', this)">Live Feed</a>
+      <a class="brief-nav-tab active" id="nav-tab-feed" onclick="scrollToSection('brief-section', this)">Today's Brief</a>
       <a class="brief-nav-tab" onclick="scrollToSection('deep-dive-section', this)">Deep Dive</a>
     </div>
   </div>
@@ -825,21 +863,31 @@
 <div class="brief-section" id="brief-section">
   <div class="brief-body">
 
-    <!-- LEFT: ROLLING NEWS FEED -->
+    <!-- LEFT: SNAPSHOT (before 7 AM) or ROLLING NEWS (7 AM+) -->
     <div class="brief-main">
-      <div class="brief-col-label">
-        <span>Live News Feed</span>
-        <span class="news-refresh-status" id="news-refresh-status">Loading…</span>
+      <!-- Snapshot mode: editorial stories in main column -->
+      <div id="editorial-main-wrapper">
+        <div class="brief-col-label"><span>Today's Brief</span></div>
+        <div id="brief-stories-main"><p class="brief-no-data">Loading…</p></div>
       </div>
-      <div id="rolling-news"><p class="brief-no-data">Loading…</p></div>
+      <!-- Live feed mode: rolling news in main column (7 AM MT+) -->
+      <div id="rolling-news-wrapper" style="display:none;">
+        <div class="brief-col-label">
+          <span>Live News Feed</span>
+          <span class="news-refresh-status" id="news-refresh-status">Loading…</span>
+        </div>
+        <div id="rolling-news"><p class="brief-no-data">Loading…</p></div>
+      </div>
     </div>
 
-    <!-- RIGHT: EDITORIAL + PERSONAL -->
+    <!-- RIGHT: EDITORIAL (live feed mode only) + SPORTS + HOLDINGS -->
     <div class="brief-sidebar">
-      <div class="sidebar-section-label">4:30 PM Editorial</div>
-      <div id="brief-stories"><p class="brief-no-data">Runs at 4:30 PM MT daily</p></div>
+      <div id="editorial-sidebar-wrapper" style="display:none; margin-bottom:1.5rem;">
+        <div class="sidebar-section-label">4:30 PM Editorial</div>
+        <div id="brief-stories-sidebar"><p class="brief-no-data">Runs at 4:30 PM MT daily</p></div>
+      </div>
 
-      <div class="sidebar-section-label" style="margin-top:1.5rem;">Scoreboard</div>
+      <div class="sidebar-section-label">Scoreboard</div>
       <div id="brief-sports"><p class="brief-no-data">—</p></div>
       <div id="brief-sports-headlines"></div>
 
@@ -905,6 +953,40 @@
   var MONTHS = ['January','February','March','April','May','June','July','August','September','October','November','December'];
   var NEWS_REFRESH_MS = 5 * 60 * 1000; // 5 min
 
+  // ── Time gate: rolling news active 7:00 AM – midnight MT
+  function getMTHour() {
+    var s = new Date().toLocaleString('en-US', { timeZone: 'America/Denver', hour: 'numeric', hour12: false });
+    return parseInt(s, 10);
+  }
+
+  function isRollingNewsActive() {
+    return getMTHour() >= 7;
+  }
+
+  // ── Apply layout mode based on time
+  function applyTimeGate() {
+    var live = isRollingNewsActive();
+    var rnw  = document.getElementById('rolling-news-wrapper');
+    var emw  = document.getElementById('editorial-main-wrapper');
+    var esw  = document.getElementById('editorial-sidebar-wrapper');
+    var sub  = document.getElementById('brief-subtitle-text');
+    var tab  = document.getElementById('nav-tab-feed');
+
+    if (live) {
+      if (rnw) rnw.style.display = 'block';
+      if (emw) emw.style.display = 'none';
+      if (esw) esw.style.display = 'block';
+      if (sub) sub.textContent = 'Rolling news updated every 30 minutes. Curated editorial at 4:30 PM MT daily.';
+      if (tab) tab.textContent = 'Live Feed';
+    } else {
+      if (rnw) rnw.style.display = 'none';
+      if (emw) emw.style.display = 'block';
+      if (esw) esw.style.display = 'none';
+      if (sub) sub.textContent = 'Curated daily brief. Rolling news starts at 7:00 AM MT.';
+      if (tab) tab.textContent = 'Today\'s Brief';
+    }
+  }
+
   function esc(s) {
     return String(s == null ? '' : s)
       .replace(/&/g,'&amp;').replace(/</g,'&lt;')
@@ -958,9 +1040,9 @@
       .catch(function() { return null; });
   }
 
-  // ── Render rolling news from headlines.json
+  // ── Render rolling news from headlines.json (live feed mode)
   function renderNews(data) {
-    var el      = document.getElementById('rolling-news');
+    var el       = document.getElementById('rolling-news');
     var statusEl = document.getElementById('news-refresh-status');
 
     if (!data || !data.headlines || !data.headlines.length) {
@@ -969,12 +1051,10 @@
       return;
     }
 
-    // Update status badge
     if (statusEl) {
       statusEl.textContent = 'Updated ' + relTimeFull(data.lastUpdated) + ' · Mini pushes every 30m';
     }
 
-    // Render items
     if (el) {
       el.innerHTML = data.headlines.map(function(h) {
         var url  = esc(safeUrl(h.url));
@@ -996,6 +1076,41 @@
           + '</div>';
       }).join('');
     }
+  }
+
+  // ── Render editorial stories in main column (snapshot mode — full display)
+  function renderMainStories(stories) {
+    var el = document.getElementById('brief-stories-main');
+    if (!el) return;
+    if (!stories || !stories.length) {
+      el.innerHTML = '<p class="brief-no-data">Brief publishes at 4:30 PM MT daily.</p>';
+      return;
+    }
+    el.innerHTML = stories.map(function(s) {
+      return '<div class="main-story">'
+        + '<div class="main-story-cat">' + esc(s.cat) + '</div>'
+        + '<div class="main-story-hed">' + esc(s.headline) + '</div>'
+        + (s.body ? '<div class="main-story-body">' + esc(s.body) + '</div>' : '')
+        + (s.explain ? '<div class="main-story-explain">' + esc(s.explain) + '</div>' : '')
+        + '</div>';
+    }).join('');
+  }
+
+  // ── Render editorial stories in sidebar (live feed mode — compact, expandable)
+  function renderSidebarStories(stories, el) {
+    if (!el) return;
+    if (!stories || !stories.length) {
+      el.innerHTML = '<p class="brief-no-data">Runs at 4:30 PM MT daily</p>';
+      return;
+    }
+    el.innerHTML = stories.map(function(s) {
+      var hasBody = s.body && s.body.length;
+      return '<div class="sb-story" onclick="toggleSbStory(this)">'
+        + '<div class="sb-cat">' + esc(s.cat) + '</div>'
+        + '<div class="sb-hed">' + esc(s.headline) + '</div>'
+        + (hasBody ? '<div class="sb-body">' + esc(s.body) + '</div>' : '')
+        + '</div>';
+    }).join('');
   }
 
   // ── Render Claude editorial from brief.json
@@ -1020,28 +1135,15 @@
       }
     }
 
-    // Market strip (from brief.json or markets.json)
+    // Market strip
     var m = d.market || {};
     ['sp500','nasdaq','yield','wti','gold','dxy'].forEach(function(k) {
       if (m[k]) setTile(k, m[k]);
     });
 
-    // Sidebar editorial stories (compact — click to expand body)
-    var storiesEl = document.getElementById('brief-stories');
-    if (storiesEl && d.stories && d.stories.length) {
-      storiesEl.innerHTML = d.stories.map(function(s, i) {
-        var hasBody = s.body && s.body.length;
-        return '<div class="sb-story" onclick="toggleSbStory(this)">'
-          + '<div class="sb-cat">' + esc(s.cat) + '</div>'
-          + '<div class="sb-hed">' + esc(s.headline) + '</div>'
-          + (hasBody
-              ? '<div class="sb-body">' + esc(s.body) + '</div>'
-              : '')
-          + '</div>';
-      }).join('');
-    } else if (storiesEl) {
-      storiesEl.innerHTML = '<p class="brief-no-data">Runs at 4:30 PM MT daily</p>';
-    }
+    // Stories — render to both slots; visibility is controlled by applyTimeGate()
+    renderMainStories(d.stories);
+    renderSidebarStories(d.stories, document.getElementById('brief-stories-sidebar'));
 
     // Sports
     var sportsEl = document.getElementById('brief-sports');
@@ -1111,12 +1213,12 @@
       return;
     }
     el.innerHTML = data.holdings.map(function(h) {
-      var isUp     = h.change >= 0;
-      var dir      = isUp ? 'up' : 'down';
-      var arrow    = isUp ? '+' : '';
-      var chgStr   = arrow + '$' + Math.abs(h.change).toFixed(2)
-                   + ' (' + arrow + h.changePct.toFixed(2) + '%)';
-      var spark    = buildSparkline(h.closes5d, isUp);
+      var isUp   = h.change >= 0;
+      var dir    = isUp ? 'up' : 'down';
+      var arrow  = isUp ? '+' : '';
+      var chgStr = arrow + '$' + Math.abs(h.change).toFixed(2)
+                 + ' (' + arrow + h.changePct.toFixed(2) + '%)';
+      var spark  = buildSparkline(h.closes5d, isUp);
       return '<div class="holding-item">'
         + '<div class="holding-top">'
         + '<span class="holding-ticker">' + esc(h.ticker) + '</span>'
@@ -1154,26 +1256,31 @@
       + '</svg>';
   }
 
-  // ── Load headlines (news feed) — called on load + every 5 min
+  // ── Load headlines (rolling news) — only called in live feed mode
   function loadNews() {
-    tryFetch('data/headlines.json').then(function(data) {
-      renderNews(data);
-    });
+    tryFetch('data/headlines.json').then(renderNews);
   }
 
   // ── Initial full load
   function init() {
-    // Set today's date immediately
+    // Apply time gate first so layout is correct before data arrives
+    applyTimeGate();
+
     var dateEl = document.getElementById('brief-date');
     if (dateEl) dateEl.textContent = fmtDate(new Date());
 
-    Promise.all([
-      tryFetch('data/headlines.json'),
+    var live = isRollingNewsActive();
+
+    // Always fetch brief/markets/sports/holdings; only fetch headlines in live mode
+    var fetches = [
+      live ? tryFetch('data/headlines.json') : Promise.resolve(null),
       tryFetch('data/brief.json'),
       tryFetch('data/markets.json'),
       tryFetch('data/sports.json'),
       tryFetch('data/holdings.json')
-    ]).then(function(results) {
+    ];
+
+    Promise.all(fetches).then(function(results) {
       var headlines = results[0];
       var brief     = results[1];
       var markets   = results[2];
@@ -1182,9 +1289,8 @@
 
       renderHoldings(holdings);
 
-      renderNews(headlines);
+      if (live) renderNews(headlines);
 
-      // Merge markets/sports into brief and render sidebar
       var merged = brief ? JSON.parse(JSON.stringify(brief)) : null;
       if (merged) {
         if (markets) {
@@ -1195,12 +1301,11 @@
           }
         }
         if (sports) {
-          if (sports.teams && sports.teams.length) merged.sports = sports.teams;
+          if (sports.teams && sports.teams.length)         merged.sports = sports.teams;
           if (sports.headlines && sports.headlines.length) merged.sportsHeadlines = sports.headlines;
         }
         renderBrief(merged);
       } else if (markets) {
-        // markets.json only — at least show market strip
         var stub = { lastUpdated: markets.lastUpdated || new Date().toISOString(),
                      market: markets.quotes || {} };
         if (markets.watchlist) stub.watchlist = markets.watchlist;
@@ -1208,11 +1313,18 @@
       }
     });
 
-    // Auto-refresh news + holdings every 5 min
-    setInterval(function() {
-      loadNews();
-      tryFetch('data/holdings.json').then(renderHoldings);
-    }, NEWS_REFRESH_MS);
+    // Auto-refresh: in live mode refresh news + holdings every 5 min;
+    // in snapshot mode only refresh holdings
+    if (live) {
+      setInterval(function() {
+        loadNews();
+        tryFetch('data/holdings.json').then(renderHoldings);
+      }, NEWS_REFRESH_MS);
+    } else {
+      setInterval(function() {
+        tryFetch('data/holdings.json').then(renderHoldings);
+      }, NEWS_REFRESH_MS);
+    }
   }
 
   init();
