@@ -1,111 +1,129 @@
 {
-  "lastUpdated": "2026-06-16T16:30:00-06:00",
+  "lastUpdated": "2026-06-17T16:30:00-06:00",
   "market": {
-    "sp500": {"price": "7523", "change": "-0.41%", "dir": "down"},
-    "nasdaq": {"price": "30350", "change": "-0.70%", "dir": "down"},
-    "yield": {"price": "4.47%", "change": "+1 bps", "dir": "up"},
-    "wti": {"price": "$77.50", "change": "-4.2%", "dir": "down"},
-    "gold": {"price": "$4340", "change": "+0.7%", "dir": "up"},
-    "dxy": {"price": "99.35", "change": "+0.3%", "dir": "up"}
+    "sp500": {
+      "price": "7420",
+      "change": "-1.21%",
+      "dir": "down"
+    },
+    "nasdaq": {
+      "price": "30050",
+      "change": "-1.3%",
+      "dir": "down"
+    },
+    "yield": {
+      "price": "4.49%",
+      "change": "+6 bps",
+      "dir": "up"
+    },
+    "wti": {
+      "price": "$75",
+      "change": "-1.6%",
+      "dir": "down"
+    },
+    "gold": {
+      "price": "$4255",
+      "change": "-1.8%",
+      "dir": "down"
+    },
+    "dxy": {
+      "price": "99.65",
+      "change": "+0.2%",
+      "dir": "up"
+    }
   },
   "stories": [
     {
-      "cat": "COMMODITIES",
-      "headline": "OIL EXTENDS ROUT, WTI SINKS BELOW $78 ON IRAN DEAL HOPES",
-      "body": "WTI fell more than 4% to roughly $77.50, a fourth straight losing session and the lowest since early March, after a 4.9% slide Monday. Crude has now shed over 9% in two days.",
-      "explain": "Traders are unwinding the geopolitical 'war premium' priced in after recent Gulf tensions. Reports of a preliminary U.S.-Iran framework that would keep the Strait of Hormuz open removed the tail risk of a supply shock through a chokepoint carrying roughly a fifth of seaborne oil, so the spot price reverts toward fundamentals-driven levels in the high-$70s."
-    },
-    {
       "cat": "CENTRAL BANKS",
-      "headline": "FED OPENS WARSH-ERA MEETING, HOLD WIDELY EXPECTED WEDNESDAY",
-      "body": "The FOMC began its first meeting under new Chair Kevin Warsh, with markets pricing a hold in the 3.50%-3.75% target range. The decision and Warsh's debut press conference land Wednesday.",
-      "explain": "Warsh has historically leaned hawkish on inflation and skeptical of large balance sheets, so the focus is less on this hold than on the dot plot and tone for cuts later in 2026. With the 10Y near 4.47% and oil's drop easing near-term inflation fears, any dovish signal on the path could steepen the curve and lift rate-sensitive equities."
+      "headline": "FED HOLDS RATES BUT DOTS FLIP TO A HIKE IN WARSH'S DEBUT",
+      "body": "The FOMC voted 12-0 to keep the funds rate at 3.5%-3.75% in Kevin Warsh's first meeting as chair, but the median dot for end-2026 jumped to 3.8% from 3.4% in March, with 9 of 18 officials now penciling in at least one hike. Money markets quickly moved to fully price a hike by October.",
+      "explain": "The dot plot, not the rate itself, drove the session: shifting the median projection up 40 bps tells investors the next move is up, not down. That lifts the discount rate on future cash flows, which is why long-duration megacap tech \u2014 Meta, Microsoft, Amazon \u2014 led the decline. Warsh's 'price stability' framing and a curt new statement reinforced the hawkish reset."
     },
     {
       "cat": "MARKETS",
-      "headline": "DOW HITS RECORD ABOVE 52,000 AS TECH ROTATES LOWER",
-      "body": "The Dow rose 0.64% to a record 52,003 on strength in financials and industrials, while the S&P 500 slipped 0.41% to 7,523 and the Nasdaq Composite fell 0.86% as chip and megacap tech names led the pullback.",
-      "explain": "This is a classic rotation: capital is leaving crowded, high-multiple tech and flowing into cyclical and value names that benefit from falling energy costs and a steady-rate backdrop. The divergence — a record Dow against a weak Nasdaq — signals breadth broadening rather than an index-wide selloff, a healthier internal posture than narrow megacap leadership."
+      "headline": "STOCKS PLUNGE AS HAWKISH FED REPRICING HITS MEGACAP TECH",
+      "body": "The S&P 500 fell 1.21% to 7,420.10 and the Nasdaq-100 dropped roughly 1.3% as every sector finished lower. Communication services led losses down 2.91% and consumer cyclicals fell 2.34%. The Dow shed 0.98% to 51,492.55.",
+      "explain": "When the Fed signals higher-for-longer, the hit lands hardest on the most rate-sensitive, highest-multiple names, whose valuations lean on cash flows far in the future. With the 10-year jumping to 4.49%, the equity risk premium compressed and traders rotated out of crowded AI winners \u2014 though ASML rose 4% and Broadcom gained on chip-spending optimism, a reminder the selloff was about rates, not earnings."
     },
     {
-      "cat": "GEOPOLITICS",
-      "headline": "U.S.-IRAN FRAMEWORK EASES STRAIT OF HORMUZ SUPPLY FEARS",
-      "body": "Hopes for a preliminary U.S.-Iran agreement that keeps the Strait of Hormuz open drove the cross-asset move: oil down sharply, gold holding above $4,300, and the dollar firmer with DXY near 99.35.",
-      "explain": "The Strait is the single most important oil chokepoint, so removing the threat of closure compresses risk premia across energy, safe-haven gold, and FX simultaneously. Gold's resilience despite the de-escalation reflects persistent central-bank buying and rate-cut expectations, while the firmer dollar reflects relief flows back into U.S. assets."
+      "cat": "COMMODITIES",
+      "headline": "OIL SLIDES TO MARCH LOWS ON IMMINENT US-IRAN DEAL",
+      "body": "WTI crude fell about 1.6% toward $75 a barrel, its weakest level since early March, as traders positioned for a US-Iran interim agreement expected to be signed Friday that could quickly return Iranian barrels to global supply.",
+      "explain": "Oil trades on the marginal barrel, and a deal easing sanctions plus restrictions through the Strait of Hormuz would add supply into a market already adequately stocked. The prospect pulls the geopolitical risk premium out of crude \u2014 notably, oil's drop was a supply story that ran independent of the Fed-driven risk-off in equities and metals on the same day."
     },
     {
-      "cat": "EARNINGS",
-      "headline": "WELLS FARGO LIFTS YEAR-END S&P 500 TARGET",
-      "body": "Wells Fargo raised its year-end S&P 500 target, citing improving earnings momentum and easing macro risks, even as strategists flagged crowded tech positioning and sticky inflation as lingering concerns.",
-      "explain": "Sell-side target hikes mid-year typically follow upward revisions to forward EPS estimates rather than multiple expansion. With energy costs falling and the Fed expected to hold, margin assumptions improve, but the explicit warning on 'crowded tech bets' echoes today's rotation and the broader caution that warning indicators are flashing."
+      "cat": "COMMODITIES",
+      "headline": "GOLD DROPS 1.8% AS HIGHER RATES AND A FIRMER DOLLAR BITE",
+      "body": "Gold fell about 1.8% to roughly $4,255 an ounce after the Fed decision, paring a weekly gain. The dollar index firmed to 99.65 and the 10-year yield rose six basis points to 4.49%.",
+      "explain": "Gold pays no yield, so its opportunity cost rises whenever real rates and the dollar climb \u2014 exactly what a hawkish dot plot delivers. The metal had rallied earlier in the week on demand for a hedge ahead of the US-Iran signing, but the Fed's higher-for-longer signal overwhelmed that bid, illustrating how monetary policy can trump geopolitics for non-yielding assets."
     },
     {
       "cat": "MCBB",
-      "headline": "KENTUCKY LANDS TOP TRANSFER MOMCILOVIC AS PORTAL CLOSES",
-      "body": "Kentucky won the recruitment of Iowa State's Milan Momcilovic, the No. 1-rated transfer (48.7% on threes), over Louisville and Arizona. Over 2,700 players entered the now-closed portal; the NBA Draft runs June 23-24."
+      "headline": "PORTAL RESHUFFLES BLUEBLOODS AS DRAFT DECISIONS FIRM UP",
+      "body": "Iowa State sharpshooter Milan Momcilovic (48.7% from three, 16.9 ppg) withdrew from the NBA Draft and committed to Kentucky, while Wake Forest's Juke Harris (21.4 ppg) picked Tennessee and 7-2 center Moustapha Thiam chose Michigan. Kansas's Jalen Bidunga declared for the June 25 draft while keeping eligibility."
     },
     {
       "cat": "NBA",
-      "headline": "KNICKS WIN FIRST TITLE IN 53 YEARS, BRUNSON UNANIMOUS FINALS MVP",
-      "body": "New York beat San Antonio 4-1, rallying from double-digit deficits in all four wins. Jalen Brunson averaged 32.6 points and dropped 45 in the Game 5 clincher to take Finals MVP on all 11 votes."
+      "headline": "KNICKS WIN FIRST TITLE SINCE 1973; DRAFT LOOMS JUNE 23",
+      "body": "The New York Knicks closed out Victor Wembanyama and the Spurs 94-90 in Game 5 to win the Finals 4-1, capping a 13-game postseason run and earning Jalen Brunson Finals MVP. Attention turns to the 2026 NBA Draft, which opens June 23."
     },
     {
       "cat": "NFL",
-      "headline": "BLOCKBUSTER OFFSEASON: GARRETT TO RAMS, A.J. BROWN TO PATRIOTS",
-      "body": "Two June 1 trades sent edge rusher Myles Garrett from Cleveland to the Rams and receiver A.J. Brown from Philadelphia to New England, giving QB Drake Maye a No. 1 target. Teams now break until late-July camp."
+      "headline": "MINICAMPS WIND DOWN WITH QB HEALTH IN FOCUS",
+      "body": "Falcons QB Michael Penix Jr. (knee) remained limited and not cleared for 11-on-11 work, while Titans rookie Cam Ward said his surgically repaired throwing shoulder is fine. Eight teams, including the Cowboys and Falcons, wrap mandatory minicamp June 18 before summer break."
     },
     {
       "cat": "NCAA CFB",
-      "headline": "PORTAL CLOSES WITH LSU ON TOP; COACHES OPEN 2028 CONTACT",
-      "body": "Lane Kiffin's LSU holds the top-ranked transfer class after Auburn WR Cam Coleman, the No. 1 overall portal prospect, entered. June 15 marked the first day coaches could directly contact the class of 2028."
+      "headline": "TRANSFER PORTAL CLASSES SET AS QUIET PERIOD BEGINS",
+      "body": "With the portal effectively closed, Penn State's new staff imported nearly 40 transfers led by QB Rocco Becht, Texas Tech landed top dual-threat QB Brendan Sorsby, and LSU built the No. 1-ranked class under Lane Kiffin. Coaches opened direct contact with 2028 recruits on June 15."
     }
   ],
   "sports": [
     {
-      "team": "SEATTLE MARINERS",
-      "pill": "L 3-8",
-      "pillClass": "s-l",
-      "detail": "37-36. Lost to Nationals; off day Mon. Next: home vs Orioles tonight."
-    },
-    {
       "team": "DETROIT PISTONS",
       "pill": "OFFSEASON",
       "pillClass": "s-up",
-      "detail": "Out vs Cavs in playoffs. Pick 21st in June 23 draft; Duren (All-NBA 3rd Team) a key RFA."
+      "detail": "Top East seed last year; hold No. 21 pick June 23. Duren a restricted FA."
+    },
+    {
+      "team": "SEATTLE MARINERS",
+      "pill": "W 3-1",
+      "pillClass": "s-w",
+      "detail": "Cal Raleigh's 2-run single in IL return; Gilbert K'd 10. 37-36, 1st in AL West. Next: vs Orioles."
     },
     {
       "team": "SEATTLE SEAHAWKS",
       "pill": "OFFSEASON",
       "pillClass": "s-up",
-      "detail": "Defending champs. Minicamp wrapped June 9-11; on break until late-July camp."
+      "detail": "Wrapped minicamp and got Super Bowl LX rings. Return 20 of 22 starters. Camp opens late July."
     },
     {
-      "team": "WASHINGTON HUSKIES FB",
+      "team": "WASHINGTON FOOTBALL",
       "pill": "OFFSEASON",
       "pillClass": "s-up",
-      "detail": "4-star edge Chaz Gray committed June 10. Opens vs Washington State (Apple Cup) Sept 5."
+      "detail": "4-star edge Chaz Gray picked UW over Tennessee, Clemson, building 2027 class."
     },
     {
-      "team": "WASHINGTON HUSKIES BB",
+      "team": "WASHINGTON BASKETBALL",
       "pill": "OFFSEASON",
       "pillClass": "s-up",
-      "detail": "Big Ten offseason under Danny Sprinkle; reloading roster via portal and recruiting."
+      "detail": "Hired ex-Marquette assistant DeAndre Haynes; added recruits Tristan Devers, Wini Braga."
     }
   ],
   "watchlist": [
-    "FOMC decision & Warsh's first presser — Wed June 17",
-    "WTI crude — watch for a base near $75 if Iran deal firms",
-    "10Y Treasury yield reaction to the dot plot",
-    "NBA Draft — Pistons pick 21st, June 23",
-    "Mariners open homestand vs Orioles tonight"
+    "Fed's next move: markets fully pricing a first rate hike of the Warsh era by October",
+    "US-Iran interim deal expected to be signed Friday \u2014 watch oil supply and the Strait of Hormuz",
+    "2026 NBA Draft June 23 \u2014 Pistons hold the No. 21 pick, eyeing ball-handling and shooting",
+    "Jalen Duren restricted free agency and Tobias Harris (UFA June 30) shape Detroit's cap",
+    "Mariners-Orioles finale \u2014 Seattle defends a slim AL West lead at 37-36"
   ],
   "deepDive": {
-    "title": "Unwinding the War Premium: How Geopolitics Gets Priced Into Crude",
+    "title": "The Dot Plot Flips: How a 40-Basis-Point Projection Reset Roiled Markets",
     "content": [
-      "Crude oil rarely moves on barrels alone. Over two sessions WTI shed more than 9%, falling below $78, not because supply suddenly surged or demand collapsed, but because a single tail risk was repriced. Reports of a preliminary U.S.-Iran framework that would keep the Strait of Hormuz open pulled the rug from under the 'war premium' — the extra dollars traders pay to insure against a supply shock that may never arrive. Watching the tape today is a lesson in how expectations, not just physical fundamentals, set the marginal price of a commodity.",
-      "The mechanism runs through expected value. A price reflects probability-weighted outcomes: if markets assign, say, a 20% chance to a Hormuz disruption that would spike oil $30, the spot price carries roughly $6 of embedded insurance. Collapse that probability toward zero and the premium evaporates almost instantly, even though not one extra barrel has shipped. That is why crude can crater 5% in a single session on a headline — the adjustment is to the distribution of outcomes, and option-implied volatility deflates alongside it as the fat left tail is trimmed.",
-      "The Strait of Hormuz is the reason this chokepoint matters more than most. Roughly a fifth of the world's seaborne oil threads through a passage only about 21 miles wide at its narrowest, with no easy substitute route for much of that flow. Economists call this convenience yield — the premium holders pay for physical oil precisely because it cannot be instantly replaced if a chokepoint closes. History rhymes here: the 1980s Tanker War and repeated Gulf flashpoints all show the same pattern of premium inflating on threat and bleeding out on de-escalation.",
-      "Tie it back to today's screen and the cross-asset coherence is the tell. Oil collapses, the dollar firms toward 99.35, and gold holds above $4,300 rather than tumbling — each asset repricing the same easing of geopolitical risk through its own channel. For the Fed opening its meeting under Kevin Warsh, cheaper energy quietly loosens the near-term inflation constraint, giving cover for a steadier rate path. One diplomatic headline thus ripples from a Gulf shipping lane to Treasury yields and a future mortgage rate."
+      "The Fed left its policy rate untouched on Wednesday, yet stocks fell more than a percent. That apparent paradox is the whole lesson of the day. In Kevin Warsh's first meeting as chair, the FOMC held the funds rate at 3.5%-3.75% exactly as a 97% chance had implied. What moved markets sat in the Summary of Economic Projections: the median dot for end-2026 climbed to 3.8% from 3.4% in March. Nine of eighteen officials now see at least one hike this year, six see two or more, and money markets responded by fully pricing a hike by October.",
+      "The dot plot is the Fed's collective forecast of where the funds rate is headed, and it functions as forward guidance that markets discount immediately. Equity valuations are present values of future cash flows; raise the rate those flows are discounted at, even on paper, and prices fall \u2014 most for the longest-duration assets. That is precisely why communication services dropped 2.91% and megacap tech like Meta, Microsoft and Amazon led losses while the S&P 500 shed 1.21% to 7,420. The 10-year yield rose six basis points to 4.49%, the dollar firmed to 99.65, and gold fell 1.8%.",
+      "What makes this notable is the direction of the revision. For most of the post-2022 era, dot-plot adjustments debated how fast to cut. A median that shifts toward hikes is a regime signal, not a tweak \u2014 the kind of pivot last seen when inflation surprised to the upside. Warsh, long viewed as hawkish, leaned in, repeatedly invoking 'price stability' and unveiling a deliberately 'curt' statement plus five task forces to overhaul Fed operations. Markets read the stylistic break as substantive: a new chair willing to tolerate a higher rate path to defend the inflation mandate, even at the cost of a sharp equity wobble.",
+      "The practical upshot is a higher-for-longer rate environment with the tail risk now skewed toward tightening rather than easing. For investors, that compresses equity multiples, supports the dollar, and pressures non-yielding assets like gold whose opportunity cost rises with real rates. Notably, oil decoupled, sliding to March lows on an imminent US-Iran deal \u2014 a reminder that supply shocks and monetary policy can pull in opposite directions on the same day. The signal to watch is the October meeting: if incoming inflation data validates the dots, Warsh's first projection reset becomes the opening move of a genuine hiking cycle."
     ]
   }
 }
