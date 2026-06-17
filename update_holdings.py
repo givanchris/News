@@ -2,7 +2,7 @@
 """
 update_holdings.py — Fetch current prices for all portfolio holdings
 and write data/holdings.json for brief.html.
-Uses Yahoo Finance API with cookie+crumb auth — no yfinance needed.
+Uses requests + Yahoo Finance cookie/crumb auth — works on Python 3.8+.
 Only writes ticker/name/price/change/changePct/prevClose/closes5d (no shares/cost).
 """
 
@@ -11,9 +11,6 @@ import os
 import sys
 import time
 from datetime import datetime, timezone
-from http.cookiejar import CookieJar
-from urllib.request import urlopen, Request, build_opener, HTTPCookieProcessor
-from urllib.error import URLError
 
 SCRIPT_DIR   = os.path.dirname(os.path.abspath(__file__))
 HOLDINGS_SRC = os.path.join(SCRIPT_DIR, "..", "Portfolio management", "holdings.json")
@@ -53,48 +50,59 @@ NAMES = {
 
 YF_MAP = {"MOG.A": "MOG-A", "BTC": "BTC-USD"}
 
-UA = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
-      "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36")
+HEADERS = {
+    "User-Agent": (
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+        "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+    ),
+    "Accept": "application/json, text/plain, */*",
+    "Accept-Language": "en-US,en;q=0.9",
+    "Referer": "https://finance.yahoo.com/",
+    "Origin": "https://finance.yahoo.com",
+}
+
+try:
+    import requests
+except ImportError:
+    print("requests not installed — run: pip3 install --user requests")
+    sys.exit(1)
 
 
 def build_session():
-    """Return (opener, crumb) with Yahoo Finance cookies + crumb set."""
-    jar    = CookieJar()
-    opener = build_opener(HTTPCookieProcessor(jar))
-    opener.addheaders = [("User-Agent", UA), ("Accept", "*/*")]
+    """Create a requests Session with Yahoo Finance cookies + crumb."""
+    s = requests.Session()
+    s.headers.update(HEADERS)
 
-    # Step 1: hit finance.yahoo.com to receive session cookies
-    req = Request("https://finance.yahoo.com/", headers={"User-Agent": UA})
-    opener.open(req, timeout=10)
+    # Hit the main page to set consent/session cookies
+    s.get("https://finance.yahoo.com/", timeout=10)
+    time.sleep(0.5)
 
-    # Step 2: fetch crumb
-    crumb_url = "https://query1.finance.yahoo.com/v1/test/getcrumb"
-    resp  = opener.open(Request(crumb_url, headers={"User-Agent": UA}), timeout=10)
-    crumb = resp.read().decode().strip()
+    # Fetch crumb
+    r = s.get("https://query1.finance.yahoo.com/v1/test/getcrumb", timeout=10)
+    crumb = r.text.strip()
 
-    if not crumb or "<" in crumb:
-        raise RuntimeError(f"Failed to get crumb: {crumb[:80]}")
+    if not crumb or "<" in crumb or r.status_code != 200:
+        raise RuntimeError(f"Crumb fetch failed (HTTP {r.status_code}): {crumb[:80]}")
 
-    return opener, crumb
+    return s, crumb
 
 
-def yf_chart(opener, crumb, symbol, range_="10d", interval="1d"):
+def yf_chart(session, crumb, symbol, range_="10d", interval="1d"):
     url = (
         f"https://query1.finance.yahoo.com/v8/finance/chart/{symbol}"
         f"?interval={interval}&range={range_}&crumb={crumb}"
     )
-    try:
-        resp = opener.open(Request(url, headers={"User-Agent": UA}), timeout=10)
-        return json.loads(resp.read().decode())
-    except Exception as exc:
-        return {"error": str(exc)}
+    r = session.get(url, timeout=10)
+    if r.status_code != 200:
+        return {"error": f"HTTP {r.status_code}"}
+    return r.json()
 
 
-def fetch_holding(opener, crumb, portfolio_ticker):
+def fetch_holding(session, crumb, portfolio_ticker):
     yf_sym         = YF_MAP.get(portfolio_ticker, portfolio_ticker)
     display_ticker = TICKER_DISPLAY.get(yf_sym, yf_sym)
 
-    data = yf_chart(opener, crumb, yf_sym)
+    data = yf_chart(session, crumb, yf_sym)
     if "error" in data:
         print(f"  {display_ticker:<8s}  ERROR — {data['error']}")
         return None
@@ -145,17 +153,17 @@ def main():
     tickers = load_tickers()
     print(f"Fetching {len(tickers)} tickers…\n")
 
-    print("Getting Yahoo Finance session…")
+    print("Initializing Yahoo Finance session…")
     try:
-        opener, crumb = build_session()
-        print(f"Crumb: {crumb[:8]}…\n")
+        session, crumb = build_session()
+        print(f"Crumb OK ({crumb[:8]}…)\n")
     except Exception as exc:
-        print(f"ERROR: could not init session — {exc}")
+        print(f"ERROR: session init failed — {exc}")
         sys.exit(1)
 
     results = []
     for sym in tickers:
-        row = fetch_holding(opener, crumb, sym)
+        row = fetch_holding(session, crumb, sym)
         if row:
             results.append(row)
         time.sleep(0.4)
