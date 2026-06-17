@@ -883,6 +883,14 @@
     if (c) { c.textContent = data.change; c.className = 'mkt-chg ' + (data.dir || 'flat'); }
   }
 
+  function safeUrl(u) {
+    if (!u) return '#';
+    try {
+      var p = new URL(u, location.href);
+      return (p.protocol === 'http:' || p.protocol === 'https:') ? p.href : '#';
+    } catch(e) { return '#'; }
+  }
+
   function tryFetch(url) {
     return fetch(url + '?_=' + Date.now())
       .then(function(r) { return r.ok ? r.json() : null; })
@@ -908,12 +916,13 @@
     // Render items
     if (el) {
       el.innerHTML = data.headlines.map(function(h) {
-        var url  = esc(h.url || '#');
+        var url  = esc(safeUrl(h.url));
         var src  = esc(h.source || '—');
         var cat  = esc(h.category || '');
         var hed  = esc(h.title || '');
         var ts   = relTime(h.ts);
-        var target = h.url ? ' target="_blank" rel="noopener"' : '';
+        var isExternal = url !== '#';
+        var target = isExternal ? ' target="_blank" rel="noopener noreferrer"' : '';
         return '<div class="news-item">'
           + '<div class="news-meta">'
           + '<span class="news-src">' + src + '</span>'
