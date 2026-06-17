@@ -14,8 +14,8 @@ cd "$REPO"
 # Pull any remote changes first
 git pull --no-rebase origin main >> "$LOG" 2>&1 || true
 
-# Fetch fresh prices
-python3 "$REPO/update_holdings.py" >> "$LOG" 2>&1
+# Fetch fresh prices (Python 3.14 has yfinance installed)
+/usr/local/bin/python3.14 "$REPO/update_holdings.py" >> "$LOG" 2>&1
 
 # Commit + push if holdings.json changed
 if ! git diff --quiet data/holdings.json; then
