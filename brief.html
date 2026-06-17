@@ -6,24 +6,18 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; frame-ancestors 'none';" />
   <title>Daily Brief — Christopher Givan</title>
 
-  <!-- SEO -->
-  <meta name="description" content="A concise daily read on markets, macro, and what matters. Curated by Christopher Givan, updated nightly." />
+  <meta name="description" content="Rolling financial news and daily market brief. Updated every 30 minutes." />
   <meta name="author" content="Christopher Givan" />
   <meta name="theme-color" content="#0e2240" />
-
-  <!-- Open Graph -->
   <meta property="og:type" content="article" />
   <meta property="og:title" content="Daily Brief — Christopher Givan" />
-  <meta property="og:description" content="Markets, macro, geopolitics. A concise daily read, updated nightly." />
+  <meta property="og:description" content="Markets, macro, geopolitics. Rolling news updated every 30 minutes." />
   <meta property="og:image" content="headshot.jpg" />
-
-  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Daily Brief — Christopher Givan" />
-  <meta name="twitter:description" content="Markets, macro, geopolitics. A concise daily read, updated nightly." />
+  <meta name="twitter:description" content="Markets, macro, geopolitics. Rolling news updated every 30 minutes." />
   <meta name="twitter:image" content="headshot.jpg" />
 
-  <!-- Favicon (inline SVG, matches CG monogram) -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230e2240'/%3E%3Ctext x='16' y='22' font-family='-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif' font-size='14' font-weight='800' fill='white' text-anchor='middle'%3ECG%3C/text%3E%3C/svg%3E" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -184,7 +178,7 @@
       color: rgba(255,255,255,0.38);
       letter-spacing: 0.02em;
       margin-bottom: 1.25rem;
-      max-width: 400px;
+      max-width: 420px;
     }
 
     .brief-hero-meta {
@@ -242,9 +236,7 @@
     .brief-nav-tab.active { color: var(--blue2); background: rgba(46,116,232,0.08); }
 
     /* ── MARKET STRIP ── */
-    .mkt-strip-wrap {
-      background: var(--navy);
-    }
+    .mkt-strip-wrap { background: var(--navy); }
 
     .mkt-strip-header {
       max-width: 1080px;
@@ -300,24 +292,20 @@
     .down { color: #dd7163; }
     .flat { color: rgba(244, 239, 227, 0.35); }
 
-    /* ── BRIEF BODY (navy section) ── */
+    /* ── BRIEF BODY (two-column) ── */
     .brief-section { background: var(--navy); }
 
     .brief-body {
       display: grid;
-      grid-template-columns: 1fr 300px;
+      grid-template-columns: 1fr 370px;
       max-width: 1080px;
       margin: 0 auto;
     }
 
+    /* ── MAIN: ROLLING NEWS ── */
     .brief-main {
-      padding: 2rem 2.5rem 2.5rem;
+      padding: 1.75rem 2.5rem 2.5rem;
       border-right: 1px solid var(--navy3);
-      max-width: 680px;
-    }
-
-    .brief-sidebar {
-      padding: 1.75rem 1.5rem 1.75rem 1.75rem;
     }
 
     .brief-col-label {
@@ -329,135 +317,157 @@
       margin-bottom: 1rem;
       padding-bottom: 0.6rem;
       border-bottom: 1px solid var(--navy3);
-    }
-
-    .brief-theme-bar {
-      margin-bottom: 1.25rem;
-    }
-
-    .brief-theme-chip {
-      font-family: 'IBM Plex Mono', ui-monospace, monospace;
-      font-size: 0.6rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--blue2);
-      background: rgba(46,116,232,0.1);
-      border: 1px solid rgba(46,116,232,0.25);
-      padding: 0.25rem 0.6rem;
-      display: inline-block;
-    }
-
-    /* Stories */
-    .b-story {
-      padding: 1.4rem 0;
-      border-bottom: 1px solid rgba(255,255,255,0.07);
-    }
-
-    .b-story:last-child { border-bottom: none; }
-
-    .b-cat {
-      font-family: 'IBM Plex Mono', ui-monospace, monospace;
-      font-size: 0.57rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--blue2);
-      margin-bottom: 0.45rem;
-    }
-
-    .b-hed {
-      font-family: 'Newsreader', Georgia, 'Times New Roman', serif;
-      font-size: 1.12rem;
-      font-weight: 800;
-      text-transform: uppercase;
-      color: var(--white);
-      line-height: 1.1;
-      margin-bottom: 0.55rem;
-    }
-
-    .b-body {
-      font-size: 0.86rem;
-      color: rgba(255,255,255,0.48);
-      line-height: 1.75;
-    }
-
-    .b-story.has-explain { cursor: pointer; }
-    .b-story.has-explain:hover { background: rgba(255,255,255,0.02); margin: 0 -0.75rem; padding-left: 0.75rem; padding-right: 0.75rem; border-radius: 2px; }
-
-    .b-hed-row {
       display: flex;
-      align-items: flex-start;
+      align-items: center;
       justify-content: space-between;
-      gap: 1rem;
     }
 
-    .b-explain-toggle {
+    .news-refresh-status {
       font-family: 'IBM Plex Mono', ui-monospace, monospace;
       font-size: 0.57rem;
-      letter-spacing: 0.08em;
+      color: rgba(244, 239, 227, 0.28);
+      letter-spacing: 0.04em;
+    }
+
+    /* News feed items */
+    .news-item {
+      display: flex;
+      gap: 1rem;
+      padding: 0.9rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      align-items: flex-start;
+    }
+
+    .news-item:last-child { border-bottom: none; }
+
+    .news-meta {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      min-width: 46px;
+      flex-shrink: 0;
+      padding-top: 0.12rem;
+    }
+
+    .news-src {
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
+      font-size: 0.55rem;
+      letter-spacing: 0.07em;
       text-transform: uppercase;
       color: var(--blue2);
       white-space: nowrap;
-      padding-top: 0.2rem;
-      opacity: 0.6;
-      flex-shrink: 0;
-      display: flex;
-      align-items: center;
-      gap: 0.3rem;
-      transition: opacity 0.15s;
     }
 
-    .b-story.has-explain:hover .b-explain-toggle { opacity: 1; }
-
-    .b-toggle-icon {
-      display: inline-block;
-      font-size: 0.8rem;
-      line-height: 1;
-      transition: transform 0.2s ease;
-    }
-
-    .b-story.open .b-toggle-icon { transform: rotate(45deg); }
-
-    .b-explain {
-      overflow: hidden;
-      max-height: 0;
-      transition: max-height 0.32s ease, padding-top 0.32s ease;
-      padding-top: 0;
-    }
-
-    .b-story.open .b-explain {
-      max-height: 300px;
-      padding-top: 0.9rem;
-    }
-
-    .b-explain-label {
+    .news-ts {
       font-family: 'IBM Plex Mono', ui-monospace, monospace;
-      font-size: 0.55rem;
+      font-size: 0.53rem;
+      color: rgba(255,255,255,0.28);
+      margin-top: 0.15rem;
+      white-space: nowrap;
+    }
+
+    .news-hed {
+      font-family: 'Newsreader', Georgia, 'Times New Roman', serif;
+      font-size: 1.0rem;
+      font-weight: 600;
+      color: var(--white);
+      line-height: 1.3;
+      text-decoration: none;
+      flex: 1;
+      transition: color 0.15s;
+    }
+
+    .news-hed:hover { color: var(--blue2); }
+
+    .news-cat {
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
+      font-size: 0.5rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.22);
+      margin-top: 0.2rem;
+    }
+
+    /* ── SIDEBAR: EDITORIAL + PERSONAL ── */
+    .brief-sidebar {
+      padding: 1.75rem 1.5rem 1.75rem 1.75rem;
+      overflow-y: auto;
+    }
+
+    .sidebar-section-label {
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
+      font-size: 0.6rem;
       letter-spacing: 0.1em;
       text-transform: uppercase;
+      color: rgba(244, 239, 227, 0.35);
+      margin-bottom: 0.85rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--navy3);
+    }
+
+    .sidebar-section-label + .sidebar-section-label { margin-top: 1.5rem; }
+
+    /* Compact editorial stories */
+    .sb-story {
+      padding: 0.85rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .sb-story:last-child { border-bottom: none; }
+
+    .sb-cat {
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
+      font-size: 0.55rem;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
       color: var(--blue2);
-      opacity: 0.7;
-      margin-bottom: 0.45rem;
+      margin-bottom: 0.3rem;
     }
 
-    .b-explain-text {
-      font-size: 0.84rem;
-      color: rgba(255,255,255,0.58);
-      line-height: 1.72;
-      border-left: 2px solid rgba(46,116,232,0.35);
-      padding-left: 0.85rem;
+    .sb-hed {
+      font-family: 'Newsreader', Georgia, 'Times New Roman', serif;
+      font-size: 0.9rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--white);
+      line-height: 1.15;
+      cursor: pointer;
+      transition: color 0.15s;
     }
 
-    /* Sports sidebar */
+    .sb-hed:hover { color: var(--blue2); }
+
+    .sb-body {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.4);
+      line-height: 1.6;
+      margin-top: 0.3rem;
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height 0.28s ease, margin-top 0.28s ease;
+    }
+
+    .sb-story.open .sb-body { max-height: 200px; margin-top: 0.4rem; }
+
+    .sidebar-no-brief {
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
+      font-size: 0.67rem;
+      color: rgba(255,255,255,0.2);
+      letter-spacing: 0.03em;
+      padding: 0.5rem 0;
+    }
+
+    /* Sports items in sidebar */
     .sport-item {
-      padding: 1rem 0;
-      border-bottom: 1px solid rgba(255,255,255,0.07);
+      padding: 0.85rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
     }
 
     .sport-item:last-child { border-bottom: none; }
 
     .sport-name {
       font-family: 'Newsreader', Georgia, 'Times New Roman', serif;
-      font-size: 0.88rem;
+      font-size: 0.85rem;
       font-weight: 700;
       text-transform: uppercase;
       color: var(--white);
@@ -465,13 +475,13 @@
       display: flex;
       align-items: center;
       gap: 0.4rem;
-      margin-bottom: 0.2rem;
+      margin-bottom: 0.18rem;
     }
 
     .s-pill {
       font-family: 'IBM Plex Mono', ui-monospace, monospace;
-      font-size: 0.55rem;
-      padding: 0.1rem 0.32rem;
+      font-size: 0.52rem;
+      padding: 0.1rem 0.3rem;
       border-radius: 2px;
       letter-spacing: 0.04em;
     }
@@ -481,42 +491,9 @@
     .s-up { background: rgba(46,116,232,0.15); color: var(--blue2); }
 
     .sport-detail {
-      font-size: 0.78rem;
-      color: rgba(255,255,255,0.38);
-      line-height: 1.55;
-    }
-
-    /* National headlines sub-block under the team list */
-    .sports-headlines {
-      margin-top: 1.25rem;
-      padding-top: 1rem;
-      border-top: 1px solid var(--navy3);
-    }
-    .sports-headlines-label {
-      font-family: 'IBM Plex Mono', ui-monospace, monospace;
-      font-size: 0.6rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: rgba(244, 239, 227, 0.35);
-      margin-bottom: 0.75rem;
-    }
-    .sports-headline {
-      font-size: 0.78rem;
-      color: rgba(255,255,255,0.55);
+      font-size: 0.76rem;
+      color: rgba(255,255,255,0.35);
       line-height: 1.5;
-      padding: 0.55rem 0;
-      border-bottom: 1px solid rgba(255,255,255,0.05);
-      display: flex;
-      gap: 0.5rem;
-    }
-    .sports-headline:last-child { border-bottom: none; }
-    .sports-headline .sh-league {
-      font-family: 'IBM Plex Mono', ui-monospace, monospace;
-      font-size: 0.58rem;
-      color: var(--blue2);
-      letter-spacing: 0.06em;
-      padding-top: 0.1rem;
-      min-width: 40px;
     }
 
     /* Watch bar */
@@ -578,10 +555,7 @@
       align-items: start;
     }
 
-    .deep-dive-left {
-      position: sticky;
-      top: 80px;
-    }
+    .deep-dive-left { position: sticky; top: 80px; }
 
     .deep-dive-eyebrow {
       font-family: 'IBM Plex Mono', ui-monospace, monospace;
@@ -739,14 +713,14 @@
     <div class="brief-hero-left">
       <div class="brief-eyebrow">Markets · Macro · Geopolitics</div>
       <h1 class="brief-hero-title">Daily<br><span>Brief</span></h1>
-      <p class="brief-subtitle">A concise daily read on markets, macro, and what matters.</p>
+      <p class="brief-subtitle">Rolling news updated every 30 minutes. Curated editorial at 4:30 PM MT daily.</p>
       <div class="brief-hero-meta">
         <span class="brief-date-display" id="brief-date">—</span>
         <span class="brief-updated-display" id="brief-meta"></span>
       </div>
     </div>
     <div class="brief-hero-nav">
-      <a class="brief-nav-tab active" onclick="scrollToSection('brief-section', this)">Brief</a>
+      <a class="brief-nav-tab active" onclick="scrollToSection('brief-section', this)">Live Feed</a>
       <a class="brief-nav-tab" onclick="scrollToSection('deep-dive-section', this)">Deep Dive</a>
     </div>
   </div>
@@ -756,56 +730,66 @@
 <div class="mkt-strip-wrap">
   <div class="mkt-strip-header">Market Snapshot</div>
   <div class="mkt-strip">
-  <div class="mkt-tile">
-    <div class="mkt-ticker">S&amp;P 500</div>
-    <div class="mkt-price" id="sp500-price">—</div>
-    <div class="mkt-chg flat" id="sp500-chg">—</div>
-  </div>
-  <div class="mkt-tile">
-    <div class="mkt-ticker">Nasdaq</div>
-    <div class="mkt-price" id="nasdaq-price">—</div>
-    <div class="mkt-chg flat" id="nasdaq-chg">—</div>
-  </div>
-  <div class="mkt-tile">
-    <div class="mkt-ticker">10Y Yield</div>
-    <div class="mkt-price" id="yield-price">—</div>
-    <div class="mkt-chg flat" id="yield-chg">—</div>
-  </div>
-  <div class="mkt-tile">
-    <div class="mkt-ticker">WTI Crude</div>
-    <div class="mkt-price" id="wti-price">—</div>
-    <div class="mkt-chg flat" id="wti-chg">—</div>
-  </div>
-  <div class="mkt-tile">
-    <div class="mkt-ticker">Gold</div>
-    <div class="mkt-price" id="gold-price">—</div>
-    <div class="mkt-chg flat" id="gold-chg">—</div>
-  </div>
-  <div class="mkt-tile">
-    <div class="mkt-ticker">DXY</div>
-    <div class="mkt-price" id="dxy-price">—</div>
-    <div class="mkt-chg flat" id="dxy-chg">—</div>
-  </div>
+    <div class="mkt-tile">
+      <div class="mkt-ticker">S&amp;P 500</div>
+      <div class="mkt-price" id="sp500-price">—</div>
+      <div class="mkt-chg flat" id="sp500-chg">—</div>
+    </div>
+    <div class="mkt-tile">
+      <div class="mkt-ticker">Nasdaq</div>
+      <div class="mkt-price" id="nasdaq-price">—</div>
+      <div class="mkt-chg flat" id="nasdaq-chg">—</div>
+    </div>
+    <div class="mkt-tile">
+      <div class="mkt-ticker">10Y Yield</div>
+      <div class="mkt-price" id="yield-price">—</div>
+      <div class="mkt-chg flat" id="yield-chg">—</div>
+    </div>
+    <div class="mkt-tile">
+      <div class="mkt-ticker">WTI Crude</div>
+      <div class="mkt-price" id="wti-price">—</div>
+      <div class="mkt-chg flat" id="wti-chg">—</div>
+    </div>
+    <div class="mkt-tile">
+      <div class="mkt-ticker">Gold</div>
+      <div class="mkt-price" id="gold-price">—</div>
+      <div class="mkt-chg flat" id="gold-chg">—</div>
+    </div>
+    <div class="mkt-tile">
+      <div class="mkt-ticker">DXY</div>
+      <div class="mkt-price" id="dxy-price">—</div>
+      <div class="mkt-chg flat" id="dxy-chg">—</div>
+    </div>
   </div>
 </div>
 
-<!-- BRIEF SECTION -->
+<!-- MAIN CONTENT: Rolling news + Sidebar -->
 <div class="brief-section" id="brief-section">
   <div class="brief-body">
+
+    <!-- LEFT: ROLLING NEWS FEED -->
     <div class="brief-main">
-      <div class="brief-col-label">Finance · Macro · Geopolitics</div>
-      <div class="brief-theme-bar" id="brief-theme-bar" style="display:none;">
-        <span class="brief-theme-chip" id="brief-theme-text"></span>
+      <div class="brief-col-label">
+        <span>Live News Feed</span>
+        <span class="news-refresh-status" id="news-refresh-status">Loading…</span>
       </div>
-      <div id="brief-stories"><p class="brief-no-data">Loading…</p></div>
+      <div id="rolling-news"><p class="brief-no-data">Loading…</p></div>
     </div>
+
+    <!-- RIGHT: EDITORIAL + PERSONAL -->
     <div class="brief-sidebar">
-      <div class="brief-col-label">Scoreboard — Personal Watchlist</div>
-      <div id="brief-sports"><p class="brief-no-data">Loading…</p></div>
+      <div class="sidebar-section-label">4:30 PM Editorial</div>
+      <div id="brief-stories"><p class="brief-no-data">Runs at 4:30 PM MT daily</p></div>
+
+      <div class="sidebar-section-label" style="margin-top:1.5rem;">Scoreboard</div>
+      <div id="brief-sports"><p class="brief-no-data">—</p></div>
       <div id="brief-sports-headlines"></div>
     </div>
+
   </div>
-  <div class="brief-watch" id="brief-watchlist"></div>
+
+  <!-- WATCHLIST BAR (below both columns) -->
+  <div class="brief-watch" id="brief-watchlist" style="display:none;"></div>
 </div>
 
 <!-- DEEP DIVE SECTION -->
@@ -817,8 +801,10 @@
       <div class="deep-dive-readtime" id="deep-dive-readtime">Read: ~3 min</div>
     </div>
     <div class="deep-dive-right">
-      <div class="deep-dive-title" id="deep-dive-title">Loading…</div>
-      <div class="deep-dive-body" id="deep-dive-body"></div>
+      <div class="deep-dive-title" id="deep-dive-title">Runs at 4:30 PM MT</div>
+      <div class="deep-dive-body" id="deep-dive-body">
+        <p style="color:var(--muted)">The deep dive publishes with the 4:30 PM MT daily brief.</p>
+      </div>
     </div>
   </div>
 </div>
@@ -826,7 +812,7 @@
 <!-- TICKER -->
 <div class="ticker-wrap">
   <div class="ticker-track">
-    <span>Daily Brief</span><span class="accent">◆</span>
+    <span>Live Brief</span><span class="accent">◆</span>
     <span>Markets</span><span class="accent">◆</span>
     <span>Macro</span><span class="accent">◆</span>
     <span>Geopolitics</span><span class="accent">◆</span>
@@ -834,7 +820,7 @@
     <span>Deep Dive</span><span class="accent">◆</span>
     <span>Christopher Givan</span><span class="accent">◆</span>
     <span>CU Boulder</span><span class="accent">◆</span>
-    <span>Daily Brief</span><span class="accent">◆</span>
+    <span>Live Brief</span><span class="accent">◆</span>
     <span>Markets</span><span class="accent">◆</span>
     <span>Macro</span><span class="accent">◆</span>
     <span>Geopolitics</span><span class="accent">◆</span>
@@ -856,15 +842,38 @@
 (function () {
   var DAYS   = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
   var MONTHS = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+  var NEWS_REFRESH_MS = 5 * 60 * 1000; // 5 min
 
   function esc(s) {
     return String(s == null ? '' : s)
-      .replace(/&/g, '&amp;').replace(/</g, '&lt;')
-      .replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+      .replace(/&/g,'&amp;').replace(/</g,'&lt;')
+      .replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
   }
 
   function fmtDate(d) {
     return DAYS[d.getDay()] + ', ' + MONTHS[d.getMonth()] + ' ' + d.getDate() + ', ' + d.getFullYear();
+  }
+
+  function relTime(isoStr) {
+    if (!isoStr) return '';
+    var ms   = Date.now() - new Date(isoStr).getTime();
+    var mins = Math.round(ms / 60000);
+    if (mins < 2)   return 'now';
+    if (mins < 60)  return mins + 'm';
+    var hrs = Math.round(mins / 60);
+    if (hrs < 24)   return hrs + 'h';
+    return Math.round(hrs / 24) + 'd';
+  }
+
+  function relTimeFull(isoStr) {
+    if (!isoStr) return '';
+    var ms   = Date.now() - new Date(isoStr).getTime();
+    var mins = Math.round(ms / 60000);
+    if (mins < 2)   return 'just now';
+    if (mins < 60)  return mins + 'm ago';
+    var hrs = Math.round(mins / 60);
+    if (hrs < 24)   return hrs + 'h ago';
+    return Math.round(hrs / 24) + 'd ago';
   }
 
   function setTile(id, data) {
@@ -874,12 +883,59 @@
     if (c) { c.textContent = data.change; c.className = 'mkt-chg ' + (data.dir || 'flat'); }
   }
 
+  function tryFetch(url) {
+    return fetch(url + '?_=' + Date.now())
+      .then(function(r) { return r.ok ? r.json() : null; })
+      .catch(function() { return null; });
+  }
+
+  // ── Render rolling news from headlines.json
+  function renderNews(data) {
+    var el      = document.getElementById('rolling-news');
+    var statusEl = document.getElementById('news-refresh-status');
+
+    if (!data || !data.headlines || !data.headlines.length) {
+      if (el) el.innerHTML = '<p class="brief-no-data">News feed offline — next update 7:00 AM MT</p>';
+      if (statusEl) statusEl.textContent = 'offline';
+      return;
+    }
+
+    // Update status badge
+    if (statusEl) {
+      statusEl.textContent = 'Updated ' + relTimeFull(data.lastUpdated) + ' · refreshes every 5m';
+    }
+
+    // Render items
+    if (el) {
+      el.innerHTML = data.headlines.map(function(h) {
+        var url  = esc(h.url || '#');
+        var src  = esc(h.source || '—');
+        var cat  = esc(h.category || '');
+        var hed  = esc(h.title || '');
+        var ts   = relTime(h.ts);
+        var target = h.url ? ' target="_blank" rel="noopener"' : '';
+        return '<div class="news-item">'
+          + '<div class="news-meta">'
+          + '<span class="news-src">' + src + '</span>'
+          + '<span class="news-ts">' + ts + '</span>'
+          + '</div>'
+          + '<div>'
+          + '<a class="news-hed" href="' + url + '"' + target + '>' + hed + '</a>'
+          + (cat ? '<div class="news-cat">' + cat + '</div>' : '')
+          + '</div>'
+          + '</div>';
+      }).join('');
+    }
+  }
+
+  // ── Render Claude editorial from brief.json
   function renderBrief(d) {
-    // Date
+    if (!d) return;
+
+    // Hero date + meta
     var dateEl = document.getElementById('brief-date');
     if (dateEl) dateEl.textContent = fmtDate(new Date(d.lastUpdated));
 
-    // Last updated + stale check
     var metaEl = document.getElementById('brief-meta');
     if (metaEl) {
       var updated  = new Date(d.lastUpdated);
@@ -888,55 +944,33 @@
         month: 'short', day: 'numeric',
         hour: 'numeric', minute: '2-digit', timeZoneName: 'short'
       });
-      metaEl.innerHTML = 'Updated ' + timeStr;
+      metaEl.innerHTML = 'Brief updated ' + timeStr;
       if (hoursAgo > 36) {
         metaEl.innerHTML += ' &nbsp;<span class="brief-stale-badge">⚠ may be stale</span>';
       }
     }
 
-    // Market strip
+    // Market strip (from brief.json or markets.json)
     var m = d.market || {};
     ['sp500','nasdaq','yield','wti','gold','dxy'].forEach(function(k) {
       if (m[k]) setTile(k, m[k]);
     });
 
-    // Theme bar (optional field in brief.json)
-    if (d.theme) {
-      var themeBar = document.getElementById('brief-theme-bar');
-      var themeText = document.getElementById('brief-theme-text');
-      if (themeBar && themeText) {
-        themeText.textContent = d.theme;
-        themeBar.style.display = 'block';
-      }
-    }
-
-    // Stories
+    // Sidebar editorial stories (compact — click to expand body)
     var storiesEl = document.getElementById('brief-stories');
     if (storiesEl && d.stories && d.stories.length) {
-      storiesEl.innerHTML = d.stories.map(function(s) {
-        var hasExplain = s.explain && s.explain.length;
-        var explainHtml = hasExplain
-          ? '<div class="b-explain">'
-            + '<div class="b-explain-label">Mechanism</div>'
-            + '<div class="b-explain-text">' + esc(s.explain) + '</div>'
-            + '</div>'
-          : '';
-        var toggleHtml = hasExplain
-          ? '<div class="b-explain-toggle">Explain <span class="b-toggle-icon">+</span></div>'
-          : '';
-        return '<div class="b-story' + (hasExplain ? ' has-explain' : '') + '"'
-          + (hasExplain ? ' onclick="toggleStory(this)"' : '') + '>'
-          + '<div class="b-cat">' + esc(s.cat) + '</div>'
-          + '<div class="b-hed-row">'
-          + '<div class="b-hed">' + esc(s.headline) + '</div>'
-          + toggleHtml
-          + '</div>'
-          + '<div class="b-body">' + esc(s.body) + '</div>'
-          + explainHtml
+      storiesEl.innerHTML = d.stories.map(function(s, i) {
+        var hasBody = s.body && s.body.length;
+        return '<div class="sb-story" onclick="toggleSbStory(this)">'
+          + '<div class="sb-cat">' + esc(s.cat) + '</div>'
+          + '<div class="sb-hed">' + esc(s.headline) + '</div>'
+          + (hasBody
+              ? '<div class="sb-body">' + esc(s.body) + '</div>'
+              : '')
           + '</div>';
       }).join('');
     } else if (storiesEl) {
-      storiesEl.innerHTML = '<p class="brief-no-data">No stories yet — check back tonight at 7 PM MT.</p>';
+      storiesEl.innerHTML = '<p class="brief-no-data">Runs at 4:30 PM MT daily</p>';
     }
 
     // Sports
@@ -949,17 +983,20 @@
           + '<div class="sport-detail">' + esc(s.detail) + '</div>'
           + '</div>';
       }).join('');
+    } else if (sportsEl) {
+      sportsEl.innerHTML = '<p class="brief-no-data">—</p>';
     }
 
-    // National sports headlines (optional; rendered only if present)
+    // National sports headlines
     var shEl = document.getElementById('brief-sports-headlines');
     if (shEl) {
       if (d.sportsHeadlines && d.sportsHeadlines.length) {
-        shEl.innerHTML = '<div class="sports-headlines">'
-          + '<div class="sports-headlines-label">Top Headlines</div>'
-          + d.sportsHeadlines.slice(0, 5).map(function (h) {
-              var league = h.league ? '<span class="sh-league">' + esc(h.league) + '</span>' : '';
-              return '<div class="sports-headline">' + league + '<span>' + esc(h.title) + '</span></div>';
+        shEl.innerHTML = '<div style="margin-top:1rem; padding-top:0.75rem; border-top:1px solid rgba(255,255,255,0.07);">'
+          + '<div class="sidebar-section-label" style="margin-bottom:0.6rem;">Top Headlines</div>'
+          + d.sportsHeadlines.slice(0, 4).map(function(h) {
+              return '<div style="font-size:0.76rem;color:rgba(255,255,255,0.45);line-height:1.5;padding:0.45rem 0;border-bottom:1px solid rgba(255,255,255,0.04);">'
+                + (h.league ? '<span style="font-family:\'IBM Plex Mono\',mono;font-size:0.55rem;color:var(--blue2);letter-spacing:0.06em;margin-right:0.4rem;">' + esc(h.league) + '</span>' : '')
+                + esc(h.title) + '</div>';
             }).join('')
           + '</div>';
       } else {
@@ -967,7 +1004,7 @@
       }
     }
 
-    // Watchlist
+    // Watchlist bar
     var watchEl = document.getElementById('brief-watchlist');
     if (watchEl && d.watchlist && d.watchlist.length) {
       var items = d.watchlist.map(function(w) {
@@ -975,6 +1012,7 @@
       }).join('');
       watchEl.innerHTML = '<span class="watch-label">Watch →</span>'
         + '<div class="watch-items">' + items + '</div>';
+      watchEl.style.display = 'flex';
     }
 
     // Deep Dive
@@ -994,58 +1032,64 @@
     }
   }
 
-  function showError() {
+  // ── Load headlines (news feed) — called on load + every 5 min
+  function loadNews() {
+    tryFetch('data/headlines.json').then(function(data) {
+      renderNews(data);
+    });
+  }
+
+  // ── Initial full load
+  function init() {
+    // Set today's date immediately
     var dateEl = document.getElementById('brief-date');
     if (dateEl) dateEl.textContent = fmtDate(new Date());
-    var metaEl = document.getElementById('brief-meta');
-    if (metaEl) metaEl.innerHTML = '<span class="brief-stale-badge">Brief unavailable — check back tonight at 7 PM MT</span>';
-    var storiesEl = document.getElementById('brief-stories');
-    if (storiesEl) storiesEl.innerHTML = '<p class="brief-no-data">Could not load brief data.</p>';
-    var titleEl = document.getElementById('deep-dive-title');
-    if (titleEl) titleEl.textContent = 'Deep Dive unavailable';
-  }
 
-  // Fetch narrative (brief.json) + machine-written data (markets, sports) in parallel.
-  // If markets.json or sports.json is missing (workflow hasn't run yet), we fall back
-  // to the corresponding sections in brief.json so nothing breaks.
-  function tryFetch(url) {
-    return fetch(url + '?_=' + Date.now())
-      .then(function(r) { return r.ok ? r.json() : null; })
-      .catch(function() { return null; });
-  }
+    Promise.all([
+      tryFetch('data/headlines.json'),
+      tryFetch('data/brief.json'),
+      tryFetch('data/markets.json'),
+      tryFetch('data/sports.json')
+    ]).then(function(results) {
+      var headlines = results[0];
+      var brief     = results[1];
+      var markets   = results[2];
+      var sports    = results[3];
 
-  Promise.all([
-    tryFetch('data/brief.json'),
-    tryFetch('data/markets.json'),
-    tryFetch('data/sports.json')
-  ]).then(function(results) {
-    var brief   = results[0];
-    var markets = results[1];
-    var sports  = results[2];
-    if (!brief && !markets && !sports) { showError(); return; }
+      renderNews(headlines);
 
-    // Merge: new files win if present; otherwise fall back to brief.json fields.
-    var merged = brief ? JSON.parse(JSON.stringify(brief)) : { lastUpdated: new Date().toISOString() };
-
-    if (markets) {
-      // markets.json uses `quotes` (new), brief.json used `market` (old) — normalize.
-      merged.market = markets.quotes || merged.market;
-      if (markets.watchlist && markets.watchlist.length) merged.watchlist = markets.watchlist;
-      // Prefer the freshest lastUpdated timestamp so "stale" badge reflects data age.
-      if (markets.lastUpdated && markets.lastUpdated > (merged.lastUpdated || '')) {
-        merged.lastUpdated = markets.lastUpdated;
+      // Merge markets/sports into brief and render sidebar
+      var merged = brief ? JSON.parse(JSON.stringify(brief)) : null;
+      if (merged) {
+        if (markets) {
+          merged.market = markets.quotes || merged.market;
+          if (markets.watchlist && markets.watchlist.length) merged.watchlist = markets.watchlist;
+          if (markets.lastUpdated && markets.lastUpdated > (merged.lastUpdated || '')) {
+            merged.lastUpdated = markets.lastUpdated;
+          }
+        }
+        if (sports) {
+          if (sports.teams && sports.teams.length) merged.sports = sports.teams;
+          if (sports.headlines && sports.headlines.length) merged.sportsHeadlines = sports.headlines;
+        }
+        renderBrief(merged);
+      } else if (markets) {
+        // markets.json only — at least show market strip
+        var stub = { lastUpdated: markets.lastUpdated || new Date().toISOString(),
+                     market: markets.quotes || {} };
+        if (markets.watchlist) stub.watchlist = markets.watchlist;
+        renderBrief(stub);
       }
-    }
-    if (sports) {
-      if (sports.teams && sports.teams.length) merged.sports = sports.teams;
-      if (sports.headlines && sports.headlines.length) merged.sportsHeadlines = sports.headlines;
-    }
+    });
 
-    renderBrief(merged);
-  }).catch(showError);
+    // Auto-refresh news every 5 min
+    setInterval(loadNews, NEWS_REFRESH_MS);
+  }
+
+  init();
 })();
 
-function toggleStory(el) {
+function toggleSbStory(el) {
   el.classList.toggle('open');
 }
 
