@@ -1,11 +1,11 @@
 {
-  "as_of": "2026-06-19T05:00:45-06:00",
+  "as_of": "2026-06-19T06:00:48-06:00",
   "is_mock": false,
   "market": {
     "vix": {
-      "value": 17.22,
-      "change": 0.82,
-      "change_pct": 5.0
+      "value": 17.1,
+      "change": -1.34,
+      "change_pct": -7.27
     },
     "vix_term_structure": [
       {
@@ -14,7 +14,7 @@
       },
       {
         "label": "VIX",
-        "value": 17.22
+        "value": 17.1
       },
       {
         "label": "VIX3M",
@@ -29,9 +29,9 @@
       {
         "ticker": "SPY",
         "name": "S&P 500",
-        "price": 746.74,
-        "change": 5.78,
-        "change_pct": 0.78,
+        "price": NaN,
+        "change": NaN,
+        "change_pct": NaN,
         "pc_volume": 1.0774,
         "pc_oi": 0.6845,
         "sentiment": "neutral"
@@ -39,9 +39,9 @@
       {
         "ticker": "QQQ",
         "name": "Nasdaq 100",
-        "price": 740.62,
-        "change": 18.11,
-        "change_pct": 2.51,
+        "price": NaN,
+        "change": NaN,
+        "change_pct": NaN,
         "pc_volume": 1.4814,
         "pc_oi": 2.8869,
         "sentiment": "bearish"
@@ -58,7 +58,7 @@
       }
     ],
     "regime": "mixed",
-    "regime_summary": "SPY P/C 1.08 neutral \u00b7 VIX 17.2 moderate."
+    "regime_summary": "SPY P/C 1.08 neutral \u00b7 VIX 17.1 moderate."
   },
   "sectors": [
     {
@@ -272,36 +272,36 @@
     {
       "ticker": "JPM",
       "name": "JP Morgan Chase & Co.",
-      "price": 325.22,
-      "change": -8.24,
-      "change_pct": -2.47,
-      "volume": 20107100,
+      "price": NaN,
+      "change": NaN,
+      "change_pct": NaN,
+      "volume": 20023850,
       "pc_volume_ratio": 0.7128,
       "pc_oi_ratio": 1.2442,
-      "iv_atm": 24.09,
-      "iv_rank": 65.3,
-      "iv_percentile": 34.5,
-      "skew_25d": 3.52,
+      "iv_atm": 199.74,
+      "iv_rank": 557.8,
+      "iv_percentile": 100.0,
+      "skew_25d": -54.96,
       "unusual_activity": true,
       "sentiment": "bullish",
-      "sentiment_reason": "P/C volume 0.71 below the 0.80 bullish threshold \u00b7 IV rank 65 moderate."
+      "sentiment_reason": "P/C volume 0.71 below the 0.80 bullish threshold \u00b7 IV rank 558 elevated (fear premium)."
     },
     {
       "ticker": "GS",
       "name": "Goldman Sachs Group, Inc. (The)",
-      "price": 1096.56,
-      "change": -2.58,
-      "change_pct": -0.23,
-      "volume": 4497900,
+      "price": NaN,
+      "change": NaN,
+      "change_pct": NaN,
+      "volume": 2246696,
       "pc_volume_ratio": 1.4935,
       "pc_oi_ratio": 1.1769,
-      "iv_atm": 34.6,
-      "iv_rank": 68.4,
-      "iv_percentile": 69.0,
-      "skew_25d": 1.58,
+      "iv_atm": 188.28,
+      "iv_rank": 373.8,
+      "iv_percentile": 100.0,
+      "skew_25d": -55.08,
       "unusual_activity": true,
       "sentiment": "bearish",
-      "sentiment_reason": "P/C volume 1.49 above the 1.20 bearish threshold \u00b7 IV rank 68 moderate."
+      "sentiment_reason": "P/C volume 1.49 above the 1.20 bearish threshold \u00b7 IV rank 374 elevated (fear premium)."
     }
   ]
 }
