@@ -1,80 +1,86 @@
 {
-  "lastUpdated": "2026-06-19T16:30:00-06:00",
+  "lastUpdated": "2026-06-22T16:30:00-06:00",
   "market": {
-    "sp500": {"price": "7642", "change": "+1.08%", "dir": "up"},
-    "nasdaq": {"price": "30406", "change": "+2.48%", "dir": "up"},
-    "yield": {"price": "4.44%", "change": "+3 bps", "dir": "up"},
-    "wti": {"price": "$74.62", "change": "-4.0%", "dir": "down"},
-    "gold": {"price": "$4209", "change": "-0.7%", "dir": "down"},
-    "dxy": {"price": "100.72", "change": "+0.26%", "dir": "up"}
+    "sp500": {"price": "7473", "change": "-0.37%", "dir": "down"},
+    "nasdaq": {"price": "29980", "change": "-1.4%", "dir": "down"},
+    "yield": {"price": "4.51%", "change": "+4 bps", "dir": "down"},
+    "wti": {"price": "$74", "change": "-2.3%", "dir": "down"},
+    "gold": {"price": "$4190", "change": "+0.9%", "dir": "up"},
+    "dxy": {"price": "101.02", "change": "+0.2%", "dir": "up"}
   },
   "stories": [
     {
-      "cat": "MARKETS",
-      "headline": "U.S. MARKETS DARK FOR JUNETEENTH; QUOTES HELD FROM THURSDAY'S CLOSE",
-      "body": "The NYSE, Nasdaq and the bond market are closed for the Juneteenth federal holiday, giving investors a three-day weekend. The strip above reflects Thursday's June 18 levels; normal trading resumes Monday, June 22.",
-      "explain": "Exchange holidays freeze price discovery, so there is no fresh print to react to today. The carried-over numbers show a market that bounced Thursday (S&P +1.08%, NDX +2.48%) after Wednesday's hawkish-Fed selloff, leaving the week's tone still defined by Wednesday's decision rather than Thursday's relief rally."
-    },
-    {
-      "cat": "CENTRAL BANKS",
-      "headline": "WARSH FED HOLDS AT 3.50%-3.75% AND SCRAPS THE 2026 RATE CUT",
-      "body": "At Wednesday's meeting the FOMC under new Chair Kevin Warsh left the funds rate unchanged and removed the lone 2026 cut from the dot plot; 9 of 18 officials now pencil in at least one more hike to fight sticky inflation.",
-      "explain": "Pricing out a cut and adding hike risk lifts the expected path of short rates, which is why the 2-year yield pushed to ~4.20% even as the 10-year sat near 4.44%. A higher-for-longer policy rate raises the discount rate on equities and is the proximate cause of Wednesday's drawdown."
-    },
-    {
       "cat": "COMMODITIES",
-      "headline": "WTI NEAR $74.62, ON TRACK FOR A ROUGHLY 10% WEEKLY LOSS",
-      "body": "Crude slid as planned U.S.-Iran talks in Switzerland were canceled but feared supply disruptions failed to materialize, with WTI down about 4% Thursday and roughly 10% on the week.",
-      "explain": "A geopolitical risk premium built into oil earlier this month is bleeding out as Hormuz stays open and barrels keep flowing. Falling energy prices ease one inflation input, a modest offset to the Fed's hawkishness, but also signal markets pricing softer global demand."
+      "headline": "OIL SLIDES TO 3-MONTH LOW AS HORMUZ CLOSURE FAILS TO STICK",
+      "body": "WTI fell about 2.3% to roughly $74, its lowest since early March, even after Iran declared the Strait of Hormuz closed again on June 20. Lloyd's List data showed tankers still transiting the waterway over the weekend.",
+      "explain": "Crude prices reflect expected barrels, not headlines. With commercial traffic still moving, a 60-day US-Iran ceasefire holding, and the IEA cutting its 2026 demand-growth forecast by 1.1M bpd, traders unwound the geopolitical risk premium rather than chasing the closure announcement. A 13-month-high dollar made dollar-priced crude costlier abroad, adding downside pressure."
     },
     {
       "cat": "MARKETS",
-      "headline": "DOLLAR AT A TWO-MONTH HIGH NEAR 100.7 KEEPS GOLD ON THE BACK FOOT",
-      "body": "The DXY firmed to roughly 100.7, its best level in two months, as the hawkish Fed repricing widened the U.S. rate advantage; gold eased to about $4,209.",
-      "explain": "Gold pays no coupon, so higher real yields and a stronger dollar raise its opportunity cost and weigh on the price. The same hawkish shift that lifted the 2-year yield is simultaneously bullish for the dollar and bearish for bullion, a textbook rate-driven rotation playing out in real time."
+      "headline": "MEGA-CAP TECH DRAGS NASDAQ-100 DOWN AS ALPHABET SINKS 5%",
+      "body": "The Nasdaq-100 fell about 1.4% while the S&P 500 held to -0.37%. Alphabet dropped 5% on worries over AI-talent departures, with Amazon -4.8% and Microsoft -3%; Super Micro Computer (+15.5%) cushioned the broad index.",
+      "explain": "The NDX is concentrated in a handful of mega-caps, so AI-leadership wobble hits it harder than the broader S&P 500, where stronger breadth and winners like SMCI offset the damage. The split tape shows the selloff was a rotation out of crowded AI megacaps rather than a market-wide risk-off, leaving the equal-weight picture far calmer than the headline indices."
+    },
+    {
+      "cat": "MACRO",
+      "headline": "TWO-YEAR YIELD HITS HIGHEST SINCE FEBRUARY 2025 BEFORE PCE",
+      "body": "The 2-year Treasury yield rose to about 4.24%, its highest since February 2025, and the 10-year climbed to roughly 4.51% as investors positioned ahead of the Fed's preferred PCE inflation reading later this week.",
+      "explain": "The 2-year tracks expectations for the Fed's near-term path, so its climb signals markets pricing fewer or later rate cuts. With the curve spread holding near +27 bps, the move is a repricing of policy expectations into firmer inflation data rather than a growth signal, tightening financial conditions even before the central bank acts."
+    },
+    {
+      "cat": "GEOPOLITICS",
+      "headline": "VANCE MEETS IRANIAN DELEGATION IN SWITZERLAND TO SHORE UP TRUCE",
+      "body": "Vice President JD Vance held high-level talks in Switzerland to clarify terms of the war's end after a 60-day ceasefire signed June 17. Iran's claim it had re-closed Hormuz was disputed by the US military and Lloyd's List shipping data.",
+      "explain": "Markets treat the conflict as a tail risk on energy supply, so each diplomatic step compresses the embedded oil premium. The gap between Iran's closure rhetoric and observed tanker flows let traders fade the threat, but unresolved final terms keep a floor under volatility in crude, the dollar, and defensive assets like gold."
+    },
+    {
+      "cat": "MARKETS",
+      "headline": "DOLLAR EXTENDS TO 13-MONTH HIGH AS GOLD STILL GRINDS UP",
+      "body": "The dollar index pushed to about 101, a fresh 13-month high, on firmer yields and safe-haven demand. Gold rose 0.9% to roughly $4,190 an ounce despite the stronger dollar's usual headwind.",
+      "explain": "Gold and the dollar normally move inversely, so both rising signals investors hedging geopolitical and inflation risk simultaneously rather than a clean risk-on or risk-off bet. Higher real yields argue against gold, but persistent Middle East uncertainty and central-bank buying are keeping bids under bullion even as the dollar climbs."
     },
     {
       "cat": "MCBB",
-      "headline": "JUST 71 EARLY ENTRANTS FOR 2026 DRAFT, FEWEST IN TWO DECADES",
-      "body": "NIL money pulled stars back to campus: only 71 players filed as early entrants, headlined by freshmen AJ Dybantsa (BYU), Darryn Peterson (Kansas) and Cameron Boozer (Duke). The draft runs June 23-24 at Barclays Center."
+      "headline": "TRANSFER PORTAL RESHAPES 2026-27 ROSTERS AS DRAFT WITHDRAWALS LAND",
+      "body": "Iowa State's Milan Momcilovic (16.9 ppg, 48.7% from three) committed to Kentucky and Wake Forest's Juke Harris (21.4 ppg) chose Tennessee, while 38 players withdrew from the NBA Draft to return to school."
     },
     {
       "cat": "NBA",
-      "headline": "KNICKS WIN FIRST TITLE IN 53 YEARS, BEAT SPURS 4-1",
-      "body": "New York closed out San Antonio to capture its first championship since 1973 and paraded down the Canyon of Heroes on June 18. The offseason now turns to the June 23-24 draft and free agency."
+      "headline": "2026 NBA DRAFT OPENS JUNE 23 WITH WIZARDS HOLDING NO. 1 PICK",
+      "body": "Washington won the lottery and is on the clock first, with Duke's Cameron Boozer and UNC's Caleb Wilson in the mix. The champion Knicks (beat the Spurs 4-1) and Pistons, at No. 21, round out a deep first round."
     },
     {
       "cat": "NFL",
-      "headline": "BLOCKBUSTER TRADES RESHAPE ROSTERS AS MINICAMPS WRAP",
-      "body": "A June 1 swap sent Myles Garrett from Cleveland to the Rams and A.J. Brown to the Patriots; the Falcons later added Chiefs tackle Wanya Morris. Teams are signing undrafted rookies with training camps under two months away."
+      "headline": "SUPER BOWL LX CHAMPION SEAHAWKS WRAP OFFSEASON PROGRAM",
+      "body": "Seattle received its Super Bowl LX rings on June 11 and closed mandatory minicamp under coach Mike Macdonald's 'run it forward' message. Rookie RB Jadarian Price is competing for early snaps alongside George Holani."
     },
     {
       "cat": "NCAA CFB",
-      "headline": "TRANSFER PORTAL CLOSES; SORSBY EXITS, LSU LANDS TOP CLASS",
-      "body": "The 2026 portal window shut with about 3,665 players in and 76% committed. Texas Tech QB Brendan Sorsby parted ways with the program, while Lane Kiffin's LSU assembled one of the cycle's top transfer classes."
+      "headline": "RECRUITING HEATS UP: WESLEY TO TEXAS, O'NEAL FLIPS TO FLORIDA STATE",
+      "body": "Five-star edge Richard Wesley (No. 11 in the ESPN 300) committed to Texas on June 22, while four-star QB Jaden O'Neal flipped from Oklahoma to Florida State. Florida, Texas and Texas A&M led June's recruiting risers."
     }
   ],
   "sports": [
-    {"team": "SEATTLE MARINERS", "pill": "L 5-3", "pillClass": "s-l", "detail": "Lost to Orioles; Cole Young and Canzone homered. 38-37, 1st in AL West. Next: vs Red Sox."},
-    {"team": "DETROIT PISTONS", "pill": "OFFSEASON", "pillClass": "s-up", "detail": "Finished 60-22 (best in East), lost to Cavs in 7. Hold pick No. 21 in the June 23 draft."},
-    {"team": "SEATTLE SEAHAWKS", "pill": "OFFSEASON", "pillClass": "s-up", "detail": "Super Bowl LX champs; ring ceremony June 11, mandatory minicamp wrapped. Camp opens next month."},
-    {"team": "WASHINGTON HUSKIES FB", "pill": "OFFSEASON", "pillClass": "s-up", "detail": "Spring done (Purple beat Gold 27-10); Fisch calls plays in 2026. Opens vs WSU Apple Cup Sept 5."},
-    {"team": "WASHINGTON HUSKIES BB", "pill": "OFFSEASON", "pillClass": "s-up", "detail": "Big Ten offseason; reshaping the roster via the portal ahead of 2026-27."}
+    {"team": "SEATTLE MARINERS", "pill": "W 3-1", "pillClass": "s-w", "detail": "Beat Boston; Logan Gilbert 8 K, Dominic Canzone HR. Now 40-39 in the AL West."},
+    {"team": "DETROIT PISTONS", "pill": "OFFSEASON", "pillClass": "s-up", "detail": "Hold No. 21 pick in the June 23 draft; eyeing shooting and ball-handling. Jalen Duren a key restricted free agent."},
+    {"team": "SEATTLE SEAHAWKS", "pill": "OFFSEASON", "pillClass": "s-up", "detail": "Super Bowl LX champs received rings June 11; minicamp wrapped. Rookie RB Jadarian Price competing for snaps."},
+    {"team": "WASHINGTON HUSKIES FB", "pill": "OFFSEASON", "pillClass": "s-up", "detail": "Landed 4-star edge Chaz Gray over Tennessee and Clemson; 2026 kickoff times set, season opens late August."},
+    {"team": "WASHINGTON HUSKIES BB", "pill": "OFFSEASON", "pillClass": "s-up", "detail": "Rebuilt roster: one returning starter plus transfers and international signings Tisma, Devers and Braga."}
   ],
   "watchlist": [
-    "Markets reopen Monday, June 22 after the Juneteenth holiday",
-    "Fed's Warsh signals a possible 2026 hike - watch incoming inflation prints",
-    "NBA Draft June 23-24 at Barclays: Pistons pick at No. 21",
-    "WTI down ~10% on the week after U.S.-Iran talks collapse",
-    "Mariners host Red Sox this weekend, 38-37 atop the AL West"
+    "Fed PCE inflation report later this week",
+    "2026 NBA Draft tips off June 23 (Wizards No. 1, Pistons No. 21)",
+    "Strait of Hormuz tanker flows and US-Iran final-terms talks",
+    "WTI crude testing 3-month lows near $74",
+    "2-year Treasury yield at highest since February 2025"
   ],
   "deepDive": {
-    "title": "The Dot Plot as a Signaling Device",
+    "title": "Why Oil Fell on a Strait Closure",
     "content": [
-      "With the exchanges shuttered for Juneteenth, traders spent Friday re-reading the one document that actually moved this week: the Fed's Summary of Economic Projections. On Wednesday, Kevin Warsh's first meeting as Chair produced no change to the 3.50%-3.75% funds rate, yet the market still fell hard. The reason wasn't the rate itself but the dot plot - the grid of anonymous projections where 9 of 18 officials now see at least one hike in 2026 and the median quietly erased the cut investors had banked on. A piece of paper, not a transaction, set the tone.",
-      "The mechanism is expectations, not the overnight rate. Long-term asset prices discount the entire future path of short rates, so deleting a cut and adding hike risk lifts that path even when today's rate holds. That repricing showed up cleanly in the 2-year Treasury yield, which climbed toward 4.20% as the curve absorbed a higher policy floor. Equity valuations, which divide future cash flows by a discount rate built on those same expectations, compressed in response - the proximate driver of Wednesday's selloff before Thursday's partial bounce.",
-      "The dot plot has been a communication tool since 2012, introduced to make forward guidance transparent. The irony is that Warsh, before joining the Fed, spent years criticizing it as false precision that chains policymakers to forecasts they cannot keep. Markets treat the dots as a quasi-commitment; the Fed insists they are not promises. That tension has produced repeated whipsaws - 2018 and 2023 both saw projected paths abandoned within months - which is exactly why a single shift in the median dot can move trillions in a matter of minutes.",
-      "Bringing it back to this week: the same hawkish revision rippled across every line of the market strip above. The dollar firmed to a two-month high near 100.7, gold slipped toward $4,209 as real yields rose, and even oil's ~10% weekly slide reads partly as softer-demand pricing in a higher-rate world. None of it traded today, but Monday's reopen will test whether Thursday's relief rally was conviction or a holiday-thinned bounce. For a finance student, the lesson is durable: words from the Fed, properly priced, can hit harder than the rate decision itself."
+      "There was a puzzle on the tape today. On June 20, Iran declared the Strait of Hormuz closed, the chokepoint through which roughly 20 million barrels of crude move daily, about a fifth of all seaborne oil. A genuine blockade is the textbook trigger for an oil spike. Yet WTI fell about 2.3% to near $74, its lowest since early March. Equity-energy names lagged and gasoline futures eased. For a finance student, the lesson is that prices respond to expected barrels, not to the volume of a headline, and the two diverged sharply.",
+      "The key concept is the geopolitical risk premium, the extra dollars buyers pay for the chance of a future supply shock. That premium is an expectation, so it deflates the moment expectations fall. Lloyd's List shipping data showed tankers still transiting Hormuz over the weekend, the US military disputed the closure, and the June 17 ceasefire held for its 60-day window. Layer on the IEA cutting its 2026 demand-growth forecast by 1.1 million barrels per day and a dollar at a 13-month high near 101, and the marginal trade was to sell premium, not buy it.",
+      "History rhymes here. The 1980s Tanker War, the 2019 Abqaiq strikes, and the 2024 escalations all produced sharp crude spikes that faded within days or weeks once barrels kept flowing. The recurring pattern: threat lifts price, reality resets it. Global spare capacity, strategic reserves, and the fast supply response of US shale all cap how far a fear-driven rally can run. The market repeatedly distinguishes between a disruption that is announced and one that is actually realized in tanker-tracking and inventory data, and it pays only for the latter.",
+      "So the trade today was expectations beating rhetoric, and it is reversible. If tankers genuinely stop and inventories draw, the premium snaps back violently, the kind of convexity that makes energy a portfolio hedge. Absent a real blockage, demand softness and a firm dollar dominate the path of crude. Watch tanker counts, the Fed's PCE print this week, and whether final ceasefire terms hold. The same framework, expected supply versus realized disruption, governs everything from gasoline at the pump to inflation breakevens and the rate path."
     ]
   }
 }
