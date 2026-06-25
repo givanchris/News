@@ -535,26 +535,8 @@
       line-height: 1.5;
     }
 
-    /* Holding chart panel */
-    #holding-chart-panel {
-      display: none;
-      margin-bottom: 0.75rem;
-      border-radius: 6px;
-      overflow: hidden;
-      background: rgba(255,255,255,0.03);
-      border: 1px solid rgba(255,255,255,0.07);
-    }
-    #holding-chart-title {
-      font-family: 'IBM Plex Mono', ui-monospace, monospace;
-      font-size: 0.72rem;
-      color: rgba(255,255,255,0.4);
-      padding: 0.5rem 0.75rem 0.25rem;
-      letter-spacing: 0.06em;
-    }
-    #holding-chart-inner { height: 160px; }
-    .holding-item { cursor: pointer; transition: background 0.1s; }
-    .holding-item:hover { background: rgba(255,255,255,0.03); border-radius: 4px; }
-    .holding-item.selected { background: rgba(255,255,255,0.05); border-radius: 4px; }
+    /* Per-card holding charts */
+    .holding-chart { height: 72px; margin-top: 0.25rem; }
 
     /* Holdings */
     .holding-item {
@@ -914,7 +896,6 @@
       <div id="brief-sports-headlines"></div>
 
       <div class="sidebar-section-label" style="margin-top:1.5rem;">Holdings</div>
-      <div id="holding-chart-panel"><div id="holding-chart-title"></div><div id="holding-chart-inner"></div></div>
       <div id="brief-holdings"><p class="brief-no-data">Loading…</p></div>
     </div>
 
@@ -1235,7 +1216,6 @@
   }
 
   // ── Render holdings from holdings.json
-  var _holdingsData = [];
   function renderHoldings(data) {
     var el = document.getElementById('brief-holdings');
     if (!el) return;
@@ -1243,15 +1223,14 @@
       el.innerHTML = '<p class="brief-no-data">—</p>';
       return;
     }
-    _holdingsData = data.holdings;
-    el.innerHTML = data.holdings.map(function(h, idx) {
+    el.innerHTML = data.holdings.map(function(h) {
       var isUp   = h.change >= 0;
       var dir    = isUp ? 'up' : 'down';
       var arrow  = isUp ? '+' : '';
       var chgStr = arrow + '$' + Math.abs(h.change).toFixed(2)
                  + ' (' + arrow + h.changePct.toFixed(2) + '%)';
-      var spark  = buildSparkline(h.closes || h.closes5d, isUp);
-      return '<div class="holding-item" data-idx="' + idx + '" onclick="selectHolding(' + idx + ', this)">'
+      var safeId = h.ticker.replace(/[^a-zA-Z0-9]/g, '-');
+      return '<div class="holding-item">'
         + '<div class="holding-top">'
         + '<span class="holding-ticker">' + esc(h.ticker) + '</span>'
         + '<span class="holding-price">$' + h.price.toFixed(2) + '</span>'
@@ -1260,11 +1239,10 @@
         + '<span class="holding-name">' + esc(h.name) + '</span>'
         + '<span class="holding-chg ' + dir + '">' + chgStr + '</span>'
         + '</div>'
-        + spark
+        + '<div class="holding-chart" id="hchart-' + safeId + '"></div>'
         + '</div>';
     }).join('');
-    // Auto-show chart for first holding
-    if (data.holdings.length) selectHolding(0, document.querySelector('.holding-item'));
+    initAllHoldingCharts(data.holdings);
   }
 
   function buildSparkline(closes, isUp) {
@@ -1301,65 +1279,38 @@
       + '</svg>';
   }
 
-  // ── Holding chart (Lightweight Charts) ──
-  var _lwChart = null;
-  var _lwSeries = null;
-
-  function selectHolding(idx, el) {
-    // highlight selected
-    document.querySelectorAll('.holding-item').forEach(function(n){ n.classList.remove('selected'); });
-    if (el) el.classList.add('selected');
-    var h = _holdingsData[idx];
-    if (h) showHoldingChart(h);
-  }
-
-  function showHoldingChart(h) {
-    var panel = document.getElementById('holding-chart-panel');
-    var inner = document.getElementById('holding-chart-inner');
-    var title = document.getElementById('holding-chart-title');
-    if (!panel || !inner) return;
-
-    var closes = h.closes || h.closes5d || [];
-    if (closes.length < 2) return;
-
-    var isUp = h.change >= 0;
-    var lineColor = isUp ? '#54b083' : '#dd7163';
-    var topColor  = isUp ? 'rgba(84,176,131,0.18)' : 'rgba(221,113,99,0.18)';
-
-    if (title) title.textContent = h.ticker + '  —  ' + h.name + '  $' + h.price.toFixed(2);
-    panel.style.display = 'block';
-
+  // ── Per-card holding charts (Lightweight Charts) ──
+  function initAllHoldingCharts(holdings) {
     if (typeof LightweightCharts === 'undefined') return;
-
-    // Build data array — closes can be [{t,v}] or [number]
-    var now = new Date();
-    var chartData = closes.map(function(c, i) {
-      if (typeof c === 'object' && c.t) return { time: c.t, value: c.v };
-      // fallback: estimate dates going back N business days
-      var d = new Date(now);
-      var bd = closes.length - 1 - i;
-      while (bd > 0) { d.setDate(d.getDate()-1); if(d.getDay()!==0&&d.getDay()!==6) bd--; }
-      return { time: d.toISOString().slice(0,10), value: typeof c === 'object' ? c.v : c };
-    });
-
-    if (!_lwChart) {
-      _lwChart = LightweightCharts.createChart(inner, {
-        width: inner.offsetWidth || 260,
-        height: 160,
-        layout: { background: { type: 'solid', color: 'transparent' }, textColor: 'rgba(255,255,255,0.35)' },
-        grid: { vertLines: { color: 'rgba(255,255,255,0.04)' }, horzLines: { color: 'rgba(255,255,255,0.04)' } },
-        timeScale: { borderColor: 'rgba(255,255,255,0.1)', timeVisible: true },
-        rightPriceScale: { borderColor: 'rgba(255,255,255,0.1)' },
+    holdings.forEach(function(h) {
+      var safeId = h.ticker.replace(/[^a-zA-Z0-9]/g, '-');
+      var container = document.getElementById('hchart-' + safeId);
+      if (!container) return;
+      var closes = h.closes || h.closes5d || [];
+      if (closes.length < 2) return;
+      var isUp      = h.change >= 0;
+      var lineColor = isUp ? '#54b083' : '#dd7163';
+      var topColor  = isUp ? 'rgba(84,176,131,0.15)' : 'rgba(221,113,99,0.15)';
+      var chart = LightweightCharts.createChart(container, {
+        width: container.offsetWidth || 260,
+        height: 72,
+        layout: { background: { type: 'solid', color: 'transparent' }, textColor: 'transparent' },
+        grid: { vertLines: { visible: false }, horzLines: { visible: false } },
+        timeScale: { visible: false },
+        rightPriceScale: { visible: false },
+        leftPriceScale: { visible: false },
+        crosshair: { mode: 1, horzLine: { visible: false } },
         handleScroll: false,
         handleScale: false,
       });
-    }
-    // Remove old series and recreate — avoids LightweightCharts range-change errors
-    if (_lwSeries) { try { _lwChart.removeSeries(_lwSeries); } catch(e) {} }
-    _lwSeries = _lwChart.addAreaSeries({ lineWidth: 1.5 });
-    _lwSeries.applyOptions({ lineColor: lineColor, topColor: topColor, bottomColor: 'rgba(0,0,0,0)' });
-    _lwSeries.setData(chartData);
-    _lwChart.timeScale().fitContent();
+      var series = chart.addAreaSeries({ lineWidth: 1.5, priceLineVisible: false, lastValueVisible: false });
+      series.applyOptions({ lineColor: lineColor, topColor: topColor, bottomColor: 'rgba(0,0,0,0)' });
+      var chartData = closes.map(function(c) {
+        return typeof c === 'object' && c.t ? { time: c.t, value: c.v } : { time: c, value: c };
+      });
+      series.setData(chartData);
+      chart.timeScale().fitContent();
+    });
   }
 
   // ── Load headlines (rolling news) — only called in live feed mode
