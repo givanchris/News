@@ -536,7 +536,17 @@
     }
 
     /* Per-card holding charts */
-    .holding-chart { height: 72px; margin-top: 0.25rem; }
+    .holding-chart { height: 72px; margin-top: 0.25rem; position: relative; }
+    .holding-tip {
+      position: absolute; top: 4px; left: 4px;
+      background: rgba(10,12,20,0.85);
+      color: rgba(255,255,255,0.9);
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
+      font-size: 0.62rem; letter-spacing: 0.02em;
+      padding: 2px 6px; border-radius: 3px;
+      pointer-events: none; display: none; z-index: 10;
+      white-space: nowrap;
+    }
 
     /* Holdings */
     .holding-item {
@@ -1310,6 +1320,24 @@
       });
       series.setData(chartData);
       chart.timeScale().fitContent();
+
+      // Hover tooltip
+      var tip = document.createElement('div');
+      tip.className = 'holding-tip';
+      container.appendChild(tip);
+      chart.subscribeCrosshairMove(function(param) {
+        if (!param.point || !param.time || param.point.x < 0 || param.point.y < 0) {
+          tip.style.display = 'none'; return;
+        }
+        var d = param.seriesData.get(series);
+        if (!d) { tip.style.display = 'none'; return; }
+        tip.style.display = 'block';
+        tip.textContent = '$' + d.value.toFixed(2) + '  ·  ' + param.time;
+        var x = param.point.x + 8;
+        if (x + 110 > container.offsetWidth) x = param.point.x - 118;
+        tip.style.left = Math.max(2, x) + 'px';
+        tip.style.top = Math.max(2, param.point.y - 18) + 'px';
+      });
     });
   }
 
