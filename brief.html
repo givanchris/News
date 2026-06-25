@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <script src="https://cdn.jsdelivr.net/npm/lightweight-charts@4/dist/lightweight-charts.standalone.production.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; frame-ancestors 'none';" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; frame-ancestors 'none';" />
   <title>Daily Brief — Christopher Givan</title>
 
   <meta name="description" content="Rolling financial news and daily market brief. Updated every 30 minutes." />
@@ -534,6 +535,27 @@
       line-height: 1.5;
     }
 
+    /* Holding chart panel */
+    #holding-chart-panel {
+      display: none;
+      margin-bottom: 0.75rem;
+      border-radius: 6px;
+      overflow: hidden;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.07);
+    }
+    #holding-chart-title {
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.4);
+      padding: 0.5rem 0.75rem 0.25rem;
+      letter-spacing: 0.06em;
+    }
+    #holding-chart-inner { height: 160px; }
+    .holding-item { cursor: pointer; transition: background 0.1s; }
+    .holding-item:hover { background: rgba(255,255,255,0.03); border-radius: 4px; }
+    .holding-item.selected { background: rgba(255,255,255,0.05); border-radius: 4px; }
+
     /* Holdings */
     .holding-item {
       padding: 1rem 0;
@@ -892,6 +914,7 @@
       <div id="brief-sports-headlines"></div>
 
       <div class="sidebar-section-label" style="margin-top:1.5rem;">Holdings</div>
+      <div id="holding-chart-panel"><div id="holding-chart-title"></div><div id="holding-chart-inner"></div></div>
       <div id="brief-holdings"><p class="brief-no-data">Loading…</p></div>
     </div>
 
@@ -1212,6 +1235,7 @@
   }
 
   // ── Render holdings from holdings.json
+  var _holdingsData = [];
   function renderHoldings(data) {
     var el = document.getElementById('brief-holdings');
     if (!el) return;
@@ -1219,14 +1243,15 @@
       el.innerHTML = '<p class="brief-no-data">—</p>';
       return;
     }
-    el.innerHTML = data.holdings.map(function(h) {
+    _holdingsData = data.holdings;
+    el.innerHTML = data.holdings.map(function(h, idx) {
       var isUp   = h.change >= 0;
       var dir    = isUp ? 'up' : 'down';
       var arrow  = isUp ? '+' : '';
       var chgStr = arrow + '$' + Math.abs(h.change).toFixed(2)
                  + ' (' + arrow + h.changePct.toFixed(2) + '%)';
-      var spark  = buildSparkline(h.closes5d, isUp);
-      return '<div class="holding-item">'
+      var spark  = buildSparkline(h.closes || h.closes5d, isUp);
+      return '<div class="holding-item" data-idx="' + idx + '" onclick="selectHolding(' + idx + ', this)">'
         + '<div class="holding-top">'
         + '<span class="holding-ticker">' + esc(h.ticker) + '</span>'
         + '<span class="holding-price">$' + h.price.toFixed(2) + '</span>'
@@ -1238,22 +1263,35 @@
         + spark
         + '</div>';
     }).join('');
+    // Auto-show chart for first holding
+    if (data.holdings.length) selectHolding(0, document.querySelector('.holding-item'));
   }
 
   function buildSparkline(closes, isUp) {
     if (!closes || closes.length < 2) return '';
+    // accepts [{t,v},...] or [number,...]
+    var vals = closes.map(function(c){ return typeof c === 'object' ? c.v : c; });
     var W = 320, H = 32, PAD = 2;
-    var mn = Math.min.apply(null, closes);
-    var mx = Math.max.apply(null, closes);
+    var mn = Math.min.apply(null, vals);
+    var mx = Math.max.apply(null, vals);
     var rng = mx - mn || 1;
-    var pts = closes.map(function(c, i) {
-      var x = PAD + (i / (closes.length - 1)) * (W - PAD * 2);
-      var y = H - PAD - ((c - mn) / rng) * (H - PAD * 2);
-      return x.toFixed(1) + ',' + y.toFixed(1);
+    var xy = vals.map(function(v, i) {
+      return [
+        PAD + (i / (vals.length - 1)) * (W - PAD * 2),
+        H - PAD - ((v - mn) / rng) * (H - PAD * 2)
+      ];
     });
-    var d    = 'M ' + pts.join(' L ');
-    var last = pts[pts.length - 1];
-    var fill = d + ' L ' + last.split(',')[0] + ',' + H + ' L ' + PAD + ',' + H + ' Z';
+    // smooth bezier path
+    var d = 'M ' + xy[0][0].toFixed(1) + ' ' + xy[0][1].toFixed(1);
+    for (var i = 1; i < xy.length; i++) {
+      var px = xy[i-1], cx = xy[i];
+      var mx2 = (px[0] + cx[0]) / 2;
+      d += ' C ' + mx2.toFixed(1) + ' ' + px[1].toFixed(1)
+         + ', ' + mx2.toFixed(1) + ' ' + cx[1].toFixed(1)
+         + ', ' + cx[0].toFixed(1) + ' ' + cx[1].toFixed(1);
+    }
+    var last = xy[xy.length - 1];
+    var fill = d + ' L ' + last[0].toFixed(1) + ',' + H + ' L ' + PAD + ',' + H + ' Z';
     var cls  = isUp ? 'up' : 'down';
     var col  = isUp ? '#54b083' : '#dd7163';
     return '<svg class="sparkline ' + cls + '" viewBox="0 0 ' + W + ' ' + H
@@ -1261,6 +1299,65 @@
       + '<path class="spark-fill" d="' + fill + '" fill="' + col + '"/>'
       + '<path d="' + d + '"/>'
       + '</svg>';
+  }
+
+  // ── Holding chart (Lightweight Charts) ──
+  var _lwChart = null;
+  var _lwSeries = null;
+
+  function selectHolding(idx, el) {
+    // highlight selected
+    document.querySelectorAll('.holding-item').forEach(function(n){ n.classList.remove('selected'); });
+    if (el) el.classList.add('selected');
+    var h = _holdingsData[idx];
+    if (h) showHoldingChart(h);
+  }
+
+  function showHoldingChart(h) {
+    var panel = document.getElementById('holding-chart-panel');
+    var inner = document.getElementById('holding-chart-inner');
+    var title = document.getElementById('holding-chart-title');
+    if (!panel || !inner) return;
+
+    var closes = h.closes || h.closes5d || [];
+    if (closes.length < 2) return;
+
+    var isUp = h.change >= 0;
+    var lineColor = isUp ? '#54b083' : '#dd7163';
+    var topColor  = isUp ? 'rgba(84,176,131,0.18)' : 'rgba(221,113,99,0.18)';
+
+    if (title) title.textContent = h.ticker + '  —  ' + h.name + '  $' + h.price.toFixed(2);
+    panel.style.display = 'block';
+
+    if (typeof LightweightCharts === 'undefined') return;
+
+    // Build data array — closes can be [{t,v}] or [number]
+    var now = new Date();
+    var chartData = closes.map(function(c, i) {
+      if (typeof c === 'object' && c.t) return { time: c.t, value: c.v };
+      // fallback: estimate dates going back N business days
+      var d = new Date(now);
+      var bd = closes.length - 1 - i;
+      while (bd > 0) { d.setDate(d.getDate()-1); if(d.getDay()!==0&&d.getDay()!==6) bd--; }
+      return { time: d.toISOString().slice(0,10), value: typeof c === 'object' ? c.v : c };
+    });
+
+    if (!_lwChart) {
+      _lwChart = LightweightCharts.createChart(inner, {
+        width: inner.offsetWidth || 260,
+        height: 160,
+        layout: { background: { type: 'solid', color: 'transparent' }, textColor: 'rgba(255,255,255,0.35)' },
+        grid: { vertLines: { color: 'rgba(255,255,255,0.04)' }, horzLines: { color: 'rgba(255,255,255,0.04)' } },
+        timeScale: { borderColor: 'rgba(255,255,255,0.1)', timeVisible: true },
+        rightPriceScale: { borderColor: 'rgba(255,255,255,0.1)' },
+        handleScroll: false,
+        handleScale: false,
+      });
+      _lwSeries = _lwChart.addAreaSeries({ lineWidth: 1.5 });
+    }
+    _lwSeries.applyOptions({ lineColor: lineColor, topColor: topColor, bottomColor: 'rgba(0,0,0,0)' });
+    _lwSeries.setData(chartData);
+    _lwChart.timeScale().fitContent();
   }
 
   // ── Load headlines (rolling news) — only called in live feed mode

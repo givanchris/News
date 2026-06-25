@@ -60,21 +60,35 @@ def fetch_holding(ticker):
     yf_sym = YF_MAP.get(ticker, ticker)
     t      = yf.Ticker(yf_sym)
 
-    fi    = t.fast_info
-    price = fi.last_price
-    prev  = fi.previous_close
-    if not price or not prev:
+    fi   = t.fast_info
+    prev = fi.previous_close
+    if not prev:
         print(f"  {ticker:<8s}  no data")
+        return None
+
+    # Use 1-min intraday for accurate current price; fall back to fast_info
+    hist_1d = t.history(period="1d", interval="1m")
+    if not hist_1d.empty:
+        price = float(hist_1d["Close"].iloc[-1])
+    else:
+        price = fi.last_price or prev
+    if not price:
+        print(f"  {ticker:<8s}  no price")
         return None
 
     change     = price - prev
     change_pct = (price - prev) / prev * 100
 
-    hist = t.history(period="10d", auto_adjust=True)
-    if not hist.empty:
-        closes5d = [round(float(c), 2) for c in hist["Close"].tolist()[-5:]]
+    # 30 trading-day closes with dates for chart
+    hist_30d = t.history(period="45d", auto_adjust=True)
+    if not hist_30d.empty:
+        closes = [
+            {"t": str(idx.date()), "v": round(float(row["Close"]), 2)}
+            for idx, row in hist_30d.iterrows()
+        ][-30:]
     else:
-        closes5d = [round(prev, 2), round(price, 2)]
+        from datetime import date
+        closes = [{"t": str(date.today()), "v": round(price, 2)}]
 
     sign = "+" if change >= 0 else ""
     print(f"  {ticker:<8s}  ${price:.2f}  {sign}{change_pct:.2f}%")
@@ -86,7 +100,7 @@ def fetch_holding(ticker):
         "change":    round(change, 2),
         "changePct": round(change_pct, 2),
         "prevClose": round(prev, 2),
-        "closes5d":  closes5d,
+        "closes":    closes,
     }
 
 
