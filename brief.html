@@ -1353,8 +1353,10 @@
         handleScroll: false,
         handleScale: false,
       });
-      _lwSeries = _lwChart.addAreaSeries({ lineWidth: 1.5 });
     }
+    // Remove old series and recreate — avoids LightweightCharts range-change errors
+    if (_lwSeries) { try { _lwChart.removeSeries(_lwSeries); } catch(e) {} }
+    _lwSeries = _lwChart.addAreaSeries({ lineWidth: 1.5 });
     _lwSeries.applyOptions({ lineColor: lineColor, topColor: topColor, bottomColor: 'rgba(0,0,0,0)' });
     _lwSeries.setData(chartData);
     _lwChart.timeScale().fitContent();
