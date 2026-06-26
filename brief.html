@@ -599,6 +599,14 @@
     .holding-chg.up   { color: #54b083; }
     .holding-chg.down { color: #dd7163; }
 
+    .holding-thesis {
+      font-size: 0.68rem;
+      line-height: 1.5;
+      color: rgba(255,255,255,0.45);
+      margin-bottom: 0.55rem;
+      font-style: italic;
+    }
+
     /* Sparkline */
     .sparkline { display: block; width: 100%; height: 32px; }
     .sparkline path { fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
@@ -1251,6 +1259,29 @@
     }
   }
 
+  // ── Investment theses (keyed by ticker) ──────────────────────
+  var THESIS = {
+    MRVL:  'Custom AI silicon and data-center networking; ASIC design wins with major hyperscalers position it as the NVIDIA alternative at the chip level.',
+    AVGO:  'Dominant AI networking (Ethernet switching) and custom ASIC revenue; arguably the largest slice of AI chip spend outside of NVIDIA.',
+    GOOG:  'Unmatched data moat and distribution; Gemini AI integration across Search, Cloud, and Workspace makes the ad machine more durable, not less.',
+    ALAB:  'Purpose-built PCIe/CXL connectivity for AI servers; every incremental GPU added to a cluster is another Astera Labs socket.',
+    AMAT:  'Deposition and etch equipment duopoly — every advanced AI chip, regardless of fab or designer, requires Applied Materials tools to manufacture.',
+    CEG:   'Largest US nuclear fleet; signed multi-GW data-center power agreements and is the only credible scalable clean baseload solution for AI energy demand.',
+    ASML:  'EUV lithography monopoly with no viable substitute; no sub-5nm AI chip gets made anywhere in the world without their machines.',
+    COHR:  'High-speed optical transceivers for AI data-center interconnects; revenue scales directly with GPU cluster count and density.',
+    HUBB:  'Electrical products for grid and data-center power build-out; the grid capex supercycle is a decade-long tailwind independent of AI hype.',
+    TCEHY: "China's AI, cloud, and gaming leader trading at a significant discount to Western tech peers; regulatory overhang is priced in, growth is not.",
+    LEU:   'Only US-based commercial uranium enricher; as AI data centers contract for nuclear power, domestic fuel supply becomes a strategic asset.',
+    CRWV:  'Purpose-built GPU cloud for AI training and inference; the primary hyperscaler alternative with locked-in demand from major AI labs.',
+    'MOG.A': 'Precision motion systems for defense and aerospace; rearmament spending and defense modernization are secular tailwinds that compound quietly.',
+    SOLS:  'Power infrastructure specifically serving data-center and industrial energy demand; a direct pick-and-shovel play on the AI energy buildout.',
+    VELO:  'Lidar sensors for autonomous vehicles and industrial robotics; positioned early in an AV/robotics adoption curve that is beginning to inflect.',
+    ZBRA:  'Enterprise tracking hardware and software for warehouses; AI-driven supply-chain automation upgrades are pulling forward replacement cycles.',
+    NOW:   'Workflow automation platform with AI deeply integrated via Now Assist; best-in-class enterprise stickiness and pricing power as AI spending shifts to productivity.',
+    GRPN:  'Deep-value turnaround with new lean management and marketplace restructuring; asymmetric upside if the business stabilizes at even a fraction of prior scale.',
+    BTC:   'Scarce digital asset with accelerating institutional adoption and sovereign-level interest; macro hedge and long-duration store of value in a structurally inflationary world.'
+  };
+
   // ── Render holdings from holdings.json
   function renderHoldings(data) {
     var el = document.getElementById('brief-holdings');
@@ -1266,6 +1297,7 @@
       var chgStr = arrow + '$' + Math.abs(h.change).toFixed(2)
                  + ' (' + arrow + h.changePct.toFixed(2) + '%)';
       var safeId = h.ticker.replace(/[^a-zA-Z0-9]/g, '-');
+      var thesis = THESIS[h.ticker] || '';
       return '<div class="holding-item">'
         + '<div class="holding-top">'
         + '<span class="holding-ticker">' + esc(h.ticker) + '</span>'
@@ -1275,6 +1307,7 @@
         + '<span class="holding-name">' + esc(h.name) + '</span>'
         + '<span class="holding-chg ' + dir + '">' + chgStr + '</span>'
         + '</div>'
+        + (thesis ? '<p class="holding-thesis">' + esc(thesis) + '</p>' : '')
         + '<div class="holding-chart" id="hchart-' + safeId + '"></div>'
         + '</div>';
     }).join('');
