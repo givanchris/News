@@ -347,6 +347,22 @@ footer .f-logo {
 .b-story { cursor: pointer; }
 .b-story:hover .b-hed { color: var(--blue2); }
 
+/* ── Custom crosshair cursor ────────────────────────────────── */
+/* Thin amber + with gapped center. Fallback: crosshair. */
+body {
+  cursor: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48bGluZSB4MT0iMCIgeTE9IjEyIiB4Mj0iOSIgeTI9IjEyIiBzdHJva2U9IiNiMDZhMWYiIHN0cm9rZS13aWR0aD0iMS41IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48bGluZSB4MT0iMTUiIHkxPSIxMiIgeDI9IjI0IiB5Mj0iMTIiIHN0cm9rZT0iI2IwNmExZiIgc3Ryb2tlLXdpZHRoPSIxLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjxsaW5lIHgxPSIxMiIgeTE9IjAiIHgyPSIxMiIgeTI9IjkiIHN0cm9rZT0iI2IwNmExZiIgc3Ryb2tlLXdpZHRoPSIxLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjxsaW5lIHgxPSIxMiIgeTE9IjE1IiB4Mj0iMTIiIHkyPSIyNCIgc3Ryb2tlPSIjYjA2YTFmIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PC9zdmc+") 12 12, crosshair;
+}
+/* On interactive elements: brighter amber + filled center dot */
+a, button, [role="button"], label, input, select, textarea,
+.pcard, .news-item, .b-story, .sector-cell, .nav-cta, .btn {
+  cursor: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48bGluZSB4MT0iMCIgeTE9IjEyIiB4Mj0iOSIgeTI9IjEyIiBzdHJva2U9IiNkYzkwMzgiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PGxpbmUgeDE9IjE1IiB5MT0iMTIiIHgyPSIyNCIgeTI9IjEyIiBzdHJva2U9IiNkYzkwMzgiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PGxpbmUgeDE9IjEyIiB5MT0iMCIgeDI9IjEyIiB5Mj0iOSIgc3Ryb2tlPSIjZGM5MDM4IiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjxsaW5lIHgxPSIxMiIgeTE9IjE1IiB4Mj0iMTIiIHkyPSIyNCIgc3Ryb2tlPSIjZGM5MDM4IiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjEuNSIgZmlsbD0iI2RjOTAzOCIvPjwvc3ZnPg==") 12 12, pointer;
+}
+@media (pointer: coarse) {
+  /* Touch devices — restore default cursor */
+  body, a, button, [role="button"], label, input, select, textarea,
+  .pcard, .news-item, .b-story, .sector-cell, .nav-cta, .btn { cursor: auto; }
+}
+
 /* News feed items (brief.html rolling mode — dark navy background) */
 .news-item { transition: background 0.15s; }
 .news-item:hover { background: rgba(255,255,255,0.06); }
