@@ -279,6 +279,10 @@ footer .f-logo {
   .reveal { opacity: 1; transform: none; transition: none; }
 }
 
+@media print {
+  .reveal, .cg-load, .page-main { opacity: 1 !important; transform: none !important; animation: none !important; transition: none !important; }
+}
+
 /* ── §2  Hero load-in (transform only — never opacity) ─────── */
 @keyframes cg-rise {
   from { transform: translateY(18px); }

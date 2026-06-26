@@ -28,12 +28,16 @@
 
     nodes.forEach(function (el) {
       io.observe(el);
-      // Safety net: if the observer never fires (frozen compositor /
-      // headless capture), snap visible after 1.1s so nothing stays hidden.
-      setTimeout(function () {
-        if (!el.classList.contains('is-in')) snap(el);
-      }, 1100);
     });
+
+    // Safety net: frozen compositor / headless capture. 12s is long enough
+    // that real scroll-reveals play out first; short enough to unstick a
+    // background-tab freeze before a user notices blank content.
+    setTimeout(function () {
+      nodes.forEach(function (el) {
+        if (!el.classList.contains('is-in')) snap(el);
+      });
+    }, 12000);
   }
 
   /* ── onReveal helper for data-viz (§5) ───────────────────── */
@@ -52,7 +56,7 @@
     io.observe(el);
     setTimeout(function () {
       if (!done) { done = true; fn(true); io.disconnect(); }
-    }, 1100);
+    }, 12000);
   }
 
   /* ── Scroll-progress hairline (§4b) ──────────────────────── */
