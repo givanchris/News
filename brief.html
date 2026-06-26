@@ -818,7 +818,7 @@
 </nav>
 
 <!-- BRIEF HERO -->
-<div class="brief-hero">
+<div class="brief-hero page-main">
   <div class="brief-hero-inner">
     <div class="brief-hero-left">
       <div class="brief-eyebrow">Markets · Macro · Geopolitics</div>
@@ -961,6 +961,7 @@
 </footer>
 
 <script src="Assets/site.js"></script>
+<script src="Assets/motion.js"></script>
 <script>
 (function () {
   var DAYS   = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
@@ -1085,7 +1086,7 @@
         var ts   = relTime(h.ts);
         var isExternal = url !== '#';
         var target = isExternal ? ' target="_blank" rel="noopener noreferrer"' : '';
-        return '<div class="news-item">'
+        return '<div class="news-item reveal">'
           + '<div class="news-meta">'
           + '<span class="news-src">' + src + '</span>'
           + '<span class="news-ts">' + ts + '</span>'
@@ -1096,6 +1097,7 @@
           + '</div>'
           + '</div>';
       }).join('');
+      if (window.initReveals) window.initReveals();
     }
   }
 
@@ -1108,13 +1110,14 @@
       return;
     }
     el.innerHTML = stories.map(function(s) {
-      return '<div class="main-story">'
+      return '<div class="main-story reveal">'
         + '<div class="main-story-cat">' + esc(s.cat) + '</div>'
         + '<div class="main-story-hed">' + esc(s.headline) + '</div>'
         + (s.body ? '<div class="main-story-body">' + esc(s.body) + '</div>' : '')
         + (s.explain ? '<div class="main-story-explain">' + esc(s.explain) + '</div>' : '')
         + '</div>';
     }).join('');
+    if (window.initReveals) window.initReveals();
   }
 
   // ── Render editorial stories in sidebar (live feed mode — compact, expandable)

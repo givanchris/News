@@ -917,7 +917,7 @@
     .pcard:hover {
       transform: translateY(-5px);
       box-shadow: 0 18px 40px -22px rgba(14,34,64,0.45);
-      border-color: var(--navy);
+      border-color: var(--blue);
     }
     /* thumbnail (SVG mini-chart, 16:9) */
     .pcard-thumb {
@@ -1142,14 +1142,14 @@
 </nav>
 
 <!-- HERO -->
-<section id="hero">
+<section id="hero" class="page-main">
   <div class="hero-inner">
-    <div class="hero-eyebrow">Economics · Finance · Markets</div>
-    <h1 class="hero-name">
+    <div class="hero-eyebrow cg-load">Economics · Finance · Markets</div>
+    <h1 class="hero-name cg-load cg-load--2">
       CHRISTOPHER<br>
       <span class="line2">GIVAN</span>
     </h1>
-    <div class="hero-bottom">
+    <div class="hero-bottom cg-load cg-load--3">
       <p class="hero-bio">
         <strong>BA in Economics</strong> from CU Boulder (Minor in Business). Now starting an MS in Finance &amp; Investment Management.
         I focus on macro, markets, and the analytical side of capital allocation, where data meets decisions.
@@ -1182,7 +1182,7 @@
     </div>
 
     <!-- Bio -->
-    <div class="about-bio-cell">
+    <div class="about-bio-cell reveal">
       <div class="about-label section-eyebrow-light">Background</div>
       <h2>CHRISTOPHER <span>GIVAN</span></h2>
       <p class="about-text">
@@ -1201,7 +1201,7 @@
     </div>
 
     <!-- Facts row -->
-    <div class="about-facts-cell">
+    <div class="about-facts-cell reveal">
       <div class="fact-tile">
         <div class="fact-label">Hometown</div>
         <div class="fact-value">Mercer Island, WA</div>
@@ -1228,12 +1228,12 @@
      ════════════════════════════════════════════════════════════ -->
 <div class="section-white" id="projects">
   <div class="inner">
-    <div class="section-eyebrow">Projects</div>
-    <div class="section-heading" style="color:var(--navy);">Selected Work</div>
-    <div class="cards-grid">
+    <div class="section-eyebrow reveal">Projects</div>
+    <div class="section-heading reveal" style="color:var(--navy);">Selected Work</div>
+    <div class="cards-grid" data-stagger>
 
       <!-- Portfolio Lab -->
-      <a href="portfolio-lab.html" class="pcard">
+      <a href="portfolio-lab.html" class="pcard reveal">
         <div class="pcard-thumb">
           <span class="pcard-status live">Live demo</span>
           <svg viewBox="0 0 320 180" preserveAspectRatio="xMidYMid slice" style="width:100%;height:100%;display:block" aria-hidden="true">
@@ -1257,7 +1257,7 @@
       </a>
 
       <!-- Fed Signal Tracker -->
-      <a href="fed-signal.html" class="pcard">
+      <a href="fed-signal.html" class="pcard reveal">
         <div class="pcard-thumb">
           <span class="pcard-status wip">In progress</span>
           <svg viewBox="0 0 320 180" preserveAspectRatio="xMidYMid slice" style="width:100%;height:100%;display:block" aria-hidden="true">
@@ -1281,7 +1281,7 @@
       </a>
 
       <!-- Options Sentiment -->
-      <a href="options.html" class="pcard">
+      <a href="options.html" class="pcard reveal">
         <div class="pcard-thumb">
           <span class="pcard-status live">Live data</span>
           <svg viewBox="0 0 320 180" preserveAspectRatio="xMidYMid slice" style="width:100%;height:100%;display:block" aria-hidden="true">
@@ -1305,7 +1305,7 @@
       </a>
 
       <!-- Daily Brief Pipeline -->
-      <a href="brief.html" class="pcard">
+      <a href="brief.html" class="pcard reveal">
         <div class="pcard-thumb">
           <span class="pcard-status live">Updated 7PM MT</span>
           <svg viewBox="0 0 320 180" preserveAspectRatio="xMidYMid slice" style="width:100%;height:100%;display:block" aria-hidden="true">
@@ -1336,9 +1336,9 @@
      ════════════════════════════════════════════════════════════ -->
 <div class="section-navy" id="output">
   <div class="inner">
-    <div class="section-eyebrow section-eyebrow-light">Selected Output</div>
-    <div class="section-heading" style="color:var(--white);">What the Work <span style="color:var(--blue2);">Produces</span></div>
-    <div class="output-grid">
+    <div class="section-eyebrow section-eyebrow-light reveal">Selected Output</div>
+    <div class="section-heading reveal" style="color:var(--white);">What the Work <span style="color:var(--blue2);">Produces</span></div>
+    <div class="output-grid reveal">
 
       <!-- the chart -->
       <div class="output-chart">
@@ -1388,9 +1388,9 @@
 <!-- RESUME -->
 <div class="section-off" id="resume">
   <div class="inner">
-    <div class="section-eyebrow">Resume</div>
-    <div class="section-heading" style="color:var(--navy);">Experience</div>
-    <div class="resume-grid">
+    <div class="section-eyebrow reveal">Resume</div>
+    <div class="section-heading reveal" style="color:var(--navy);">Experience</div>
+    <div class="resume-grid reveal">
       <div>
         <div class="resume-col-label">Education</div>
         <div class="re-entry">
@@ -1427,7 +1427,7 @@
 <!-- CONTACT -->
 <div class="section-navy" id="contact">
   <div class="inner">
-    <div class="contact-grid">
+    <div class="contact-grid reveal">
       <div>
         <div class="contact-heading">Let's<br><span>Connect</span></div>
         <p class="contact-sub">I'm open to conversations about finance, markets, research, and opportunities. Reach out directly.</p>
@@ -1489,5 +1489,7 @@
 </footer>
 
 
+
+<script src="Assets/motion.js"></script>
 </body>
 </html>

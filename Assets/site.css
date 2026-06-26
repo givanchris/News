@@ -242,3 +242,107 @@ footer .f-logo {
   .nav-links li:nth-child(n+4) { display: none; }
   .nav-cta { display: none; }
 }
+
+/* ============================================================
+   MOTION — Givan Research Design System
+   See MOTION-HANDOFF.md for the full spec.
+   ============================================================ */
+
+/* ── Missing tokens ─────────────────────────────────────────── */
+:root {
+  --ease-out:       cubic-bezier(0.16, 1, 0.3, 1);
+  --shadow-sm:      0 2px 8px -2px rgba(22,19,13,0.12);
+  --shadow-lg:      0 18px 40px -12px rgba(22,19,13,0.28);
+  --surface-sunken: rgba(22,19,13,0.06);
+}
+
+/* ── §1a  Scroll-reveal primitives ─────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.66s var(--ease-out), transform 0.66s var(--ease-out);
+  will-change: opacity, transform;
+}
+.reveal.is-in      { opacity: 1; transform: none; }
+.reveal.is-instant { transition: none; }
+
+[data-stagger] > .reveal:nth-child(1)   { transition-delay: 0ms;   }
+[data-stagger] > .reveal:nth-child(2)   { transition-delay: 70ms;  }
+[data-stagger] > .reveal:nth-child(3)   { transition-delay: 140ms; }
+[data-stagger] > .reveal:nth-child(4)   { transition-delay: 210ms; }
+[data-stagger] > .reveal:nth-child(5)   { transition-delay: 280ms; }
+[data-stagger] > .reveal:nth-child(6)   { transition-delay: 350ms; }
+[data-stagger] > .reveal:nth-child(n+7) { transition-delay: 420ms; }
+.reveal.is-instant { transition-delay: 0ms !important; }
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+}
+
+/* ── §2  Hero load-in (transform only — never opacity) ─────── */
+@keyframes cg-rise {
+  from { transform: translateY(18px); }
+  to   { transform: none; }
+}
+.cg-load     { animation: cg-rise 0.6s var(--ease-out) both; }
+.cg-load--2  { animation-delay: 0.09s; }
+.cg-load--3  { animation-delay: 0.18s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .cg-load { animation: none; }
+}
+
+/* ── §3  Page-load entrance ────────────────────────────────── */
+@keyframes cg-page-in {
+  from { transform: translateY(10px); opacity: 0.7; }
+  to   { transform: none; opacity: 1; }
+}
+.page-main { animation: cg-page-in 0.5s var(--ease-out) both; }
+
+@media (prefers-reduced-motion: reduce) {
+  .page-main { animation: none; }
+}
+
+/* ── §4a  Nav active link — snap, never transition ──────────── */
+.nav-links a { position: relative; }
+.nav-links a::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: -3px; height: 1.5px;
+  background: currentColor; transform: scaleX(0); transform-origin: left;
+  transition: transform 0.15s var(--ease-out);
+}
+.nav-links a:hover::after { transform: scaleX(1); }
+/* Active: snap immediately — !important overrides each page's inline <style> */
+.nav-links a.active { color: var(--blue) !important; }
+.nav-links a.active::after { transform: scaleX(1); background: var(--blue); transition: none; }
+
+/* ── §4b  Scroll-progress hairline ─────────────────────────── */
+.nav__progress {
+  position: absolute; left: 0; bottom: -1px; height: 2px; width: 0;
+  background: var(--blue); transition: width 90ms linear; pointer-events: none;
+}
+
+/* ── §6  Hover micro-interactions (pure CSS) ────────────────── */
+
+/* Project cards (.pcard on index.html) */
+.pcard {
+  transition: transform 0.18s var(--ease-out), box-shadow 0.18s var(--ease-out),
+              border-color 0.18s var(--ease-out);
+}
+.pcard:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: var(--blue); }
+
+/* Sector heatmap cells (options.html — .sector-cell) */
+.sector-cell {
+  transition: transform 0.18s var(--ease-out), filter 0.18s, box-shadow 0.18s;
+}
+.sector-cell:hover {
+  transform: translateY(-1px); filter: brightness(1.06);
+  box-shadow: var(--shadow-sm); position: relative; z-index: 1;
+}
+
+/* Brief stories (.b-story / .b-hed on brief.html) */
+.b-story { cursor: pointer; }
+.b-story:hover .b-hed { color: var(--blue2); }
+
+/* News feed items (brief.html rolling mode) */
+.news-item { transition: background 0.15s; }
+.news-item:hover { background: var(--off); }
