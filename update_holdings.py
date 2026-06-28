@@ -21,7 +21,7 @@ OUT_FILE     = os.path.join(SCRIPT_DIR, "data", "holdings.json")
 
 FALLBACK_TICKERS = [
     "MRVL", "AVGO", "GOOG", "ALAB", "AMAT", "CEG", "ASML", "COHR",
-    "HUBB", "TCEHY", "LEU", "CRWV", "MOG.A", "SOLS", "VELO",
+    "HUBB", "TCEHY", "LEU", "CRWV", "MOG.A", "SOLS", "HOOD",
     "ZBRA", "NOW", "GRPN", "BTC",
 ]
 
@@ -40,7 +40,7 @@ NAMES = {
     "CRWV":  "CoreWeave",
     "MOG.A": "Moog Inc",
     "SOLS":  "Solaris Energy",
-    "VELO":  "Velodyne Lidar",
+    "HOOD":  "Robinhood Markets",
     "ZBRA":  "Zebra Technologies",
     "NOW":   "ServiceNow",
     "GRPN":  "Groupon",
