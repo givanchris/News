@@ -2,14 +2,13 @@
 """
 update_holdings.py — Fetch current prices for all portfolio holdings
 and write data/holdings.json for brief.html.
-Uses yfinance with fast_info for accurate prev close.
-Only writes ticker/name/price/change/changePct/prevClose/closes5d (no shares/cost).
 """
 
 import json
 import os
 import sys
 import time
+import urllib.request
 import warnings
 from datetime import datetime, timezone
 
@@ -19,10 +18,12 @@ SCRIPT_DIR   = os.path.dirname(os.path.abspath(__file__))
 HOLDINGS_SRC = os.path.join(SCRIPT_DIR, "..", "Portfolio management", "holdings.json")
 OUT_FILE     = os.path.join(SCRIPT_DIR, "data", "holdings.json")
 
+PAT = os.environ.get("GITHUB_PAT", "")
+WEIGHTS_URL = "https://api.github.com/repos/givanchris/News/contents/data/portfolio_weights.json"
+
 FALLBACK_TICKERS = [
-    "MRVL", "AVGO", "GOOG", "ALAB", "AMAT", "CEG", "ASML", "COHR",
-    "HUBB", "TCEHY", "LEU", "CRWV", "MOG.A", "SOLS", "HOOD",
-    "ZBRA", "NOW", "GRPN", "BTC",
+    "ALAB", "MRVL", "AMAT", "ASML", "COHR", "GOOG", "HUBB", "CEG",
+    "TCEHY", "NOW", "MOG.A", "CRWV", "HOOD", "LEU", "ZBRA", "GRPN", "BTC", "SOLS",
 ]
 
 NAMES = {
@@ -44,6 +45,7 @@ NAMES = {
     "ZBRA":  "Zebra Technologies",
     "NOW":   "ServiceNow",
     "GRPN":  "Groupon",
+    "HOOD":  "Robinhood Markets",
     "BTC":   "Bitcoin",
 }
 
@@ -54,6 +56,26 @@ try:
 except ImportError:
     print("ERROR: yfinance not installed. Run: /usr/local/bin/python3.14 -m pip install yfinance --break-system-packages")
     sys.exit(1)
+
+
+def fetch_weight_order():
+    """Fetch portfolio_weights.json from GitHub and return ordered ticker list."""
+    try:
+        import base64
+        req = urllib.request.Request(
+            WEIGHTS_URL,
+            headers={"Authorization": f"token {PAT}", "User-Agent": "update-holdings"},
+        )
+        resp = urllib.request.urlopen(req, timeout=10)
+        data = json.loads(resp.read())
+        weights = json.loads(base64.b64decode(data["content"]))
+        tickers = weights.get("tickers", [])
+        if tickers:
+            print(f"  Loaded weight order: {tickers}")
+            return tickers
+    except Exception as e:
+        print(f"  Note: portfolio_weights.json not found or unreadable ({e}), using fallback order")
+    return None
 
 
 def fetch_holding(ticker):
@@ -113,6 +135,7 @@ def load_tickers():
 
 
 def main():
+    weight_order = fetch_weight_order()
     tickers = load_tickers()
     print(f"Fetching {len(tickers)} tickers…\n")
 
@@ -126,6 +149,11 @@ def main():
     if not results:
         print("ERROR: no data fetched — holdings.json not updated")
         sys.exit(1)
+
+    # Sort by portfolio weight order if available
+    if weight_order:
+        order_map = {tk: i for i, tk in enumerate(weight_order)}
+        results.sort(key=lambda h: order_map.get(h["ticker"], 9999))
 
     out = {
         "lastUpdated": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
