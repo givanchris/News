@@ -1,38 +1,38 @@
 {
-  "as_of": "2026-06-30T14:15:47-06:00",
+  "as_of": "2026-06-30T15:15:48-06:00",
   "is_mock": false,
   "market": {
     "vix": {
-      "value": 16.51,
-      "change": -1.14,
-      "change_pct": -6.46
+      "value": 16.45,
+      "change": -1.2,
+      "change_pct": -6.8
     },
     "vix_term_structure": [
       {
         "label": "VIX9D",
-        "value": 13.83
+        "value": 13.73
       },
       {
         "label": "VIX",
-        "value": 16.51
+        "value": 16.45
       },
       {
         "label": "VIX3M",
-        "value": 19.02
+        "value": 19.0
       },
       {
         "label": "VIX6M",
-        "value": 21.48
+        "value": 21.5
       }
     ],
     "indices": [
       {
         "ticker": "SPY",
         "name": "S&P 500",
-        "price": 746.48,
-        "change": 5.48,
-        "change_pct": 0.74,
-        "pc_volume": 0.977,
+        "price": 746.77,
+        "change": 5.77,
+        "change_pct": 0.78,
+        "pc_volume": 0.9681,
         "pc_oi": 2.9686,
         "sentiment": "neutral"
       },
@@ -42,7 +42,7 @@
         "price": 736.4,
         "change": 12.32,
         "change_pct": 1.7,
-        "pc_volume": 1.0839,
+        "pc_volume": 1.0748,
         "pc_oi": 1.6259,
         "sentiment": "neutral"
       },
@@ -52,82 +52,82 @@
         "price": 300.45,
         "change": 1.48,
         "change_pct": 0.5,
-        "pc_volume": 1.2942,
+        "pc_volume": 1.2845,
         "pc_oi": 4.5043,
         "sentiment": "bearish"
       }
     ],
     "regime": "mixed",
-    "regime_summary": "SPY P/C 0.98 neutral \u00b7 VIX 16.5 moderate."
+    "regime_summary": "SPY P/C 0.97 neutral \u00b7 VIX 16.4 moderate."
   },
   "sectors": [
     {
       "ticker": "XLK",
       "name": "Technology",
-      "pc_volume": 4.2358,
+      "pc_volume": 3.8044,
       "iv_rank": null,
       "sentiment": "bearish"
     },
     {
       "ticker": "XLF",
       "name": "Financials",
-      "pc_volume": 1.0698,
+      "pc_volume": 1.0737,
       "iv_rank": null,
       "sentiment": "neutral"
     },
     {
       "ticker": "XLE",
       "name": "Energy",
-      "pc_volume": 0.3418,
+      "pc_volume": 0.3359,
       "iv_rank": null,
       "sentiment": "bullish"
     },
     {
       "ticker": "XLV",
       "name": "Health Care",
-      "pc_volume": 1.1293,
+      "pc_volume": 1.1567,
       "iv_rank": null,
       "sentiment": "neutral"
     },
     {
       "ticker": "XLY",
       "name": "Consumer Disc.",
-      "pc_volume": 2.6217,
+      "pc_volume": 2.6091,
       "iv_rank": null,
       "sentiment": "bearish"
     },
     {
       "ticker": "XLP",
       "name": "Consumer Staples",
-      "pc_volume": 1.2551,
+      "pc_volume": 1.2382,
       "iv_rank": null,
       "sentiment": "bearish"
     },
     {
       "ticker": "XLI",
       "name": "Industrials",
-      "pc_volume": 5.4718,
+      "pc_volume": 5.4332,
       "iv_rank": null,
       "sentiment": "bearish"
     },
     {
       "ticker": "XLU",
       "name": "Utilities",
-      "pc_volume": 0.9899,
+      "pc_volume": 1.0152,
       "iv_rank": null,
       "sentiment": "neutral"
     },
     {
       "ticker": "XLB",
       "name": "Materials",
-      "pc_volume": 1.3604,
+      "pc_volume": 1.3543,
       "iv_rank": null,
       "sentiment": "bearish"
     },
     {
       "ticker": "XLRE",
       "name": "Real Estate",
-      "pc_volume": 1.8704,
+      "pc_volume": 1.343,
       "iv_rank": null,
       "sentiment": "bearish"
     }
@@ -140,15 +140,15 @@
       "change": 7.62,
       "change_pct": 2.7,
       "volume": 64460950,
-      "pc_volume_ratio": 0.5132,
+      "pc_volume_ratio": 0.518,
       "pc_oi_ratio": 0.6494,
-      "iv_atm": 23.93,
-      "iv_rank": 72.1,
-      "iv_percentile": 80.0,
-      "skew_25d": 5.66,
+      "iv_atm": 22.35,
+      "iv_rank": 67.3,
+      "iv_percentile": 77.8,
+      "skew_25d": 3.12,
       "unusual_activity": true,
       "sentiment": "bullish",
-      "sentiment_reason": "P/C volume 0.51 below the 0.80 bullish threshold \u00b7 IV rank 72 elevated (fear premium)."
+      "sentiment_reason": "P/C volume 0.52 below the 0.80 bullish threshold \u00b7 IV rank 67 moderate."
     },
     {
       "ticker": "TSLA",
@@ -157,15 +157,15 @@
       "change": 8.76,
       "change_pct": 2.13,
       "volume": 41757573,
-      "pc_volume_ratio": 0.5569,
+      "pc_volume_ratio": 0.5654,
       "pc_oi_ratio": 1.0618,
-      "iv_atm": 37.01,
-      "iv_rank": 45.8,
-      "iv_percentile": 71.4,
-      "skew_25d": -5.37,
+      "iv_atm": 34.39,
+      "iv_rank": 42.5,
+      "iv_percentile": 69.4,
+      "skew_25d": 1.07,
       "unusual_activity": true,
       "sentiment": "bullish",
-      "sentiment_reason": "P/C volume 0.56 below the 0.80 bullish threshold \u00b7 IV rank 46 moderate."
+      "sentiment_reason": "P/C volume 0.57 below the 0.80 bullish threshold \u00b7 IV rank 43 moderate."
     },
     {
       "ticker": "NVDA",
@@ -173,16 +173,16 @@
       "price": 200.09,
       "change": 5.12,
       "change_pct": 2.63,
-      "volume": 149978056,
-      "pc_volume_ratio": 0.4197,
+      "volume": 163092701,
+      "pc_volume_ratio": 0.435,
       "pc_oi_ratio": 0.6495,
-      "iv_atm": 27.84,
-      "iv_rank": 34.1,
-      "iv_percentile": 57.1,
-      "skew_25d": 5.86,
+      "iv_atm": 28.43,
+      "iv_rank": 34.8,
+      "iv_percentile": 58.3,
+      "skew_25d": 4.49,
       "unusual_activity": true,
       "sentiment": "bullish",
-      "sentiment_reason": "P/C volume 0.42 below the 0.80 bullish threshold \u00b7 IV rank 34 moderate."
+      "sentiment_reason": "P/C volume 0.44 below the 0.80 bullish threshold \u00b7 IV rank 35 moderate."
     },
     {
       "ticker": "MSFT",
@@ -190,16 +190,16 @@
       "price": 373.02,
       "change": 4.45,
       "change_pct": 1.21,
-      "volume": 43523107,
-      "pc_volume_ratio": 0.3455,
+      "volume": 43820658,
+      "pc_volume_ratio": 0.3273,
       "pc_oi_ratio": 0.4576,
-      "iv_atm": 28.82,
-      "iv_rank": 64.4,
-      "iv_percentile": 82.9,
-      "skew_25d": 0.0,
+      "iv_atm": 28.96,
+      "iv_rank": 64.7,
+      "iv_percentile": 83.3,
+      "skew_25d": -4.88,
       "unusual_activity": true,
       "sentiment": "bullish",
-      "sentiment_reason": "P/C volume 0.35 below the 0.80 bullish threshold \u00b7 IV rank 64 moderate."
+      "sentiment_reason": "P/C volume 0.33 below the 0.80 bullish threshold \u00b7 IV rank 65 moderate."
     },
     {
       "ticker": "META",
@@ -208,15 +208,15 @@
       "change": 0.69,
       "change_pct": 0.12,
       "volume": 15879159,
-      "pc_volume_ratio": 0.4624,
+      "pc_volume_ratio": 0.4453,
       "pc_oi_ratio": 0.5406,
-      "iv_atm": 29.57,
-      "iv_rank": 67.9,
-      "iv_percentile": 82.9,
-      "skew_25d": 1.61,
+      "iv_atm": 29.42,
+      "iv_rank": 67.6,
+      "iv_percentile": 80.6,
+      "skew_25d": -1.37,
       "unusual_activity": true,
       "sentiment": "bullish",
-      "sentiment_reason": "P/C volume 0.46 below the 0.80 bullish threshold \u00b7 IV rank 68 moderate."
+      "sentiment_reason": "P/C volume 0.45 below the 0.80 bullish threshold \u00b7 IV rank 68 moderate."
     },
     {
       "ticker": "GOOGL",
@@ -224,16 +224,16 @@
       "price": 357.37,
       "change": 3.72,
       "change_pct": 1.05,
-      "volume": 33769695,
-      "pc_volume_ratio": 0.4455,
+      "volume": 34024733,
+      "pc_volume_ratio": 0.4697,
       "pc_oi_ratio": 0.6356,
-      "iv_atm": 25.62,
-      "iv_rank": 56.5,
-      "iv_percentile": 71.4,
-      "skew_25d": 2.73,
+      "iv_atm": 25.53,
+      "iv_rank": 56.3,
+      "iv_percentile": 69.4,
+      "skew_25d": 6.25,
       "unusual_activity": true,
       "sentiment": "bullish",
-      "sentiment_reason": "P/C volume 0.45 below the 0.80 bullish threshold \u00b7 IV rank 57 moderate."
+      "sentiment_reason": "P/C volume 0.47 below the 0.80 bullish threshold \u00b7 IV rank 56 moderate."
     },
     {
       "ticker": "AMZN",
@@ -242,15 +242,15 @@
       "change": -1.8,
       "change_pct": -0.75,
       "volume": 65198589,
-      "pc_volume_ratio": 0.5428,
+      "pc_volume_ratio": 0.5241,
       "pc_oi_ratio": 0.5716,
-      "iv_atm": 27.98,
-      "iv_rank": 63.3,
-      "iv_percentile": 82.9,
-      "skew_25d": 1.56,
+      "iv_atm": 29.22,
+      "iv_rank": 66.1,
+      "iv_percentile": 83.3,
+      "skew_25d": 3.03,
       "unusual_activity": true,
       "sentiment": "bullish",
-      "sentiment_reason": "P/C volume 0.54 below the 0.80 bullish threshold \u00b7 IV rank 63 moderate."
+      "sentiment_reason": "P/C volume 0.52 below the 0.80 bullish threshold \u00b7 IV rank 66 moderate."
     },
     {
       "ticker": "AMD",
@@ -259,15 +259,15 @@
       "change": 41.42,
       "change_pct": 7.68,
       "volume": 33116703,
-      "pc_volume_ratio": 0.8136,
+      "pc_volume_ratio": 0.796,
       "pc_oi_ratio": 1.0984,
-      "iv_atm": 70.07,
-      "iv_rank": 11.3,
-      "iv_percentile": 45.7,
-      "skew_25d": -1.03,
+      "iv_atm": 67.75,
+      "iv_rank": 10.9,
+      "iv_percentile": 44.4,
+      "skew_25d": 3.44,
       "unusual_activity": true,
-      "sentiment": "neutral",
-      "sentiment_reason": "P/C volume 0.81 in the neutral zone (0.80\u20131.20) \u00b7 IV rank 11 low (complacency)."
+      "sentiment": "bullish",
+      "sentiment_reason": "P/C volume 0.80 below the 0.80 bullish threshold \u00b7 IV rank 11 low (complacency)."
     },
     {
       "ticker": "JPM",
@@ -276,15 +276,15 @@
       "change": -2.06,
       "change_pct": -0.63,
       "volume": 4182980,
-      "pc_volume_ratio": 0.7507,
+      "pc_volume_ratio": 0.4876,
       "pc_oi_ratio": 0.8618,
-      "iv_atm": 22.29,
+      "iv_atm": 22.28,
       "iv_rank": 61.0,
-      "iv_percentile": 34.3,
-      "skew_25d": 5.08,
+      "iv_percentile": 33.3,
+      "skew_25d": 5.66,
       "unusual_activity": true,
       "sentiment": "bullish",
-      "sentiment_reason": "P/C volume 0.75 below the 0.80 bullish threshold \u00b7 IV rank 61 moderate."
+      "sentiment_reason": "P/C volume 0.49 below the 0.80 bullish threshold \u00b7 IV rank 61 moderate."
     },
     {
       "ticker": "GS",
@@ -292,16 +292,16 @@
       "price": 1011.37,
       "change": -8.84,
       "change_pct": -0.87,
-      "volume": 2482514,
-      "pc_volume_ratio": 1.1801,
+      "volume": 2549760,
+      "pc_volume_ratio": 1.1845,
       "pc_oi_ratio": 1.1003,
-      "iv_atm": 34.23,
-      "iv_rank": 67.7,
-      "iv_percentile": 62.9,
-      "skew_25d": 4.17,
+      "iv_atm": 34.1,
+      "iv_rank": 67.5,
+      "iv_percentile": 58.3,
+      "skew_25d": 3.71,
       "unusual_activity": true,
       "sentiment": "neutral",
-      "sentiment_reason": "P/C volume 1.18 in the neutral zone (0.80\u20131.20) \u00b7 IV rank 68 moderate."
+      "sentiment_reason": "P/C volume 1.18 in the neutral zone (0.80\u20131.20) \u00b7 IV rank 67 moderate."
     }
   ]
 }
