@@ -23,7 +23,7 @@ jobs:
   deploy:
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: https://givanchris.github.io/News/
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -37,6 +37,32 @@ jobs:
         with:
           path: '.'
 
-      - name: Deploy to GitHub Pages
-        id: deployment
+      # GitHub's Pages deployment API intermittently returns "Deployment
+      # failed, try again later" even with no concurrent runs — a known
+      # backend flake, not something the concurrency group above prevents.
+      # Retry up to 3 times before actually failing the job. `outcome` (not
+      # `conclusion`) reflects the step's real result even under
+      # continue-on-error, which is what the later `if:` conditions need.
+      - name: Deploy to GitHub Pages (attempt 1)
+        id: deploy1
+        continue-on-error: true
+        uses: actions/deploy-pages@v4
+
+      - name: Wait before retry 1
+        if: steps.deploy1.outcome == 'failure'
+        run: sleep 20
+
+      - name: Deploy to GitHub Pages (attempt 2)
+        id: deploy2
+        if: steps.deploy1.outcome == 'failure'
+        continue-on-error: true
+        uses: actions/deploy-pages@v4
+
+      - name: Wait before retry 2
+        if: steps.deploy1.outcome == 'failure' && steps.deploy2.outcome == 'failure'
+        run: sleep 20
+
+      - name: Deploy to GitHub Pages (attempt 3)
+        id: deploy3
+        if: steps.deploy1.outcome == 'failure' && steps.deploy2.outcome == 'failure'
         uses: actions/deploy-pages@v4
