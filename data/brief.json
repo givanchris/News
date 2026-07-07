@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "lastUpdated": "2026-07-06T20:30:17-06:00",
   "market": {
     "sp500": {
@@ -31,105 +32,109 @@
       "change": "-0.12%",
       "dir": "down"
     }
+=======
+  "lastUpdated": "2026-07-06T20:35:00-06:00",
+  "market": {
+    "sp500": { "price": "7,537", "change": "+0.72%", "dir": "up" },
+    "nasdaq": { "price": "29,698", "change": "+1.26%", "dir": "up" },
+    "yield": { "price": "4.49%", "change": "+1 bps", "dir": "up" },
+    "wti": { "price": "$69", "change": "+0.4%", "dir": "up" },
+    "gold": { "price": "$4,148", "change": "-0.41%", "dir": "down" },
+    "dxy": { "price": "100.85", "change": "+0.03%", "dir": "flat" }
+>>>>>>> febd5d35b76ffd3a4405aaad433a1bd168f1dcee
   },
   "stories": [
     {
       "cat": "MARKETS",
-      "headline": "APPLE FALLS 6% AS MACBOOK AND IPAD PRICE HIKES WIPE $265B FROM MARKET CAP",
-      "body": "Apple shares tumbled 6.1% \u2014 the stock's worst single-day loss in over a year \u2014 after the company raised prices on MacBooks (up $100-200) and iPads (up $100-150) to counter a severe memory chip shortage driven by AI data center demand. The selloff erased roughly $265 billion in market cap.",
-      "explain": "Apple is passing higher DRAM and NAND costs to consumers as AI infrastructure buildout has created an extraordinary surge in memory demand, tightening global supply. Markets reacted harshly because price hikes signal margin pressure before the volume impact \u2014 higher retail prices historically compress Mac and iPad unit sales, creating a dual hit to revenue. This is the first time Apple has raised base Mac prices since 2021."
+      "headline": "SPACEX JOINS NASDAQ-100 TODAY, TRIGGERING AN ESTIMATED $4.3B IN FORCED INDEX BUYING",
+      "body": "SpaceX (SPCX) entered the Nasdaq-100 before today's open, just 15 trading days after its record $75B IPO on June 12. The stock has already fallen 28% from its post-IPO high of $225 to around $162, even as JPMorgan estimates the index-fund rebalancing forces roughly $4.3 billion of buying into the name. The addition comes as the broader tape extends its rally: the Dow closed above 53,000 for the first time Monday (+0.29% to 53,055.91), the S&P 500 gained 0.72% to 7,537.43, and the Nasdaq-100 rose 1.26% to 29,698 as chip stocks rebounded (Western Digital +7%, AMD +6.6%).",
+      "explain": "Index inclusion forces every fund that tracks the Nasdaq-100 — QQQ alone holds roughly $350B in assets — to buy shares regardless of valuation, simply because the benchmark now includes them. That demand is mechanical, not fundamental, which is why prior high-profile additions like Palantir and Strategy tended to peak at or before their inclusion date: the buying pressure is front-run by traders anticipating the rebalance, leaving little incremental demand once the trade actually executes. SpaceX's 28% pullback from its IPO high shows that dynamic already playing out before today's official add."
     },
     {
-      "cat": "EARNINGS",
-      "headline": "MICRON SURGES 17% AS AI MEMORY BOOM QUADRUPLES QUARTERLY REVENUE TO $41B",
-      "body": "Micron Technology jumped 17% after Q3 earnings obliterated expectations: revenue quadrupled year-over-year to $41.46 billion (vs $9.3B a year prior) and adjusted EPS hit $25.11 against a $20.78 consensus estimate.",
-      "explain": "Micron is the direct beneficiary of the same memory shortage punishing Apple's margins. Hyperscalers are aggressively pre-buying HBM3E and DDR5 to expand GPU clusters, giving Micron extraordinary pricing power. Today's result validates the AI infrastructure supercycle thesis \u2014 Micron's order book signals sustained demand through 2027, and the 4x revenue jump shows the operating leverage possible when a commodity supplier faces inelastic demand."
+      "cat": "TRADE",
+      "headline": "MAY TRADE DEFICIT WIDENS 27% TO $105.8B AS IMPORTS SURGE AHEAD OF TARIFF DEADLINES",
+      "body": "The U.S. international trade deficit jumped to $105.8 billion in May from $83.0 billion in April, a $22.7 billion swing, as imports of goods rose to $313.4 billion (+$10.9B) while exports fell to $207.7 billion (-$11.8B). The move reflects businesses front-loading shipments ahead of pending tariff actions rather than a genuine deterioration in trade competitiveness.",
+      "explain": "A widening deficit driven by import front-running is a timing effect, not a demand shock: importers are pulling forward purchases before new tariff schedules take effect, which mechanically inflates the current month's import bill and then reverses once inventories are stocked. Because net exports subtract directly from GDP in the expenditure accounting identity, a print this size can shave meaningfully off Q2 growth estimates even though the underlying activity simply moved between quarters rather than disappearing."
     },
     {
-      "cat": "MARKETS",
-      "headline": "QUALCOMM JUMPS 9% AFTER DOUBLING NON-HANDSET REVENUE TARGET TO $40B BY 2029",
-      "body": "Qualcomm rose 9% after nearly doubling its 2029 non-handset revenue projection to $40 billion, driven by automotive and industrial AI chip wins. The update signals successful diversification beyond smartphone dependency.",
-      "explain": "Qualcomm has been expanding its Snapdragon platform into automotive ADAS, infotainment, and industrial IoT markets. The $40B non-handset target implies roughly 20% CAGR from current levels. For investors, Qualcomm's story is the mirror image of Apple's \u2014 it benefits from the AI edge-compute cycle while Apple suffers from the memory supply crunch that Qualcomm's chips enable."
+      "cat": "CENTRAL BANKS",
+      "headline": "YIELD CURVE STEEPENS AS 2-YEAR SLIDES TO 4.12% WHILE 10-YEAR HOLDS NEAR 4.49%",
+      "body": "The 2-year Treasury yield eased 6 bps to 4.12% while the 10-year ticked up 1 bp to 4.49%, steepening the curve after June nonfarm payrolls came in at just 57,000 — the smallest gain in four months and well below the 110,000 consensus. FOMC minutes from the June meeting are due Wednesday, with the next decision July 28-29.",
+      "explain": "The 2-year is the more Fed-sensitive maturity because it prices the expected path of the fed funds rate over the policy horizon, so a soft jobs print pulls it down as traders trim hike odds. The 10-year moves more on longer-run growth and inflation expectations and barely budged, which is exactly the signature of a curve-steepening trade: front-end yields fall on dovish repricing while the long end holds, narrowing the 2s10s spread's inversion. That combination — weak labor data plus a 10-year that won't fall — tells you the market still isn't fully convinced inflation is beaten."
     },
     {
       "cat": "COMMODITIES",
-      "headline": "GOLD SLIDES TO $4,039 AS DOLLAR BREAKS ONE-YEAR HIGH ABOVE 100 ON FED EXPECTATIONS",
-      "body": "Gold dropped 1.4% to $4,039/oz as the US Dollar Index climbed above 100 \u2014 its highest level in over a year \u2014 weighing on dollar-denominated commodities. Growing expectations for Federal Reserve rate hikes drove the dollar strength.",
-      "explain": "Gold and the dollar share a classic inverse relationship: a stronger dollar makes gold more expensive for foreign buyers, compressing global demand. The Fed rate-hike expectations baked into today's DXY move reflect persistent PCE inflation, which the 10-year yield (up 2 bps to 4.41%) also reflects. Gold's ability to hold the $4,000 level is the key technical test \u2014 a sustained break could accelerate selling toward $3,900."
-    },
-    {
-      "cat": "EARNINGS",
-      "headline": "MERCK ACQUIRES BIO-TECHNE FOR $73 PER SHARE IN LIFE SCIENCES DEAL",
-      "body": "Drugmaker Merck agreed to acquire life sciences tools company Bio-Techne at $73 per share, adding protein and immunoassay platforms to its research pipeline.",
-      "explain": "Merck is acquiring Bio-Techne's reagent and diagnostics tools to lock in R&D relationships across pharma and biotech clients \u2014 a common strategy of buying upstream suppliers to deepen the distribution moat. Life sciences tools M&A has recovered in 2026 as valuations pulled back sharply from 2021 peaks, creating acquisition windows for large-cap pharma with strong cash flows."
+      "headline": "GOLD SLIPS TO $4,148 AS DOLLAR FIRMS, WTI STEADY NEAR $69 AFTER OPEC+ OUTPUT HIKE",
+      "body": "Gold retreated 0.41% to $4,148/oz, pulling back from a two-week high as the dollar index firmed to 100.85. WTI crude held near $69/barrel and Brent stayed under $72 after OPEC+ approved a 188,000 barrel-per-day production increase for August, reinforcing expectations of ample supply.",
+      "explain": "Gold's pullback and the dollar's firmness are two sides of the same trade: gold is priced in dollars globally, so any tick up in DXY mechanically raises gold's cost for foreign buyers and compresses demand at the margin. The OPEC+ supply increase works through a separate channel — it directly raises the quantity of crude reaching the market each month, capping upside even with geopolitical premia still embedded in Brent. Together they explain why two traditionally inflation-sensitive assets are both drifting lower even as labor data softens."
     },
     {
       "cat": "MCBB",
-      "headline": "NCAA TOURNAMENT SET TO EXPAND TO 76 TEAMS AS REALIGNED PAC-12 KICKS OFF PLAY",
-      "body": "The NCAA confirmed the men's tournament will grow from 68 to 76 teams starting in 2026-27, adding four more at-large or play-in slots just as conference realignment reshapes the sport: five Mountain West programs, Gonzaga and Texas State officially joined the rebuilt nine-team Pac-12 on July 1, with barttorvik.com's early projections slotting Gonzaga at No. 6 nationally."
+      "headline": "REALIGNED PAC-12 OFFICIALLY LAUNCHES AS TOURNAMENT EXPANSION TO 76 TEAMS TAKES SHAPE",
+      "body": "The rebuilt nine-team Pac-12 — five former Mountain West programs plus Gonzaga and Texas State joining holdovers Oregon State and Washington State — officially began play July 1, while the NCAA confirmed the men's tournament will expand from 68 to 76 teams starting in 2026-27. More than 2,700 players entered the transfer portal in the two-week window after last season, reshaping rosters nationwide."
     },
     {
       "cat": "NBA",
-      "headline": "LEBRON JAMES TELLS LAKERS HE'S LEAVING AS CAVALIERS EMERGE AS FRONTRUNNER",
-      "body": "LeBron James informed the Lakers he won't return in 2026-27, with agent Rich Paul fielding interest from Cleveland, Miami, Denver, Minnesota and Philadelphia \u2014 a return to Cleveland is described as the favorite. The move comes as the Lakers reshape their roster, sending center Deandre Ayton to Washington for Jaden Hardy and two second-round picks on Day 6 of free agency."
+      "headline": "LEBRON JAMES TELLS LAKERS HE'S LEAVING; L.A. FLIPS AYTON TO WIZARDS A DAY AFTER LANDING KESSLER",
+      "body": "LeBron James informed the Lakers he will play elsewhere in 2026-27, with agent Rich Paul telling ESPN he has now spoken with 27 teams, Cleveland seen as the frontrunner for a return. The Lakers, meanwhile, are reshaping their frontcourt — acquiring center Walker Kessler from Utah, then sending Deandre Ayton to Washington for Jaden Hardy and two future second-round picks a day later."
     },
     {
       "cat": "NFL",
-      "headline": "TRAVIS KELCE MARRIES TAYLOR SWIFT AS NFL ENTERS QUIET STRETCH BEFORE CAMP",
-      "body": "Chiefs tight end Travis Kelce married Taylor Swift Friday night at Madison Square Garden in the sport's biggest offseason headline, while on the football side the league finalized a settlement with QB Brendan Sorsby preserving his 2027 draft eligibility; most teams, including Cincinnati (July 29) and Pittsburgh, are now locked in through training camp report dates later this month."
+      "headline": "TOP 100 PLAYERS REVEAL BEGINS AS LEAGUE SETTLES INTO QUIET PRE-CAMP STRETCH",
+      "body": "The player-voted \"Top 100 Players of 2026\" reveal is rolling out on X and NFL+ as the offseason enters its calmest stretch before training camps open. On the roster front, cornerback Rasul Douglas is finalizing a one-year, up-to-$3.8 million deal with Washington, while most teams lock in report dates for late July."
     },
     {
       "cat": "NCAA CFB",
-      "headline": "TRANSFER PORTAL WINDOW CLOSES: TEXAS TECH LANDS SORSBY, PENN STATE IMPORTS IOWA STATE'S OFFENSE",
-      "body": "College football's condensed transfer portal window has effectively closed after more than two weeks of roster movement; Texas Tech landed top-ranked portal QB Brendan Sorsby, Penn State's new coaching staff brought quarterback Rocco Becht and nearly two dozen players over from Iowa State, and LSU under Lane Kiffin and Indiana under Curt Cignetti were again among the most active spenders."
+      "headline": "TRANSFER PORTAL WINDOW EFFECTIVELY CLOSES: PENN STATE'S 40-PLAYER CLASS, LSU AND TEXAS AMONG BIGGEST WINNERS",
+      "body": "College football's condensed transfer window has wound down after two-plus weeks of movement. Penn State's new staff imported nearly two dozen players from Iowa State — headlined by QB Rocco Becht — as part of a roughly 40-player portal class; Lane Kiffin's LSU and Texas, which added Auburn transfer WR Cam Coleman to surround Arch Manning, were also among the most active."
     }
   ],
   "sports": [
     {
       "team": "SEATTLE MARINERS",
-      "pill": "vs TOR",
+      "pill": "at MIA",
       "pillClass": "s-up",
-      "detail": "Playing the rubber match against Toronto this afternoon at T-Mobile Park \u2014 Emerson Hancock (5-4, 3.47 ERA) vs. Trey Yesavage (4-3, 3.34 ERA) \u2014 after Saturday's 11-0 rout keyed by Randy Arozarena's grand slam and a Logan Gilbert one-hitter into the 8th. Mariners sit 46-44, 2nd in the AL West; today's result was still pending as of this brief."
+      "detail": "Open a three-game set at Miami tonight (6:40 PM ET) — Bryan Woo vs. Max Meyer — after taking the Toronto series with wins of 11-0 and 4-0 over the weekend. Mariners sit 47-44, 1st in the AL West; tonight's game had not yet started as of this brief."
     },
     {
       "team": "DETROIT PISTONS",
-      "pill": "OFFSEASON",
+      "pill": "SUMMER LEAGUE",
       "pillClass": "s-up",
-      "detail": "Summer League roster is set: No. 17 pick Ebuka Okorie (Stanford) headlines a group with 2nd-rounder Ugonna Onyenso and Roddy Gayle Jr. Vegas slate opens July 9 vs. 76ers, then Cavaliers (7/12), Knicks (7/13) and Suns (7/15)."
+      "detail": "Vegas Summer League opens Thursday (7/9) vs. the 76ers. No. 17 pick Ebuka Okorie (Stanford) headlines the roster alongside 2nd-rounder Ugonna Onyenso and Roddy Gayle Jr., with games against Cleveland (7/12), New York (7/13) and Phoenix (7/15) to follow."
     },
     {
       "team": "SEATTLE SEAHAWKS",
       "pill": "OFFSEASON",
       "pillClass": "s-up",
-      "detail": "Reigning Super Bowl LX champs enter 2026 on a 10-game winning streak (290-145 point differential). Front office promoted Matt Berry and Willie Schneider to assistant GM; training camp opens July 25 in Renton, with the team and WR Jaxon Smith-Njigba both ESPY nominees (July 15)."
+      "detail": "Defending Super Bowl LX champs open training camp July 25 in Renton (rookies report 7/17, veterans 7/24). The front office promoted Matt Berry and Willie Schneider to assistant GM, and both the team and WR Jaxon Smith-Njigba are up for ESPY Awards."
     },
     {
       "team": "WASHINGTON HUSKIES FOOTBALL",
       "pill": "OFFSEASON",
       "pillClass": "s-up",
-      "detail": "RB Jordan Washington (spring injury) still targeting a late-July return; WR Justice Williams is emerging as a potential No. 3 option behind Dezmen Roebuck and Rashid Williams. Coach Jedd Fisch says the Huskies have the physicality to compete over a full Big Ten season."
+      "detail": "RB Jordan Washington is still targeting a late-July return from his spring injury, and WR Justice Williams continues to push for the No. 3 receiver job behind Dezmen Roebuck and Rashid Williams. The Huskies also landed a commitment from Colorado offensive lineman Reis Russell this week."
     },
     {
       "team": "WASHINGTON HUSKIES BASKETBALL",
       "pill": "OFFSEASON",
       "pillClass": "s-up",
-      "detail": "F Hannes Steinbach went 14th overall to the Hornets in June, the 4th-highest German draft pick in NBA history. Danny Sprinkle continues rebuilding via the portal after losing Zoom Diallo, with 2026 signee Lattimore Ford and several transfers filling out next year's roster."
+      "detail": "F Hannes Steinbach went 14th overall to the Hornets in June, the 4th-highest German draft pick in NBA history. Danny Sprinkle continues rebuilding through the portal after losing Zoom Diallo, restocking around 2026 signee Lattimore Ford."
     }
   ],
   "watchlist": [
-    "FOMC meeting July 28-29 \u2014 markets pricing 62.6% odds of a hold, 37.4% odds of a hike",
     "FOMC June minutes release Wednesday, July 8",
-    "10Y at 4.41% ahead of next inflation print \u2014 CPI ran 4.2% YoY in May, hottest since April 2023",
-    "Gold testing $4,000 support \u2014 DXY above 100 is the catalyst",
-    "Mariners host Blue Jays in today's series finale, T-Mobile Park \u2014 Seattle 46-44 after Saturday's 11-0 rout"
+    "FOMC meeting July 28-29 — markets still leaning toward a hold after a soft June jobs report",
+    "10Y at 4.49% vs. 2Y at 4.12% — curve steepening on cooling labor data",
+    "SpaceX's Nasdaq-100 inclusion effective today — watch for post-rebalance fade given the ~$4.3B forced-buying overhang",
+    "Mariners open three-game series at Miami tonight, 6:40 PM ET — Woo vs. Meyer"
   ],
   "deepDive": {
-    "title": "USMCA's Non-Renewal and the Return of Annual Tariff Risk",
+    "title": "Forced Buying: How Nasdaq-100 Inclusion Moves a Stock Before the Fundamentals Do",
     "content": [
-      "The United States, Mexico and Canada wrapped up USMCA's mandatory six-year review on July 1, and Washington opted not to renew the pact in its current form. That doesn't blow up the agreement \u2014 it stays in force through 2036 and current preferential tariffs on autos, agriculture and manufactured goods remain in place today \u2014 but it converts what was a fixed sixteen-year horizon into a rolling annual review process. For a trade bloc that underpins roughly $1.8 trillion in North American commerce, trading a known expiration date for a recurring, unresolved one is itself a market-relevant event, even though no tariff changed on July 1.",
-      "The mechanism worth understanding is how 'review' differs from 'renewal.' USMCA requires each member to certify support for extending the agreement; without unanimous certification, the deal doesn't terminate, but it triggers annual joint reviews where any party can eventually move to withdraw with formal notice. That structure preserves today's rules of origin \u2014 the ~75% regional value content threshold that determines whether a vehicle assembled in Mexico ships to the U.S. tariff-free \u2014 while reintroducing the possibility that those thresholds get renegotiated or that a party simply lets the clock run toward eventual exit. Businesses now have to discount cash flows against a review calendar instead of a single sunset date.",
-      "What gets missed is that markets already priced a version of this once before: during 2017-2020, NAFTA's renegotiation threat under the first Trump administration caused automakers to delay roughly $10-15 billion in planned North American capex until USMCA's terms were locked in 2020. The lesson from that period is that uncertainty itself \u2014 not the eventual tariff outcome \u2014 is what shows up first in capital spending data, well before it shows up in headline trade flows. An annual review cadence, repeated for up to a decade, effectively institutionalizes that same hesitation instead of resolving it once.",
-      "Layer that onto today's setup and the read-through is straightforward: tariff policy is now a live input into the same inflation path the Fed is weighing ahead of the July 28-29 FOMC meeting, where markets are pricing 62.6% odds of a hold. Import price pass-through from any future USMCA friction would show up first in core goods CPI, the same series the Fed has flagged as running hot at 4.2% year-over-year in May. A finance student should treat the USMCA review calendar the way they'd treat a recurring earnings date for an index constituent \u2014 a known event with an unknown outcome that the market has to reprice every single year until it doesn't."
+      "SpaceX's addition to the Nasdaq-100 today is the cleanest live example of a market mechanic that has nothing to do with earnings, growth, or valuation: passive index inclusion. Fifteen trading days after its record $75 billion IPO, SpaceX is now large enough by market cap to qualify for the benchmark, and JPMorgan estimates that qualification alone forces roughly $4.3 billion of buying from funds that track the index — QQQ and its derivatives chief among them. None of that buying reflects a view on whether SpaceX is worth $162 a share; it happens because the index methodology says the stock belongs in the basket, and funds that promise to track the basket have no discretion to disagree.",
+      "The mechanism works because trillions of dollars now sit in vehicles engineered to hold whatever a benchmark holds, in the same proportion the benchmark holds it. When a committee adds a name, every one of those vehicles must buy shares simultaneously, and because the trade is scheduled and public knowledge weeks in advance, it creates a predictable, price-insensitive spike in demand concentrated around the effective date. Index providers set the date this way deliberately — to give funds an orderly window to trade — but that same predictability is exactly what active traders try to front-run, buying ahead of the flow and selling into it once the passive funds have finished.",
+      "That front-running dynamic is why inclusion so often marks a local top rather than the start of a rally. Palantir and MicroStrategy, the two most-cited prior examples, both saw their shares peak at or just before their respective Nasdaq-100 add dates, then drift lower for months afterward once the mechanical bid disappeared. SpaceX appears to be tracing the same arc already: the stock is down 28% from its post-IPO high of $225, meaning much of today's $4.3 billion in anticipated buying may already be reflected in a price that ran up and cooled before the rebalance even executed.",
+      "The broader lesson for a portfolio built partly around index funds is that benchmark membership is a two-way door with real cash-flow consequences on both sides. A stock's addition creates temporary demand nobody chose freely; its eventual removal — whether from a bankruptcy, an acquisition, or simply falling below the cutoff — creates the mirror-image forced selling. Understanding that inclusion-day pops are a liquidity event, not a valuation signal, is what separates reading a headline like today's from actually knowing whether the stock is a buy at $162."
     ]
   }
 }
