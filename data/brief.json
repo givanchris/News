@@ -1,105 +1,111 @@
 {
-  "lastUpdated": "2026-07-06T20:35:00-06:00",
+  "lastUpdated": "2026-07-13T16:34:37-06:00",
   "market": {
-    "sp500": { "price": "7,537", "change": "+0.72%", "dir": "up" },
-    "nasdaq": { "price": "29,698", "change": "+1.26%", "dir": "up" },
-    "yield": { "price": "4.49%", "change": "+1 bps", "dir": "up" },
-    "wti": { "price": "$69", "change": "+0.4%", "dir": "up" },
-    "gold": { "price": "$4,148", "change": "-0.41%", "dir": "down" },
-    "dxy": { "price": "100.85", "change": "+0.03%", "dir": "flat" }
+    "sp500":  { "price": "7,515.34", "change": "-0.79%",  "dir": "down" },
+    "nasdaq": { "price": "29,333",   "change": "-1.7%",   "dir": "down" },
+    "yield":  { "price": "4.58%",    "change": "+3 bps",  "dir": "up"   },
+    "wti":    { "price": "$78.14",   "change": "+9.4%",   "dir": "up"   },
+    "gold":   { "price": "$4,020",   "change": "-2.2%",   "dir": "down" },
+    "dxy":    { "price": "100.93",   "change": "-0.02%",  "dir": "flat" }
   },
   "stories": [
     {
-      "cat": "MARKETS",
-      "headline": "SPACEX JOINS NASDAQ-100 TODAY, TRIGGERING AN ESTIMATED $4.3B IN FORCED INDEX BUYING",
-      "body": "SpaceX (SPCX) entered the Nasdaq-100 before today's open, just 15 trading days after its record $75B IPO on June 12. The stock has already fallen 28% from its post-IPO high of $225 to around $162, even as JPMorgan estimates the index-fund rebalancing forces roughly $4.3 billion of buying into the name. The addition comes as the broader tape extends its rally: the Dow closed above 53,000 for the first time Monday (+0.29% to 53,055.91), the S&P 500 gained 0.72% to 7,537.43, and the Nasdaq-100 rose 1.26% to 29,698 as chip stocks rebounded (Western Digital +7%, AMD +6.6%).",
-      "explain": "Index inclusion forces every fund that tracks the Nasdaq-100 — QQQ alone holds roughly $350B in assets — to buy shares regardless of valuation, simply because the benchmark now includes them. That demand is mechanical, not fundamental, which is why prior high-profile additions like Palantir and Strategy tended to peak at or before their inclusion date: the buying pressure is front-run by traders anticipating the rebalance, leaving little incremental demand once the trade actually executes. SpaceX's 28% pullback from its IPO high shows that dynamic already playing out before today's official add."
-    },
-    {
-      "cat": "TRADE",
-      "headline": "MAY TRADE DEFICIT WIDENS 27% TO $105.8B AS IMPORTS SURGE AHEAD OF TARIFF DEADLINES",
-      "body": "The U.S. international trade deficit jumped to $105.8 billion in May from $83.0 billion in April, a $22.7 billion swing, as imports of goods rose to $313.4 billion (+$10.9B) while exports fell to $207.7 billion (-$11.8B). The move reflects businesses front-loading shipments ahead of pending tariff actions rather than a genuine deterioration in trade competitiveness.",
-      "explain": "A widening deficit driven by import front-running is a timing effect, not a demand shock: importers are pulling forward purchases before new tariff schedules take effect, which mechanically inflates the current month's import bill and then reverses once inventories are stocked. Because net exports subtract directly from GDP in the expenditure accounting identity, a print this size can shave meaningfully off Q2 growth estimates even though the underlying activity simply moved between quarters rather than disappearing."
-    },
-    {
-      "cat": "CENTRAL BANKS",
-      "headline": "YIELD CURVE STEEPENS AS 2-YEAR SLIDES TO 4.12% WHILE 10-YEAR HOLDS NEAR 4.49%",
-      "body": "The 2-year Treasury yield eased 6 bps to 4.12% while the 10-year ticked up 1 bp to 4.49%, steepening the curve after June nonfarm payrolls came in at just 57,000 — the smallest gain in four months and well below the 110,000 consensus. FOMC minutes from the June meeting are due Wednesday, with the next decision July 28-29.",
-      "explain": "The 2-year is the more Fed-sensitive maturity because it prices the expected path of the fed funds rate over the policy horizon, so a soft jobs print pulls it down as traders trim hike odds. The 10-year moves more on longer-run growth and inflation expectations and barely budged, which is exactly the signature of a curve-steepening trade: front-end yields fall on dovish repricing while the long end holds, narrowing the 2s10s spread's inversion. That combination — weak labor data plus a 10-year that won't fall — tells you the market still isn't fully convinced inflation is beaten."
+      "cat": "GEOPOLITICS",
+      "headline": "TRUMP REINSTATES HORMUZ BLOCKADE, IMPOSES 20% TRANSIT FEE AS OIL ROCKETS AND STOCKS SELL OFF",
+      "body": "Trump announced the U.S. would reimpose a blockade of the Strait of Hormuz and charge a 20% fee on all cargo shipped through the waterway after the U.S. and Iran traded fresh strikes over the weekend, including hits on energy infrastructure. The news erased hopes of a mid-June de-escalation and sent WTI up 9.4% to $78.14 and Brent up 9.6% to $83.80, while the S&P 500 fell 0.79% to 7,515.34.",
+      "explain": "A 'blockade' shifts the oil market's calculation from a probability-weighted risk premium to something closer to a confirmed supply disruption, which is why crude's reaction (+9%+) dwarfed the equity market's (-0.79%) — oil prices the physical chokepoint directly, while stocks discount it through earnings and multiple effects that take longer to work through. The 20% transit fee functions like a tax on roughly a fifth of global seaborne oil trade, meaning it can add to input costs and headline inflation even without a single barrel failing to reach a buyer."
     },
     {
       "cat": "COMMODITIES",
-      "headline": "GOLD SLIPS TO $4,148 AS DOLLAR FIRMS, WTI STEADY NEAR $69 AFTER OPEC+ OUTPUT HIKE",
-      "body": "Gold retreated 0.41% to $4,148/oz, pulling back from a two-week high as the dollar index firmed to 100.85. WTI crude held near $69/barrel and Brent stayed under $72 after OPEC+ approved a 188,000 barrel-per-day production increase for August, reinforcing expectations of ample supply.",
-      "explain": "Gold's pullback and the dollar's firmness are two sides of the same trade: gold is priced in dollars globally, so any tick up in DXY mechanically raises gold's cost for foreign buyers and compresses demand at the margin. The OPEC+ supply increase works through a separate channel — it directly raises the quantity of crude reaching the market each month, capping upside even with geopolitical premia still embedded in Brent. Together they explain why two traditionally inflation-sensitive assets are both drifting lower even as labor data softens."
+      "headline": "BRENT LOGS BIGGEST ONE-DAY GAIN SINCE 2020, WTI SETTLES AT $78.14 ON HORMUZ BLOCKADE",
+      "body": "Brent crude jumped 9.6% to settle at $83.80 a barrel — its highest close in about a month and its largest one-day percentage gain in more than six years — while WTI rose 9.4% to settle at $78.14. Semiconductor names bore collateral damage: the Philadelphia Semiconductor Index sank as SK Hynix fell 6.1% and Sandisk, Marvell, and Western Digital dropped between 6.5% and 12.3%, extending a global chip selloff.",
+      "explain": "Oil's one-day jump is a 'gap' move — the market had spent two weeks pricing OUT the war premium on diplomatic optimism, so when the blockade was reinstated, the adjustment happened in a single session rather than gradually, which is what produces a move of this size. Semiconductor stocks selling off alongside an oil-driven equity selloff shows how energy shocks propagate into growth-sensitive sectors first: chipmakers carry high fixed costs and long capex cycles, making their valuations unusually sensitive to any rise in the discount rate or slowdown in global growth expectations."
+    },
+    {
+      "cat": "MARKETS",
+      "headline": "S&P 500 SLIDES 0.79%, NASDAQ TUMBLES ON CHIP-SECTOR ROUT AS TRADERS BRACE FOR CPI",
+      "body": "The S&P 500 fell 0.79% to 7,515.34 and the Nasdaq Composite dropped 1.55% to 25,873.18 (the Nasdaq-100 fell roughly 1.7%) as the reignited Iran conflict and a broadening semiconductor selloff overshadowed the coming start of bank earnings season. The Dow held up better, down just 0.26% to 52,498.64, underscoring how concentrated Monday's damage was in tech.",
+      "explain": "The gap between the Dow's 0.26% decline and the Nasdaq's roughly 1.6-1.7% drop is a concentration story: the Dow's price-weighted, industrial-heavy composition insulated it from a selloff concentrated almost entirely in semiconductors and AI-adjacent names, the same stocks that drove most of the index's 2025-26 gains. That divergence is worth tracking into Tuesday's CPI — if the data confirms the Fed's hawkish tilt, the stocks most exposed to higher discount rates are structurally first to reprice."
+    },
+    {
+      "cat": "MACRO",
+      "headline": "TREASURY YIELDS HIT 16-MONTH HIGHS AS OIL SHOCK COLLIDES WITH A FED ALREADY DEBATING A HIKE",
+      "body": "The 2-year Treasury yield rose as much as 4 bps to 4.25% Monday — its highest since February 2025 — and the 10-year climbed to 4.58% (+3 bps) as the weekend's oil shock reinforced bets that the Fed could raise rates before September; futures markets are pricing roughly a 70% probability of a hike, a sharp reversal from the cut expectations that dominated a year ago. Tuesday's June CPI report (core seen +0.2% m/m, +2.8% y/y) now carries extra weight ahead of Fed Chair Kevin Warsh's first congressional testimony Tuesday and Wednesday.",
+      "explain": "The 2-year yield is the market's cleanest proxy for the expected path of Fed policy over the next two years, since it's short enough to be dominated by rate expectations rather than the term premium and long-run growth assumptions baked into the 10-year — that's why it, not the 10-year, hit a fresh cycle high Monday. An oil-driven spike in headline CPI doesn't directly change the Fed's preferred core-inflation target, but it raises the risk that inflation expectations de-anchor, which is precisely the channel a hawkish Fed under Warsh would cite to justify a hike even though a rate increase does nothing to add oil supply."
+    },
+    {
+      "cat": "COMMODITIES",
+      "headline": "GOLD FALLS DESPITE WAR RISK AS RISING REAL YIELDS OVERPOWER SAFE-HAVEN DEMAND",
+      "body": "Gold fell more than 2% to around $4,020 an ounce Monday — a second straight day of losses — even as the Iran conflict escalated, a counterintuitive move that reflects surging Treasury yields and expectations that the Fed's next move could be a hike rather than a cut. The dollar index was essentially flat at 100.93 (-0.02%), meaning gold's drop wasn't a currency story — it was a real-yields story.",
+      "explain": "Gold pays no yield, so its opportunity cost rises directly with real interest rates; when 2-year Treasury yields jump to a 16-month high on hike expectations, holding gold becomes more expensive relative to holding short-term Treasurys, even if the same headlines are geopolitically bullish for the metal. This is the mechanism that separates gold's 'safe-haven' reputation from its actual price behavior: gold tends to rally on crises the Fed is expected to answer with rate cuts, and struggles on crises — like an oil supply shock — that push the Fed toward tightening instead."
     },
     {
       "cat": "MCBB",
-      "headline": "REALIGNED PAC-12 OFFICIALLY LAUNCHES AS TOURNAMENT EXPANSION TO 76 TEAMS TAKES SHAPE",
-      "body": "The rebuilt nine-team Pac-12 — five former Mountain West programs plus Gonzaga and Texas State joining holdovers Oregon State and Washington State — officially began play July 1, while the NCAA confirmed the men's tournament will expand from 68 to 76 teams starting in 2026-27. More than 2,700 players entered the transfer portal in the two-week window after last season, reshaping rosters nationwide."
+      "headline": "KANSAS LANDS NATION'S NO. 1 RECRUIT AS OFFSEASON ROSTER OVERHAUL ACCELERATES ACROSS COLLEGE HOOPS",
+      "body": "Kansas secured a commitment from the nation's top-ranked incoming prospect, while Kentucky added Iowa State transfer forward Milan Momcilovic — this spring's top transfer-portal target — and North Carolina replaced departed center Henri Veesaar with two international signees. More than 2,700 players have moved through the transfer portal since Michigan beat UConn for the national title, an offseason churn rate reshaping preseason rankings before October practice opens."
     },
     {
       "cat": "NBA",
-      "headline": "LEBRON JAMES TELLS LAKERS HE'S LEAVING; L.A. FLIPS AYTON TO WIZARDS A DAY AFTER LANDING KESSLER",
-      "body": "LeBron James informed the Lakers he will play elsewhere in 2026-27, with agent Rich Paul telling ESPN he has now spoken with 27 teams, Cleveland seen as the frontrunner for a return. The Lakers, meanwhile, are reshaping their frontcourt — acquiring center Walker Kessler from Utah, then sending Deandre Ayton to Washington for Jaden Hardy and two future second-round picks a day later."
+      "headline": "AJ DYBANTSA HEADLINES SUMMER LEAGUE AS LEBRON JAMES EXPLORES A LANDING SPOT AFTER LEAVING THE LAKERS",
+      "body": "No. 1 pick AJ Dybantsa is averaging 25 points per game and has his Summer League team to 2-0 in Las Vegas, while No. 2 pick Darryn Peterson has scored 23-plus points in each of his four summer outings. Off the court, LeBron James has informed the Lakers he won't return in 2026-27, with his camp reportedly eyeing the Knicks, 76ers, and Celtics as potential destinations."
     },
     {
       "cat": "NFL",
-      "headline": "TOP 100 PLAYERS REVEAL BEGINS AS LEAGUE SETTLES INTO QUIET PRE-CAMP STRETCH",
-      "body": "The player-voted \"Top 100 Players of 2026\" reveal is rolling out on X and NFL+ as the offseason enters its calmest stretch before training camps open. On the roster front, cornerback Rasul Douglas is finalizing a one-year, up-to-$3.8 million deal with Washington, while most teams lock in report dates for late July."
+      "headline": "SEAHAWKS' RECORD $9.6B SALE HEADLINES A QUIET NFL MONDAY FOCUSED ON TRAINING-CAMP PREP",
+      "body": "The Paul Allen Estate's agreement to sell the Seahawks to a Khosla family-led group for $9.612 billion — an NFL record, roughly 50% above the prior high — continued to dominate league business news, with the deal still needing ratification from at least 24 of the other 31 owners. Elsewhere, the Packers extended linebacker Isaiah McDuffie and teams around the league finalized rookie contracts ahead of training camps opening later this month."
     },
     {
       "cat": "NCAA CFB",
-      "headline": "TRANSFER PORTAL WINDOW EFFECTIVELY CLOSES: PENN STATE'S 40-PLAYER CLASS, LSU AND TEXAS AMONG BIGGEST WINNERS",
-      "body": "College football's condensed transfer window has wound down after two-plus weeks of movement. Penn State's new staff imported nearly two dozen players from Iowa State — headlined by QB Rocco Becht — as part of a roughly 40-player portal class; Lane Kiffin's LSU and Texas, which added Auburn transfer WR Cam Coleman to surround Arch Manning, were also among the most active."
+      "headline": "TRANSFER PORTAL QB MARKET SHIFTS AS $10M MIAMI MOVE AND OKLAHOMA'S JASON WITTEN HIRE RESHAPE ROSTERS",
+      "body": "Duke transfer quarterback Darian Mensah's reported $10 million move to Miami continues to reverberate through ACC title odds, while Oklahoma rebuilt its tight end room with three transfers and hired former NFL tight end Jason Witten as position coach. With the 2026 cycle's portal window having closed back in January, rosters are locked in for fall camp, leaving late-summer buzz focused on NIL valuations — including a reported $4 million deal for the top transfer-portal offensive lineman."
     }
   ],
   "sports": [
     {
       "team": "SEATTLE MARINERS",
-      "pill": "at MIA",
-      "pillClass": "s-up",
-      "detail": "Open a three-game set at Miami tonight (6:40 PM ET) — Bryan Woo vs. Max Meyer — after taking the Toronto series with wins of 11-0 and 4-0 over the weekend. Mariners sit 47-44, 1st in the AL West; tonight's game had not yet started as of this brief."
+      "pill": "W 8-2",
+      "pillClass": "s-w",
+      "detail": "Enter the All-Star break at 48-49 after beating Tampa Bay 8-2 Sunday behind a Randy Arozarena three-run homer. The All-Star Game is Tuesday (8 PM ET, Citizens Bank Park); Seattle returns Friday to open a series vs. the Giants at T-Mobile Park."
     },
     {
       "team": "DETROIT PISTONS",
-      "pill": "SUMMER LEAGUE",
-      "pillClass": "s-up",
-      "detail": "Vegas Summer League opens Thursday (7/9) vs. the 76ers. No. 17 pick Ebuka Okorie (Stanford) headlines the roster alongside 2nd-rounder Ugonna Onyenso and Roddy Gayle Jr., with games against Cleveland (7/12), New York (7/13) and Phoenix (7/15) to follow."
+      "pill": "L 75-86",
+      "pillClass": "s-l",
+      "detail": "Fell to the Knicks 86-75 in Summer League Monday despite 24 points from Chaz Lanier (8-for-13, 3-for-3 from three). Next: Wednesday 7/15, 6 PM ET vs. Suns (ESPNU)."
     },
     {
       "team": "SEATTLE SEAHAWKS",
-      "pill": "OFFSEASON",
+      "pill": "SOLD $9.6B",
       "pillClass": "s-up",
-      "detail": "Defending Super Bowl LX champs open training camp July 25 in Renton (rookies report 7/17, veterans 7/24). The front office promoted Matt Berry and Willie Schneider to assistant GM, and both the team and WR Jaxon Smith-Njigba are up for ESPY Awards."
+      "detail": "The Paul Allen Estate's agreement to sell the franchise to a Khosla family-led group for a record $9.612B still needs ratification from at least 24 of the other 31 owners. Training camp opens July 25 in Renton; Football Fest is Aug. 8 at Lumen Field."
     },
     {
       "team": "WASHINGTON HUSKIES FOOTBALL",
       "pill": "OFFSEASON",
       "pillClass": "s-up",
-      "detail": "RB Jordan Washington is still targeting a late-July return from his spring injury, and WR Justice Williams continues to push for the No. 3 receiver job behind Dezmen Roebuck and Rashid Williams. The Huskies also landed a commitment from Colorado offensive lineman Reis Russell this week."
+      "detail": "Landed a 4-star cornerback commitment, the class's highest-rated pledge, while still chasing a second corner and offensive line help. RB Jordan Washington is targeting a late-July return from his spring injury ahead of fall camp."
     },
     {
       "team": "WASHINGTON HUSKIES BASKETBALL",
       "pill": "OFFSEASON",
       "pillClass": "s-up",
-      "detail": "F Hannes Steinbach went 14th overall to the Hornets in June, the 4th-highest German draft pick in NBA history. Danny Sprinkle continues rebuilding through the portal after losing Zoom Diallo, restocking around 2026 signee Lattimore Ford."
+      "detail": "Added commitments from Croatian forward Boris Tišma and Australian guard Tristan Devers, plus new assistant coach DeAndre Haynes (ex-Marquette). F Hannes Steinbach (14th overall to Charlotte) remains the program's top NBA export as Danny Sprinkle rebuilds after losing Zoom Diallo to the portal."
     }
   ],
   "watchlist": [
-    "FOMC June minutes release Wednesday, July 8",
-    "FOMC meeting July 28-29 — markets still leaning toward a hold after a soft June jobs report",
-    "10Y at 4.49% vs. 2Y at 4.12% — curve steepening on cooling labor data",
-    "SpaceX's Nasdaq-100 inclusion effective today — watch for post-rebalance fade given the ~$4.3B forced-buying overhang",
-    "Mariners open three-game series at Miami tonight, 6:40 PM ET — Woo vs. Meyer"
+    "June CPI report — Tuesday 7/14, 8:30 AM ET; core seen +0.2% m/m, +2.8% y/y, now complicated by the weekend oil shock",
+    "Fed Chair Kevin Warsh's first congressional testimony — House Financial Services Tuesday 7/14, Senate Banking Wednesday 7/15",
+    "MLB All-Star Game — Tuesday 7/14, 8 PM ET, Citizens Bank Park; Mariners return Friday vs. Giants at T-Mobile Park",
+    "Pistons Summer League — Wednesday 7/15, 6 PM ET vs. Suns (ESPNU)",
+    "Seahawks ownership sale — $9.612B agreement needs ratification from at least 24 of 31 other NFL owners"
   ],
   "deepDive": {
-    "title": "Forced Buying: How Nasdaq-100 Inclusion Moves a Stock Before the Fundamentals Do",
+    "title": "The Fed Is Debating a Hike, Not a Cut — Why That Makes Today's Oil Shock Hit Harder",
     "content": [
-      "SpaceX's addition to the Nasdaq-100 today is the cleanest live example of a market mechanic that has nothing to do with earnings, growth, or valuation: passive index inclusion. Fifteen trading days after its record $75 billion IPO, SpaceX is now large enough by market cap to qualify for the benchmark, and JPMorgan estimates that qualification alone forces roughly $4.3 billion of buying from funds that track the index — QQQ and its derivatives chief among them. None of that buying reflects a view on whether SpaceX is worth $162 a share; it happens because the index methodology says the stock belongs in the basket, and funds that promise to track the basket have no discretion to disagree.",
-      "The mechanism works because trillions of dollars now sit in vehicles engineered to hold whatever a benchmark holds, in the same proportion the benchmark holds it. When a committee adds a name, every one of those vehicles must buy shares simultaneously, and because the trade is scheduled and public knowledge weeks in advance, it creates a predictable, price-insensitive spike in demand concentrated around the effective date. Index providers set the date this way deliberately — to give funds an orderly window to trade — but that same predictability is exactly what active traders try to front-run, buying ahead of the flow and selling into it once the passive funds have finished.",
-      "That front-running dynamic is why inclusion so often marks a local top rather than the start of a rally. Palantir and MicroStrategy, the two most-cited prior examples, both saw their shares peak at or just before their respective Nasdaq-100 add dates, then drift lower for months afterward once the mechanical bid disappeared. SpaceX appears to be tracing the same arc already: the stock is down 28% from its post-IPO high of $225, meaning much of today's $4.3 billion in anticipated buying may already be reflected in a price that ran up and cooled before the rebalance even executed.",
-      "The broader lesson for a portfolio built partly around index funds is that benchmark membership is a two-way door with real cash-flow consequences on both sides. A stock's addition creates temporary demand nobody chose freely; its eventual removal — whether from a bankruptcy, an acquisition, or simply falling below the cutoff — creates the mirror-image forced selling. Understanding that inclusion-day pops are a liquidity event, not a valuation signal, is what separates reading a headline like today's from actually knowing whether the stock is a buy at $162."
+      "Monday's tape only makes sense once you drop the assumption that the Fed's next move is a cut. The 2-year Treasury yield jumped as much as 4 bps to 4.25%, its highest since February 2025, right as WTI spiked 9.4% to $78.14 on a reinstated Strait of Hormuz blockade. Futures markets are now pricing roughly a 70% probability of a Fed rate hike before September — a full reversal from the cut-cycle narrative that dominated a year ago. That backdrop is why Tuesday's CPI print and Fed Chair Kevin Warsh's first congressional testimony (House on the 14th, Senate on the 15th) matter more than they would in a normal easing cycle.",
+      "The mechanism runs through which yield moves and why. The 2-year is the market's cleanest read on the expected policy path over the Fed's actual decision horizon, since it carries little term premium and almost no long-run growth speculation — both of which dilute the signal in the 10-year. When 2-year yields hit a cycle high on the same day oil spikes, it means traders think the Fed will treat this as inflationary fuel for a hike, not a demand shock that a cut could offset. Nine of 18 FOMC officials already projected at least one 2026 hike in their dot-plot submissions, and the committee revised its year-end inflation forecast up to 3.6%.",
+      "What most people miss is that a hike doesn't actually fix an oil-driven inflation problem — raising rates doesn't add a single barrel of crude to the market. The Fed's real target is the expectations channel: if households and firms start assuming higher gas prices will persist and get baked into wage and pricing decisions, that's when a supply shock becomes a demand-side inflation problem the Fed can address. This is the same logic that split the FOMC during 1970s oil shocks, when policymakers debated whether tightening into an energy-driven CPI spike would just add a recession on top of a supply problem without curing the inflation.",
+      "That's the lens for reading Tuesday and Wednesday. A hot core CPI print combined with a hawkish Warsh testimony would validate the 70% hike odds already priced in, likely pushing 2-year yields higher still, which is exactly the channel that hit gold Monday — real yields up, opportunity cost of holding a non-yielding asset up, price down, even amid a live war. A softer core print or a more cautious Warsh would do the opposite, and the assets most levered to that surprise — long-duration tech, gold, and the front end of the curve — are the ones to watch first."
     ]
   }
 }
