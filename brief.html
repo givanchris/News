@@ -428,10 +428,9 @@
       margin-top: 0.2rem;
     }
 
-    /* ── SIDEBAR: EDITORIAL + PERSONAL ── */
+    /* ── SIDEBAR: EDITORIAL + SCOREBOARD ── */
     .brief-sidebar {
       padding: 1.75rem 1.5rem 1.75rem 1.75rem;
-      overflow-y: auto;
     }
 
     .sidebar-section-label {
@@ -549,13 +548,34 @@
       white-space: nowrap;
     }
 
-    /* Holdings */
-    .holding-item {
-      padding: 1rem 0;
-      border-bottom: 1px solid rgba(255,255,255,0.06);
+    /* Holdings — full-width section below the news/sidebar columns */
+    .brief-holdings-section {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 2rem 2.5rem 2.5rem;
+      border-top: 1px solid var(--navy3);
     }
 
-    .holding-item:last-child { border-bottom: none; }
+    #brief-holdings {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0 2.5rem;
+    }
+
+    .holding-item {
+      padding: 1rem 1.25rem;
+      background: rgba(0,0,0,0.15);
+      border: 1px solid var(--navy3);
+      border-radius: 4px;
+      margin-bottom: 1.25rem;
+    }
+
+    @media (max-width: 900px) {
+      #brief-holdings { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 560px) {
+      #brief-holdings { grid-template-columns: 1fr; }
+    }
 
     .holding-top {
       display: flex;
@@ -936,11 +956,14 @@
       <div class="sidebar-section-label">Scoreboard</div>
       <div id="brief-sports"><p class="brief-no-data">—</p></div>
       <div id="brief-sports-headlines"></div>
-
-      <div class="sidebar-section-label" style="margin-top:1.5rem;">Holdings</div>
-      <div id="brief-holdings"><p class="brief-no-data">Loading…</p></div>
     </div>
 
+  </div>
+
+  <!-- HOLDINGS: full-width, below the news/sidebar columns -->
+  <div class="brief-holdings-section">
+    <div class="sidebar-section-label">Holdings</div>
+    <div id="brief-holdings"><p class="brief-no-data">Loading…</p></div>
   </div>
 
   <!-- WATCHLIST BAR (below both columns) -->
@@ -1264,6 +1287,8 @@
   var THESIS = {
     MRVL:  'Custom AI silicon and data-center networking; ASIC design wins with major hyperscalers position it as the NVIDIA alternative at the chip level.',
     AVGO:  'Dominant AI networking (Ethernet switching) and custom ASIC revenue; arguably the largest slice of AI chip spend outside of NVIDIA.',
+    NVDA:  'The default compute layer for AI training and inference; CUDA lock-in and a multi-generation product roadmap keep it years ahead of any challenger.',
+    PLTR:  'Government and enterprise AI/data platform with rare land-and-expand economics; AIP adoption is converting pilot programs into multi-year contracts.',
     GOOG:  'Unmatched data moat and distribution; Gemini AI integration across Search, Cloud, and Workspace makes the ad machine more durable, not less.',
     ALAB:  'Purpose-built PCIe/CXL connectivity for AI servers; every incremental GPU added to a cluster is another Astera Labs socket.',
     AMAT:  'Deposition and etch equipment duopoly — every advanced AI chip, regardless of fab or designer, requires Applied Materials tools to manufacture.',
@@ -1275,11 +1300,13 @@
     LEU:   'Only US-based commercial uranium enricher; as AI data centers contract for nuclear power, domestic fuel supply becomes a strategic asset.',
     CRWV:  'Purpose-built GPU cloud for AI training and inference; the primary hyperscaler alternative with locked-in demand from major AI labs.',
     'MOG.A': 'Precision motion systems for defense and aerospace; rearmament spending and defense modernization are secular tailwinds that compound quietly.',
-    SOLS:  'Power infrastructure specifically serving data-center and industrial energy demand; a direct pick-and-shovel play on the AI energy buildout.',
     VELO:  'Lidar sensors for autonomous vehicles and industrial robotics; positioned early in an AV/robotics adoption curve that is beginning to inflect.',
     ZBRA:  'Enterprise tracking hardware and software for warehouses; AI-driven supply-chain automation upgrades are pulling forward replacement cycles.',
     NOW:   'Workflow automation platform with AI deeply integrated via Now Assist; best-in-class enterprise stickiness and pricing power as AI spending shifts to productivity.',
     GRPN:  'Deep-value turnaround with new lean management and marketplace restructuring; asymmetric upside if the business stabilizes at even a fraction of prior scale.',
+    HOOD:  'Retail brokerage riding the equities/crypto/options trading boom while expanding into banking and prediction markets; a direct call option on retail engagement.',
+    META:  'AI-driven ad targeting gains are already showing up in engagement and pricing, while Reality Labs and open-source Llama models seed the next platform.',
+    IBM:   'Enterprise hybrid-cloud and consulting incumbent monetizing AI adoption through watsonx and its Red Hat installed base without the hyperscaler capex bill.',
     BTC:   'Scarce digital asset with accelerating institutional adoption and sovereign-level interest; macro hedge and long-duration store of value in a structurally inflationary world.'
   };
 
