@@ -428,13 +428,9 @@
       margin-top: 0.2rem;
     }
 
-    /* ── SIDEBAR: EDITORIAL + PERSONAL ── */
+    /* ── SIDEBAR: EDITORIAL + SCOREBOARD ── */
     .brief-sidebar {
       padding: 1.75rem 1.5rem 1.75rem 1.75rem;
-      overflow-y: auto;
-      position: sticky;
-      top: 76px;
-      max-height: calc(100vh - 76px);
     }
 
     .sidebar-section-label {
@@ -552,13 +548,34 @@
       white-space: nowrap;
     }
 
-    /* Holdings */
-    .holding-item {
-      padding: 1rem 0;
-      border-bottom: 1px solid rgba(255,255,255,0.06);
+    /* Holdings — full-width section below the news/sidebar columns */
+    .brief-holdings-section {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 2rem 2.5rem 2.5rem;
+      border-top: 1px solid var(--navy3);
     }
 
-    .holding-item:last-child { border-bottom: none; }
+    #brief-holdings {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0 2.5rem;
+    }
+
+    .holding-item {
+      padding: 1rem 1.25rem;
+      background: rgba(0,0,0,0.15);
+      border: 1px solid var(--navy3);
+      border-radius: 4px;
+      margin-bottom: 1.25rem;
+    }
+
+    @media (max-width: 900px) {
+      #brief-holdings { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 560px) {
+      #brief-holdings { grid-template-columns: 1fr; }
+    }
 
     .holding-top {
       display: flex;
@@ -823,7 +840,7 @@
       .mkt-strip-header { padding: 0.6rem 1.25rem 0; }
       .brief-body { grid-template-columns: 1fr; }
       .brief-main { padding: 1.5rem 1.25rem 2rem; border-right: none; border-bottom: 1px solid var(--navy3); }
-      .brief-sidebar { padding: 1.25rem; position: static; max-height: none; }
+      .brief-sidebar { padding: 1.25rem; }
       .brief-watch { padding: 1rem 1.25rem; gap: 1rem; }
       .deep-dive-inner { padding: 3rem 1.25rem; grid-template-columns: 1fr; }
       .deep-dive-left { position: static; }
@@ -939,11 +956,14 @@
       <div class="sidebar-section-label">Scoreboard</div>
       <div id="brief-sports"><p class="brief-no-data">—</p></div>
       <div id="brief-sports-headlines"></div>
-
-      <div class="sidebar-section-label" style="margin-top:1.5rem;">Holdings</div>
-      <div id="brief-holdings"><p class="brief-no-data">Loading…</p></div>
     </div>
 
+  </div>
+
+  <!-- HOLDINGS: full-width, below the news/sidebar columns -->
+  <div class="brief-holdings-section">
+    <div class="sidebar-section-label">Holdings</div>
+    <div id="brief-holdings"><p class="brief-no-data">Loading…</p></div>
   </div>
 
   <!-- WATCHLIST BAR (below both columns) -->
