@@ -1,105 +1,105 @@
 {
-  "lastUpdated": "2026-07-09T16:38:47-06:00",
+  "lastUpdated": "2026-07-14T16:39:26-06:00",
   "market": {
-    "sp500":  { "price": "7,544",   "change": "+0.81%",  "dir": "up"   },
-    "nasdaq": { "price": "29,674",  "change": "+1.44%",  "dir": "up"   },
-    "yield":  { "price": "4.58%",   "change": "+1 bp",   "dir": "up"   },
-    "wti":    { "price": "$72.64",  "change": "-1.2%",   "dir": "down" },
-    "gold":   { "price": "$4,106",  "change": "+1.4%",   "dir": "up"   },
-    "dxy":    { "price": "100.95",  "change": "-0.1%",   "dir": "down" }
+    "sp500":  { "price": "7,543.59", "change": "+0.38%",  "dir": "up"   },
+    "nasdaq": { "price": "29,578",   "change": "+1.07%",  "dir": "up"   },
+    "yield":  { "price": "4.58%",    "change": "-2 bps",  "dir": "down" },
+    "wti":    { "price": "$79.56",   "change": "+2.0%",   "dir": "up"   },
+    "gold":   { "price": "$4,092",   "change": "+1.4%",   "dir": "up"   },
+    "dxy":    { "price": "100.74",   "change": "-0.5%",   "dir": "down" }
   },
   "stories": [
     {
-      "cat": "MARKETS",
-      "headline": "S&P 500 CLIMBS TO 7,544 AS CHIP STOCKS LEAD BROAD RALLY DESPITE IRAN ESCALATION",
-      "body": "The S&P 500 gained 0.81% to close around 7,544 and the Nasdaq-100 jumped 1.44% to roughly 29,674, led by a semiconductor rebound — Micron rose about 4.5% after unveiling a $250 billion U.S. plant-spending plan tied to AI demand, and SanDisk popped roughly 7.6% — as investors looked past a second straight day of U.S. strikes on Iran.",
-      "explain": "Chipmakers carry outsized index weight and function as the market's clearest read on AI capex durability, so a company-specific catalyst like Micron's spending plan can outweigh a macro shock that hasn't yet hit hard data. The muted equity reaction to renewed Iran strikes reflects a market pricing 'geopolitical risk that hasn't disrupted physical supply' very differently from a shock that actually cuts off barrels — which is exactly why oil moved the opposite direction today. Sector-specific good news dominating an unrealized macro risk is why the index rose even as the headlines read alarming."
+      "cat": "MACRO",
+      "headline": "JUNE CPI POSTS BIGGEST MONTHLY DROP SINCE 2020, SENDING S&P 500 TO 7,543.59 AND YIELDS LOWER",
+      "body": "Headline CPI fell 0.4% in June — the largest one-month decline since April 2020 — pulling the annual rate to 3.5% versus the 3.8% economists expected, as energy prices dropped 5.7%. The S&P 500 rose 0.38% to 7,543.59 and the Nasdaq-100 jumped 1.07% to roughly 29,578, led by a semiconductor rally in SK Hynix and Micron, while the 10-year Treasury yield fell 2 basis points to 4.58% and the 2-year slid 7 basis points to about 4.19%.",
+      "explain": "CPI measures the average price level households paid during June, so a sharp drop in the energy component — gasoline and utility costs that had already been falling from their spring peak — mechanically pulls the headline number down even though core inflation (ex-food and energy) was flat, not negative. The bigger 2-year yield move versus the 10-year reflects that short rates track the Fed's near-term policy path most directly, so traders read a cooler print as reducing hike odds at the July 29 FOMC meeting, while the 10-year's smaller decline shows longer-run inflation expectations barely budged. That gap is also why this print is backward-looking: it can't capture the oil spike that hit later the same day, which is exactly today's Deep Dive."
     },
     {
       "cat": "GEOPOLITICS",
-      "headline": "OIL SLIDES DESPITE SECOND DAY OF U.S. STRIKES ON IRAN AS TRADERS FADE THE WAR-RISK PREMIUM",
-      "body": "WTI crude fell 1.2% to $72.64 and Brent dropped 1.3% to $76.99 even as the U.S. carried out a second consecutive day of strikes on Iran and Tehran retaliated against targets in Kuwait and Bahrain, extending the standoff that began when President Trump declared Tuesday's ceasefire 'over.'",
-      "explain": "Oil prices had already spiked more than 5% earlier this week pricing in the risk of a Strait of Hormuz disruption; today's decline is the market partly unwinding that premium because no tankers have actually been seized and flow through the Strait continues uninterrupted. Traders distinguish between a headline shock and an actual barrel lost — the former reprices instantly and can fade just as fast if the feared disruption doesn't materialize, which is precisely what's happening here even as the conflict itself intensifies. See today's Deep Dive for the full mechanism."
+      "headline": "OIL JUMPS TO A ONE-MONTH HIGH AS U.S. REIMPOSES A HORMUZ BLOCKADE AND IRAN STRIKES TWO UAE TANKERS",
+      "body": "Brent crude settled up 1.72% at $84.73 a barrel after trading as high as $87 intraday, and WTI rose about 2.0% to $79.56, after the U.S. launched fresh airstrikes on Iran and reimposed a blockade on Iranian ports and coastal areas at 4 p.m. ET. Iran retaliated by striking two Abu Dhabi National Oil Company tankers transiting the Strait of Hormuz, killing one mariner; separately, Trump dropped his earlier proposal for a 20% U.S.-military-protection toll on ships crossing the strait.",
+      "explain": "The Strait of Hormuz carries roughly a fifth of global oil flow, so any strike that damages an actual tanker — rather than just threatening one — forces traders to reprice the probability of a sustained supply disruption rather than a symbolic escalation, which is why oil jumped more sharply today than during earlier rounds of this conflict. Brent, the global benchmark loaded via tankers that would transit Hormuz, is more directly exposed to a chokepoint closure than WTI, which is largely landlocked U.S. pipeline crude — a structural reason Brent has been outpricing WTI through this escalation. Watch tanker insurance rates and actual transit volumes, not just headlines, to see whether this premium sticks or fades like the earlier scare."
+    },
+    {
+      "cat": "EARNINGS",
+      "headline": "IBM CRATERS 25% IN ITS WORST DAY EVER AFTER A SECOND-QUARTER REVENUE WARNING TIED TO ITS NEW MAINFRAME",
+      "body": "IBM shares plunged roughly 25% — surpassing its prior record decline of 23.7% from October 19, 1987 — after preliminary Q2 results missed expectations, with adjusted EPS of $2.93 on $17.2 billion in revenue versus consensus of $3.01 and $17.86 billion. Management pointed to a shortfall in its software and infrastructure business tied to the rollout of its new z17 mainframe, as clients shifted late-June capex toward servers, storage, and memory to lock in supply-constrained AI infrastructure ahead of expected price increases.",
+      "explain": "A pre-announced 'shortfall' before the official earnings date signals management has enough visibility into the quarter's numbers to know a miss is coming and would rather get ahead of it than let a surprise land on the scheduled report date — that urgency itself is a negative signal independent of the numbers. The mechanism here is a capex-timing reallocation, not lost demand: enterprise clients diverted dollars earmarked for IBM's z17 mainframes toward AI-adjacent hardware they feared would get more expensive or supply-constrained, meaning the revenue may show up in a future quarter rather than vanishing outright. That distinction is why the stock cratered on the miss itself rather than any read-through to broader enterprise IT demand, which is a big reason the Nasdaq-100 still closed up over 1% the same day."
     },
     {
       "cat": "COMMODITIES",
-      "headline": "GOLD REBOUNDS OFF ONE-WEEK LOW AS THE DOLLAR SOFTENS",
-      "body": "Gold rose roughly 1.4% to about $4,106/oz, clawing back from Wednesday's one-week low near $4,030-4,050, as the dollar index eased to 100.95 (-0.1%) even with Fed policy still skewing hawkish after Tuesday's minutes.",
-      "explain": "Gold and the dollar are usually inversely linked because a weaker dollar makes gold cheaper for foreign buyers and lowers the opportunity cost of holding a non-yielding asset priced in dollars. That today's bounce tracked the dollar's dip rather than the still-escalating Iran conflict suggests gold is currently trading on rates and FX flows more than on safe-haven demand — the same conflict that's moving oil didn't budge gold until the dollar cracked, a useful tell for which driver is actually in the price."
-    },
-    {
-      "cat": "MACRO",
-      "headline": "TREASURY CURVE STEEPENS AS 10-YEAR CLIMBS TO 4.58% AND 2-YEAR SLIPS TO 4.19% AHEAD OF NEXT WEEK'S CPI",
-      "body": "The 10-year Treasury yield ticked up 1 basis point to 4.58% while the 2-year fell 4 basis points to 4.19%, widening the 10s2s spread to roughly 39 basis points as traders position ahead of the July 14 CPI report and the July 29 FOMC decision, with futures markets currently pricing close to zero probability of a 2026 rate cut.",
-      "explain": "The 2-year yield tracks the expected Fed policy path most directly, so its decline signals traders leaning toward no further hikes near-term, while the 10-year is more sensitive to longer-run growth and inflation expectations plus term premium, so its rise reflects persistent unease about inflation staying sticky over the cycle. A curve steepening this way — short end down, long end up — is the market separating 'what the Fed does at the next meeting' from 'where inflation settles over the next several years,' the same ambiguity Kevin Warsh's withheld dot plot created in Tuesday's minutes."
+      "headline": "GOLD CLIMBS TOWARD $4,090 AS A SOFTER DOLLAR AND HORMUZ RISK COMPOUND",
+      "body": "Gold rose roughly 1.4% to about $4,092 an ounce, rebounding from Monday's 2.9% slide to a one-week low near $4,001, as the dollar index dropped about 0.5% to 100.74 on the cooler CPI print and Iran-driven safe-haven demand added a second tailwind.",
+      "explain": "Gold is getting a rare double push today: a weaker dollar mechanically makes gold cheaper for foreign buyers and lowers the opportunity cost of holding a non-yielding asset as rate-cut odds rise, while the Hormuz escalation is pulling in safe-haven flows independent of the dollar move. When both drivers point the same direction the price response tends to be larger than either alone would produce, which is part of why gold's rebound today outpaced Monday's slide in percentage terms. The tell for which driver dominates going forward is whether gold keeps rising if the dollar stabilizes — that would mean geopolitical risk, not rates, is now doing the driving."
     },
     {
       "cat": "MCBB",
-      "headline": "DUKE ENTERS 2026-27 AS A PRESEASON FAVORITE AS THE FIRST LIVE RECRUITING PERIOD OPENS",
-      "body": "Analysts remain high on Duke heading into 2026-27 after an Elite Eight loss to UConn ended last season, with the Blue Devils returning three starters from a No. 1 overall seed team and adding transfer portal guard John Blackwell from Wisconsin. Separately, the first live recruiting evaluation period for college coaches opened today and runs through Sunday, ahead of the Nike Peach Jam event July 16-19."
+      "headline": "NCAA MEN'S TOURNAMENT WILL EXPAND TO 76 TEAMS FOR 2026-27 AS RECRUITING RESHUFFLES THE TOP CLASSES",
+      "body": "The NCAA confirmed the Division I men's basketball tournament will grow from 68 to 76 teams starting in 2026-27, with the women's tournament expanding the same way. On the recruiting trail, Texas jumped into the top-five class rankings after 6-foot-10 forward Marcus Spears reclassified from 2027 to sign with the Longhorns over Arizona, LSU and Kentucky, while Kansas landed the 2026 class' top overall prospect, guard Tyran Stokes."
     },
     {
       "cat": "NBA",
-      "headline": "NBA SUMMER LEAGUE TIPS OFF IN VEGAS AS THE WARRIORS EMERGE AS FRONTRUNNERS FOR LEBRON JAMES",
-      "body": "The 21st annual NBA Summer League opened today in Las Vegas with seven games across Prime, ESPN and ESPN2, an 11-day, 76-game showcase running through a July 19 championship game. Off the court, LeBron James — who told the Lakers he won't return for 2026-27 after eight seasons in Los Angeles — is drawing pursuit from the Golden State Warriors as he chases an unprecedented 24th NBA season."
+      "headline": "GRIZZLIES TRADE JA MORANT TO THE TRAIL BLAZERS AS SUMMER LEAGUE ROLLS ON IN VEGAS",
+      "body": "Former All-Star guard Ja Morant is headed from Memphis to Portland in a trade, one of the offseason's biggest moves, while the Wizards are finalizing a three-year, $17.6 million sign-and-trade deal for wing Khris Middleton. In Las Vegas, the Rockets held the 76ers to 31.1% shooting in a 90-64 win to open Tuesday's Summer League slate, and No. 4 pick Caleb Wilson threw down a highlight-reel dunk for New Orleans."
     },
     {
       "cat": "NFL",
-      "headline": "WASHINGTON TO RETIRE JOHN RIGGINS' NO. 44 IN WEEK 9 AS TRAINING CAMPS LOOM LEAGUE-WIDE",
-      "body": "Washington announced it will retire Hall of Fame running back John Riggins' No. 44 during its Week 9 game against the Rams, honoring the Super Bowl XVII MVP who rushed for 166 yards and the game-winning score on 38 carries. Elsewhere, Cardinals QB Jacoby Brissett — amid a contract dispute while set to make $5.44 million in 2026 — posted himself working out with Arizona teammates, a signal he intends to be ready for camp."
+      "headline": "SEAHAWKS SALE TO THE KHOSLA FAMILY VALUED AT AN NFL-RECORD $9.612 BILLION AWAITS OWNER VOTE",
+      "body": "The Estate of Paul G. Allen agreed to sell the Super Bowl-champion Seattle Seahawks to a group led by the Khosla family for a reported $9.612 billion, shattering the prior NFL record of $6.05 billion paid for the Washington Commanders in 2023. The deal needs approval from at least 24 of the NFL's 32 owners at a special meeting expected in late August, and requires the Khosla family to divest its existing minority stake in the San Francisco 49ers."
     },
     {
       "cat": "NCAA CFB",
-      "headline": "DEION SANDERS RESHAPES COLORADO'S ROSTER THROUGH THE PORTAL AFTER A 3-9 SEASON, HEADLINED BY WR DEANDRE MOORE JR.",
-      "body": "Fresh off a 3-9 finish, Colorado head coach Deion Sanders returned to the transfer portal to reload the Buffaloes' roster, with former Texas wide receiver DeAndre Moore Jr. rated the class' biggest addition. Nationally, LSU built the portal cycle's top-rated class by landing the No. 1 quarterback Sam Leavitt and heir apparent Husan Longstreet from USC, while Texas added multiple immediate-impact transfers in the sport's first winter-only portal cycle."
+      "headline": "LSU HEADLINES THE TRANSFER PORTAL CYCLE WITH EIGHT TOP-100 SIGNEES AS THE WINDOW CLOSES",
+      "body": "College football's transfer portal window for 2026 has effectively closed, with LSU signing eight of ESPN's top 100 transfer prospects under new coach Lane Kiffin, including the No. 1-ranked tackle Jordan Seaton and edge rusher Princewill Umanmielen. Penn State's new coaching staff brought nearly 40 transfers from Iowa State, while Colorado's Deion Sanders rebuilt a 3-9 roster around Texas wide receiver transfer DeAndre Moore Jr."
     }
   ],
   "sports": [
     {
-      "team": "SEATTLE MARINERS",
-      "pill": "L 2-0",
-      "pillClass": "s-l",
-      "detail": "Dropped Wednesday's series finale 2-0 to Miami — Kyle Stowers homered and Tyler Phillips held Seattle to four hits over five innings — falling to 47-46 but still atop the AL West. Back in action Friday at Miami."
+      "team": "SEATTLE SEAHAWKS",
+      "pill": "$9.6B SALE",
+      "pillClass": "s-up",
+      "detail": "Agreed to be sold to the Khosla family for an NFL-record $9.612 billion, pending a late-August owner vote. RB Zach Charbonnet is 'progressing well' from his torn ACL ahead of a late-July checkup. Training camp public practices begin July 25 in Renton."
     },
     {
       "team": "DETROIT PISTONS",
-      "pill": "IN PROGRESS",
-      "pillClass": "s-up",
-      "detail": "Opened Vegas Summer League today vs. Philadelphia at Cox Pavilion (5:30 PM ET tip); Detroit trailed 25-30 after the first quarter as No. 17 overall pick Ebuka Okorie made his pro debut. Final score wasn't available as of this brief. Next: vs. Cleveland Sunday 7/12."
+      "pill": "L 75-86",
+      "pillClass": "s-l",
+      "detail": "Fell to the Knicks 86-75 in Vegas Summer League Monday — Chaz Lanier led Detroit with 24 points on 8-for-12 shooting from three. Detroit is 2-3 in the tournament after beating Cleveland 103-94 two days earlier. Next: vs. Suns, Wednesday 7/15, 6 PM ET, the Pistons' Summer League finale."
     },
     {
-      "team": "SEATTLE SEAHAWKS",
-      "pill": "OFFSEASON",
+      "team": "SEATTLE MARINERS",
+      "pill": "ALL-STAR BREAK",
       "pillClass": "s-up",
-      "detail": "Two ownership groups have emerged as frontrunners to buy the team — one with Celtics minority owner Aditya Mittal and former Celtics governor Wyc Grousbeck, the other led by 49ers investor Vinod Khosla — with the sale expected to fetch $8-10B+. Training camp opens July 24 in Renton with public practices starting July 25; the 2026 draft class is fully signed after Jadarian Price's deal, and ESPN ranked Seattle's roster No. 3 overall league-wide."
+      "detail": "Enter the break at 48-49 — a Wild Card spot, one game behind AL West-leading Texas (49-47) — after snapping a five-game skid with an 8-2 win over Tampa Bay Saturday. LF Randy Arozarena represents Seattle at tonight's All-Star Game in Philadelphia (8 PM ET). Regular season resumes this weekend."
     },
     {
       "team": "WASHINGTON HUSKIES FOOTBALL",
       "pill": "OFFSEASON",
       "pillClass": "s-up",
-      "detail": "UW is in the running for a cornerback and a pair of offensive linemen and landed a commitment from Colorado lineman Reis Russell. RB Jordan Washington is still targeting a late-July return from a spring injury as Jedd Fisch enters year three at the helm."
+      "detail": "RB Jordan Washington remains on track for a late-July return from the spring injury that carted him off the practice field. Jedd Fisch enters year three with a Big Ten slate featuring road trips to USC, Purdue, Nebraska, Michigan State and Oregon; the season opens September 5 at home against Washington State in the Apple Cup."
     },
     {
       "team": "WASHINGTON HUSKIES BASKETBALL",
       "pill": "OFFSEASON",
       "pillClass": "s-up",
-      "detail": "F Hannes Steinbach went 14th overall to the Hornets in June, the 4th-highest German draft pick in NBA history. Danny Sprinkle continues rebuilding through the portal after losing Zoom Diallo; it's the dead of summer for the program with most activity centered on recruiting."
+      "detail": "UW is one of four finalists for 5-star guard Dylan Mingo as Danny Sprinkle rebuilds through the portal following Zoom Diallo's departure. International signee Nikola Dzepina has joined the program; F Hannes Steinbach, the 14th pick in June's NBA Draft, begins his rookie season with Charlotte."
     }
   ],
   "watchlist": [
-    "July 14 CPI report — next major inflation print ahead of the July 29 FOMC decision; futures currently price near-zero odds of a 2026 rate cut",
-    "July 29 FOMC rate decision, with June PCE data following July 30",
-    "Strait of Hormuz — U.S.-Iran strikes into a second day; watch whether tanker traffic is actually disrupted or the war-risk premium keeps fading",
-    "Mariners at Marlins, Friday 7/10, loanDepot Park",
-    "Pistons Summer League continues Sunday 7/12 vs. Cavaliers, Cox Pavilion"
+    "July 29 FOMC rate decision — 2-year yield fell 7 bps to 4.19% today on cooler CPI, now pricing higher odds of a pause or cut",
+    "Strait of Hormuz — U.S. blockade and tanker strikes escalating; watch insurance rates and transit volumes for whether the oil premium sticks",
+    "IBM Q2 earnings call — official report date still pending after today's 25% pre-announcement plunge",
+    "MLB All-Star Game tonight, 8 PM ET, Citizens Bank Park — Mariners' Randy Arozarena on the AL roster",
+    "Pistons Summer League finale vs. Suns, Wednesday 7/15, 6 PM ET"
   ],
   "deepDive": {
-    "title": "Why Oil Fell While the Bombs Kept Falling: Anatomy of a War-Risk Premium",
+    "title": "The CPI Time Lag: Why Cooling June Inflation and a Surging July Oil Shock Aren't a Contradiction",
     "content": [
-      "Today's brief contains an apparent contradiction: the U.S. struck Iran for a second straight day, Iran hit back at targets in Kuwait and Bahrain, and yet WTI crude fell 1.2% to $72.64 while Brent dropped 1.3% to $76.99. If the conflict is getting worse, why is the commodity most exposed to it getting cheaper? The answer lies in how oil markets actually price geopolitical risk — not as a binary bet on whether a war is happening, but as a continuously updated probability distribution over how much physical supply that war will actually remove from the market, which is a very different question from how alarming the headlines sound.",
-      "Every oil price can be decomposed into a fundamental value — what crude would cost given current supply, demand, and inventories — plus a risk premium reflecting the market's probability-weighted expectation of future disruption. When Trump declared the ceasefire 'over' this week, that premium spiked hard because traders priced in a real chance the Strait of Hormuz, which carries roughly a fifth of global oil flow, could see tanker seizures or a shutdown. Today's decline doesn't mean the war stopped; it means the specific disruption scenario embedded in Tuesday's spike hasn't materialized — no tankers seized, no chokepoint closed — so the market is recalibrating the probability downward even as the underlying conflict continues.",
-      "This is exactly the pattern from September 2019, when a drone and missile strike knocked out roughly half of Saudi Arabia's oil production overnight and Brent spiked nearly 15% in a single day — the largest one-day jump on record. Yet within weeks, prices had round-tripped most of that move once Saudi Aramco restored output faster than traders expected, proving the spike had been almost entirely risk premium rather than a repriced fundamental. Contrast that with the 1973 oil embargo, where Arab producers actually cut exports to the U.S. and allies for months — prices stayed structurally elevated for over a year because the supply loss was real and sustained, not just feared. The difference between a premium that decays in days and one that persists for years is whether barrels actually stop moving.",
-      "For the next few weeks, that distinction matters directly for the Fed setup already in this brief. If oil settles near today's levels without further escalation, the energy component of July 14's CPI print carries limited upside pressure, reinforcing the near-zero rate-cut odds currently priced rather than adding a fresh inflation scare that could revive hike talk. But if the Strait actually closes or a major producer's output is knocked offline, the repricing would be instant and would hit the same 10-year yield and dollar index that moved today — the tell to watch isn't the next headline out of Tehran, it's whether tanker transit data and insurance rates for Hormuz shipping actually move."
+      "Today's brief holds two facts that look like they should cancel each other out: the June CPI report showed prices fell 0.4% — the sharpest monthly drop since the pandemic — while WTI and Brent crude simultaneously jumped on a fresh U.S.-Iran escalation and a reimposed Hormuz blockade. If oil is a major input into the price of everything from gasoline to shipping, how can inflation be cooling and an oil shock be happening on the very same day? The answer is that CPI is a rearview mirror, not a live feed: the number released this morning describes prices households actually paid during the four weeks of June, a period that ended two weeks before today's tanker strikes and blockade even occurred.",
+      "The Bureau of Labor Statistics builds the CPI by sending price checkers and collecting receipts across a full calendar month, then publishes the result with roughly a two-week lag. June's energy index fell 5.7% because oil had been drifting lower through most of that month — nothing in today's report reflects the escalation that began in the report's final days and accelerated well after the survey window closed. Core CPI, which strips out food and energy specifically because those categories are volatile and geopolitically reactive, was flat in June, which is arguably the more useful read on underlying inflation trend precisely because it isn't distorted by a single month's oil swing in either direction.",
+      "This lag matters because markets don't wait for the data to catch up — they price expectations forward through instruments like TIPS breakevens and oil futures curves, which is why WTI and Brent moved within hours of the blockade news while CPI won't reflect any of it until the July report releases in mid-August. The 1990 Gulf War is the classic case study: oil spiked over 100% in the months after Iraq invaded Kuwait, but headline CPI didn't fully capture the inflationary hit until two to three months later, by which point the Fed was already behind the curve on a shock that markets had priced almost immediately. The lag isn't a flaw in the CPI methodology — it's an inherent feature of measuring realized prices rather than expected ones, and it's exactly why the Fed increasingly leans on market-based and survey-based inflation expectations alongside the official print.",
+      "For the July 29 FOMC meeting, this means today's cooler CPI print is genuine near-term relief — it's why the 2-year yield fell 7 basis points, the most Fed-sensitive maturity, more than the 10-year's 2 basis points — but it is not a clean read on where inflation is headed if Hormuz stays disrupted through July. If tanker traffic keeps falling and oil holds near today's levels into month-end, the energy component of the July CPI report, due in mid-August, could reverse sharply higher, arriving right as markets are digesting whatever the Fed decides on July 29 with only the stale June data in hand. The gap between what CPI says today and what oil markets are pricing right now is the exact spread investors get paid to trade — and exactly what the Fed has to guess at three weeks before the actual data can confirm it either way."
     ]
   }
 }
