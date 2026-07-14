@@ -23,12 +23,14 @@ WEIGHTS_URL = "https://api.github.com/repos/givanchris/News/contents/data/portfo
 
 FALLBACK_TICKERS = [
     "ALAB", "MRVL", "AMAT", "ASML", "COHR", "GOOG", "HUBB", "CEG",
-    "TCEHY", "NOW", "MOG.A", "CRWV", "HOOD", "LEU", "ZBRA", "GRPN", "BTC", "SOLS",
+    "TCEHY", "NOW", "MOG.A", "CRWV", "HOOD", "LEU", "ZBRA", "GRPN", "BTC",
 ]
 
 NAMES = {
     "MRVL":  "Marvell Technology",
     "AVGO":  "Broadcom",
+    "NVDA":  "NVIDIA",
+    "PLTR":  "Palantir Technologies",
     "GOOG":  "Alphabet",
     "ALAB":  "Astera Labs",
     "AMAT":  "Applied Materials",
@@ -45,7 +47,8 @@ NAMES = {
     "ZBRA":  "Zebra Technologies",
     "NOW":   "ServiceNow",
     "GRPN":  "Groupon",
-    "HOOD":  "Robinhood Markets",
+    "META":  "Meta Platforms",
+    "IBM":   "IBM",
     "BTC":   "Bitcoin",
 }
 
