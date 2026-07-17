@@ -22,8 +22,8 @@ PAT = os.environ.get("GITHUB_PAT", "")
 WEIGHTS_URL = "https://api.github.com/repos/givanchris/News/contents/data/portfolio_weights.json"
 
 FALLBACK_TICKERS = [
-    "ALAB", "MRVL", "AMAT", "ASML", "COHR", "GOOG", "HUBB", "CEG",
-    "TCEHY", "NOW", "MOG.A", "CRWV", "HOOD", "LEU", "ZBRA", "GRPN", "BTC",
+    "ALAB", "MRVL", "AMAT", "ASML", "COHR", "GOOG", "NVDA", "PLTR", "CEG",
+    "TCEHY", "MOG.A", "HOOD", "LEU", "ZBRA", "GRPN", "META", "BTC",
 ]
 
 NAMES = {
