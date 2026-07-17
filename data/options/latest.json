@@ -1,11 +1,11 @@
 {
-  "as_of": "2026-07-17T01:15:48-06:00",
+  "as_of": "2026-07-17T02:15:46-06:00",
   "is_mock": false,
   "market": {
     "vix": {
-      "value": 16.73,
-      "change": 1.06,
-      "change_pct": 6.76
+      "value": 17.98,
+      "change": 1.25,
+      "change_pct": 7.47
     },
     "vix_term_structure": [
       {
@@ -14,7 +14,7 @@
       },
       {
         "label": "VIX",
-        "value": 16.73
+        "value": 17.98
       },
       {
         "label": "VIX3M",
@@ -32,7 +32,7 @@
         "price": 750.72,
         "change": -4.09,
         "change_pct": -0.54,
-        "pc_volume": 1.1797,
+        "pc_volume": 1.1801,
         "pc_oi": 0.0,
         "sentiment": "neutral"
       },
@@ -42,7 +42,7 @@
         "price": 705.94,
         "change": -11.8,
         "change_pct": -1.64,
-        "pc_volume": 1.3527,
+        "pc_volume": 1.3564,
         "pc_oi": 0.0,
         "sentiment": "bearish"
       },
@@ -52,13 +52,13 @@
         "price": 295.59,
         "change": -0.18,
         "change_pct": -0.06,
-        "pc_volume": 2.2518,
-        "pc_oi": 1.5307,
+        "pc_volume": 2.2536,
+        "pc_oi": 0.8461,
         "sentiment": "bearish"
       }
     ],
     "regime": "mixed",
-    "regime_summary": "SPY P/C 1.18 neutral \u00b7 VIX 16.7 moderate."
+    "regime_summary": "SPY P/C 1.18 neutral \u00b7 VIX 18.0 moderate."
   },
   "sectors": [
     {
@@ -140,7 +140,7 @@
       "change": 5.76,
       "change_pct": 1.76,
       "volume": 62727600,
-      "pc_volume_ratio": 0.694,
+      "pc_volume_ratio": 0.6941,
       "pc_oi_ratio": null,
       "iv_atm": 0.78,
       "iv_rank": 1.5,
@@ -174,7 +174,7 @@
       "change": -5.1,
       "change_pct": -2.4,
       "volume": 122377500,
-      "pc_volume_ratio": 0.4957,
+      "pc_volume_ratio": 0.4959,
       "pc_oi_ratio": 1.6445,
       "iv_atm": 0.2,
       "iv_rank": 0.2,
@@ -191,7 +191,7 @@
       "change": 5.47,
       "change_pct": 1.38,
       "volume": 36944800,
-      "pc_volume_ratio": 0.3133,
+      "pc_volume_ratio": 0.3076,
       "pc_oi_ratio": null,
       "iv_atm": 0.78,
       "iv_rank": 1.5,
@@ -208,7 +208,7 @@
       "change": -16.77,
       "change_pct": -2.46,
       "volume": 15773700,
-      "pc_volume_ratio": 0.437,
+      "pc_volume_ratio": 0.4343,
       "pc_oi_ratio": null,
       "iv_atm": 0.2,
       "iv_rank": 0.2,
@@ -216,7 +216,7 @@
       "skew_25d": 0.0,
       "unusual_activity": false,
       "sentiment": "bullish",
-      "sentiment_reason": "P/C volume 0.44 below the 0.80 bullish threshold \u00b7 IV rank 0 low (complacency)."
+      "sentiment_reason": "P/C volume 0.43 below the 0.80 bullish threshold \u00b7 IV rank 0 low (complacency)."
     },
     {
       "ticker": "GOOGL",
@@ -225,7 +225,7 @@
       "change": -16.46,
       "change_pct": -4.44,
       "volume": 41026700,
-      "pc_volume_ratio": 0.7205,
+      "pc_volume_ratio": 0.7203,
       "pc_oi_ratio": null,
       "iv_atm": 0.39,
       "iv_rank": 0.6,
@@ -242,7 +242,7 @@
       "change": -5.07,
       "change_pct": -1.99,
       "volume": 45233800,
-      "pc_volume_ratio": 0.5927,
+      "pc_volume_ratio": 0.592,
       "pc_oi_ratio": null,
       "iv_atm": 0.2,
       "iv_rank": 0.4,
@@ -254,54 +254,54 @@
     },
     {
       "ticker": "AMD",
-      "name": "Advanced Micro Devices, Inc.",
+      "name": "AMD",
       "price": 500.94,
       "change": -28.2,
       "change_pct": -5.33,
       "volume": 26974600,
-      "pc_volume_ratio": 0.7368,
+      "pc_volume_ratio": null,
       "pc_oi_ratio": null,
-      "iv_atm": 0.39,
-      "iv_rank": 0.1,
-      "iv_percentile": 28.6,
-      "skew_25d": 0.0,
+      "iv_atm": null,
+      "iv_rank": null,
+      "iv_percentile": null,
+      "skew_25d": null,
       "unusual_activity": false,
-      "sentiment": "bullish",
-      "sentiment_reason": "P/C volume 0.74 below the 0.80 bullish threshold \u00b7 IV rank 0 low (complacency)."
+      "sentiment": "neutral",
+      "sentiment_reason": "No options chain available for this ticker."
     },
     {
       "ticker": "JPM",
-      "name": "JP Morgan Chase & Co.",
+      "name": "JPM",
       "price": 343.15,
       "change": -3.76,
       "change_pct": -1.08,
       "volume": 12426100,
-      "pc_volume_ratio": 0.6854,
-      "pc_oi_ratio": 0.1873,
-      "iv_atm": 0.78,
-      "iv_rank": 1.6,
-      "iv_percentile": 28.6,
-      "skew_25d": 0.0,
+      "pc_volume_ratio": null,
+      "pc_oi_ratio": null,
+      "iv_atm": null,
+      "iv_rank": null,
+      "iv_percentile": null,
+      "skew_25d": null,
       "unusual_activity": false,
-      "sentiment": "bullish",
-      "sentiment_reason": "P/C volume 0.69 below the 0.80 bullish threshold \u00b7 IV rank 2 low (complacency)."
+      "sentiment": "neutral",
+      "sentiment_reason": "No options chain available for this ticker."
     },
     {
       "ticker": "GS",
-      "name": "Goldman Sachs Group, Inc. (The)",
+      "name": "GS",
       "price": 1095.46,
       "change": -56.61,
       "change_pct": -4.91,
       "volume": 2528000,
-      "pc_volume_ratio": 1.5533,
-      "pc_oi_ratio": 1.7015,
-      "iv_atm": 0.1,
-      "iv_rank": 0.1,
-      "iv_percentile": 4.1,
-      "skew_25d": 0.0,
-      "unusual_activity": true,
-      "sentiment": "bearish",
-      "sentiment_reason": "P/C volume 1.55 above the 1.20 bearish threshold \u00b7 IV rank 0 low (complacency)."
+      "pc_volume_ratio": null,
+      "pc_oi_ratio": null,
+      "iv_atm": null,
+      "iv_rank": null,
+      "iv_percentile": null,
+      "skew_25d": null,
+      "unusual_activity": false,
+      "sentiment": "neutral",
+      "sentiment_reason": "No options chain available for this ticker."
     }
   ]
 }
