@@ -1,11 +1,11 @@
 {
-  "as_of": "2026-07-17T03:15:45-06:00",
+  "as_of": "2026-07-17T04:15:42-06:00",
   "is_mock": false,
   "market": {
     "vix": {
-      "value": 18.44,
-      "change": 1.71,
-      "change_pct": 10.22
+      "value": 18.31,
+      "change": 1.58,
+      "change_pct": 9.44
     },
     "vix_term_structure": [
       {
@@ -14,7 +14,7 @@
       },
       {
         "label": "VIX",
-        "value": 18.44
+        "value": 18.31
       },
       {
         "label": "VIX3M",
@@ -32,7 +32,7 @@
         "price": 750.72,
         "change": -4.09,
         "change_pct": -0.54,
-        "pc_volume": 1.1799,
+        "pc_volume": 1.1801,
         "pc_oi": 0.0,
         "sentiment": "neutral"
       },
@@ -58,76 +58,76 @@
       }
     ],
     "regime": "mixed",
-    "regime_summary": "SPY P/C 1.18 neutral \u00b7 VIX 18.4 moderate."
+    "regime_summary": "SPY P/C 1.18 neutral \u00b7 VIX 18.3 moderate."
   },
   "sectors": [
     {
       "ticker": "XLK",
       "name": "Technology",
-      "pc_volume": 1.2731,
+      "pc_volume": null,
       "iv_rank": null,
-      "sentiment": "bearish"
+      "sentiment": "neutral"
     },
     {
       "ticker": "XLF",
       "name": "Financials",
-      "pc_volume": 1.6483,
+      "pc_volume": 1.1377,
       "iv_rank": null,
-      "sentiment": "bearish"
+      "sentiment": "neutral"
     },
     {
       "ticker": "XLE",
       "name": "Energy",
-      "pc_volume": 0.9797,
+      "pc_volume": 0.9857,
       "iv_rank": null,
       "sentiment": "neutral"
     },
     {
       "ticker": "XLV",
       "name": "Health Care",
-      "pc_volume": 0.9651,
+      "pc_volume": null,
       "iv_rank": null,
       "sentiment": "neutral"
     },
     {
       "ticker": "XLY",
       "name": "Consumer Disc.",
-      "pc_volume": 0.5295,
+      "pc_volume": null,
       "iv_rank": null,
-      "sentiment": "bullish"
+      "sentiment": "neutral"
     },
     {
       "ticker": "XLP",
       "name": "Consumer Staples",
-      "pc_volume": 1.6146,
+      "pc_volume": 1.6157,
       "iv_rank": null,
       "sentiment": "bearish"
     },
     {
       "ticker": "XLI",
       "name": "Industrials",
-      "pc_volume": 7.3891,
+      "pc_volume": 8.1478,
       "iv_rank": null,
       "sentiment": "bearish"
     },
     {
       "ticker": "XLU",
       "name": "Utilities",
-      "pc_volume": 0.7043,
+      "pc_volume": 0.7021,
       "iv_rank": null,
       "sentiment": "bullish"
     },
     {
       "ticker": "XLB",
       "name": "Materials",
-      "pc_volume": 1.9245,
+      "pc_volume": 1.861,
       "iv_rank": null,
       "sentiment": "bearish"
     },
     {
       "ticker": "XLRE",
       "name": "Real Estate",
-      "pc_volume": 0.5969,
+      "pc_volume": 0.4848,
       "iv_rank": null,
       "sentiment": "bullish"
     }
@@ -140,7 +140,7 @@
       "change": 5.76,
       "change_pct": 1.76,
       "volume": 62727600,
-      "pc_volume_ratio": 0.6941,
+      "pc_volume_ratio": 0.6774,
       "pc_oi_ratio": null,
       "iv_atm": 0.78,
       "iv_rank": 1.5,
@@ -148,7 +148,7 @@
       "skew_25d": 0.0,
       "unusual_activity": false,
       "sentiment": "bullish",
-      "sentiment_reason": "P/C volume 0.69 below the 0.80 bullish threshold \u00b7 IV rank 2 low (complacency)."
+      "sentiment_reason": "P/C volume 0.68 below the 0.80 bullish threshold \u00b7 IV rank 2 low (complacency)."
     },
     {
       "ticker": "TSLA",
@@ -157,15 +157,15 @@
       "change": -3.4,
       "change_pct": -0.86,
       "volume": 29130400,
-      "pc_volume_ratio": 0.8691,
-      "pc_oi_ratio": 510.3333,
+      "pc_volume_ratio": 0.8508,
+      "pc_oi_ratio": 4339.0,
       "iv_atm": 0.78,
       "iv_rank": 0.9,
       "iv_percentile": 28.6,
       "skew_25d": 0.0,
-      "unusual_activity": false,
+      "unusual_activity": true,
       "sentiment": "neutral",
-      "sentiment_reason": "P/C volume 0.87 in the neutral zone (0.80\u20131.20) \u00b7 IV rank 1 low (complacency)."
+      "sentiment_reason": "P/C volume 0.85 in the neutral zone (0.80\u20131.20) \u00b7 IV rank 1 low (complacency)."
     },
     {
       "ticker": "NVDA",
@@ -203,7 +203,7 @@
     },
     {
       "ticker": "META",
-      "name": "META",
+      "name": "Meta Platforms, Inc.",
       "price": 664.54,
       "change": -16.77,
       "change_pct": -2.46,
