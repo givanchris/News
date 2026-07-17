@@ -1,47 +1,71 @@
 {
-  "lastUpdated": "2026-07-16T18:11:51-06:00",
+  "lastUpdated": "2026-07-16T18:30:18-06:00",
   "market": {
-    "sp500":  { "price": "7,534",  "change": "-0.51%", "dir": "down" },
-    "nasdaq": { "price": "29,060", "change": "-1.5%",  "dir": "down" },
-    "yield":  { "price": "4.58%",  "change": "+3 bps", "dir": "down" },
-    "wti":    { "price": "$79",    "change": "-0.2%",  "dir": "down" },
-    "gold":   { "price": "$3,998", "change": "-1.53%", "dir": "down" },
-    "dxy":    { "price": "100.73", "change": "+0.24%", "dir": "up" }
+    "sp500": {
+      "price": "7534",
+      "change": "-0.51%",
+      "dir": "down"
+    },
+    "nasdaq": {
+      "price": "29026",
+      "change": "-1.62%",
+      "dir": "down"
+    },
+    "yield": {
+      "price": "4.57%",
+      "change": "+2 bps",
+      "dir": "down"
+    },
+    "wti": {
+      "price": "$79",
+      "change": "-0.85%",
+      "dir": "down"
+    },
+    "gold": {
+      "price": "$3992",
+      "change": "-1.22%",
+      "dir": "down"
+    },
+    "dxy": {
+      "price": "100.72",
+      "change": "+0.21%",
+      "dir": "up"
+    }
   },
   "stories": [
     {
       "cat": "MACRO",
       "headline": "JUNE CPI COOLS TO 3.5% Y/Y, BUT RESILIENT JOBS AND SPENDING DATA CAP THE RALLY IN YIELDS",
       "body": "Headline CPI fell 0.4% month-over-month in June, its largest monthly drop since 2020, pulling the annual rate to 3.5% while core CPI held at 2.6%. Yet jobless claims fell to a two-month low of 208,000 and retail sales rose in line with expectations, and the 10-year yield still climbed 3 bps to 4.58% as traders concluded the economy doesn't need emergency easing.",
-      "explain": "A soft CPI print normally pulls yields lower because it raises the odds the Fed cuts rates, which lowers the return investors demand to hold longer-dated debt. Today the opposite happened at the long end: solid jobless claims and retail sales offset the inflation relief, signaling the economy can tolerate rates staying higher for longer, so the 10-year rose even as short-end rate-cut odds firmed. That divergence — friendly inflation data, unfriendly growth data — is exactly the kind of mixed signal that makes the yield curve hard to trade in either direction right now."
+      "explain": "A soft CPI print normally pulls yields lower because it raises the odds the Fed cuts rates, which lowers the return investors demand to hold longer-dated debt. Today the opposite happened at the long end: solid jobless claims and retail sales offset the inflation relief, signaling the economy can tolerate rates staying higher for longer, so the 10-year rose even as short-end rate-cut odds firmed. That divergence \u2014 friendly inflation data, unfriendly growth data \u2014 is exactly the kind of mixed signal that makes the yield curve hard to trade in either direction right now."
     },
     {
       "cat": "MARKETS",
       "headline": "TSMC CAPEX HIKE AND ALPHABET'S GEMINI DELAY DRAG NASDAQ 100 DOWN 1.5%",
       "body": "Taiwan Semiconductor raised its full-year capex guidance to $60-$64 billion from $52-$56 billion even after posting a 77% annual earnings gain, and its shares still fell over 4% as the VanEck Semiconductor ETF (SMH) dropped roughly 2.2% and Arm slid more than 4%. Alphabet fell over 4% on reports its flagship Gemini 3.5 Pro model has slipped its release timeline, compounding the tech-led slide that pulled the Nasdaq 100 down 1.5% to about 29,060 while the S&P 500 lost 0.51% to 7,533.77.",
-      "explain": "TSMC's capex guidance matters more than its earnings beat because capital spending today becomes depreciation on tomorrow's income statement — investors are pricing whether the AI buildout will generate returns above that cost, not whether current quarterly profit looked good. Alphabet's delay compounds the worry because Gemini underpins the revenue case for Google's own infrastructure spend; when the product timeline slips, the market questions the payoff on the capex being raised across the whole AI supply chain, which is why the sell-off spread from chipmakers to hyperscalers in the same session."
+      "explain": "TSMC's capex guidance matters more than its earnings beat because capital spending today becomes depreciation on tomorrow's income statement \u2014 investors are pricing whether the AI buildout will generate returns above that cost, not whether current quarterly profit looked good. Alphabet's delay compounds the worry because Gemini underpins the revenue case for Google's own infrastructure spend; when the product timeline slips, the market questions the payoff on the capex being raised across the whole AI supply chain, which is why the sell-off spread from chipmakers to hyperscalers in the same session."
     },
     {
       "cat": "GEOPOLITICS",
       "headline": "CRUDE HOLDS NEAR ONE-MONTH HIGHS AS HORMUZ TRAFFIC THINS AND TEHRAN THREATENS BAB EL-MANDEB",
-      "body": "WTI settled near $79.42 and Brent near $84.37, both easing slightly from Wednesday but still elevated after fresh US strikes on Iran and a reinstated naval posture near the Strait of Hormuz. Shipping traffic through Hormuz has fallen sharply since the latest escalation, and Tehran has reportedly instructed Yemen's Houthis to be ready to close the Bab el-Mandeb Strait — a key Red Sea route for Saudi exports — if Iranian infrastructure is hit further.",
-      "explain": "Roughly a fifth of global oil consumption transits the Strait of Hormuz, so threats to that chokepoint get priced into futures immediately as a risk premium, well before any barrels actually stop moving — that's why crude has stayed elevated even as headlines swing between escalation and calm. A second chokepoint threat at Bab el-Mandeb compounds the premium because it removes the main rerouting option for Gulf crude, which is the detail that keeps this a supply story rather than a one-day headline spike."
+      "body": "WTI settled near $79.42 and Brent near $84.37, both easing slightly from Wednesday but still elevated after fresh US strikes on Iran and a reinstated naval posture near the Strait of Hormuz. Shipping traffic through Hormuz has fallen sharply since the latest escalation, and Tehran has reportedly instructed Yemen's Houthis to be ready to close the Bab el-Mandeb Strait \u2014 a key Red Sea route for Saudi exports \u2014 if Iranian infrastructure is hit further.",
+      "explain": "Roughly a fifth of global oil consumption transits the Strait of Hormuz, so threats to that chokepoint get priced into futures immediately as a risk premium, well before any barrels actually stop moving \u2014 that's why crude has stayed elevated even as headlines swing between escalation and calm. A second chokepoint threat at Bab el-Mandeb compounds the premium because it removes the main rerouting option for Gulf crude, which is the detail that keeps this a supply story rather than a one-day headline spike."
     },
     {
       "cat": "COMMODITIES",
       "headline": "GOLD SINKS TOWARD 8-MONTH LOW AS DOLLAR AND YIELDS CLIMB TOGETHER",
       "body": "Gold fell 1.53% to about $3,998 an ounce, its lowest level since November 2025, as the DXY dollar index rose 0.24% to 100.73 and the 10-year yield climbed to 4.58%. The move came even as oil held near one-month highs on Middle East tensions, an unusual split where geopolitical risk failed to lift the traditional safe-haven metal.",
-      "explain": "Gold pays no yield, so it competes directly with Treasuries for a safety allocation — when the 10-year rises, the opportunity cost of holding gold instead of interest-bearing debt goes up, which pressures the metal even during geopolitical stress. The stronger dollar adds a second drag because gold is priced in dollars globally, so a firmer DXY mechanically makes gold more expensive for foreign buyers, curbing demand exactly when today's yield move was already working against it."
+      "explain": "Gold pays no yield, so it competes directly with Treasuries for a safety allocation \u2014 when the 10-year rises, the opportunity cost of holding gold instead of interest-bearing debt goes up, which pressures the metal even during geopolitical stress. The stronger dollar adds a second drag because gold is priced in dollars globally, so a firmer DXY mechanically makes gold more expensive for foreign buyers, curbing demand exactly when today's yield move was already working against it."
     },
     {
       "cat": "NCAA CFB",
       "headline": "$10 MILLION QB DARIAN MENSAH HEADLINES A PORTAL CYCLE RESHAPING THE ACC AND BIG TEN TITLE PICTURE",
-      "body": "Miami's move to sign Duke transfer Darian Mensah — who led the ACC with 3,973 passing yards and 34 touchdowns last season — followed a legal fight after Duke sought a restraining order to block his portal entry before a judge sided with Mensah; Miami paid well beyond his Duke deal to land him. Penn State added Iowa State's Rocco Becht, one of the Big 12's most productive passers the past two seasons, as both programs bet on transfer quarterbacks to close the gap to the sport's top tier ahead of fall camp."
+      "body": "Miami's move to sign Duke transfer Darian Mensah \u2014 who led the ACC with 3,973 passing yards and 34 touchdowns last season \u2014 followed a legal fight after Duke sought a restraining order to block his portal entry before a judge sided with Mensah; Miami paid well beyond his Duke deal to land him. Penn State added Iowa State's Rocco Becht, one of the Big 12's most productive passers the past two seasons, as both programs bet on transfer quarterbacks to close the gap to the sport's top tier ahead of fall camp."
     },
     {
       "cat": "MCBB",
       "headline": "KANSAS VAULTS INTO PRESEASON TOP 25 BEHIND NO. 1 RECRUIT TYRAN STOKES AS PORTAL CHURN TOPS 2,700 PLAYERS",
-      "body": "Kansas jumped into early 2026-27 rankings after landing five-star forward Tyran Stokes, the No. 1 recruit in the class since AJ Dybantsa's 2023 reclassification, while Texas's class — built around 2027-turned-2026 forward Marcus Spears Jr. — remains in the national title conversation. More than 2,700 players have moved through the transfer portal since Michigan beat UConn for the national title, with Vanderbilt's Tyler Tanner among the notable players who chose to return to school instead of turning pro."
+      "body": "Kansas jumped into early 2026-27 rankings after landing five-star forward Tyran Stokes, the No. 1 recruit in the class since AJ Dybantsa's 2023 reclassification, while Texas's class \u2014 built around 2027-turned-2026 forward Marcus Spears Jr. \u2014 remains in the national title conversation. More than 2,700 players have moved through the transfer portal since Michigan beat UConn for the national title, with Vanderbilt's Tyler Tanner among the notable players who chose to return to school instead of turning pro."
     },
     {
       "cat": "NBA",
@@ -83,12 +107,12 @@
       "team": "WASHINGTON HUSKIES BASKETBALL",
       "pill": "OFFSEASON",
       "pillClass": "s-up",
-      "detail": "Coach Danny Sprinkle is rebuilding through the portal after losing Zoom Diallo and seeing Hannes Steinbach taken 14th overall by Charlotte in the NBA Draft. Croatian power forward Boris Tišma has committed to fill out next season's frontcourt."
+      "detail": "Coach Danny Sprinkle is rebuilding through the portal after losing Zoom Diallo and seeing Hannes Steinbach taken 14th overall by Charlotte in the NBA Draft. Croatian power forward Boris Ti\u0161ma has committed to fill out next season's frontcourt."
     }
   ],
   "watchlist": [
     "Mariners resume play Saturday, July 18 at home vs. Giants (NBCS)",
-    "NBA Summer League semifinals Saturday — field of 12 narrows to 4",
+    "NBA Summer League semifinals Saturday \u2014 field of 12 narrows to 4",
     "Seahawks training camp opens July 25 in Renton",
     "All 32 NFL teams report to camp by July 28; Cardinals/Panthers first on July 22",
     "Watch Fed-speak reaction to today's mixed CPI/yield signal ahead of the July 28-29 FOMC meeting"
@@ -96,10 +120,10 @@
   "deepDive": {
     "title": "Why a Record Earnings Beat Can Still Sink a Stock: TSMC's Capex Signal",
     "content": [
-      "Taiwan Semiconductor did not miss today — it posted a 77% jump in annual earnings, the kind of number that would normally send a stock higher. Instead, shares fell more than 4% and dragged the Nasdaq 100 down 1.5%, because the headline that moved the market wasn't the quarter that already happened, it was the $60-$64 billion capex guide for the year ahead, up from $52-$56 billion. When a company's forward spending plan overshadows its trailing results, it tells you the market has already priced in the good quarter and is now trying to underwrite the next one.",
-      "Capital expenditure is cash spent today on plant, equipment, and fabs that doesn't hit the income statement immediately — it gets capitalized on the balance sheet and depreciated over years. Raising a capex budget by roughly $10 billion means locking in higher depreciation charges for years to come, which compresses future free cash flow and net margins unless the extra capacity actually generates proportionally more revenue. Investors aren't punishing TSMC for spending money; they're repricing the probability that the AI buildout's return on invested capital comes in lower than what's already baked into the stock.",
-      "This is the same skepticism playing out across the AI supply chain, and it's why Alphabet's Gemini 3.5 Pro delay hit the ticker the same day: Google's own capex spend is justified internally by a product roadmap, and when that roadmap slips, the return timeline for the capex slips with it. Historically, this pattern shows up whenever an industry over-invests ahead of demand — telecom in 1999-2000 laid enormous fiber capacity that took a decade to fill, and the stocks that spent fastest fell hardest once the market stopped extending them credit on faith alone.",
-      "For a portfolio, the read-through is that earnings beats and capex guides need to be evaluated separately, not netted together in a headline reaction. A name can beat consensus and still de-rate if the capex-to-revenue ratio is rising faster than the growth it's meant to fund — which is the exact metric to track across TSMC, its equipment suppliers, and the hyperscalers through the rest of this earnings season, especially with chip names already down six straight sessions into today's move."
+      "Taiwan Semiconductor did not miss today \u2014 it posted a 77% jump in annual earnings, the kind of number that would normally send a stock higher. Instead, shares fell more than 4% and dragged the Nasdaq 100 down 1.5%, because the headline that moved the market wasn't the quarter that already happened, it was the $60-$64 billion capex guide for the year ahead, up from $52-$56 billion. When a company's forward spending plan overshadows its trailing results, it tells you the market has already priced in the good quarter and is now trying to underwrite the next one.",
+      "Capital expenditure is cash spent today on plant, equipment, and fabs that doesn't hit the income statement immediately \u2014 it gets capitalized on the balance sheet and depreciated over years. Raising a capex budget by roughly $10 billion means locking in higher depreciation charges for years to come, which compresses future free cash flow and net margins unless the extra capacity actually generates proportionally more revenue. Investors aren't punishing TSMC for spending money; they're repricing the probability that the AI buildout's return on invested capital comes in lower than what's already baked into the stock.",
+      "This is the same skepticism playing out across the AI supply chain, and it's why Alphabet's Gemini 3.5 Pro delay hit the ticker the same day: Google's own capex spend is justified internally by a product roadmap, and when that roadmap slips, the return timeline for the capex slips with it. Historically, this pattern shows up whenever an industry over-invests ahead of demand \u2014 telecom in 1999-2000 laid enormous fiber capacity that took a decade to fill, and the stocks that spent fastest fell hardest once the market stopped extending them credit on faith alone.",
+      "For a portfolio, the read-through is that earnings beats and capex guides need to be evaluated separately, not netted together in a headline reaction. A name can beat consensus and still de-rate if the capex-to-revenue ratio is rising faster than the growth it's meant to fund \u2014 which is the exact metric to track across TSMC, its equipment suppliers, and the hyperscalers through the rest of this earnings season, especially with chip names already down six straight sessions into today's move."
     ]
   }
 }
