@@ -1,111 +1,105 @@
 {
-  "lastUpdated": "2026-07-13T16:34:37-06:00",
+  "lastUpdated": "2026-07-16T18:11:51-06:00",
   "market": {
-    "sp500":  { "price": "7,515.34", "change": "-0.79%",  "dir": "down" },
-    "nasdaq": { "price": "29,333",   "change": "-1.7%",   "dir": "down" },
-    "yield":  { "price": "4.58%",    "change": "+3 bps",  "dir": "up"   },
-    "wti":    { "price": "$78.14",   "change": "+9.4%",   "dir": "up"   },
-    "gold":   { "price": "$4,020",   "change": "-2.2%",   "dir": "down" },
-    "dxy":    { "price": "100.93",   "change": "-0.02%",  "dir": "flat" }
+    "sp500":  { "price": "7,534",  "change": "-0.51%", "dir": "down" },
+    "nasdaq": { "price": "29,060", "change": "-1.5%",  "dir": "down" },
+    "yield":  { "price": "4.58%",  "change": "+3 bps", "dir": "down" },
+    "wti":    { "price": "$79",    "change": "-0.2%",  "dir": "down" },
+    "gold":   { "price": "$3,998", "change": "-1.53%", "dir": "down" },
+    "dxy":    { "price": "100.73", "change": "+0.24%", "dir": "up" }
   },
   "stories": [
     {
-      "cat": "GEOPOLITICS",
-      "headline": "TRUMP REINSTATES HORMUZ BLOCKADE, IMPOSES 20% TRANSIT FEE AS OIL ROCKETS AND STOCKS SELL OFF",
-      "body": "Trump announced the U.S. would reimpose a blockade of the Strait of Hormuz and charge a 20% fee on all cargo shipped through the waterway after the U.S. and Iran traded fresh strikes over the weekend, including hits on energy infrastructure. The news erased hopes of a mid-June de-escalation and sent WTI up 9.4% to $78.14 and Brent up 9.6% to $83.80, while the S&P 500 fell 0.79% to 7,515.34.",
-      "explain": "A 'blockade' shifts the oil market's calculation from a probability-weighted risk premium to something closer to a confirmed supply disruption, which is why crude's reaction (+9%+) dwarfed the equity market's (-0.79%) — oil prices the physical chokepoint directly, while stocks discount it through earnings and multiple effects that take longer to work through. The 20% transit fee functions like a tax on roughly a fifth of global seaborne oil trade, meaning it can add to input costs and headline inflation even without a single barrel failing to reach a buyer."
-    },
-    {
-      "cat": "COMMODITIES",
-      "headline": "BRENT LOGS BIGGEST ONE-DAY GAIN SINCE 2020, WTI SETTLES AT $78.14 ON HORMUZ BLOCKADE",
-      "body": "Brent crude jumped 9.6% to settle at $83.80 a barrel — its highest close in about a month and its largest one-day percentage gain in more than six years — while WTI rose 9.4% to settle at $78.14. Semiconductor names bore collateral damage: the Philadelphia Semiconductor Index sank as SK Hynix fell 6.1% and Sandisk, Marvell, and Western Digital dropped between 6.5% and 12.3%, extending a global chip selloff.",
-      "explain": "Oil's one-day jump is a 'gap' move — the market had spent two weeks pricing OUT the war premium on diplomatic optimism, so when the blockade was reinstated, the adjustment happened in a single session rather than gradually, which is what produces a move of this size. Semiconductor stocks selling off alongside an oil-driven equity selloff shows how energy shocks propagate into growth-sensitive sectors first: chipmakers carry high fixed costs and long capex cycles, making their valuations unusually sensitive to any rise in the discount rate or slowdown in global growth expectations."
+      "cat": "MACRO",
+      "headline": "JUNE CPI COOLS TO 3.5% Y/Y, BUT RESILIENT JOBS AND SPENDING DATA CAP THE RALLY IN YIELDS",
+      "body": "Headline CPI fell 0.4% month-over-month in June, its largest monthly drop since 2020, pulling the annual rate to 3.5% while core CPI held at 2.6%. Yet jobless claims fell to a two-month low of 208,000 and retail sales rose in line with expectations, and the 10-year yield still climbed 3 bps to 4.58% as traders concluded the economy doesn't need emergency easing.",
+      "explain": "A soft CPI print normally pulls yields lower because it raises the odds the Fed cuts rates, which lowers the return investors demand to hold longer-dated debt. Today the opposite happened at the long end: solid jobless claims and retail sales offset the inflation relief, signaling the economy can tolerate rates staying higher for longer, so the 10-year rose even as short-end rate-cut odds firmed. That divergence — friendly inflation data, unfriendly growth data — is exactly the kind of mixed signal that makes the yield curve hard to trade in either direction right now."
     },
     {
       "cat": "MARKETS",
-      "headline": "S&P 500 SLIDES 0.79%, NASDAQ TUMBLES ON CHIP-SECTOR ROUT AS TRADERS BRACE FOR CPI",
-      "body": "The S&P 500 fell 0.79% to 7,515.34 and the Nasdaq Composite dropped 1.55% to 25,873.18 (the Nasdaq-100 fell roughly 1.7%) as the reignited Iran conflict and a broadening semiconductor selloff overshadowed the coming start of bank earnings season. The Dow held up better, down just 0.26% to 52,498.64, underscoring how concentrated Monday's damage was in tech.",
-      "explain": "The gap between the Dow's 0.26% decline and the Nasdaq's roughly 1.6-1.7% drop is a concentration story: the Dow's price-weighted, industrial-heavy composition insulated it from a selloff concentrated almost entirely in semiconductors and AI-adjacent names, the same stocks that drove most of the index's 2025-26 gains. That divergence is worth tracking into Tuesday's CPI — if the data confirms the Fed's hawkish tilt, the stocks most exposed to higher discount rates are structurally first to reprice."
+      "headline": "TSMC CAPEX HIKE AND ALPHABET'S GEMINI DELAY DRAG NASDAQ 100 DOWN 1.5%",
+      "body": "Taiwan Semiconductor raised its full-year capex guidance to $60-$64 billion from $52-$56 billion even after posting a 77% annual earnings gain, and its shares still fell over 4% as the VanEck Semiconductor ETF (SMH) dropped roughly 2.2% and Arm slid more than 4%. Alphabet fell over 4% on reports its flagship Gemini 3.5 Pro model has slipped its release timeline, compounding the tech-led slide that pulled the Nasdaq 100 down 1.5% to about 29,060 while the S&P 500 lost 0.51% to 7,533.77.",
+      "explain": "TSMC's capex guidance matters more than its earnings beat because capital spending today becomes depreciation on tomorrow's income statement — investors are pricing whether the AI buildout will generate returns above that cost, not whether current quarterly profit looked good. Alphabet's delay compounds the worry because Gemini underpins the revenue case for Google's own infrastructure spend; when the product timeline slips, the market questions the payoff on the capex being raised across the whole AI supply chain, which is why the sell-off spread from chipmakers to hyperscalers in the same session."
     },
     {
-      "cat": "MACRO",
-      "headline": "TREASURY YIELDS HIT 16-MONTH HIGHS AS OIL SHOCK COLLIDES WITH A FED ALREADY DEBATING A HIKE",
-      "body": "The 2-year Treasury yield rose as much as 4 bps to 4.25% Monday — its highest since February 2025 — and the 10-year climbed to 4.58% (+3 bps) as the weekend's oil shock reinforced bets that the Fed could raise rates before September; futures markets are pricing roughly a 70% probability of a hike, a sharp reversal from the cut expectations that dominated a year ago. Tuesday's June CPI report (core seen +0.2% m/m, +2.8% y/y) now carries extra weight ahead of Fed Chair Kevin Warsh's first congressional testimony Tuesday and Wednesday.",
-      "explain": "The 2-year yield is the market's cleanest proxy for the expected path of Fed policy over the next two years, since it's short enough to be dominated by rate expectations rather than the term premium and long-run growth assumptions baked into the 10-year — that's why it, not the 10-year, hit a fresh cycle high Monday. An oil-driven spike in headline CPI doesn't directly change the Fed's preferred core-inflation target, but it raises the risk that inflation expectations de-anchor, which is precisely the channel a hawkish Fed under Warsh would cite to justify a hike even though a rate increase does nothing to add oil supply."
+      "cat": "GEOPOLITICS",
+      "headline": "CRUDE HOLDS NEAR ONE-MONTH HIGHS AS HORMUZ TRAFFIC THINS AND TEHRAN THREATENS BAB EL-MANDEB",
+      "body": "WTI settled near $79.42 and Brent near $84.37, both easing slightly from Wednesday but still elevated after fresh US strikes on Iran and a reinstated naval posture near the Strait of Hormuz. Shipping traffic through Hormuz has fallen sharply since the latest escalation, and Tehran has reportedly instructed Yemen's Houthis to be ready to close the Bab el-Mandeb Strait — a key Red Sea route for Saudi exports — if Iranian infrastructure is hit further.",
+      "explain": "Roughly a fifth of global oil consumption transits the Strait of Hormuz, so threats to that chokepoint get priced into futures immediately as a risk premium, well before any barrels actually stop moving — that's why crude has stayed elevated even as headlines swing between escalation and calm. A second chokepoint threat at Bab el-Mandeb compounds the premium because it removes the main rerouting option for Gulf crude, which is the detail that keeps this a supply story rather than a one-day headline spike."
     },
     {
       "cat": "COMMODITIES",
-      "headline": "GOLD FALLS DESPITE WAR RISK AS RISING REAL YIELDS OVERPOWER SAFE-HAVEN DEMAND",
-      "body": "Gold fell more than 2% to around $4,020 an ounce Monday — a second straight day of losses — even as the Iran conflict escalated, a counterintuitive move that reflects surging Treasury yields and expectations that the Fed's next move could be a hike rather than a cut. The dollar index was essentially flat at 100.93 (-0.02%), meaning gold's drop wasn't a currency story — it was a real-yields story.",
-      "explain": "Gold pays no yield, so its opportunity cost rises directly with real interest rates; when 2-year Treasury yields jump to a 16-month high on hike expectations, holding gold becomes more expensive relative to holding short-term Treasurys, even if the same headlines are geopolitically bullish for the metal. This is the mechanism that separates gold's 'safe-haven' reputation from its actual price behavior: gold tends to rally on crises the Fed is expected to answer with rate cuts, and struggles on crises — like an oil supply shock — that push the Fed toward tightening instead."
-    },
-    {
-      "cat": "MCBB",
-      "headline": "KANSAS LANDS NATION'S NO. 1 RECRUIT AS OFFSEASON ROSTER OVERHAUL ACCELERATES ACROSS COLLEGE HOOPS",
-      "body": "Kansas secured a commitment from the nation's top-ranked incoming prospect, while Kentucky added Iowa State transfer forward Milan Momcilovic — this spring's top transfer-portal target — and North Carolina replaced departed center Henri Veesaar with two international signees. More than 2,700 players have moved through the transfer portal since Michigan beat UConn for the national title, an offseason churn rate reshaping preseason rankings before October practice opens."
-    },
-    {
-      "cat": "NBA",
-      "headline": "AJ DYBANTSA HEADLINES SUMMER LEAGUE AS LEBRON JAMES EXPLORES A LANDING SPOT AFTER LEAVING THE LAKERS",
-      "body": "No. 1 pick AJ Dybantsa is averaging 25 points per game and has his Summer League team to 2-0 in Las Vegas, while No. 2 pick Darryn Peterson has scored 23-plus points in each of his four summer outings. Off the court, LeBron James has informed the Lakers he won't return in 2026-27, with his camp reportedly eyeing the Knicks, 76ers, and Celtics as potential destinations."
-    },
-    {
-      "cat": "NFL",
-      "headline": "SEAHAWKS' RECORD $9.6B SALE HEADLINES A QUIET NFL MONDAY FOCUSED ON TRAINING-CAMP PREP",
-      "body": "The Paul Allen Estate's agreement to sell the Seahawks to a Khosla family-led group for $9.612 billion — an NFL record, roughly 50% above the prior high — continued to dominate league business news, with the deal still needing ratification from at least 24 of the other 31 owners. Elsewhere, the Packers extended linebacker Isaiah McDuffie and teams around the league finalized rookie contracts ahead of training camps opening later this month."
+      "headline": "GOLD SINKS TOWARD 8-MONTH LOW AS DOLLAR AND YIELDS CLIMB TOGETHER",
+      "body": "Gold fell 1.53% to about $3,998 an ounce, its lowest level since November 2025, as the DXY dollar index rose 0.24% to 100.73 and the 10-year yield climbed to 4.58%. The move came even as oil held near one-month highs on Middle East tensions, an unusual split where geopolitical risk failed to lift the traditional safe-haven metal.",
+      "explain": "Gold pays no yield, so it competes directly with Treasuries for a safety allocation — when the 10-year rises, the opportunity cost of holding gold instead of interest-bearing debt goes up, which pressures the metal even during geopolitical stress. The stronger dollar adds a second drag because gold is priced in dollars globally, so a firmer DXY mechanically makes gold more expensive for foreign buyers, curbing demand exactly when today's yield move was already working against it."
     },
     {
       "cat": "NCAA CFB",
-      "headline": "TRANSFER PORTAL QB MARKET SHIFTS AS $10M MIAMI MOVE AND OKLAHOMA'S JASON WITTEN HIRE RESHAPE ROSTERS",
-      "body": "Duke transfer quarterback Darian Mensah's reported $10 million move to Miami continues to reverberate through ACC title odds, while Oklahoma rebuilt its tight end room with three transfers and hired former NFL tight end Jason Witten as position coach. With the 2026 cycle's portal window having closed back in January, rosters are locked in for fall camp, leaving late-summer buzz focused on NIL valuations — including a reported $4 million deal for the top transfer-portal offensive lineman."
+      "headline": "$10 MILLION QB DARIAN MENSAH HEADLINES A PORTAL CYCLE RESHAPING THE ACC AND BIG TEN TITLE PICTURE",
+      "body": "Miami's move to sign Duke transfer Darian Mensah — who led the ACC with 3,973 passing yards and 34 touchdowns last season — followed a legal fight after Duke sought a restraining order to block his portal entry before a judge sided with Mensah; Miami paid well beyond his Duke deal to land him. Penn State added Iowa State's Rocco Becht, one of the Big 12's most productive passers the past two seasons, as both programs bet on transfer quarterbacks to close the gap to the sport's top tier ahead of fall camp."
+    },
+    {
+      "cat": "MCBB",
+      "headline": "KANSAS VAULTS INTO PRESEASON TOP 25 BEHIND NO. 1 RECRUIT TYRAN STOKES AS PORTAL CHURN TOPS 2,700 PLAYERS",
+      "body": "Kansas jumped into early 2026-27 rankings after landing five-star forward Tyran Stokes, the No. 1 recruit in the class since AJ Dybantsa's 2023 reclassification, while Texas's class — built around 2027-turned-2026 forward Marcus Spears Jr. — remains in the national title conversation. More than 2,700 players have moved through the transfer portal since Michigan beat UConn for the national title, with Vanderbilt's Tyler Tanner among the notable players who chose to return to school instead of turning pro."
+    },
+    {
+      "cat": "NBA",
+      "headline": "JAMES HARDEN DECLINES $42.3M OPTION AS CAVALIERS WORK ON NEW DEAL; WARRIORS SEE THEMSELVES AS LEBRON DARK HORSE",
+      "body": "Cavaliers guard James Harden opted out of the final $42.3 million year of his contract, with Harden and Cleveland now negotiating a new multiyear deal rather than testing the open market. Golden State privately views itself as a dark-horse contender for free-agent LeBron James even as reports suggest James is leaning toward an Eastern Conference return, with Cleveland gaining momentum after James spent time in Akron reconnecting with his 2016 title-team teammates."
+    },
+    {
+      "cat": "NFL",
+      "headline": "PATRICK MAHOMES ON TRACK FOR WEEK 1 RETURN FROM ACL TEAR AGAINST BRONCOS",
+      "body": "Chiefs quarterback Patrick Mahomes remains on schedule to be ready for Kansas City's Week 1 Monday night opener against the AFC West champion Denver Broncos, following the season-ending ACL tear that ended his 2025 campaign early. The update comes as all 32 NFL teams finalize training camp report dates, with Arizona and Carolina first to report on July 22 ahead of their Aug. 6 Hall of Fame Game meeting."
     }
   ],
   "sports": [
     {
       "team": "SEATTLE MARINERS",
-      "pill": "W 8-2",
-      "pillClass": "s-w",
-      "detail": "Enter the All-Star break at 48-49 after beating Tampa Bay 8-2 Sunday behind a Randy Arozarena three-run homer. The All-Star Game is Tuesday (8 PM ET, Citizens Bank Park); Seattle returns Friday to open a series vs. the Giants at T-Mobile Park."
+      "pill": "48-49",
+      "pillClass": "s-up",
+      "detail": "Idle during the All-Star break, sitting 2nd in the AL West behind Texas (49-47) and holding a wild-card spot. Next up: at home vs. the Giants on Saturday, July 18 (NBCS)."
     },
     {
       "team": "DETROIT PISTONS",
-      "pill": "L 75-86",
+      "pill": "L 88-100",
       "pillClass": "s-l",
-      "detail": "Fell to the Knicks 86-75 in Summer League Monday despite 24 points from Chaz Lanier (8-for-13, 3-for-3 from three). Next: Wednesday 7/15, 6 PM ET vs. Suns (ESPNU)."
+      "detail": "Fell to Phoenix 100-88 in Summer League pool play as Detroit was held under 15 points in both the 1st and 4th quarters. Brice Williams led with 24 points and No. 17 pick Ebuka Okorie added 16; Detroit plays Miami in a consolation game Friday."
     },
     {
       "team": "SEATTLE SEAHAWKS",
-      "pill": "SOLD $9.6B",
+      "pill": "SALE PENDING",
       "pillClass": "s-up",
-      "detail": "The Paul Allen Estate's agreement to sell the franchise to a Khosla family-led group for a record $9.612B still needs ratification from at least 24 of the other 31 owners. Training camp opens July 25 in Renton; Football Fest is Aug. 8 at Lumen Field."
+      "detail": "The Paul Allen Estate's $9.6 billion sale to a Khosla family-led group still needs ratification from at least 24 of the other 31 owners. RB Zach Charbonnet is progressing well in his ACL recovery ahead of a late-July checkup; training camp opens July 25 in Renton with nine public practices, and the team is set to appear on HBO's Hard Knocks in August."
     },
     {
       "team": "WASHINGTON HUSKIES FOOTBALL",
       "pill": "OFFSEASON",
       "pillClass": "s-up",
-      "detail": "Landed a 4-star cornerback commitment, the class's highest-rated pledge, while still chasing a second corner and offensive line help. RB Jordan Washington is targeting a late-July return from his spring injury ahead of fall camp."
+      "detail": "RB Jordan Washington, carted off during spring practice, is targeting a late-July return under coach Jedd Fisch. The Huskies added CB commit Censere Gaylord to a recruiting class that already includes a 4-star cornerback; season opens Sept. 5 vs. Washington State in the Apple Cup at Husky Stadium."
     },
     {
       "team": "WASHINGTON HUSKIES BASKETBALL",
       "pill": "OFFSEASON",
       "pillClass": "s-up",
-      "detail": "Added commitments from Croatian forward Boris Tišma and Australian guard Tristan Devers, plus new assistant coach DeAndre Haynes (ex-Marquette). F Hannes Steinbach (14th overall to Charlotte) remains the program's top NBA export as Danny Sprinkle rebuilds after losing Zoom Diallo to the portal."
+      "detail": "Coach Danny Sprinkle is rebuilding through the portal after losing Zoom Diallo and seeing Hannes Steinbach taken 14th overall by Charlotte in the NBA Draft. Croatian power forward Boris Tišma has committed to fill out next season's frontcourt."
     }
   ],
   "watchlist": [
-    "June CPI report — Tuesday 7/14, 8:30 AM ET; core seen +0.2% m/m, +2.8% y/y, now complicated by the weekend oil shock",
-    "Fed Chair Kevin Warsh's first congressional testimony — House Financial Services Tuesday 7/14, Senate Banking Wednesday 7/15",
-    "MLB All-Star Game — Tuesday 7/14, 8 PM ET, Citizens Bank Park; Mariners return Friday vs. Giants at T-Mobile Park",
-    "Pistons Summer League — Wednesday 7/15, 6 PM ET vs. Suns (ESPNU)",
-    "Seahawks ownership sale — $9.612B agreement needs ratification from at least 24 of 31 other NFL owners"
+    "Mariners resume play Saturday, July 18 at home vs. Giants (NBCS)",
+    "NBA Summer League semifinals Saturday — field of 12 narrows to 4",
+    "Seahawks training camp opens July 25 in Renton",
+    "All 32 NFL teams report to camp by July 28; Cardinals/Panthers first on July 22",
+    "Watch Fed-speak reaction to today's mixed CPI/yield signal ahead of the July 28-29 FOMC meeting"
   ],
   "deepDive": {
-    "title": "The Fed Is Debating a Hike, Not a Cut — Why That Makes Today's Oil Shock Hit Harder",
+    "title": "Why a Record Earnings Beat Can Still Sink a Stock: TSMC's Capex Signal",
     "content": [
-      "Monday's tape only makes sense once you drop the assumption that the Fed's next move is a cut. The 2-year Treasury yield jumped as much as 4 bps to 4.25%, its highest since February 2025, right as WTI spiked 9.4% to $78.14 on a reinstated Strait of Hormuz blockade. Futures markets are now pricing roughly a 70% probability of a Fed rate hike before September — a full reversal from the cut-cycle narrative that dominated a year ago. That backdrop is why Tuesday's CPI print and Fed Chair Kevin Warsh's first congressional testimony (House on the 14th, Senate on the 15th) matter more than they would in a normal easing cycle.",
-      "The mechanism runs through which yield moves and why. The 2-year is the market's cleanest read on the expected policy path over the Fed's actual decision horizon, since it carries little term premium and almost no long-run growth speculation — both of which dilute the signal in the 10-year. When 2-year yields hit a cycle high on the same day oil spikes, it means traders think the Fed will treat this as inflationary fuel for a hike, not a demand shock that a cut could offset. Nine of 18 FOMC officials already projected at least one 2026 hike in their dot-plot submissions, and the committee revised its year-end inflation forecast up to 3.6%.",
-      "What most people miss is that a hike doesn't actually fix an oil-driven inflation problem — raising rates doesn't add a single barrel of crude to the market. The Fed's real target is the expectations channel: if households and firms start assuming higher gas prices will persist and get baked into wage and pricing decisions, that's when a supply shock becomes a demand-side inflation problem the Fed can address. This is the same logic that split the FOMC during 1970s oil shocks, when policymakers debated whether tightening into an energy-driven CPI spike would just add a recession on top of a supply problem without curing the inflation.",
-      "That's the lens for reading Tuesday and Wednesday. A hot core CPI print combined with a hawkish Warsh testimony would validate the 70% hike odds already priced in, likely pushing 2-year yields higher still, which is exactly the channel that hit gold Monday — real yields up, opportunity cost of holding a non-yielding asset up, price down, even amid a live war. A softer core print or a more cautious Warsh would do the opposite, and the assets most levered to that surprise — long-duration tech, gold, and the front end of the curve — are the ones to watch first."
+      "Taiwan Semiconductor did not miss today — it posted a 77% jump in annual earnings, the kind of number that would normally send a stock higher. Instead, shares fell more than 4% and dragged the Nasdaq 100 down 1.5%, because the headline that moved the market wasn't the quarter that already happened, it was the $60-$64 billion capex guide for the year ahead, up from $52-$56 billion. When a company's forward spending plan overshadows its trailing results, it tells you the market has already priced in the good quarter and is now trying to underwrite the next one.",
+      "Capital expenditure is cash spent today on plant, equipment, and fabs that doesn't hit the income statement immediately — it gets capitalized on the balance sheet and depreciated over years. Raising a capex budget by roughly $10 billion means locking in higher depreciation charges for years to come, which compresses future free cash flow and net margins unless the extra capacity actually generates proportionally more revenue. Investors aren't punishing TSMC for spending money; they're repricing the probability that the AI buildout's return on invested capital comes in lower than what's already baked into the stock.",
+      "This is the same skepticism playing out across the AI supply chain, and it's why Alphabet's Gemini 3.5 Pro delay hit the ticker the same day: Google's own capex spend is justified internally by a product roadmap, and when that roadmap slips, the return timeline for the capex slips with it. Historically, this pattern shows up whenever an industry over-invests ahead of demand — telecom in 1999-2000 laid enormous fiber capacity that took a decade to fill, and the stocks that spent fastest fell hardest once the market stopped extending them credit on faith alone.",
+      "For a portfolio, the read-through is that earnings beats and capex guides need to be evaluated separately, not netted together in a headline reaction. A name can beat consensus and still de-rate if the capex-to-revenue ratio is rising faster than the growth it's meant to fund — which is the exact metric to track across TSMC, its equipment suppliers, and the hyperscalers through the rest of this earnings season, especially with chip names already down six straight sessions into today's move."
     ]
   }
 }
