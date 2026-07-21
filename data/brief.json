@@ -1,87 +1,63 @@
 {
-  "lastUpdated": "2026-07-21T08:00:19-06:00",
+  "lastUpdated": "2026-07-21T16:37:43-06:00",
   "market": {
-    "sp500": {
-      "price": "7481",
-      "change": "+0.51%",
-      "dir": "up"
-    },
-    "nasdaq": {
-      "price": "28989",
-      "change": "+1.34%",
-      "dir": "up"
-    },
-    "yield": {
-      "price": "4.64%",
-      "change": "+4 bps",
-      "dir": "down"
-    },
-    "wti": {
-      "price": "$85",
-      "change": "+3.01%",
-      "dir": "up"
-    },
-    "gold": {
-      "price": "$4055",
-      "change": "+0.10%",
-      "dir": "up"
-    },
-    "dxy": {
-      "price": "101.07",
-      "change": "+0.10%",
-      "dir": "up"
-    }
+    "sp500": { "price": "7,509", "change": "+0.89%", "dir": "up" },
+    "nasdaq": { "price": "29,022", "change": "+1.5%", "dir": "up" },
+    "yield": { "price": "4.59%", "change": "-1 bp", "dir": "up" },
+    "wti": { "price": "$84", "change": "+2.2%", "dir": "up" },
+    "gold": { "price": "$4,083", "change": "+1.9%", "dir": "up" },
+    "dxy": { "price": "100.92", "change": "-0.03%", "dir": "flat" }
   },
   "stories": [
     {
-      "cat": "GEOPOLITICS",
-      "headline": "OIL WHIPSAWS above $90 AS US-IRAN STRIKES CONTINUE, THEN PARES ON HOPES FOR A DIPLOMATIC OFF-RAMP",
-      "body": "WTI and Brent both spiked more than 3% intraday after fresh US-Iran military exchanges over the weekend, including a strike on a Kuwaiti oil facility and Iranian attacks on vessels transiting the Strait of Hormuz, before paring those gains as Iran's foreign ministry said it had received new mediator proposals. WTI settled near $82 a barrel (-0.34%) and Brent near $87.72 (-0.44%), with US gas prices still elevated near $4 a gallon.",
-      "explain": "Oil futures price a continuously updated 'war risk premium' - essentially the market's probability-weighted estimate of a supply disruption times how bad that disruption would be - so every new headline about strikes or mediation resets that estimate in real time, even though no physical barrel has yet stopped moving. That's why crude could touch $90-plus intraday and still close nearly flat: the premium that built on escalation headlines unwound just as fast once a credible off-ramp appeared, which is the signature of a risk-premium move rather than an actual supply shock."
+      "cat": "MARKETS",
+      "headline": "NASDAQ 100 TOPS 29,000 FOR THE FIRST TIME AS MEMORY-CHIP REBOUND POWERS A BROAD RALLY",
+      "body": "The Dow rose 385 points (+0.74%) to 52,224.64, the S&P 500 gained 0.89% to 7,509.20, and the Nasdaq 100 jumped 1.5% to 29,022 as a memory-led semiconductor rally - the Philadelphia Semiconductor Index rose about 5.2% - pushed the tech-heavy index past 29,000 for the first time. Micron surged roughly 10-12% and Sandisk soared 14% after Morgan Stanley predicted memory prices could rise 25% on sustained AI demand, while AMD added another 5-8% on top of its Microsoft AI deal gains.",
+      "explain": "This is a supply-side bet on the AI trade, not a broad risk-on move: DRAM and HBM are the specific inputs hyperscalers need for training clusters, so a bank forecasting a 25% memory-price increase is really forecasting that AI capex keeps converting into physical chip orders rather than staying a spending promise. That's why the rally concentrated so heavily in memory names - Micron, Sandisk - instead of spreading evenly across tech, and why it happened even as headlines about the Iran conflict kept running in the background."
     },
     {
-      "cat": "MARKETS",
-      "headline": "S&P 500 SLIPS TO 7,443 AS APPLE'S SLIDE OFFSETS A CHIP-STOCK REBOUND THAT LIFTED THE NASDAQ 100 0.4%",
-      "body": "The Dow fell 307 points (-0.59%) to 51,839 and the S&P 500 slipped 0.19% to 7,443.28 as Apple shares dropped more than 2%, even as the Philadelphia Semiconductor Index rallied roughly 2% out of Friday's bear-market close and the Nasdaq 100 gained about 0.4% to near 28,706 ahead of a heavy week of megacap tech earnings.",
-      "explain": "The divergence between a red S&P and a green Nasdaq 100 on the same day is a rotation signal, not a risk-on/risk-off one: money moved out of a mega-cap name seen as more exposed to tariff and demand risk and into beaten-down chipmakers seen as oversold after last week's 20%-plus drawdown. When index-level direction splits like this, it usually means investors are re-pricing which parts of tech deserve the AI premium rather than making a broad bet on the market as a whole."
+      "cat": "GEOPOLITICS",
+      "headline": "OIL EXTENDS ITS CLIMB AS US STRIKES ON IRAN ENTER A 10TH DAY, BUT EQUITIES LOOK RIGHT THROUGH IT",
+      "body": "WTI rose to $84.29 a barrel (+2.2%) and Brent climbed to $91.10 (+2.1%) after a tanker carrying oil products was reportedly struck near the Strait of Hormuz and Washington carried out its 10th consecutive day of strikes on Iran, yet the S&P 500 and Nasdaq both rallied hard on the same session.",
+      "explain": "The equity market's ability to shrug off a rising war-risk premium in oil is itself informative: traders are pricing this as a contained, tradeable disruption to a single commodity rather than a threat to broader corporate earnings or global growth, which is why capital rotated into chip stocks instead of out of risk assets entirely. That divergence would break quickly if the conflict escalated into an actual chokepoint closure at Hormuz, through which roughly a fifth of global oil supply transits daily."
     },
     {
       "cat": "CENTRAL BANKS",
-      "headline": "10-YEAR YIELD TICKS UP TO 4.56% AS THE OIL SHOCK COMPLICATES THE FED'S DISINFLATION STORY",
-      "body": "The 10-year Treasury yield edged up about 1 basis point to 4.56% (day high 4.57%) while the 2-year held near 4.21%, keeping the curve modestly upward-sloping as traders weighed whether a sustained run-up in oil prices could reverse the cooler-CPI trend that had been pulling yields lower.",
-      "explain": "Yields barely moved today because bond traders are treating the oil spike as a probability-weighted risk, not a locked-in cost increase - the same logic driving today's crude whipsaw. Energy costs flow into headline CPI faster than almost any other input, so if this week's mediation talks fail and oil's premium re-builds instead of unwinding, the Fed would be forced to choose between an inflation problem it just started to solve and a market that's priced disinflation as the base case."
+      "headline": "TREASURY YIELDS BARELY BUDGE AS TRADERS LOOK PAST OIL AND CHIPS TO NEXT WEEK'S FOMC MEETING",
+      "body": "The 10-year Treasury yield slipped about 0.6 basis points to 4.592% and the 2-year eased 1.1 basis points to 4.204%, holding a roughly 39-basis-point curve as investors turned toward the July 28-29 FOMC meeting - the second under Fed Chair Kevin Warsh, who has called current prices 'too high' even as June's dot plot lifted the Fed's own year-end PCE inflation forecast to 3.6% from 2.7% in March.",
+      "explain": "Barely-there yield moves on a day with a 2%-plus oil spike and a 1.5% Nasdaq 100 rally signal that bond traders see both as noise relative to the one variable that actually matters to them right now: whether Warsh's Fed treats sticky inflation or a cooling labor market as the bigger risk next week. A hawkish surprise would need oil's gain to look durable rather than headline-driven, which today's whipsaw pattern in crude does not yet support."
     },
     {
-      "cat": "EARNINGS",
-      "headline": "DRAM SURGE DRIVES THE CHIP REBOUND AS SK HYNIX'S US LISTING AND SAMSUNG'S SALES UPDATE LOOM THIS WEEK",
-      "body": "Memory chipmakers led Monday's semiconductor rebound ahead of Samsung's quarterly sales update and SK Hynix's planned US listing on Friday, with traders betting the AI infrastructure buildout still has room to run even after last week's steepest chip selloff in nearly a year.",
-      "explain": "A memory-led rebound is a specific bet on the AI supply chain rather than the AI theme broadly: DRAM and HBM pricing is the input hyperscalers need most for training clusters, so a supply-side catalyst like a major producer's US listing directly tests whether the market still believes capex converts into durable chip demand. That distinction matters heading into this week's megacap earnings, since any disappointment on AI infrastructure spending guidance would hit memory names hardest, having just rallied hardest on the opposite bet."
+      "cat": "TRADE",
+      "headline": "BRAZIL'S 25% TARIFF HITS WEDNESDAY AS THE WHITE HOUSE TEASES MORE TRADE ACTION 'SOON'",
+      "body": "A 25% US tariff on most imports from Brazil takes effect Wednesday, July 22 - the first strike in what USTR has signaled will be a broader rollout after proposing Section 301 duties of 10-12.5% on roughly 60 countries and the EU over forced-labor findings, with the White House indicating Tuesday that additional trade actions are coming 'soon' as it works to rebuild a global tariff regime.",
+      "explain": "A tariff's economic incidence - who actually eats the 25% - splits between the foreign exporter (via a lower pre-tariff price), the US importer (via compressed margins), and the American consumer (via a higher shelf price), and the split is set by relative price elasticities on each side, not by who wrote the check to Customs. Brazil supplies a meaningful share of US coffee, orange juice and beef imports, categories where US buyers have limited fast substitutes, so economists expect more of this particular tariff to pass through to US prices than the incidence split typically seen in tariffs on goods with easy substitute suppliers."
     },
     {
       "cat": "COMMODITIES",
-      "headline": "GOLD HOLDS ABOVE $4,000 AS INVESTORS BRACE FOR A HEAVY WEEK OF MEGACAP TECH EARNINGS",
-      "body": "Gold slipped a marginal 0.06% to about $4,010 an ounce, holding above the psychological $4,000 level even as Middle East violence continued, while attention shifted to a slate of megacap technology earnings due later this week.",
-      "explain": "Gold's near-flat print despite an active war is a stalemate between offsetting forces: real war-risk demand for a safe haven is being met by a slightly firmer dollar and a Fed rate path that's still murky enough to raise the opportunity cost of holding a zero-yield asset. A decisive break in either direction from here - not today's rounding error - would signal which force, war risk or rate expectations, the market thinks is going to win out."
+      "headline": "GOLD HOLDS ABOVE $4,000 AS INVESTORS WEIGH WAR-RISK DEMAND AGAINST A STEADY DOLLAR AHEAD OF THE FED",
+      "body": "Gold rose to $4,083 an ounce (+1.9%), holding comfortably above the psychological $4,000 level as safe-haven buying tied to the Iran conflict outweighed a nearly flat US Dollar Index (100.92, -0.03%) heading into next week's FOMC decision.",
+      "explain": "Gold pays no yield, so its price is set by the tug-of-war between real demand for a hedge against war or inflation risk and the opportunity cost of holding a zero-coupon asset while Treasury yields sit near 4.6%. Today's gain despite a flat dollar and only marginally lower yields suggests the war-risk side of that trade is currently doing more work than the rates side - a dynamic that would likely reverse fast if next week's FOMC delivers a meaningfully hawkish surprise."
     },
     {
       "cat": "MCBB",
-      "headline": "OHIO JUDGE REFUSES TO PAUSE 5-IN-5 RULING AS MORE THAN 45 SENIORS - INCLUDING DONOVAN DENT - SUE FOR A FINAL YEAR OF ELIGIBILITY",
-      "body": "A federal judge in Ohio denied the NCAA's motion to stay its preliminary injunction pending appeal, keeping the original 15 plaintiffs eligible to play a fifth season in 2026-27 while the NCAA's appeal proceeds; a separate suit filed Friday in California adds more than 45 graduated seniors - including previously-retired guard Donovan Dent - seeking the same eligibility. St. John's also confirmed forward Donnie Freeman will miss next season with an Achilles injury suffered in a workout."
+      "headline": "MICHIGAN AD WARDE MANUEL TO STEP DOWN AT YEAR-END AFTER MONTHS-LONG ATHLETICS DEPARTMENT INVESTIGATION",
+      "body": "Michigan announced Monday that athletic director Warde Manuel will step down at the end of the calendar year following an internal investigation into the athletics department, a departure that comes despite national championships in both football and basketball on his watch and hands his successor the job of evaluating first-year men's basketball coach Mike Boynton, who signed a team-friendly two-year deal after Dusty May's late-offseason exit to the NBA."
     },
     {
       "cat": "NBA",
-      "headline": "WARRIORS WIN NBA SUMMER LEAGUE TITLE AS YAXEL LENDEBORG'S 21 AND 10 EDGES CAMERON BOOZER'S GRIZZLIES 94-90",
-      "body": "No. 11 pick Yaxel Lendeborg scored 21 points and grabbed 10 rebounds to earn Summer League MVP as Golden State beat Memphis and No. 3 pick Cameron Boozer 94-90 Sunday night in Las Vegas, capping an offseason otherwise dominated by the blockbuster trade sending Giannis Antetokounmpo and Bobby Portis to Miami for Tyler Herro and a package of picks."
+      "headline": "PISTONS' CONTRACT TALKS WITH FREE AGENT CENTER JALEN DUREN REPORTEDLY AT A 'STANDSTILL'",
+      "body": "ESPN's Ramona Shelburne reported that Detroit's negotiations with restricted free agent Jalen Duren have stalled and could stretch deep into August, even as Pistons officials continue to call re-signing him the offseason's top priority after reshaping the roster around him - acquiring Taurean Prince and Gary Harris from Milwaukee for Caris LeVert, and re-signing forward Javonte Green to a one-year, $3.95 million deal."
     },
     {
       "cat": "NFL",
-      "headline": "KHOSLA FAMILY'S RECORD $9.612 BILLION SEAHAWKS PURCHASE AWAITS AN AUGUST OWNERS' VOTE AS CAMPS OPEN LEAGUE-WIDE",
-      "body": "NFL owners are expected to meet in August to ratify the Khosla family's record $9.612 billion agreement to buy the defending Super Bowl champion Seahawks, as rookies for the 49ers and other clubs report to training camp this week and the Cardinals and Panthers prepare to open camp ahead of the Aug. 6 Hall of Fame Game."
+      "headline": "TRAINING CAMPS OPEN LEAGUE-WIDE AS DOLPHINS, PACKERS LOCK UP DEFENSIVE STARTERS WITH NEW EXTENSIONS",
+      "body": "All 32 NFL teams are set to report to training camp by July 28 - the Cardinals and Panthers already underway ahead of the Aug. 6 Hall of Fame Game - as Miami signed linebacker Jordyn Brooks to a three-year, $51.3 million extension and Green Bay locked up defensive tackle Devonte Wyatt for three years and $57 million; Carolina's Taylor Moton will open camp on the reserve/NFI list after being diagnosed with a lung blood clot in June."
     },
     {
       "cat": "NCAA CFB",
-      "headline": "SEC MEDIA DAYS OPEN IN TAMPA WITH SANKEY'S STATE-OF-THE-CONFERENCE ADDRESS AS LANE KIFFIN'S LSU DEBUT STILL LOOMS",
-      "body": "SEC commissioner Greg Sankey opened four days of Media Days in Tampa on Monday, with Kentucky's Will Stein, Missouri's Eliah Drinkwitz, Oklahoma's Brent Venables and Tennessee's Josh Heupel taking the podium as the conference enters its first-ever nine-game schedule and a third straight season without a national title; Lane Kiffin's first appearance as LSU's coach and Arch Manning's Texas spotlight headline later in the week."
+      "headline": "SEC MEDIA DAYS DAY TWO: KIRBY SMART'S GEORGIA TAKES THE TAMPA STAGE AS THE CONFERENCE OPENS ITS FIRST NINE-GAME SLATE",
+      "body": "Georgia's Kirby Smart headlined Tuesday's SEC Media Days session alongside Auburn's Alex Golesh, South Carolina's Shane Beamer and Vanderbilt's Clark Lea, with the conference kicking off a nine-game schedule for the first time as it chases a national title after two straight seasons without one; Lane Kiffin's first appearance as LSU's coach and Arch Manning's Texas spotlight are still ahead later in the week."
     }
   ],
   "sports": [
@@ -89,47 +65,47 @@
       "team": "WASHINGTON HUSKIES FOOTBALL",
       "pill": "OFFSEASON",
       "pillClass": "s-up",
-      "detail": "Jedd Fisch is calling plays himself after OC Jimmie Dougherty departed in February, while commits kept shining at summer camps per UW's July 19 recruiting roundup. Season opens with the Boeing Apple Cup vs. Washington State, Sunday, Sept. 6 (1 p.m. PT, NBC) at Husky Stadium."
+      "detail": "Jedd Fisch remains in a quiet recruiting period while calling plays himself after OC Jimmie Dougherty's February departure; 4-star WR commit Tre Moore has been turning heads at summer 7v7 events. Season opens with the Boeing Apple Cup vs. Washington State, Sunday, Sept. 6 (1 p.m. PT, NBC) at Husky Stadium."
     },
     {
       "team": "WASHINGTON HUSKIES BASKETBALL",
       "pill": "OFFSEASON",
       "pillClass": "s-up",
-      "detail": "Danny Sprinkle is rebuilding through the transfer portal after a 16-17 finish and Zoom Diallo's departure, with Rainier Beach's Jaylen Petty among the portal targets and the Huskies in the mix for a top-ranked 2026 recruit's decision. Center Hannes Steinbach went 14th overall to Charlotte in the 2026 NBA Draft."
-    },
+      "detail": "Danny Sprinkle is rebuilding through the transfer portal after a 16-17 finish and Zoom Diallo's departure, landing Croatian forward Boris Tisma while continuing to pursue Rainier Beach's Jaylen Petty. Center Hannes Steinbach went 14th overall to Charlotte in the 2026 NBA Draft."
+      },
     {
       "team": "SEATTLE SEAHAWKS",
       "pill": "SALE PENDING",
       "pillClass": "s-up",
-      "detail": "NFL owners are expected to vote in August on the Khosla family's record $9.612 billion purchase of the defending Super Bowl champions. Rookies reported to the Virginia Mason Athletic Center July 17; OLB Derick Hall signed a three-year extension and Seattle added veteran tackle Bobby Hart for camp depth."
+      "detail": "HBO dropped the trailer for 'Hard Knocks: Training Camp with the Seattle Seahawks' (premieres Aug. 11) as the defending Super Bowl champs opened camp; safety Nick Emmanwori was placed on the PUP list but a team source called it no major concern. NFL owners still expected to vote in August on the Khosla family's record $9.612 billion purchase."
     },
     {
       "team": "DETROIT PISTONS",
       "pill": "OFFSEASON",
       "pillClass": "s-up",
-      "detail": "Detroit closed a rough 2026 Summer League with a 101-87 finale loss to Miami, but the bigger story is Jalen Duren's extension talks gaining 'momentum' after the Caris LeVert-to-Milwaukee trade freed cap space for a reported five-year deal worth up to $287 million."
+      "detail": "Contract talks with free agent center Jalen Duren have reportedly hit a 'standstill' and could drag into August, even after Detroit freed cap space by sending Caris LeVert to Milwaukee for Taurean Prince and Gary Harris and re-signing Javonte Green for one year."
     },
     {
       "team": "SEATTLE MARINERS",
-      "pill": "50-50",
-      "pillClass": "s-up",
-      "detail": "Seattle beat the Giants 6-3 Sunday to reach .500 on the season and opens a three-game set at home against Cincinnati tonight, 9:40 p.m. PT at T-Mobile Park (George Kirby vs. Andrew Abbott). Texas leads the AL West at just 50-49, so the Mariners sit right in the middle of a jammed division and wild-card race."
+      "pill": "1ST AL WEST",
+      "pillClass": "s-w",
+      "detail": "Seattle routed Cincinnati 8-0 Monday behind Cal Raleigh's sixth career grand slam and a three-hitter from George Kirby and the bullpen, improving to 51-50 and taking over first place in the AL West. Mariners close the series tonight, 9:40 p.m. PT at T-Mobile Park (Luis Castillo vs. Chase Burns)."
     }
   ],
   "watchlist": [
-    "Megacap tech earnings kick off later this week - AI infrastructure spending guidance will set the tone after last week's chip bear market and today's rebound",
-    "Watch for a durable Strait of Hormuz de-escalation - Iran's foreign ministry signaled openness to mediator proposals; a real ceasefire would let oil unwind its war-risk premium",
-    "Mariners host Reds tonight, 9:40 p.m. PT at T-Mobile Park - Seattle at .500 with Kirby on the mound",
-    "NFL owners expected to vote in August on the Khosla family's $9.612B Seahawks purchase",
-    "SEC Media Days run through Thursday in Tampa - Lane Kiffin's first LSU appearance and Arch Manning's spotlight still ahead"
+    "FOMC meets July 28-29 - the second meeting under Fed Chair Kevin Warsh, whose June dot plot lifted the year-end PCE inflation forecast to 3.6%",
+    "Brazil's 25% US tariff takes effect Wednesday, July 22 - first move in a broader Section 301 rollout USTR has teased for weeks",
+    "Mariners close a home series vs. Reds tonight, 9:40 p.m. PT at T-Mobile Park - Seattle (51-50) just took first in the AL West",
+    "SEC Media Days run through Thursday in Tampa - Lane Kiffin's first LSU appearance and Arch Manning's Texas spotlight still ahead",
+    "Megacap tech earnings continue this week - will test whether today's memory-led Nasdaq 100 rally to 29,022 has legs"
   ],
   "deepDive": {
-    "title": "The Geopolitical Risk Premium: How a $90 Oil Spike Unwinds in a Single Session",
+    "title": "Tariff Incidence: Who Actually Pays When a 25% Levy Hits Brazilian Imports?",
     "content": [
-      "Today's oil market was a puzzle on its face: WTI touched near $90 a barrel and Brent topped $91 intraday on fresh US-Iran strikes, then both closed essentially flat to down - WTI near $82 (-0.34%), Brent near $87.72 (-0.44%) - even as gas at the pump held near $4 a gallon and the fighting itself didn't stop. Nothing about physical supply changed in the few hours between the spike and the close. What moved was the market's read on the odds that supply actually gets disrupted, which is a different and much faster-moving variable than supply itself.",
-      "That variable is the geopolitical risk premium, and it prices roughly like an insurance contract: expected cost equals the probability of a disruption times how severe that disruption would be if it happens, re-estimated continuously as headlines arrive. A strike on a Kuwaiti oil facility or an attack on a tanker in the Strait of Hormuz raises that probability sharply, so futures jump before a single barrel stops moving. When Iran's foreign ministry said today it had received new mediator proposals, the probability side of that equation dropped just as fast, and the premium came out of the price almost as quickly as it went in.",
-      "This is a different animal from an actual supply shock, and history shows the two resolve on very different timelines. The 1990 Gulf War saw oil spike and then collapse within months once the US-led coalition's odds of success became clear, while the 2019 Strait of Hormuz tanker seizures produced a sharper, shorter version of today's pattern - futures and war-risk insurance premiums spiked on the seizures themselves, then decayed over weeks as no broader blockade materialized. The tell in both cases, as today, is how fast the move reverses once the market's probability estimate changes, rather than whether the underlying conflict has actually ended.",
-      "That distinction is exactly what today's other two data points are quietly confirming. The 10-year yield rose just 1 basis point to 4.56% and gold barely budged, down 0.06% to about $4,010 - both are telling you the market still treats this as a probability-weighted risk rather than a locked-in, permanent cost increase to the economy. The number to watch this week isn't the oil price itself; it's whether this round of mediation talks produces a durable de-escalation that lets the premium stay out of the price, or whether a failed round sends oil right back toward $90 and forces the Fed to treat what looked transitory as something closer to a floor under inflation."
+      "Wednesday, a 25% US tariff on most goods from Brazil takes effect - the opening move in a broader Section 301 rollout that USTR has been signaling for weeks, with proposed duties of 10-12.5% still pending on roughly 60 more countries and the EU. It's tempting to read a tariff announcement as a straightforward tax on the foreign country named in the headline, but that's not how the economics actually work. The check gets written by the US importer at the border, and from there the cost of that 25% gets divided up between three parties - the Brazilian exporter, the US importer, and the American consumer - in shares that depend entirely on how substitutable the good is, not on which country's flag is on the press release.",
+      "That division is governed by relative price elasticities on each side of the transaction. If Brazilian exporters have few alternative buyers for their coffee or orange juice, they'll cut their pre-tariff price to keep US buyers from walking away, absorbing part of the cost themselves - that's a low elasticity of supply. If American consumers have easy substitutes - a different coffee origin, a domestic juice brand - retailers can't pass much of the tariff through without losing customers, so importers eat more of the margin hit themselves. The math works like a seesaw: whichever side can walk away more easily pays less, and the side that's stuck absorbs more.",
+      "Brazil is a useful case precisely because US buyers often can't walk away easily. The US imports a large share of its coffee, orange juice concentrate and beef from Brazil, and swapping to another origin takes time, contracts, and in some cases isn't possible at the volumes US roasters and beverage makers need. Economists who studied the 2018-2019 US-China tariffs found that nearly the full cost of those duties passed through to US import prices within months, because Chinese manufacturers had thinner margins to absorb losses and US buyers couldn't quickly resource elsewhere either - a similar dynamic is what analysts are watching for here.",
+      "That's the mechanism to watch as this rolls out this week: if Brazilian coffee and OJ futures barely move while US import prices for those goods jump close to the full 25%, that's the textbook high-pass-through outcome, and it will eventually show up as a small but real addition to headline CPI - a data point the Fed will be watching heading into next week's FOMC meeting, where Chair Warsh has already flagged inflation as 'too high.' If Brazilian producers instead cut prices meaningfully to hold onto US buyers, that tells you the elasticity story is more balanced than the coffee-and-OJ intuition suggests - and it's exactly the kind of granular, good-by-good pass-through data that turns a tariff headline into an actual inflation forecast."
     ]
   }
 }
