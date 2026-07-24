@@ -1,105 +1,80 @@
 {
-  "lastUpdated": "2026-07-23T16:39:36-06:00",
+  "lastUpdated": "2026-07-24T16:34:46-06:00",
   "market": {
-    "sp500": { "price": "7,408", "change": "-1.21%", "dir": "down" },
-    "nasdaq": { "price": "28,372", "change": "-2.2%", "dir": "down" },
-    "yield": { "price": "4.69%", "change": "+5 bps", "dir": "down" },
-    "wti": { "price": "$92", "change": "+6.0%", "dir": "up" },
-    "gold": { "price": "$4,046", "change": "-2.1%", "dir": "down" },
-    "dxy": { "price": "101.63", "change": "+0.5%", "dir": "up" }
+    "sp500":  { "price": "7,412",  "change": "+0.05%", "dir": "flat" },
+    "nasdaq": { "price": "28,060", "change": "-1.1%",  "dir": "down" },
+    "yield":  { "price": "4.68%",  "change": "-2 bps", "dir": "up"   },
+    "wti":    { "price": "$89",    "change": "-3.0%",  "dir": "down" },
+    "gold":   { "price": "$4,057", "change": "+0.3%",  "dir": "up"   },
+    "dxy":    { "price": "101.46", "change": "+0.01%", "dir": "flat" }
   },
   "stories": [
     {
       "cat": "GEOPOLITICS",
-      "headline": "OIL TOPS $100 A BARREL AS HOUTHIS STRIKE SAUDI TANKERS AND TRUMP WARNS OF 'MAJOR MILITARY PUNISHMENT'",
-      "body": "Brent crude broke above $100 a barrel for the first time since May 26 (settling near $100.65, +7.0%) and WTI settled at $92.19 (+6.0%) after Houthi forces fired missiles and drones at two Saudi-flagged tankers transiting the Red Sea, enforcing a blockade of Saudi ports the group declared earlier this week. President Trump said the US would hold Iran responsible for further Houthi attacks and warned of 'major military punishment' if tankers are targeted again.",
-      "explain": "The jump reflects a chokepoint risk premium: with roughly a fifth of global seaborne oil transiting Hormuz and a meaningful share moving through Bab el-Mandeb, traders reprice crude the moment a credible blockade threat appears, long before a single barrel is actually rerouted or lost. Breaching the psychologically important $100 level matters because options and futures positioning tends to cluster around round numbers, so the move can attract momentum buying independent of the underlying supply math. Trump's explicit escalation warning raises the stakes further - it signals the US may respond kinetically rather than just diplomatically, which is exactly the kind of tail-risk scenario that keeps a war premium embedded in the price even if no additional tankers are hit this week."
-    },
-    {
-      "cat": "MARKETS",
-      "headline": "STOCKS SINK AS ALPHABET DROPS 7% ON CAPEX GUIDANCE AND TESLA TUMBLES ON MARGIN WORRIES",
-      "body": "The S&P 500 fell 1.21% to 7,408.30, the Nasdaq 100 dropped about 2.2%, and the Dow lost 507 points (-0.97%) to 51,711.65 in the tech-heavy index's worst session in weeks. Alphabet slid roughly 7% despite beating Q2 estimates after guiding 2026 capex to $195-205 billion - rising 'significantly' in 2027 - and posting negative free cash flow for the first time in its public history; Tesla fell sharply despite record vehicle sales as investors focused on weaker profitability.",
-      "explain": "Alphabet's selloff despite beating estimates shows the market separating AI capex as an expense from AI capex as a proven revenue driver - investors are punishing spending they can't yet underwrite a return on, especially now that it is eating into free cash flow rather than just the income statement. Tesla's drop on record volume tells a similar story from a different angle: unit growth without margin expansion doesn't satisfy a market that has re-priced growth stocks around profitability discipline this earnings season. Both moves are the same underlying repricing - traders are demanding evidence of returns on AI and EV capital spending now, not a promise of returns years out."
+      "headline": "OIL TUMBLES ON REPORTS OF PAKISTAN-BROKERED IRAN TALKS AS TRUMP WEIGHS DEEPER STRIKES",
+      "body": "Brent crude fell nearly 4% to settle at $96.78 a barrel and WTI dropped 3.0% to $89.31 after Reuters reported Pakistan, backed by China, is exploring a path to restart stalled US-Iran talks - even as the New York Times reported Trump met his national security team Friday to weigh escalating US strikes on Iran for a 13th straight day. It was Brent's biggest one-day drop since late June.",
+      "explain": "The reversal shows how much of oil's run toward $100 this week was a war-risk premium rather than an actual supply loss - the moment traders saw a credible off-ramp, that premium unwound almost as fast as it built, even though not a single barrel of physical flow has changed yet. Futures and options price geopolitical risk asymmetrically: bad news gets priced in immediately on fear of worse to come, while de-escalation headlines get discounted more slowly until confirmed, which is why today's drop only unwound about a third of the week's gain. For a market watching next week's FOMC, cheaper oil is a genuine relief valve - it strips out the freshest inflationary impulse the Fed would otherwise have had to weigh six days before its decision."
     },
     {
       "cat": "CENTRAL BANKS",
-      "headline": "TREASURY YIELDS CLIMB AND JULY RATE-HIKE ODDS RISE AS OIL-DRIVEN INFLATION FEARS BUILD INTO NEXT WEEK'S FOMC",
-      "body": "The 10-year Treasury yield rose about 5 basis points to 4.69% and the 2-year climbed above 4.25% as CME FedWatch odds of a hike at the July 28-29 meeting - Fed Chair Kevin Warsh's second - pushed toward the mid-30% range, up from just 18% earlier this month. Warsh's early-July comment that 'prices are too high' continues to frame the debate as today's oil spike hands hawks a fresh data point six days before the decision.",
-      "explain": "A hike this cycle would be unusual - most of this FOMC's internal debate has centered on cutting given a cooling labor market - so the rising probability signals traders think sticky inflation is now outweighing employment risk in the committee's calculus. Oil's move into the CPI energy component typically shows up within one to two months, meaning today's spike could plausibly influence the inflation data the Fed is watching well before its September meeting. The market isn't pricing certainty here - odds are still under 50% - but the direction of travel, up from 18% to the mid-30s in three weeks, is itself the signal worth watching."
+      "headline": "FED HIKE ODDS FOR NEXT WEEK'S MEETING JUMP TO ROUGHLY 1-IN-3 AS INFLATION HAWKS GAIN GROUND",
+      "body": "Markets are now pricing roughly a one-in-three chance the Fed raises rates at its July 28-29 meeting under Chair Kevin Warsh, up from near 18% earlier this month, after Governor Lisa Cook flagged inflation running at 3.7% - nearly double the Fed's 2% target - and Vice Chair Philip Jefferson and Governor Christopher Waller both warned policy may need reconsidering if price pressures don't cool.",
+      "explain": "A hike is still the minority outcome, but the size of the swing - odds roughly doubling in three weeks - shows the committee's internal debate shifting from 'how many cuts' to 'do we even hold,' a meaningfully more hawkish reaction function than markets had priced entering July. Fed funds futures translate directly into a hike probability because each contract settles on the realized average rate for that month, so a jump in the implied yield on the July contract mechanically shows up as higher hike odds. Today's oil-driven relief in headline prices cuts the other way heading into the meeting, handing doves fresh ammunition just as the hawkish case looked to be building momentum."
     },
     {
-      "cat": "COMMODITIES",
-      "headline": "GOLD FALLS 2.1% EVEN AS WAR ESCALATES AND OIL SURGES, AS RISING YIELDS DOMINATE THE SAFE-HAVEN BID",
-      "body": "Gold slid to roughly $4,046 an ounce (-2.1%) even as Middle East tensions escalated and oil broke $100 a barrel - a combination that would normally be bullish for the metal - because rising Treasury yields (10-year +5 bps to 4.69%, 2-year above 4.25%) raised the opportunity cost of holding a non-yielding asset enough to overpower geopolitical hedge demand.",
-      "explain": "Gold pays no coupon, so its price is a pure read on how much investors are willing to sacrifice in foregone yield to hold a hedge - and today that sacrifice got more expensive at the same moment war risk rose. When nominal yields climb faster than inflation expectations, real yields rise, and gold's carrying cost climbs with them; that headwind proved stronger than the safe-haven bid from the Houthi escalation. It's a reminder that gold behaves less like a pure crisis hedge and more like a real-rate asset - it rallies hardest when yields fall alongside the fear, not simply whenever the fear shows up."
+      "cat": "MARKETS",
+      "headline": "CHIP STOCKS SINK NASDAQ 100 1.1% EVEN AS DOW REBOUNDS ON APPLE'S 3.5% RALLY",
+      "body": "The Nasdaq 100 fell about 1.1% to roughly 28,060 as Intel dropped 7.9% despite issuing a blockbuster revenue forecast and Sandisk tumbled nearly 11% alongside other memory names, while the Dow gained 0.46% to 51,947 and the S&P 500 finished essentially flat (+0.05% to 7,412) as Apple's 3.5% jump offset the semiconductor rout.",
+      "explain": "Intel selling off on a beat-and-raise is a valuation story, not an earnings story: when a stock trades at a premium built on AI-driven demand assumptions, guidance that's merely 'great' instead of 'extraordinary' can still disappoint expectations already baked into the price. The divergence between chips and blue chips also reflects rotation - money moving out of the most AI-capex-exposed names and into steadier cash-generative names like Apple - exactly the kind of sector dispersion that shows up when a market's leadership narrative starts to wobble without the index itself breaking down. Watch whether that rotation persists into next week's FOMC; a market nervous about both rate risk and AI-spending discipline at once tends to punish richly valued growth names hardest."
+    },
+    {
+      "cat": "MACRO",
+      "headline": "BOFA BULL & BEAR INDICATOR HITS ITS MOST BULLISH READING SINCE 2021, FLASHING A CONTRARIAN SELL SIGNAL",
+      "body": "Bank of America's closely watched Bull & Bear Indicator climbed to its highest level since 2021 this week, a threshold that has historically preceded market pullbacks, as investors pile into risk assets even while flagging concern over the scale of AI-related capital spending across megacap tech.",
+      "explain": "The indicator is a contrarian tool by design - it aggregates positioning, flows, and breadth, and BofA's own research triggers a 'sell' signal once extreme bullishness is reached, on the theory that when everyone who wants to be long already is, there's limited new buying power left to push prices higher. Its last comparable reading in 2021 preceded a significant multi-month correction, though the indicator has also given false signals during strong bull markets, so it's a warning about positioning fragility rather than a timing call. Paired with today's AI-capex anxiety and chip-sector weakness, it suggests the market's cushion against a negative surprise - on rates, on earnings, or on oil - is thinner than it's been in years."
     },
     {
       "cat": "MCBB",
-      "headline": "NCAA'S '5-IN-5' ELIGIBILITY CHAOS DEEPENS AS OHIO INJUNCTION RETURNS 15 PLAYERS FOR A FIFTH SEASON",
-      "body": "A July 9 Ohio state court injunction is forcing the NCAA to grandfather in 15 men's college basketball players who had exhausted eligibility under the old rules, reopening rosters that programs like Gonzaga, Texas Tech, and LSU had already finalized around now-departed seniors. The NCAA and its top conferences remain opposed to the ruling and are fighting it as more state and federal lawsuits are expected."
+      "headline": "5-STAR 2027 PG CAYDEN DAUGHTRY IGNITES BLUE-BLOOD BIDDING WAR AFTER RECORD-SHATTERING PEACH JAM",
+      "body": "Daughtry led the Florida Rebels to the Nike EYBL Peach Jam championship while averaging 32.3 points, 6.1 assists, 4.9 rebounds and 2.9 steals over his final eight games on 59% shooting, rocketing him to No. 3 in the 2027 class and setting off an active recruiting battle led by Kentucky, which extended an offer in May."
     },
     {
       "cat": "NBA",
-      "headline": "LEBRON JAMES TELLS LAKERS HE'S LEAVING FOR AN UNPRECEDENTED 24TH SEASON ELSEWHERE",
-      "body": "LeBron James has informed the Lakers he won't return for 2026-27, with agent Rich Paul saying there's no rush on a decision as the Cavaliers, Heat, 76ers, and Warriors circle. Lakers governor Jeanie Buss thanked James for eight seasons in LA, including the 2020 championship, as the Association's biggest offseason storyline remains unresolved."
+      "headline": "LEBRON JAMES SIGNS WITH 76ERS FOR HISTORIC 24TH SEASON, CALLS IT HIS 'LAST DECISION'",
+      "body": "James agreed to a two-year, $8 million deal with Philadelphia after telling the Lakers he wouldn't return, ending an eight-year run in LA that included the 2020 title; the 41-year-old four-time champion said he believes he can help make the 76ers 'a championship team' as he begins an unprecedented 24th NBA season."
     },
     {
       "cat": "NFL",
-      "headline": "PANTHERS LOSE SECOND-YEAR PASS RUSHER NIC SCOURTON TO A SEASON-ENDING ACL TEAR ON DAY ONE OF CAMP",
-      "body": "Carolina outside linebacker Nic Scourton, who posted 47 tackles and five sacks as a 2025 rookie starter, tore his ACL on a wet field during Thursday's first training camp practice - a major blow opposite newly signed edge rusher Jaelan Phillips as all 32 NFL teams open camp by July 28."
+      "headline": "PANTHERS' NIC SCOURTON TEARS ACL ON DAY ONE OF TRAINING CAMP AS ALL 32 TEAMS OPEN CAMP",
+      "body": "Carolina's second-year edge rusher, who posted 47 tackles and five sacks as a 2025 rookie starter, tore his ACL on a wet field during Thursday's opening practice - a major blow opposite newly signed Jaelan Phillips - as all 32 NFL teams report to camp by July 28, with Chiefs QB Patrick Mahomes separately confirming he's been cleared to practice after his December ACL/LCL tear."
     },
     {
       "cat": "NCAA CFB",
-      "headline": "CLEMSON ACCUSES OLE MISS'S PETE GOLDING OF TAMPERING AS NCAA OPENS INVESTIGATION AT SEC MEDIA DAYS",
-      "body": "Clemson coach Dabo Swinney used Day 3 of SEC Media Days to detail tampering allegations against Ole Miss's Pete Golding, accusing him of offering linebacker Luke Ferrelli - the ACC's reigning Defensive Rookie of the Year - a $1 million contract while Ferrelli was still on Clemson's roster. The NCAA has opened an investigation while Golding used his own media-day session to call out what he called hypocrisy around portal tampering leaguewide."
+      "headline": "SEC MEDIA DAYS WRAP IN TAMPA WITH LANE KIFFIN'S LSU DEBUT AND A THREE-YEAR TITLE DROUGHT LOOMING",
+      "body": "The four-day SEC Media Days closed Thursday in Tampa with LSU, Arkansas, Mississippi State and Texas taking the podium, headlined by Lane Kiffin's first appearance as LSU's coach after his move from Ole Miss; the conference enters its first nine-game schedule with six new head coaches and no national title since the 2022 season, as the Big Ten has won the last three championships."
     }
   ],
   "sports": [
-    {
-      "team": "WASHINGTON HUSKIES FOOTBALL",
-      "pill": "OFFSEASON",
-      "pillClass": "s-up",
-      "detail": "Jedd Fisch's staff landed a 4-star cornerback, the class's highest-rated commitment, while 4-star WR commit Tre Moore keeps drawing buzz at summer 7v7 events; Fisch remains the play-caller after OC Jimmie Dougherty's February departure. Season opens Sunday, Sept. 6 vs. Washington State (1 p.m. PT, NBC) at Husky Stadium."
-    },
-    {
-      "team": "WASHINGTON HUSKIES BASKETBALL",
-      "pill": "OFFSEASON",
-      "pillClass": "s-up",
-      "detail": "Danny Sprinkle remains on hot-seat watch after last season's 16-17 (7-13 Big Ten) finish as programs nationally navigate the NCAA's chaotic '5-in-5' eligibility fight reshaping rosters this summer. Center Hannes Steinbach, picked 14th overall by Charlotte in the 2026 NBA Draft, remains the program's headline offseason story."
-    },
-    {
-      "team": "SEATTLE SEAHAWKS",
-      "pill": "CAMP OPENS FRI",
-      "pillClass": "s-up",
-      "detail": "Full-squad training camp opens Friday with nine public practices running through Aug. 13. Seattle's entire 2026 draft class is under contract after signing first-rounder Jadarian Price; the team also added CB Brandon Johnson, waived TE Harrison Bryant, and placed RB Zach Charbonnet on the PUP list. Safety Nick Emmanwori, recovering from ankle surgery, is expected back by Week 1."
-    },
-    {
-      "team": "DETROIT PISTONS",
-      "pill": "OFFSEASON",
-      "pillClass": "s-up",
-      "detail": "CBS Sports handed Detroit a 'C' grade for an offseason that added Isaiah Joe, John Collins, Gary Harris, and Taurean Prince plus draft picks Ebuka Okorie and Ugonna Onyenso. Restricted free agent center Jalen Duren remains unsigned three-plus weeks into the market, with the Pistons' reported offer still below what he's eligible for. Detroit finished 60-22 last season (East's No. 1 seed) before falling to Cleveland in the conference semis."
-    },
-    {
-      "team": "SEATTLE MARINERS",
-      "pill": "L 3-5",
-      "pillClass": "s-l",
-      "detail": "Cincinnati beat Seattle 5-3 Wednesday as Sal Stewart's go-ahead three-run homer in the seventh sealed it, dropping the Mariners to 51-52. Seattle is off Thursday before opening a four-game series at the Texas Rangers on Friday, July 24."
-    }
+    { "team": "WASHINGTON HUSKIES FOOTBALL", "pill": "NEXT: 9/6 vs WSU", "pillClass": "s-up", "detail": "Landed 4-star CB Censere Gaylord as Jedd Fisch's staff fills out the class. Season opens with the Apple Cup vs. Washington State, moved to Sunday, Sept. 6 at Husky Stadium." },
+    { "team": "WASHINGTON HUSKIES BASKETBALL", "pill": "OFFSEASON", "pillClass": "s-up", "detail": "Croatian forward Boris Tišma committed as Danny Sprinkle rebuilds after a 16-17 season. Forward Hannes Steinbach went No. 14 to the Hornets in the 2026 NBA Draft." },
+    { "team": "SEATTLE SEAHAWKS", "pill": "CAMP OPEN", "pillClass": "s-up", "detail": "Defending Super Bowl LX champs opened camp Friday as veterans reported. Season opens Sept. 9 vs. New England in a Super Bowl rematch; several players and coaches attended Monday's Mariners game with the Lombardi Trophy." },
+    { "team": "DETROIT PISTONS", "pill": "60-22 (25-26)", "pillClass": "s-up", "detail": "Coming off a 60-win season, Detroit added Isaiah Joe, John Collins, Gary Harris and Taurean Prince (CBS gave the offseason a 'C'). RFA center Jalen Duren remains at a standstill with the team; talks could stretch into August." },
+    { "team": "SEATTLE MARINERS", "pill": "AT TEX 6:05 PM MT", "pillClass": "s-up", "detail": "Mariners (51-52) dropped the series to Cincinnati on Sal Stewart's go-ahead three-run homer in a 5-3 loss Wednesday, sitting one game back of Texas in the AL West. Bryce Miller (4-4, 2.27 ERA) starts tonight's series opener at Rangers." }
   ],
   "watchlist": [
-    "FOMC meets July 28-29 - Fed Chair Kevin Warsh's second meeting, with rate-hike odds up to the mid-30% range amid the oil-driven inflation scare",
-    "Iran/Houthi watch: Trump warns of 'major military punishment' for further tanker strikes; Brent trades above $100 for the first time since May 26",
-    "Mariners open a four-game series at the Texas Rangers Friday, July 24",
-    "Seahawks open full training camp Friday, July 24, with nine public practices through Aug. 13",
-    "NCAA's '5-in-5' eligibility fight heads back to court as more state and federal suits loom beyond the Ohio injunction"
+    "FOMC meeting Tuesday-Wednesday, July 28-29 — markets price roughly 1-in-3 odds of a hike under Chair Warsh",
+    "Big Ten Media Days begin Tuesday, July 28 in Chicago",
+    "Seahawks training camp runs through Aug. 13 ahead of the Sept. 9 opener vs. New England",
+    "Mariners at Rangers, first pitch tonight 8:05 PM ET / 6:05 PM MT",
+    "Jalen Duren-Pistons restricted free agency talks could stretch into August"
   ],
   "deepDive": {
-    "title": "Why Gold Fell on a Day War Escalated and Oil Broke $100",
+    "title": "How a Geopolitical Risk Premium Gets Priced Into Oil — and Unwound Just as Fast",
     "content": [
-      "Today's brief holds a genuine paradox: Middle East tensions escalated sharply, Brent crude broke through $100 a barrel for the first time in two months, and Treasury yields climbed on inflation fears - yet gold, the textbook crisis hedge, fell 2.1% to around $4,046 an ounce. That looks backward until you separate what gold actually is from what it's assumed to be. Gold is not one asset with one driver; it behaves like two different assets depending on which force is winning on a given day, and today the loser was the safe-haven story.",
-      "The mechanism runs through opportunity cost. Gold pays no coupon and no dividend, so holding it means giving up whatever a risk-free asset like the 10-year Treasury would have paid instead. When nominal yields rise - as they did today, with the 10-year up 5 basis points to 4.69% and the 2-year above 4.25% - and inflation expectations don't rise by as much, real yields climb. A higher real yield makes the income you're forfeiting by holding gold more expensive, which is a direct financial headwind on the metal, separate from and often stronger than whatever is happening in the news cycle that day.",
-      "History shows this real-yield relationship is more reliable than the headline-driven story most people default to. In 2022, gold stayed pinned near $1,800 for most of the year despite Russia's invasion of Ukraine, because the Fed was hiking aggressively and real yields were rising fast. Contrast that with 2020, when real yields went deeply negative during the pandemic response and gold rallied to then-record highs with no war anywhere in sight. The pattern in both cases is the same: gold moves with the direction of real rates first, and with crisis headlines only insofar as those headlines change the rate outlook.",
-      "That framework says something concrete about what to watch next. If Warsh's Fed leans hawkish at the July 28-29 meeting in response to oil-driven inflation risk, real yields could climb further and gold's rally could stay capped even if the Houthi-Saudi conflict worsens from here. The signal to track isn't the next escalation headline - it's the gap between nominal 10-year yields and breakeven inflation expectations. If nominal yields keep outrunning breakevens, gold stays under pressure regardless of what happens in the Red Sea; only a shift where inflation expectations catch up, or the Fed blinks toward cuts, would flip gold's setup back toward the safe-haven behavior most investors expect by default."
+      "Today's brief captures the whole cycle in one week: Brent flirted with $100 a barrel as Houthi strikes and a Red Sea blockade raised fears of a real supply disruption, then dropped almost 4% today the moment Reuters reported Pakistan, backed by China, was pushing to restart US-Iran talks. Nothing about the physical oil market changed between Thursday and Friday - no tanker was freed, no sanction was lifted - yet the price moved nearly $4 a barrel on a single sourced report. That gap between the size of the price move and the size of the underlying news is the signature of a risk premium doing exactly what it's supposed to do: repricing probability, not physical barrels.",
+      "Mechanically, a geopolitical risk premium lives in the front of the futures curve, because that's where supply disruptions would first show up in deliverable barrels. Traders essentially build a probability-weighted estimate: some chance of a Hormuz or Bab el-Mandeb closure that removes millions of barrels a day, multiplied by how severe and how long that closure might last, added on top of the 'fundamental' price justified by current supply and demand. When headlines raise the odds of disruption, the premium expands; when a credible de-escalation path appears, traders cut that probability estimate and the premium contracts - even though, as today showed, it rarely unwinds in full on one headline, since the underlying conflict hasn't actually resolved.",
+      "The clearest historical analog is the September 2019 Abqaiq-Khurais attack, which knocked out roughly 5% of global oil supply overnight and sent Brent up nearly 15% in a single session - the largest one-day jump on record at the time. Yet within three weeks, prices had round-tripped back to pre-attack levels once Saudi Arabia restored production faster than feared, even though the attack itself was real and the barrels genuinely went offline. That episode is the cleanest proof that oil's headline-driven moves are about revised expectations of future supply, not a simple tally of barrels lost today - a distinction that matters as much for a threatened blockade as for an actual strike.",
+      "For next week's FOMC, this mechanism has direct teeth: energy prices flow into headline CPI within one to two months, and this week's spike toward $100 had already become a talking point for hawks pushing for a July hike. Today's pullback to under $90 doesn't erase that data point, but it does soften the inflation case just six days before the meeting, giving doves something concrete to point to. The lesson for reading any oil headline going forward is the same one this week just demonstrated twice: ask whether the news changes the physical flow of barrels or just the market's estimate of the odds - because the price reaction to the second kind can be just as large, and just as reversible."
     ]
   }
 }
