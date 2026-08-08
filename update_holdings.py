@@ -67,10 +67,10 @@ def fetch_weight_order():
     """Fetch portfolio_weights.json from GitHub and return ordered ticker list."""
     try:
         import base64
-        req = urllib.request.Request(
-            WEIGHTS_URL,
-            headers={"Authorization": f"token {PAT}", "User-Agent": "update-holdings"},
-        )
+        headers = {"User-Agent": "update-holdings"}
+        if PAT:
+            headers["Authorization"] = f"token {PAT}"
+        req = urllib.request.Request(WEIGHTS_URL, headers=headers)
         resp = urllib.request.urlopen(req, timeout=10)
         data = json.loads(resp.read())
         weights = json.loads(base64.b64decode(data["content"]))
