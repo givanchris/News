@@ -23,7 +23,7 @@ WEIGHTS_URL = "https://api.github.com/repos/givanchris/News/contents/data/portfo
 
 FALLBACK_TICKERS = [
     "ALAB", "MRVL", "AMAT", "ASML", "COHR", "GOOG", "NVDA", "PLTR", "CEG",
-    "TCEHY", "MOG.A", "HOOD", "LEU", "ZBRA", "GRPN", "META", "BTC",
+    "TCEHY", "MOG.A", "HOOD", "LEU", "ZBRA", "GRPN", "AMZN", "SPCX", "BTC",
 ]
 
 NAMES = {
@@ -48,6 +48,8 @@ NAMES = {
     "NOW":   "ServiceNow",
     "GRPN":  "Groupon",
     "META":  "Meta Platforms",
+    "AMZN":  "Amazon",
+    "SPCX":  "SpaceX",
     "IBM":   "IBM",
     "BTC":   "Bitcoin",
 }
