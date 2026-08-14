@@ -1,87 +1,57 @@
 {
-  "lastUpdated": "2026-08-14T00:30:17-06:00",
+  "lastUpdated": "2026-08-14T00:43:32-06:00",
   "market": {
-    "sp500": {
-      "price": "7799",
-      "change": "+0.65%",
-      "dir": "up"
-    },
-    "nasdaq": {
-      "price": "30084",
-      "change": "+1.15%",
-      "dir": "up"
-    },
-    "yield": {
-      "price": "4.64%",
-      "change": "-4 bps",
-      "dir": "up"
-    },
-    "wti": {
-      "price": "$82",
-      "change": "+0.74%",
-      "dir": "up"
-    },
-    "gold": {
-      "price": "$4386",
-      "change": "+0.10%",
-      "dir": "up"
-    },
-    "dxy": {
-      "price": "99.84",
-      "change": "-0.04%",
-      "dir": "down"
-    }
+    "sp500": { "price": "7,799", "change": "+0.65%", "dir": "up" },
+    "nasdaq": { "price": "30,084", "change": "+1.15%", "dir": "up" },
+    "yield": { "price": "4.64%", "change": "-4 bps", "dir": "up" },
+    "wti": { "price": "$82", "change": "+0.74%", "dir": "up" },
+    "gold": { "price": "$4,386", "change": "+0.10%", "dir": "up" },
+    "dxy": { "price": "99.84", "change": "-0.04%", "dir": "down" }
   },
   "stories": [
     {
-      "cat": "GEOPOLITICS",
-      "headline": "OIL SPIKES ABOVE $83 ON IRAN IMPASSE, FADES TO $82 BY SETTLEMENT AS STRAIT OF HORMUZ STANDOFF DRAGS ON",
-      "body": "WTI crude touched above $83 a barrel intraday as Iran reiterated it will keep the Strait of Hormuz shut until its demands are met, before settling near $81.99, down about 0.2% on the day. The intraday round-trip left a persistent risk premium embedded in the forward curve even as the spot price cooled.",
-      "explain": "Roughly a fifth of global seaborne crude transits the Strait of Hormuz, so any escalation in the standoff forces traders to bid up near-dated contracts faster than the market can confirm whether flows are actually at risk \u2014 that's why the intraday spike outran the eventual settlement. The fade back to $82 doesn't mean the risk is gone; it means the premium shifted from a panic bid into the futures curve itself, which is exactly the kind of embedded volatility that can resurface hard if Wednesday's CPI print or fresh Iran headlines break the wrong way."
+      "cat": "MACRO",
+      "headline": "S&P 500 CLOSES AT RECORD ABOVE 7,800 AS COOL CPI EASES FED HIKE FEARS",
+      "body": "The S&P 500 notched a fresh closing record near 7,799 (+0.65%) Thursday after July CPI matched expectations, rising 0.1% month-over-month with the annual rate at 3.4% and core CPI up 0.2% (2.5% year-over-year). Fed-hike odds for the September 16 FOMC meeting fell to roughly 34% from about 55% a week earlier.",
+      "explain": "This cycle is unusual because the market had been pricing rate-HIKE risk, not cuts, since oil's spike on Strait of Hormuz tensions threatened to push headline inflation back up. A core CPI print landing in line with forecasts told the Fed's reaction function that the energy shock hasn't broadened into sticky services or goods inflation yet, so the FOMC has less justification to react preemptively. That's why hike odds collapsed by roughly 20 points on a report that was merely 'in line' rather than surprising — the market had been bracing for confirmation that inflation was accelerating, and got the opposite."
     },
     {
-      "cat": "MACRO",
-      "headline": "MARKETS BRACE FOR WEDNESDAY'S CPI, WITH HEADLINE SEEN COOLING TO 3.4% BUT CORE EXPECTED TO REBOUND",
-      "body": "The Bureau of Labor Statistics releases July CPI Wednesday at 8:30 AM ET, with headline inflation expected to ease to 3.4% year-over-year from June's 3.5%, while core CPI is forecast to rebound to +0.24% month-over-month after June's flat core reading. It's the last major data point before the September FOMC meeting.",
-      "explain": "The split matters more than either number alone: a cooling headline paired with a firming core would suggest June's soft core print was noise rather than a trend, which is the scenario the Fed's hawks \u2014 including voters pushing back on rate-cut bets \u2014 would seize on to argue disinflation is stalling. With oil's Strait of Hormuz premium sitting in the background, any upside surprise in the energy or core-goods components gets read as confirmation that geopolitical risk is starting to bleed into realized inflation, not just headline optics."
+      "cat": "GEOPOLITICS",
+      "headline": "OIL SLIDES OVER 2% ON DEMAND CUTS, THEN STABILIZES AS STRAIT OF HORMUZ RISK PREMIUM LINGERS",
+      "body": "WTI crude settled Thursday near $81.25, down more than 2%, after the IEA and OPEC both cut their 2026 demand growth forecasts — OPEC's fourth straight downward revision. Prices firmed back to around $82 in early Friday trading, with Brent holding near $87, as the underlying Iran-U.S. standoff over the Strait of Hormuz keeps a floor under the barrel.",
+      "explain": "Two forces are fighting for control of the oil tape right now: a weakening demand outlook pulling the spot price down, and a live supply-side risk premium tied to a chokepoint that carries roughly a fifth of global seaborne crude. When IEA/OPEC cut demand forecasts, that's a fundamental, slow-moving signal that traders can act on immediately by selling futures. But the Hormuz premium doesn't disappear with a soft demand print — it just gets re-priced into the curve, which is why the bounce back to $82 overnight shows the geopolitical bid reasserting itself even as the demand story stays bearish."
     },
     {
       "cat": "MARKETS",
-      "headline": "S&P 500 SLIPS 0.06% TO 7,753, NASDAQ 100 FALLS 0.40% AS ALPHABET SINKS AND TRADERS DE-RISK AHEAD OF CPI",
-      "body": "The S&P 500 closed at 7,753.11, down 0.06%, while the Nasdaq 100 fell 0.40% to roughly 29,503 as Alphabet shares sank and the US-Iran impasse kept a lid on risk appetite. Bending Spoons surged 15.7% ahead of its Q2 earnings and Datadog jumped 11.5% on a strong quarter and analyst upgrades.",
-      "explain": "The divergence between a resilient S&P and a weaker Nasdaq 100 signals investors are trimming exposure to the most rate- and growth-sensitive megacap tech names specifically, not de-risking broadly \u2014 consistent with positioning ahead of a CPI print that could move the September rate-cut odds that those richly-valued names are most sensitive to. Idiosyncratic earnings winners like Datadog and Bending Spoons show stock-picking is still rewarded even in a cautious tape, which is a useful signal that this is a positioning pause, not a broad risk-off move."
-    },
-    {
-      "cat": "MACRO",
-      "headline": "TREASURY YIELDS TICK UP TO 4.73% ON THE 10-YEAR AS TRADERS POSITION AHEAD OF INFLATION DATA",
-      "body": "The 10-year Treasury yield rose about 2 bps to 4.73% while the 2-year traded near 4.24%, with both ends of the curve edging higher as investors positioned defensively ahead of Wednesday's CPI release rather than committing to a directional bet.",
-      "explain": "A small, roughly parallel move across the curve \u2014 rather than a sharp front-end swing \u2014 signals the market isn't repricing Fed policy expectations yet; it's raising the term premium slightly to compensate for the binary uncertainty of tomorrow's data. That's the bond market equivalent of buying insurance: yields drift a touch higher into the event because a hot core print would force a faster repricing than a cool one, and the curve wants to be positioned for either outcome rather than caught flat-footed."
+      "headline": "10-YEAR YIELD EASES TO 4.64% AFTER TESTING 19-MONTH HIGH OF 4.75%",
+      "body": "The 10-year Treasury yield fell about 4 basis points to 4.64% (bond prices up), pulling back further from Tuesday's 19-month high of 4.75% that was driven by oil-fueled inflation fears. The retreat tracked Thursday's benign core CPI print more than any single catalyst.",
+      "explain": "A spike in oil futures raises near-term breakeven inflation expectations, which shows up directly in nominal Treasury yields even before the Fed says a word — that's the mechanism behind Tuesday's 4.75% high. Thursday's in-line core CPI let that inflation-risk premium partially unwind, since bondholders no longer had to price in as much probability that energy costs bleed into core services. The 4-bp move is small in absolute terms, but it's a real-time gauge of how much of the recent yield rise was 'geopolitical inflation fear' versus a genuine repricing of Fed policy — and today's answer is that most of it was fear, not policy."
     },
     {
       "cat": "COMMODITIES",
-      "headline": "GOLD SLIPS BELOW $4,400 AS PROFIT-TAKING AND A FIRMER DOLLAR OFFSET SAFE-HAVEN DEMAND",
-      "body": "Gold fell to about $4,367 an ounce, down 0.55%, giving back part of a recent rally as the dollar index firmed slightly to 99.84 and traders locked in gains after a month that has still seen gold rise more than 9%.",
-      "explain": "Gold is caught between two competing flows today: geopolitical and inflation-hedge demand tied to the Iran standoff and tomorrow's CPI, and a stronger dollar that makes gold more expensive for foreign buyers and reduces its relative appeal versus yield-bearing Treasuries. The pullback shows the profit-taking impulse won out today, but with gold still up over 30% year-over-year, the underlying hedging bid hasn't disappeared \u2014 it's just paused into the CPI print, the same way equities and bonds are."
+      "headline": "GOLD HOLDS NEAR $4,386, UP NEARLY 10% ON THE MONTH AHEAD OF FRIDAY'S PPI",
+      "body": "Gold ticked up 0.10% to about $4,386 an ounce, essentially flat on the day but still up close to 10% month-over-month, as investors positioned ahead of Friday's Producer Price Index report, the next data point the Fed will weigh before September.",
+      "explain": "Gold is pricing two things simultaneously: a safe-haven bid tied to the unresolved Strait of Hormuz standoff, and a real-yield calculation, since gold pays no interest and becomes relatively more attractive as inflation-adjusted Treasury yields fall. PPI matters here because it's a leading indicator for core PCE, the Fed's preferred inflation gauge — a hot PPI print would suggest today's cool CPI understated pipeline inflation pressure, which is exactly the kind of surprise that could reverse both the drop in Fed hike odds and gold's current holding pattern."
     },
     {
       "cat": "MCBB",
-      "headline": "COURT DENIES NCAA'S BID TO STAY ELIGIBILITY INJUNCTION AS NEW LAWSUIT ADDS MIAMI'S MALIK RENEAU, SOUTH CAROLINA'S MIKE SHARAVJAMTS",
-      "body": "A federal judge in Colorado denied the NCAA's motion to stay the preliminary injunction granting blanket fifth-year eligibility to athletes who began competing in 2022-23, and a fresh lawsuit filed in South Carolina by 17 football and men's basketball players \u2014 including Miami's Malik Reneau and South Carolina's Mike Sharavjamts \u2014 seeks to extend the same relief. Rosters across both sports remain in flux with the season 82 days out."
+      "headline": "FIFTH-YEAR ELIGIBILITY RULING TRIGGERS TRANSFER PORTAL CHAOS ACROSS COLLEGE HOOPS",
+      "body": "A federal judge's class-wide injunction granting an extra year of eligibility to athletes who began competing in 2022-23 opened a special transfer window from August 3-10, with Arizona, North Carolina, Tennessee and Gonzaga among the programs adding fifth-year players. Separately, the NCAA Tournament field will expand from 68 to 76 teams starting next season."
     },
     {
       "cat": "NBA",
-      "headline": "LEBRON JAMES SIGNS WITH 76ERS AFTER EIGHT SEASONS WITH THE LAKERS",
-      "body": "LeBron James agreed to join the Philadelphia 76ers in one of the biggest free agency moves of the offseason, ending an eight-year run in Los Angeles. Separately, Draymond Green re-signed with the Warriors on a one-year, $27.7M deal, and the NBA will unveil its full 2026-27 schedule Thursday at 3 PM ET on ESPN2."
+      "headline": "NBA RELEASES FULL 2026-27 SCHEDULE; RUSSELL WESTBROOK RETIRES",
+      "body": "The league unveiled its 2026-27 regular-season schedule Thursday, with the LeBron James- and Jaylen Brown-boosted 76ers landing a league-high 34 national TV appearances; the season opens Oct. 30 with a Knicks-76ers/Lakers-Warriors NBA Cup group-stage doubleheader. Nine-time All-NBA guard Russell Westbrook, the 2017 MVP, announced his retirement at 37."
     },
     {
       "cat": "NFL",
-      "headline": "TRAINING CAMP INJURY WAVE HITS LIONS AND JETS AS SEASON OPENERS DRAW NEAR",
-      "body": "The Detroit Lions lost starting center Cade Mays to a hand fracture and running back Isiah Pacheco to a torn MCL, while Jets CB Qwan'tez Stiggers was hospitalized after collapsing at practice, with his condition not yet disclosed. Elsewhere, Saints DE Cameron Jordan could open the season on the shelf with a hamstring injury."
+      "headline": "PRESEASON WEEK 1 KICKS OFF WITH SIX GAMES AS ROSTER MOVES PILE UP",
+      "body": "Six preseason openers were played Thursday night, including Lions-Bengals, Packers-Steelers and Chargers-Texans. The Broncos placed C Michael Deiter on injured reserve with a season-ending quad injury, Ravens LB Pernell McPhee officially retired as a member of the franchise, and Cardinals QB Carson Beck sat out with a rib injury."
     },
     {
       "cat": "NCAA CFB",
-      "headline": "PORTAL TREND: COACHES BRING THEIR OWN PLAYERS TO NEW PROGRAMS AS 2026 CAMPS OPEN",
-      "body": "New Oklahoma State coach Eric Morris brought 21 former North Texas players, including 4,379-yard passer Drew Mestemaker; Kyle Whittingham took Utah pass rusher John Henry Daley with him to Michigan; and new Penn State coach Matt Campbell's roster includes about two dozen former Iowa State players, led by QB Rocco Becht. Of 14,070 portal entrants this cycle, 3,685 hit the portal with 76% already committed."
+      "headline": "FALL CAMPS IN FULL SWING NATIONWIDE AS TEAMS SORT OUT QUARTERBACK BATTLES",
+      "body": "Programs from Ohio State to Texas A&M to Boston College are deep into fall camp, with quarterback competitions and portal-driven roster turnover the dominant storylines heading into the season. Ohio State and Alabama were among the teams cited for the biggest camp risers through the first week of practice."
     }
   ],
   "sports": [
@@ -89,47 +59,47 @@
       "team": "WASHINGTON HUSKIES FOOTBALL",
       "pill": "FALL CAMP",
       "pillClass": "s-up",
-      "detail": "Second week of fall camp underway in Seattle, with the defense a step ahead of the offense \u2014 interceptions in each of the last two practices \u2014 and DL Ta'ita'i Uiagalelei back on the field for Day 3 in pads. Season opener vs. Washington State (Apple Cup) is Sunday, Sept. 6, Husky Stadium."
+      "detail": "Fall camp opened Aug. 6 under third-year coach Jedd Fisch, with the offensive line returning four starters. Season opener is the Apple Cup vs. Washington State — Sunday, Sept. 6, 1 PM PT on NBC, Husky Stadium."
     },
     {
       "team": "WASHINGTON HUSKIES BASKETBALL",
       "pill": "ROSTER REBUILD",
       "pillClass": "s-up",
-      "detail": "UW loses top scorer Hannes Steinbach (drafted 14th overall by Charlotte) and No. 2 scorer Zoom Diallo (transferred to Kentucky); Wesley Yates III returns as the leading scoring option. Danny Sprinkle added Rutgers transfer Harun Zrno and NBA veteran Charles Klask to the staff as the Huskies rebuild in Year 2 of the Big Ten."
+      "detail": "UW loses top scorer Hannes Steinbach (drafted 14th overall by Charlotte) and No. 2 scorer Zoom Diallo (transferred to Kentucky); Wesley Yates III returns as the top scoring option as Danny Sprinkle rebuilds via the portal for Year 2 in the Big Ten."
     },
     {
       "team": "SEATTLE SEAHAWKS",
-      "pill": "HARD KNOCKS TONIGHT",
+      "pill": "PRESEASON SAT.",
       "pillClass": "s-up",
-      "detail": "HBO's Hard Knocks premieres tonight, 9 PM PT, following Seahawks camp for five weeks. Seattle signed LB Aaron Smith and placed FB Robbie Ouzts on IR; S Nick Emmanwori passed his physical and is off PUP. Preseason opener vs. Dallas is Saturday, Aug. 15, 5 PM PT, Lumen Field."
+      "detail": "Camp continued Thursday (Day 13) as the defending Super Bowl champions work on a contract with CB Terrion Arnold. Preseason opener is vs. the Dallas Cowboys — Saturday, Aug. 15, 5 PM PT, Lumen Field."
     },
     {
       "team": "DETROIT PISTONS",
-      "pill": "RFA STANDOFF",
+      "pill": "SCHEDULE RELEASED",
       "pillClass": "s-up",
-      "detail": "Restricted free agent Jalen Duren remains unsigned more than a month into free agency; Detroit has offered $35-38M per year while Duren is seeking a max deal north of $40M annually. No offer sheet from a rival has emerged, and reports suggest a rocky 2026 playoff showing has cooled the front office's urgency to pay him."
+      "detail": "Detroit released its 2026-27 schedule Thursday: regular-season opener Oct. 20 vs. Boston (nationally on NBC), preseason opener Oct. 5 vs. Phoenix. Offseason additions include John Collins, Isaiah Joe and No. 17 pick Ebuka Okorie."
     },
     {
       "team": "SEATTLE MARINERS",
-      "pill": "TONIGHT 7:05 PM ET",
-      "pillClass": "s-up",
-      "detail": "Seattle opens a series at Yankee Stadium tonight, 7:05 PM ET, looking to rebound after being swept by Tampa Bay over the weekend. The Mariners remain in a tight AL West race a handful of games back of Houston."
+      "pill": "W 1-0",
+      "pillClass": "s-w",
+      "detail": "Seattle beat the Yankees 1-0 Thursday at Yankee Stadium on Weston Wilson's second-inning homer off Max Fried — the Mariners' first 1-0 win there since Felix Hernandez in 2012. The series continues as Seattle chases a wild-card spot currently held by New York, Boston and Texas."
     }
   ],
   "watchlist": [
-    "CPI report \u2014 Wednesday, Aug. 12, 8:30 AM ET \u2014 headline seen cooling to 3.4% YoY, but core expected to rebound to +0.24% MoM",
-    "Mariners at Yankees \u2014 Tuesday, Aug. 11, 7:05 PM ET, Yankee Stadium",
-    "NBA full 2026-27 schedule release \u2014 Thursday, Aug. 13, 3 PM ET, ESPN2",
-    "Seahawks preseason opener vs. Cowboys \u2014 Saturday, Aug. 15, 5 PM PT, Lumen Field",
-    "Jalen Duren-Pistons restricted free agency standoff \u2014 stretching deep into August with a $35-38M offer on the table against Duren's max ask"
+    "PPI report — Friday, Aug. 14, 8:30 AM ET — next inflation data point ahead of the Sept. 16 FOMC decision",
+    "Seahawks preseason opener vs. Cowboys — Saturday, Aug. 15, 5 PM PT, Lumen Field",
+    "Naismith Basketball Hall of Fame Class of 2026 Enshrinement Weekend — Aug. 14-15",
+    "Mariners at Yankees — series continues, Seattle chasing an AL wild-card spot",
+    "Huskies season opener (Apple Cup vs. Washington State) — Sunday, Sept. 6, 1 PM PT, Husky Stadium"
   ],
   "deepDive": {
-    "title": "The Anatomy of a Geopolitical Risk Premium: Why WTI Spiked Above $83 and Faded Back to $82",
+    "title": "How an Oil Shock Complicates the Fed's Reaction Function",
     "content": [
-      "Today's oil price action is a clean case study in how geopolitical risk gets priced into a commodity in real time. WTI opened near $82.34, spiked above $83 intraday as Iran reiterated it would keep the Strait of Hormuz shut, then settled near $81.99 \u2014 down about 0.2% on the day despite the scary headline. That round-trip isn't noise; it's the market processing new information faster than the underlying supply situation actually changes, which is exactly how risk premia get built and unwound within a single session.",
-      "The mechanism runs through the futures curve, not just the spot price. When a chokepoint carrying roughly a fifth of global seaborne crude is threatened, traders don't wait to confirm actual barrels are stranded \u2014 they bid up near-dated contracts on the probability-weighted chance of disruption, and options desks see call skew widen as buyers pay up for upside protection. As the session wears on and no confirmed supply disruption materializes, some of that panic bid unwinds, even though the underlying standoff hasn't been resolved. The premium doesn't vanish; it migrates from the spot price into the shape of the curve itself.",
-      "This is the same dynamic that played out during the 1990 Gulf War spike and, more recently, in 2022 after Russia's invasion of Ukraine: an initial overshoot on headline risk, followed by partial normalization once traders can assess actual flow disruption versus rhetorical escalation. The tell is usually the futures curve's shape \u2014 a standoff that's genuinely worsening tends to show backwardation deepening (near-term contracts pricing well above later ones) even as spot cools, signaling the market still expects near-term scarcity even if today's headline number looks calmer.",
-      "For Wednesday's CPI, this matters directly: energy is roughly 6-7% of the CPI basket, and it's the multi-day average price that feeds into the inflation calculation, not a single intraday spike or a single settlement. A one-day fade to $82 doesn't erase the fact that oil has been elevated for four straight sessions on this standoff. If Iran headlines escalate again before Thursday's pump-price data gets baked into the following month's report, today's round-trip could easily repeat itself \u2014 and each repeat keeps a floor under the energy component the Fed will be watching closely."
+      "Today's brief has three stories that are really one story: oil fell over 2% on demand cuts, the 10-year yield eased off a 19-month high, and the S&P 500 hit a record — all because July's core CPI came in exactly as forecast. That sequencing only makes sense once you understand why an oil-driven risk premium forces the Fed to treat headline and core inflation differently, and why traders had been pricing hike risk, not cut risk, into a Fed that's supposed to be near the end of a tightening cycle.",
+      "The mechanism runs through pass-through. Energy makes up roughly 6-7% of the CPI basket directly, but its bigger effect is indirect: sustained high oil raises transportation and input costs across the economy, and if that persists long enough, it shows up in core goods and services months later. The Fed's playbook, formalized loosely around a Taylor-rule-style reaction function, is to look through a one-off energy spike but respond if it broadens into core. That's precisely the distinction this week's CPI print was testing, and why 'in line' core, even with oil elevated, was read as dovish relief rather than a non-event.",
+      "The historical parallel is 2022, when a similar oil shock from Russia's invasion of Ukraine forced the Fed to distinguish between a war-driven price spike and genuine demand-side overheating — they got it wrong initially, calling inflation 'transitory' for too long, and had to hike 75 basis points at a time to catch up. The market's memory of that mistake is exactly why hike odds for September swung by 20 percentage points on a single data point this week: nobody wants to be caught assuming an oil shock is contained again.",
+      "For the next month, the tell to watch is whether the Strait of Hormuz premium embedded in oil's forward curve starts bleeding into core goods prices, which Friday's PPI report will hint at before it shows up in next month's CPI. If PPI comes in hot, it would validate the Fed's caution and could send both the 34% hike odds and today's Treasury rally into reverse — which is exactly the kind of whipsaw that makes trading around geopolitical risk premia so much harder than trading around ordinary business-cycle data."
     ]
   }
 }
