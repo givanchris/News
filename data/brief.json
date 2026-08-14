@@ -1,81 +1,63 @@
 {
-  "lastUpdated": "2026-08-14T16:30:17-06:00",
+  "lastUpdated": "2026-08-14T16:37:47-06:00",
   "market": {
-    "sp500": {
-      "price": "7786",
-      "change": "-0.17%",
-      "dir": "down"
-    },
-    "nasdaq": {
-      "price": "30046",
-      "change": "-0.13%",
-      "dir": "down"
-    },
-    "yield": {
-      "price": "4.70%",
-      "change": "+6 bps",
-      "dir": "down"
-    },
-    "wti": {
-      "price": "$82",
-      "change": "+1.29%",
-      "dir": "up"
-    },
-    "gold": {
-      "price": "$4432",
-      "change": "+1.20%",
-      "dir": "up"
-    },
-    "dxy": {
-      "price": "99.64",
-      "change": "-0.25%",
-      "dir": "down"
-    }
+    "sp500":  { "price": "7,786",  "change": "-0.17%", "dir": "down" },
+    "nasdaq": { "price": "30,046", "change": "-0.13%", "dir": "down" },
+    "yield":  { "price": "4.70%",  "change": "+5 bps", "dir": "down" },
+    "wti":    { "price": "$82",    "change": "+1.3%",  "dir": "up" },
+    "gold":   { "price": "$4,432", "change": "+1.2%",  "dir": "up" },
+    "dxy":    { "price": "99.64",  "change": "-0.25%", "dir": "down" }
   },
   "stories": [
     {
       "cat": "MACRO",
-      "headline": "S&P 500 CLOSES AT RECORD ABOVE 7,800 AS COOL CPI EASES FED HIKE FEARS",
-      "body": "The S&P 500 notched a fresh closing record near 7,799 (+0.65%) Thursday after July CPI matched expectations, rising 0.1% month-over-month with the annual rate at 3.4% and core CPI up 0.2% (2.5% year-over-year). Fed-hike odds for the September 16 FOMC meeting fell to roughly 34% from about 55% a week earlier.",
-      "explain": "This cycle is unusual because the market had been pricing rate-HIKE risk, not cuts, since oil's spike on Strait of Hormuz tensions threatened to push headline inflation back up. A core CPI print landing in line with forecasts told the Fed's reaction function that the energy shock hasn't broadened into sticky services or goods inflation yet, so the FOMC has less justification to react preemptively. That's why hike odds collapsed by roughly 20 points on a report that was merely 'in line' rather than surprising \u2014 the market had been bracing for confirmation that inflation was accelerating, and got the opposite."
+      "headline": "S&P 500 SLIPS FROM RECORD AS RETAIL SALES POST BIGGEST DROP SINCE 2025",
+      "body": "The S&P 500 fell 0.17% to 7,786 Friday, pulling back from Thursday's record close above 7,800, after July retail sales dropped 0.6% month-over-month -- the sharpest decline since May 2025 and well below the roughly +0.1% consensus. A preliminary University of Michigan reading showed consumer sentiment cooling further in August as households cited both the spending pullback and lingering inflation worries. The index still closed out a third straight weekly gain.",
+      "explain": "A 0.6% monthly drop in retail sales is a hard growth signal because it's actual spending, not a survey, and motor vehicles (-1.8%) and nonstore/online retail (-2.2%) led the decline while necessities like food services (+0.5%) held up -- a pattern more consistent with consumers pulling back on discretionary and big-ticket purchases than a broad-based recession. That composition matters for the Fed: a narrow, discretionary-led slowdown is easier to look through than a collapse in essentials, which is part of why today's equity reaction was a 0.17% dip rather than a disorderly selloff even after the biggest miss in over a year."
     },
     {
       "cat": "GEOPOLITICS",
-      "headline": "OIL SLIDES OVER 2% ON DEMAND CUTS, THEN STABILIZES AS STRAIT OF HORMUZ RISK PREMIUM LINGERS",
-      "body": "WTI crude settled Thursday near $81.25, down more than 2%, after the IEA and OPEC both cut their 2026 demand growth forecasts \u2014 OPEC's fourth straight downward revision. Prices firmed back to around $82 in early Friday trading, with Brent holding near $87, as the underlying Iran-U.S. standoff over the Strait of Hormuz keeps a floor under the barrel.",
-      "explain": "Two forces are fighting for control of the oil tape right now: a weakening demand outlook pulling the spot price down, and a live supply-side risk premium tied to a chokepoint that carries roughly a fifth of global seaborne crude. When IEA/OPEC cut demand forecasts, that's a fundamental, slow-moving signal that traders can act on immediately by selling futures. But the Hormuz premium doesn't disappear with a soft demand print \u2014 it just gets re-priced into the curve, which is why the bounce back to $82 overnight shows the geopolitical bid reasserting itself even as the demand story stays bearish."
+      "headline": "10-YEAR YIELD CLIMBS TO 4.70% AS U.S. SAYS IRAN PORT BLOCKADE COULD RUN 'INDEFINITELY'",
+      "body": "The 10-year Treasury yield rose about 5 basis points to 4.696% Friday after the U.S. said its naval blockade of Iranian ports could continue indefinitely, even as traders simultaneously digested the weak retail sales print. Oil held its geopolitical premium on the news, with WTI near $82 and Brent near $87-88.",
+      "explain": "Normally a growth-negative surprise like today's retail sales miss pulls nominal yields down, since it raises the odds of Fed easing and drives flight-to-quality buying. Today it didn't, because the blockade news works through the other half of the yield equation: it raises breakeven inflation expectations by threatening sustained upward pressure on oil, which nominal yields have to price in even as real growth expectations soften. When a supply-side shock and a demand-side shock hit the same day, they pull the same yield in opposite directions -- and today the inflation-risk leg won, which is exactly the kind of stagflationary tension the Fed has to navigate into its September 16 meeting."
     },
     {
-      "cat": "MARKETS",
-      "headline": "10-YEAR YIELD EASES TO 4.64% AFTER TESTING 19-MONTH HIGH OF 4.75%",
-      "body": "The 10-year Treasury yield fell about 4 basis points to 4.64% (bond prices up), pulling back further from Tuesday's 19-month high of 4.75% that was driven by oil-fueled inflation fears. The retreat tracked Thursday's benign core CPI print more than any single catalyst.",
-      "explain": "A spike in oil futures raises near-term breakeven inflation expectations, which shows up directly in nominal Treasury yields even before the Fed says a word \u2014 that's the mechanism behind Tuesday's 4.75% high. Thursday's in-line core CPI let that inflation-risk premium partially unwind, since bondholders no longer had to price in as much probability that energy costs bleed into core services. The 4-bp move is small in absolute terms, but it's a real-time gauge of how much of the recent yield rise was 'geopolitical inflation fear' versus a genuine repricing of Fed policy \u2014 and today's answer is that most of it was fear, not policy."
+      "cat": "EARNINGS",
+      "headline": "BROADCOM SINKS 6% ON $370B AI DEBT-FINANCING QUESTION, DRAGS NASDAQ 100 LOWER",
+      "body": "Broadcom shares fell roughly 6% Friday after BofA Securities estimated the company's AI chip-financing vehicle could balloon to $370 billion in senior debt by 2029, including about $150 billion of new issuance in 2027 alone. The Nasdaq 100 slipped 0.13% to 30,046 as the selloff rippled through semiconductors, even as AMD gained roughly 4% on a bullish Baird price target.",
+      "explain": "The $370 billion figure isn't debt sitting on Broadcom's own balance sheet -- it's projected debt in an off-balance-sheet financing vehicle that funds AI chip leases, with Broadcom backstopping some of the customer lease obligations. Markets still punish the stock because a backstop is a contingent liability: if lessees can't pay, Broadcom absorbs the shortfall, so the real economic leverage is larger than the reported balance sheet shows. This is the same structural question hanging over the broader AI capex boom -- how much of the spending is funded by vendor financing and special-purpose vehicles rather than customer cash flow -- and today's move shows investors starting to price that risk into individual names rather than treating AI capex as a uniformly positive catalyst."
     },
     {
       "cat": "COMMODITIES",
-      "headline": "GOLD HOLDS NEAR $4,386, UP NEARLY 10% ON THE MONTH AHEAD OF FRIDAY'S PPI",
-      "body": "Gold ticked up 0.10% to about $4,386 an ounce, essentially flat on the day but still up close to 10% month-over-month, as investors positioned ahead of Friday's Producer Price Index report, the next data point the Fed will weigh before September.",
-      "explain": "Gold is pricing two things simultaneously: a safe-haven bid tied to the unresolved Strait of Hormuz standoff, and a real-yield calculation, since gold pays no interest and becomes relatively more attractive as inflation-adjusted Treasury yields fall. PPI matters here because it's a leading indicator for core PCE, the Fed's preferred inflation gauge \u2014 a hot PPI print would suggest today's cool CPI understated pipeline inflation pressure, which is exactly the kind of surprise that could reverse both the drop in Fed hike odds and gold's current holding pattern."
+      "headline": "GOLD HOLDS NEAR $4,432, UP 1.2% AS WEAKER DOLLAR AND FED-HOLD BETS BUOY BULLION",
+      "body": "Gold gained about 1.2% to roughly $4,432 an ounce Friday as the dollar index slipped 0.25% to 99.64 and traders raised bets that the Fed will leave rates unchanged at its September meeting rather than hike, building on Thursday's benign core CPI and today's soft retail sales.",
+      "explain": "Gold pays no yield, so its relative attractiveness moves inversely with real (inflation-adjusted) Treasury yields and with the dollar, since a weaker dollar makes dollar-priced bullion cheaper for foreign buyers. Today both levers moved in gold's favor: falling hike odds cap how far real yields can rise even as nominal yields ticked up on the blockade story, and DXY's slide to 99.64 added a currency tailwind. That combination -- softer growth data lowering the odds of further tightening while a geopolitical premium keeps a safe-haven bid alive -- is the same setup that's driven roughly a month of gold strength."
+    },
+    {
+      "cat": "COMMODITIES",
+      "headline": "OIL FIRMS NEAR $82 WTI AS INDEFINITE IRAN PORT BLOCKADE OFFSETS WEAK DEMAND OUTLOOK",
+      "body": "WTI crude rose about 1.3% to near $82 a barrel and Brent held near $87-88 Friday, as the U.S. Navy's blockade of Iranian ports -- now described as open-ended -- kept a geopolitical floor under prices even after the IEA and OPEC's recent downward revisions to 2026 demand growth.",
+      "explain": "Oil is being pulled by two forces that don't net out cleanly: a bearish demand signal from IEA/OPEC forecast cuts that traders can act on immediately by selling futures, and a supply-side risk premium tied to the Strait of Hormuz corridor, which carries roughly a fifth of global seaborne crude. An 'indefinite' blockade removes the option of pricing the risk as temporary, so the premium gets embedded further out the futures curve rather than fading -- which is why WTI is up on the day even though the demand backdrop hasn't improved at all."
     },
     {
       "cat": "MCBB",
-      "headline": "FIFTH-YEAR ELIGIBILITY RULING TRIGGERS TRANSFER PORTAL CHAOS ACROSS COLLEGE HOOPS",
-      "body": "A federal judge's class-wide injunction granting an extra year of eligibility to athletes who began competing in 2022-23 opened a special transfer window from August 3-10, with Arizona, North Carolina, Tennessee and Gonzaga among the programs adding fifth-year players. Separately, the NCAA Tournament field will expand from 68 to 76 teams starting next season."
+      "headline": "FIFTH-YEAR ELIGIBILITY RULING RESHAPES PRESEASON TOP 25 AS TRANSFER WINDOW CLOSES",
+      "body": "A federal judge's ruling granting a fifth season of eligibility to players who began competing in 2022-23 triggered a special Aug. 3-10 transfer window, with Arizona, North Carolina, Tennessee and Gonzaga among the programs adding veteran talent and reshaping early preseason Top 25 projections. Oklahoma landed SMU transfer BJ Edwards (12.7 ppg last season) while Georgetown added DePaul's NJ Benson (11.7 ppg, 7.6 rpg)."
     },
     {
       "cat": "NBA",
-      "headline": "NBA RELEASES FULL 2026-27 SCHEDULE; RUSSELL WESTBROOK RETIRES",
-      "body": "The league unveiled its 2026-27 regular-season schedule Thursday, with the LeBron James- and Jaylen Brown-boosted 76ers landing a league-high 34 national TV appearances; the season opens Oct. 30 with a Knicks-76ers/Lakers-Warriors NBA Cup group-stage doubleheader. Nine-time All-NBA guard Russell Westbrook, the 2017 MVP, announced his retirement at 37."
+      "headline": "NBA UNVEILS 2026-27 SCHEDULE; WESTBROOK RETIRES, CAVS SHIP SCHRODER TO CHARLOTTE",
+      "body": "The league released its full 2026-27 schedule Thursday, headlined by an Oct. 20 opening-night tripleheader that includes Boston at Detroit; ABC/NBC will broadcast 90 national games, 11 more than last season. Nine-time All-NBA guard and 2017 MVP Russell Westbrook announced his retirement at age 37, and the Cavaliers traded Dennis Schroder and cash to Charlotte for Tre Mann."
     },
     {
       "cat": "NFL",
-      "headline": "PRESEASON WEEK 1 KICKS OFF WITH SIX GAMES AS ROSTER MOVES PILE UP",
-      "body": "Six preseason openers were played Thursday night, including Lions-Bengals, Packers-Steelers and Chargers-Texans. The Broncos placed C Michael Deiter on injured reserve with a season-ending quad injury, Ravens LB Pernell McPhee officially retired as a member of the franchise, and Cardinals QB Carson Beck sat out with a rib injury."
+      "headline": "PRESEASON WEEK 1 CONTINUES FRIDAY; DOLPHINS DEBUT MALIK WILLIS AT QB",
+      "body": "Three preseason games kick off Friday at 7 PM ET -- Broncos-Falcons, Dolphins-Commanders and Buccaneers-Jets on NFL Network -- with Miami fans getting their first look at new QB Malik Willis, signed to a three-year, $67.5 million deal after the team moved on from Tua Tagovailoa. Denver's Bo Nix will sit out entirely as Sean Payton manages first-team reps."
     },
     {
       "cat": "NCAA CFB",
-      "headline": "FALL CAMPS IN FULL SWING NATIONWIDE AS TEAMS SORT OUT QUARTERBACK BATTLES",
-      "body": "Programs from Ohio State to Texas A&M to Boston College are deep into fall camp, with quarterback competitions and portal-driven roster turnover the dominant storylines heading into the season. Ohio State and Alabama were among the teams cited for the biggest camp risers through the first week of practice."
+      "headline": "FALL CAMPS HEAT UP AS ALABAMA NEARS QB DECISION, OHIO STATE OPENS AS TITLE FAVORITE",
+      "body": "Alabama is closing in on naming a starting quarterback between redshirt junior Austin Mack and redshirt freshman Keelon Russell, while Washington State plans to name its own starter by Aug. 24. Ohio State enters camp as the betting favorite to win the national title with QB Julian Sayin and WR Jeremiah Smith back under new offensive coordinator Arthur Smith."
     }
   ],
   "sports": [
@@ -83,47 +65,47 @@
       "team": "WASHINGTON HUSKIES FOOTBALL",
       "pill": "FALL CAMP",
       "pillClass": "s-up",
-      "detail": "Fall camp opened Aug. 6 under third-year coach Jedd Fisch, with the offensive line returning four starters. Season opener is the Apple Cup vs. Washington State \u2014 Sunday, Sept. 6, 1 PM PT on NBC, Husky Stadium."
+      "detail": "Fall camp continues under third-year coach Jedd Fisch, who takes over playcalling duties himself after OC Jimmie Dougherty's February departure. Mock Game and picture day is Aug. 22; season opens vs. Washington State -- Sunday, Sept. 6, 1 PM PT on NBC, Husky Stadium."
     },
     {
       "team": "WASHINGTON HUSKIES BASKETBALL",
       "pill": "ROSTER REBUILD",
       "pillClass": "s-up",
-      "detail": "UW loses top scorer Hannes Steinbach (drafted 14th overall by Charlotte) and No. 2 scorer Zoom Diallo (transferred to Kentucky); Wesley Yates III returns as the top scoring option as Danny Sprinkle rebuilds via the portal for Year 2 in the Big Ten."
+      "detail": "After a 16-17 finish (7-13 Big Ten) and no NCAA Tournament bid, UW loses leading scorers Hannes Steinbach (drafted 14th by Charlotte) and Zoom Diallo (transferred to Kentucky). Wesley Yates III (12.9 ppg) returns as Danny Sprinkle rebuilds via the portal in Year 2."
     },
     {
       "team": "SEATTLE SEAHAWKS",
       "pill": "PRESEASON SAT.",
       "pillClass": "s-up",
-      "detail": "Camp continued Thursday (Day 13) as the defending Super Bowl champions work on a contract with CB Terrion Arnold. Preseason opener is vs. the Dallas Cowboys \u2014 Saturday, Aug. 15, 5 PM PT, Lumen Field."
+      "detail": "Camp wrapped its 14th session Thursday; CB Terrion Arnold is finalizing a deal with the club, and rookie RB Jadarian Price is drawing praise from teammates. The defending Super Bowl champions open the preseason vs. Dallas -- Saturday, Aug. 15, 5 PM PT, Lumen Field, NFL Network."
     },
     {
       "team": "DETROIT PISTONS",
-      "pill": "SCHEDULE RELEASED",
+      "pill": "OFFSEASON",
       "pillClass": "s-up",
-      "detail": "Detroit released its 2026-27 schedule Thursday: regular-season opener Oct. 20 vs. Boston (nationally on NBC), preseason opener Oct. 5 vs. Phoenix. Offseason additions include John Collins, Isaiah Joe and No. 17 pick Ebuka Okorie."
+      "detail": "Detroit's 2026-27 schedule opens at home vs. Boston on Oct. 20 in the league's opening-night tripleheader (3 PM ET, NBC). The lingering issue: All-NBA Third Team center Jalen Duren remains unsigned more than a month into free agency."
     },
     {
       "team": "SEATTLE MARINERS",
-      "pill": "W 1-0",
-      "pillClass": "s-w",
-      "detail": "Seattle beat the Yankees 1-0 Thursday at Yankee Stadium on Weston Wilson's second-inning homer off Max Fried \u2014 the Mariners' first 1-0 win there since Felix Hernandez in 2012. The series continues as Seattle chases a wild-card spot currently held by New York, Boston and Texas."
+      "pill": "TONIGHT 6:10 PM MT",
+      "pillClass": "s-up",
+      "detail": "Mariners at Astros tonight in Houston, first pitch 6:10 PM MT / 5:10 PM PT -- game had not yet started as of this brief."
     }
   ],
   "watchlist": [
-    "PPI report \u2014 Friday, Aug. 14, 8:30 AM ET \u2014 next inflation data point ahead of the Sept. 16 FOMC decision",
-    "Seahawks preseason opener vs. Cowboys \u2014 Saturday, Aug. 15, 5 PM PT, Lumen Field",
-    "Naismith Basketball Hall of Fame Class of 2026 Enshrinement Weekend \u2014 Aug. 14-15",
-    "Mariners at Yankees \u2014 series continues, Seattle chasing an AL wild-card spot",
-    "Huskies season opener (Apple Cup vs. Washington State) \u2014 Sunday, Sept. 6, 1 PM PT, Husky Stadium"
+    "FOMC meeting Sept. 16 -- rate-hold odds rising after soft retail sales and Thursday's benign core CPI",
+    "Mariners at Astros -- tonight, 6:10 PM MT, Houston",
+    "Seahawks preseason opener vs. Cowboys -- Saturday, Aug. 15, 5 PM PT, Lumen Field",
+    "Washington State expected to name starting QB by Aug. 24",
+    "August PPI report -- Thursday, Sept. 10, 8:30 AM ET"
   ],
   "deepDive": {
-    "title": "How an Oil Shock Complicates the Fed's Reaction Function",
+    "title": "When Weak Data Doesn't Rally Bonds: Growth Shocks vs. Inflation Shocks in Treasury Pricing",
     "content": [
-      "Today's brief has three stories that are really one story: oil fell over 2% on demand cuts, the 10-year yield eased off a 19-month high, and the S&P 500 hit a record \u2014 all because July's core CPI came in exactly as forecast. That sequencing only makes sense once you understand why an oil-driven risk premium forces the Fed to treat headline and core inflation differently, and why traders had been pricing hike risk, not cut risk, into a Fed that's supposed to be near the end of a tightening cycle.",
-      "The mechanism runs through pass-through. Energy makes up roughly 6-7% of the CPI basket directly, but its bigger effect is indirect: sustained high oil raises transportation and input costs across the economy, and if that persists long enough, it shows up in core goods and services months later. The Fed's playbook, formalized loosely around a Taylor-rule-style reaction function, is to look through a one-off energy spike but respond if it broadens into core. That's precisely the distinction this week's CPI print was testing, and why 'in line' core, even with oil elevated, was read as dovish relief rather than a non-event.",
-      "The historical parallel is 2022, when a similar oil shock from Russia's invasion of Ukraine forced the Fed to distinguish between a war-driven price spike and genuine demand-side overheating \u2014 they got it wrong initially, calling inflation 'transitory' for too long, and had to hike 75 basis points at a time to catch up. The market's memory of that mistake is exactly why hike odds for September swung by 20 percentage points on a single data point this week: nobody wants to be caught assuming an oil shock is contained again.",
-      "For the next month, the tell to watch is whether the Strait of Hormuz premium embedded in oil's forward curve starts bleeding into core goods prices, which Friday's PPI report will hint at before it shows up in next month's CPI. If PPI comes in hot, it would validate the Fed's caution and could send both the 34% hike odds and today's Treasury rally into reverse \u2014 which is exactly the kind of whipsaw that makes trading around geopolitical risk premia so much harder than trading around ordinary business-cycle data."
+      "Today's tape broke the textbook rule of thumb. July retail sales fell 0.6% month-over-month, the worst print since May 2025 and a clean growth-negative surprise -- the kind of number that normally sends Treasury yields lower as traders price in a weaker economy and a more dovish Fed. Instead, the 10-year yield rose about 5 basis points to 4.696%. Understanding why requires splitting a nominal Treasury yield into its two components rather than treating it as a single dial that only responds to growth.",
+      "A nominal yield is roughly the sum of a real yield and a breakeven inflation rate, the market's implied forecast for future inflation derived from the spread between nominal Treasuries and inflation-protected TIPS. Weak retail sales should push the real-yield component down, since it signals slower growth and lower future policy rates. But the same day, the U.S. said its naval blockade of Iranian ports could run indefinitely, which raises breakeven inflation by threatening sustained upward pressure on energy prices. When the breakeven leg rises faster than the real-yield leg falls, the net nominal yield goes up even though the growth news was bad.",
+      "This is the defining feature of a supply shock versus a demand shock, and it's not a new phenomenon -- it's the same mechanism behind the 1970s oil embargoes and 2022's post-invasion energy spike. In a pure demand-driven slowdown, growth and inflation fall together, so bond yields fall unambiguously and equities and bonds move in the classic inverse relationship investors expect. In a supply-driven episode, growth can weaken while inflation risk stays elevated or rises, so stocks and bonds can sell off or diverge in ways that violate the usual 60/40 portfolio assumptions -- exactly the pattern showing up today with equities down modestly, yields up, and gold up on the same tape.",
+      "The practical takeaway heading into the Fed's September 16 meeting is that today's data doesn't cleanly support either a hike or a cut case -- it supports a hold, which is exactly what fed funds futures are now pricing with rising conviction. Watch which leg resolves first: if the blockade eases and oil's risk premium fades, breakevens should fall and pull nominal yields down even if growth stays soft. If the blockade persists while retail spending keeps softening, the Fed faces the classic stagflation bind -- unable to cut without validating inflation risk, unable to hike without deepening the growth slowdown. That tension, not any single data point, is the story to watch into next month's decision."
     ]
   }
 }
