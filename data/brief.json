@@ -1,87 +1,63 @@
 {
-  "lastUpdated": "2026-08-17T16:30:18-06:00",
+  "lastUpdated": "2026-08-17T16:40:00-06:00",
   "market": {
-    "sp500": {
-      "price": "7745",
-      "change": "-0.52%",
-      "dir": "down"
-    },
-    "nasdaq": {
-      "price": "29995",
-      "change": "-0.17%",
-      "dir": "down"
-    },
-    "yield": {
-      "price": "4.72%",
-      "change": "+3 bps",
-      "dir": "down"
-    },
-    "wti": {
-      "price": "$85",
-      "change": "+3.67%",
-      "dir": "up"
-    },
-    "gold": {
-      "price": "$4472",
-      "change": "+0.41%",
-      "dir": "up"
-    },
-    "dxy": {
-      "price": "99.58",
-      "change": "+0.07%",
-      "dir": "up"
-    }
+    "sp500": { "price": "7,745", "change": "-0.52%", "dir": "down" },
+    "nasdaq": { "price": "29,995", "change": "-0.17%", "dir": "down" },
+    "yield": { "price": "4.72%", "change": "+3 bps", "dir": "down" },
+    "wti": { "price": "$85", "change": "+3.67%", "dir": "up" },
+    "gold": { "price": "$4,472", "change": "+0.41%", "dir": "up" },
+    "dxy": { "price": "99.58", "change": "+0.07%", "dir": "up" }
   },
   "stories": [
     {
       "cat": "MACRO",
-      "headline": "S&P 500 SLIPS FROM RECORD AS RETAIL SALES POST BIGGEST DROP SINCE 2025",
-      "body": "The S&P 500 fell 0.17% to 7,786 Friday, pulling back from Thursday's record close above 7,800, after July retail sales dropped 0.6% month-over-month -- the sharpest decline since May 2025 and well below the roughly +0.1% consensus. A preliminary University of Michigan reading showed consumer sentiment cooling further in August as households cited both the spending pullback and lingering inflation worries. The index still closed out a third straight weekly gain.",
-      "explain": "A 0.6% monthly drop in retail sales is a hard growth signal because it's actual spending, not a survey, and motor vehicles (-1.8%) and nonstore/online retail (-2.2%) led the decline while necessities like food services (+0.5%) held up -- a pattern more consistent with consumers pulling back on discretionary and big-ticket purchases than a broad-based recession. That composition matters for the Fed: a narrow, discretionary-led slowdown is easier to look through than a collapse in essentials, which is part of why today's equity reaction was a 0.17% dip rather than a disorderly selloff even after the biggest miss in over a year."
+      "headline": "STOCKS SLIDE, DOW SHEDS 272 POINTS AS OIL SURGE AND YIELD SPIKE RATTLE MARKETS",
+      "body": "The S&P 500 fell 0.52% to 7,745, the Dow dropped roughly 272 points (-0.5%), and the Nasdaq Composite slipped 0.3% Monday as renewed U.S.-Iran tensions pushed oil and Treasury yields higher at the same time. The 10-year yield rose to 4.72% while the 30-year climbed to its highest level since 2007, and traders are bracing for a heavy retail-earnings week from Walmart, Home Depot and Target.",
+      "explain": "A joint selloff in stocks and bonds is the market's way of saying it can't find a clean narrative: normally weak growth data pulls yields down (flight to quality) while strong growth data pushes them up alongside stocks, but today's move was driven by a supply-side oil shock that raises inflation risk independent of the growth outlook. That combination -- inflation-risk-driven yields rising while equities fall on higher discount rates and margin pressure -- is the textbook signature of a stagflationary scare, and it's exactly the setup the Fed has to weigh into its September 16 meeting."
     },
     {
       "cat": "GEOPOLITICS",
-      "headline": "10-YEAR YIELD CLIMBS TO 4.70% AS U.S. SAYS IRAN PORT BLOCKADE COULD RUN 'INDEFINITELY'",
-      "body": "The 10-year Treasury yield rose about 5 basis points to 4.696% Friday after the U.S. said its naval blockade of Iranian ports could continue indefinitely, even as traders simultaneously digested the weak retail sales print. Oil held its geopolitical premium on the news, with WTI near $82 and Brent near $87-88.",
-      "explain": "Normally a growth-negative surprise like today's retail sales miss pulls nominal yields down, since it raises the odds of Fed easing and drives flight-to-quality buying. Today it didn't, because the blockade news works through the other half of the yield equation: it raises breakeven inflation expectations by threatening sustained upward pressure on oil, which nominal yields have to price in even as real growth expectations soften. When a supply-side shock and a demand-side shock hit the same day, they pull the same yield in opposite directions -- and today the inflation-risk leg won, which is exactly the kind of stagflationary tension the Fed has to navigate into its September 16 meeting."
+      "headline": "OIL JUMPS TOWARD $85 AS RENEWED FIGHTING IN LEBANON AND STRAIT OF HORMUZ ATTACKS RATTLE SUPPLY",
+      "body": "WTI crude rose 3.67% to roughly $85 a barrel Monday after reports of renewed fighting in Lebanon and fresh attacks on vessels near the Strait of Hormuz revived fears that the U.S.-Iran standoff could disrupt supply through the corridor that carries roughly a fifth of global seaborne crude.",
+      "explain": "Oil traders price geopolitical risk as an option on disruption, not a certainty of it -- so even without an actual barrel taken off the market, a credible threat to the Hormuz corridor gets embedded in the futures curve as a risk premium. That premium sits on top of an otherwise soft demand backdrop (the IEA and OPEC have both trimmed 2026 demand growth forecasts), which is why WTI can jump more than 3% on a single day of headlines even though nothing about physical supply or demand actually changed today."
+    },
+    {
+      "cat": "MACRO",
+      "headline": "30-YEAR TREASURY YIELD TOPS 5.31%, HIGHEST SINCE 2007, ON DEFICIT -- NOT INFLATION -- FEARS",
+      "body": "The 30-year Treasury yield climbed to 5.311% Monday, its highest level since June 2007, even as inflation data has stayed benign for weeks. The move follows a $25 billion 30-year auction last week that priced at 5.216% -- the worst since 2001 -- as the CBO's freshly raised $2.1 trillion FY2026 deficit forecast and heavy AI-related debt issuance compete with Treasurys for investor capital.",
+      "explain": "A Treasury yield is the expected path of short-term rates plus a term premium -- extra compensation for the risk of holding long-dated debt through decades of uncertain outcomes. With the Fed funds rate at 3.5%-3.75%, today's move isn't about expected policy; it's the term premium rising because the market's natural buyer base can't absorb this much long-duration supply at current yields without demanding more compensation, which is exactly what a bear-steepening curve (long end rising, short end flat) signals versus an inflation-driven bear-flattener."
+    },
+    {
+      "cat": "COMMODITIES",
+      "headline": "GOLD TICKS UP TO $4,472 AS SAFE-HAVEN DEMAND OFFSETS RISING YIELDS",
+      "body": "Gold gained 0.41% to about $4,472 an ounce Monday, drawing a safe-haven bid from the same Iran-related tensions pushing oil higher, even as rising nominal Treasury yields would typically pressure non-yielding bullion.",
+      "explain": "Gold's relative attractiveness normally moves inversely with real (inflation-adjusted) yields, so a jump in nominal yields is usually a headwind. Today that headwind was offset because the yield move is being read as deficit- and supply-driven rather than a signal of a stronger economy or higher policy rates -- a distinction that keeps real yields more contained than the nominal move suggests -- while the geopolitical risk premium in oil spilled over into a parallel safe-haven bid for bullion."
     },
     {
       "cat": "EARNINGS",
-      "headline": "BROADCOM SINKS 6% ON $370B AI DEBT-FINANCING QUESTION, DRAGS NASDAQ 100 LOWER",
-      "body": "Broadcom shares fell roughly 6% Friday after BofA Securities estimated the company's AI chip-financing vehicle could balloon to $370 billion in senior debt by 2029, including about $150 billion of new issuance in 2027 alone. The Nasdaq 100 slipped 0.13% to 30,046 as the selloff rippled through semiconductors, even as AMD gained roughly 4% on a bullish Baird price target.",
-      "explain": "The $370 billion figure isn't debt sitting on Broadcom's own balance sheet -- it's projected debt in an off-balance-sheet financing vehicle that funds AI chip leases, with Broadcom backstopping some of the customer lease obligations. Markets still punish the stock because a backstop is a contingent liability: if lessees can't pay, Broadcom absorbs the shortfall, so the real economic leverage is larger than the reported balance sheet shows. This is the same structural question hanging over the broader AI capex boom -- how much of the spending is funded by vendor financing and special-purpose vehicles rather than customer cash flow -- and today's move shows investors starting to price that risk into individual names rather than treating AI capex as a uniformly positive catalyst."
-    },
-    {
-      "cat": "COMMODITIES",
-      "headline": "GOLD HOLDS NEAR $4,432, UP 1.2% AS WEAKER DOLLAR AND FED-HOLD BETS BUOY BULLION",
-      "body": "Gold gained about 1.2% to roughly $4,432 an ounce Friday as the dollar index slipped 0.25% to 99.64 and traders raised bets that the Fed will leave rates unchanged at its September meeting rather than hike, building on Thursday's benign core CPI and today's soft retail sales.",
-      "explain": "Gold pays no yield, so its relative attractiveness moves inversely with real (inflation-adjusted) Treasury yields and with the dollar, since a weaker dollar makes dollar-priced bullion cheaper for foreign buyers. Today both levers moved in gold's favor: falling hike odds cap how far real yields can rise even as nominal yields ticked up on the blockade story, and DXY's slide to 99.64 added a currency tailwind. That combination -- softer growth data lowering the odds of further tightening while a geopolitical premium keeps a safe-haven bid alive -- is the same setup that's driven roughly a month of gold strength."
-    },
-    {
-      "cat": "COMMODITIES",
-      "headline": "OIL FIRMS NEAR $82 WTI AS INDEFINITE IRAN PORT BLOCKADE OFFSETS WEAK DEMAND OUTLOOK",
-      "body": "WTI crude rose about 1.3% to near $82 a barrel and Brent held near $87-88 Friday, as the U.S. Navy's blockade of Iranian ports -- now described as open-ended -- kept a geopolitical floor under prices even after the IEA and OPEC's recent downward revisions to 2026 demand growth.",
-      "explain": "Oil is being pulled by two forces that don't net out cleanly: a bearish demand signal from IEA/OPEC forecast cuts that traders can act on immediately by selling futures, and a supply-side risk premium tied to the Strait of Hormuz corridor, which carries roughly a fifth of global seaborne crude. An 'indefinite' blockade removes the option of pricing the risk as temporary, so the premium gets embedded further out the futures curve rather than fading -- which is why WTI is up on the day even though the demand backdrop hasn't improved at all."
+      "headline": "WORKDAY SLIPS ON DOUBLE DOWNGRADE AS WALL STREET AWAITS WALMART, HOME DEPOT, TARGET EARNINGS",
+      "body": "Workday shares fell about 2.4% Monday after Deutsche Bank cut the stock to Hold and BTIG moved to Neutral from Buy, following the software name's 76% rebound off its June low. Investors are now turning to this week's retail-earnings slate -- Walmart, Home Depot and Target all report -- for a fresh read on consumer health after July's surprisingly weak retail-sales print.",
+      "explain": "Government retail-sales data is a backward-looking, revision-prone aggregate, while big-box retailer earnings calls give real-time commentary on trip frequency, basket size and trade-down behavior straight from management -- which is why markets treat this week's reports as a higher-resolution check on the same consumer-spending question the July retail-sales miss raised. A soft Walmart print in particular would corroborate last week's data as a genuine slowdown rather than noise; a strong one would suggest the retail-sales miss was concentrated in a few discretionary categories rather than broad-based."
     },
     {
       "cat": "MCBB",
-      "headline": "FLORIDA TABBED PRESEASON NO. 1 IN WAY-TOO-EARLY TOP 25 AS FIFTH-YEAR WAVE RESHAPES FIELD",
-      "body": "ESPN's early 2026-27 Top 25 slots defending contender Florida at No. 1, projected to return six of its top seven scorers -- Thomas Haugh, Alex Condon, Boogie Fland, Rueben Chinyelu, Urban Klavzar and Isaiah Brown. The rankings arrive as the federal fifth-year eligibility ruling continues reshuffling rosters nationally, with Arizona, North Carolina, Tennessee and Gonzaga among the programs adding veteran fifth-year talent."
+      "headline": "TRANSFER PORTAL CHURN CONTINUES INTO MID-AUGUST AS 1,400+ PLAYERS STILL IN MOTION",
+      "body": "More than 1,400 players remain in the men's basketball transfer portal with roughly 59% already committed, and activity hasn't slowed heading into fall practice -- guard Skyy Clark and forward BJ Edwards are among the latest to land new homes in the past week, continuing the roster overhaul programs like Kentucky, USC and Arizona have leaned on all offseason."
     },
     {
       "cat": "NBA",
-      "headline": "RUSSELL WESTBROOK RETIRES AFTER 18 SEASONS AS NBA'S ALL-TIME TRIPLE-DOUBLE LEADER",
-      "body": "Russell Westbrook, 37, announced his retirement Wednesday via social media, closing an 18-year career that included stops with the Thunder, Rockets, Wizards, Lakers, Clippers, Nuggets and Kings. He leaves as the NBA's all-time leader in triple-doubles (209), a 2017 MVP, nine-time All-Star and career averages of 20.9 points, 8.0 assists and 6.9 rebounds."
+      "headline": "NBA SAYS NO EVIDENCE BALLMER FUNNELED MONEY TO KAWHI LEONARD AMID CLIPPERS SCANDAL",
+      "body": "The Clippers' Kawhi Leonard/Aspiration saga took another turn Monday as the NBA said it has found no evidence owner Steve Ballmer funneled money to Leonard through sponsors, contradicting an earlier ESPN report. Elsewhere in free agency, Draymond Green re-signed with Golden State on a one-year, $27.7 million deal, and Suns center Mark Williams agreed to a three-year, $38 million contract."
     },
     {
       "cat": "NFL",
-      "headline": "FALCONS' JAMES PEARCE JR. SUSPENDED EIGHT GAMES FOR CONDUCT POLICY VIOLATION",
-      "body": "The NFL suspended Falcons edge rusher James Pearce Jr. for the first eight games of the 2026 season for violating the league's personal-conduct policy, stemming from a February domestic-dispute arrest. The 22-year-old did not appeal; his ban starts Aug. 30 and he's eligible to return Nov. 2, compounding a pass-rush unit already missing Jalon Walker (torn ACL) for the year."
+      "headline": "COWBOYS LAND VON MILLER AS VIKINGS' JAMAL ADAMS SUFFERS SEASON-ENDING INJURY",
+      "body": "The Cowboys agreed to terms with eight-time Pro Bowl pass rusher Von Miller Sunday, bolstering their edge rush ahead of the season. Meanwhile, Vikings safety Jamal Adams suffered a season-ending quadriceps injury in Saturday's preseason game against the Giants, and Cardinals running back Jeremiyah Love is considered unlikely to play again this preseason with a high ankle sprain."
     },
     {
       "cat": "NCAA CFB",
-      "headline": "OHIO STATE'S FALL CAMP RISERS EMERGE AS ALABAMA NEARS QB DECISION",
-      "body": "A week into camp, Ohio State beat reporters have flagged receiver Devin McCuin and defensive linemen Kayden McDonald and Will Smith Jr. as the program's biggest risers, with McCuin pushing for the No. 2 receiver job behind Jeremiah Smith. Alabama appears to be converging on redshirt freshman Keelon Russell over Austin Mack as its starting QB, more than a week past Kalen DeBoer's original decision timeline."
+      "headline": "NOTRE DAME, OHIO STATE INK BLOCKBUSTER JERSEY-PATCH DEALS AS FALL CAMPS OPEN",
+      "body": "Notre Dame signed a multi-year jersey-patch sponsorship with SoFi worth an estimated $18-20 million annually, and Ohio State followed with a roughly $17 million-per-year deal with Chase Bank, as programs nationwide open fall camp. Ohio State also confirmed offensive linemen Austin Siereveld and Phillip Daniels and Florida State transfer safety Earl Little Jr. are fully cleared to practice."
     }
   ],
   "sports": [
@@ -89,47 +65,47 @@
       "team": "WASHINGTON HUSKIES FOOTBALL",
       "pill": "FALL CAMP",
       "pillClass": "s-up",
-      "detail": "Fall camp continues under third-year coach Jedd Fisch, who is calling plays himself after the OC job went unfilled. Mock Game and picture day is Aug. 22; season opens vs. Washington State -- Sunday, Sept. 6, 1 PM PT on NBC, Husky Stadium."
+      "detail": "Fall camp continues under third-year coach Jedd Fisch, who is calling plays himself after the OC job went unfilled in February. Mock Game and picture day is Aug. 22; season opens vs. Washington State -- Sunday, Sept. 6, 1 PM PT on NBC, Husky Stadium."
     },
     {
       "team": "WASHINGTON HUSKIES BASKETBALL",
       "pill": "ROSTER SET",
       "pillClass": "s-up",
-      "detail": "UW's 15-man roster for 2026-27 is complete after landing Rutgers transfer Harun Zrno, a 6-foot-7 Bosnian guard. Danny Sprinkle also added assistant coach Charles Klask, who brings 25 years of NBA experience, as he enters Year 3 leaning on returner Wesley Yates III (12.9 ppg) after last year's 16-17 finish."
+      "detail": "UW's 15-man roster for 2026-27 is set after landing Rutgers transfer Harun Zrno, but the Huskies must replace leading scorer Hannes Steinbach (No. 14 pick, Hornets) and No. 2 scorer Zoom Diallo (transferred to Kentucky). Danny Sprinkle enters Year 3 off a 16-17 finish, adding assistant Charles Klask, who brings 25 years of NBA experience."
     },
     {
       "team": "SEATTLE SEAHAWKS",
       "pill": "L 17-7",
       "pillClass": "s-l",
-      "detail": "Seattle opened the preseason with a 17-7 loss to Dallas Saturday at Lumen Field; QBs Jalen Milroe and Drew Lock combined for just 49 net passing yards. Undrafted WR Montorie Foster Jr. -- who was substitute teaching a year ago -- caught Seattle's lone touchdown. Next: at Tennessee, Sunday, Aug. 23, 8 PM ET."
+      "detail": "The defending Super Bowl champs opened the preseason with a 17-7 loss to Dallas Saturday at Lumen Field; LB Tyrice Knight logged 10 tackles and 2 pass breakups, but CB Shemar Jean-Charles appears to have suffered a season-ending injury. Next: at Tennessee, Sunday, Aug. 23, 5 PM PT on FOX."
     },
     {
       "team": "DETROIT PISTONS",
       "pill": "OFFSEASON",
       "pillClass": "s-up",
-      "detail": "Detroit's 2026-27 schedule opens at home vs. Boston on Oct. 20 in the league's opening-night tripleheader (3 PM ET, NBC). Isaiah Stewart is now in Memphis, opening a bigger frontcourt role for Paul Reed, while All-NBA Third Team center Jalen Duren remains unsigned in restricted free agency."
+      "detail": "Detroit's 2026-27 schedule opens at home vs. Boston on Oct. 20, part of a brutal opening stretch that also includes road games at Miami, Philadelphia and New York. Jalen Duren's next contract remains unresolved as a restricted free agent, while Isaiah Joe, Taurean Prince and John Collins joined the roster after Isaiah Stewart departed for Memphis."
     },
     {
       "team": "SEATTLE MARINERS",
-      "pill": "W 10-5",
+      "pill": "W 3-2",
       "pillClass": "s-w",
-      "detail": "Seattle beat Houston 10-5 Saturday behind Cole Young's career-tying 4 RBI and seven strong innings from Emerson Hancock. The series finale is tonight, 5:20 PM MT at Daikin Park, with Bryan Woo on the mound against Hunter Brown."
+      "detail": "Cal Raleigh and Randy Arozarena homered as Seattle beat Houston 3-2 Sunday night; Bryan Woo (9-8) struck out five over six innings and Andres Munoz notched his 22nd save. Both teams were off Monday -- Mariners open a series at Milwaukee Tuesday."
     }
   ],
   "watchlist": [
-    "FOMC meeting Sept. 16 -- rate-hold odds rising after soft retail sales and July's benign core CPI (2.5% YoY)",
-    "Mariners at Astros -- series finale tonight, 5:20 PM MT, Daikin Park",
-    "Seahawks at Titans -- Preseason Week 2, Sunday Aug. 23, 8 PM ET",
-    "Washington State expected to name starting QB by Aug. 24",
-    "August PPI report -- Thursday, Sept. 10, 8:30 AM ET"
+    "30-year Treasury yield near 5.31%, highest since 2007 -- watch the next long-bond auction's bid-to-cover for whether the deficit premium keeps building",
+    "Walmart, Home Depot and Target earnings this week -- first real-time read on consumer spending since July's weak retail-sales print",
+    "FOMC minutes from the July 28-29 meeting due Wednesday, Aug. 19 at 2 PM ET",
+    "Seahawks at Titans -- Sunday, Aug. 23, 5 PM PT / 8 PM ET",
+    "Mariners open a series at Milwaukee -- Tuesday"
   ],
   "deepDive": {
-    "title": "Off-Balance-Sheet Financing: How AI Capex Debt Hides in Plain Sight",
+    "title": "Term Premium: Why the 30-Year Yield Just Hit a 19-Year High Without an Inflation Scare",
     "content": [
-      "Broadcom's 6% slide Friday wasn't triggered by an earnings miss or a demand shortfall -- it was triggered by an estimate. BofA Securities projected that Broadcom's AI chip-financing vehicle could carry $370 billion in senior debt by 2029, including roughly $150 billion of new issuance in 2027 alone. None of that debt sits on Broadcom's own balance sheet today, which is precisely why the reaction matters: investors are learning to read a corporate structure most of them never had to think about before this AI buildout, one where the riskiest financing lives one legal step removed from the company whose stock they own.",
-      "The mechanism is a special-purpose vehicle, or SPV: a separate legal entity, often jointly owned or majority-funded by outside lenders and private credit funds, that raises its own debt to buy or lease equipment -- in this case AI chips and servers -- which it then leases to the parent company's customers. Because the SPV borrows and owns the assets itself, its liabilities don't appear on Broadcom's consolidated balance sheet under standard accounting rules, so leverage ratios and debt-to-equity metrics look cleaner than the true economic exposure. The catch is the backstop: Broadcom guarantees portions of the lease payments, so if a customer can't pay, Broadcom absorbs the shortfall anyway.",
-      "What gets missed is that a guarantee is functionally debt even when accounting rules don't call it that -- it's a contingent liability that only shows up in footnotes until something goes wrong. The closest precedent is Enron's use of special-purpose entities in the late 1990s to keep debt and losses off its books while preserving an investment-grade rating; when the guarantees came due, the company collapsed within weeks. The 2008 crisis had its own version in bank-sponsored structured investment vehicles, whose off-balance-sheet mortgage exposure ultimately migrated straight back onto sponsoring banks' books. The mechanism in each case -- leverage hidden until a backstop triggers -- is identical.",
-      "For Broadcom specifically, and for the AI trade broadly, this reframes how to read the current capex boom heading into the Fed's September 16 meeting. If hyperscalers and chipmakers are increasingly funding buildouts through vendor-financed SPVs rather than free cash flow, credit markets -- not just equity multiples -- become the pressure point to watch, since a wobble in private-credit appetite for these vehicles would starve the buildout faster than any single earnings miss. Watch spreads on AI-linked private credit and SPV issuance volume alongside the usual chip-demand data; that's where the real balance-sheet risk is currently priced, or mispriced."
+      "Monday's headline market mover wasn't a hot inflation print -- it was the 30-year Treasury yield grinding up to 5.311%, its highest level since June 2007. That's notable because the usual trigger for a long-yield spike, a surprise jump in expected inflation, isn't present: core CPI has come in benign for weeks, and consumer sentiment has been softening, not overheating. Instead, last week's $25 billion 30-year auction tailed at 5.216%, the worst pricing since 2001, and the CBO's freshly raised $2.1 trillion FY2026 deficit forecast is doing the work a hot jobs report usually does. That distinction matters enormously for how investors should read today's market.",
+      "A Treasury yield can be decomposed into two pieces: the average short-term rate markets expect the Fed to set over the bond's life, plus a term premium -- extra compensation investors demand for the risk of holding a long-dated, illiquid claim through decades of uncertain rate and inflation outcomes. The Fed funds rate sits at 3.5%-3.75%, so the 30-year's climb to 5.31% isn't coming from expected policy tightening; it's coming from the second piece. When the Treasury issues more long-duration debt than its natural buyer base -- pension funds, insurers, foreign central banks -- wants to absorb at prevailing yields, the term premium rises mechanically until yields clear the market, regardless of what the Fed does next.",
+      "What's easy to miss is that this is a bear steepener, not a bear flattener -- the front end, anchored by Fed policy, has barely moved while the long end runs. That shape is diagnostic: a flattening selloff usually signals the market pricing more Fed hikes to fight inflation, while a steepening one signals a supply-and-fiscal-credibility problem instead. The closest precedent is October 2023, when the 10-year briefly neared 5% on nearly identical fears -- swelling deficits, heavy issuance, a Fed seen as done hiking -- before retreating months later once auctions stabilized. Interest costs on the debt, now $857 billion over nine months and exceeding Medicare and defense outlays, are the mechanism keeping that pressure alive today.",
+      "Practically, a 5.3% 30-year yield raises the discount rate applied to every long-duration equity cash flow, pressures mortgage rates further, and complicates the Fed's September 16 decision -- easing at the short end does nothing to fix a term-premium problem at the long end. It also connects to the AI capex debate: heavy AI-linked debt issuance is competing for the same pool of duration-tolerant capital as the Treasury, which can push both yields higher simultaneously even when neither market looks distressed on its own. Watch the next 30-year auction's bid-to-cover ratio and the pace of AI-linked private credit issuance; both are cleaner signals here than any single CPI print."
     ]
   }
 }
