@@ -1,87 +1,63 @@
 {
-  "lastUpdated": "2026-08-18T16:30:17-06:00",
+  "lastUpdated": "2026-08-18T16:35:26-06:00",
   "market": {
-    "sp500": {
-      "price": "7692",
-      "change": "-0.69%",
-      "dir": "down"
-    },
-    "nasdaq": {
-      "price": "29491",
-      "change": "-1.68%",
-      "dir": "down"
-    },
-    "yield": {
-      "price": "4.71%",
-      "change": "-2 bps",
-      "dir": "up"
-    },
-    "wti": {
-      "price": "$84",
-      "change": "-0.88%",
-      "dir": "down"
-    },
-    "gold": {
-      "price": "$4390",
-      "change": "-1.30%",
-      "dir": "down"
-    },
-    "dxy": {
-      "price": "99.64",
-      "change": "+0.02%",
-      "dir": "up"
-    }
+    "sp500": { "price": "7,703", "change": "-0.54%", "dir": "down" },
+    "nasdaq": { "price": "29,505", "change": "-1.63%", "dir": "down" },
+    "yield": { "price": "4.75%", "change": "+4 bps", "dir": "up" },
+    "wti": { "price": "$85", "change": "+0.5%", "dir": "up" },
+    "gold": { "price": "$4,405", "change": "+0.3%", "dir": "up" },
+    "dxy": { "price": "99.60", "change": "+0.1%", "dir": "up" }
   },
   "stories": [
     {
       "cat": "MACRO",
-      "headline": "STOCKS SLIDE, DOW SHEDS 272 POINTS AS OIL SURGE AND YIELD SPIKE RATTLE MARKETS",
-      "body": "The S&P 500 fell 0.52% to 7,745, the Dow dropped roughly 272 points (-0.5%), and the Nasdaq Composite slipped 0.3% Monday as renewed U.S.-Iran tensions pushed oil and Treasury yields higher at the same time. The 10-year yield rose to 4.72% while the 30-year climbed to its highest level since 2007, and traders are bracing for a heavy retail-earnings week from Walmart, Home Depot and Target.",
-      "explain": "A joint selloff in stocks and bonds is the market's way of saying it can't find a clean narrative: normally weak growth data pulls yields down (flight to quality) while strong growth data pushes them up alongside stocks, but today's move was driven by a supply-side oil shock that raises inflation risk independent of the growth outlook. That combination -- inflation-risk-driven yields rising while equities fall on higher discount rates and margin pressure -- is the textbook signature of a stagflationary scare, and it's exactly the setup the Fed has to weigh into its September 16 meeting."
+      "headline": "30-YEAR TREASURY YIELD HITS FRESH 19-YEAR HIGH OF 5.33% AS STOCKS SLIDE ON INFLATION, DEFICIT FEARS",
+      "body": "The 30-year Treasury yield touched 5.323% Tuesday, its highest since 2007, as July's federal deficit posted its largest monthly total since March 2021 and annual inflation held above the Fed's 2% target. The S&P 500 fell 0.54% to 7,703 and the Nasdaq 100 dropped 1.63% to 29,505 as the same forces pushed the 10-year yield up 4 bps to 4.75%.",
+      "explain": "Long-end yields are the Fed funds rate plus a term premium -- extra compensation for holding decades of uncertain rate and inflation risk -- and today's move is almost entirely the second piece. A record monthly deficit means the Treasury is flooding the market with more long-duration supply than pension funds, insurers and foreign buyers want to absorb at current yields, so the term premium rises mechanically until the market clears, independent of anything the Fed does at its September 15-16 meeting."
+    },
+    {
+      "cat": "MARKETS",
+      "headline": "CHIPMAKER SELLOFF DRAGS NASDAQ 100 DOWN 1.63% AS INTEL'S $20 BILLION SHARE SALE RATTLES AI TRADE",
+      "body": "A closely watched semiconductor index fell 5.5% Tuesday, with Western Digital down 7%, Sandisk down 9%, and Marvell and Seagate down roughly 8% and 9% respectively. Intel shares dropped 2-4% after pricing an upsized $20 billion share offering -- 210.5 million shares at $95 -- to fund AI-driven capex, adding to dilution and China-competition worries across the sector.",
+      "explain": "This year's best-performing corner of the market is getting hit hardest because chip stocks were priced for flawless AI capex execution, and Intel's equity raise is a direct signal that even a well-capitalized player needs external funding to keep pace -- a red flag investors read across the whole sector. Equity issuance dilutes existing shareholders' claim on future earnings by roughly the same percentage as new shares issued (here, about 4.2%), so the stock has to earn a proportionally higher return on that new capital just to keep per-share value flat."
     },
     {
       "cat": "GEOPOLITICS",
-      "headline": "OIL JUMPS TOWARD $85 AS RENEWED FIGHTING IN LEBANON AND STRAIT OF HORMUZ ATTACKS RATTLE SUPPLY",
-      "body": "WTI crude rose 3.67% to roughly $85 a barrel Monday after reports of renewed fighting in Lebanon and fresh attacks on vessels near the Strait of Hormuz revived fears that the U.S.-Iran standoff could disrupt supply through the corridor that carries roughly a fifth of global seaborne crude.",
-      "explain": "Oil traders price geopolitical risk as an option on disruption, not a certainty of it -- so even without an actual barrel taken off the market, a credible threat to the Hormuz corridor gets embedded in the futures curve as a risk premium. That premium sits on top of an otherwise soft demand backdrop (the IEA and OPEC have both trimmed 2026 demand growth forecasts), which is why WTI can jump more than 3% on a single day of headlines even though nothing about physical supply or demand actually changed today."
-    },
-    {
-      "cat": "MACRO",
-      "headline": "30-YEAR TREASURY YIELD TOPS 5.31%, HIGHEST SINCE 2007, ON DEFICIT -- NOT INFLATION -- FEARS",
-      "body": "The 30-year Treasury yield climbed to 5.311% Monday, its highest level since June 2007, even as inflation data has stayed benign for weeks. The move follows a $25 billion 30-year auction last week that priced at 5.216% -- the worst since 2001 -- as the CBO's freshly raised $2.1 trillion FY2026 deficit forecast and heavy AI-related debt issuance compete with Treasurys for investor capital.",
-      "explain": "A Treasury yield is the expected path of short-term rates plus a term premium -- extra compensation for the risk of holding long-dated debt through decades of uncertain outcomes. With the Fed funds rate at 3.5%-3.75%, today's move isn't about expected policy; it's the term premium rising because the market's natural buyer base can't absorb this much long-duration supply at current yields without demanding more compensation, which is exactly what a bear-steepening curve (long end rising, short end flat) signals versus an inflation-driven bear-flattener."
+      "headline": "OIL CLIMBS TOWARD $85 FOR A THIRD STRAIGHT SESSION AS TRUMP COOLS ON EXTENDING IRAN INTERIM DEAL",
+      "body": "WTI crude rose about 0.5% to roughly $85 a barrel Tuesday, its third consecutive daily gain, after President Trump said he was not interested in extending the interim U.S.-Iran peace deal, reviving fears of renewed disruption to the corridor that carries roughly a fifth of global seaborne crude.",
+      "explain": "Oil traders price geopolitical risk as an option on disruption rather than a certainty of it, so a credible threat to Hormuz-corridor flows gets baked into the futures curve as a risk premium well before any barrel is actually taken off the market. That premium is now layering on top of a bond market already worried about inflation, which is exactly the combination -- supply-side price pressure plus a fiscally strained Treasury market -- that makes today's stagflation-adjacent selloff harder for the Fed to address with a single tool."
     },
     {
       "cat": "COMMODITIES",
-      "headline": "GOLD TICKS UP TO $4,472 AS SAFE-HAVEN DEMAND OFFSETS RISING YIELDS",
-      "body": "Gold gained 0.41% to about $4,472 an ounce Monday, drawing a safe-haven bid from the same Iran-related tensions pushing oil higher, even as rising nominal Treasury yields would typically pressure non-yielding bullion.",
-      "explain": "Gold's relative attractiveness normally moves inversely with real (inflation-adjusted) yields, so a jump in nominal yields is usually a headwind. Today that headwind was offset because the yield move is being read as deficit- and supply-driven rather than a signal of a stronger economy or higher policy rates -- a distinction that keeps real yields more contained than the nominal move suggests -- while the geopolitical risk premium in oil spilled over into a parallel safe-haven bid for bullion."
+      "headline": "GOLD HOLDS NEAR $4,400 AS SAFE-HAVEN DEMAND OFFSETS RISING YIELDS",
+      "body": "Gold traded around $4,405 an ounce Tuesday, up roughly 0.3%, holding above $4,400 for a third session even as the 10-year yield climbed to 4.75%.",
+      "explain": "Gold's appeal typically moves inversely with real (inflation-adjusted) yields, so a jump in nominal yields is usually a headwind for bullion. Today that relationship is being overridden because the yield spike is being read as a deficit-and-supply problem rather than a sign of a stronger economy or tighter Fed policy -- a distinction that keeps real yields more contained than the nominal move implies -- while the same Middle East risk premium lifting oil is spilling over into a parallel safe-haven bid for gold."
     },
     {
-      "cat": "EARNINGS",
-      "headline": "WORKDAY SLIPS ON DOUBLE DOWNGRADE AS WALL STREET AWAITS WALMART, HOME DEPOT, TARGET EARNINGS",
-      "body": "Workday shares fell about 2.4% Monday after Deutsche Bank cut the stock to Hold and BTIG moved to Neutral from Buy, following the software name's 76% rebound off its June low. Investors are now turning to this week's retail-earnings slate -- Walmart, Home Depot and Target all report -- for a fresh read on consumer health after July's surprisingly weak retail-sales print.",
-      "explain": "Government retail-sales data is a backward-looking, revision-prone aggregate, while big-box retailer earnings calls give real-time commentary on trip frequency, basket size and trade-down behavior straight from management -- which is why markets treat this week's reports as a higher-resolution check on the same consumer-spending question the July retail-sales miss raised. A soft Walmart print in particular would corroborate last week's data as a genuine slowdown rather than noise; a strong one would suggest the retail-sales miss was concentrated in a few discretionary categories rather than broad-based."
+      "cat": "CENTRAL BANKS",
+      "headline": "FED RATE-HIKE ODDS FOR SEPTEMBER CLIMB TO 40% AS INFLATION STAYS STICKY ABOVE TARGET",
+      "body": "Futures markets now price roughly a 40% probability of a Fed rate hike at the September 15-16 FOMC meeting, up from near-zero odds earlier this year, as annual inflation remains above the 2% target and oil's climb back toward $85 adds fresh upside risk to the outlook.",
+      "explain": "A market that spent most of 2026 pricing rate cuts now flirting with hike odds is a genuine regime shift, not noise -- it means traders think the disinflation trend has stalled just as tariff pass-through, an AI capex boom and now oil are all pushing prices the wrong way simultaneously. That's the direct link to today's bond selloff: if the Fed has to hike instead of cut, the short end of the curve rises too, which would turn today's bear-steepener (long yields alone rising) into a more painful bear-flattener that hits every rate-sensitive asset at once."
     },
     {
       "cat": "MCBB",
-      "headline": "TRANSFER PORTAL CHURN CONTINUES INTO MID-AUGUST AS 1,400+ PLAYERS STILL IN MOTION",
-      "body": "More than 1,400 players remain in the men's basketball transfer portal with roughly 59% already committed, and activity hasn't slowed heading into fall practice -- guard Skyy Clark and forward BJ Edwards are among the latest to land new homes in the past week, continuing the roster overhaul programs like Kentucky, USC and Arizona have leaned on all offseason."
+      "headline": "NCAA WINS STAY BLOCKING '5-IN-5' ELIGIBILITY RULING, PULLING PREVIOUSLY CLEARED PLAYERS BACK OUT OF ACTION",
+      "body": "A federal judge in Ohio granted the NCAA a stay of a prior injunction in the ongoing 5-in-5 eligibility litigation Tuesday, meaning players who had been ruled immediately eligible under the blocked injunction can no longer play or enter the transfer portal while the case proceeds -- a significant swing in the offseason eligibility fight roiling rosters nationwide."
     },
     {
       "cat": "NBA",
-      "headline": "NBA SAYS NO EVIDENCE BALLMER FUNNELED MONEY TO KAWHI LEONARD AMID CLIPPERS SCANDAL",
-      "body": "The Clippers' Kawhi Leonard/Aspiration saga took another turn Monday as the NBA said it has found no evidence owner Steve Ballmer funneled money to Leonard through sponsors, contradicting an earlier ESPN report. Elsewhere in free agency, Draymond Green re-signed with Golden State on a one-year, $27.7 million deal, and Suns center Mark Williams agreed to a three-year, $38 million contract."
+      "headline": "RUSSELL WESTBROOK RETIRES AFTER 18-YEAR CAREER, FINISHES FIFTH ALL-TIME IN ASSISTS",
+      "body": "Russell Westbrook announced his retirement Tuesday after an 18-year career, closing his run with 10,351 assists, fifth-most in NBA history. Elsewhere, free agency chatter continues around LeBron James' next destination and the Lakers' ownership sale to Mark Walter amid a federal probe."
     },
     {
       "cat": "NFL",
-      "headline": "COWBOYS LAND VON MILLER AS VIKINGS' JAMAL ADAMS SUFFERS SEASON-ENDING INJURY",
-      "body": "The Cowboys agreed to terms with eight-time Pro Bowl pass rusher Von Miller Sunday, bolstering their edge rush ahead of the season. Meanwhile, Vikings safety Jamal Adams suffered a season-ending quadriceps injury in Saturday's preseason game against the Giants, and Cardinals running back Jeremiyah Love is considered unlikely to play again this preseason with a high ankle sprain."
+      "headline": "SAINTS' FIRST-ROUND WR JORDYN TYSON OUT TWO MONTHS WITH TRAINING-CAMP HAMSTRING INJURY",
+      "body": "New Orleans' first-round pick Jordyn Tyson is expected to miss roughly two months with a hamstring injury suffered in camp, a significant blow to the Saints' rebuilding receiver room. Elsewhere, Giants WR Malik Nabers cleared a full-speed practice milestone Monday in his return from a torn ACL."
     },
     {
       "cat": "NCAA CFB",
-      "headline": "NOTRE DAME, OHIO STATE INK BLOCKBUSTER JERSEY-PATCH DEALS AS FALL CAMPS OPEN",
-      "body": "Notre Dame signed a multi-year jersey-patch sponsorship with SoFi worth an estimated $18-20 million annually, and Ohio State followed with a roughly $17 million-per-year deal with Chase Bank, as programs nationwide open fall camp. Ohio State also confirmed offensive linemen Austin Siereveld and Phillip Daniels and Florida State transfer safety Earl Little Jr. are fully cleared to practice."
+      "headline": "MULTIPLE PROGRAMS CROSS $40 MILLION ROSTER SPENDING THRESHOLD AS FALL CAMPS WIND DOWN",
+      "body": "A CBS Sports poll of industry insiders found several programs have now crossed the $40 million mark for 2026 roster spending, underscoring how fast revenue-share and NIL costs are escalating heading into a season that opens for the Big Ten and Big 12 on August 29."
     }
   ],
   "sports": [
@@ -89,47 +65,47 @@
       "team": "WASHINGTON HUSKIES FOOTBALL",
       "pill": "FALL CAMP",
       "pillClass": "s-up",
-      "detail": "Fall camp continues under third-year coach Jedd Fisch, who is calling plays himself after the OC job went unfilled in February. Mock Game and picture day is Aug. 22; season opens vs. Washington State -- Sunday, Sept. 6, 1 PM PT on NBC, Husky Stadium."
+      "detail": "Fall camp continues under third-year coach Jedd Fisch, who is calling plays himself after the OC job went unfilled in February; four returning linebackers -- Alexander, Manu, Rainey-Sale and Al-Uqdah -- anchor the defense. Mock Game and picture day is Aug. 22; season opens vs. Washington State, Sunday Sept. 6, Husky Stadium."
     },
     {
       "team": "WASHINGTON HUSKIES BASKETBALL",
       "pill": "ROSTER SET",
       "pillClass": "s-up",
-      "detail": "UW's 15-man roster for 2026-27 is set after landing Rutgers transfer Harun Zrno, but the Huskies must replace leading scorer Hannes Steinbach (No. 14 pick, Hornets) and No. 2 scorer Zoom Diallo (transferred to Kentucky). Danny Sprinkle enters Year 3 off a 16-17 finish, adding assistant Charles Klask, who brings 25 years of NBA experience."
+      "detail": "UW's 2026-27 roster is set after adding Rutgers transfer Harun Zrno, but the Huskies must replace leading scorer Hannes Steinbach (No. 14 pick, Hornets) and No. 2 scorer Zoom Diallo (transferred to Kentucky). Returning guard Wesley Yates III (13 ppg) headlines Danny Sprinkle's Year 3 rebuild off a 16-17 finish."
     },
     {
       "team": "SEATTLE SEAHAWKS",
       "pill": "L 17-7",
       "pillClass": "s-l",
-      "detail": "The defending Super Bowl champs opened the preseason with a 17-7 loss to Dallas Saturday at Lumen Field; LB Tyrice Knight logged 10 tackles and 2 pass breakups, but CB Shemar Jean-Charles appears to have suffered a season-ending injury. Next: at Tennessee, Sunday, Aug. 23, 5 PM PT on FOX."
+      "detail": "CB Devon Witherspoon signed a four-year, $132 million extension Saturday ($101M guaranteed), making him the NFL's highest-paid corner, days after the defending champs opened the preseason with a 17-7 loss to Dallas. Next: at Tennessee, Sunday Aug. 23; regular season opens vs. New England Sept. 9 in a Super Bowl rematch."
     },
     {
       "team": "DETROIT PISTONS",
       "pill": "OFFSEASON",
       "pillClass": "s-up",
-      "detail": "Detroit's 2026-27 schedule opens at home vs. Boston on Oct. 20, part of a brutal opening stretch that also includes road games at Miami, Philadelphia and New York. Jalen Duren's next contract remains unresolved as a restricted free agent, while Isaiah Joe, Taurean Prince and John Collins joined the roster after Isaiah Stewart departed for Memphis."
+      "detail": "Detroit's 2026-27 schedule opens Oct. 20 vs. Boston followed by road games at Miami, Philadelphia and New York -- one of 19 nationally televised games this season. Jalen Duren remains in a contract stalemate as a restricted free agent; Isaiah Stewart's departure to Memphis opens a bigger frontcourt role for Paul Reed."
     },
     {
       "team": "SEATTLE MARINERS",
       "pill": "W 3-2",
       "pillClass": "s-w",
-      "detail": "Cal Raleigh and Randy Arozarena homered as Seattle beat Houston 3-2 Sunday night; Bryan Woo (9-8) struck out five over six innings and Andres Munoz notched his 22nd save. Both teams were off Monday -- Mariners open a series at Milwaukee Tuesday."
+      "detail": "Cal Raleigh and Randy Arozarena homered as Bryan Woo struck out five over six innings in a 3-2 win over Houston. Seattle (59-66) opens a three-game series tonight at Milwaukee (77-48) -- Bryce Miller vs. Kyle Harrison, 5:40 PM MT."
     }
   ],
   "watchlist": [
-    "30-year Treasury yield near 5.31%, highest since 2007 -- watch the next long-bond auction's bid-to-cover for whether the deficit premium keeps building",
-    "Walmart, Home Depot and Target earnings this week -- first real-time read on consumer spending since July's weak retail-sales print",
-    "FOMC minutes from the July 28-29 meeting due Wednesday, Aug. 19 at 2 PM ET",
-    "Seahawks at Titans -- Sunday, Aug. 23, 5 PM PT / 8 PM ET",
-    "Mariners open a series at Milwaukee -- Tuesday"
+    "FOMC meets Sept. 15-16 with September rate-hike odds now near 40% -- watch August CPI, due Sept. 11, for confirmation",
+    "30-year Treasury yield at a 19-year high (5.33%) -- watch the next long-bond auction's bid-to-cover for whether the deficit premium keeps building",
+    "Walmart, Home Depot and Target earnings later this week -- first real-time read on consumer spending health",
+    "Mariners at Brewers, 3-game series -- Aug. 18-20, American Family Field",
+    "Seahawks at Titans -- Sunday, Aug. 23, preseason"
   ],
   "deepDive": {
-    "title": "Term Premium: Why the 30-Year Yield Just Hit a 19-Year High Without an Inflation Scare",
+    "title": "Why Intel's $20 Billion Share Sale Sent the Stock Down, Not Up",
     "content": [
-      "Monday's headline market mover wasn't a hot inflation print -- it was the 30-year Treasury yield grinding up to 5.311%, its highest level since June 2007. That's notable because the usual trigger for a long-yield spike, a surprise jump in expected inflation, isn't present: core CPI has come in benign for weeks, and consumer sentiment has been softening, not overheating. Instead, last week's $25 billion 30-year auction tailed at 5.216%, the worst pricing since 2001, and the CBO's freshly raised $2.1 trillion FY2026 deficit forecast is doing the work a hot jobs report usually does. That distinction matters enormously for how investors should read today's market.",
-      "A Treasury yield can be decomposed into two pieces: the average short-term rate markets expect the Fed to set over the bond's life, plus a term premium -- extra compensation investors demand for the risk of holding a long-dated, illiquid claim through decades of uncertain rate and inflation outcomes. The Fed funds rate sits at 3.5%-3.75%, so the 30-year's climb to 5.31% isn't coming from expected policy tightening; it's coming from the second piece. When the Treasury issues more long-duration debt than its natural buyer base -- pension funds, insurers, foreign central banks -- wants to absorb at prevailing yields, the term premium rises mechanically until yields clear the market, regardless of what the Fed does next.",
-      "What's easy to miss is that this is a bear steepener, not a bear flattener -- the front end, anchored by Fed policy, has barely moved while the long end runs. That shape is diagnostic: a flattening selloff usually signals the market pricing more Fed hikes to fight inflation, while a steepening one signals a supply-and-fiscal-credibility problem instead. The closest precedent is October 2023, when the 10-year briefly neared 5% on nearly identical fears -- swelling deficits, heavy issuance, a Fed seen as done hiking -- before retreating months later once auctions stabilized. Interest costs on the debt, now $857 billion over nine months and exceeding Medicare and defense outlays, are the mechanism keeping that pressure alive today.",
-      "Practically, a 5.3% 30-year yield raises the discount rate applied to every long-duration equity cash flow, pressures mortgage rates further, and complicates the Fed's September 16 decision -- easing at the short end does nothing to fix a term-premium problem at the long end. It also connects to the AI capex debate: heavy AI-linked debt issuance is competing for the same pool of duration-tolerant capital as the Treasury, which can push both yields higher simultaneously even when neither market looks distressed on its own. Watch the next 30-year auction's bid-to-cover ratio and the pace of AI-linked private credit issuance; both are cleaner signals here than any single CPI print."
+      "Intel raised $20 billion Tuesday by selling 210.5 million new shares at $95 apiece -- a huge capital injection to fund AI-driven chip-manufacturing capex -- and the stock still fell 2-4% on the news, part of a broader selloff that took a semiconductor index down 5.5% for the day. To someone new to markets, that reaction looks backwards: the company just got a massive cash infusion, why would the price drop? The answer sits at the intersection of two ideas every finance student needs cold: dilution mechanics and the information a financing choice itself reveals about management's view of its own stock.",
+      "Mechanically, issuing new shares increases the share count by roughly the same percentage as the capital raised relative to market value -- here, about 4.2% before any underwriter over-allotment, rising toward 4.8% if fully exercised. Every existing shareholder's claim on future earnings, dividends and voting power shrinks by that same fraction, because the same pool of future profit is now divided among more shares. Unless the new capital generates a return on investment high enough to grow total earnings by at least that percentage, earnings per share -- and often the stock price that's priced off it -- mechanically falls even though the company is objectively larger and better funded.",
+      "The deeper piece is what corporate finance calls the pecking order theory (Myers and Majluf, 1984): firms prefer internal cash first, debt second, and equity last, precisely because issuing equity is the most information-revealing choice a management team can make. Managers know more about their firm's true value than outside investors do, so when they choose to sell stock instead of borrowing, rational investors infer the stock is probably overvalued in management's own eyes -- otherwise they'd have used cheaper, less dilutive debt. That's why secondary offerings across sectors, from bank recapitalizations after 2008 to today's AI-capex-driven raises, tend to draw an immediate negative price reaction independent of what the money is actually used for.",
+      "That framework explains today's setup precisely: Intel is choosing equity over debt at the exact moment Treasury yields are at a 19-year high, which makes new corporate borrowing unusually expensive and tilts the debt-versus-equity calculus toward equity even for a company that would normally prefer to lever up. Watch for more AI-infrastructure names to follow the same playbook while long rates stay elevated -- each new offering will face the same dilution math and the same signaling skepticism, and the sector's ability to keep raising capital this way without further punishing multiples is now a real test of how much goodwill the AI capex story still has left."
     ]
   }
 }
