@@ -1,135 +1,86 @@
 {
-  "lastUpdated": "2026-08-19T16:30:15-06:00",
+  "lastUpdated": "2026-08-19T16:34:48-06:00",
   "market": {
-    "sp500": {
-      "price": "7708",
-      "change": "+0.21%",
-      "dir": "up"
-    },
-    "nasdaq": {
-      "price": "29426",
-      "change": "-0.22%",
-      "dir": "down"
-    },
-    "yield": {
-      "price": "4.65%",
-      "change": "-5 bps",
-      "dir": "up"
-    },
-    "wti": {
-      "price": "$84",
-      "change": "-0.37%",
-      "dir": "down"
-    },
-    "gold": {
-      "price": "$4577",
-      "change": "+3.81%",
-      "dir": "up"
-    },
-    "dxy": {
-      "price": "98.77",
-      "change": "-0.82%",
-      "dir": "down"
-    }
+    "sp500":  { "price": "7,707.98", "change": "+0.2%",   "dir": "up"   },
+    "nasdaq": { "price": "29,010",   "change": "-1.68%",  "dir": "down" },
+    "yield":  { "price": "4.70%",    "change": "-1 bps",  "dir": "down" },
+    "wti":    { "price": "$86.15",   "change": "+1.42%",  "dir": "up"   },
+    "gold":   { "price": "$4,518",   "change": "+2.9%",   "dir": "up"   },
+    "dxy":    { "price": "99.46",    "change": "-0.2%",   "dir": "down" }
   },
   "stories": [
     {
       "cat": "MACRO",
-      "headline": "30-YEAR TREASURY YIELD HITS FRESH 19-YEAR HIGH OF 5.33% AS STOCKS SLIDE ON INFLATION, DEFICIT FEARS",
-      "body": "The 30-year Treasury yield touched 5.323% Tuesday, its highest since 2007, as July's federal deficit posted its largest monthly total since March 2021 and annual inflation held above the Fed's 2% target. The S&P 500 fell 0.54% to 7,703 and the Nasdaq 100 dropped 1.63% to 29,505 as the same forces pushed the 10-year yield up 4 bps to 4.75%.",
-      "explain": "Long-end yields are the Fed funds rate plus a term premium -- extra compensation for holding decades of uncertain rate and inflation risk -- and today's move is almost entirely the second piece. A record monthly deficit means the Treasury is flooding the market with more long-duration supply than pension funds, insurers and foreign buyers want to absorb at current yields, so the term premium rises mechanically until the market clears, independent of anything the Fed does at its September 15-16 meeting."
-    },
-    {
-      "cat": "MARKETS",
-      "headline": "CHIPMAKER SELLOFF DRAGS NASDAQ 100 DOWN 1.63% AS INTEL'S $20 BILLION SHARE SALE RATTLES AI TRADE",
-      "body": "A closely watched semiconductor index fell 5.5% Tuesday, with Western Digital down 7%, Sandisk down 9%, and Marvell and Seagate down roughly 8% and 9% respectively. Intel shares dropped 2-4% after pricing an upsized $20 billion share offering -- 210.5 million shares at $95 -- to fund AI-driven capex, adding to dilution and China-competition worries across the sector.",
-      "explain": "This year's best-performing corner of the market is getting hit hardest because chip stocks were priced for flawless AI capex execution, and Intel's equity raise is a direct signal that even a well-capitalized player needs external funding to keep pace -- a red flag investors read across the whole sector. Equity issuance dilutes existing shareholders' claim on future earnings by roughly the same percentage as new shares issued (here, about 4.2%), so the stock has to earn a proportionally higher return on that new capital just to keep per-share value flat."
-    },
-    {
-      "cat": "GEOPOLITICS",
-      "headline": "OIL CLIMBS TOWARD $85 FOR A THIRD STRAIGHT SESSION AS TRUMP COOLS ON EXTENDING IRAN INTERIM DEAL",
-      "body": "WTI crude rose about 0.5% to roughly $85 a barrel Tuesday, its third consecutive daily gain, after President Trump said he was not interested in extending the interim U.S.-Iran peace deal, reviving fears of renewed disruption to the corridor that carries roughly a fifth of global seaborne crude.",
-      "explain": "Oil traders price geopolitical risk as an option on disruption rather than a certainty of it, so a credible threat to Hormuz-corridor flows gets baked into the futures curve as a risk premium well before any barrel is actually taken off the market. That premium is now layering on top of a bond market already worried about inflation, which is exactly the combination -- supply-side price pressure plus a fiscally strained Treasury market -- that makes today's stagflation-adjacent selloff harder for the Fed to address with a single tool."
-    },
-    {
-      "cat": "COMMODITIES",
-      "headline": "GOLD HOLDS NEAR $4,400 AS SAFE-HAVEN DEMAND OFFSETS RISING YIELDS",
-      "body": "Gold traded around $4,405 an ounce Tuesday, up roughly 0.3%, holding above $4,400 for a third session even as the 10-year yield climbed to 4.75%.",
-      "explain": "Gold's appeal typically moves inversely with real (inflation-adjusted) yields, so a jump in nominal yields is usually a headwind for bullion. Today that relationship is being overridden because the yield spike is being read as a deficit-and-supply problem rather than a sign of a stronger economy or tighter Fed policy -- a distinction that keeps real yields more contained than the nominal move implies -- while the same Middle East risk premium lifting oil is spilling over into a parallel safe-haven bid for gold."
+      "headline": "S&P 500 SNAPS LOSING STREAK AS TREASURY MOVES TO CALM BOND MARKET",
+      "body": "The S&P 500 rose 16.22 points (+0.2%) to close at 7,707.98, its first gain in four sessions, after the Treasury said it will double liquidity-support buybacks of longer-dated debt to at least $4 billion per operation from $2 billion. The move sparked a global bond rally that pulled 30-year yields down roughly 10 bps off multi-decade highs to about 5.18%.",
+      "explain": "Buybacks work by having the government repurchase older, less-liquid bonds using proceeds from new issuance, which improves secondary-market liquidity and reduces the term premium investors demand for holding long-dated debt. When that premium compresses, yields fall without any change in Fed policy, which is why stocks — priced partly off the long-bond discount rate — rallied even as the Fed signaled it might still need to tighten."
     },
     {
       "cat": "CENTRAL BANKS",
-      "headline": "FED RATE-HIKE ODDS FOR SEPTEMBER CLIMB TO 40% AS INFLATION STAYS STICKY ABOVE TARGET",
-      "body": "Futures markets now price roughly a 40% probability of a Fed rate hike at the September 15-16 FOMC meeting, up from near-zero odds earlier this year, as annual inflation remains above the 2% target and oil's climb back toward $85 adds fresh upside risk to the outlook.",
-      "explain": "A market that spent most of 2026 pricing rate cuts now flirting with hike odds is a genuine regime shift, not noise -- it means traders think the disinflation trend has stalled just as tariff pass-through, an AI capex boom and now oil are all pushing prices the wrong way simultaneously. That's the direct link to today's bond selloff: if the Fed has to hike instead of cut, the short end of the curve rises too, which would turn today's bear-steepener (long yields alone rising) into a more painful bear-flattener that hits every rate-sensitive asset at once."
+      "headline": "FOMC MINUTES FLAG POSSIBLE TIGHTENING EVEN AS DOLLAR HITS TWO-MONTH LOW",
+      "body": "Minutes from the Fed's July meeting, released Wednesday, showed 'many participants assessed that policy tightening would likely be necessary' if inflation doesn't retreat — a hawkish surprise given recent soft retail sales and consumer sentiment data. The dollar index (DXY) still slid to 99.46, a two-month low, as traders continue to lean toward a September hold rather than a hike.",
+      "explain": "The minutes reveal a Fed torn between mandates: inflation readings pushed up by the oil spike argue for higher rates, while weakening consumer spending argues for patience. Markets are treating the soft data as the more decisive signal, which is why the dollar sold off even on hawkish language — investors are betting the Fed talks tough but ultimately holds, keeping real-rate expectations from ratcheting higher."
+    },
+    {
+      "cat": "COMMODITIES",
+      "headline": "OIL EXTENDS FOUR-DAY RUN, GOLD PUSHES TOWARD $4,500 ON HORMUZ STANDOFF",
+      "body": "WTI crude climbed to $86.15/barrel (+1.42%), its fourth straight gain, as the U.S. and Iran showed no sign of resolving the standoff over the Strait of Hormuz. Gold jumped toward $4,518/oz, up roughly 2.9% on the day, as falling yields and safe-haven demand pushed the metal closer to record territory.",
+      "explain": "The Strait of Hormuz carries roughly a fifth of global oil supply, so a credible threat to that chokepoint gets priced immediately into WTI as a geopolitical risk premium rather than a change in current supply. Gold's rally is doing double duty — it benefits from falling real yields, which lower the opportunity cost of holding a non-yielding asset, and from investors hedging the same Middle East tail risk that's driving oil."
+    },
+    {
+      "cat": "MARKETS",
+      "headline": "CHIP SELLOFF DRAGS NASDAQ-100 DOWN 1.7% EVEN AS BROADER MARKET RALLIES",
+      "body": "The Nasdaq-100 fell roughly 1.7% to near 29,010 as a semiconductor selloff deepened; the Philadelphia Semiconductor Index dropped to a 2.5-month low with Intel and AMD each down more than 4%. Cyclicals and health care led the broader S&P 500 higher even as tech dragged.",
+      "explain": "Chip stocks carry outsized sensitivity to rate expectations because so much of their valuation rests on distant future earnings from AI-infrastructure buildout — that makes them the first place investors trim when long yields stay elevated, even on a day yields actually eased. The rotation into cyclicals and health care shows money moving toward sectors priced on near-term earnings rather than a multi-year capex thesis."
+    },
+    {
+      "cat": "POLITICS",
+      "headline": "BITCOIN JUMPS AS TRUMP PRESSES CONGRESS ON CRYPTO MARKET-STRUCTURE BILL",
+      "body": "Bitcoin jumped Wednesday as President Trump pushed Congress to pass a long-stalled crypto market-structure bill, with the White House hosting industry executives to build momentum for passage.",
+      "explain": "The bill would clarify which federal regulator — the SEC or CFTC — oversees most digital assets, a jurisdictional ambiguity that has kept institutional capital on the sidelines for years. Removing that overhang tends to move crypto prices more than a single Fed decision, because it addresses a compliance risk directly rather than a valuation input."
     },
     {
       "cat": "MCBB",
-      "headline": "NCAA WINS STAY BLOCKING '5-IN-5' ELIGIBILITY RULING, PULLING PREVIOUSLY CLEARED PLAYERS BACK OUT OF ACTION",
-      "body": "A federal judge in Ohio granted the NCAA a stay of a prior injunction in the ongoing 5-in-5 eligibility litigation Tuesday, meaning players who had been ruled immediately eligible under the blocked injunction can no longer play or enter the transfer portal while the case proceeds -- a significant swing in the offseason eligibility fight roiling rosters nationwide."
+      "headline": "MICHIGAN'S TITLE RUN LEAVES BEHIND A COACHING VACANCY",
+      "body": "Reigning national champion Michigan enters the off-season needing both a new head coach and a new AD: Dusty May left for the NBA and athletic director Warde Manuel announced he'll step down by year's end. Preseason buzz elsewhere centers on Jeremy Fears Jr., discussed as a threat to the career assists record this winter."
     },
     {
       "cat": "NBA",
-      "headline": "RUSSELL WESTBROOK RETIRES AFTER 18-YEAR CAREER, FINISHES FIFTH ALL-TIME IN ASSISTS",
-      "body": "Russell Westbrook announced his retirement Tuesday after an 18-year career, closing his run with 10,351 assists, fifth-most in NBA history. Elsewhere, free agency chatter continues around LeBron James' next destination and the Lakers' ownership sale to Mark Walter amid a federal probe."
+      "headline": "RUSSELL WESTBROOK RETIRES AFTER 18 SEASONS AND NINE ALL-STAR NODS",
+      "body": "Westbrook announced his retirement on Aug. 12, closing out an 18-year career. Free agency stayed active elsewhere: Bradley Beal signed a two-year deal with the Clippers on Aug. 13, and Cleveland and Charlotte swapped guards, sending Dennis Schröder to the Hornets for Tre Mann."
     },
     {
       "cat": "NFL",
-      "headline": "SAINTS' FIRST-ROUND WR JORDYN TYSON OUT TWO MONTHS WITH TRAINING-CAMP HAMSTRING INJURY",
-      "body": "New Orleans' first-round pick Jordyn Tyson is expected to miss roughly two months with a hamstring injury suffered in camp, a significant blow to the Saints' rebuilding receiver room. Elsewhere, Giants WR Malik Nabers cleared a full-speed practice milestone Monday in his return from a torn ACL."
+      "headline": "VON MILLER SIGNS WITH COWBOYS, CHASING A THIRD SUPER BOWL RING",
+      "body": "The 37-year-old pass rusher joined Dallas as the Cowboys try to get back to championship contention. Elsewhere, Texans WR Jayden Higgins is out for the season with a torn ACL, and the NFL's player-voted Top 100 dropped Ja'Marr Chase and Derrick Henry out of the top 10."
     },
     {
       "cat": "NCAA CFB",
-      "headline": "MULTIPLE PROGRAMS CROSS $40 MILLION ROSTER SPENDING THRESHOLD AS FALL CAMPS WIND DOWN",
-      "body": "A CBS Sports poll of industry insiders found several programs have now crossed the $40 million mark for 2026 roster spending, underscoring how fast revenue-share and NIL costs are escalating heading into a season that opens for the Big Ten and Big 12 on August 29."
+      "headline": "OHIO STATE OPENS FALL CAMP AS THE TITLE FAVORITE",
+      "body": "With QB Julian Sayin and WR Jeremiah Smith back and new OC Arthur Smith calling plays, the Buckeyes are the betting favorite as camp opens. Defending champion Indiana and a coaching carousel that sent Lane Kiffin to LSU and James Franklin to Virginia Tech reshape a wide-open national race."
     }
   ],
   "sports": [
-    {
-      "team": "WASHINGTON HUSKIES FOOTBALL",
-      "pill": "FALL CAMP",
-      "pillClass": "s-up",
-      "detail": "Fall camp continues under third-year coach Jedd Fisch, who is calling plays himself after the OC job went unfilled in February; four returning linebackers -- Alexander, Manu, Rainey-Sale and Al-Uqdah -- anchor the defense. Mock Game and picture day is Aug. 22; season opens vs. Washington State, Sunday Sept. 6, Husky Stadium."
-    },
-    {
-      "team": "WASHINGTON HUSKIES BASKETBALL",
-      "pill": "ROSTER SET",
-      "pillClass": "s-up",
-      "detail": "UW's 2026-27 roster is set after adding Rutgers transfer Harun Zrno, but the Huskies must replace leading scorer Hannes Steinbach (No. 14 pick, Hornets) and No. 2 scorer Zoom Diallo (transferred to Kentucky). Returning guard Wesley Yates III (13 ppg) headlines Danny Sprinkle's Year 3 rebuild off a 16-17 finish."
-    },
-    {
-      "team": "SEATTLE SEAHAWKS",
-      "pill": "L 17-7",
-      "pillClass": "s-l",
-      "detail": "CB Devon Witherspoon signed a four-year, $132 million extension Saturday ($101M guaranteed), making him the NFL's highest-paid corner, days after the defending champs opened the preseason with a 17-7 loss to Dallas. Next: at Tennessee, Sunday Aug. 23; regular season opens vs. New England Sept. 9 in a Super Bowl rematch."
-    },
-    {
-      "team": "DETROIT PISTONS",
-      "pill": "OFFSEASON",
-      "pillClass": "s-up",
-      "detail": "Detroit's 2026-27 schedule opens Oct. 20 vs. Boston followed by road games at Miami, Philadelphia and New York -- one of 19 nationally televised games this season. Jalen Duren remains in a contract stalemate as a restricted free agent; Isaiah Stewart's departure to Memphis opens a bigger frontcourt role for Paul Reed."
-    },
-    {
-      "team": "SEATTLE MARINERS",
-      "pill": "W 3-2",
-      "pillClass": "s-w",
-      "detail": "Cal Raleigh and Randy Arozarena homered as Bryan Woo struck out five over six innings in a 3-2 win over Houston. Seattle (59-66) opens a three-game series tonight at Milwaukee (77-48) -- Bryce Miller vs. Kyle Harrison, 5:40 PM MT."
-    }
+    { "team": "WASHINGTON HUSKIES FOOTBALL", "pill": "FALL CAMP", "pillClass": "s-up", "detail": "Into week 3 of fall camp under Jedd Fisch; O-line returns four starters. Next: Apple Cup vs. Washington State, Sun. Sept. 6, Husky Stadium (NBC)." },
+    { "team": "WASHINGTON HUSKIES BASKETBALL", "pill": "REBUILDING", "pillClass": "s-up", "detail": "Danny Sprinkle rebuilding via the portal after losing leading scorer Hannes Steinbach (drafted 14th, Hornets) and Zoom Diallo (transferred to Kentucky). Wesley Yates III returns after ~13 ppg last year." },
+    { "team": "SEATTLE SEAHAWKS", "pill": "PRESEASON", "pillClass": "s-up", "detail": "S Nick Emmanwori passed his physical after ankle surgery; DE DeMarcus Lawrence says 2026 will be his final season. Seattle heads out this week for joint practices with the Titans." },
+    { "team": "DETROIT PISTONS", "pill": "OFFSEASON", "pillClass": "s-up", "detail": "2026-27 schedule released — Pistons open at home vs. Celtics Oct. 20 (NBC). Re-signing restricted free agent Jalen Duren remains unresolved after a 60-win season." },
+    { "team": "SEATTLE MARINERS", "pill": "TONIGHT 5:40 PM MT", "pillClass": "s-up", "detail": "At Brewers tonight — Logan Gilbert vs. Dustin May — after Tuesday's 22-0 shutout loss, which tied the modern-era record for largest margin. Seattle remains in the thick of the AL West/Wild Card race." }
   ],
   "watchlist": [
-    "FOMC meets Sept. 15-16 with September rate-hike odds now near 40% -- watch August CPI, due Sept. 11, for confirmation",
-    "30-year Treasury yield at a 19-year high (5.33%) -- watch the next long-bond auction's bid-to-cover for whether the deficit premium keeps building",
-    "Walmart, Home Depot and Target earnings later this week -- first real-time read on consumer spending health",
-    "Mariners at Brewers, 3-game series -- Aug. 18-20, American Family Field",
-    "Seahawks at Titans -- Sunday, Aug. 23, preseason"
+    "FOMC minutes flagged possible tightening — next major data point: August jobs report, Fri. Sept. 4",
+    "30-year Treasury yield holding near 5.2% after Wednesday's buyback-driven relief rally",
+    "Mariners at Brewers — tonight 5:40 PM MT and Thurs. 12:10 PM MT, American Family Field",
+    "Huskies football season opener — Apple Cup vs. Washington State, Sun. Sept. 6, 1 PM PT, Husky Stadium (NBC)",
+    "Congress crypto market-structure bill — White House pushing industry executives for passage this fall"
   ],
   "deepDive": {
-    "title": "Why Intel's $20 Billion Share Sale Sent the Stock Down, Not Up",
+    "title": "Why an Oil Shock Puts the Fed in a Bind",
     "content": [
-      "Intel raised $20 billion Tuesday by selling 210.5 million new shares at $95 apiece -- a huge capital injection to fund AI-driven chip-manufacturing capex -- and the stock still fell 2-4% on the news, part of a broader selloff that took a semiconductor index down 5.5% for the day. To someone new to markets, that reaction looks backwards: the company just got a massive cash infusion, why would the price drop? The answer sits at the intersection of two ideas every finance student needs cold: dilution mechanics and the information a financing choice itself reveals about management's view of its own stock.",
-      "Mechanically, issuing new shares increases the share count by roughly the same percentage as the capital raised relative to market value -- here, about 4.2% before any underwriter over-allotment, rising toward 4.8% if fully exercised. Every existing shareholder's claim on future earnings, dividends and voting power shrinks by that same fraction, because the same pool of future profit is now divided among more shares. Unless the new capital generates a return on investment high enough to grow total earnings by at least that percentage, earnings per share -- and often the stock price that's priced off it -- mechanically falls even though the company is objectively larger and better funded.",
-      "The deeper piece is what corporate finance calls the pecking order theory (Myers and Majluf, 1984): firms prefer internal cash first, debt second, and equity last, precisely because issuing equity is the most information-revealing choice a management team can make. Managers know more about their firm's true value than outside investors do, so when they choose to sell stock instead of borrowing, rational investors infer the stock is probably overvalued in management's own eyes -- otherwise they'd have used cheaper, less dilutive debt. That's why secondary offerings across sectors, from bank recapitalizations after 2008 to today's AI-capex-driven raises, tend to draw an immediate negative price reaction independent of what the money is actually used for.",
-      "That framework explains today's setup precisely: Intel is choosing equity over debt at the exact moment Treasury yields are at a 19-year high, which makes new corporate borrowing unusually expensive and tilts the debt-versus-equity calculus toward equity even for a company that would normally prefer to lever up. Watch for more AI-infrastructure names to follow the same playbook while long rates stay elevated -- each new offering will face the same dilution math and the same signaling skepticism, and the sector's ability to keep raising capital this way without further punishing multiples is now a real test of how much goodwill the AI capex story still has left."
+      "Today's brief has two threads that are actually one story: WTI crude up 1.42% to $86.15 on Strait of Hormuz tensions, and FOMC minutes warning that 'policy tightening would likely be necessary' if inflation doesn't cool. Those aren't a coincidence. Energy is one of the most volatile inputs into headline CPI, and a fourth straight day of oil gains driven by a geopolitical chokepoint threat is exactly the kind of shock that can force a central bank's hand even when the rest of the economy — soft retail sales, weak consumer sentiment — is arguing the opposite direction.",
+      "The mechanism runs through two channels. Directly, energy carries a real weight in the CPI basket, so a sustained move in crude shows up in headline inflation within a month or two. Indirectly, and more dangerously, higher fuel costs raise input costs across transportation, manufacturing, and agriculture, feeding into core inflation with a longer lag. This is a supply shock, not a demand shock — the economy isn't overheating, an external constraint just got more expensive. That distinction matters because raising rates does nothing to fix the Strait of Hormuz; it only cools domestic demand elsewhere to offset the imported price pressure, at the cost of growth the Fed would otherwise want to protect.",
+      "This is precisely the trap the Fed fell into during the 1973 and 1979 oil shocks, when policymakers underestimated how quickly one-time supply price jumps could get baked into wage demands and inflation expectations, turning a temporary shock into a sustained stagflationary spiral. The lesson central banks took from Volcker's era is that the number that actually matters isn't the spot oil price — it's whether long-run inflation expectations, measured today through instruments like 5-year, 5-year-forward breakevens, start drifting up. A Fed that tightens every time oil moves is overreacting; a Fed that ignores a shock large enough to de-anchor expectations is repeating 1973.",
+      "That's the tension sitting underneath today's mixed signals: the Treasury's buyback move pulled 30-year yields down roughly 10 bps and gave equities room to rally, but the Fed's own minutes show officials still nervous that the oil-driven inflation impulse hasn't run its course. Watch two things into the September meeting: whether the Hormuz standoff keeps pushing crude higher, and whether breakeven inflation expectations start moving with it. If they stay anchored, today's hawkish language is likely just cover for staying on hold — soft retail sales, not spot crude, will end up deciding the next Fed move."
     ]
   }
 }
