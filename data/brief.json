@@ -1,12 +1,36 @@
 {
-  "lastUpdated": "2026-08-21T16:36:36-06:00",
+  "lastUpdated": "2026-08-21T17:00:16-06:00",
   "market": {
-    "sp500":  { "price": "7,674",  "change": "+0.43%", "dir": "up" },
-    "nasdaq": { "price": "29,309", "change": "+0.33%", "dir": "up" },
-    "yield":  { "price": "4.74%",  "change": "+4 bps",  "dir": "down" },
-    "wti":    { "price": "$87",    "change": "+0.21%", "dir": "up" },
-    "gold":   { "price": "$4,662", "change": "+1.54%", "dir": "up" },
-    "dxy":    { "price": "98.84",  "change": "+0.10%", "dir": "up" }
+    "sp500": {
+      "price": "7674",
+      "change": "+0.43%",
+      "dir": "up"
+    },
+    "nasdaq": {
+      "price": "29309",
+      "change": "+0.33%",
+      "dir": "up"
+    },
+    "yield": {
+      "price": "4.74%",
+      "change": "+4 bps",
+      "dir": "down"
+    },
+    "wti": {
+      "price": "$87",
+      "change": "+0.21%",
+      "dir": "up"
+    },
+    "gold": {
+      "price": "$4662",
+      "change": "+1.54%",
+      "dir": "up"
+    },
+    "dxy": {
+      "price": "98.84",
+      "change": "+0.10%",
+      "dir": "up"
+    }
   },
   "stories": [
     {
@@ -19,19 +43,19 @@
       "cat": "CENTRAL BANKS",
       "headline": "TREASURY YIELDS CLIMB BACK TO 4.74%, ERASING THE BUYBACK-DAY DROP",
       "body": "The 10-year yield rose 4 bps to 4.74% today, wiping out the decline that followed Wednesday's news that Treasury would double its long-term debt buyback program. Yields had briefly pulled back from multi-year highs on the announcement before rebounding through Thursday and Friday as traders refocused on the underlying $40 trillion debt load.",
-      "explain": "A debt buyback works by having Treasury repurchase older, less-liquid long bonds funded by new short-term bill issuance — that shifts demand toward existing long-duration paper and should push its price up and yield down without the Fed changing its policy rate at all. The fact that the effect faded within 48 hours shows the market treated it as a liquidity fix rather than a fiscal one: buybacks manage term premium (the extra yield investors demand for duration risk) but do nothing to shrink the debt stock itself, so once the initial relief traded through, yields drifted back toward levels that reflect the actual $40 trillion supply overhang."
+      "explain": "A debt buyback works by having Treasury repurchase older, less-liquid long bonds funded by new short-term bill issuance \u2014 that shifts demand toward existing long-duration paper and should push its price up and yield down without the Fed changing its policy rate at all. The fact that the effect faded within 48 hours shows the market treated it as a liquidity fix rather than a fiscal one: buybacks manage term premium (the extra yield investors demand for duration risk) but do nothing to shrink the debt stock itself, so once the initial relief traded through, yields drifted back toward levels that reflect the actual $40 trillion supply overhang."
     },
     {
       "cat": "GEOPOLITICS",
       "headline": "WTI RISES A FIFTH STRAIGHT SESSION AS STRAIT OF HORMUZ STANDOFF DRAGS ON",
       "body": "WTI crude added 0.21% to $87 per barrel, its fifth consecutive gain, as an ongoing standoff in the Strait of Hormuz keeps a geopolitical risk premium priced into oil with no resolution in sight. Roughly a fifth of global oil consumption transits the strait, so even a low-probability disruption scenario supports a persistent bid.",
-      "explain": "Oil's risk premium in a chokepoint standoff isn't priced off the current flow of barrels — it's priced off the tail risk that flow gets interrupted, so the market pays for insurance against a low-probability, high-severity event every day the standoff continues. That's why WTI can climb five straight sessions even without any actual supply disruption: traders are pricing optionality, and the premium only unwinds once the standoff visibly de-escalates or oil finds a way around the chokepoint."
+      "explain": "Oil's risk premium in a chokepoint standoff isn't priced off the current flow of barrels \u2014 it's priced off the tail risk that flow gets interrupted, so the market pays for insurance against a low-probability, high-severity event every day the standoff continues. That's why WTI can climb five straight sessions even without any actual supply disruption: traders are pricing optionality, and the premium only unwinds once the standoff visibly de-escalates or oil finds a way around the chokepoint."
     },
     {
       "cat": "COMMODITIES",
       "headline": "GOLD TOPS $4,600 AS WEAK DOLLAR AND DEBT CONCERNS OVERRIDE RISING YIELDS",
-      "body": "Gold climbed 1.54% to $4,662 even as Treasury yields rose today, extending an August rally of roughly 11% (silver +16.5%) as the DXY dollar index ticked up just 0.10% to 98.84 — far too little to offset safe-haven demand tied to the $40 trillion national debt figure.",
-      "explain": "Gold normally faces headwinds when yields rise, since it pays no interest and its opportunity cost climbs alongside real rates — but today's move shows debt-driven demand overpowering that relationship. When investors worry that a rising debt load eventually gets serviced through currency debasement rather than fiscal discipline, gold's appeal as a non-fiat store of value can dominate even a backdrop of climbing nominal yields, which is exactly the disconnect showing up in the metal's 11% August run."
+      "body": "Gold climbed 1.54% to $4,662 even as Treasury yields rose today, extending an August rally of roughly 11% (silver +16.5%) as the DXY dollar index ticked up just 0.10% to 98.84 \u2014 far too little to offset safe-haven demand tied to the $40 trillion national debt figure.",
+      "explain": "Gold normally faces headwinds when yields rise, since it pays no interest and its opportunity cost climbs alongside real rates \u2014 but today's move shows debt-driven demand overpowering that relationship. When investors worry that a rising debt load eventually gets serviced through currency debasement rather than fiscal discipline, gold's appeal as a non-fiat store of value can dominate even a backdrop of climbing nominal yields, which is exactly the disconnect showing up in the metal's 11% August run."
     },
     {
       "cat": "MARKETS",
@@ -39,32 +63,73 @@
       "body": "The Dow Jones Industrial Average rose 0.98% to 53,277.01, its best day in weeks, with health care on pace for its strongest week since June 26 after Moderna and Merck reported a successful late-stage trial for an mRNA treatment.",
       "explain": "The Dow's price-weighted structure means a handful of high-dollar health care names moving sharply on binary clinical-trial news can swing the index disproportionately relative to the cap-weighted S&P 500, which is why the Dow's 0.98% gain today outpaced the S&P's 0.43% even with breadth otherwise mixed."
     },
-    { "cat": "MCBB", "headline": "SEC COMMISSIONER SANKEY FIGHTS TO BLOCK ATHLETE'S RETURN-TO-COLLEGE BID", "body": "SEC Commissioner Greg Sankey filed an affidavit in Louisiana court asking a judge to uphold NCAA rules barring athletes who signed pro contracts from returning to college eligibility, in response to a lawsuit from LSU signee and former NBA G-League player RJ Luis. Elsewhere, Santa Clara's Elijah Mahi is returning for a fifth season, and Murray State-NC State and Seton Hall-Wisconsin headline the Baha Mar Hoops Bahamas Championship field. No games are on the slate yet; the season opens later this fall." },
-    { "cat": "NBA", "headline": "JAMES HARDEN AGREES TO RETURN TO CAVALIERS ON THREE-YEAR, $97M DEAL", "body": "Harden is heading back to Cleveland on a three-year deal with a player option for 2028-29, part of a busy free-agency stretch that also saw DeMar DeRozan agree to join Denver (recruited by Nikola Jokic, Aaron Gordon and Jamal Murray), the Trail Blazers land Ja Morant in a trade with Memphis, and Draymond Green re-sign with Golden State for one year, $27.7 million." },
-    { "cat": "NFL", "headline": "PRESEASON WEEK 2 ROSTER-BUBBLE BATTLES HIT FRIDAY NIGHT", "body": "Three games Friday: Jets at Steelers (7 p.m. ET, Will Howard starting for Pittsburgh with rookie Drew Allar to follow), Panthers at Jaguars (7:30 p.m. ET), and Packers at Broncos (9 p.m. ET, Bo Nix set to see action at Mile High). It follows Thursday's doubleheader where Justin Herbert ran the Chargers' first-team offense for one drive and Texans WR Jayden Higgins was lost for the season to a torn ACL." },
-    { "cat": "NCAA CFB", "headline": "OKLAHOMA EXTENDS VENABLES THROUGH 2031 AHEAD OF SEASON", "body": "Oklahoma has signed head coach Brent Venables to a contract extension running through the 2031 season, locking in stability heading into fall camp. Separately, SEC media is coalescing around Georgia as the conference favorite given Texas's brutal 2026 schedule, and Alabama's QB battle between five-star Keelon Russell and Austin Mack remains unsettled as camp winds down." }
+    {
+      "cat": "MCBB",
+      "headline": "SEC COMMISSIONER SANKEY FIGHTS TO BLOCK ATHLETE'S RETURN-TO-COLLEGE BID",
+      "body": "SEC Commissioner Greg Sankey filed an affidavit in Louisiana court asking a judge to uphold NCAA rules barring athletes who signed pro contracts from returning to college eligibility, in response to a lawsuit from LSU signee and former NBA G-League player RJ Luis. Elsewhere, Santa Clara's Elijah Mahi is returning for a fifth season, and Murray State-NC State and Seton Hall-Wisconsin headline the Baha Mar Hoops Bahamas Championship field. No games are on the slate yet; the season opens later this fall."
+    },
+    {
+      "cat": "NBA",
+      "headline": "JAMES HARDEN AGREES TO RETURN TO CAVALIERS ON THREE-YEAR, $97M DEAL",
+      "body": "Harden is heading back to Cleveland on a three-year deal with a player option for 2028-29, part of a busy free-agency stretch that also saw DeMar DeRozan agree to join Denver (recruited by Nikola Jokic, Aaron Gordon and Jamal Murray), the Trail Blazers land Ja Morant in a trade with Memphis, and Draymond Green re-sign with Golden State for one year, $27.7 million."
+    },
+    {
+      "cat": "NFL",
+      "headline": "PRESEASON WEEK 2 ROSTER-BUBBLE BATTLES HIT FRIDAY NIGHT",
+      "body": "Three games Friday: Jets at Steelers (7 p.m. ET, Will Howard starting for Pittsburgh with rookie Drew Allar to follow), Panthers at Jaguars (7:30 p.m. ET), and Packers at Broncos (9 p.m. ET, Bo Nix set to see action at Mile High). It follows Thursday's doubleheader where Justin Herbert ran the Chargers' first-team offense for one drive and Texans WR Jayden Higgins was lost for the season to a torn ACL."
+    },
+    {
+      "cat": "NCAA CFB",
+      "headline": "OKLAHOMA EXTENDS VENABLES THROUGH 2031 AHEAD OF SEASON",
+      "body": "Oklahoma has signed head coach Brent Venables to a contract extension running through the 2031 season, locking in stability heading into fall camp. Separately, SEC media is coalescing around Georgia as the conference favorite given Texas's brutal 2026 schedule, and Alabama's QB battle between five-star Keelon Russell and Austin Mack remains unsettled as camp winds down."
+    }
   ],
   "sports": [
-    { "team": "WASHINGTON HUSKIES FOOTBALL", "pill": "UPCOMING", "pillClass": "s-up", "detail": "Fall camp underway under Jedd Fisch, who is calling plays himself after his OC left in February. Four Huskies landed on major watch lists this week (Comeback Player of the Year, Polynesian POY, Davey O'Brien, Golden Arm). Opens the season vs. Washington State, Sun. Sept. 6, Husky Stadium (NBC)." },
-    { "team": "WASHINGTON HUSKIES BASKETBALL", "pill": "OFFSEASON", "pillClass": "s-up", "detail": "Coming off a 16-17 (7-13 Big Ten) season and no NCAA Tournament bid. Top scorer Hannes Steinbach was drafted 14th overall by Charlotte, and No. 2 scorer Zoom Diallo transferred to Kentucky. Wesley Yates III (12.9 ppg) returns as the top holdover in a rebuilding year." },
-    { "team": "SEATTLE SEAHAWKS", "pill": "L 17-7", "pillClass": "s-l", "detail": "Dropped their preseason opener to Dallas 17-7. In Nashville Friday for a joint practice with the Titans; WR Jake Bobo suffered what head coach Mike Macdonald called a serious, possibly long-term knee injury at practice. Franchise-sale vote to the Khosla-led group ($9.61B) expected Aug. 26." },
-    { "team": "DETROIT PISTONS", "pill": "OFFSEASON", "pillClass": "s-up", "detail": "Coming off a 60-win season, Detroit had a relatively quiet offseason, adding shooters Isaiah Joe and John Collins while the Jalen Duren situation remains unresolved. 2026-27 schedule opens at home vs. Boston, then three straight road games at Miami, Philadelphia and New York." },
-    { "team": "SEATTLE MARINERS", "pill": "UPCOMING", "pillClass": "s-up", "detail": "Sit at 60-68 on the season. Host the Cubs tonight, 7:10 PM PT at T-Mobile Park." }
+    {
+      "team": "WASHINGTON HUSKIES FOOTBALL",
+      "pill": "UPCOMING",
+      "pillClass": "s-up",
+      "detail": "Fall camp underway under Jedd Fisch, who is calling plays himself after his OC left in February. Four Huskies landed on major watch lists this week (Comeback Player of the Year, Polynesian POY, Davey O'Brien, Golden Arm). Opens the season vs. Washington State, Sun. Sept. 6, Husky Stadium (NBC)."
+    },
+    {
+      "team": "WASHINGTON HUSKIES BASKETBALL",
+      "pill": "OFFSEASON",
+      "pillClass": "s-up",
+      "detail": "Coming off a 16-17 (7-13 Big Ten) season and no NCAA Tournament bid. Top scorer Hannes Steinbach was drafted 14th overall by Charlotte, and No. 2 scorer Zoom Diallo transferred to Kentucky. Wesley Yates III (12.9 ppg) returns as the top holdover in a rebuilding year."
+    },
+    {
+      "team": "SEATTLE SEAHAWKS",
+      "pill": "L 17-7",
+      "pillClass": "s-l",
+      "detail": "Dropped their preseason opener to Dallas 17-7. In Nashville Friday for a joint practice with the Titans; WR Jake Bobo suffered what head coach Mike Macdonald called a serious, possibly long-term knee injury at practice. Franchise-sale vote to the Khosla-led group ($9.61B) expected Aug. 26."
+    },
+    {
+      "team": "DETROIT PISTONS",
+      "pill": "OFFSEASON",
+      "pillClass": "s-up",
+      "detail": "Coming off a 60-win season, Detroit had a relatively quiet offseason, adding shooters Isaiah Joe and John Collins while the Jalen Duren situation remains unresolved. 2026-27 schedule opens at home vs. Boston, then three straight road games at Miami, Philadelphia and New York."
+    },
+    {
+      "team": "SEATTLE MARINERS",
+      "pill": "UPCOMING",
+      "pillClass": "s-up",
+      "detail": "Sit at 60-68 on the season. Host the Cubs tonight, 7:10 PM PT at T-Mobile Park."
+    }
   ],
   "watchlist": [
-    "Fed Chair Kevin Warsh's first Jackson Hole speech — Fri. Aug. 28, 19 days ahead of the Sept. 16 FOMC decision",
+    "Fed Chair Kevin Warsh's first Jackson Hole speech \u2014 Fri. Aug. 28, 19 days ahead of the Sept. 16 FOMC decision",
     "10-year Treasury yield back near 4.74% after Wednesday's buyback rally faded",
-    "Strait of Hormuz standoff — WTI up five straight sessions, no resolution in sight",
-    "Mariners host Cubs — tonight, 7:10 PM PT, T-Mobile Park",
-    "Huskies football season opener vs. Washington State — Sun. Sept. 6, Husky Stadium (NBC)"
+    "Strait of Hormuz standoff \u2014 WTI up five straight sessions, no resolution in sight",
+    "Mariners host Cubs \u2014 tonight, 7:10 PM PT, T-Mobile Park",
+    "Huskies football season opener vs. Washington State \u2014 Sun. Sept. 6, Husky Stadium (NBC)"
   ],
   "deepDive": {
     "title": "Why the Treasury Buyback Rally in Yields Only Lasted 48 Hours",
     "content": [
-      "The most instructive thing that happened in markets this week isn't today's 0.43% S&P gain — it's that the 10-year yield first fell, then fully round-tripped back to 4.74%, in the span of two trading days. Wednesday's news that Treasury would double its long-term debt buyback program briefly pulled yields off multi-year highs near 4.75%. By Friday, that entire move had reversed. Understanding why a policy tool can work for a day and then stop working is a better lesson in fixed income than the initial headline gave anyone credit for.",
-      "A buyback is a supply operation, not a demand-creation one: Treasury retires older, less-liquid long bonds by repurchasing them, funded by issuing more short-term bills. That shift in the mix of outstanding debt reduces the immediate glut of long-duration paper hitting the market, which compresses term premium — the extra yield investors demand for the risk of holding duration for years — and pushes yields down mechanically, the same way a large buyer showing up in any market moves price. Crucially, it does not shrink the total debt stock; it just changes where along the curve that debt sits.",
-      "That distinction is exactly why the effect faded. Once the initial liquidity relief was priced in, investors turned back to the structural question: the debt figure that just crossed $40 trillion hasn't moved, and rolling more of it into short-term bills raises refinancing risk down the line rather than eliminating it. Gold's continued rally to $4,662 even as yields rose today is the clearest evidence the market drew that conclusion — a genuine improvement in the fiscal outlook would have pressured gold alongside falling real yields, but gold rose anyway, which only happens when investors are pricing debt risk that a buyback can't actually fix.",
-      "For Jackson Hole next week, this is the exact tension Chair Warsh will have to navigate. If he treats the buyback as a durable financial-stability tool, expect yields to stay contained and equities — already near records — to keep grinding higher. But any acknowledgment that the debt load itself constrains future policy flexibility would validate what gold and the reversed yield move are already signaling: that this week's relief was technical, not fundamental, and the underlying supply problem is still unresolved."
+      "The most instructive thing that happened in markets this week isn't today's 0.43% S&P gain \u2014 it's that the 10-year yield first fell, then fully round-tripped back to 4.74%, in the span of two trading days. Wednesday's news that Treasury would double its long-term debt buyback program briefly pulled yields off multi-year highs near 4.75%. By Friday, that entire move had reversed. Understanding why a policy tool can work for a day and then stop working is a better lesson in fixed income than the initial headline gave anyone credit for.",
+      "A buyback is a supply operation, not a demand-creation one: Treasury retires older, less-liquid long bonds by repurchasing them, funded by issuing more short-term bills. That shift in the mix of outstanding debt reduces the immediate glut of long-duration paper hitting the market, which compresses term premium \u2014 the extra yield investors demand for the risk of holding duration for years \u2014 and pushes yields down mechanically, the same way a large buyer showing up in any market moves price. Crucially, it does not shrink the total debt stock; it just changes where along the curve that debt sits.",
+      "That distinction is exactly why the effect faded. Once the initial liquidity relief was priced in, investors turned back to the structural question: the debt figure that just crossed $40 trillion hasn't moved, and rolling more of it into short-term bills raises refinancing risk down the line rather than eliminating it. Gold's continued rally to $4,662 even as yields rose today is the clearest evidence the market drew that conclusion \u2014 a genuine improvement in the fiscal outlook would have pressured gold alongside falling real yields, but gold rose anyway, which only happens when investors are pricing debt risk that a buyback can't actually fix.",
+      "For Jackson Hole next week, this is the exact tension Chair Warsh will have to navigate. If he treats the buyback as a durable financial-stability tool, expect yields to stay contained and equities \u2014 already near records \u2014 to keep grinding higher. But any acknowledgment that the debt load itself constrains future policy flexibility would validate what gold and the reversed yield move are already signaling: that this week's relief was technical, not fundamental, and the underlying supply problem is still unresolved."
     ]
   }
 }
