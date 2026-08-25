@@ -1,87 +1,63 @@
 {
-  "lastUpdated": "2026-08-25T16:30:15-06:00",
+  "lastUpdated": "2026-08-25T16:35:09-06:00",
   "market": {
-    "sp500": {
-      "price": "7677",
-      "change": "+0.32%",
-      "dir": "up"
-    },
-    "nasdaq": {
-      "price": "29209",
-      "change": "+0.64%",
-      "dir": "up"
-    },
-    "yield": {
-      "price": "4.64%",
-      "change": "-7 bps",
-      "dir": "up"
-    },
-    "wti": {
-      "price": "$81",
-      "change": "-5.08%",
-      "dir": "down"
-    },
-    "gold": {
-      "price": "$4724",
-      "change": "+0.75%",
-      "dir": "up"
-    },
-    "dxy": {
-      "price": "98.90",
-      "change": "-0.14%",
-      "dir": "down"
-    }
+    "sp500": { "price": "7,677", "change": "+0.32%", "dir": "up" },
+    "nasdaq": { "price": "29,209", "change": "+0.64%", "dir": "up" },
+    "yield": { "price": "4.64%", "change": "-7 bps", "dir": "down" },
+    "wti": { "price": "$81", "change": "-5.08%", "dir": "down" },
+    "gold": { "price": "$4,724", "change": "+0.75%", "dir": "up" },
+    "dxy": { "price": "98.90", "change": "-0.14%", "dir": "down" }
   },
   "stories": [
     {
       "cat": "MACRO",
-      "headline": "S&P 500 SLIPS 0.28% AS CHIP SELLOFF DEEPENS AHEAD OF NVIDIA EARNINGS",
-      "body": "The S&P 500 fell 0.28% to 7,652.86 and the Nasdaq 100 dropped 0.80% to 29,075.72 as Micron slid 5.8%, AMD lost more than 3%, and Broadcom fell over 2% on de-risking ahead of Nvidia's earnings Wednesday. The Dow bucked the trend, adding 0.26% to 53,417 as money rotated into consumer defensive names.",
-      "explain": "Investors often trim a sector's most-correlated names before its bellwether reports, since Nvidia's results function as a read-through for the entire AI capex cycle \u2014 a miss or soft guidance there would reprice the whole semiconductor complex, not just Nvidia. That asymmetry, a small position-trimming cost now versus a large repricing risk if Wednesday disappoints, is why chips underperformed a tape that also had tariff and sanctions headlines to digest."
-    },
-    {
-      "cat": "TRADE",
-      "headline": "TRUMP HITS CANADA WITH 50% TARIFFS AS TRADE TALKS COLLAPSE",
-      "body": "The U.S. imposed 50% tariffs on roughly $20 billion of Canadian goods early Saturday after negotiations broke down, with both governments blaming the other. Canadian PM Mark Carney pledged dollar-for-dollar retaliatory tariffs effective Sept. 8.",
-      "explain": "A tariff is levied on the U.S. importer of record, not the Canadian exporter, so the immediate mechanism is higher input costs passed through to U.S. buyers unless the exporter cuts its price to absorb it \u2014 and with Canadian exports like autos, lumber and aluminum already running thin margins, there's little room to absorb a 50% hit. Carney's dollar-for-dollar retaliation is designed to inflict symmetric political pain rather than win on economics, making the tariffs costly enough for Washington that a rollback before Sept. 8 becomes the incentive-compatible outcome."
-    },
-    {
-      "cat": "GEOPOLITICS",
-      "headline": "TREASURY TO UNLEASH 'ECONOMIC D-DAY' SANCTIONS PACKAGE ON IRAN",
-      "body": "Treasury Secretary Scott Bessent is set to announce Monday what he calls the \"single greatest financial offensive ever marshalled against an adversary,\" targeting Iran and third parties that do business with it. Iran's currency hit a record low of 2.02 million rial to the dollar as the announcement neared.",
-      "explain": "Secondary sanctions work by threatening to cut any foreign bank or company that transacts with the sanctioned entity off from the U.S. dollar financial system \u2014 since most global trade and reserves are dollar-denominated, that threat alone is usually enough to make third parties stop dealing with Iran even without direct U.S. jurisdiction over them. That extraterritorial reach is why the rial collapsed to a record low before the package was even formally unveiled: markets are pricing the loss of Iran's remaining trade and oil-revenue channels in advance."
-    },
-    {
-      "cat": "CENTRAL BANKS",
-      "headline": "MARKETS BRACE FOR WARSH'S FIRST JACKSON HOLE SPEECH FRIDAY",
-      "body": "Fed Chair Kevin Warsh delivers his first Jackson Hole keynote Friday, 19 days before the Sept. 16 FOMC decision, with this year's symposium theme, \"Financial Innovation and Policy,\" centered on digital payments for the first time. Investors want clarity on his reaction function to a labor market showing cracks alongside inflation that hasn't fully cooled, not a rate signal itself.",
-      "explain": "A reaction function tells markets how a central banker will respond to future data, not just what they'll do at the next meeting, so a speech emphasizing labor-market softness would raise the implied odds of a September cut and pull yields and the dollar lower, while one stressing sticky inflation would do the opposite. Today's dip in the 10-year to 4.70% alongside a firmer dollar looks like positioning ahead of that binary outcome rather than a directional bet."
+      "headline": "CHIP RALLY LIFTS S&P 500, NASDAQ AHEAD OF NVIDIA'S REPORT WEDNESDAY",
+      "body": "The S&P 500 rose 0.32% to 7,677 and the Nasdaq 100 gained 0.64% to 29,209 as semiconductor names rallied into Nvidia's after-the-bell earnings Wednesday: AMD +4.3%, Intel +3.2%, Marvell +7.0%, and Nvidia itself snapped a seven-session losing streak with a 2.5% gain. The 10-year Treasury yield fell 7 bps to 4.64%, its second straight daily decline.",
+      "explain": "Nvidia's results function as a read-through for the entire AI capex cycle, so positioning ahead of the print tends to move the whole semiconductor complex in sympathy rather than just the one stock. The simultaneous yield decline reflects investors rotating into duration ahead of Wednesday's GDP revision and PCE inflation data, both of which will shape how much room the Fed has to cut before its September meeting."
     },
     {
       "cat": "COMMODITIES",
-      "headline": "OIL SLIDES 2% AS GOLD PUSHES TOWARD $4,650 ON DOLLAR, DEBT WORRIES",
-      "body": "WTI crude fell 2.15% to $85.19 a barrel even as the Iran sanctions news loomed, while gold rose 0.76% to $4,650.64 an ounce, extending its August rally on persistent concerns about the U.S. debt load and a soft dollar.",
-      "explain": "Oil and gold are pricing two different risks off the same Iran headline: crude's decline suggests traders see the sanctions package as unlikely to meaningfully cut Iranian supply given historical leakage through intermediaries, while gold's bid reflects a separate, slower-moving trade tied to the $40 trillion U.S. debt load and dollar softness that has little to do with today's specific news. The divergence shows gold currently trading more as a currency-debasement hedge than a pure risk-off asset."
+      "headline": "OIL SINKS 5% ON SIGNS OF A STRAIT OF HORMUZ DEAL; GOLD PUSHES TOWARD $4,725",
+      "body": "WTI crude fell 5.08% to $81 a barrel after reports that Iran and Oman are nearing an agreement to normalize shipping through the Strait of Hormuz, unwinding a geopolitical risk premium built up over five months of periodic attacks and U.S. retaliatory strikes. Gold rose 0.75% to $4,724 an ounce, extending its August rally on persistent U.S. debt-load and dollar-softness concerns.",
+      "explain": "Oil's move is a repricing of tail risk: traders had built a premium into the barrel for the probability of a chokepoint closure that carries roughly a fifth of global seaborne crude, and that premium can unwind in a single session once the probability resets lower, unlike a gradual supply-demand shift. Gold's steadier climb reflects a separate, slower-moving trade tied to debt and currency debasement rather than today's specific headline, which is why the two safe-haven-adjacent assets are diverging."
+    },
+    {
+      "cat": "TRADE",
+      "headline": "TRUMP DOUBLES DOWN, SETS 50% TARIFFS ON CANADIAN AUTOS AND STEEL FOR 2027",
+      "body": "President Trump announced the U.S. will raise tariffs on all Canadian cars, trucks, auto parts, and steel to 50% effective Jan. 1, 2027, doubling the current 25% duty on Canadian auto imports, after trade talks between the two countries collapsed. Canadian steel already faces a 50% levy; the White House says U.S.-built vehicles are exempt.",
+      "explain": "Tariffs are collected from the U.S. importer of record, so the immediate mechanism is higher input costs passed through to American buyers and automakers unless Canadian exporters cut prices to absorb the hit, which thin-margin sectors like autos and steel have little room to do. Markets are treating the January effective date as a negotiating window rather than a certainty, which is part of why the tariff news moved currency and industrial names more than broad equity indexes today."
+    },
+    {
+      "cat": "CENTRAL BANKS",
+      "headline": "FED HOLDS AT 3.5%-3.75%; MARKETS AWAIT WARSH'S FIRST JACKSON HOLE SPEECH FRIDAY",
+      "body": "The FOMC voted 9-3 to hold its target range at 3.50%-3.75% at its July 28-29 meeting, with Beth Hammack, Neel Kashkari, and Lorie Logan dissenting in favor of a hike. Fed Chair Kevin Warsh delivers his first Jackson Hole keynote Friday, three weeks before the Sept. 16 decision, with GDP's second estimate and the PCE Price Index due Wednesday.",
+      "explain": "A Jackson Hole speech matters less for what it says about the next meeting than for the reaction function it signals: how the Fed will respond to future data, which is why investors are parsing Warsh's tone on a labor market showing cracks against inflation that hasn't fully cooled. Today's cooler energy prices from oil's slide give the Fed more room on the inflation side of that calculus heading into Wednesday's PCE print, which is the last major data point before Warsh speaks."
+    },
+    {
+      "cat": "EARNINGS",
+      "headline": "DICK'S SPORTING GOODS CRATERS 27% AS FOOT LOCKER INTEGRATION DRAGS ON RESULTS",
+      "body": "Dick's Sporting Goods fell 27% after posting Q2 revenue of $5.59 billion and adjusted EPS of $3.53, both missing Wall Street's roughly $5.64 billion and $3.77 estimates, and cutting full-year guidance to $21.9-$22.2 billion in revenue and about $11.50 in adjusted EPS. Foot Locker, acquired earlier this year, posted a 3.6% comparable-sales decline on heavy discounting even as Dick's namesake stores grew comps 4.9%.",
+      "explain": "The stock's move is disproportionate to the revenue miss because guidance cuts reprice the entire forward earnings stream, not just one quarter, and the market is now questioning whether the Foot Locker acquisition's integration costs and inventory glut are a one-off or a structural drag. It's a useful read-through for consumer discretionary broadly heading into the holiday season, since heavy discounting to clear athletic inventory signals softer demand than the headline retail sales data has shown."
     },
     {
       "cat": "MCBB",
-      "headline": "KENTUCKY JUDGE GRANTS ELIGIBILITY TO CASTELLANOS, MITCHELL AS PORTAL FALLOUT CONTINUES",
-      "body": "A Kentucky judge issued a temporary restraining order making Thomas Castellanos and Mark Mitchell eligible for 2026-27 and free to enter the portal, part of a wave of state-court rulings the NCAA says only protects players who won individual state cases, not those relying solely on the Colorado ruling. Mitchell has already committed to Kentucky, joining fellow eligibility-case transfers Donovan Dent (LSU), Treysen Eaglestaff (UC San Diego) and Dallin Hall (Utah State)."
+      "headline": "LOUISIANA JUDGE RULES RJ LUIS ELIGIBLE FOR LSU AS TRANSFER-ELIGIBILITY CHAOS CONTINUES",
+      "body": "A Louisiana judge ruled that former G-Leaguer RJ Luis is eligible to play this season at LSU under Will Wade, the latest in a wave of state-court rulings granting eligibility outside the NCAA's own process. Elsewhere, Utah's Noam Yaacov was ruled ineligible and will instead pursue a professional career overseas, while Clemson's Dillon Hunter is returning for a fifth season of eligibility."
     },
     {
       "cat": "NBA",
-      "headline": "KLAY THOMPSON SIGNS WITH HEAT AFTER MAVERICKS BUYOUT, JOINING GIANNIS AND BAM",
-      "body": "Miami finalized a two-year, roughly $11.5 million deal with four-time champion Klay Thompson after he cleared waivers following his Mavericks buyout, giving the Heat a second Hall of Fame-caliber addition this summer alongside Giannis Antetokounmpo. Thompson landed on Miami's radar once LeBron James signed instead with Philadelphia earlier this offseason."
+      "headline": "CLIPPERS, RAPTORS IN TRADE TALKS FOR KAWHI LEONARD AS OFFSEASON SHAKEUP CONTINUES",
+      "body": "The Clippers and Raptors have been in trade discussions for All-NBA forward Kawhi Leonard for several weeks, per league sources. Elsewhere, the Kings are waiving six-time All-Star DeMar DeRozan after exploring trade routes, instantly making him one of the top remaining names on the 2026 free-agent market, and Rockets guard Fred VanVleet is opting into his $25 million player option for 2026-27."
     },
     {
       "cat": "NFL",
       "headline": "BROWNS NAME DESHAUN WATSON WEEK 1 STARTER OVER SHEDEUR SANDERS",
-      "body": "Cleveland handed Deshaun Watson the Week 1 starting job two days after he was booed by home fans in preseason, setting up his first regular-season start since tearing his Achilles in 2024, an injury he later re-tore. Elsewhere, the Texans traded for receiver Kayshon Boutte from New England to help replace injured Jayden Higgins."
+      "body": "Cleveland named Deshaun Watson its Week 1 starting quarterback over rookie Shedeur Sanders, setting up his first regular-season start since tearing his Achilles in 2024, an injury he later re-tore. Elsewhere, Bengals WR Ja'Marr Chase left Tuesday's practice with what the team called a minor hyperextension of his knee, and the Texans traded for receiver Kayshon Boutte from New England."
     },
     {
       "cat": "NCAA CFB",
-      "headline": "NCAA OVERSIGHT COMMITTEE ADVANCES TRANSFER-WINDOW AND OFFSEASON PRACTICE OVERHAUL",
-      "body": "The FBS Oversight Committee's proposal to add OTA-style spring practices, two offseason windows totaling 21 practices, heads toward a final August vote, with changes set to take effect Jan. 1, 2027 if approved. The move comes as programs adjust to 2026 being the first cycle without a spring transfer portal window, forcing one-shot roster construction this year."
+      "headline": "COLLEGE FOOTBALL OPENS SATURDAY: KIFFIN'S LSU DEBUT AND PENN STATE'S RESET HEADLINE WEEK 1",
+      "body": "The 2026 season kicks off this Saturday, the third year of the 12-team College Football Playoff, with Lane Kiffin's move from Ole Miss to LSU and Penn State's rebuild among the top storylines after preseason bowl projections were released Tuesday. Indiana's Curt Cignetti, coming off a perfect 16-0 season, headlines the group of coaches trying to prove last year wasn't a fluke."
     }
   ],
   "sports": [
@@ -89,47 +65,47 @@
       "team": "WASHINGTON HUSKIES FOOTBALL",
       "pill": "UPCOMING",
       "pillClass": "s-up",
-      "detail": "Fall camp wrapped with a Saturday scrimmage; practices are now closed as the team preps for an unprecedented Labor Day-weekend Apple Cup. QB Demond Williams Jr. made the Maxwell Award watch list. Next: vs. Washington State, Sun. Sept. 6, Husky Stadium (NBC)."
+      "detail": "Season opens Sept. 6 vs. Washington State, 4 p.m. ET on NBC at Husky Stadium. Head coach Jedd Fisch takes over as offensive play-caller after OC Jimmie Dougherty's February departure; four Huskies landed on major award watch lists this week, including Manu (Polynesian POY) and Williams Jr. (Davey O'Brien)."
     },
     {
       "team": "WASHINGTON HUSKIES BASKETBALL",
       "pill": "OFFSEASON",
       "pillClass": "s-up",
-      "detail": "Roster filled out at the 15-player max with transfer Harun Zrno (Rutgers) joining fellow portal adds Ryan Beasley (San Francisco), Parker Friedrichsen (Davidson), Steele Venters (Gonzaga) and LeJuan Watts (Texas Tech). Danny Sprinkle also hired longtime NBA assistant Charles Klask to the staff."
+      "detail": "Finished 16-17 (7-13 Big Ten) last season, missing the NCAA Tournament. Lost top scorer Hannes Steinbach (drafted 14th overall by Charlotte) and No. 2 scorer Zoom Diallo (transferred to Kentucky); Wesley Yates III (13 ppg) returns as the leader of a retooled roster."
     },
     {
       "team": "SEATTLE SEAHAWKS",
-      "pill": "L 19-16",
+      "pill": "0-2 (PRESEASON)",
       "pillClass": "s-l",
-      "detail": "Lost to the Titans 19-16 Sunday, a second straight preseason defeat. Rookie safety Bud Clark will miss multiple months with a broken ankle; Drew Lock outplayed Jalen Milroe, who threw a costly interception. NFL owners vote on the Khosla group's $9.6B purchase of the team Wed., Aug. 26, in Atlanta."
+      "detail": "Fell to the Titans in Nashville Sunday to go 0-2 in the preseason; face the Chiefs in the preseason finale Friday, Aug. 28 at 8 p.m. ET. Trevon Diggs has joined the roster late in camp, and the NFL's finance and ownership committees have recommended approval of the franchise sale to a group led by Neeru and Vinod Khosla."
     },
     {
       "team": "DETROIT PISTONS",
       "pill": "OFFSEASON",
       "pillClass": "s-up",
-      "detail": "The Jalen Duren restricted free agency standoff has turned contentious \u2014 Duren declined to address his contract at 'Jalen Duren Day,' and ESPN's Shams Charania says 'both sides are dug in.' The Clippers remain the most-mentioned trade suitor; without a deal, Duren could play on the qualifying offer and reach unrestricted free agency in 2027."
+      "detail": "The 2026-27 schedule was released this month: Detroit opens at home against the Celtics before a three-game road trip to Miami, Philadelphia, and New York. The offseason focus has been adding ball-handling and 3-point shooting as the Pistons look to defend their Central Division title."
     },
     {
       "team": "SEATTLE MARINERS",
-      "pill": "UPCOMING",
-      "pillClass": "s-up",
-      "detail": "62-69 on the season. Beat the Cubs 6-5 Friday on Leo Rivas's 10th-inning RBI single. Host the Phillies tonight, 6:40 PM PT, T-Mobile Park."
+      "pill": "W 9-2",
+      "pillClass": "s-w",
+      "detail": "Beat the Phillies 9-2 Monday behind three Cal Raleigh home runs and a three-run shot from Julio Rodriguez, snapping Philadelphia's nine-game winning streak. Seattle is 63-69 on the season; the two teams play again tonight at T-Mobile Park."
     }
   ],
   "watchlist": [
-    "Nvidia earnings \u2014 Wednesday, Aug. 26, after the close",
-    "Fed Chair Kevin Warsh's first Jackson Hole speech \u2014 Fri. Aug. 28, 19 days ahead of the Sept. 16 FOMC decision",
-    "Canada's retaliatory tariffs take effect \u2014 Tue. Sept. 8",
-    "NFL owners vote on Seahawks' $9.6B sale to the Khosla group \u2014 Wed. Aug. 26, Atlanta",
-    "Mariners host Phillies \u2014 tonight, 6:40 PM PT, T-Mobile Park"
+    "GDP (2nd estimate) and PCE Price Index — Wednesday 8:30 AM ET, key inputs to the Fed's September decision",
+    "Nvidia earnings — Wednesday after market close",
+    "Fed Chair Kevin Warsh's first Jackson Hole keynote — Friday",
+    "Mariners vs. Phillies — tonight, T-Mobile Park",
+    "Seahawks vs. Chiefs, preseason finale — Friday, Aug. 28, 8 PM ET"
   ],
   "deepDive": {
-    "title": "Tariff Pass-Through: Who Actually Pays a 50% Tariff?",
+    "title": "How a Geopolitical Risk Premium Unwinds: Today's Oil Plunge, Explained",
     "content": [
-      "Trump's new 50% tariff on roughly $20 billion of Canadian goods raises a question that sounds simple but isn't: who actually bears that cost? The answer determines whether the tariff shows up as a modest bump in U.S. inflation data, a squeeze on Canadian exporters' margins, or some blend of both, and it's central to whether tariffs work as effective negotiating leverage or just a tax that ricochets back onto U.S. households. It's also directly relevant to Fed Chair Warsh's read on inflation heading into Friday's Jackson Hole speech, since tariff-driven price increases complicate the case for rate cuts.",
-      "Mechanically, a tariff is collected from the U.S. importer of record at the border, not the foreign exporter, so the exporter never writes a check to the U.S. Treasury. What happens next is a question of incidence: the exporter can cut its pre-tariff price to stay competitive, the importer can absorb the cost in its own margin, or the cost can be passed forward to the end consumer through a higher shelf price. Which of these dominates depends on relative elasticities, essentially, whichever side has fewer good alternatives ends up eating more of the cost, because that side has less room to walk away from the transaction.",
-      "The 2018-19 U.S.-China tariff episode gives a real answer instead of a theoretical one: multiple Federal Reserve and NBER studies found nearly complete pass-through onto U.S. import prices, with Chinese exporters cutting their own prices only marginally. That happened because Chinese exporters faced elastic, price-sensitive global demand and had little pricing power to protect, while U.S. importers, having already committed to supply chains and product lines, had limited short-run substitutes. The upshot: American firms and consumers, not Chinese producers, absorbed most of that tariff's cost, which is the opposite of what tariff proponents typically promise.",
-      "Canada's situation points the same direction, arguably more so. The goods being hit, autos, lumber, aluminum, are commodity-like and already low-margin, meaning Canadian exporters have very little room to cut prices to absorb a 50% tariff without selling at a loss. That points toward high pass-through into U.S. import prices, which is exactly the kind of cost-push pressure that could show up in the CPI's goods components in the months ahead, and exactly the sort of complication Warsh will have to address Friday if he wants to argue that any near-term inflation pickup is transitory rather than something the Fed needs to lean against."
+      "WTI crude dropped 5% today, the sharpest single-session move in the brief's market strip, on nothing more than reports that Iran and Oman are nearing a deal to normalize shipping through the Strait of Hormuz. No barrel of actual supply changed hands differently than yesterday. What moved was the market's estimate of the probability that a chokepoint carrying roughly a fifth of global seaborne crude gets disrupted again, after five months of periodic attacks and U.S. retaliatory strikes had kept that probability elevated. Understanding how that number gets priced in, and how fast it can come back out, is the key to reading today's tape.",
+      "Traders don't price oil off current supply and demand alone; they price the futures curve, and a chokepoint risk gets embedded as a premium layered on top of the fundamental price, visible as a wedge between spot and forward-month contracts and in elevated war-risk insurance rates on tankers transiting the strait. That premium is a probability-weighted cost: if there's a 10% chance per month of a disruption that would spike prices $20-$30 a barrel, roughly $2-$3 gets added to today's price to compensate holders for that tail risk. It's a discrete, binary-outcome premium, not a continuous supply-demand adjustment, which is exactly why it can unwind in one session once the market revises the probability down.",
+      "This isn't a new pattern. Brent spiked over 10% in hours after the 2019 Abqaiq drone strikes on Saudi processing facilities, and gave most of it back within two weeks once spare capacity proved sufficient. The run-up to Russia's 2022 invasion of Ukraine embedded a similar premium that partially reversed as soon as it became clear Russian barrels would keep flowing through gray-market channels. The tell in each case is the same: a premium built on the fear of a disruption evaporates faster than one built on an actual, realized supply cut, because there's no physical barrel to replace, only a fear to revise.",
+      "The mechanism matters beyond energy traders because oil feeds directly into headline PCE and CPI through gasoline and freight costs, and Wednesday's PCE print is the last major data point before Fed Chair Warsh's Friday Jackson Hole speech. A falling energy input gives the Fed more room to describe inflation as well-contained, which is part of why the 10-year yield fell in sympathy with oil today rather than moving independently. The flip side is the same mechanism in reverse: if Strait of Hormuz talks break down before Friday, the premium can reprice into the barrel just as quickly as it left, and with it, some of today's rate-cut optimism."
     ]
   }
 }
