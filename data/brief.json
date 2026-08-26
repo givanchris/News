@@ -1,87 +1,63 @@
 {
-  "lastUpdated": "2026-08-26T16:30:15-06:00",
+  "lastUpdated": "2026-08-26T16:39:19-06:00",
   "market": {
-    "sp500": {
-      "price": "7676",
-      "change": "-0.02%",
-      "dir": "down"
-    },
-    "nasdaq": {
-      "price": "29225",
-      "change": "+0.05%",
-      "dir": "up"
-    },
-    "yield": {
-      "price": "4.66%",
-      "change": "+3 bps",
-      "dir": "down"
-    },
-    "wti": {
-      "price": "$82",
-      "change": "+1.93%",
-      "dir": "up"
-    },
-    "gold": {
-      "price": "$4665",
-      "change": "-0.76%",
-      "dir": "down"
-    },
-    "dxy": {
-      "price": "99.13",
-      "change": "+0.16%",
-      "dir": "up"
-    }
+    "sp500":  { "price": "7,676",  "change": "-0.02%",  "dir": "down" },
+    "nasdaq": { "price": "29,225", "change": "+0.05%",  "dir": "up"   },
+    "yield":  { "price": "4.66%",  "change": "+2 bps",  "dir": "down" },
+    "wti":    { "price": "$81",    "change": "-1.9%",   "dir": "down" },
+    "gold":   { "price": "$4,594", "change": "-1.4%",   "dir": "down" },
+    "dxy":    { "price": "99.15",  "change": "+0.2%",   "dir": "up"   }
   },
   "stories": [
     {
-      "cat": "MACRO",
-      "headline": "CHIP RALLY LIFTS S&P 500, NASDAQ AHEAD OF NVIDIA'S REPORT WEDNESDAY",
-      "body": "The S&P 500 rose 0.32% to 7,677 and the Nasdaq 100 gained 0.64% to 29,209 as semiconductor names rallied into Nvidia's after-the-bell earnings Wednesday: AMD +4.3%, Intel +3.2%, Marvell +7.0%, and Nvidia itself snapped a seven-session losing streak with a 2.5% gain. The 10-year Treasury yield fell 7 bps to 4.64%, its second straight daily decline.",
-      "explain": "Nvidia's results function as a read-through for the entire AI capex cycle, so positioning ahead of the print tends to move the whole semiconductor complex in sympathy rather than just the one stock. The simultaneous yield decline reflects investors rotating into duration ahead of Wednesday's GDP revision and PCE inflation data, both of which will shape how much room the Fed has to cut before its September meeting."
-    },
-    {
-      "cat": "COMMODITIES",
-      "headline": "OIL SINKS 5% ON SIGNS OF A STRAIT OF HORMUZ DEAL; GOLD PUSHES TOWARD $4,725",
-      "body": "WTI crude fell 5.08% to $81 a barrel after reports that Iran and Oman are nearing an agreement to normalize shipping through the Strait of Hormuz, unwinding a geopolitical risk premium built up over five months of periodic attacks and U.S. retaliatory strikes. Gold rose 0.75% to $4,724 an ounce, extending its August rally on persistent U.S. debt-load and dollar-softness concerns.",
-      "explain": "Oil's move is a repricing of tail risk: traders had built a premium into the barrel for the probability of a chokepoint closure that carries roughly a fifth of global seaborne crude, and that premium can unwind in a single session once the probability resets lower, unlike a gradual supply-demand shift. Gold's steadier climb reflects a separate, slower-moving trade tied to debt and currency debasement rather than today's specific headline, which is why the two safe-haven-adjacent assets are diverging."
-    },
-    {
-      "cat": "TRADE",
-      "headline": "TRUMP DOUBLES DOWN, SETS 50% TARIFFS ON CANADIAN AUTOS AND STEEL FOR 2027",
-      "body": "President Trump announced the U.S. will raise tariffs on all Canadian cars, trucks, auto parts, and steel to 50% effective Jan. 1, 2027, doubling the current 25% duty on Canadian auto imports, after trade talks between the two countries collapsed. Canadian steel already faces a 50% levy; the White House says U.S.-built vehicles are exempt.",
-      "explain": "Tariffs are collected from the U.S. importer of record, so the immediate mechanism is higher input costs passed through to American buyers and automakers unless Canadian exporters cut prices to absorb the hit, which thin-margin sectors like autos and steel have little room to do. Markets are treating the January effective date as a negotiating window rather than a certainty, which is part of why the tariff news moved currency and industrial names more than broad equity indexes today."
+      "cat": "EARNINGS",
+      "headline": "NVIDIA CRUSHES Q2, GUIDES 70% REVENUE GROWTH AS SHARES RISE AFTER HOURS",
+      "body": "Nvidia posted fiscal Q2 revenue of $96.22 billion, up 106% year-over-year and above the $92.17 billion Wall Street expected, with adjusted EPS of $2.22 versus $2.08 estimated. CEO Jensen Huang said AI demand is accelerating, and the company guided to $108 billion in current-quarter sales against a $104.2 billion consensus; shares rose in after-hours trading, snapping a seven-session losing streak heading into the print.",
+      "explain": "Nvidia's report is the single biggest read-through for the AI capex cycle, since hyperscaler chip spending is the metric markets use to judge whether trillions in projected AI infrastructure investment is actually materializing. The stock's reaction hinges more on the $108 billion guide clearing the $104.2 billion consensus than on the trailing quarter's beat, because forward guidance reprices the entire future earnings stream rather than just the quarter that already happened, which is what actually moves a stock priced for this much growth."
     },
     {
       "cat": "CENTRAL BANKS",
-      "headline": "FED HOLDS AT 3.5%-3.75%; MARKETS AWAIT WARSH'S FIRST JACKSON HOLE SPEECH FRIDAY",
-      "body": "The FOMC voted 9-3 to hold its target range at 3.50%-3.75% at its July 28-29 meeting, with Beth Hammack, Neel Kashkari, and Lorie Logan dissenting in favor of a hike. Fed Chair Kevin Warsh delivers his first Jackson Hole keynote Friday, three weeks before the Sept. 16 decision, with GDP's second estimate and the PCE Price Index due Wednesday.",
-      "explain": "A Jackson Hole speech matters less for what it says about the next meeting than for the reaction function it signals: how the Fed will respond to future data, which is why investors are parsing Warsh's tone on a labor market showing cracks against inflation that hasn't fully cooled. Today's cooler energy prices from oil's slide give the Fed more room on the inflation side of that calculus heading into Wednesday's PCE print, which is the last major data point before Warsh speaks."
+      "headline": "CORE INFLATION HOLDS AT 3.3% AS MARKETS BRACE FOR WARSH'S FIRST JACKSON HOLE SPEECH",
+      "body": "The Fed's preferred inflation gauge showed core PCE up 3.3% year-over-year in July, its fourth straight month at that level, while headline PCE held at 3.7% — both released Wednesday morning ahead of the Jackson Hole Economic Policy Symposium, which opens Thursday. Fed Chair Kevin Warsh delivers his first keynote as chair Friday at 10 a.m. ET, addressing this year's theme of financial innovation in payments and policy.",
+      "explain": "A Jackson Hole speech moves markets less for what it says about the next meeting than for the reaction function it reveals: how the Fed will weigh a labor market showing cracks against inflation stuck three points above target. Core PCE holding flat for a fourth straight month gives Warsh room to frame inflation as contained without declaring victory, which is why Treasury yields barely moved on today's data — traders are waiting for Friday's tone, not today's number, to reset the path to the Sept. 16 decision."
     },
     {
-      "cat": "EARNINGS",
-      "headline": "DICK'S SPORTING GOODS CRATERS 27% AS FOOT LOCKER INTEGRATION DRAGS ON RESULTS",
-      "body": "Dick's Sporting Goods fell 27% after posting Q2 revenue of $5.59 billion and adjusted EPS of $3.53, both missing Wall Street's roughly $5.64 billion and $3.77 estimates, and cutting full-year guidance to $21.9-$22.2 billion in revenue and about $11.50 in adjusted EPS. Foot Locker, acquired earlier this year, posted a 3.6% comparable-sales decline on heavy discounting even as Dick's namesake stores grew comps 4.9%.",
-      "explain": "The stock's move is disproportionate to the revenue miss because guidance cuts reprice the entire forward earnings stream, not just one quarter, and the market is now questioning whether the Foot Locker acquisition's integration costs and inventory glut are a one-off or a structural drag. It's a useful read-through for consumer discretionary broadly heading into the holiday season, since heavy discounting to clear athletic inventory signals softer demand than the headline retail sales data has shown."
+      "cat": "COMMODITIES",
+      "headline": "OIL SLIPS AS IRAN SANCTIONS FALL SHORT OF EXPECTATIONS; GOLD WHIPSAWS NEAR $4,600",
+      "body": "WTI crude fell roughly 1.9% to $81 a barrel after Washington's latest sanctions push on Iran proved less aggressive than markets had priced in, easing supply-disruption fears built up over months of regional tension. Gold swung between roughly $4,715 and $4,594 an ounce intraday, ending near the lower end of that range as the dollar firmed, though it remains up more than 12% over the past month.",
+      "explain": "Oil's move is a probability repricing, not a supply change: traders had built a premium into the barrel for the odds of tighter enforcement disrupting Iranian exports, and that premium can unwind in a session once the actual measures come in softer than feared. Gold's wide intraday swing reflects two competing forces pulling at once — a firmer dollar and steady yields pressuring it lower, against persistent U.S. debt-load concerns that have driven its 35% year-over-year run, which is why the metal round-tripped several percentage points without a clear directional resolution today."
+    },
+    {
+      "cat": "TRADE",
+      "headline": "TRUMP SETS 50% TARIFFS ON CANADIAN AUTOS AND STEEL FOR 2027 AFTER TALKS COLLAPSE",
+      "body": "President Trump announced the U.S. will raise tariffs on Canadian cars, trucks, auto parts, and steel to 50% effective Jan. 1, 2027, doubling the current 25% duty on Canadian auto imports, after trade talks between the two countries broke down. Canadian steel already faces a 50% levy; the White House says U.S.-built vehicles are exempt.",
+      "explain": "Tariffs are collected from the U.S. importer of record, so the immediate mechanism is higher input costs passed to American automakers and buyers unless thin-margin Canadian exporters absorb the hit, which they have little room to do. Markets are treating the four-month runway to the January effective date as a negotiating window rather than a certainty, which is part of why the news moved industrial and auto names more than the broad index today."
+    },
+    {
+      "cat": "MACRO",
+      "headline": "U.S. NATIONAL DEBT TOPS $40 TRILLION AS TREASURY LEANS ON DEBT BUYBACKS",
+      "body": "Total U.S. government debt crossed $40.05 trillion this week, a milestone reached as the Treasury continues an expanded debt buyback program aimed at smoothing bond-market liquidity and managing the government's rising interest bill. The dollar index still traded near a three-month low despite today's modest 0.2% gain, with fiscal concerns cited as a persistent drag.",
+      "explain": "Debt buybacks let Treasury retire older, less-liquid bonds and reissue new ones, which can lower borrowing costs at the margin, but the practice also signals how much active balance-sheet management is now required just to keep the Treasury market functioning smoothly at this debt level. The $40 trillion figure matters to markets less as a single alarming number and more as a trend line: it shapes how much fiscal risk gets priced into the dollar and long-end yields, which is the same debt-load concern currently keeping gold's multi-month rally intact."
     },
     {
       "cat": "MCBB",
-      "headline": "LOUISIANA JUDGE RULES RJ LUIS ELIGIBLE FOR LSU AS TRANSFER-ELIGIBILITY CHAOS CONTINUES",
-      "body": "A Louisiana judge ruled that former G-Leaguer RJ Luis is eligible to play this season at LSU under Will Wade, the latest in a wave of state-court rulings granting eligibility outside the NCAA's own process. Elsewhere, Utah's Noam Yaacov was ruled ineligible and will instead pursue a professional career overseas, while Clemson's Dillon Hunter is returning for a fifth season of eligibility."
+      "headline": "RJ LUIS ELIGIBILITY FIGHT DEEPENS AS COURTS AND CONFERENCES COLLIDE OVER PRO-CONTRACT RULE",
+      "body": "Former G-Leaguer RJ Luis remains in eligibility limbo at LSU: a Louisiana state court previously ruled him eligible to play under Will Wade, but a new Big Ten push to extend the football pro-contract ban into basketball would render him ineligible under conference bylaws if adopted league-wide. Elsewhere, Yale transfer Nick Townsend committed to Stanford and St. John's landed a commitment from Keyshawn Hall as rosters keep shifting three months from tip-off."
     },
     {
       "cat": "NBA",
-      "headline": "CLIPPERS, RAPTORS IN TRADE TALKS FOR KAWHI LEONARD AS OFFSEASON SHAKEUP CONTINUES",
-      "body": "The Clippers and Raptors have been in trade discussions for All-NBA forward Kawhi Leonard for several weeks, per league sources. Elsewhere, the Kings are waiving six-time All-Star DeMar DeRozan after exploring trade routes, instantly making him one of the top remaining names on the 2026 free-agent market, and Rockets guard Fred VanVleet is opting into his $25 million player option for 2026-27."
+      "headline": "TRAIL BLAZERS' SHAEDON SHARPE OUT ~6 MONTHS WITH TORN MENISCUS AS FREE AGENCY GRINDS ON",
+      "body": "Portland guard Shaedon Sharpe is expected to miss roughly six months after tearing his meniscus, a significant blow to the Blazers' backcourt heading into the season. Elsewhere, Klay Thompson signed a two-year, $11.48 million deal with Miami, Brandon Williams joined Golden State on a one-year deal, and Detroit's Jalen Duren remains unsigned in a contract standoff that has made him a trade candidate, reportedly drawing interest from Toronto."
     },
     {
       "cat": "NFL",
-      "headline": "BROWNS NAME DESHAUN WATSON WEEK 1 STARTER OVER SHEDEUR SANDERS",
-      "body": "Cleveland named Deshaun Watson its Week 1 starting quarterback over rookie Shedeur Sanders, setting up his first regular-season start since tearing his Achilles in 2024, an injury he later re-tore. Elsewhere, Bengals WR Ja'Marr Chase left Tuesday's practice with what the team called a minor hyperextension of his knee, and the Texans traded for receiver Kayshon Boutte from New England."
+      "headline": "2026 SEASON OPENS SEPT. 9 WITH PATRIOTS-SEAHAWKS SUPER BOWL 60 REMATCH",
+      "body": "The NFL's regular season kicks off Wednesday, Sept. 9, with New England traveling to face Seattle in a rematch of Super Bowl 60, airing at 7 p.m. ET on NBC and Peacock. Elsewhere, Patrick Mahomes' recovery from a torn ACL remains the Chiefs' central storyline, Atlanta's Michael Penix Jr. sat out the preseason finale with the Falcons' QB battle still unresolved, and Giants receiver Calvin Austin is out for the season with a torn ACL."
     },
     {
       "cat": "NCAA CFB",
-      "headline": "COLLEGE FOOTBALL OPENS SATURDAY: KIFFIN'S LSU DEBUT AND PENN STATE'S RESET HEADLINE WEEK 1",
-      "body": "The 2026 season kicks off this Saturday, the third year of the 12-team College Football Playoff, with Lane Kiffin's move from Ole Miss to LSU and Penn State's rebuild among the top storylines after preseason bowl projections were released Tuesday. Indiana's Curt Cignetti, coming off a perfect 16-0 season, headlines the group of coaches trying to prove last year wasn't a fluke."
+      "headline": "BIG TEN, SEC BAN PLAYERS WITH PRO CONTRACTS FROM RETURNING, THREATEN COACH SUSPENSIONS",
+      "body": "The Big Ten and SEC both adopted bylaws barring any player who signed a professional contract, appeared on a pro roster, or declared for a draft without withdrawing from competing at a member school; violating schools face fines and a head coach suspension for half the season. The move comes three days before the season opens Saturday, amid a wave of state-court rulings granting eligibility outside the NCAA's own process."
     }
   ],
   "sports": [
@@ -89,47 +65,47 @@
       "team": "WASHINGTON HUSKIES FOOTBALL",
       "pill": "UPCOMING",
       "pillClass": "s-up",
-      "detail": "Season opens Sept. 6 vs. Washington State, 4 p.m. ET on NBC at Husky Stadium. Head coach Jedd Fisch takes over as offensive play-caller after OC Jimmie Dougherty's February departure; four Huskies landed on major award watch lists this week, including Manu (Polynesian POY) and Williams Jr. (Davey O'Brien)."
+      "detail": "Season opens Sept. 6 vs. Washington State, 4 p.m. ET on NBC at Husky Stadium, which rolls out new Evolv security screening and expanded gameday traditions in 2026. Third-year coach Jedd Fisch's Huskies host seven games this season, including four Big Ten matchups and the Apple Cup."
     },
     {
       "team": "WASHINGTON HUSKIES BASKETBALL",
       "pill": "OFFSEASON",
       "pillClass": "s-up",
-      "detail": "Finished 16-17 (7-13 Big Ten) last season, missing the NCAA Tournament. Lost top scorer Hannes Steinbach (drafted 14th overall by Charlotte) and No. 2 scorer Zoom Diallo (transferred to Kentucky); Wesley Yates III (13 ppg) returns as the leader of a retooled roster."
+      "detail": "Finished 16-17 (7-13 Big Ten) last season, missing the NCAA Tournament. Lost top scorer Hannes Steinbach (drafted 14th by Charlotte) and No. 2 scorer Zoom Diallo (transferred to Kentucky); Wesley Yates III (13 ppg) returns to lead a retooled roster into the 2026 Big Ten slate."
     },
     {
       "team": "SEATTLE SEAHAWKS",
       "pill": "0-2 (PRESEASON)",
       "pillClass": "s-l",
-      "detail": "Fell to the Titans in Nashville Sunday to go 0-2 in the preseason; face the Chiefs in the preseason finale Friday, Aug. 28 at 8 p.m. ET. Trevon Diggs has joined the roster late in camp, and the NFL's finance and ownership committees have recommended approval of the franchise sale to a group led by Neeru and Vinod Khosla."
+      "detail": "Fell to Tennessee to go 0-2 in the preseason, with safety Bud Clark and lineman Mason Richman landing on injured reserve from that game. Face the Chiefs at Arrowhead Friday, Aug. 28 at 5 p.m. PT in the preseason finale; Devon Witherspoon signed a four-year extension, and the season opens Sept. 9 at home vs. New England in a Super Bowl 60 rematch."
     },
     {
       "team": "DETROIT PISTONS",
       "pill": "OFFSEASON",
       "pillClass": "s-up",
-      "detail": "The 2026-27 schedule was released this month: Detroit opens at home against the Celtics before a three-game road trip to Miami, Philadelphia, and New York. The offseason focus has been adding ball-handling and 3-point shooting as the Pistons look to defend their Central Division title."
+      "detail": "Coming off the East's best regular-season record, Detroit opens 2026-27 at home vs. Boston before a three-game trip to Miami, Philadelphia, and New York. The offseason's biggest loose end is center Jalen Duren, unsigned in a contract dispute that has stirred trade buzz with Toronto."
     },
     {
       "team": "SEATTLE MARINERS",
-      "pill": "W 9-2",
+      "pill": "W 4-1",
       "pillClass": "s-w",
-      "detail": "Beat the Phillies 9-2 Monday behind three Cal Raleigh home runs and a three-run shot from Julio Rodriguez, snapping Philadelphia's nine-game winning streak. Seattle is 63-69 on the season; the two teams play again tonight at T-Mobile Park."
+      "detail": "Beat the Phillies 4-1 today at T-Mobile Park: Cal Raleigh homered in four straight at-bats to tie a team record, and George Kirby held Philadelphia to one run into the eighth inning. Seattle remains in the thick of the AL wild-card race down the stretch; the two teams continue their series Thursday."
     }
   ],
   "watchlist": [
-    "GDP (2nd estimate) and PCE Price Index \u2014 Wednesday 8:30 AM ET, key inputs to the Fed's September decision",
-    "Nvidia earnings \u2014 Wednesday after market close",
-    "Fed Chair Kevin Warsh's first Jackson Hole keynote \u2014 Friday",
-    "Mariners vs. Phillies \u2014 tonight, T-Mobile Park",
-    "Seahawks vs. Chiefs, preseason finale \u2014 Friday, Aug. 28, 8 PM ET"
+    "Jackson Hole Economic Symposium opens Thursday — Fed Chair Warsh's first keynote as chair, Friday 10 AM ET",
+    "Markets react to Nvidia's blowout beat and raised guidance — first full session Thursday",
+    "Seahawks at Chiefs, preseason finale — Friday, Aug. 28, 5 PM PT, Arrowhead Stadium",
+    "College football season kicks off — Saturday, Aug. 29 (FBS); Huskies open Sept. 6 vs. Washington State",
+    "Mariners vs. Phillies — Thursday, T-Mobile Park"
   ],
   "deepDive": {
-    "title": "How a Geopolitical Risk Premium Unwinds: Today's Oil Plunge, Explained",
+    "title": "Why the Guidance Beat the Headline: Reading Nvidia's Forward Numbers",
     "content": [
-      "WTI crude dropped 5% today, the sharpest single-session move in the brief's market strip, on nothing more than reports that Iran and Oman are nearing a deal to normalize shipping through the Strait of Hormuz. No barrel of actual supply changed hands differently than yesterday. What moved was the market's estimate of the probability that a chokepoint carrying roughly a fifth of global seaborne crude gets disrupted again, after five months of periodic attacks and U.S. retaliatory strikes had kept that probability elevated. Understanding how that number gets priced in, and how fast it can come back out, is the key to reading today's tape.",
-      "Traders don't price oil off current supply and demand alone; they price the futures curve, and a chokepoint risk gets embedded as a premium layered on top of the fundamental price, visible as a wedge between spot and forward-month contracts and in elevated war-risk insurance rates on tankers transiting the strait. That premium is a probability-weighted cost: if there's a 10% chance per month of a disruption that would spike prices $20-$30 a barrel, roughly $2-$3 gets added to today's price to compensate holders for that tail risk. It's a discrete, binary-outcome premium, not a continuous supply-demand adjustment, which is exactly why it can unwind in one session once the market revises the probability down.",
-      "This isn't a new pattern. Brent spiked over 10% in hours after the 2019 Abqaiq drone strikes on Saudi processing facilities, and gave most of it back within two weeks once spare capacity proved sufficient. The run-up to Russia's 2022 invasion of Ukraine embedded a similar premium that partially reversed as soon as it became clear Russian barrels would keep flowing through gray-market channels. The tell in each case is the same: a premium built on the fear of a disruption evaporates faster than one built on an actual, realized supply cut, because there's no physical barrel to replace, only a fear to revise.",
-      "The mechanism matters beyond energy traders because oil feeds directly into headline PCE and CPI through gasoline and freight costs, and Wednesday's PCE print is the last major data point before Fed Chair Warsh's Friday Jackson Hole speech. A falling energy input gives the Fed more room to describe inflation as well-contained, which is part of why the 10-year yield fell in sympathy with oil today rather than moving independently. The flip side is the same mechanism in reverse: if Strait of Hormuz talks break down before Friday, the premium can reprice into the barrel just as quickly as it left, and with it, some of today's rate-cut optimism."
+      "The S&P 500 barely moved today, down 0.02%, even with a steady core PCE reading and a Canadian tariff escalation in the mix — because the session's real catalyst was arriving after the closing bell. Nvidia's fiscal Q2 revenue of $96.22 billion beat consensus by about $4 billion, a headline number that would normally move a stock. But the figure that actually mattered more was the $108 billion guide for the current quarter, comfortably above the $104.2 billion Wall Street had modeled. Understanding why a forward number outweighs a trailing beat is the key to reading how markets priced Nvidia tonight, and why guidance-driven reactions are a distinct phenomenon from ordinary earnings surprises.",
+      "Equity prices are forward-discounting mechanisms: a stock's value reflects the present value of all its future cash flows, not the quarter that just ended. When Nvidia beats trailing revenue by $4 billion, analysts revise one already-known data point. When it guides $3.8 billion above consensus for the quarter ahead, analysts must revise their entire model — not just next quarter, but the growth trajectory implied for every quarter after it, since sell-side models chain estimates together using assumed sequential growth rates. A single guidance number therefore cascades through several future quarters of estimates at once, which is why it carries a disproportionate multiplier on the stock's valuation relative to a same-sized trailing beat.",
+      "This is also why high-multiple growth stocks can fall on a headline beat: when a company is priced for perfection, merely meeting sky-high expectations without also raising the forward bar reads as disappointing, because the stock's valuation had already assumed acceleration. Nvidia itself illustrates the pattern — it has beaten Wall Street's consensus in 22 of its last 24 quarters, yet its stock reaction has varied enormously quarter to quarter depending on whether the guide matched, missed, or exceeded the market's implicit assumption of continued acceleration, not the beat itself.",
+      "The mechanism reaches beyond one stock because AI capital expenditure has become large enough to move macro readings, not just tech-sector earnings. A guide this far above consensus signals hyperscaler spending is still accelerating rather than plateauing, which feeds into the same capex and productivity debates the Fed will weigh at Jackson Hole this week. If tonight's number holds up in Thursday's trading, it reinforces the case Warsh can make Friday that growth from AI investment is durable enough to tolerate a slower path on rate cuts — tying a single company's forward guidance directly to how the next FOMC decision gets framed."
     ]
   }
 }
