@@ -1,43 +1,67 @@
 {
-  "lastUpdated": "2026-08-27T16:35:00-06:00",
+  "lastUpdated": "2026-08-27T17:00:16-06:00",
   "market": {
-    "sp500":  { "price": "7,720",     "change": "+0.57%",  "dir": "up" },
-    "nasdaq": { "price": "29,577.75", "change": "+1.21%",  "dir": "up" },
-    "yield":  { "price": "4.66%",     "change": "+2 bps",  "dir": "up" },
-    "wti":    { "price": "$82.86",    "change": "-0.08%",  "dir": "down" },
-    "gold":   { "price": "$4,600",    "change": "+0.15%",  "dir": "up" },
-    "dxy":    { "price": "99.17",     "change": "+0.1%",   "dir": "up" }
+    "sp500": {
+      "price": "7731",
+      "change": "+0.72%",
+      "dir": "up"
+    },
+    "nasdaq": {
+      "price": "29642",
+      "change": "+1.43%",
+      "dir": "up"
+    },
+    "yield": {
+      "price": "4.67%",
+      "change": "+1 bps",
+      "dir": "down"
+    },
+    "wti": {
+      "price": "$84",
+      "change": "+2.14%",
+      "dir": "up"
+    },
+    "gold": {
+      "price": "$4660",
+      "change": "-0.40%",
+      "dir": "down"
+    },
+    "dxy": {
+      "price": "99.13",
+      "change": "-0.02%",
+      "dir": "down"
+    }
   },
   "stories": [
     {
       "cat": "MACRO",
       "headline": "NVIDIA EARNINGS BEAT FUELS TECH-LED RALLY, S&P 500 CLOSES AT 7,720",
       "body": "Nvidia's blowout quarter and upbeat guidance sent its shares up roughly 7%, pulling the Nasdaq 100 up 1.21% to 29,577.75 and the S&P 500 up 0.57% to 7,720. Ten of eleven S&P sectors actually fell as capital rotated out of defensives like healthcare, utilities, and staples into semis and software.",
-      "explain": "Nvidia carries one of the largest weights in both the S&P 500 and Nasdaq 100 because both are float-adjusted market-cap-weighted indices, so a 7% move in a multi-trillion-dollar company mechanically drags the whole index even when most constituents are red. That's why breadth (10 of 11 sectors lower) diverged so sharply from the headline index gain — the rally is narrow and concentrated in AI-capex beneficiaries, not broad-based buying."
+      "explain": "Nvidia carries one of the largest weights in both the S&P 500 and Nasdaq 100 because both are float-adjusted market-cap-weighted indices, so a 7% move in a multi-trillion-dollar company mechanically drags the whole index even when most constituents are red. That's why breadth (10 of 11 sectors lower) diverged so sharply from the headline index gain \u2014 the rally is narrow and concentrated in AI-capex beneficiaries, not broad-based buying."
     },
     {
       "cat": "CENTRAL BANKS",
       "headline": "10-YEAR YIELD CLIMBS TO 4.66% AS TRADERS BRACE FOR WARSH'S JACKSON HOLE SPEECH",
       "body": "The 10-year Treasury yield rose for a second straight session to around 4.66% after stronger-than-expected economic data reinforced bets on a Fed rate hike before year-end. Fed Chair Kevin Warsh speaks Friday at the Jackson Hole Economic Symposium, with markets looking for signals on the path of policy.",
-      "explain": "Long-end yields move on the market's forward expectations for the fed funds rate plus a term premium, not on the current policy rate itself, so data that raises the odds of a hike pushes the 10-year up even before the Fed acts. Jackson Hole matters because it's historically where Fed chairs pre-signal major pivots — Bernanke's QE2 hint in 2010, Powell's 2022 'pain' speech — so traders are positioning for forward guidance, not just a single data point."
+      "explain": "Long-end yields move on the market's forward expectations for the fed funds rate plus a term premium, not on the current policy rate itself, so data that raises the odds of a hike pushes the 10-year up even before the Fed acts. Jackson Hole matters because it's historically where Fed chairs pre-signal major pivots \u2014 Bernanke's QE2 hint in 2010, Powell's 2022 'pain' speech \u2014 so traders are positioning for forward guidance, not just a single data point."
     },
     {
       "cat": "TRADE",
       "headline": "WHITE HOUSE WEIGHS SWEEPING NEW SEMICONDUCTOR TARIFFS",
-      "body": "The Trump administration is considering a tariff expansion that would hit not just chips but downstream products built with them — laptops, gaming consoles, and data-center servers — despite warnings from tech companies that the move could undercut U.S. AI competitiveness.",
+      "body": "The Trump administration is considering a tariff expansion that would hit not just chips but downstream products built with them \u2014 laptops, gaming consoles, and data-center servers \u2014 despite warnings from tech companies that the move could undercut U.S. AI competitiveness.",
       "explain": "Tariffs on an input like semiconductors compound through the supply chain: a duty on a chip embedded in a server raises costs at every assembly stage before the final product reaches a buyer, a dynamic economists call tariff pass-through. Because chips sit inside nearly every category of electronics, taxing them is a much blunter and more inflationary instrument than a tariff on a single finished good."
     },
     {
       "cat": "COMMODITIES",
       "headline": "GOLD SLIPS, DOLLAR FIRMS AS TRADERS AWAIT WARSH",
       "body": "Gold pulled back to around $4,600 an ounce after Thursday's PCE inflation data, giving back some of its recent gains, while the dollar index firmed to 99.17 as strong economic data reinforced hike expectations.",
-      "explain": "Gold is priced largely against real yields and the dollar: when data pushes nominal rates up faster than inflation expectations, real yields rise, raising the opportunity cost of holding a non-yielding asset like gold and pressuring its price. The dollar is moving the same way for the same reason — higher expected U.S. rates attract foreign capital into dollar assets, which is why gold and the DXY are pulling in opposite directions today."
+      "explain": "Gold is priced largely against real yields and the dollar: when data pushes nominal rates up faster than inflation expectations, real yields rise, raising the opportunity cost of holding a non-yielding asset like gold and pressuring its price. The dollar is moving the same way for the same reason \u2014 higher expected U.S. rates attract foreign capital into dollar assets, which is why gold and the DXY are pulling in opposite directions today."
     },
     {
       "cat": "MARKETS",
       "headline": "MARKET BREADTH NARROWS AS DEFENSIVES SELL OFF INTO CHIP RALLY",
       "body": "Even with the S&P 500 up 0.57%, ten of eleven sectors closed lower Thursday, led down by healthcare, utilities, and consumer staples, as capital rotated hard into semiconductors and software on the back of Nvidia's report.",
-      "explain": "Sector rotation like this signals investors reallocating existing capital toward a specific theme — AI capex — rather than fresh money entering the market broadly. When defensives, the sectors investors typically hide in during expensive or late-cycle markets, sell off to fund a rally in the market's most richly valued growth names, it's usually read as a risk-on, momentum-chasing signal rather than a broad economic upgrade."
+      "explain": "Sector rotation like this signals investors reallocating existing capital toward a specific theme \u2014 AI capex \u2014 rather than fresh money entering the market broadly. When defensives, the sectors investors typically hide in during expensive or late-cycle markets, sell off to fund a rally in the market's most richly valued growth names, it's usually read as a risk-on, momentum-chasing signal rather than a broad economic upgrade."
     },
     {
       "cat": "MCBB",
@@ -52,7 +76,7 @@
     {
       "cat": "NFL",
       "headline": "NFL TEAMS RACE TO CUT ROSTERS TO 53 BEFORE SUNDAY'S DEADLINE",
-      "body": "With four preseason games Thursday closing out Week 3, all 32 teams must trim from 90 to 53 players by Sunday, Aug. 30 — roughly 1,184 players will lose their jobs. The Patriots already traded away Kayshon Boutte and the Cardinals cut running back Trey Benson."
+      "body": "With four preseason games Thursday closing out Week 3, all 32 teams must trim from 90 to 53 players by Sunday, Aug. 30 \u2014 roughly 1,184 players will lose their jobs. The Patriots already traded away Kayshon Boutte and the Cardinals cut running back Trey Benson."
     },
     {
       "cat": "NCAA CFB",
@@ -61,26 +85,51 @@
     }
   ],
   "sports": [
-    { "team": "WASHINGTON HUSKIES FOOTBALL", "pill": "OPENS SEP 6", "pillClass": "s-up", "detail": "Ranked No. 17 in the preseason AP Top 25. Open the season against rival Washington State in the Apple Cup, moved to Sunday, Sept. 6, 1 p.m. PT on NBC at Husky Stadium." },
-    { "team": "WASHINGTON HUSKIES BASKETBALL", "pill": "OFFSEASON", "pillClass": "s-up", "detail": "Enter the season without leading scorers Hannes Steinbach (drafted 14th by Charlotte) and Zoom Diallo (transferred to Kentucky) after a 16-17 finish. Guard Wesley Yates III returns as the top returning scorer." },
-    { "team": "SEATTLE SEAHAWKS", "pill": "PRESEASON FRI", "pillClass": "s-up", "detail": "NFL owners unanimously approved the team's $9.612B sale to a group led by Vinod Khosla. Seahawks close out the preseason Friday, Aug. 28 at Kansas City." },
-    { "team": "DETROIT PISTONS", "pill": "OFFSEASON", "pillClass": "s-up", "detail": "Locked in a contract standoff with restricted free agent Jalen Duren, who is seeking a 5-year, $287M deal against Detroit's reported $30-40M/year offers. Season opens at home vs. the Celtics." },
-    { "team": "SEATTLE MARINERS", "pill": "L 0-6", "pillClass": "s-l", "detail": "Fell to the Phillies 6-0 Wednesday as Jesus Luzardo shut them down. Continue the series against Philadelphia at T-Mobile Park." }
+    {
+      "team": "WASHINGTON HUSKIES FOOTBALL",
+      "pill": "OPENS SEP 6",
+      "pillClass": "s-up",
+      "detail": "Ranked No. 17 in the preseason AP Top 25. Open the season against rival Washington State in the Apple Cup, moved to Sunday, Sept. 6, 1 p.m. PT on NBC at Husky Stadium."
+    },
+    {
+      "team": "WASHINGTON HUSKIES BASKETBALL",
+      "pill": "OFFSEASON",
+      "pillClass": "s-up",
+      "detail": "Enter the season without leading scorers Hannes Steinbach (drafted 14th by Charlotte) and Zoom Diallo (transferred to Kentucky) after a 16-17 finish. Guard Wesley Yates III returns as the top returning scorer."
+    },
+    {
+      "team": "SEATTLE SEAHAWKS",
+      "pill": "PRESEASON FRI",
+      "pillClass": "s-up",
+      "detail": "NFL owners unanimously approved the team's $9.612B sale to a group led by Vinod Khosla. Seahawks close out the preseason Friday, Aug. 28 at Kansas City."
+    },
+    {
+      "team": "DETROIT PISTONS",
+      "pill": "OFFSEASON",
+      "pillClass": "s-up",
+      "detail": "Locked in a contract standoff with restricted free agent Jalen Duren, who is seeking a 5-year, $287M deal against Detroit's reported $30-40M/year offers. Season opens at home vs. the Celtics."
+    },
+    {
+      "team": "SEATTLE MARINERS",
+      "pill": "L 0-6",
+      "pillClass": "s-l",
+      "detail": "Fell to the Phillies 6-0 Wednesday as Jesus Luzardo shut them down. Continue the series against Philadelphia at T-Mobile Park."
+    }
   ],
   "watchlist": [
     "Fed Chair Kevin Warsh speaks Friday at the Jackson Hole Economic Symposium",
-    "NFL roster cutdown deadline — Sunday, Aug. 30, teams cut to 53 players",
-    "Huskies open the season vs. Washington State — Apple Cup, Sunday, Sept. 6, 1 PM PT",
-    "Seahawks preseason finale at Chiefs — Friday, Aug. 28",
-    "College football FBS opens Saturday — North Carolina vs. TCU in Dublin"
+    "NFL roster cutdown deadline \u2014 Sunday, Aug. 30, teams cut to 53 players",
+    "Huskies open the season vs. Washington State \u2014 Apple Cup, Sunday, Sept. 6, 1 PM PT",
+    "Seahawks preseason finale at Chiefs \u2014 Friday, Aug. 28",
+    "College football FBS opens Saturday \u2014 North Carolina vs. TCU in Dublin"
   ],
   "deepDive": {
     "title": "Cap-Weighted Indices and the Nvidia Effect",
     "content": [
-      "Today's tape looked like a contradiction: the S&P 500 closed up 0.57% and the Nasdaq 100 jumped 1.21%, yet ten of eleven S&P sectors actually finished lower. The entire index-level gain traced back to one company's earnings report. That is not a fluke of one unusual day — it is a structural feature of how the indices millions of investors hold are built, and it is worth understanding precisely if you are about to spend two years studying how markets price risk.",
-      "The S&P 500 and Nasdaq 100 are float-adjusted market-capitalization-weighted indices: a company's influence on the index return is proportional to its share of total market value, not to how many companies are in the index. Nvidia's market cap has run into the trillions, giving it a weight in the neighborhood of 7-8% of the S&P 500 and an even larger share of the Nasdaq 100. When a stock that size moves 7% in a single session, simple arithmetic means it can single-handedly add tens of basis points to the entire index's return, even if the other 499 stocks are flat or falling — which is close to what happened today.",
-      "This is not a new phenomenon, but the magnitude is. Cisco played a similar role at the peak of the dot-com bubble, and Apple alone has occasionally accounted for a third or more of a monthly S&P 500 move. What's different now is that Nvidia sits alongside a handful of other mega-cap AI names — the so-called Magnificent Seven — that collectively make up roughly a third of the S&P 500's total weight. An index fund investor who believes they own '500 diversified companies' is, in practice, running a heavily concentrated bet on a handful of AI-capex winners.",
-      "That concentration is exactly why today's sector breadth — money draining out of healthcare, utilities, and staples to fund the chip rally — is worth watching alongside the headline number, not instead of it. Heading into a Fed decision cycle where Warsh's Jackson Hole remarks could reprice the entire yield curve, a market this concentrated in a few richly valued names is also more fragile: if the AI-capex narrative stalls, or if higher-for-longer rates compress the valuations assigned to future earnings, the same mechanism that lifted the index today works in reverse, and much faster than most passive investors expect."
+      "Today's tape looked like a contradiction: the S&P 500 closed up 0.57% and the Nasdaq 100 jumped 1.21%, yet ten of eleven S&P sectors actually finished lower. The entire index-level gain traced back to one company's earnings report. That is not a fluke of one unusual day \u2014 it is a structural feature of how the indices millions of investors hold are built, and it is worth understanding precisely if you are about to spend two years studying how markets price risk.",
+      "The S&P 500 and Nasdaq 100 are float-adjusted market-capitalization-weighted indices: a company's influence on the index return is proportional to its share of total market value, not to how many companies are in the index. Nvidia's market cap has run into the trillions, giving it a weight in the neighborhood of 7-8% of the S&P 500 and an even larger share of the Nasdaq 100. When a stock that size moves 7% in a single session, simple arithmetic means it can single-handedly add tens of basis points to the entire index's return, even if the other 499 stocks are flat or falling \u2014 which is close to what happened today.",
+      "This is not a new phenomenon, but the magnitude is. Cisco played a similar role at the peak of the dot-com bubble, and Apple alone has occasionally accounted for a third or more of a monthly S&P 500 move. What's different now is that Nvidia sits alongside a handful of other mega-cap AI names \u2014 the so-called Magnificent Seven \u2014 that collectively make up roughly a third of the S&P 500's total weight. An index fund investor who believes they own '500 diversified companies' is, in practice, running a heavily concentrated bet on a handful of AI-capex winners.",
+      "That concentration is exactly why today's sector breadth \u2014 money draining out of healthcare, utilities, and staples to fund the chip rally \u2014 is worth watching alongside the headline number, not instead of it. Heading into a Fed decision cycle where Warsh's Jackson Hole remarks could reprice the entire yield curve, a market this concentrated in a few richly valued names is also more fragile: if the AI-capex narrative stalls, or if higher-for-longer rates compress the valuations assigned to future earnings, the same mechanism that lifted the index today works in reverse, and much faster than most passive investors expect."
     ]
   }
 }
