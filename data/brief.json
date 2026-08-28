@@ -1,87 +1,63 @@
 {
-  "lastUpdated": "2026-08-28T16:30:15-06:00",
+  "lastUpdated": "2026-08-28T16:38:38-06:00",
   "market": {
-    "sp500": {
-      "price": "7712",
-      "change": "-0.25%",
-      "dir": "down"
-    },
-    "nasdaq": {
-      "price": "29433",
-      "change": "-0.70%",
-      "dir": "down"
-    },
-    "yield": {
-      "price": "4.72%",
-      "change": "+5 bps",
-      "dir": "down"
-    },
-    "wti": {
-      "price": "$83",
-      "change": "+0.40%",
-      "dir": "up"
-    },
-    "gold": {
-      "price": "$4504",
-      "change": "-2.75%",
-      "dir": "down"
-    },
-    "dxy": {
-      "price": "99.68",
-      "change": "+0.51%",
-      "dir": "up"
-    }
+    "sp500": { "price": "7,712", "change": "-0.25%", "dir": "down" },
+    "nasdaq": { "price": "29,433", "change": "-0.70%", "dir": "down" },
+    "yield": { "price": "4.72%", "change": "+5 bps", "dir": "down" },
+    "wti": { "price": "$83", "change": "+0.40%", "dir": "up" },
+    "gold": { "price": "$4,504", "change": "-2.75%", "dir": "down" },
+    "dxy": { "price": "99.68", "change": "+0.51%", "dir": "up" }
   },
   "stories": [
     {
-      "cat": "MACRO",
-      "headline": "NVIDIA EARNINGS BEAT FUELS TECH-LED RALLY, S&P 500 CLOSES AT 7,720",
-      "body": "Nvidia's blowout quarter and upbeat guidance sent its shares up roughly 7%, pulling the Nasdaq 100 up 1.21% to 29,577.75 and the S&P 500 up 0.57% to 7,720. Ten of eleven S&P sectors actually fell as capital rotated out of defensives like healthcare, utilities, and staples into semis and software.",
-      "explain": "Nvidia carries one of the largest weights in both the S&P 500 and Nasdaq 100 because both are float-adjusted market-cap-weighted indices, so a 7% move in a multi-trillion-dollar company mechanically drags the whole index even when most constituents are red. That's why breadth (10 of 11 sectors lower) diverged so sharply from the headline index gain \u2014 the rally is narrow and concentrated in AI-capex beneficiaries, not broad-based buying."
-    },
-    {
       "cat": "CENTRAL BANKS",
-      "headline": "10-YEAR YIELD CLIMBS TO 4.66% AS TRADERS BRACE FOR WARSH'S JACKSON HOLE SPEECH",
-      "body": "The 10-year Treasury yield rose for a second straight session to around 4.66% after stronger-than-expected economic data reinforced bets on a Fed rate hike before year-end. Fed Chair Kevin Warsh speaks Friday at the Jackson Hole Economic Symposium, with markets looking for signals on the path of policy.",
-      "explain": "Long-end yields move on the market's forward expectations for the fed funds rate plus a term premium, not on the current policy rate itself, so data that raises the odds of a hike pushes the 10-year up even before the Fed acts. Jackson Hole matters because it's historically where Fed chairs pre-signal major pivots \u2014 Bernanke's QE2 hint in 2010, Powell's 2022 'pain' speech \u2014 so traders are positioning for forward guidance, not just a single data point."
-    },
-    {
-      "cat": "TRADE",
-      "headline": "WHITE HOUSE WEIGHS SWEEPING NEW SEMICONDUCTOR TARIFFS",
-      "body": "The Trump administration is considering a tariff expansion that would hit not just chips but downstream products built with them \u2014 laptops, gaming consoles, and data-center servers \u2014 despite warnings from tech companies that the move could undercut U.S. AI competitiveness.",
-      "explain": "Tariffs on an input like semiconductors compound through the supply chain: a duty on a chip embedded in a server raises costs at every assembly stage before the final product reaches a buyer, a dynamic economists call tariff pass-through. Because chips sit inside nearly every category of electronics, taxing them is a much blunter and more inflationary instrument than a tariff on a single finished good."
+      "headline": "WARSH'S HAWKISH JACKSON HOLE DEBUT SENDS YIELDS UP, STOCKS DOWN",
+      "body": "In his first keynote as Fed Chair, Kevin Warsh said this summer's PCE and CPI readings, while better than expected, 'do not tell me that underlying trends have meaningfully improved,' pushing September rate-hike odds to nearly 60% and the 10-year yield up 5 bps to 4.72%. The S&P 500 slid 0.25% to 7,712 and the Nasdaq 100 fell 0.70% to 29,433, though all three major indexes still closed out the week higher.",
+      "explain": "Long-end Treasury yields move on the market's forward expectations for the fed funds rate, not the current policy rate itself, so a speech that raises the odds of a hike repriced the curve immediately, before the Fed has done anything. Jackson Hole carries outsized weight because it is historically where chairs pre-signal policy shifts, so today's move reflects traders repositioning for tighter policy into September rather than reacting to a single data point."
     },
     {
       "cat": "COMMODITIES",
-      "headline": "GOLD SLIPS, DOLLAR FIRMS AS TRADERS AWAIT WARSH",
-      "body": "Gold pulled back to around $4,600 an ounce after Thursday's PCE inflation data, giving back some of its recent gains, while the dollar index firmed to 99.17 as strong economic data reinforced hike expectations.",
-      "explain": "Gold is priced largely against real yields and the dollar: when data pushes nominal rates up faster than inflation expectations, real yields rise, raising the opportunity cost of holding a non-yielding asset like gold and pressuring its price. The dollar is moving the same way for the same reason \u2014 higher expected U.S. rates attract foreign capital into dollar assets, which is why gold and the DXY are pulling in opposite directions today."
+      "headline": "GOLD SUFFERS WORST SESSION IN MONTHS, SLIDING AS MUCH AS 3.2% ON WARSH'S REMARKS",
+      "body": "Gold, which had been holding above $4,600 near a three-month high, fell as sharply as 3.2% intraday to around $4,515 before settling near $4,504, down 2.75% on the day, as Warsh's hawkish tone lifted real yields.",
+      "explain": "Gold pays no yield, so its cost of carry is the real (inflation-adjusted) interest rate: today's move in nominal yields outpaced any shift in inflation expectations, meaning real yields rose and made holding zero-yield gold comparatively more expensive. That single-variable sensitivity is why gold's percentage move was roughly ten times the S&P 500's on the same headline."
     },
     {
       "cat": "MARKETS",
-      "headline": "MARKET BREADTH NARROWS AS DEFENSIVES SELL OFF INTO CHIP RALLY",
-      "body": "Even with the S&P 500 up 0.57%, ten of eleven sectors closed lower Thursday, led down by healthcare, utilities, and consumer staples, as capital rotated hard into semiconductors and software on the back of Nvidia's report.",
-      "explain": "Sector rotation like this signals investors reallocating existing capital toward a specific theme \u2014 AI capex \u2014 rather than fresh money entering the market broadly. When defensives, the sectors investors typically hide in during expensive or late-cycle markets, sell off to fund a rally in the market's most richly valued growth names, it's usually read as a risk-on, momentum-chasing signal rather than a broad economic upgrade."
+      "headline": "STOCKS CLOSE LOWER BUT POST A WINNING WEEK; PAYPAL SLUMPS 16%",
+      "body": "Despite Friday's pullback, the S&P 500 gained 0.5% on the week, the Nasdaq added 0.9%, and the Dow rose 0.5% for its first winning week in three. PayPal tumbled 16% in premarket trading after Advent and Stripe abandoned their pursuit of the company, while Elastic jumped more than 18% on strong quarterly earnings.",
+      "explain": "A single-day pullback inside a positive week is a reminder that daily headline moves and the underlying trend can diverge: this week's gains were built earlier on strong Nvidia-led earnings momentum, and Friday's Fed-driven dip only pared some of that advance rather than reversing it."
+    },
+    {
+      "cat": "GEOPOLITICS",
+      "headline": "OIL FIRMS ON STRAIT OF HORMUZ TENSION EVEN AS THE DOLLAR STRENGTHENS",
+      "body": "WTI crude rose 0.40% to $83 a barrel as renewed concern over shipping risk through the Strait of Hormuz offset the drag of a stronger dollar, which climbed 0.51% to 99.68 on the DXY after Warsh's hawkish comments.",
+      "explain": "Oil is priced in dollars, so a stronger DXY is normally a headwind for crude since it makes the commodity more expensive for foreign buyers; today's gain shows a geopolitical supply-risk premium overriding that usual inverse relationship, a pattern worth watching if Strait of Hormuz tensions escalate further."
+    },
+    {
+      "cat": "EARNINGS",
+      "headline": "SEMIS SPLIT AS MARVELL AND RUBRIK FALL DESPITE BEATING ESTIMATES",
+      "body": "Marvell Technology and Rubrik both topped analyst expectations but saw shares decline anyway, pressuring the chip sector even as the broader market digested Warsh's remarks, a sign investors are pricing in forward guidance and rate sensitivity over the headline beat.",
+      "explain": "When a stock falls on a beat, it usually means the market had already priced in strong results, or guidance and margin commentary disappointed relative to those elevated expectations; that dynamic is amplified for high-multiple growth names like chipmakers, whose valuations are most sensitive to the discount-rate move a hawkish Fed speech like today's just delivered."
     },
     {
       "cat": "MCBB",
-      "headline": "KANSAS'S BILL SELF RETURNS FOR 2026-27 SEASON AFTER HEALTH SCARE",
-      "body": "The 63-year-old Self, hospitalized earlier this year for an AFib episode, confirmed he'll coach Kansas again this season despite contemplating retirement. The Jayhawks haven't reached a second weekend of the NCAA Tournament since their 2022 national title."
+      "headline": "JUDGE GRANTS ELIGIBILITY TROs AS CONFERENCES CRACK DOWN ON FORMER PROS IN COLLEGE HOOPS",
+      "body": "A Dallas judge issued temporary restraining orders preserving eligibility for players including CJ Gunn, Rylan Griffen, and Riley Kugel in a lawsuit naming the NCAA, SEC, and commissioner Greg Sankey, while the ACC and Mountain West adopted new policies barring former professionals from returning to college sports. Georgetown's Vince Iwuchukwu, meanwhile, was separately granted a fifth year of eligibility via a New York lawsuit."
     },
     {
       "cat": "NBA",
-      "headline": "DRAYMOND GREEN RE-SIGNS WITH WARRIORS ON ONE-YEAR, $27.7M DEAL",
-      "body": "Golden State brought Green back on a one-year contract as it retools around Stephen Curry. Elsewhere, Trail Blazers guard Shaedon Sharpe reportedly suffered a torn meniscus and will be re-evaluated in six months."
+      "headline": "TRAIL BLAZERS ACQUIRE JA MORANT FROM GRIZZLIES IN OFFSEASON BLOCKBUSTER",
+      "body": "Portland added former All-Star point guard Ja Morant in a trade with Memphis, one of the bigger moves of an active NBA offseason that has also seen the Heat retool their roster around Giannis Antetokounmpo after trading Jimmy Butler."
     },
     {
       "cat": "NFL",
-      "headline": "NFL TEAMS RACE TO CUT ROSTERS TO 53 BEFORE SUNDAY'S DEADLINE",
-      "body": "With four preseason games Thursday closing out Week 3, all 32 teams must trim from 90 to 53 players by Sunday, Aug. 30 \u2014 roughly 1,184 players will lose their jobs. The Patriots already traded away Kayshon Boutte and the Cardinals cut running back Trey Benson."
+      "headline": "NFL TEAMS RACE TO TRIM ROSTERS TO 53 BEFORE SUNDAY'S DEADLINE",
+      "body": "All 32 teams must cut from 90 to 53 players by Sunday, Aug. 30, a leaguewide purge of roughly 1,184 players following Thursday's final preseason games. Tennessee's Wan'Dale Robinson was evaluated for a concussion after a hit from Chicago's Xavier Woods in joint practice that Titans coach Robert Saleh called 'cheap.'"
     },
     {
       "cat": "NCAA CFB",
-      "headline": "COLLEGE FOOTBALL SEASON OPENS WITH WEEK 0 FCS SLATE",
-      "body": "The 2026 season kicked off Thursday with 13 FCS games, including Maine at Towson and Lafayette at Georgetown. FBS play begins Saturday, headlined by North Carolina vs. TCU in Dublin, Ireland, as part of the Aer Lingus College Football Classic."
+      "headline": "FBS SEASON KICKS OFF SATURDAY, HEADLINED BY NORTH CAROLINA-TCU IN DUBLIN",
+      "body": "The 2026 FBS season opens Saturday with North Carolina vs. TCU in Dublin, Ireland at 11 a.m. on ESPN, alongside San Jose State at USC and NC State at Virginia, as more than a dozen first-year coaches at Power Four programs make their debuts."
     }
   ],
   "sports": [
@@ -99,37 +75,37 @@
     },
     {
       "team": "SEATTLE SEAHAWKS",
-      "pill": "PRESEASON FRI",
+      "pill": "PRESEASON TONIGHT",
       "pillClass": "s-up",
-      "detail": "NFL owners unanimously approved the team's $9.612B sale to a group led by Vinod Khosla. Seahawks close out the preseason Friday, Aug. 28 at Kansas City."
+      "detail": "NFL owners unanimously approved the team's $9.6B sale to a group led by Vinod Khosla. Extended DL Leonard Williams and signed CB Trevon Diggs; close out the preseason tonight at Kansas City."
     },
     {
       "team": "DETROIT PISTONS",
       "pill": "OFFSEASON",
       "pillClass": "s-up",
-      "detail": "Locked in a contract standoff with restricted free agent Jalen Duren, who is seeking a 5-year, $287M deal against Detroit's reported $30-40M/year offers. Season opens at home vs. the Celtics."
+      "detail": "Locked in a contract standoff with restricted free agent Jalen Duren. Open the 2026-27 season at home against the Celtics on Tuesday, Oct. 20, part of opening night's featured slate."
     },
     {
       "team": "SEATTLE MARINERS",
-      "pill": "L 0-6",
-      "pillClass": "s-l",
-      "detail": "Fell to the Phillies 6-0 Wednesday as Jesus Luzardo shut them down. Continue the series against Philadelphia at T-Mobile Park."
+      "pill": "NEXT: SAT 3:07 PM",
+      "pillClass": "s-up",
+      "detail": "Wrapped a series against the Phillies this week. Open a series at home against the Blue Jays Saturday at 3:07 p.m. PT, T-Mobile Park."
     }
   ],
   "watchlist": [
-    "Fed Chair Kevin Warsh speaks Friday at the Jackson Hole Economic Symposium",
-    "NFL roster cutdown deadline \u2014 Sunday, Aug. 30, teams cut to 53 players",
-    "Huskies open the season vs. Washington State \u2014 Apple Cup, Sunday, Sept. 6, 1 PM PT",
-    "Seahawks preseason finale at Chiefs \u2014 Friday, Aug. 28",
-    "College football FBS opens Saturday \u2014 North Carolina vs. TCU in Dublin"
+    "September FOMC meeting — markets now pricing roughly 60% odds of a rate hike after Warsh's Jackson Hole remarks",
+    "NFL roster cutdown deadline — Sunday, Aug. 30, teams trim to 53 players",
+    "College football FBS season opens Saturday — North Carolina vs. TCU in Dublin, Ireland",
+    "Seahawks preseason finale at Chiefs — tonight, Friday, Aug. 28",
+    "Mariners vs. Blue Jays — Saturday, Aug. 29, 3:07 PM PT, T-Mobile Park"
   ],
   "deepDive": {
-    "title": "Cap-Weighted Indices and the Nvidia Effect",
+    "title": "Real Yields, Not Nominal Ones, Are Why Gold Fell Harder Than Stocks Today",
     "content": [
-      "Today's tape looked like a contradiction: the S&P 500 closed up 0.57% and the Nasdaq 100 jumped 1.21%, yet ten of eleven S&P sectors actually finished lower. The entire index-level gain traced back to one company's earnings report. That is not a fluke of one unusual day \u2014 it is a structural feature of how the indices millions of investors hold are built, and it is worth understanding precisely if you are about to spend two years studying how markets price risk.",
-      "The S&P 500 and Nasdaq 100 are float-adjusted market-capitalization-weighted indices: a company's influence on the index return is proportional to its share of total market value, not to how many companies are in the index. Nvidia's market cap has run into the trillions, giving it a weight in the neighborhood of 7-8% of the S&P 500 and an even larger share of the Nasdaq 100. When a stock that size moves 7% in a single session, simple arithmetic means it can single-handedly add tens of basis points to the entire index's return, even if the other 499 stocks are flat or falling \u2014 which is close to what happened today.",
-      "This is not a new phenomenon, but the magnitude is. Cisco played a similar role at the peak of the dot-com bubble, and Apple alone has occasionally accounted for a third or more of a monthly S&P 500 move. What's different now is that Nvidia sits alongside a handful of other mega-cap AI names \u2014 the so-called Magnificent Seven \u2014 that collectively make up roughly a third of the S&P 500's total weight. An index fund investor who believes they own '500 diversified companies' is, in practice, running a heavily concentrated bet on a handful of AI-capex winners.",
-      "That concentration is exactly why today's sector breadth \u2014 money draining out of healthcare, utilities, and staples to fund the chip rally \u2014 is worth watching alongside the headline number, not instead of it. Heading into a Fed decision cycle where Warsh's Jackson Hole remarks could reprice the entire yield curve, a market this concentrated in a few richly valued names is also more fragile: if the AI-capex narrative stalls, or if higher-for-longer rates compress the valuations assigned to future earnings, the same mechanism that lifted the index today works in reverse, and much faster than most passive investors expect."
+      "Kevin Warsh's Jackson Hole debut was read as only mildly hawkish, yet the market's reaction was wildly uneven: the S&P 500 fell just 0.25%, the Nasdaq 100 fell 0.70%, and gold cratered as much as 3.2% intraday, its worst single-day move in months. That divergence is not noise. It is a clean illustration of how one sentence from a Fed chair gets converted into new prices across asset classes at very different speeds and magnitudes, and gold's outsized reaction is the clearest window available today into the mechanism connecting central bank rhetoric to a commodity that pays no coupon or dividend at all.",
+      "Gold's price is driven overwhelmingly by real, or inflation-adjusted, interest rates, approximated as the 10-year Treasury yield minus the market's inflation expectation embedded in TIPS breakevens. When Warsh said this summer's inflation data does not show underlying trends have meaningfully improved, traders pushed September hike odds toward 60% and the 10-year yield up 5 bps to 4.72%, with no comparable move in inflation expectations. That combination means real yields rose. Because gold generates no cash flow, higher real yields directly raise the opportunity cost of holding it instead of a Treasury, so the sell-off followed almost mechanically and immediately, well before any hike is actually delivered.",
+      "Equities, by contrast, discount a stream of future cash flows using a rate that blends real yields with earnings growth expectations, risk premia, and company-specific news, so a single Fed comment gets diluted across many more variables before it reaches a stock price. Gold has essentially one dominant input, so it moves in a far more concentrated way. Powell's 2022 'pain' speech is a useful comparison: gold fell nearly 2% that session while equities dropped much further, because that speech was overtly hawkish on every front. Today's version was narrower, and it hit the rate-sensitive commodity harder than equities still cushioned by AI-capex earnings optimism.",
+      "The read-through for the September FOMC meeting, now priced near 60% odds of a hike, is that gold is likely to stay under pressure if real yields keep grinding higher, while equities' path will depend far more on whether earnings, especially the mega-cap names propping up the Nasdaq, can outrun a rising discount rate. For a finance student, the practical takeaway is that gold, watched alongside TIPS breakevens, functions as one of the market's purest and fastest live readouts of real-yield expectations, often a cleaner signal of a Fed speech's true impact than the equity market's own reaction."
     ]
   }
 }
