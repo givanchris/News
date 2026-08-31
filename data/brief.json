@@ -1,87 +1,57 @@
 {
-  "lastUpdated": "2026-08-31T16:30:16-06:00",
+  "lastUpdated": "2026-08-31T16:34:58-06:00",
   "market": {
-    "sp500": {
-      "price": "7686",
-      "change": "-0.33%",
-      "dir": "down"
-    },
-    "nasdaq": {
-      "price": "29457",
-      "change": "+0.08%",
-      "dir": "up"
-    },
-    "yield": {
-      "price": "4.76%",
-      "change": "+4 bps",
-      "dir": "down"
-    },
-    "wti": {
-      "price": "$86",
-      "change": "+1.36%",
-      "dir": "up"
-    },
-    "gold": {
-      "price": "$4499",
-      "change": "+0.59%",
-      "dir": "up"
-    },
-    "dxy": {
-      "price": "99.41",
-      "change": "-0.18%",
-      "dir": "down"
-    }
+    "sp500":  { "price": "7,686",  "change": "-0.33%", "dir": "down" },
+    "nasdaq": { "price": "29,433", "change": "-0.4%",  "dir": "down" },
+    "yield":  { "price": "4.75%",  "change": "+5 bps",  "dir": "down" },
+    "wti":    { "price": "$85.60", "change": "+2.6%",  "dir": "down" },
+    "gold":   { "price": "$4,483", "change": "-1.0%",  "dir": "down" },
+    "dxy":    { "price": "99.70",  "change": "+0.1%",  "dir": "flat" }
   },
   "stories": [
     {
+      "cat": "GEOPOLITICS",
+      "headline": "US-IRAN STRIKES SEND OIL ABOVE $85, RATTLE STOCKS TO OPEN THE WEEK",
+      "body": "The U.S. and Iran exchanged strikes for the first time in roughly a month, sending WTI crude up 2.6% to $85.60 and Brent above $90 on fears of disrupted shipping through the Strait of Hormuz. The S&P 500 fell 0.33% to 7,686 and the Dow dropped 374 points (-0.7%), though both indexes still closed out August with gains.",
+      "explain": "The Strait of Hormuz carries roughly a fifth of global oil supply, so any threat to it prices in a risk premium immediately, well before actual barrels are disrupted. That premium feeds straight into headline inflation expectations, which raises the odds the Fed leans hawkish at its next meeting — the same mechanism that pushed Treasury yields higher today and pressured equity valuations."
+    },
+    {
       "cat": "CENTRAL BANKS",
-      "headline": "WARSH'S HAWKISH JACKSON HOLE DEBUT SENDS YIELDS UP, STOCKS DOWN",
-      "body": "In his first keynote as Fed Chair, Kevin Warsh said this summer's PCE and CPI readings, while better than expected, 'do not tell me that underlying trends have meaningfully improved,' pushing September rate-hike odds to nearly 60% and the 10-year yield up 5 bps to 4.72%. The S&P 500 slid 0.25% to 7,712 and the Nasdaq 100 fell 0.70% to 29,433, though all three major indexes still closed out the week higher.",
-      "explain": "Long-end Treasury yields move on the market's forward expectations for the fed funds rate, not the current policy rate itself, so a speech that raises the odds of a hike repriced the curve immediately, before the Fed has done anything. Jackson Hole carries outsized weight because it is historically where chairs pre-signal policy shifts, so today's move reflects traders repositioning for tighter policy into September rather than reacting to a single data point."
+      "headline": "10-YEAR YIELD TOPS 4.75%, HIGHEST SINCE JANUARY 2025",
+      "body": "The 10-year Treasury yield pushed above 4.75% intraday, its highest level since January 2025, as rising oil prices reinforced bets the Fed will hike rates in September. Fed Chair Kevin Warsh, speaking at the G20 conference, said 'secular stagnation seems like a description of a past long ago,' reinforcing the hawkish tone he struck at Jackson Hole on Friday.",
+      "explain": "Long-end yields price the market's expected path for the fed funds rate plus a term premium, not the current policy rate itself, so hawkish commentary and an oil-driven inflation scare both get repriced into the 10-year immediately. Higher yields raise the discount rate used to value future corporate cash flows, which is the direct channel through which today's bond move pressured stock valuations."
     },
     {
       "cat": "COMMODITIES",
-      "headline": "GOLD SUFFERS WORST SESSION IN MONTHS, SLIDING AS MUCH AS 3.2% ON WARSH'S REMARKS",
-      "body": "Gold, which had been holding above $4,600 near a three-month high, fell as sharply as 3.2% intraday to around $4,515 before settling near $4,504, down 2.75% on the day, as Warsh's hawkish tone lifted real yields.",
-      "explain": "Gold pays no yield, so its cost of carry is the real (inflation-adjusted) interest rate: today's move in nominal yields outpaced any shift in inflation expectations, meaning real yields rose and made holding zero-yield gold comparatively more expensive. That single-variable sensitivity is why gold's percentage move was roughly ten times the S&P 500's on the same headline."
+      "headline": "GOLD SINKS TO $4,483 DESPITE MIDEAST ESCALATION AS RATE-HIKE ODDS DOMINATE",
+      "body": "Gold fell about 1% to $4,483 an ounce even as fighting between the U.S. and Iran intensified — a break from gold's usual safe-haven script, as rising real yields from Fed rate-hike bets outweighed the geopolitical risk premium.",
+      "explain": "Gold pays no coupon or dividend, so its cost of carry is set by the real (inflation-adjusted) interest rate: when nominal yields rise faster than inflation expectations, real yields climb and holding zero-yield gold gets relatively more expensive. Today that real-rate effect from Warsh's hawkish tone dominated the safe-haven bid that would normally come from a Middle East flare-up, which is why gold and oil moved in opposite directions on the same headline."
     },
     {
       "cat": "MARKETS",
-      "headline": "STOCKS CLOSE LOWER BUT POST A WINNING WEEK; PAYPAL SLUMPS 16%",
-      "body": "Despite Friday's pullback, the S&P 500 gained 0.5% on the week, the Nasdaq added 0.9%, and the Dow rose 0.5% for its first winning week in three. PayPal tumbled 16% in premarket trading after Advent and Stripe abandoned their pursuit of the company, while Elastic jumped more than 18% on strong quarterly earnings.",
-      "explain": "A single-day pullback inside a positive week is a reminder that daily headline moves and the underlying trend can diverge: this week's gains were built earlier on strong Nvidia-led earnings momentum, and Friday's Fed-driven dip only pared some of that advance rather than reversing it."
-    },
-    {
-      "cat": "GEOPOLITICS",
-      "headline": "OIL FIRMS ON STRAIT OF HORMUZ TENSION EVEN AS THE DOLLAR STRENGTHENS",
-      "body": "WTI crude rose 0.40% to $83 a barrel as renewed concern over shipping risk through the Strait of Hormuz offset the drag of a stronger dollar, which climbed 0.51% to 99.68 on the DXY after Warsh's hawkish comments.",
-      "explain": "Oil is priced in dollars, so a stronger DXY is normally a headwind for crude since it makes the commodity more expensive for foreign buyers; today's gain shows a geopolitical supply-risk premium overriding that usual inverse relationship, a pattern worth watching if Strait of Hormuz tensions escalate further."
-    },
-    {
-      "cat": "EARNINGS",
-      "headline": "SEMIS SPLIT AS MARVELL AND RUBRIK FALL DESPITE BEATING ESTIMATES",
-      "body": "Marvell Technology and Rubrik both topped analyst expectations but saw shares decline anyway, pressuring the chip sector even as the broader market digested Warsh's remarks, a sign investors are pricing in forward guidance and rate sensitivity over the headline beat.",
-      "explain": "When a stock falls on a beat, it usually means the market had already priced in strong results, or guidance and margin commentary disappointed relative to those elevated expectations; that dynamic is amplified for high-multiple growth names like chipmakers, whose valuations are most sensitive to the discount-rate move a hawkish Fed speech like today's just delivered."
+      "headline": "S&P 500 CLOSES AUGUST UP 2.6% DESPITE MONDAY'S GEOPOLITICAL PULLBACK",
+      "body": "Monday's 0.33% decline snapped a strong run, but the S&P 500 still finished August with a 2.6% gain, powered by strong big-tech earnings through most of the month. The Nasdaq 100 slipped roughly 0.4% to around 29,433 as investors rotated out of risk on the Iran headlines.",
+      "explain": "A single risk-off session inside a positive month is a reminder to separate the news-driven daily move from the underlying trend: August's gain was built on an earnings-driven rerating of mega-cap tech, and today's pullback is a reaction to a fresh geopolitical shock rather than a reversal of that trend — the distinction matters for whether investors should expect the dip to persist into September."
     },
     {
       "cat": "MCBB",
-      "headline": "SEC BARS PLAYERS WITH PRIOR NBA CONTRACTS AS ARIZONA LANDS TRANSFER RJ GODFREY",
-      "body": "The SEC has adopted a new conference policy barring any player who signed an NBA contract from joining a member school, a preemptive move tied to the NCAA's looming 5-in-5 eligibility model. Meanwhile Arizona added former Clemson forward RJ Godfrey out of the portal, a 12.0-point, 5.3-rebound starter who shot better than 61% from the field last season, as the late-August transfer window keeps reshaping rosters ahead of the 2026-27 season."
+      "headline": "NCAA TOURNAMENT TO EXPAND TO 76 TEAMS STARTING 2026-27",
+      "body": "The NCAA confirmed the men's basketball tournament will expand from 68 to 76 teams beginning with the 2026-27 season, with the same expansion applied to the women's tournament. In coaching news, Florida's Todd Golden signed a six-year, $49.5 million extension after last season's title run."
     },
     {
       "cat": "NBA",
-      "headline": "TIMBERWOLVES ENGINEER TRADE TO FINALIZE JONATHAN KUMINGA SIGNING",
-      "body": "Minnesota shipped Josh Green's $14.7 million expiring contract and cash to Utah for Cody Williams and John Konchar, immediately waiving Konchar via the stretch provision, purely to duck back below the luxury-tax apron and complete Kuminga's two-year, $12.4 million deal. Anthony Edwards' personal recruiting pitch helped seal Kuminga's choice of Minnesota over other suitors."
+      "headline": "76ERS LAND LEBRON AND JAYLEN BROWN; GIANNIS HEADS TO MIAMI",
+      "body": "Philadelphia turned itself into a title contender this summer, keeping LeBron James and trading for Jaylen Brown, while Giannis Antetokounmpo signed with the Miami Heat to team up with Bam Adebayo. Golden State also re-signed Draymond Green to a one-year, $27.7 million deal as the league's superstar landscape reshapes ahead of training camp."
     },
     {
       "cat": "NFL",
-      "headline": "LEAGUE HITS SUNDAY'S 6 P.M. ET DEADLINE TO CUT DOWN TO 53-MAN ROSTERS",
-      "body": "All 32 teams trimmed from 90 to 53 players by today's deadline, moved a day later than usual to accommodate the 49ers' trip to Melbourne for their Sept. 10 opener. The Rams restructured Aaron Donald's deal to as much as $30 million with incentives, while the Seahawks waived receiver Julian Hicks, released safety Rodney Thomas II, and cut their lone 2026 sixth-round pick, Emmanuel Henderson Jr.; waiver claims across the league are due Monday at 1 p.m. ET."
+      "headline": "AARON DONALD UN-RETIRES, SIGNS BACK WITH RAMS AS LEAGUE FINALIZES 53-MAN ROSTERS",
+      "body": "Aaron Donald is coming out of retirement to rejoin the Los Angeles Rams on a one-year, $20 million deal after all 32 teams cut down to 53-man rosters over the weekend, releasing 1,184 players leaguewide. Chiefs QB Patrick Mahomes is dealing with a knee issue that has coach Andy Reid unsure of his Week 1 status."
     },
     {
       "cat": "NCAA CFB",
-      "headline": "STANFORD OPENS SEASON WITH WALK-OFF SCOOP-AND-SCORE TO BEAT HAWAII",
-      "body": "Stanford capped college football's Week 0 opening slate by beating Hawaii on a scoop-and-score touchdown with 1:41 remaining, closing out a weekend that also saw Bill Belichick's North Carolina upset TCU 15-10 in Dublin and No. 14 USC rout San Jose State. The next major slate is Week 1, spanning Sept. 4-7."
+      "headline": "WEEK 1 HEADLINED BY BOISE STATE-OREGON AS SEASON SHIFTS INTO GEAR",
+      "body": "With Week 0 in the books, the marquee Week 1 matchup is No. 25 Boise State visiting Oregon on Saturday, with several analysts picking the Broncos to make the College Football Playoff field over the Ducks. Most of the country's Week 1 slate is set for Labor Day weekend, Sept. 4-7."
     }
   ],
   "sports": [
@@ -89,47 +59,47 @@
       "team": "WASHINGTON HUSKIES FOOTBALL",
       "pill": "OPENS SEP 6",
       "pillClass": "s-up",
-      "detail": "No. 17 Huskies close out preseason camp ahead of the Apple Cup opener against Washington State at Husky Stadium on Sunday, Sept. 6. RB Jordan Washington has returned to light warmups after a spring neck injury, though his season status is unclear, while transfer WR Christian Moss has emerged as the likely starting X receiver."
+      "detail": "No. 17 Huskies wrapped preseason camp; season opener is the Apple Cup vs. Washington State at Husky Stadium, Sunday, Sept. 6 at 1 p.m. PT on NBC — third-year coach Jedd Fisch's team opens Big Ten play later in September."
     },
     {
       "team": "WASHINGTON HUSKIES BASKETBALL",
       "pill": "OFFSEASON",
       "pillClass": "s-up",
-      "detail": "Roster rebuild continues after adding Rutgers transfer Harun Zrno to a group already featuring Wesley Yates III and transfers from Gonzaga, San Francisco, and Texas Tech. The 2026-27 non-conference schedule includes a marquee matchup against Baylor at Climate Pledge Arena."
+      "detail": "Coming off a 16-17 (7-13 Big Ten) season under Danny Sprinkle, the Huskies lost forward Hannes Steinbach to the Charlotte Hornets in the NBA Draft and are rebuilding the roster for 2026-27; regular season tips off in November."
     },
     {
       "team": "SEATTLE SEAHAWKS",
-      "pill": "TRIMMED TO 53",
+      "pill": "53-MAN SET",
       "pillClass": "s-up",
-      "detail": "Seattle cut its roster to 53 ahead of today's deadline, waiving WR Julian Hicks, releasing S Rodney Thomas II, and cutting 2026 sixth-rounder Emmanuel Henderson Jr., while newly acquired CB Terrion Arnold may face a commissioner's exempt-list placement amid a pending legal case. The Super Bowl LX champions open the regular season Wednesday, Sept. 9 at home against New England."
+      "detail": "Seattle finalized its 53-man roster over the weekend and locked up two building blocks, signing DT Leonard Williams to a three-year, $90 million extension and CB Devon Witherspoon to a four-year extension on Monday."
     },
     {
       "team": "DETROIT PISTONS",
       "pill": "OFFSEASON",
       "pillClass": "s-up",
-      "detail": "Detroit is standing firm in its contract standoff with restricted free agent Jalen Duren, ruling out a sign-and-trade and telling suitors they'd be wasting their time; the All-NBA center is seeking a deal up to 30% of the cap and remains unsigned nearly two months into free agency. Pistons open the 2026-27 season at home against Boston on Tuesday, Oct. 20."
+      "detail": "Coming off a 60-win, third-best-record season in the East, Detroit remains in a contract standoff with All-NBA center Jalen Duren and is banking on internal development over a big trade ahead of training camp."
     },
     {
       "team": "SEATTLE MARINERS",
-      "pill": "L 4-3 vs TOR",
+      "pill": "L 7-0",
       "pillClass": "s-l",
-      "detail": "Dropped the series finale 4-3 in Toronto despite a Cal Raleigh solo homer and a second run scored; Seattle is 64-70 and 2.5 games behind first-place Houston in the AL West. Next up: at Boston, Aug. 31-Sept. 2."
+      "detail": "Shut out 7-0 by the Blue Jays on Sunday, dropping Seattle to 64-73, third in the AL West. Next up: at the Red Sox tonight, 6:45 p.m. ET at Fenway (George Kirby vs. Parlo Tolle)."
     }
   ],
   "watchlist": [
-    "September FOMC meeting \u2014 markets now pricing roughly 60% odds of a rate hike after Warsh's Jackson Hole remarks",
-    "NFL waiver claims deadline \u2014 Monday, Aug. 31, 1 PM ET, as teams finalize practice squads after cutdowns",
-    "Seahawks host Patriots \u2014 Wednesday, Sept. 9, Super Bowl LX rematch season opener at Lumen Field",
-    "Huskies open season vs. Washington State \u2014 Apple Cup, Sunday, Sept. 6, Husky Stadium",
-    "Mariners at Red Sox \u2014 Monday, Aug. 31 through Wednesday, Sept. 2, Fenway Park"
+    "Mariners at Red Sox — tonight, 6:45 PM ET, Fenway Park (Kirby vs. Tolle)",
+    "US-Iran conflict — watch for further Strait of Hormuz shipping disruption and its pass-through to oil this week",
+    "10-year yield above 4.75% — highest since Jan. 2025; watch for follow-through as September Fed odds firm up",
+    "College football Week 1 headliner: No. 25 Boise State at Oregon — Saturday, Sept. 5",
+    "Huskies open season vs. Washington State (Apple Cup) — Sunday, Sept. 6, 1 PM PT on NBC"
   ],
   "deepDive": {
-    "title": "The NBA's Second Apron: A Private Salary Cap Enforced by Marginal Tax Rates",
+    "title": "Why Gold Fell While Oil Spiked: Real Yields and the Cost of Carry",
     "content": [
-      "Today's Timberwolves move \u2014 trading Josh Green's $14.7 million expiring salary and cash for Cody Williams, then immediately stretching John Konchar off the books \u2014 wasn't a basketball trade so much as a balance-sheet maneuver. Minnesota needed the cap room to finalize Jonathan Kuminga's two-year, $12.4 million contract without triggering the league's harshest financial penalty: the second apron. Understanding why a team would give up a rotation guard just to duck under an invisible line says more about how the modern NBA actually operates than any box score does.",
-      "The mechanism is a tiered luxury-tax and apron system layered on top of the salary cap. Teams over the cap can still spend using exceptions, but crossing the 'first apron' (roughly $10 million above the tax line) locks a team out of certain exceptions and cuts off some trade flexibility; crossing the 'second apron' (another roughly $17-18 million higher) is far more punitive \u2014 it freezes a team's ability to aggregate salaries in trades, sign buyout-market free agents with cap exceptions, or use the injured player exception at all, and it converts any future first-round pick into a frozen, untradeable asset seven years out. The tax itself is also progressive: rates climb steeply for teams that stay over the line in consecutive seasons, so repeat offenders pay a multiple of what a first-time taxpayer does for the same dollar of overage.",
-      "Most fans miss that this system was deliberately designed after the 2023 CBA to punish superteam-building by taxing marginal spending far more than average spending \u2014 economically, it is a progressive tax bracket applied to roster construction. The Golden State Warriors' 2023-24 roster, which paid a luxury tax bill north of $170 million on top of payroll, is the textbook case of a franchise absorbing the cost anyway because star-power upside outweighed the penalty; Minnesota's calculus today is the opposite, sacrificing a useful rotation piece because the marginal cost of staying above the second apron outweighed Green's on-court value.",
-      "That's the lens for reading roster moves for the rest of this season: teams are now optimizing against a kinked, highly punitive cost curve, not a flat cap number, so seemingly minor salary-dump trades like Minnesota's are actually rational responses to a marginal tax rate. Watch for more of these apron-driven trades around the trade deadline, when several contenders will face the same choice the Timberwolves just made \u2014 pay the escalating tax to keep talent, or sacrifice depth to stay below the line and preserve future flexibility."
+      "Today's brief has an apparent contradiction sitting right in the market data: the U.S. and Iran traded strikes for the first time in a month, WTI crude jumped 2.6% to $85.60, and the 10-year Treasury yield pushed above 4.75% for the first time since January 2025 — yet gold, the asset investors are taught to buy when geopolitical risk spikes, fell about 1% to $4,483. That is not noise. It is the market telling you which variable is actually driving prices today, and it is not the headline risk everyone is reading about.",
+      "Gold pays no coupon, no dividend, and no rent — its entire cost of holding it is the return you give up by not holding something that does pay, typically a Treasury bond. That opportunity cost is best measured by the real interest rate: the nominal yield minus expected inflation. When Fed Chair Warsh's hawkish tone pushes nominal yields up faster than inflation expectations move, real yields rise, and gold gets mechanically more expensive to hold relative to bonds. That real-rate effect from today's rate-hike repricing outweighed the safe-haven bid the Iran conflict would normally generate.",
+      "This is not a new pattern — it played out through most of 2022, when gold traded flat to down for months despite the Ukraine invasion, because the Fed's aggressive hiking cycle was pushing real yields sharply higher at the same time. What most people miss is that gold's 'safe haven' behavior is conditional: it works when a crisis lowers expected rates (a flight to safety that also pulls down growth and rate expectations) but fails when a crisis raises them, as an oil-driven inflation scare does. Direction of the real-rate move, not the presence of geopolitical risk, is the deciding variable.",
+      "For a portfolio, the actionable takeaway is to stop asking 'is there geopolitical risk today' and start asking 'which way are real yields moving because of it.' Watching TIPS-implied breakevens alongside the nominal 10-year gives a cleaner read than either yield alone. Going into a week where the Fed's rate path is already in play and oil has a fresh supply-risk premium attached, gold's next move will hinge on whether the inflation scare or the rate-hike scare wins out — if breakevens rise faster than nominal yields, real yields fall and gold's recent slide likely reverses."
     ]
   }
 }
