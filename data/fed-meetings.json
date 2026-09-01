@@ -4,8 +4,8 @@
     "description": "Curated FOMC meeting log cross-referencing statement language shifts with rate outcomes and Treasury-market reactions.",
     "author": "Christopher Givan",
     "methodology": "Same-day (2pm statement to 3pm close) yield changes sourced from Treasury.gov H.15 series and cross-checked against Fed statement archive. Stance reflects the statement + SEP composite, not just the decision. This dataset is curated by hand — not an automated feed.",
-    "last_curated": "2026-06-27",
-    "coverage": "Selected inflection meetings from the 2022 hiking cycle through the 2026 hold cycle."
+    "last_curated": "2026-09-01",
+    "coverage": "Selected inflection meetings from the 2022 hiking cycle through the 2026 Warsh-era hold cycle, plus Jackson Hole symposium speeches."
   },
   "meetings": [
     {
@@ -643,6 +643,56 @@
       "curve_bp": -10,
       "curve_direction": "flattening",
       "notes": "Warsh’s inaugural FOMC produced the most hawkish single-meeting shift in the current cycle. Statement cut from ~341 to ~130 words — Warsh called it ‘a bit shorter, a bit simpler’ and said forward guidance is ‘not well suited for the current policy conjuncture.’ Dot plot median for end-2026 rose to 3.8% (above midpoint of 3.625%), signaling a likely +25 bp hike before year-end. PCE inflation forecast raised from 2.7% to 3.6% — starkest single-meeting upgrade since post-COVID. Short end led the sell-off: 2Y +15 bp to 4.21% (largest Fed-day move since March 2008). Long end muted, curve flattened ~10 bp. 10Y approximate — needs H.15 verification."
+    },
+    {
+      "id": "2026-07",
+      "date": "2026-07-29",
+      "target_range": "3.50–3.75%",
+      "stance": "hawkish",
+      "statement_summary": "Fifth straight hold at 3.50–3.75%, but a 9–3 vote — Hammack, Kashkari, and Logan all dissented in favor of a 25 bp hike, the same three hawks who dissented in April against easing bias. After June's radically shortened ~130-word statement, July's text expanded back out: full economic-activity and labor-market description restored, including a reinstated reference to Middle East conflict uncertainty. The June-era declaration ‘The Committee will deliver price stability’ and the inflation/energy language were retained unchanged.",
+      "phrase_changes": [
+        {
+          "type": "added",
+          "phrase": "Economic activity is expanding at a solid pace despite elevated uncertainty that owes, in part, to the conflict in the Middle East."
+        },
+        {
+          "type": "added",
+          "phrase": "Productivity growth and capital investment are strong."
+        },
+        {
+          "type": "added",
+          "phrase": "Job gains have kept pace with the workforce, and the unemployment rate has changed little."
+        },
+        {
+          "type": "retained",
+          "phrase": "Inflation remains elevated relative to the Committee’s 2 percent goal, in part reflecting supply shocks that have driven price increases in certain sectors, including energy."
+        },
+        {
+          "type": "retained",
+          "phrase": "This Committee will deliver price stability."
+        }
+      ],
+      "decision": "Hold",
+      "next_decision": "Hike risk rising (Sep 2026)",
+      "dissents": [
+        {
+          "name": "Hammack",
+          "preference": "+25 bp"
+        },
+        {
+          "name": "Kashkari",
+          "preference": "+25 bp"
+        },
+        {
+          "name": "Logan",
+          "preference": "+25 bp"
+        }
+      ],
+      "y2_bp": -4,
+      "y10_bp": 5,
+      "curve_bp": 9,
+      "curve_direction": "steepening",
+      "notes": "30-year yield hit its highest level since 2007 the same day. The 2Y/10Y split (front end down, long end up) reads as the market pricing near-term patience against rising longer-run inflation risk premium — not a dovish signal despite the front-end dip. Three consecutive meetings (Apr, Jun, Jul) have now carried hawkish dissents pushing for tighter policy, the longest such stretch since 1992–94. Sourced from federalreserve.gov statement text and CNBC/CNN Fed-day coverage; H.15 cross-check pending."
     }
   ],
   "predictive_phrases": [
@@ -727,6 +777,38 @@
     {
       "title": "Data caveat",
       "body": "This dataset is hand-curated from the Federal Reserve statement archive and Treasury H.15 daily yields. It is not an automated feed. Each entry is verifiable against the FOMC statement and next-day H.15 release. Expansion targets: intraday reaction windows (30-min, 60-min), Fed funds futures repricing, and dissent history visualizations."
+    },
+    {
+      "title": "The Warsh brevity test",
+      "body": "June 2026's ~130-word statement was framed as a durable new style, but July walked much of it back — full economic and labor language returned within one meeting. Read alongside Jackson Hole's explicit rejection of forward guidance ('a discipline, not a decision'), the pattern looks less like a permanent format change and more like Warsh keeping language itself as a lever: short when he wants ambiguity, expanded when he wants the record to carry more information. Watch statement length as its own signal going forward, not just content."
+    }
+  ],
+  "speeches": [
+    {
+      "id": "2026-jackson-hole",
+      "type": "speech",
+      "event": "Jackson Hole Economic Policy Symposium — Keynote",
+      "host": "Federal Reserve Bank of Kansas City",
+      "speaker": "Kevin Warsh, Fed Chair",
+      "date": "2026-08-28",
+      "location": "Jackson Hole, WY",
+      "title": "Financial Innovation: Implications for Payments and Policy",
+      "stance": "hawkish",
+      "summary": "Warsh's first Jackson Hole keynote as Chair (his 100th day in the role) doubled down on the price-stability message from his abbreviated June and expanded July statements. He explicitly rejected forward guidance as a policy tool — ‘you can call it an outline, you can call it a trail map, just don't call it forward guidance’ — while signaling the door is open to a hike if inflation doesn't cool. Framed as a discipline commitment rather than a pre-set decision, but markets read it hawkish: fed funds futures priced a 60.4% chance of a September hike, up from ~56% before the speech.",
+      "key_quotes": [
+        "I stand here today committed to a discipline, not to a decision.",
+        "In normal times, the role of forward guidance should be limited and circumscribed.",
+        "The responsibility for 65 months of sustained, elevated inflation sits squarely with the central bank."
+      ],
+      "market_reaction": {
+        "y2_bp": 12,
+        "y10_bp": 5,
+        "y30_bp": 2,
+        "curve_bp": -7,
+        "curve_direction": "flattening"
+      },
+      "notes": "Front-end led the move (2Y +12 bp to 4.356%) — classic bear-flattening on a hawkish repricing of the next meeting, versus July FOMC's bear-steepening (front end had actually fallen). Gold fell and the dollar strengthened, reversing part of an August debasement trade. Cross-referenced against Fed's official speech transcript (federalreserve.gov) and CNBC/PBS/Fortune Jackson Hole coverage.",
+      "next_fomc": "Sep 2026"
     }
   ]
 }

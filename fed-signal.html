@@ -619,6 +619,44 @@
       line-height: 1.65;
     }
 
+    /* ── SPEECHES (Jackson Hole, etc.) ── */
+    .speech-grid { display: grid; grid-template-columns: 1fr; gap: 1.25rem; }
+    .speech-card { background: var(--white); border: 1px solid var(--border); padding: 1.75rem 2rem; }
+    .speech-card-head {
+      display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between;
+      gap: 0.75rem 1.5rem; margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px dashed var(--border);
+    }
+    .speech-event {
+      font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 0.62rem; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--blue); margin-bottom: 0.35rem;
+    }
+    .speech-title {
+      font-family: 'Newsreader', Georgia, 'Times New Roman', serif; font-weight: 800; font-size: 1.5rem;
+      color: var(--navy); letter-spacing: -0.005em; line-height: 1.15;
+    }
+    .speech-meta {
+      font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 0.68rem; color: var(--muted);
+      letter-spacing: 0.03em; margin-top: 0.35rem;
+    }
+    .speech-body { font-size: 0.92rem; color: var(--text); line-height: 1.75; margin-bottom: 1.1rem; }
+    .speech-quotes { list-style: none; margin-bottom: 1.1rem; }
+    .speech-quotes li {
+      font-family: 'Newsreader', Georgia, 'Times New Roman', serif; font-style: italic; font-size: 1rem;
+      color: var(--navy); line-height: 1.55; padding: 0.5rem 0 0.5rem 1rem; border-left: 2px solid var(--blue2);
+      margin-bottom: 0.5rem;
+    }
+    .speech-reaction {
+      display: flex; flex-wrap: wrap; gap: 1.5rem; padding-top: 1rem; border-top: 1px dashed var(--border);
+    }
+    .speech-reaction-cell .label {
+      font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 0.55rem; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--muted); margin-bottom: 0.2rem;
+    }
+    .speech-reaction-cell .value {
+      font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 0.85rem; font-weight: 500;
+    }
+    .speech-notes { font-size: 0.85rem; color: var(--muted); line-height: 1.7; margin-top: 1rem; }
+
     /* ── RESEARCH NOTES ── */
     .notes-grid {
       display: grid;
@@ -958,30 +996,31 @@
         <div class="cmp-cols">
           <div class="cmp-col">
             <div class="cmp-meta">
-              <span class="cmp-date">Dec 10, 2025</span>
-              <span class="stance dovish">dovish</span>
-              <span class="decision-cell cut">−25 bp</span>
-            </div>
-            <p class="cmp-line">
-              Cut delivered, but the statement <span class="ins">noted reserve balances have declined to ample levels</span> and began
-              <span class="ins">initiating purchases of shorter-term Treasury securities to maintain adequate reserves</span> — a technical, not dovish, signal.
-            </p>
-            <p class="cmp-line" style="color:var(--muted);font-size:0.82rem;">
-              The dot plot turned hawkish: 2026 median revised to one cut from four. Three dissents.
-            </p>
-          </div>
-          <div class="cmp-col">
-            <div class="cmp-meta">
-              <span class="cmp-date">Mar 18, 2026</span>
+              <span class="cmp-date">Jun 17, 2026</span>
               <span class="stance hawkish">hawkish</span>
               <span class="decision-cell hold">Hold</span>
             </div>
             <p class="cmp-line">
-              First explicit risk language: <span class="ins">the implications of developments in the Middle East for the U.S. economy are uncertain</span>.
-              Labor read shifted — <span class="del">unemployment has shown signs of stabilization</span> <span class="chg">→ has been little changed</span>.
+              Warsh's inaugural meeting as Chair. Statement slashed from ~341 to ~130 words —
+              <span class="del">all forward guidance and balance-of-risks language</span> stripped, replaced with
+              <span class="ins">"This Committee will deliver price stability."</span>
             </p>
             <p class="cmp-line" style="color:var(--muted);font-size:0.82rem;">
-              Hot PPI (+0.7% vs 0.3% exp.) drove a bear-flattening yield spike the same day.
+              Dot plot flipped to an implied hike; 2Y +15 bp — largest Fed-day move since March 2008. Unanimous 12–0.
+            </p>
+          </div>
+          <div class="cmp-col">
+            <div class="cmp-meta">
+              <span class="cmp-date">Jul 29, 2026</span>
+              <span class="stance hawkish">hawkish</span>
+              <span class="decision-cell hold">Hold</span>
+            </div>
+            <p class="cmp-line">
+              Statement expanded back out — <span class="ins">full economic-activity and labor-market description restored</span>,
+              including reinstated Middle East uncertainty language — while keeping June's price-stability declaration.
+            </p>
+            <p class="cmp-line" style="color:var(--muted);font-size:0.82rem;">
+              9–3 vote: Hammack, Kashkari, Logan dissented for a hike. 30Y yield hit its highest since 2007.
             </p>
           </div>
         </div>
@@ -1103,6 +1142,19 @@
   </div>
 </section>
 
+<!-- SPEECHES (Jackson Hole, etc.) -->
+<section class="section-white" id="speeches">
+  <div class="inner">
+    <div class="section-eyebrow">Symposium &amp; Speeches</div>
+    <h2 class="section-heading">JACKSON HOLE &amp; FED SPEECHES</h2>
+    <p style="font-size:0.95rem;color:var(--muted);line-height:1.75;max-width:700px;margin-bottom:2rem;">
+      Non-FOMC events — Jackson Hole keynotes, congressional testimony, and other Fed Chair remarks — don't carry a rate
+      decision, but they shift market-implied odds ahead of the next meeting. Tracked separately from the meeting log above.
+    </p>
+    <div class="speech-grid" id="speech-grid"></div>
+  </div>
+</section>
+
 <!-- PREDICTIVE PHRASES -->
 <section class="section-navy" id="phrases">
   <div class="inner">
@@ -1149,7 +1201,7 @@
 
 <script>
 (() => {
-  const DATA_URL = 'data/fed-meetings.json?v=20260627';
+  const DATA_URL = 'data/fed-meetings.json?v=20260901';
   const $ = sel => document.querySelector(sel);
 
   const esc = s => String(s == null ? '' : s)
@@ -1459,6 +1511,47 @@
     `).join('');
   }
 
+  function renderSpeeches() {
+    const grid = $('#speech-grid');
+    const speeches = STATE.data.speeches || [];
+    if (!speeches.length) {
+      grid.innerHTML = `<div class="empty-msg">No speeches tracked yet.</div>`;
+      return;
+    }
+    const sorted = [...speeches].sort((a, b) => b.date.localeCompare(a.date));
+    grid.innerHTML = sorted.map(s => {
+      const r = s.market_reaction || {};
+      const curveArrow = r.curve_direction === 'steepening' ? '↗' : '↘';
+      const curveClass = r.curve_direction === 'flattening' ? 'flat' : '';
+      return `
+      <div class="speech-card">
+        <div class="speech-card-head">
+          <div>
+            <div class="speech-event">${esc(s.event)}</div>
+            <div class="speech-title">${esc(s.title)}</div>
+            <div class="speech-meta">${esc(s.speaker)} · ${esc(shortDate(s.date))} · ${esc(s.location)}</div>
+          </div>
+          <span class="stance ${esc(s.stance)}">${esc(s.stance)}</span>
+        </div>
+        <p class="speech-body">${esc(s.summary)}</p>
+        ${(s.key_quotes || []).length ? `
+          <ul class="speech-quotes">
+            ${s.key_quotes.map(q => `<li>"${esc(q)}"</li>`).join('')}
+          </ul>
+        ` : ''}
+        <div class="speech-reaction">
+          ${r.y2_bp != null ? `<div class="speech-reaction-cell"><div class="label">2Y Δ</div><div class="value ${yieldClass(r.y2_bp)}">${signBp(r.y2_bp)}</div></div>` : ''}
+          ${r.y10_bp != null ? `<div class="speech-reaction-cell"><div class="label">10Y Δ</div><div class="value ${yieldClass(r.y10_bp)}">${signBp(r.y10_bp)}</div></div>` : ''}
+          ${r.y30_bp != null ? `<div class="speech-reaction-cell"><div class="label">30Y Δ</div><div class="value ${yieldClass(r.y30_bp)}">${signBp(r.y30_bp)}</div></div>` : ''}
+          ${r.curve_direction ? `<div class="speech-reaction-cell"><div class="label">Curve</div><div class="value"><span class="curve ${curveClass}"><span class="arrow">${curveArrow}</span> ${esc(r.curve_direction)} · ${signBp(r.curve_bp)}</span></div></div>` : ''}
+          ${s.next_fomc ? `<div class="speech-reaction-cell"><div class="label">Next FOMC</div><div class="value">${esc(s.next_fomc)}</div></div>` : ''}
+        </div>
+        ${s.notes ? `<p class="speech-notes">${esc(s.notes)}</p>` : ''}
+      </div>
+    `;
+    }).join('');
+  }
+
   function renderNotes() {
     $('#notes-grid').innerHTML = STATE.data.research_notes.map(n => `
       <div class="note">
@@ -1536,6 +1629,7 @@
     renderKpis();
     renderTable();
     renderShifts();
+    renderSpeeches();
     renderPhrases();
     renderNotes();
     wireFilters();
