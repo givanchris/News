@@ -948,7 +948,7 @@
     <h2 class="section-heading">THE MARKET CONTEXT</h2>
     <p style="font-size:0.95rem;color:var(--muted);line-height:1.75;max-width:700px;margin-bottom:2rem;">
       The reaction data in the log only means something against the curve and the path the market is
-      pricing. <span class="illus-flag">Representative levels · current hold cycle</span>
+      pricing. <span class="illus-flag">Representative levels · current hold-to-hike-risk cycle</span>
     </p>
 
     <div class="viz-grid">
@@ -960,26 +960,29 @@
           <span class="viz-card-tag">Now vs 6M ago</span>
         </div>
         <div class="viz-figure">
-          <img src="charts/yield_curve.svg" alt="US Treasury par yield curve now versus six months ago, front end lower as cuts are delivered" loading="lazy" style="width:100%;height:auto;display:block" />
+          <img src="charts/yield_curve.svg" alt="US Treasury par yield curve now versus six months ago, positively sloped after a long inversion" loading="lazy" style="width:100%;height:auto;display:block" />
         </div>
         <p class="viz-note">
-          The front end has fallen as the Fed delivered cuts into the <strong>3.50–3.75%</strong> range, while
-          the long end held — leaving the <strong>2s10s positively sloped (+46bp)</strong> after a long inversion.
+          The Fed's last cut landed the range at <strong>3.50–3.75%</strong> in Dec 2025; every meeting since has
+          been a hold, three of them (Apr, Jun, Jul) carrying hawkish dissents pushing for a hike. The curve has
+          stayed <strong>positively sloped</strong> post-inversion, but the front end is now the more volatile end —
+          Jackson Hole alone moved the 2Y more than the 10Y.
         </p>
       </div>
 
       <!-- Implied cut path -->
       <div class="viz-card">
         <div class="viz-card-head">
-          <span class="viz-card-title">Implied Cut Probabilities</span>
+          <span class="viz-card-title">Implied Hike Probabilities</span>
           <span class="viz-card-tag">By meeting</span>
         </div>
         <div class="viz-figure">
-          <img src="charts/fed_path.svg" alt="Bar chart of market-implied probability of a rate cut by each upcoming FOMC meeting, rising into 2027" loading="lazy" style="width:100%;height:auto;display:block" />
+          <img src="charts/fed_path.svg" alt="Bar chart of market-implied probability of a rate hike by each upcoming FOMC meeting, rising into 2027" loading="lazy" style="width:100%;height:auto;display:block" />
         </div>
         <p class="viz-note">
-          Futures-implied odds of a cut <strong>by</strong> each meeting. The market leans toward
-          patience near term and a higher cut probability into <strong>year-end and early 2027</strong>.
+          Futures-implied odds of a <strong>hike</strong> by each meeting — the real print here is
+          <strong>60.4% for September</strong>, up from ~56% before Warsh's Jackson Hole speech. Further-out
+          meetings shown are illustrative, extrapolating the current hawkish momentum.
         </p>
       </div>
 
