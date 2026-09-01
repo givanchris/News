@@ -1,105 +1,135 @@
 {
-  "lastUpdated": "2026-07-16T18:11:51-06:00",
+  "lastUpdated": "2026-09-01T17:30:17-06:00",
   "market": {
-    "sp500":  { "price": "7,534",  "change": "-0.51%", "dir": "down" },
-    "nasdaq": { "price": "29,060", "change": "-1.5%",  "dir": "down" },
-    "yield":  { "price": "4.58%",  "change": "+3 bps", "dir": "down" },
-    "wti":    { "price": "$79",    "change": "-0.2%",  "dir": "down" },
-    "gold":   { "price": "$3,998", "change": "-1.53%", "dir": "down" },
-    "dxy":    { "price": "100.73", "change": "+0.24%", "dir": "up" }
+    "sp500": {
+      "price": "7631",
+      "change": "-0.71%",
+      "dir": "down"
+    },
+    "nasdaq": {
+      "price": "29077",
+      "change": "-1.29%",
+      "dir": "down"
+    },
+    "yield": {
+      "price": "4.80%",
+      "change": "+4 bps",
+      "dir": "down"
+    },
+    "wti": {
+      "price": "$91",
+      "change": "+4.66%",
+      "dir": "up"
+    },
+    "gold": {
+      "price": "$4376",
+      "change": "-2.46%",
+      "dir": "down"
+    },
+    "dxy": {
+      "price": "99.65",
+      "change": "+0.15%",
+      "dir": "up"
+    }
   },
   "stories": [
     {
-      "cat": "MACRO",
-      "headline": "JUNE CPI COOLS TO 3.5% Y/Y, BUT RESILIENT JOBS AND SPENDING DATA CAP THE RALLY IN YIELDS",
-      "body": "Headline CPI fell 0.4% month-over-month in June, its largest monthly drop since 2020, pulling the annual rate to 3.5% while core CPI held at 2.6%. Yet jobless claims fell to a two-month low of 208,000 and retail sales rose in line with expectations, and the 10-year yield still climbed 3 bps to 4.58% as traders concluded the economy doesn't need emergency easing.",
-      "explain": "A soft CPI print normally pulls yields lower because it raises the odds the Fed cuts rates, which lowers the return investors demand to hold longer-dated debt. Today the opposite happened at the long end: solid jobless claims and retail sales offset the inflation relief, signaling the economy can tolerate rates staying higher for longer, so the 10-year rose even as short-end rate-cut odds firmed. That divergence — friendly inflation data, unfriendly growth data — is exactly the kind of mixed signal that makes the yield curve hard to trade in either direction right now."
+      "cat": "GEOPOLITICS",
+      "headline": "US-IRAN CONFLICT ESCALATES, OIL SURGES TOWARD $94 BRENT",
+      "body": "The U.S. and Iran exchanged renewed strikes Tuesday, with U.S. forces hitting IRGC-linked targets after Iran attempted to mine the Strait of Hormuz and struck at sites in Jordan; Brent crude jumped more than 4% toward $94 a barrel while WTI rose 4.5% to nearly $90, reviving a war-risk premium in energy markets just as the Fed weighs a rate hike.",
+      "explain": "The Strait of Hormuz carries roughly a fifth of the world's seaborne oil, so any credible threat to transit gets priced into crude immediately, well before a single barrel is actually disrupted. That risk premium doesn't stay contained to energy \u2014 it feeds directly into near-term inflation expectations, which is exactly the channel through which today's oil spike reinforced bets on a September Fed hike and pressured both stocks and bonds."
+    },
+    {
+      "cat": "CENTRAL BANKS",
+      "headline": "FED RATE-HIKE ODDS JUMP TO 65% AS WARSH KEEPS HAWKISH TONE",
+      "body": "Futures markets now price roughly a 65% probability the Fed raises its target range by 25 bps to 3.75%-4.00% at the September meeting, up from about 35% before Fed Chair Kevin Warsh's hawkish remarks last Friday reiterating that the central bank has \"work to do\" on inflation. The 10-year Treasury yield climbed to around 4.78% on the repricing.",
+      "explain": "Fed funds futures translate a single official's language into a probability by pricing how the expected path of short-term rates shifts, so a hawkish word choice from the sitting chair can move odds by 30 points without a single data release changing. Because long-end Treasury yields embed that expected policy path plus a term premium, the same remarks pushed the 10-year higher immediately, raising the discount rate used to value future corporate cash flows \u2014 the direct link between Warsh's comments and today's equity selloff."
     },
     {
       "cat": "MARKETS",
-      "headline": "TSMC CAPEX HIKE AND ALPHABET'S GEMINI DELAY DRAG NASDAQ 100 DOWN 1.5%",
-      "body": "Taiwan Semiconductor raised its full-year capex guidance to $60-$64 billion from $52-$56 billion even after posting a 77% annual earnings gain, and its shares still fell over 4% as the VanEck Semiconductor ETF (SMH) dropped roughly 2.2% and Arm slid more than 4%. Alphabet fell over 4% on reports its flagship Gemini 3.5 Pro model has slipped its release timeline, compounding the tech-led slide that pulled the Nasdaq 100 down 1.5% to about 29,060 while the S&P 500 lost 0.51% to 7,533.77.",
-      "explain": "TSMC's capex guidance matters more than its earnings beat because capital spending today becomes depreciation on tomorrow's income statement — investors are pricing whether the AI buildout will generate returns above that cost, not whether current quarterly profit looked good. Alphabet's delay compounds the worry because Gemini underpins the revenue case for Google's own infrastructure spend; when the product timeline slips, the market questions the payoff on the capex being raised across the whole AI supply chain, which is why the sell-off spread from chipmakers to hyperscalers in the same session."
-    },
-    {
-      "cat": "GEOPOLITICS",
-      "headline": "CRUDE HOLDS NEAR ONE-MONTH HIGHS AS HORMUZ TRAFFIC THINS AND TEHRAN THREATENS BAB EL-MANDEB",
-      "body": "WTI settled near $79.42 and Brent near $84.37, both easing slightly from Wednesday but still elevated after fresh US strikes on Iran and a reinstated naval posture near the Strait of Hormuz. Shipping traffic through Hormuz has fallen sharply since the latest escalation, and Tehran has reportedly instructed Yemen's Houthis to be ready to close the Bab el-Mandeb Strait — a key Red Sea route for Saudi exports — if Iranian infrastructure is hit further.",
-      "explain": "Roughly a fifth of global oil consumption transits the Strait of Hormuz, so threats to that chokepoint get priced into futures immediately as a risk premium, well before any barrels actually stop moving — that's why crude has stayed elevated even as headlines swing between escalation and calm. A second chokepoint threat at Bab el-Mandeb compounds the premium because it removes the main rerouting option for Gulf crude, which is the detail that keeps this a supply story rather than a one-day headline spike."
+      "headline": "S&P 500 SLIDES 0.71%, NASDAQ 100 SHEDS NEARLY 2% AS TECH LEADS LOSSES",
+      "body": "The S&P 500 closed at 7,631.47, down 0.71%, while the Nasdaq 100 fell nearly 2% to roughly 28,868 as chip and mega-cap tech names absorbed the brunt of the selling. The Dow lost 419 points (-0.79%) to 52,766.88, with the pullback broad-based but concentrated most heavily in rate-sensitive growth stocks.",
+      "explain": "Growth and tech stocks carry a disproportionate share of their valuation in cash flows expected many years out, which makes their present value especially sensitive to the discount rate used to bring those flows back to today. When the 10-year yield jumps on hawkish Fed repricing, that discount rate rises and long-duration tech names get marked down harder than the broader index \u2014 precisely the pattern behind today's Nasdaq 100 underperformance relative to the S&P 500."
     },
     {
       "cat": "COMMODITIES",
-      "headline": "GOLD SINKS TOWARD 8-MONTH LOW AS DOLLAR AND YIELDS CLIMB TOGETHER",
-      "body": "Gold fell 1.53% to about $3,998 an ounce, its lowest level since November 2025, as the DXY dollar index rose 0.24% to 100.73 and the 10-year yield climbed to 4.58%. The move came even as oil held near one-month highs on Middle East tensions, an unusual split where geopolitical risk failed to lift the traditional safe-haven metal.",
-      "explain": "Gold pays no yield, so it competes directly with Treasuries for a safety allocation — when the 10-year rises, the opportunity cost of holding gold instead of interest-bearing debt goes up, which pressures the metal even during geopolitical stress. The stronger dollar adds a second drag because gold is priced in dollars globally, so a firmer DXY mechanically makes gold more expensive for foreign buyers, curbing demand exactly when today's yield move was already working against it."
+      "headline": "GOLD FALLS DESPITE WAR RISK AS RATE-HIKE BETS DOMINATE",
+      "body": "Gold slid roughly 1.8% to about $4,359 an ounce even as the U.S.-Iran conflict intensified \u2014 a break from its usual safe-haven script, as rising real yields tied to Fed rate-hike odds outweighed the geopolitical risk premium that would normally lift bullion.",
+      "explain": "Gold pays no yield, so its cost of carry is set by the real (inflation-adjusted) interest rate \u2014 when nominal yields rise faster than inflation expectations, real yields climb and holding zero-yield gold becomes relatively more expensive versus bonds. Today, that real-rate effect from the Fed repricing dominated the safe-haven bid the Iran escalation would normally generate, which is why gold and oil moved in opposite directions off the same headline."
     },
     {
-      "cat": "NCAA CFB",
-      "headline": "$10 MILLION QB DARIAN MENSAH HEADLINES A PORTAL CYCLE RESHAPING THE ACC AND BIG TEN TITLE PICTURE",
-      "body": "Miami's move to sign Duke transfer Darian Mensah — who led the ACC with 3,973 passing yards and 34 touchdowns last season — followed a legal fight after Duke sought a restraining order to block his portal entry before a judge sided with Mensah; Miami paid well beyond his Duke deal to land him. Penn State added Iowa State's Rocco Becht, one of the Big 12's most productive passers the past two seasons, as both programs bet on transfer quarterbacks to close the gap to the sport's top tier ahead of fall camp."
+      "cat": "MACRO",
+      "headline": "MANUFACTURERS FLAG TARIFF AND ENERGY COST PRESSURE AS INPUT PRICES CLIMB",
+      "body": "Factory surveys this week show manufacturers citing rising input costs from tariffs, the AI-driven capex buildout, and now Middle East-driven energy prices as a growing squeeze on margins, adding another data point the Fed will weigh alongside oil-driven headline inflation ahead of its September decision.",
+      "explain": "Tariffs raise input costs directly, but the pass-through to consumer prices depends on how much of that cost businesses absorb versus pass along \u2014 when energy costs rise on top of tariffs, as they are now, firms have less margin cushion to absorb further shocks, which raises the odds both pressures show up together in the CPI print the Fed sees before its meeting."
     },
     {
       "cat": "MCBB",
-      "headline": "KANSAS VAULTS INTO PRESEASON TOP 25 BEHIND NO. 1 RECRUIT TYRAN STOKES AS PORTAL CHURN TOPS 2,700 PLAYERS",
-      "body": "Kansas jumped into early 2026-27 rankings after landing five-star forward Tyran Stokes, the No. 1 recruit in the class since AJ Dybantsa's 2023 reclassification, while Texas's class — built around 2027-turned-2026 forward Marcus Spears Jr. — remains in the national title conversation. More than 2,700 players have moved through the transfer portal since Michigan beat UConn for the national title, with Vanderbilt's Tyler Tanner among the notable players who chose to return to school instead of turning pro."
+      "headline": "KANSAS LANDS NO. 1 RECRUIT TYRAN STOKES AS 2026-27 PREVIEWS BEGIN",
+      "body": "Kansas secured a commitment from five-star forward Tyran Stokes, the No. 1 recruit in the 2026 class, as early way-too-early Top 25 rankings for 2026-27 begin to circulate. The move comes as the NCAA tournament field is set to expand from 68 to 76 teams starting this season."
     },
     {
       "cat": "NBA",
-      "headline": "JAMES HARDEN DECLINES $42.3M OPTION AS CAVALIERS WORK ON NEW DEAL; WARRIORS SEE THEMSELVES AS LEBRON DARK HORSE",
-      "body": "Cavaliers guard James Harden opted out of the final $42.3 million year of his contract, with Harden and Cleveland now negotiating a new multiyear deal rather than testing the open market. Golden State privately views itself as a dark-horse contender for free-agent LeBron James even as reports suggest James is leaning toward an Eastern Conference return, with Cleveland gaining momentum after James spent time in Akron reconnecting with his 2016 title-team teammates."
+      "headline": "CLIPPERS, RAPTORS IN TRADE TALKS FOR KAWHI LEONARD",
+      "body": "The Los Angeles Clippers and Toronto Raptors have been in extended discussions over a deal for All-NBA forward Kawhi Leonard as the league's offseason moves continue to reshape rosters. Elsewhere, DeMar DeRozan agreed to a one-year, $3.9 million deal with the Denver Nuggets, and Rockets guard Fred VanVleet opted into his $25 million option for 2026-27 as he returns from a torn ACL."
     },
     {
       "cat": "NFL",
-      "headline": "PATRICK MAHOMES ON TRACK FOR WEEK 1 RETURN FROM ACL TEAR AGAINST BRONCOS",
-      "body": "Chiefs quarterback Patrick Mahomes remains on schedule to be ready for Kansas City's Week 1 Monday night opener against the AFC West champion Denver Broncos, following the season-ending ACL tear that ended his 2025 campaign early. The update comes as all 32 NFL teams finalize training camp report dates, with Arizona and Carolina first to report on July 22 ahead of their Aug. 6 Hall of Fame Game meeting."
+      "headline": "TEAMS FINALIZE 53-MAN ROSTERS AFTER WEEKEND CUTDOWN, 1,184 PLAYERS RELEASED",
+      "body": "All 32 teams trimmed to 53-man rosters by Sunday's deadline, with 1,184 players released leaguewide; the Titans cut QB Will Levis, leaving Cam Ward and Mitch Trubisky as Tennessee's only quarterbacks, while the defending champion Seahawks and the Patriots \u2014 set for a Super Bowl rematch on Sept. 9 \u2014 both finalized their rosters over the weekend."
+    },
+    {
+      "cat": "NCAA CFB",
+      "headline": "WEEK 0 WRAPS WITH BELICHICK'S UNC UPSET OF TCU; MASSIVE WEEK 1 SLATE AHEAD",
+      "body": "Bill Belichick's North Carolina debut opened with a 15-10 win over TCU in Dublin, and No. 14 USC rolled past San Jose State, as Week 0 gave way to a 90-game Week 1 slate running Sept. 3-7 \u2014 headlined by Lane Kiffin's LSU debut against Clemson and No. 1 Ohio State hosting Ball State as a 50.5-point favorite."
     }
   ],
   "sports": [
     {
-      "team": "SEATTLE MARINERS",
-      "pill": "48-49",
-      "pillClass": "s-up",
-      "detail": "Idle during the All-Star break, sitting 2nd in the AL West behind Texas (49-47) and holding a wild-card spot. Next up: at home vs. the Giants on Saturday, July 18 (NBCS)."
-    },
-    {
-      "team": "DETROIT PISTONS",
-      "pill": "L 88-100",
-      "pillClass": "s-l",
-      "detail": "Fell to Phoenix 100-88 in Summer League pool play as Detroit was held under 15 points in both the 1st and 4th quarters. Brice Williams led with 24 points and No. 17 pick Ebuka Okorie added 16; Detroit plays Miami in a consolation game Friday."
-    },
-    {
-      "team": "SEATTLE SEAHAWKS",
-      "pill": "SALE PENDING",
-      "pillClass": "s-up",
-      "detail": "The Paul Allen Estate's $9.6 billion sale to a Khosla family-led group still needs ratification from at least 24 of the other 31 owners. RB Zach Charbonnet is progressing well in his ACL recovery ahead of a late-July checkup; training camp opens July 25 in Renton with nine public practices, and the team is set to appear on HBO's Hard Knocks in August."
-    },
-    {
       "team": "WASHINGTON HUSKIES FOOTBALL",
-      "pill": "OFFSEASON",
+      "pill": "OPENS SEP 5",
       "pillClass": "s-up",
-      "detail": "RB Jordan Washington, carted off during spring practice, is targeting a late-July return under coach Jedd Fisch. The Huskies added CB commit Censere Gaylord to a recruiting class that already includes a 4-star cornerback; season opens Sept. 5 vs. Washington State in the Apple Cup at Husky Stadium."
+      "detail": "Third-year coach Jedd Fisch's Huskies open the season at home vs. Washington State in the Apple Cup on Sept. 5, the first of four straight September home games at Husky Stadium as Washington enters its third season in the Big Ten."
     },
     {
       "team": "WASHINGTON HUSKIES BASKETBALL",
       "pill": "OFFSEASON",
       "pillClass": "s-up",
-      "detail": "Coach Danny Sprinkle is rebuilding through the portal after losing Zoom Diallo and seeing Hannes Steinbach taken 14th overall by Charlotte in the NBA Draft. Croatian power forward Boris Tišma has committed to fill out next season's frontcourt."
+      "detail": "Coming off a 16-17 (7-13 Big Ten) finish under Danny Sprinkle, Washington added Rutgers transfer Harun Zrno for 2026-27 after forward Hannes Steinbach was drafted by the Charlotte Hornets; regular season tips off in November."
+    },
+    {
+      "team": "SEATTLE SEAHAWKS",
+      "pill": "53-MAN SET",
+      "pillClass": "s-up",
+      "detail": "The defending Super Bowl champions trimmed to 53 players over the weekend, waiving WR Julian Hicks, S Rodney Thomas II and others, while keeping just three healthy running backs as Zach Charbonnet recovers from ACL surgery; Seattle opens the season Sept. 9 at home against New England in a Super Bowl rematch."
+    },
+    {
+      "team": "DETROIT PISTONS",
+      "pill": "PRESEASON",
+      "pillClass": "s-up",
+      "detail": "Coming off a 60-win season, Detroit is still working out a long-term extension with center Jalen Duren as J.B. Bickerstaff enters his third season as coach; the Pistons play four preseason games before opening a higher-stakes 2026-27 campaign."
+    },
+    {
+      "team": "SEATTLE MARINERS",
+      "pill": "at BOS 6:45pm ET",
+      "pillClass": "s-up",
+      "detail": "Seattle is at the Red Sox tonight at Fenway Park, first pitch 6:45 PM ET (4:45 PM MT) \u2014 the game is just getting underway as this brief publishes; check back for the result."
     }
   ],
   "watchlist": [
-    "Mariners resume play Saturday, July 18 at home vs. Giants (NBCS)",
-    "NBA Summer League semifinals Saturday — field of 12 narrows to 4",
-    "Seahawks training camp opens July 25 in Renton",
-    "All 32 NFL teams report to camp by July 28; Cardinals/Panthers first on July 22",
-    "Watch Fed-speak reaction to today's mixed CPI/yield signal ahead of the July 28-29 FOMC meeting"
+    "FOMC meeting mid-September \u2014 futures now price ~65% odds of a 25 bps hike after Warsh's hawkish comments",
+    "Brent crude near $94 on U.S.-Iran conflict \u2014 watch for further Strait of Hormuz disruption",
+    "Mariners at Red Sox \u2014 tonight, 6:45 PM ET / 4:45 PM MT, Fenway Park",
+    "Huskies open season vs. Washington State (Apple Cup) \u2014 Saturday, Sept. 5, Husky Stadium",
+    "CFB Week 1 headliners: Lane Kiffin's LSU debut vs. Clemson, and No. 1 Ohio State (-50.5) hosts Ball State \u2014 Sept. 3-7"
   ],
   "deepDive": {
-    "title": "Why a Record Earnings Beat Can Still Sink a Stock: TSMC's Capex Signal",
+    "title": "From a Speech to 65%: How Fed Funds Futures Price a Rate Hike",
     "content": [
-      "Taiwan Semiconductor did not miss today — it posted a 77% jump in annual earnings, the kind of number that would normally send a stock higher. Instead, shares fell more than 4% and dragged the Nasdaq 100 down 1.5%, because the headline that moved the market wasn't the quarter that already happened, it was the $60-$64 billion capex guide for the year ahead, up from $52-$56 billion. When a company's forward spending plan overshadows its trailing results, it tells you the market has already priced in the good quarter and is now trying to underwrite the next one.",
-      "Capital expenditure is cash spent today on plant, equipment, and fabs that doesn't hit the income statement immediately — it gets capitalized on the balance sheet and depreciated over years. Raising a capex budget by roughly $10 billion means locking in higher depreciation charges for years to come, which compresses future free cash flow and net margins unless the extra capacity actually generates proportionally more revenue. Investors aren't punishing TSMC for spending money; they're repricing the probability that the AI buildout's return on invested capital comes in lower than what's already baked into the stock.",
-      "This is the same skepticism playing out across the AI supply chain, and it's why Alphabet's Gemini 3.5 Pro delay hit the ticker the same day: Google's own capex spend is justified internally by a product roadmap, and when that roadmap slips, the return timeline for the capex slips with it. Historically, this pattern shows up whenever an industry over-invests ahead of demand — telecom in 1999-2000 laid enormous fiber capacity that took a decade to fill, and the stocks that spent fastest fell hardest once the market stopped extending them credit on faith alone.",
-      "For a portfolio, the read-through is that earnings beats and capex guides need to be evaluated separately, not netted together in a headline reaction. A name can beat consensus and still de-rate if the capex-to-revenue ratio is rising faster than the growth it's meant to fund — which is the exact metric to track across TSMC, its equipment suppliers, and the hyperscalers through the rest of this earnings season, especially with chip names already down six straight sessions into today's move."
+      "Today's brief shows something that looks almost mechanical but isn't: a single set of hawkish remarks from Fed Chair Kevin Warsh moved the market-implied odds of a September rate hike from about 35% to roughly 65% within a few trading days, dragging the 10-year Treasury yield to 4.78%, hammering the Nasdaq 100 for a nearly 2% loss, and even flipping gold's usual safe-haven response upside down. None of that required a new inflation print or a formal Fed announcement \u2014 it came from futures contracts repricing off pure forward guidance.",
+      "Fed funds futures are contracts that settle based on the average effective fed funds rate over a given month, so their price today reflects the market's best guess of where that rate will land. Subtract the implied rate embedded in the contract from the current target, and you get an implied probability of a hike, cut, or hold at the next meeting \u2014 that math is exactly what produces a figure like today's 65%. Because these contracts trade continuously, they reprice within minutes of any Fed official's remarks, well before the actual policy decision, which is why Friday's comments moved markets on Tuesday with no new data in between.",
+      "This is the same mechanism that made the 2013 taper tantrum and the 2022 hiking cycle so violent: markets don't wait for the Fed to act, they front-run the expected path and adjust valuations immediately, which is why long-duration assets \u2014 long-dated Treasurys, high-multiple tech stocks, non-yielding gold \u2014 all move together on hawkish or dovish surprises even without any change in current policy. What most people miss is that the dot plot and futures-implied odds are related but separate signals: the dot plot shows what FOMC members themselves expect, while futures odds show what traders are willing to bet on, and the two can diverge sharply when the market thinks the Fed is bluffing or behind the curve.",
+      "For anyone watching this week's setup, the tell is this: as long as oil's Iran-driven spike keeps pushing headline inflation expectations higher, expect futures-implied hike odds to keep climbing into the FOMC meeting, dragging yields, tech valuations, and gold with them regardless of what the next CPI print actually shows. The real test comes with that report \u2014 if it comes in soft even with oil elevated, the odds could snap back down as fast as they rose, which is exactly the kind of two-sided volatility that makes trading rate expectations around a single speech a dangerous game."
     ]
   }
 }
