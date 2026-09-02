@@ -1070,7 +1070,6 @@
     <p class="viz-intro">
       The live dashboard above distills these views into a single label. The two charts that do most
       of the work: where sentiment sits, and where dealers are forced to trade.
-      <span class="illus-flag">Illustrative snapshot</span>
     </p>
 
     <div class="viz-grid">
@@ -1079,15 +1078,16 @@
       <div class="viz-card">
         <div class="viz-card-head">
           <span class="viz-card-title">Put / Call Ratio</span>
-          <span class="viz-card-tag">22 sessions</span>
+          <span class="viz-card-tag">Live · trailing 22 sessions</span>
         </div>
         <div class="viz-figure">
-          <img src="charts/put_call.svg" alt="Equity put to call ratio over 22 sessions, ending above the 1.0 fear line" loading="lazy" style="width:100%;height:auto;display:block" />
+          <img src="charts/put_call.svg" alt="Equity put to call ratio over the trailing sessions, from real SPY option volume" loading="lazy" style="width:100%;height:auto;display:block" />
         </div>
         <p class="viz-note">
-          A contrarian gauge. Readings pushing <strong>above 1.0</strong> mark hedging/fear spikes that often
-          precede relief; persistent lows flag complacency. SPY's ratio has climbed to <strong>1.11</strong> —
-          fear-side, not complacent — with IWM further out at 1.52.
+          A contrarian gauge, built from real SPY option volume and regenerated with every daily
+          pipeline run. Readings pushing <strong>above 1.0</strong> mark hedging/fear spikes that often
+          precede relief; persistent lows flag complacency — see the live SPY/QQQ/IWM figures above for
+          today's exact reading.
         </p>
       </div>
 
@@ -1095,14 +1095,15 @@
       <div class="viz-card">
         <div class="viz-card-head">
           <span class="viz-card-title">Dealer Gamma Exposure</span>
-          <span class="viz-card-tag">By strike</span>
+          <span class="viz-card-tag">By strike <span class="illus-flag">Illustrative</span></span>
         </div>
         <div class="viz-figure">
           <img src="charts/gamma.svg" alt="Dealer gamma exposure by strike for SPY, negative below spot and positive above, gamma flip near 750" loading="lazy" style="width:100%;height:auto;display:block" />
         </div>
         <p class="viz-note">
-          Below the <strong>gamma flip (~750)</strong> dealers are short gamma — hedging amplifies moves and
-          volatility feeds on itself. Above it, hedging dampens moves. The flip is the level that matters.
+          Below the <strong>gamma flip</strong> dealers are short gamma — hedging amplifies moves and
+          volatility feeds on itself. Above it, hedging dampens moves. Strike ladder is centered on spot
+          but hand-updated, not yet wired into the daily pipeline like the put/call chart to its left.
         </p>
       </div>
 
@@ -1118,6 +1119,7 @@
             <li>Option chains &amp; quotes via <strong>yfinance</strong>, refreshed weekdays 4:30 PM MT</li>
             <li>Per-ticker put/call (volume &amp; OI), IV, IV rank/percentile, skew</li>
             <li>VIX term structure and sector ETF breadth for market context</li>
+            <li>SPY put/call history accumulates daily to redraw the trailing-22-session chart automatically</li>
           </ul>
         </div>
         <div class="howto-group">

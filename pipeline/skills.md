@@ -69,3 +69,14 @@ python run.py market --dry-run     # verify output shape without writing
 ## Self-Improvement Rule
 
 yfinance options quirk, a sentiment-calc edge case, or a `latest.json` schema decision → record here.
+
+## charts/put_call.svg — now pipeline-generated (as of 2026-09-01)
+
+`cmd_market` in `run.py` appends SPY/QQQ/IWM P/C ratios to `data/options/indices.json`
+(`snapshots.append_indices_history`) and then calls `src/charts/put_call.py::generate()`,
+which redraws `News/charts/put_call.svg` from the trailing 22 daily readings. This runs
+automatically on every cron `python run.py market` (skip with `--no-charts`) — no more
+manual regeneration. `charts/gamma.svg` is still hand-authored/illustrative; it needs
+strike-level OI+greeks the pipeline doesn't pull yet. If `put_call.svg` ever looks stale
+again, check `data/options/indices.json` is actually accumulating (needs `--no-history`
+NOT to be set) before assuming the chart script broke.

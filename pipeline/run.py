@@ -19,6 +19,7 @@ from src.calculations import ratios as R
 from src.calculations import volatility as V
 from src.calculations import sentiment as S
 from src.storage import snapshots
+from src.charts import put_call as put_call_chart
 from src.utils.dates import now_mt_iso, today_mt_str
 
 
@@ -210,7 +211,16 @@ def cmd_market(args: argparse.Namespace) -> None:
             snapshots.append_ticker_history(t["ticker"], snapshots.ticker_history_record(date, t))
         snapshots.append_sectors_history(date, sectors)
         snapshots.append_vix_history(date, vix["vix"], vix["vix_term_structure"])
+        snapshots.append_indices_history(date, indices)
         print(f"✓ Appended history for {date}", file=sys.stderr)
+
+    # ── Chart regeneration ────────────────────────────────────────────────
+    if not args.no_history and not args.no_charts:
+        chart_path = put_call_chart.generate()
+        if chart_path:
+            print(f"✓ Regenerated {chart_path}", file=sys.stderr)
+        else:
+            print("· Skipped put_call.svg — no indices history yet", file=sys.stderr)
 
 
 def main() -> None:
@@ -227,6 +237,8 @@ def main() -> None:
                     help="Print to stdout without writing any files")
     mp.add_argument("--no-history", action="store_true",
                     help="Write latest.json only, skip per-ticker / sector / VIX history")
+    mp.add_argument("--no-charts", action="store_true",
+                    help="Skip regenerating charts/put_call.svg from history")
     mp.add_argument("--tickers", nargs="*",
                     help="Override the default watchlist")
     mp.set_defaults(func=cmd_market)

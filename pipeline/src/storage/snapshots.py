@@ -79,6 +79,19 @@ def append_sectors_history(date: str, sectors: list[dict]) -> Path:
     return path
 
 
+# ── indices history (SPY/QQQ/IWM put-call ratios) ───────────────────────
+def read_indices_history() -> list[dict]:
+    return _read_list(config.OUTPUT_DIR / "indices.json")
+
+
+def append_indices_history(date: str, indices: list[dict]) -> Path:
+    config.OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+    path = config.OUTPUT_DIR / "indices.json"
+    history = _upsert_by_date(_read_list(path), {"date": date, "indices": indices})
+    path.write_text(json.dumps(history, indent=2, default=str))
+    return path
+
+
 # ── VIX history ──────────────────────────────────────────────────────────
 def append_vix_history(date: str, vix: dict, term: list[dict]) -> Path:
     config.OUTPUT_DIR.mkdir(parents=True, exist_ok=True)

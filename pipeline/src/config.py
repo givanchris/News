@@ -16,8 +16,10 @@ except ImportError:
 # Pipeline now lives at News/pipeline/src/config.py — parents[2] is News/.
 # Snapshots write to News/data/options/ so the static site can serve them.
 _THIS = Path(__file__).resolve()
-_DEFAULT_OUT = _THIS.parents[2] / "data" / "options"
+_NEWS_ROOT = _THIS.parents[2]
+_DEFAULT_OUT = _NEWS_ROOT / "data" / "options"
 OUTPUT_DIR = Path(os.getenv("OPTIONS_OUTPUT_DIR") or _DEFAULT_OUT)
+CHARTS_DIR = Path(os.getenv("OPTIONS_CHARTS_DIR") or (_NEWS_ROOT / "charts"))
 
 # ── Universe ──────────────────────────────────────────────────────────────
 WATCHLIST = ["AAPL", "TSLA", "NVDA", "MSFT", "META", "GOOGL", "AMZN", "AMD", "JPM", "GS"]
