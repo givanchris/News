@@ -76,7 +76,27 @@ yfinance options quirk, a sentiment-calc edge case, or a `latest.json` schema de
 (`snapshots.append_indices_history`) and then calls `src/charts/put_call.py::generate()`,
 which redraws `News/charts/put_call.svg` from the trailing 22 daily readings. This runs
 automatically on every cron `python run.py market` (skip with `--no-charts`) — no more
-manual regeneration. `charts/gamma.svg` is still hand-authored/illustrative; it needs
-strike-level OI+greeks the pipeline doesn't pull yet. If `put_call.svg` ever looks stale
-again, check `data/options/indices.json` is actually accumulating (needs `--no-history`
-NOT to be set) before assuming the chart script broke.
+manual regeneration. If `put_call.svg` ever looks stale again, check
+`data/options/indices.json` is actually accumulating (needs `--no-history` NOT to be set)
+before assuming the chart script broke.
+
+`~/scripts/run_options.sh` on the Mac Mini must `git add charts/` alongside `data/options/`
+before committing — it originally only staged `data/options/`, so both generated charts
+would sit uncommitted on disk and get silently wiped by `master_update.sh`'s
+`git reset --hard` 15-30 min later. Fixed 2026-09-01. If a chart looks like it "reverted,"
+check the script still stages `charts/` before assuming the generator itself regressed.
+
+## charts/gamma.svg — now pipeline-generated (as of 2026-09-01)
+
+`cmd_market` pulls up to 8 SPY expirations (`provider.get_options_chains("SPY",
+max_expirations=8)` — covers the current cycle through the next standard monthly) and
+calls `calculations/gamma.py::gamma_profile_near_term()`, which computes Black-Scholes
+gamma per strike from real open interest + implied vol and buckets it into $10 strikes
+around spot. **Deliberately aggregates multiple expirations** — SPY lists daily
+expirations, so a single day's chain is dominated by whatever expires that day (0-1 DTE)
+and wildly overweights one strike; summing near-term expirations gives a profile that
+actually resembles "positioning," not a single day's noise. Sign convention: call OI is
+positive GEX, put OI is negative (matches the page's own "dealers net short puts / long
+calls" assumption). The profile snapshot writes to `data/options/gamma.json`;
+`src/charts/gamma.py::generate()` reads it back and redraws `charts/gamma.svg`. No
+history is kept (unlike put/call) — it's a same-day snapshot each run, not a trend chart.

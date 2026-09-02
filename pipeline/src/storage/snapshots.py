@@ -5,6 +5,7 @@
 - sectors.json         → sector heatmap history
 - vix.json             → VIX & term-structure history
 """
+from __future__ import annotations
 import json
 from pathlib import Path
 from typing import Any
@@ -89,6 +90,25 @@ def append_indices_history(date: str, indices: list[dict]) -> Path:
     path = config.OUTPUT_DIR / "indices.json"
     history = _upsert_by_date(_read_list(path), {"date": date, "indices": indices})
     path.write_text(json.dumps(history, indent=2, default=str))
+    return path
+
+
+# ── gamma exposure snapshot (SPY, front-month, by strike) ───────────────
+def read_gamma_snapshot() -> dict | None:
+    path = config.OUTPUT_DIR / "gamma.json"
+    if not path.exists():
+        return None
+    try:
+        data = json.loads(path.read_text())
+        return data if isinstance(data, dict) else None
+    except Exception:
+        return None
+
+
+def write_gamma_snapshot(payload: dict[str, Any]) -> Path:
+    config.OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+    path = config.OUTPUT_DIR / "gamma.json"
+    path.write_text(json.dumps(payload, indent=2, default=str))
     return path
 
 

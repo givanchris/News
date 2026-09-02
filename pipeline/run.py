@@ -18,8 +18,10 @@ from src.data_providers.yfinance_provider import YFinanceProvider
 from src.calculations import ratios as R
 from src.calculations import volatility as V
 from src.calculations import sentiment as S
+from src.calculations import gamma as G
 from src.storage import snapshots
 from src.charts import put_call as put_call_chart
+from src.charts import gamma as gamma_chart
 from src.utils.dates import now_mt_iso, today_mt_str
 
 
@@ -172,6 +174,15 @@ def cmd_market(args: argparse.Namespace) -> None:
     print("→ Sector ETFs", file=sys.stderr)
     sectors = [build_sector_row(provider, s) for s in config.SECTORS]
 
+    print("→ SPY gamma exposure by strike", file=sys.stderr)
+    gamma_profile = None
+    # Through-the-monthly window: SPY lists daily expirations, so a single
+    # day's chain is dominated by whatever expires that day. 8 expirations
+    # covers roughly the current cycle through the next standard monthly.
+    spy_chains = provider.get_options_chains("SPY", max_expirations=8)
+    if spy_chains:
+        gamma_profile = G.gamma_profile_near_term(spy_chains, spy_chains[0].spot)
+
     universe = args.tickers if args.tickers else config.WATCHLIST
     print(f"→ Watchlist ({len(universe)} tickers)", file=sys.stderr)
     tickers = []
@@ -212,6 +223,8 @@ def cmd_market(args: argparse.Namespace) -> None:
         snapshots.append_sectors_history(date, sectors)
         snapshots.append_vix_history(date, vix["vix"], vix["vix_term_structure"])
         snapshots.append_indices_history(date, indices)
+        if gamma_profile:
+            snapshots.write_gamma_snapshot(gamma_profile)
         print(f"✓ Appended history for {date}", file=sys.stderr)
 
     # ── Chart regeneration ────────────────────────────────────────────────
@@ -221,6 +234,12 @@ def cmd_market(args: argparse.Namespace) -> None:
             print(f"✓ Regenerated {chart_path}", file=sys.stderr)
         else:
             print("· Skipped put_call.svg — no indices history yet", file=sys.stderr)
+
+        gex_chart_path = gamma_chart.generate()
+        if gex_chart_path:
+            print(f"✓ Regenerated {gex_chart_path}", file=sys.stderr)
+        else:
+            print("· Skipped gamma.svg — no gamma snapshot available", file=sys.stderr)
 
 
 def main() -> None:

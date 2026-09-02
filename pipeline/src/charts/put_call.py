@@ -67,7 +67,7 @@ def render_svg(points: list[tuple[str, float]]) -> str:
   {line_el}
   {circles}
   <circle cx="{last_x:.1f}" cy="{last_y:.1f}" r="3.5" fill="#0e2240"/>
-  <text x="{last_x-6:.1f}" y="{last_y-8:.1f}" text-anchor="end" {FF} font-size="9" font-weight="bold" fill="#0e2240">{last_val:.2f}</text>
+  <text x="{last_x-6:.1f}" y="{max(last_y-8, y_top+18):.1f}" text-anchor="end" {FF} font-size="9" font-weight="bold" fill="#0e2240">{last_val:.2f}</text>
   <text x="54" y="14" {FF} font-size="9" letter-spacing="0.1em" fill="#0e2240">EQUITY PUT/CALL RATIO · TRAILING {n} SESSION{"S" if n != 1 else ""}</text>
   <text x="54" y="308" {FF} font-size="8.5" fill="#5a6f87">{first_label}</text>
   <text x="592" y="308" text-anchor="end" {FF} font-size="8.5" fill="#5a6f87">Today</text>

@@ -1095,15 +1095,17 @@
       <div class="viz-card">
         <div class="viz-card-head">
           <span class="viz-card-title">Dealer Gamma Exposure</span>
-          <span class="viz-card-tag">By strike <span class="illus-flag">Illustrative</span></span>
+          <span class="viz-card-tag">Live · by strike</span>
         </div>
         <div class="viz-figure">
-          <img src="charts/gamma.svg" alt="Dealer gamma exposure by strike for SPY, negative below spot and positive above, gamma flip near 750" loading="lazy" style="width:100%;height:auto;display:block" />
+          <img src="charts/gamma.svg" alt="Dealer gamma exposure by strike for SPY, negative below spot and positive above, computed from real open interest" loading="lazy" style="width:100%;height:auto;display:block" />
         </div>
         <p class="viz-note">
-          Below the <strong>gamma flip</strong> dealers are short gamma — hedging amplifies moves and
-          volatility feeds on itself. Above it, hedging dampens moves. Strike ladder is centered on spot
-          but hand-updated, not yet wired into the daily pipeline like the put/call chart to its left.
+          Approximated from real SPY open interest and Black-Scholes gamma across near-term
+          expirations, regenerated with every daily pipeline run. Below the <strong>gamma flip</strong>
+          dealers are short gamma — hedging amplifies moves and volatility feeds on itself. Above it,
+          hedging dampens moves. Still an approximation, not a disclosed dealer position feed — see
+          Limitations below.
         </p>
       </div>
 
@@ -1127,7 +1129,8 @@
           <ul>
             <li>Metrics normalized to <strong>rank/percentile</strong> so tickers are comparable</li>
             <li>Weighted blend of P/C, IV rank, skew, and unusual volume → one sentiment score</li>
-            <li>Gamma exposure approximated from open interest and option gamma by strike</li>
+            <li>Gamma exposure: Black-Scholes gamma per strike &times; open interest, summed across
+              near-term expirations through the next monthly</li>
             <li>Score bucketed into a label: bullish / neutral / bearish</li>
           </ul>
         </div>
@@ -1143,8 +1146,9 @@
           <h4>// Limitations</h4>
           <p>
             Retail/free option data is noisy and can lag; GEX is an approximation without
-            dealer-position disclosure. Sentiment is a <strong>contrarian context tool</strong>, not a trade
-            signal — and the figures on this page are an illustrative snapshot, not live.
+            dealer-position disclosure — not a real position feed, regardless of how current
+            the underlying open interest is. Sentiment is a <strong>contrarian context tool</strong>,
+            not a trade signal.
           </p>
         </div>
       </div>
