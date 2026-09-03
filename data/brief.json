@@ -1,135 +1,86 @@
 {
-  "lastUpdated": "2026-09-03T16:30:16-06:00",
+  "lastUpdated": "2026-09-03T16:37:15-06:00",
   "market": {
-    "sp500": {
-      "price": "7748",
-      "change": "+1.06%",
-      "dir": "up"
-    },
-    "nasdaq": {
-      "price": "29482",
-      "change": "+1.16%",
-      "dir": "up"
-    },
-    "yield": {
-      "price": "4.76%",
-      "change": "-3 bps",
-      "dir": "up"
-    },
-    "wti": {
-      "price": "$92",
-      "change": "+0.78%",
-      "dir": "up"
-    },
-    "gold": {
-      "price": "$4523",
-      "change": "+1.03%",
-      "dir": "up"
-    },
-    "dxy": {
-      "price": "99.00",
-      "change": "-0.42%",
-      "dir": "down"
-    }
+    "sp500":  { "price": "7,747.71", "change": "+1.06%",  "dir": "up"   },
+    "nasdaq": { "price": "29,448",   "change": "+1.05%",  "dir": "up"   },
+    "yield":  { "price": "4.76%",    "change": "-3 bps",  "dir": "down" },
+    "wti":    { "price": "$91.15",  "change": "+0.2%",    "dir": "up"   },
+    "gold":   { "price": "$4,490",  "change": "+2.1%",    "dir": "up"   },
+    "dxy":    { "price": "99.51",   "change": "-0.1%",    "dir": "down" }
   },
   "stories": [
     {
-      "cat": "MARKETS",
-      "headline": "S&P 500, DOW SNAP THREE-DAY SKID AS YIELDS AND OIL COOL OFF",
-      "body": "The S&P 500 rose 0.46% to 7,666.60 and the Dow added 0.56% to 53,061.95, both snapping three-day losing streaks, while Nvidia rallied more than 3% to lift the megacaps; the Nasdaq 100 lagged, finishing essentially flat near 29,050 even as the broader Nasdaq Composite gained 0.45%.",
-      "explain": "Wednesday's bounce came almost entirely from Treasury yields and oil pausing their recent surge rather than any new bullish catalyst, which is why small-caps (Russell 2000 +1.1%) outperformed the rate-sensitive Nasdaq 100: a stalling discount rate helps beaten-down cyclical and value names proportionally more than it helps mega-cap growth stocks that had already been bid up on AI capex expectations."
+      "cat": "GEOPOLITICS",
+      "headline": "STOCKS SHAKE OFF FRESH IRAN STRIKES TO CLOSE AT SESSION HIGHS",
+      "body": "The Dow fell more than 400 points intraday after Trump ordered new strikes on Iran, but all three major indexes reversed to close higher as Treasury yields eased — the S&P 500 gained 1.06% to 7,747.71, the Dow rose 1.18% to 53,686.11, and the Nasdaq 100 added 1.05% to 29,448. Oil and gold both stayed bid on safe-haven demand even as equities recovered.",
+      "explain": "Equities sold off on the initial headline because a wider Iran conflict raises the odds of a Strait of Hormuz disruption, which would spike energy costs and act like a tax on growth. The reversal came once traders judged Trump's comment that strikes would be 'short-lived' as capping tail risk, and falling yields lowered the discount rate used to value future earnings — a double tailwind for risk assets even with oil and gold still elevated."
     },
     {
       "cat": "CENTRAL BANKS",
-      "headline": "10-YEAR YIELD TOUCHES 4.818%, HIGHEST SINCE NOVEMBER 2023, BEFORE EASING",
-      "body": "The 10-year Treasury yield hit an intraday high of 4.818% Wednesday before settling near 4.79%, a level not seen since November 2023, as markets now price roughly 60 bps of additional Fed tightening through year-end following last week's hawkish Fed commentary.",
-      "explain": "The 10-year yield embeds both the market's expected path for the fed funds rate and a term premium investors demand for holding longer-duration debt; when oil-driven inflation expectations rise at the same time the Fed signals it isn't done hiking, both components climb together, which is exactly why the note broke above its late-2023 high even though the Fed hasn't moved rates yet this cycle."
+      "headline": "FED CHAIR WARSH SIGNALS NO 2026 RATE CUTS AS SEPTEMBER ODDS FALL TO ZERO",
+      "body": "New Fed Chair Kevin Warsh reiterated a data-dependent, no-cuts-in-2026 stance, and Fed funds futures now price essentially zero probability of a September cut from the current 3.50%-3.75% target range. Governor Waller said he'd lean toward holding unless inflation surprises to the upside.",
+      "explain": "Fed funds futures translate CME-traded contract prices into implied probabilities for each FOMC meeting, so a move to near-zero odds means the market has fully repriced away easing expectations that existed earlier this year. That repricing matters because it removes a tailwind that had been supporting duration-sensitive assets like growth stocks and long bonds — the 10-year's dip to 4.76% today came despite the hawkish Fed talk, driven instead by the Iran-related flight to safety."
     },
     {
-      "cat": "GEOPOLITICS",
-      "headline": "OIL HOLDS NEAR FIVE-WEEK HIGH AS U.S.-IRAN CONFLICT KEEPS STRAIT OF HORMUZ AT RISK",
-      "body": "Brent crude added 0.23% to $94.86 a barrel and WTI held near $91 after Tuesday's 5.2% spike, the biggest one-day gain in five weeks, following fresh U.S. strikes on Iranian targets near the Strait of Hormuz after Iran attacked tankers transiting the waterway.",
-      "explain": "About one-fifth of the world's seaborne crude passes through the Strait of Hormuz, so oil traders price in the probability of disruption immediately rather than waiting for an actual supply interruption; that risk premium is why Brent is up more than 13% over the past month even though no sustained physical flow of oil has yet been cut off."
-    },
-    {
-      "cat": "TRADE",
-      "headline": "COMMERCE SECRETARY SIGNALS SEMICONDUCTOR TARIFF FRAMEWORK IS COMING",
-      "body": "Commerce Secretary Howard Lutnick told CNBC the administration is finalizing a tariff framework specifically targeting semiconductors, and that chipmakers are already aware duties are on the way, adding a new cost variable for an industry already absorbing higher energy and input costs from the Iran-driven oil spike.",
-      "explain": "Tariff pass-through depends on how concentrated the supply chain is: semiconductors have few substitute suppliers in the near term, so importers have limited ability to source around a new duty, meaning a larger share of any chip tariff is likely to show up in downstream electronics and AI-hardware prices rather than being absorbed by manufacturer margins."
+      "cat": "MACRO",
+      "headline": "ADP SHOWS PRIVATE PAYROLLS SLOWING TO 38K, MISSING ESTIMATES AHEAD OF FRIDAY'S JOBS REPORT",
+      "body": "ADP reported U.S. private employers added just 38,000 jobs in August, below the 47,000 consensus and down from an upwardly revised 46,000 in July. Factory orders were a bright spot, up 0.9% versus a 0.7% estimate.",
+      "explain": "ADP is a leading, imperfect proxy for Friday's official nonfarm payrolls report, so a miss here shifts market expectations toward a softer NFP print and reinforces the labor-market-cooling narrative the Fed is watching under its dual mandate. A weak jobs number would normally build the case for rate cuts, but with Warsh signaling no cuts regardless, the more likely market reaction is concern about growth rather than relief on policy."
     },
     {
       "cat": "COMMODITIES",
-      "headline": "GOLD SLIPS TOWARD $4,320 DESPITE ESCALATING IRAN CONFLICT",
-      "body": "Gold fell roughly 0.7% to around $4,320 an ounce Wednesday even as U.S.-Iran hostilities intensified, a break from bullion's usual safe-haven script, as the pop in real yields tied to hawkish Fed repricing outweighed the war-risk premium that would typically lift gold.",
-      "explain": "Gold carries no yield, so its opportunity cost is set by real (inflation-adjusted) interest rates; when nominal yields rise faster than inflation expectations, as they have this week on Fed repricing, the real rate climbs and holding non-yielding bullion becomes relatively less attractive versus Treasurys, overpowering the safe-haven bid from the Iran conflict."
+      "headline": "GOLD SURGES PAST $4,490 AS OIL HOLDS NEAR $91 ON STRAIT OF HORMUZ RISK",
+      "body": "Gold jumped over 2% on safe-haven buying as the Iran conflict escalated, while WTI held near $91 and Brent near $95 after cooling from a three-day, 9% rally. Kuwait reported it was fending off Iranian missile and drone attacks, keeping traders focused on shipping risk through the Strait of Hormuz.",
+      "explain": "About one-fifth of global oil supply transits the Strait of Hormuz, so any credible threat to that chokepoint gets priced immediately into the crude forward curve as a geopolitical risk premium, distinct from actual supply loss. Gold's rally reflects the same dynamic in reverse — it carries no counterparty risk and tends to draw capital whenever investors fear an escalation that could disrupt normal markets, which is why it moved in lockstep with oil today rather than with the dollar, which slipped slightly to 99.51 on the DXY."
+    },
+    {
+      "cat": "EARNINGS",
+      "headline": "AI NAMES POWER NASDAQ RALLY AS SNOWFLAKE JUMPS 20%, NVIDIA MOVES TO BUY HUGGING FACE",
+      "body": "Snowflake soared more than 20% on a blowout quarter, Dell rose 15.8% and GitLab gained 10%, while Nvidia agreed to acquire AI platform Hugging Face. Broadcom fell despite beating analyst estimates, a reminder that guidance can matter more than the headline beat.",
+      "explain": "Broadcom's drop on an earnings beat is a classic 'sell the news' pattern: when a stock has already run up into a print on high expectations, the market is really trading forward guidance and margin trajectory, not the trailing quarter's numbers. Snowflake and Dell's gains show the opposite case — results that beat a more conservative bar left room for the stock to re-rate higher, which is why identical-looking 'beats' can produce opposite price reactions."
     },
     {
       "cat": "MCBB",
-      "headline": "NCAA WINS FOURTH STRAIGHT ELIGIBILITY APPEAL AS COURT RULINGS KEEP SHIFTING ROSTERS",
-      "body": "The NCAA won another eligibility appeal Tuesday, its fourth in recent weeks after prior wins in Colorado, Ohio and Tennessee, even as Syracuse guard Amarri Monroe was separately granted a temporary restraining order in New York making him eligible this season; Michigan's five-star freshman Brandon McCoy Jr. will miss the entire 2026-27 season with a torn ACL."
+      "headline": "NBA CHAMPION MICHAEL MALONE TAKES OVER AT NORTH CAROLINA AS ELIGIBILITY CHAOS CONTINUES",
+      "body": "Michael Malone, who won an NBA title as Denver's head coach, held his first preseason press conference leading North Carolina's program, saying 'the rules change every day' in college athletics. A wave of court injunctions has granted several players a fifth year of eligibility, adding roster uncertainty across the sport 101 days before tip-off."
     },
     {
       "cat": "NBA",
-      "headline": "CLIPPERS, RAPTORS IN TRADE TALKS FOR KAWHI LEONARD",
-      "body": "The Clippers and Raptors are in extended discussions on a deal for All-NBA forward Kawhi Leonard as the offseason reshuffle continues; elsewhere, Russell Westbrook joined new startup league Project B as chief strategy officer weeks after retiring as a player, while Rockets guard Fred VanVleet and Kings guard Zach LaVine both opted into their 2026-27 player options."
+      "headline": "CLIPPERS STRIPPED OF FIVE FIRST-ROUND PICKS, BALLMER FINED $30 MILLION IN KAWHI LEONARD CAP PROBE",
+      "body": "The NBA concluded its salary-cap circumvention investigation by stripping the Clippers of five first-round draft picks and fining owner Steve Ballmer $30 million over an alleged no-show sponsorship deal that funneled money to Kawhi Leonard. The SEC is separately reviewing sponsor Aspiration's former dealings with the team."
     },
     {
       "cat": "NFL",
-      "headline": "LIONS PLACE ISIAH PACHECO ON IR AS TEAMS SET FINAL ROSTERS FOR SEPT. 9 OPENERS",
-      "body": "Detroit placed running back Isiah Pacheco on injured reserve with an MCL sprain and back injury suffered in camp, while Odell Beckham made the Giants' initial 53-man roster and 49ers running back Christian McCaffrey returned to practice for the first time since Aug. 8, as teams finalize rosters ahead of the Sept. 9 season kickoff."
+      "headline": "ALL 32 TEAMS SET 53-MAN ROSTERS AS LEAGUE HEADS INTO WEEK 1",
+      "body": "Cutdown day wrapped across the league with the regular season opening September 9. Kirk Cousins was named the Raiders' Week 1 starter, and the Rams and 49ers will play next week's game at Melbourne Cricket Ground as the NFL expands its international slate."
     },
     {
       "cat": "NCAA CFB",
-      "headline": "WEEK 1 KICKS OFF THURSDAY, HEADLINED BY KIFFIN'S LSU DEBUT AGAINST CLEMSON",
-      "body": "The 2026 season's full Week 1 slate begins Thursday and runs through Monday, headlined by Lane Kiffin's debut as No. 11 LSU's coach against Clemson, plus Boise State at Oregon, Notre Dame opening against Wisconsin, and No. 5 Texas hosting Texas State."
+      "headline": "COLLEGE FOOTBALL KICKS OFF: COACH PRIME'S COLORADO VISITS GEORGIA TECH IN WEEK 1 OPENER",
+      "body": "Deion Sanders leads Colorado into Atlanta to face Georgia Tech for the second straight season in tonight's headline Week 1 matchup. Also playing: No. 7 Miami at Stanford and Fresno State at No. 14 USC, with No. 25 Missouri and No. 21 Utah opening at home."
     }
   ],
   "sports": [
-    {
-      "team": "WASHINGTON HUSKIES FOOTBALL",
-      "pill": "OPENS SEP 5",
-      "pillClass": "s-up",
-      "detail": "Third-year coach Jedd Fisch's Huskies host Washington State in the Apple Cup on Sept. 5 to open the season, the first of four straight September home games at Husky Stadium; junior QB Demond Williams returns after completing nearly 70% of his passes for 3,065 yards and 25 touchdowns last season."
-    },
-    {
-      "team": "WASHINGTON HUSKIES BASKETBALL",
-      "pill": "OFFSEASON",
-      "pillClass": "s-up",
-      "detail": "Danny Sprinkle's program hosts four-star 2027 guard Jimmie Haywood, a Seattle native, on an official visit Sept. 5, with five-star forward Ahmed Nur set to visit Sept. 6 as Washington works to rebuild its recruiting pipeline after a 16-17 finish."
-    },
-    {
-      "team": "SEATTLE SEAHAWKS",
-      "pill": "OPENS SEP 9",
-      "pillClass": "s-up",
-      "detail": "The defending Super Bowl champions finalized their 53-man roster after going winless in the preseason; Seattle signed CB Trevon Diggs and agreed to terms with Terrion Arnold, though Arnold faces a likely commissioner's exempt-list placement. Seattle opens Sept. 9 at home against New England in a Super Bowl rematch, without RB Kenneth Walker III, who departed for Kansas City."
-    },
-    {
-      "team": "DETROIT PISTONS",
-      "pill": "PRESEASON SOON",
-      "pillClass": "s-up",
-      "detail": "Coming off a 60-win season, Detroit fully guaranteed backup center Paul Reed's $5.6M deal for 2026-27, contingent on Jalen Duren re-signing; the Pistons still need to finalize a long-term extension with forward Ausar Thompson before training camp opens."
-    },
-    {
-      "team": "SEATTLE MARINERS",
-      "pill": "at BOS 4:10pm ET",
-      "pillClass": "s-up",
-      "detail": "Seattle beat Boston 9-6 Tuesday behind Lazaro Montes' home run in his MLB debut and a three-run shot from Randy Arozarena, snapping a five-game skid; the Mariners (64-73) are back at Fenway Park today, first pitch 4:10 PM ET (2:10 PM MT) \u2014 likely still underway as this brief publishes."
-    }
+    { "team": "WASHINGTON HUSKIES FOOTBALL", "pill": "NEXT: SUN", "pillClass": "s-up", "detail": "Huskies open Big Ten-era home slate; next up is the Apple Cup vs. Washington State, Sunday Sept. 6, 1:00 PM PT at Husky Stadium on NBC." },
+    { "team": "WASHINGTON HUSKIES BASKETBALL", "pill": "OFFSEASON", "pillClass": "s-up", "detail": "Danny Sprinkle's roster is set at 15 for year three. Wesley Yates III returns as the leading scorer after Hannes Steinbach (NBA Draft, No. 14 to Charlotte) and Zoom Diallo (transferred to Kentucky) departed." },
+    { "team": "SEATTLE SEAHAWKS", "pill": "NEXT: 9/9", "pillClass": "s-up", "detail": "Seattle extended DL Leonard Williams and signed CB Trevon Diggs this week. Season opens Wednesday, Sept. 9 at New England — a Super Bowl LX rematch the Seahawks won 29-13." },
+    { "team": "DETROIT PISTONS", "pill": "OFFSEASON", "pillClass": "s-up", "detail": "Pistons guaranteed Paul Reed's contract and acquired John Collins from the Clippers this offseason; Jalen Duren extension talks continue. Season opens at Boston, Tuesday Oct. 20." },
+    { "team": "SEATTLE MARINERS", "pill": "W 8-3", "pillClass": "s-w", "detail": "Beat the Red Sox 8-3 on Sept. 2 behind a four-run inning capped by Jhonny Pereda's two-run single. Next: weekend series vs. the Athletics." }
   ],
   "watchlist": [
-    "FOMC meeting mid-September \u2014 futures price roughly 60 bps of additional tightening through year-end after last week's hawkish Fed commentary",
-    "Brent crude near $95 on the U.S.-Iran conflict \u2014 watch for further Strait of Hormuz disruption or a new round of strikes",
-    "Semiconductor tariff framework expected from the Commerce Department \u2014 Secretary Lutnick says chipmakers are aware duties are coming",
-    "Huskies open the season vs. Washington State (Apple Cup) \u2014 Saturday, Sept. 5, Husky Stadium",
-    "CFB Week 1 headliners: Lane Kiffin's LSU debut vs. Clemson, and Boise State at Oregon \u2014 Sept. 3-7"
+    "August nonfarm payrolls — Friday, Sept. 4, 8:30 AM ET, after ADP's 38K miss raises downside risk to consensus",
+    "Iran conflict developments — Strait of Hormuz shipping risk could keep oil and gold bid into the weekend",
+    "Seahawks open the regular season at New England — Wednesday, Sept. 9, Super Bowl LX rematch",
+    "Huskies host Washington State in the Apple Cup — Sunday, Sept. 6, 1:00 PM PT, Husky Stadium",
+    "Mariners host the Athletics this weekend as they fight to stay in the AL Wild Card picture"
   ],
   "deepDive": {
-    "title": "Why the Strait of Hormuz Moves Oil Before a Single Barrel Stops Flowing",
+    "title": "How a Geopolitical Risk Premium Gets Priced Into Oil and Gold",
     "content": [
-      "Today's brief shows Brent crude sitting near $94.86 and WTI holding around $91, both elevated even though U.S.-Iran hostilities near the Strait of Hormuz haven't actually cut off a meaningful volume of crude. That gap between price and physical disruption is the story: markets are pricing risk, not just realized supply, and understanding how they do that explains why oil can jump 5% in a single session on strikes hundreds of miles from any producing well.",
-      "The mechanism is straightforward once you separate spot flow from expected flow. Roughly one-fifth of the world's seaborne crude and a similar share of global LNG transits the Strait, a chokepoint just 21 miles wide at its narrowest, with a shipping lane on each side barely two miles across. Traders don't need Iran to actually mine or block the strait to reprice oil \u2014 they only need the probability of disruption to rise, because futures contracts settle on where the market expects prices to be at delivery, not on today's undisrupted flow. A credible military escalation raises that probability instantly, and the futures curve moves with it.",
-      "This is the same dynamic that drove 2019's Abqaiq attack, which knocked out roughly 5% of global oil supply for days and sent Brent up nearly 15% in a single session, and the 1980s Tanker War, when Iran and Iraq attacked shipping in the Gulf for years without ever fully closing the strait \u2014 prices stayed elevated the entire time purely on sustained disruption risk. What's easy to miss is that this risk premium can unwind just as fast as it builds: once a ceasefire or de-escalation looks credible, the premium can evaporate within days even if nothing about physical supply has changed, which is why oil-driven inflation scares can reverse quickly and catch traders offside in both directions.",
-      "For markets right now, that risk premium is doing double duty: it's propping up headline inflation readings the Fed will see before its September meeting, and it's part of why the 10-year yield pushed to a nearly three-year high this week. If the conflict de-escalates, expect both oil and the inflation narrative behind the Fed's hawkish tilt to cool quickly \u2014 but if strikes continue or shipping insurers start pricing in real transit risk through the strait, the premium embedded in today's $91 WTI print could still have room to grow before it breaks."
+      "Today's session was a live case study in risk pricing: the Dow dropped over 400 points on news of fresh U.S. strikes on Iran, then clawed all the way back to close up 1.18% once yields eased and Trump signaled the escalation would be brief. Meanwhile oil held near $91 and gold jumped past $4,490, both refusing to give back their gains even as stocks recovered. That divergence — equities shrugging off the headline while commodities stayed bid — is exactly what you'd expect if markets are pricing a persistent risk premium rather than reacting to a one-day scare.",
+      "The mechanism runs through the futures curve. Oil traders don't just ask 'how much crude is being produced today' — they price the probability-weighted cost of disruption to the roughly one-fifth of global supply that transits the Strait of Hormuz. Even a modest chance of a shipping interruption gets baked into near-dated contracts as a premium over the 'fundamental' price implied by supply and demand alone, which is why WTI can hold near $91 even without a single barrel actually being lost. Gold works through a parallel but opposite channel: it has no yield and no industrial disruption risk, so it becomes the default parking spot for capital fleeing uncertainty, moving in the same direction as oil's risk premium rather than against it.",
+      "History shows this premium can be large and can also evaporate fast. After the September 2019 drone and missile strikes on Saudi Arabia's Abqaiq facility knocked out roughly 5% of global oil supply overnight, Brent spiked nearly 15% in a single session — the largest one-day jump since the 1991 Gulf War — before retracing most of the move within three weeks once markets confirmed output was restored faster than feared. The lesson most investors miss is that the premium is about the tail risk being removed, not the base case being realized; prices can stay elevated for weeks even if the feared disruption never actually happens, simply because the option value of insurance against it doesn't disappear until the underlying threat clearly does.",
+      "For Chris's kind of question — what does this mean for portfolio construction and the next data points — the immediate read-through is Friday's jobs report and the Fed. A weak NFP print combined with sustained elevated oil prices creates a stagflationary-flavored setup that complicates Warsh's already-hawkish no-cuts stance, since energy costs feed directly into headline CPI even if core inflation stays contained. It's also the textbook case for why professional portfolios hold some allocation to gold or commodities: not because they reliably outperform in normal markets, but because they are among the few assets that tend to move independently of, or even against, equities exactly when a geopolitical shock hits."
     ]
   }
 }
