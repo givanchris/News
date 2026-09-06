@@ -22,8 +22,8 @@ PAT = os.environ.get("GITHUB_PAT", "")
 WEIGHTS_URL = "https://api.github.com/repos/givanchris/News/contents/data/portfolio_weights.json"
 
 FALLBACK_TICKERS = [
-    "ALAB", "MRVL", "AMAT", "ASML", "COHR", "GOOG", "NVDA", "PLTR", "CEG",
-    "TCEHY", "MOG.A", "HOOD", "LEU", "ZBRA", "GRPN", "AMZN", "SPCX", "BTC",
+    "ALAB", "MRVL", "NVDA", "PLTR", "GOOG", "AMAT", "CEG", "COHR", "AMZN", "HOOD",
+    "MOG.A", "BABA", "CCJ", "ZBRA", "IREN", "LEU", "SOLS", "SPCX", "RVII",
 ]
 
 NAMES = {
@@ -42,7 +42,7 @@ NAMES = {
     "LEU":   "Centrus Energy",
     "CRWV":  "CoreWeave",
     "MOG.A": "Moog Inc",
-    "SOLS":  "Solaris Energy",
+    "SOLS":  "Solstice Advanced Materials",
     "HOOD":  "Robinhood Markets",
     "ZBRA":  "Zebra Technologies",
     "NOW":   "ServiceNow",
@@ -52,6 +52,10 @@ NAMES = {
     "SPCX":  "SpaceX",
     "IBM":   "IBM",
     "BTC":   "Bitcoin",
+    "BABA":  "Alibaba Group",
+    "CCJ":   "Cameco",
+    "IREN":  "IREN Limited",
+    "RVII":  "Robinhood Ventures Fund II",
 }
 
 YF_MAP = {"MOG.A": "MOG-A", "BTC": "BTC-USD"}
@@ -135,7 +139,10 @@ def load_tickers():
     if os.path.exists(HOLDINGS_SRC):
         with open(HOLDINGS_SRC) as f:
             data = json.load(f)
-        return [h["ticker"] for h in data["holdings"]]
+        return [
+            h["ticker"] for h in data["holdings"]
+            if h.get("asset_type") != "crypto"
+        ]
     return FALLBACK_TICKERS
 
 
