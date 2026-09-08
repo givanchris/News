@@ -1,87 +1,63 @@
 {
-  "lastUpdated": "2026-09-08T16:30:20-06:00",
+  "lastUpdated": "2026-09-08T16:35:18-06:00",
   "market": {
-    "sp500": {
-      "price": "7674",
-      "change": "-0.58%",
-      "dir": "down"
-    },
-    "nasdaq": {
-      "price": "29508",
-      "change": "-0.12%",
-      "dir": "down"
-    },
-    "yield": {
-      "price": "4.81%",
-      "change": "+2 bps",
-      "dir": "down"
-    },
-    "wti": {
-      "price": "$94",
-      "change": "+3.09%",
-      "dir": "up"
-    },
-    "gold": {
-      "price": "$4400",
-      "change": "-1.72%",
-      "dir": "down"
-    },
-    "dxy": {
-      "price": "98.84",
-      "change": "-0.33%",
-      "dir": "down"
-    }
+    "sp500": { "price": "7,675.28", "change": "-0.58%", "dir": "down" },
+    "nasdaq": { "price": "29,560", "change": "+0.05%", "dir": "flat" },
+    "yield": { "price": "4.81%", "change": "+2 bps", "dir": "down" },
+    "wti": { "price": "$92.90", "change": "+1.6%", "dir": "up" },
+    "gold": { "price": "$4,371", "change": "-2.4%", "dir": "down" },
+    "dxy": { "price": "98.85", "change": "-0.33%", "dir": "down" }
   },
   "stories": [
     {
       "cat": "GEOPOLITICS",
-      "headline": "STRAIT OF HORMUZ EFFECTIVELY CLOSED AS U.S., IRAN TRADE TANKER STRIKES OVER LABOR DAY WEEKEND",
-      "body": "The Strait of Hormuz is effectively closed to commercial shipping after the U.S. and Iran traded a fresh round of attacks over the weekend: CENTCOM permanently disabled two Iranian tankers and destroyed a third under a new 'tanker-for-tanker' policy approved by President Trump, hours after Iran's Revolutionary Guard Corps fired ballistic missiles at a U.S. carrier and destroyer that both evaded harm. U.S. cash equity and bond markets are closed for Labor Day, so none of this is priced into stocks yet \u2014 Tuesday's reopen is the first chance for the S&P 500 to react.",
-      "explain": "Formal U.S. exchange closures don't stop global oil trading: Brent and WTI both trade nearly continuously on ICE and CME's Globex system, so crude was already marking the escalation higher through the holiday even with NYSE and NYMEX pit sessions dark. That gap between an always-on commodity market and a market-hours-only equity market is exactly why Tuesday's open often looks like it's 'catching up' to a weekend's news in one move rather than drifting into it gradually."
-    },
-    {
-      "cat": "COMMODITIES",
-      "headline": "WTI TOPS $92, BRENT NEARS $98 AS HORMUZ RISK PREMIUM WIDENS INTO THE HOLIDAY",
-      "body": "WTI crude climbed above $92 a barrel and Brent approached $98 in global trading over the weekend as the tanker war intensified, extending a roughly $7 weekly gain driven by falling Iranian exports and the widening Hormuz risk premium. Both benchmarks had dipped to session lows near $89.30 (WTI) and $94.65 (Brent) earlier in the week before snapping back hard on the latest strikes.",
-      "explain": "Oil's move here is a pure geopolitical risk premium, not a supply or demand shift \u2014 no barrels have actually left the market yet, but traders are pricing in the probability that a fifth of global seaborne crude could be disrupted. That premium feeds directly into Thursday's CPI print: a sustained move above $90 WTI shows up in the energy component within one to two months, which is why a supply shock like this complicates the Fed's already-split rate debate."
+      "headline": "IRAN-BACKED HOUTHI STRIKES ON SAUDI OIL FACILITIES SEND BRENT NEAR $99, RATTLING STOCKS",
+      "body": "Iran-aligned Houthi militants claimed responsibility for strikes that halted operations at multiple Saudi Arabian energy facilities Tuesday, pushing Brent crude to an intraday high of $99.46 a barrel — its highest since July — as the months-long U.S.-Iran tanker conflict in the Strait of Hormuz widens to a third Gulf player. Brent settled near $98 and WTI topped $92.90, with the risk premium spilling directly into U.S. equities as energy-sensitive and rate-sensitive sectors led the S&P 500 lower.",
+      "explain": "Saudi Arabia is the swing producer OPEC+ leans on to backfill lost barrels during a supply shock, so an attack on its own export infrastructure removes the market's usual shock absorber at the worst possible moment. That's why oil reacted more sharply to this strike than to earlier Hormuz skirmishes alone — traders are now pricing the risk that the conflict spreads beyond Iranian shipping into the Gulf's core production capacity."
     },
     {
       "cat": "MACRO",
-      "headline": "MARKETS ENTER TUESDAY'S REOPEN STILL DIGESTING FRIDAY'S BLOWOUT JOBS REPORT",
-      "body": "With Monday's Labor Day holiday closing U.S. equity and bond markets, the S&P 500 (7,718.60, -0.38%) and Treasury market carry Friday's reaction to August's blowout payrolls print \u2014 162,000 jobs added versus 53,000 expected, unemployment steady at 4.1% \u2014 into Tuesday's session. The report flipped the market's read from 'the Fed can ease' to 'the Fed may need to hold or hike,' the exact dynamic investors will keep testing when trading resumes.",
-      "explain": "A holiday close freezes the tape but not the flow of information: any data or news that lands after Friday's close \u2014 like the weekend's Hormuz escalation \u2014 gets absorbed into Tuesday's single reopening print instead of being smoothed across a normal trading day. That's why the first hour of a post-holiday session often carries outsized volume and volatility relative to an ordinary Tuesday."
+      "headline": "DOW SHEDS 628 POINTS AS OIL SPIKE, CANADA TARIFFS AND STICKY YIELDS COLLIDE",
+      "body": "The Dow Jones Industrial Average fell 628.18 points (-1.18%) to 52,786.07, the S&P 500 slid 0.58% to 7,675.28, and the Nasdaq Composite eased 0.32% to 26,421.41 as investors absorbed rising oil prices, escalating Mideast conflict, and Canada's retaliatory tariffs on U.S. goods, which took effect just after midnight. Apple (-2.55%), Alphabet (-2.10%) and Microsoft (-2.05%) led mega-cap tech lower, while Caterpillar (+1.65%) and Honeywell (+0.95%) outperformed.",
+      "explain": "Tuesday's selloff wasn't one shock but four compounding at once: expensive oil threatens to reignite inflation, strong recent jobs data gives the Fed less room to look past that inflation, rising Treasury yields raise the discount rate applied to future earnings, and new tariffs add a fresh cost shock on top of all three. When several negative catalysts land in the same session, index-level moves tend to overstate any single story's importance — which is why Wednesday's price action will say more about which of these four actually sticks."
+    },
+    {
+      "cat": "COMMODITIES",
+      "headline": "WTI TOPS $92.90, BRENT NEARS $99 AS CRUDE EXTENDS AN 8%+ SEPTEMBER SURGE",
+      "body": "WTI crude climbed 1.6% to $92.90 a barrel and Brent pushed toward $98-99 after touching an intraday high of $99.46, extending a more than 8% gain for crude so far in September as the U.S.-Iran tanker war widens. Since September 1, U.S. strikes have disabled or destroyed five Iranian-flagged tankers under a new 'tanker-for-tanker' retaliation policy, while Tuesday's Houthi strikes on Saudi facilities mark the first direct hit on Gulf production infrastructure this cycle.",
+      "explain": "A barrel of WTI trading above $90 for a sustained stretch typically adds noticeably to headline CPI within one to two months, both directly through gasoline prices and indirectly through higher shipping and input costs economy-wide. With CPI due Friday, September 11 and the Fed's rate decision the following week, this move couldn't land at a more sensitive point in the data calendar."
+    },
+    {
+      "cat": "TRADE",
+      "headline": "CANADA'S RETALIATORY TARIFFS ON U.S. GOODS TAKE EFFECT AS TRADE TALKS COLLAPSE",
+      "body": "Canada's retaliatory tariffs on U.S. goods took effect just after midnight Tuesday after Prime Minister Mark Carney escalated economic pressure on America's largest trading partner following the breakdown of negotiations last month, adding a fresh cross-border cost shock on top of an already volatile session driven by oil and Mideast risk.",
+      "explain": "Retaliatory tariffs function as a tax both sides' consumers ultimately share: Canadian duties raise costs for U.S. exporters trying to sell into that market, while reciprocal U.S. tariffs already in place raise costs for American importers and, eventually, American shoppers. The market impact shows up less in a single day's index move and more in guidance cuts from companies with heavy cross-border supply chains over the following weeks."
     },
     {
       "cat": "CENTRAL BANKS",
-      "headline": "FED RATE-HIKE ODDS HOLD NEAR A COIN FLIP HEADING INTO THIS MONTH'S FOMC MEETING",
-      "body": "CME FedWatch pricing for a 25 bp hike at this month's FOMC meeting remains roughly split after spiking to 58.4% on Friday's jobs report before Fed Governor Christopher Waller's remarks favoring a hold if disinflation resumes pulled odds back toward 50%. The 2-year Treasury yield, at 4.37% after Friday's close, sits at its highest level since January 2025 and will be the first real read on where that debate stands once trading resumes Tuesday.",
-      "explain": "Fed funds futures convert directly into implied hike/cut probabilities because each contract settles against the average effective fed funds rate for its delivery month, so a shift in the contract price is a shift in the market's expected policy path. A near-50/50 split this close to a meeting is unusual \u2014 it signals the committee itself, not just the market, is genuinely undecided, which raises the stakes on every data point and speaker between now and the decision."
-    },
-    {
-      "cat": "EARNINGS",
-      "headline": "LULULEMON'S 17% SLIDE STILL WEIGHS ON RETAIL AS SHARES ENTER THE WEEK NEAR MULTI-YEAR LOWS",
-      "body": "Lululemon closed Friday down 17.4% at $100.61 after Q2 revenue of $2.42 billion missed estimates, comparable sales fell 9-10% with North America comps down 12%, and management cut full-year revenue guidance to a 5-7% decline \u2014 leaving the stock off roughly 42% year-to-date heading into Tuesday's session.",
-      "explain": "Guidance cuts move stocks more than the trailing quarter because equity value is a claim on future cash flows, not past ones \u2014 a 5-7% revenue decline reset for next year re-prices every future quarter's earnings base, not just the one just reported. Lululemon's five-month gap between naming a new CEO in April and their September 8 start date compounded the problem by leaving the company without clear leadership through the exact stretch its core business was deteriorating."
+      "headline": "10-YEAR YIELD PUSHES TOWARD 4.81%, NEARING A LEVEL ANALYSTS CALL A RISK-ASSET TRIPWIRE",
+      "body": "The 10-year Treasury yield rose to roughly 4.81% Tuesday, edging closer to the 4.8% threshold that market analysts warn could create 'meaningful problems' for other asset classes if breached on a sustained basis. The move comes five days before Friday's CPI print and just over a week before the Fed's September 15-16 FOMC meeting, where rate-decision odds remain split between a hold and a 25 bp hike.",
+      "explain": "Above roughly 4.8%, the 10-year yield starts competing more aggressively with equities for capital, since it offers a risk-free return closer to what stocks have historically delivered on average. Rising yields also raise the discount rate used to value future corporate cash flows, which hits high-multiple growth and tech stocks hardest — exactly the group leading Tuesday's decline."
     },
     {
       "cat": "MCBB",
-      "headline": "DEFENDING CHAMP MICHIGAN SLIDES IN EARLY POLLS AFTER LOSING FIVE-STAR BIG MAN TO INJURY",
-      "body": "March's national champion Michigan dropped in CBS Sports' early Top 25 And 1 rankings after five-star freshman big man Brandon McCoy Jr. went down with an injury, while preseason polls continue shifting across outlets as the transfer portal window closes. Four-star 2027 guard Tre Keith's commitment to Boston College over Mississippi State and Clemson was among the weekend's headline recruiting moves."
+      "headline": "DUKE TOPS ANDY KATZ'S FIRST MEN'S BASKETBALL POWER 44 FOR 2026-27 SEASON",
+      "body": "Six weeks before tip-off, ESPN's Andy Katz released his first men's college basketball Power 44 rankings and bracket predictions for 2026-27, slotting Duke at No. 1 as coverage shifts from portal and recruiting moves toward season previews. Most programs open practice in October with non-conference schedules still being finalized."
     },
     {
       "cat": "NBA",
-      "headline": "KAWHI LEONARD-TO-RAPTORS TRADE DETAILS REVEALED: CLIPPERS GET BRANDON INGRAM, GRADEY DICK, FIVE PICKS",
-      "body": "With the trade appearing imminent pending final league paperwork, reported terms have Toronto sending Brandon Ingram, Gradey Dick, and a package of picks \u2014 unprotected 2031 and 2033 firsts, 2030 and 2033 seconds, and a 2027 first-round swap \u2014 to the Clippers for Kawhi Leonard, who returns to the franchise he led to the 2019 title now that L.A.'s salary-cap circumvention penalties have cleared the way."
+      "headline": "NBA STRIPS CLIPPERS OF FIVE FIRST-ROUND PICKS, FINES BALLMER $30 MILLION IN KAWHI LEONARD CAP PROBE",
+      "body": "The NBA concluded its investigation into alleged salary-cap circumvention tied to Kawhi Leonard's since-completed move away from the Clippers, stripping Los Angeles of five first-round draft picks and fining owner Steve Ballmer $30 million — one of the league's harshest cap-related penalties on record."
     },
     {
       "cat": "NFL",
-      "headline": "TUA TAGOVAILOA OFFICIALLY NAMED FALCONS' WEEK 1 STARTER OVER INJURED MICHAEL PENIX JR.",
-      "body": "Atlanta officially handed the keys to its offense to Tua Tagovailoa for the season opener against Pittsburgh, signed on a one-year, near-minimum deal after Miami released him, while first-round pick Michael Penix Jr. continues recovering from a season-ending ACL injury. It sets up a quarterback competition to watch once Penix is healthy, with Atlanta running a bridge plan at the position for 2026."
+      "headline": "PATRIOTS SIGN CB CHRISTIAN GONZALEZ TO 4-YEAR, $135M EXTENSION AHEAD OF SEAHAWKS OPENER",
+      "body": "New England locked up cornerback Christian Gonzalez on a four-year, $135 million extension one day before Wednesday's NFL Kickoff Game at Seattle — a Super Bowl LX rematch after the Seahawks beat the Patriots 29-13 in February. Kickoff is 5:20 PM PT on NBC."
     },
     {
       "cat": "NCAA CFB",
-      "headline": "MICHIGAN NEEDS CONTROVERSIAL HAIL MARY TO ESCAPE WESTERN MICHIGAN 13-12 AS LSU ROUTS CLEMSON 51-10",
-      "body": "Michigan avoided a Week 1 upset only after an extra second was put back on the clock for a game-winning Hail Mary against Western Michigan, while LSU throttled Clemson 51-10 \u2014 holding the Tigers to -10 rushing yards at one point \u2014 and No. 1 Ohio State routed Ball State 56-3 behind Julian Sayin's 320 yards and three touchdowns. FCS upsets continued too, with Idaho State topping Utah State 29-17 for the season's third FCS-over-FBS win."
+      "headline": "SEC LOOKS INTO LSU AFTER LANE KIFFIN SIGNS PLAYERS CUT FROM NFL CAMPS",
+      "body": "The SEC is reviewing LSU's roster-building tactics, including the program's conference standing, after coach Lane Kiffin signed several players recently cut from NFL training camp rosters — a legal but conference-rattling maneuver that came days after LSU's 51-10 Week 1 rout of Clemson vaulted the Tigers up national power rankings."
     }
   ],
   "sports": [
@@ -89,47 +65,47 @@
       "team": "WASHINGTON HUSKIES FOOTBALL",
       "pill": "W 24-10",
       "pillClass": "s-w",
-      "detail": "No. 17 Washington beat Washington State 24-10 in the 118th Apple Cup Sunday at Husky Stadium; Demond Williams Jr. threw for 268 yards and a touchdown and added a 5-yard rushing score. Washington leads the all-time series 78-34-6 and hosts Utah State next Saturday, Sept. 12."
+      "detail": "No. 17 Washington beat Washington State 24-10 in the 118th Apple Cup Sunday at Husky Stadium; Demond Williams Jr. threw for 268 yards and a touchdown and added a rushing score. Huskies host Utah State next, Saturday, Sept. 12, 12:30 PM PT on BTN."
     },
     {
       "team": "WASHINGTON HUSKIES BASKETBALL",
       "pill": "OFFSEASON",
       "pillClass": "s-up",
-      "detail": "Texas Tech transfer LeJuan Watts (11.8 pts, 6.0 reb last season) and guard Harun Zrno, formerly of Rutgers, continue building out Danny Sprinkle's third roster; Wesley Yates III returns as the team's leading returning scorer. On the women's side, Sayvia Sellers dropped 24 points in an 84-75 win over Illinois to sweep UW's first Big Ten road trip."
+      "detail": "Texas Tech transfer LeJuan Watts (11.8 pts, 6.0 reb last season) and guard Harun Zrno continue building out coach Danny Sprinkle's roster. Washington added a road exhibition at Boise State on Oct. 17 before hosting rival Washington State on Oct. 25."
     },
     {
       "team": "SEATTLE SEAHAWKS",
       "pill": "NEXT: WED",
       "pillClass": "s-up",
-      "detail": "The defending Super Bowl LX champs host New England in Wednesday's NFL Kickoff Game (5:20 PM PT, NBC) at Lumen Field \u2014 a rematch of Seattle's 29-13 title-game win. Seattle's 53-man roster is set, with newly signed OT Bobby Hart on an early practice squad."
+      "detail": "The defending Super Bowl LX champs host New England in Wednesday's NFL Kickoff Game (5:20 PM PT, NBC) at Lumen Field — a rematch of Seattle's 29-13 title-game win. The Patriots enter having just signed CB Christian Gonzalez to a 4-year, $135M extension."
     },
     {
       "team": "DETROIT PISTONS",
       "pill": "OFFSEASON",
       "pillClass": "s-up",
-      "detail": "Jalen Duren's restricted free agency standoff drags into September \u2014 Detroit's five-year offer (~$35M/year) remains roughly $5M annually below the third-team All-NBA center's ask of $40M+. Season opens at Boston, Tuesday, Oct. 20."
+      "detail": "Jalen Duren's restricted free agency standoff drags into September — Detroit's five-year, ~$35M/year offer remains roughly $5M annually below the All-NBA center's ask. Duren could play on his $9.6M qualifying offer and reach unrestricted free agency next summer. Season opens at Boston, Tuesday, Oct. 20."
     },
     {
       "team": "SEATTLE MARINERS",
-      "pill": "W 2-0",
-      "pillClass": "s-w",
-      "detail": "Seattle (67-78, 3rd in the AL West) beat Oakland 2-0 Sunday behind eight scoreless innings and nine strikeouts from Bryan Woo, salvaging the finale of a series they otherwise dropped. Off Monday, they host Texas Tuesday to open a new series."
+      "pill": "NEXT: TONIGHT",
+      "pillClass": "s-up",
+      "detail": "Seattle (67-77, 3rd in the AL West) opens a three-game homestand against Texas Tuesday night at T-Mobile Park (6:40 PM MT), a step back from last year's AL West title as the regular season winds down toward its Sept. 27 finale."
     }
   ],
   "watchlist": [
-    "Markets reopen Tuesday after Labor Day \u2014 first chance for the S&P 500 to price in the weekend's Hormuz escalation and Friday's blowout jobs report",
-    "CPI data Thursday \u2014 watch for early pass-through from oil's move above $90 WTI into the energy component",
-    "FOMC meeting this month \u2014 rate-hike odds sitting near a coin flip after Waller's push-back on Friday's payrolls beat",
-    "Seahawks host New England in the NFL Kickoff Game \u2014 Wednesday, Sept. 9, Lumen Field, Super Bowl LX rematch",
-    "Mariners host Texas \u2014 Tuesday, Sept. 8, T-Mobile Park, looking to build on Sunday's shutout win"
+    "CPI data Friday, Sept. 11, 8:30 AM ET — first real read on how oil's spike above $90 WTI is feeding into headline inflation",
+    "FOMC meeting Sept. 15-16 — rate decision Wednesday, Sept. 16 at 2:00 PM ET with hike/hold odds still split",
+    "10-year Treasury yield near 4.81% — a sustained break above 4.8% is the level analysts are flagging as a risk-asset tripwire",
+    "Seahawks host Patriots in the NFL Kickoff Game — Wednesday, Sept. 9, 5:20 PM PT, Lumen Field, Super Bowl LX rematch",
+    "Mariners host Rangers — Tuesday, Sept. 8, T-Mobile Park, opening a season-closing homestand"
   ],
   "deepDive": {
-    "title": "Why Oil Keeps Trading When Wall Street Doesn't: Continuous Markets and the Holiday Gap",
+    "title": "Oil at $99, Yields at 4.81%: How a Supply Shock Becomes a Fed Problem",
     "content": [
-      "Today is Labor Day, so the NYSE, Nasdaq, and U.S. Treasury market are all closed \u2014 yet WTI and Brent both moved sharply higher over the weekend as the U.S. and Iran traded tanker strikes in the Strait of Hormuz. That asymmetry, where one market freezes while another keeps repricing in real time, is the most useful lens for understanding what Tuesday's reopen will actually look like. It won't be a fresh reaction to a single headline; it will be equities catching up all at once to everything that happened while they were shut.",
-      "The mechanism is straightforward: crude trades nearly continuously through ICE (Brent) and CME's Globex system (WTI), each with only a brief nightly technical reset, while listed U.S. equities only trade during set exchange hours and close entirely on holidays like Labor Day. Geopolitical risk doesn't pause for a calendar, so continuous futures markets let new information get priced the moment it happens \u2014 which is exactly how WTI reached above $92 and Brent neared $98 this weekend without a single U.S. stock trading. Equity index futures, like the E-mini S&P, trade nearly as continuously and function as the bridge that lets traders gauge Monday's news before Tuesday's cash open.",
-      "What's easy to miss is that a post-holiday gap isn't noise \u2014 it's information that had nowhere else to go. In October 1987, a weekend of overseas selling and a dollar policy dispute compounded into Black Monday partly because U.S. markets had no continuous mechanism to absorb the news gradually; more recent holiday gaps, like moves following weekend Middle East strikes in past years, show the same pattern at smaller scale: futures markets do the price discovery first, and the cash market's opening print is really just it catching up. The size of that gap is a direct measure of how much information built up during the closure.",
-      "For Tuesday, that means the S&P's opening move should be read as one combined reaction to both Friday's jobs report and the weekend's Hormuz escalation, not a clean signal about either one in isolation \u2014 expect elevated volume and volatility in the first hour as the market sorts out which story is driving price. It also raises the stakes on Thursday's CPI print: oil's move is already embedded in futures markets days before it can show up in a government inflation release, so by the time CPI prints, the market will already have partially traded the outcome it's supposed to measure."
+      "Two numbers defined Tuesday's session: Brent crude touching $99.46 after Houthi strikes on Saudi energy facilities, and the 10-year Treasury yield pushing toward 4.81%, a level analysts are flagging as a threshold that could strain other asset classes. These aren't separate stories — they're the same story viewed from two markets. An oil shock five days before a CPI print and just over a week before an FOMC decision doesn't just move gas prices; it moves the market's entire read on where the Fed's reaction function is headed, and that read shows up first in the bond market.",
+      "The mechanism runs through the CPI basket and the term premium. Energy carries roughly a 7% direct weight in headline CPI, and a sustained move above $90 WTI typically shows up in gasoline and utility prices within four to eight weeks, plus a slower indirect drag through transportation and input costs across nearly every other category. When traders expect that inflation path to run hotter, they demand more compensation for holding longer-dated bonds — the 'term premium' — which pushes the 10-year yield higher independent of what the Fed does with its overnight rate target.",
+      "What's easy to miss is that the Fed doesn't automatically react to supply-shock inflation the way it does to demand-driven inflation — in theory. During the 1990 Gulf War oil shock and again after Russia's 2022 invasion of Ukraine sent CPI to 9.1%, policymakers initially tried to distinguish a one-time price-level shift from a lasting inflation problem. In practice, both episodes forced the Fed's hand anyway, because a shock large enough or persistent enough starts shifting the public's inflation expectations — and once expectations de-anchor, the 'look through it' option disappears and rate hikes follow regardless of the shock's origin.",
+      "That's the lens for the next ten days. Friday's CPI print will show how much of this oil move has already passed through, but the more important number to watch is what happens to inflation expectations — breakevens and survey data — not the headline print itself. If expectations stay anchored, the Fed has room to treat this as noise heading into the September 15-16 meeting, consistent with rate-decision odds still sitting near a coin flip. If they don't, a hold becomes much harder to justify, and Tuesday's 4.81% could look like the early edge of a bigger move rather than a ceiling."
     ]
   }
 }
