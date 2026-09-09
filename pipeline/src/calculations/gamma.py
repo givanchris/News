@@ -19,6 +19,15 @@ RISK_FREE_RATE = 0.045
 CONTRACT_MULTIPLIER = 100
 
 
+def _is_positive_finite(value: object) -> bool:
+    """Return whether a feed value is numeric, finite, and greater than zero."""
+    try:
+        number = float(value)
+    except (TypeError, ValueError):
+        return False
+    return math.isfinite(number) and number > 0
+
+
 def _norm_pdf(x: float) -> float:
     return math.exp(-0.5 * x * x) / math.sqrt(2 * math.pi)
 
@@ -26,9 +35,7 @@ def _norm_pdf(x: float) -> float:
 def bs_gamma(spot: float, strike: float, t_years: float, iv: float,
              r: float = RISK_FREE_RATE) -> Optional[float]:
     """Black-Scholes gamma (identical for calls and puts at the same strike)."""
-    if spot is None or strike is None or t_years is None or iv is None:
-        return None
-    if spot <= 0 or strike <= 0 or t_years <= 0 or iv <= 0:
+    if not all(_is_positive_finite(value) for value in (spot, strike, t_years, iv)):
         return None
     d1 = (math.log(spot / strike) + (r + 0.5 * iv * iv) * t_years) / (iv * math.sqrt(t_years))
     return _norm_pdf(d1) / (spot * iv * math.sqrt(t_years))
@@ -38,7 +45,7 @@ def strike_gex(strike: float, oi: float, iv: float, spot: float,
                 t_years: float, is_call: bool) -> Optional[float]:
     """Dollar gamma exposure ($ per 1% underlying move) for one strike's open interest."""
     g = bs_gamma(spot, strike, t_years, iv)
-    if g is None or oi is None or pd.isna(oi) or oi <= 0:
+    if g is None or not _is_positive_finite(oi):
         return None
     dollar_gamma = g * float(oi) * CONTRACT_MULTIPLIER * spot * spot * 0.01
     return dollar_gamma if is_call else -dollar_gamma
@@ -60,7 +67,7 @@ def _add_chain_to_totals(
             k = row.get("strike")
             oi = row.get("openInterest")
             iv = row.get("impliedVolatility")
-            if k is None or pd.isna(k):
+            if not _is_positive_finite(k):
                 continue
             bucket = min(strikes, key=lambda s: abs(s - float(k)))
             if abs(bucket - float(k)) > bucket_size:
@@ -104,7 +111,7 @@ def gamma_profile_by_strike(
     """
     if calls is None or puts is None or calls.empty or puts.empty:
         return None
-    if spot is None or spot <= 0:
+    if not _is_positive_finite(spot):
         return None
     try:
         exp_date = date.fromisoformat(str(expiration)[:10])
@@ -134,7 +141,7 @@ def gamma_profile_near_term(
     wildly overweights one strike) — summing several near-dated expirations
     gives a profile closer to what "front-month" positioning actually means.
     """
-    if not chains or spot is None or spot <= 0:
+    if not chains or not _is_positive_finite(spot):
         return None
 
     center = round(spot / bucket_size) * bucket_size

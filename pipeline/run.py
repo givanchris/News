@@ -182,6 +182,12 @@ def cmd_market(args: argparse.Namespace) -> None:
     spy_chains = provider.get_options_chains("SPY", max_expirations=8)
     if spy_chains:
         gamma_profile = G.gamma_profile_near_term(spy_chains, spy_chains[0].spot)
+        if gamma_profile is None:
+            print("· Skipped fresh gamma snapshot — SPY gamma inputs were invalid; retaining last valid chart",
+                  file=sys.stderr)
+    else:
+        print("· Skipped fresh gamma snapshot — no SPY options chains; retaining last valid chart",
+              file=sys.stderr)
 
     universe = args.tickers if args.tickers else config.WATCHLIST
     print(f"→ Watchlist ({len(universe)} tickers)", file=sys.stderr)
