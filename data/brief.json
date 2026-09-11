@@ -1,87 +1,63 @@
 {
-  "lastUpdated": "2026-09-11T16:30:17-06:00",
+  "lastUpdated": "2026-09-11T16:35:13-06:00",
   "market": {
-    "sp500": {
-      "price": "7657",
-      "change": "+0.86%",
-      "dir": "up"
-    },
-    "nasdaq": {
-      "price": "29368",
-      "change": "+0.91%",
-      "dir": "up"
-    },
-    "yield": {
-      "price": "4.97%",
-      "change": "+3 bps",
-      "dir": "down"
-    },
-    "wti": {
-      "price": "$100",
-      "change": "-3.13%",
-      "dir": "down"
-    },
-    "gold": {
-      "price": "$4390",
-      "change": "+1.04%",
-      "dir": "up"
-    },
-    "dxy": {
-      "price": "99.10",
-      "change": "-0.05%",
-      "dir": "down"
-    }
+    "sp500": { "price": "7,657", "change": "+0.86%", "dir": "up" },
+    "nasdaq": { "price": "29,368", "change": "+0.91%", "dir": "up" },
+    "yield": { "price": "4.97%", "change": "+3 bps", "dir": "down" },
+    "wti": { "price": "$100", "change": "-3.13%", "dir": "down" },
+    "gold": { "price": "$4,390", "change": "+1.04%", "dir": "up" },
+    "dxy": { "price": "99.10", "change": "-0.05%", "dir": "down" }
   },
   "stories": [
     {
-      "cat": "COMMODITIES",
-      "headline": "WTI TOPS $104, STOCKS FALL FOR A FOURTH STRAIGHT SESSION",
-      "body": "WTI crude settled up 8.06% to roughly $104 a barrel and Brent pushed above $107, both the highest closes since spring, as an escalating Middle East war raised fears of disrupted supply. The S&P 500 fell 0.58% to 7,591.70 and the Nasdaq-100 dropped 1.08% to 29,104, marking a fourth consecutive down day for the major averages.",
-      "explain": "Oil is a direct input cost across the economy \u2014 transportation, plastics, agriculture, shipping \u2014 so a move above $100 raises headline and core inflation expectations right as the Fed weighs its next move. Higher expected inflation pushes up the term premium investors demand on long-dated Treasuries, which raises the discount rate applied to future corporate earnings and compresses equity valuations even before a single company's profit outlook changes. That's the direct mechanical link between a war half a world away and a red day on the S&P."
+      "cat": "MACRO",
+      "headline": "AUGUST CPI COMES IN HOT, FED HIKE ODDS JUMP TO 90%",
+      "body": "The August CPI rose 0.4% month-over-month and 3.4% year-over-year, matching headline estimates, but core CPI (ex-food and energy) climbed 0.3%, slightly above forecast. CME FedWatch now prices roughly a 90% probability of a quarter-point hike at next week's FOMC meeting, up from about 70% before the report.",
+      "explain": "Core CPI strips out volatile food and energy prices to isolate underlying, stickier inflation trends, so a hotter-than-expected core print tells the Fed that price pressure isn't just a passthrough from oil or food shocks. Markets price rate decisions off the fed funds futures curve, and a small miss on core can swing implied probabilities sharply when the market was already split. That's why a beat of just a tenth of a point moved hike odds by 20 percentage points in a single session."
     },
     {
       "cat": "CENTRAL BANKS",
-      "headline": "HOT PPI SENDS 10-YEAR YIELD TO 4.94%, PUSHES FED HIKE ODDS TO 73%",
-      "body": "August producer prices rose 0.4% month-over-month as expected, but the year-over-year rate jumped to 5.4% from 4.8% in July \u2014 hotter than forecast. The 10-year Treasury yield jumped 11 basis points to 4.94%, its highest level since October 2023, and CME FedWatch now prices a 73% probability of a quarter-point hike at next week's FOMC meeting, with Friday's CPI report (consensus +0.4% MoM, +3.4% YoY) seen as the deciding factor.",
-      "explain": "PPI measures price changes at the wholesale level before they reach consumers, so an accelerating year-over-year print signals cost pressure is still building in the pipeline rather than fading \u2014 the opposite of what the Fed wants to see this late in a cycle. Fed-hike odds are priced directly off the fed funds futures curve, and a hawkish repricing there (a hike where a hold was expected weeks ago) forces a rapid revaluation of rate-sensitive assets, hitting long-duration growth stocks hardest. The Fed's dilemma is that a supply shock (oil) is doing the inflationary work that would normally require excess demand, and rate hikes are a blunt tool against a supply problem."
+      "headline": "10-YEAR YIELD CLIMBS TO 4.97%, WITHIN STRIKING DISTANCE OF 5%",
+      "body": "The 10-year Treasury yield rose to 4.97%, its highest level since 2023, capping a week in which it climbed nearly 20 basis points amid a broader global bond selloff. Today's CPI print added roughly 3 basis points on top of Thursday's 11-basis-point jump triggered by a hot PPI reading.",
+      "explain": "Long-term yields reflect both the expected path of short-term rates and a term premium investors demand for holding duration risk over a longer horizon, and both components have been rising together this week as hike odds increase and investors demand more compensation for holding bonds through a period of resurgent inflation. A 10-year yield near 5% directly raises the discount rate used to value future corporate cash flows, which is why equity investors watch this level as a valuation ceiling for the broader market, not just a bond-market curiosity."
+    },
+    {
+      "cat": "COMMODITIES",
+      "headline": "OIL EASES OFF $104 HIGH AS IRAN SIGNALS HORMUZ DIPLOMACY",
+      "body": "WTI crude fell 3.13% to roughly $100 a barrel Friday after touching a spring high near $104 on Thursday, as Iranian state media said Tehran would meet Gulf states in Oman to discuss the Strait of Hormuz. Even with the pullback, WTI is still up 9.4% for the week amid the broader escalation in the region.",
+      "explain": "The Strait of Hormuz carries roughly a fifth of global oil supply, so even a diplomatic signal that transit risk might ease can knock several dollars off the price without any actual barrel of oil changing hands — markets are pricing the probability of disruption, not just current flows. That same risk premium is why the weekly gain of 9.4% persists even after Friday's retreat: traders are unwilling to fully unwind the hedge until the underlying tension is resolved, not just talked about."
     },
     {
       "cat": "MARKETS",
-      "headline": "GOLD SINKS 2% AS SURGING YIELDS AND A STRONGER DOLLAR OVERPOWER SAFE-HAVEN DEMAND",
-      "body": "Gold fell 2.06% to roughly $4,360 an ounce even as war fears intensified, as the DXY dollar index rose 0.36% to 99.09 and the 10-year yield's jump to 4.94% raised the opportunity cost of holding a non-yielding asset.",
-      "explain": "Gold typically benefits from geopolitical fear, but it also competes directly with Treasuries for safe-haven capital \u2014 and Treasuries now yield nearly 5% with no storage cost. When real and nominal yields spike alongside a stronger dollar, that combination usually overwhelms any war-driven safe-haven bid, because gold pays no coupon and a stronger dollar makes it more expensive for foreign buyers. Today's move shows the rates channel currently dominating the geopolitical-fear channel in gold's price action."
+      "headline": "STOCKS SNAP FOUR-DAY SKID DESPITE HAWKISH SETUP",
+      "body": "The S&P 500 rose 0.86% to 7,657 and the Nasdaq-100 gained 0.91% to 29,368, both halting a four-session losing streak, as easing oil prices offset a CPI report that all but locked in a Fed rate hike next week. Gold still added 1.04% to $4,390 even as the dollar index dipped 0.05% to 99.10.",
+      "explain": "A rate hike that is fully priced in before it happens tends to do less damage to risk assets than a surprise, because markets have already spent the days beforehand repricing valuations and positioning around it — the CPI report mostly confirmed what Thursday's PPI print had already signaled. That's why stocks could rally on a day when hike odds jumped to 90%: the marginal news was the retreat in oil, not the inflation data itself, since the oil move directly changes the outlook for both consumer spending and future inflation prints."
     },
     {
       "cat": "EARNINGS",
-      "headline": "ORACLE JUMPS 6% AFTER-HOURS ON EARNINGS BEAT",
-      "body": "Oracle reported fiscal Q1 adjusted EPS of $1.92 and revenue of $19.35 billion, both ahead of Street estimates, sending shares up roughly 6% in extended trading even as the broader market closed lower for a fourth straight session.",
-      "explain": "Oracle's cloud infrastructure backlog is watched as a bellwether for AI-driven capital spending, so a beat here reassures investors that hyperscaler demand \u2014 a key pillar of the broader 'AI trade' \u2014 remains intact even as macro headwinds like oil and yields weigh on the index-level tape. The after-hours pop illustrates how a strong idiosyncratic result can decouple from a market selloff driven by top-down macro forces rather than company fundamentals."
-    },
-    {
-      "cat": "MACRO",
-      "headline": "FOURTH STRAIGHT LOSING SESSION AS OIL, RATES AND INFLATION FEARS COMPOUND",
-      "body": "Thursday marked a fourth consecutive down day for the Dow, S&P 500 and Nasdaq as investors absorbed the combination of $100-plus oil, a 10-year yield near a three-year high, and a hotter-than-expected wholesale inflation print \u2014 all landing one day before Friday's CPI report and roughly a week before the Fed's next rate decision.",
-      "explain": "When several negative catalysts compound in the same week \u2014 a supply shock, a hawkish repricing of Fed odds, and rising discount rates \u2014 index-level losses tend to understate how much of the move is concentrated in the most rate-sensitive, highest-multiple names. That's why watching sector dispersion beneath the headline index number, not just the S&P's daily percentage change, tends to say more about which risk is actually driving the tape."
+      "headline": "ORACLE JUMPS AS CLOUD REVENUE SURGES 62%, GUIDANCE RAISED",
+      "body": "Oracle reported fiscal Q1 adjusted EPS of $1.92 on revenue of $19.35 billion, both ahead of Street estimates, as cloud infrastructure revenue soared 62% to $11.61 billion. The company raised its full-year EPS guidance to $8.10 and its revenue outlook to roughly $90 billion, sending shares sharply higher.",
+      "explain": "Oracle's cloud infrastructure backlog is one of the market's cleanest proxies for hyperscaler AI capital spending, so a 62% growth rate combined with raised full-year guidance reassures investors that enterprise AI demand is durable rather than front-loaded. That reassurance matters more on a day when macro data (hot CPI, near-5% yields) would otherwise argue for compressing high-multiple growth stocks, showing how a strong idiosyncratic result can decouple a single name from top-down macro pressure."
     },
     {
       "cat": "MCBB",
-      "headline": "ST. JOHN'S FORWARD BABACAR SANE GRANTED ELIGIBILITY VIA COURT ORDER",
-      "body": "A judge issued a temporary restraining order clearing St. John's forward Babacar Sane to play this season, the latest example of players using antitrust and due-process challenges to fight NCAA eligibility rulings as the 2026-27 season approaches its November tip-off."
+      "headline": "ST. JOHN'S FORWARD BABACAR SANE GRANTED TEMPORARY ELIGIBILITY VIA COURT ORDER",
+      "body": "A New York Supreme Court judge issued a temporary restraining order allowing St. John's forward Babacar Sane to practice and work out with the Red Storm, after the NCAA denied his reinstatement application over prior G-League experience (112 games, 8.6 ppg for G League Ignite and two D-League affiliates). The order does not guarantee playing eligibility; a hearing set for October 1 will decide whether Sane can suit up for the 2026-27 season."
     },
     {
       "cat": "NBA",
-      "headline": "NBA RELEASES FULL 2026 PRESEASON SLATE AS OFFSEASON MOVES CONTINUE",
-      "body": "The league's preseason schedule tips off October 3 with Heat-Raptors in Quebec City and wraps October 16 with a Nuggets-Lakers matchup on ESPN. Houston's Fred VanVleet opted into his $25 million player option, while the offseason's two biggest storylines \u2014 LeBron James joining Philadelphia and Giannis Antetokounmpo teaming with Miami \u2014 continue to reshape title odds ahead of training camp."
+      "headline": "SUNS CENTER MARK WILLIAMS OUT EXTENDED TIME AFTER SHOULDER SURGERY",
+      "body": "Phoenix center Mark Williams underwent surgery Thursday to repair a torn labrum in his left shoulder, suffered during an offseason workout, and will miss extended time. The injury news lands amid a quiet stretch of roster moves, with DeMar DeRozan (Nuggets) and Ben Simmons (Clippers) both signing one-year deals this week as teams round out camp rosters ahead of the Oct. 24 tip-off."
     },
     {
       "cat": "NFL",
       "headline": "SEAHAWKS SURVIVE WITHOUT DARNOLD, TOP PATRIOTS 13-10 IN SUPER BOWL REMATCH",
-      "body": "Backup Drew Lock led Seattle to a 13-10 win over New England in the NFL's Wednesday-night kickoff game after starter Sam Darnold exited with a hip injury. The defending Super Bowl champions open 2026 at 1-0, though Darnold could miss multiple weeks."
+      "body": "Backup Drew Lock led Seattle to a 13-10 win over New England in the season-opening Kickoff Game, a rematch of Super Bowl LX, after starter Sam Darnold exited with a hip injury on Seattle's first drive. Darnold is expected to miss Week 2; Patriots QB Drake Maye threw three interceptions in the loss, and WR A.J. Brown (ankle) didn't play."
     },
     {
       "cat": "NCAA CFB",
-      "headline": "NO. 7 MIAMI HOSTS FAMU IN WEEK 2 HOME OPENER AT HARD ROCK STADIUM",
-      "body": "Miami, ranked No. 7 in the AP poll, plays its first home game of the season Thursday night against Florida A&M as Week 2 gets underway. Elsewhere, Rutgers turns to first-time starter AJ Surace at quarterback for Friday's trip to Boston College."
+      "headline": "BAYLOR'S DJ LAGWAY RULED OUT FOR WEEK 2 WITH ANKLE SPRAIN",
+      "body": "Baylor quarterback DJ Lagway will not play Saturday against Prairie View A&M after spraining his ankle in the Bears' 17-16 Week 1 loss to Auburn, where he was carried to the locker room at halftime before returning to nearly rally Baylor to a win. Backup Nate Bennett will start in Waco as Lagway is considered day-to-day."
     }
   ],
   "sports": [
@@ -89,46 +65,47 @@
       "team": "WASHINGTON HUSKIES FOOTBALL",
       "pill": "W 24-10",
       "pillClass": "s-w",
-      "detail": "No. 17 Washington beat Washington State 24-10 in the Apple Cup opener Sept. 6; Demond Williams Jr. threw for 268 yards and a touchdown. Next: hosts Utah State, Saturday, Sept. 12."
+      "detail": "No. 17 Washington beat Washington State 24-10 in the Apple Cup season opener Sept. 6; QB Demond Williams Jr. threw for 268 yards and a touchdown. Next: hosts Utah State, Saturday, Sept. 12."
     },
     {
       "team": "WASHINGTON HUSKIES BASKETBALL",
       "pill": "OFFSEASON",
       "pillClass": "s-up",
-      "detail": "Added Texas Tech transfer LeJuan Watts (11.8 ppg, 6.0 reb last season) and guard commit Harun Zrno as the roster rebuild continues under new staff. Next: exhibition at Boise State, Oct. 17."
+      "detail": "Added Texas Tech transfer LeJuan Watts (11.8 ppg, 6.0 reb last season) and Rutgers transfer Harun Zrno as the roster rebuild continues under Danny Sprinkle, who also added a new assistant coach this offseason."
     },
     {
       "team": "SEATTLE SEAHAWKS",
       "pill": "W 13-10",
       "pillClass": "s-w",
-      "detail": "Beat New England 13-10 in Wednesday night's Super Bowl LX rematch after starter Sam Darnold left with a hip injury; backup Drew Lock closed it out. Seattle opens the defense of its title at 1-0."
+      "detail": "Beat the Patriots 13-10 in the Super Bowl LX rematch to open the season 1-0, but starter Sam Darnold left with a hip injury and is expected to miss Week 2; Drew Lock will likely start in his place."
     },
     {
       "team": "DETROIT PISTONS",
       "pill": "OFFSEASON",
       "pillClass": "s-up",
-      "detail": "Coming off a franchise-best 60-22 season and the East's No. 1 seed, Detroit's restricted free agency standoff with center Jalen Duren remains unresolved with training camp about three weeks out."
+      "detail": "Fresh off a franchise-best 60-22 season and a No. 1 seed in the East, Detroit still hasn't re-signed restricted free agent center Jalen Duren with training camp three weeks away; backup Reed had his $5.6M deal fully guaranteed in the meantime."
     },
     {
       "team": "SEATTLE MARINERS",
-      "pill": "TODAY 4:10 PT",
-      "pillClass": "s-up",
-      "detail": "Beat Texas 3-2 Wednesday to take the series lead; the two teams play the rubber match today at T-Mobile Park (Logan Gilbert vs. Jacob deGrom), first pitch 4:10 PM PT / 5:10 PM MT."
+      "pill": "68-78",
+      "pillClass": "s-l",
+      "detail": "Sit 3rd in the AL West with playoff hopes fading; called up top prospect Michael Arroyo and got 11 strikeouts over 7 innings from Logan Gilbert against Texas on Sept. 10 as the front office evaluates young talent down the stretch."
     }
   ],
   "watchlist": [
-    "CPI report Friday, 8:30 AM ET \u2014 consensus +0.4% MoM, +3.4% YoY; will decide whether Fed hike odds (now 73%) hold or fade",
-    "FOMC decision next week \u2014 markets are now pricing a rate hike, not a hold, for the first time this cycle",
-    "Mariners vs. Rangers rubber match \u2014 today, 4:10 PM PT, T-Mobile Park",
-    "Huskies host Utah State \u2014 Saturday, Sept. 12, Husky Stadium"
+    "FOMC rate decision Wednesday — CME FedWatch prices ~90% odds of a 25bp hike after today's hot CPI, up from ~70% pre-report",
+    "Huskies host Utah State — Saturday, Sept. 12, Husky Stadium",
+    "No. 23 Missouri at Kansas — Friday night, Week 2 top-25 matchup",
+    "Baylor vs. Prairie View A&M — Saturday; DJ Lagway (ankle) out, Nate Bennett starts",
+    "Mariners battling playoff odds in AL West/wild-card race down the stretch"
   ],
   "deepDive": {
-    "title": "Why a War-Driven Oil Spike Is the Fed's Hardest Inflation Problem",
+    "title": "Why a 10-Year Yield Near 5% Is a Valuation Problem, Not Just a Bond-Market Story",
     "content": [
-      "Today's selloff wasn't primarily an earnings story \u2014 it was a supply story. WTI settled up 8.06% near $104 a barrel after Middle East hostilities threatened tanker traffic and export infrastructure, and that single move did more damage to sentiment than any single company's guidance. It landed one day before Friday's CPI print and about a week before the Fed's next meeting, where the market now prices a 73% chance of a hike rather than a hold \u2014 a scenario that looked remote just weeks ago. Understanding why an oil shock moves a central bank matters more right now than tracking the shock itself.",
-      "The mechanism runs through the CPI basket and the term premium. Energy carries a direct weight in headline CPI, and a sustained move above $100 WTI typically shows up in gasoline and utility prices within four to eight weeks, plus a slower indirect drag through transportation and input costs across nearly every other good. Today's producer price data already shows that pass-through beginning: the year-over-year PPI rate jumped to 5.4% from 4.8% in July. When traders expect that pipeline pressure to reach consumers, they demand more compensation for holding longer-dated bonds, pushing the 10-year yield to 4.94% \u2014 its highest since October 2023 \u2014 independent of anything the Fed has actually done yet.",
-      "What's easy to miss is that supply-shock inflation and demand-shock inflation are economically different problems, even though they show up as the same CPI number. During the 1973 and 1979 oil embargoes, the Fed initially tried to treat the price jump as a one-time level shift rather than a lasting inflation problem \u2014 in both cases, that judgment proved wrong once elevated prices started shifting the public's inflation expectations. Once expectations de-anchor, a central bank loses the option to 'look through' the shock, because the cost of doing nothing becomes a wage-price spiral rather than a temporary price bump. Rate hikes don't fix a broken oil supply chain; they work by crushing demand hard enough elsewhere in the economy to offset it.",
-      "That's the lens for the next week. Friday's CPI print will show how much of this oil move has already passed through, but the number that matters more is what happens to inflation expectations, not the headline print itself. If expectations stay anchored, the Fed still has room to treat oil as a transitory shock even with wholesale prices running hot. If they don't, a hike becomes very hard to avoid \u2014 and today's move in gold, which fell 2% even as war fears intensified, suggests the market is already leaning toward the second outcome: yields and the dollar rising faster than fear can push safe-haven demand higher."
+      "Today's brief has two numbers doing the real work: a hot core CPI print and a 10-year Treasury yield sitting at 4.97%, its highest level since 2023. It's tempting to treat the yield move as a fixed-income footnote while the headline S&P gain of 0.86% gets the attention. But the two are mechanically linked, and understanding how a rising discount rate reshapes equity valuations — even on a day stocks go up — is the more durable lesson than any single day's percentage move.",
+      "The 10-year yield is built from two pieces: the market's expected average path of short-term rates over the next decade, and a term premium investors demand as compensation for the extra risk of locking up money that long. Both pieces moved together this week. Thursday's hot PPI print pushed Fed hike odds higher, lifting the expected-rates component; Friday's CPI confirmed it, adding another 3 basis points. When both components rise in the same direction rather than offsetting each other, the yield move tends to be more persistent, because it reflects a genuine repricing of the macro outlook rather than a single day's positioning shift.",
+      "Here's what most people miss: equity valuations are built on discounted future cash flows, and the discount rate applied to those cash flows moves nearly one-for-one with long-term yields. A stock trading at 25 times next year's earnings is implicitly betting that today's low discount rate persists; when the 10-year climbs from 4.5% to 5% over a matter of weeks, as it's done since summer, the present value of a dollar earned in year ten falls meaningfully more than the present value of a dollar earned next year. That's why growth stocks with earnings concentrated far in the future — not value stocks with near-term cash flows — are historically the most sensitive to this exact kind of yield move, even when the headline index looks fine.",
+      "That's also the tension sitting underneath today's rally: the S&P and Nasdaq-100 both rose because oil eased and Oracle's cloud beat reassured investors that AI-driven demand is real, not because the yield backdrop improved. If the Fed does hike next week as futures now imply, watch whether the 10-year yield actually breaks above 5% or instead stalls out on the news — a classic 'sell the rumor, buy the fact' pattern where the repricing has already happened. Either way, the next CPI print and the Fed's own dot plot next week will matter more for where equity valuations settle than any single day's headline move."
     ]
   }
 }
