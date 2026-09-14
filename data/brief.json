@@ -1,135 +1,86 @@
 {
-  "lastUpdated": "2026-09-14T16:30:18-06:00",
+  "lastUpdated": "2026-09-14T16:36:50-06:00",
   "market": {
-    "sp500": {
-      "price": "7620",
-      "change": "-0.48%",
-      "dir": "down"
-    },
-    "nasdaq": {
-      "price": "29127",
-      "change": "-0.82%",
-      "dir": "down"
-    },
-    "yield": {
-      "price": "4.96%",
-      "change": "-1 bps",
-      "dir": "up"
-    },
-    "wti": {
-      "price": "$102",
-      "change": "-1.23%",
-      "dir": "down"
-    },
-    "gold": {
-      "price": "$4337",
-      "change": "-0.77%",
-      "dir": "down"
-    },
-    "dxy": {
-      "price": "99.47",
-      "change": "+0.14%",
-      "dir": "up"
-    }
+    "sp500":  { "price": "7,621.54",  "change": "-0.46%", "dir": "down" },
+    "nasdaq": { "price": "28,872.85", "change": "-1.69%", "dir": "down" },
+    "yield":  { "price": "4.99%",     "change": "+3 bps", "dir": "down" },
+    "wti":    { "price": "$101.35",   "change": "+1.3%",  "dir": "up"   },
+    "gold":   { "price": "$4,284.70", "change": "-1.5%",  "dir": "down" },
+    "dxy":    { "price": "99.44",     "change": "+0.3%",  "dir": "up"   }
   },
   "stories": [
     {
-      "cat": "CENTRAL BANKS",
-      "headline": "FED HEADS INTO TUESDAY-WEDNESDAY MEETING WITH HIKE ODDS NEAR 85%",
-      "body": "The FOMC meets Tuesday and Wednesday, with a decision due Wednesday at 2 PM ET alongside a fresh Summary of Economic Projections and dot plot. Market-implied odds of a quarter-point hike sit near 85% following Friday's hotter-than-expected core CPI print, even as softer July hiring and retail-sales data keep a hold scenario alive.",
-      "explain": "The September meeting is one of four each year that comes with a Summary of Economic Projections, so Wednesday's release carries more information than the rate decision alone: the dot plot shows each policymaker's anonymous rate forecast for year-end and beyond, and shifts in the median dot function as guidance for where policy is headed even when the current move is already priced in. That's why a hike that's 85% expected can still move markets sharply if the dots signal a shallower or steeper path than investors assumed."
+      "cat": "MACRO",
+      "headline": "FED SEES ~90% ODDS OF FIRST RATE HIKE SINCE 2023 AS INFLATION RISK BUILDS",
+      "body": "Fed funds futures now price an 88-90% probability of a 25 bps hike when the FOMC concludes its two-day meeting Wednesday, which would be the central bank's first increase since 2023. The 10-year Treasury yield touched 5.01% intraday, its highest since October 2023, before settling near 4.99%, while the 2-year rose to 4.66%.",
+      "explain": "A hike now would reverse the Fed's recent easing cycle because $100+ oil and a hotter core CPI print (0.3% MoM vs. 0.2% expected) threaten to re-accelerate inflation just as the labor market has stayed resilient. Short-end yields like the 2-year move first because they track the expected policy path most directly, while the 10-year also carries a term/inflation premium. Higher policy rates raise the discount rate on future corporate cash flows, compressing valuations hardest on long-duration growth names — which is why the Nasdaq-100 fell nearly four times as much as the S&P 500 today."
     },
     {
       "cat": "GEOPOLITICS",
-      "headline": "HOUTHI FORCES SEIZE YEMENI PORT OF MOCHA, SAUDI SHUTS KEY PIPELINE AFTER ATTACKS",
-      "body": "Iran-backed Houthi forces captured the Yemeni port city of Mocha over the weekend, tightening their grip near the Bab el-Mandeb Strait, while Saudi Arabia's energy ministry confirmed it shut down a cross-country pipeline as a precaution after Thursday's attacks. Markets are closed until Monday, but the developments layer fresh supply-risk premium on top of Friday's already-elevated WTI level near $100.",
-      "explain": "Oil traders price geopolitical chokepoints on probability, not on actual barrels interrupted \u2014 a captured port near a strait carrying a meaningful share of global crude flows raises the implied odds of a disruption even before any tanker is turned away. That's the same mechanism that pushed WTI toward $104 last week before Friday's partial retreat, and it makes Monday's open a real test of whether markets treat this weekend's escalation as incremental risk or a genuine supply threat."
-    },
-    {
-      "cat": "TRADE",
-      "headline": "WHITE HOUSE ESCALATES CANADA TARIFFS: 50% LEVY MONDAY, BROADER BAN LATE SEPTEMBER",
-      "body": "A 50% U.S. tariff on Canadian goods including mattresses, motorboats, and golf carts takes effect Monday, Sept. 15, with a separate ban on Canadian dairy, most alcohol, and motorcycles set to begin Sept. 29. Canadian retailers are already relabeling shelves as a \"buy Canadian\" boycott reshapes grocery purchasing north of the border.",
-      "explain": "A tariff functions as a tax on the importer, and the incidence \u2014 how much gets passed to the end consumer versus absorbed by margins \u2014 depends on how substitutable the good is; a golf cart or motorboat has few close domestic substitutes at scale, so expect most of that 50% to show up in shelf prices rather than importer margins. The dairy and alcohol ban is a different tool entirely \u2014 a quantity restriction rather than a price one \u2014 and tends to show up as a supply gap and higher category-specific prices rather than a broad inflation print."
+      "headline": "OIL TOPS $100 AS ATTACKS HIT SAUDI PIPELINE NEAR HORMUZ",
+      "body": "WTI crude rose 1.3% to $101.35 and Brent traded near $105 after weekend attacks struck a Saudi Arabian pipeline, homes, and a mosque, forcing Saudi Arabia to shut its East-West pipeline. Crude is now at its highest level in roughly four months as the Iran conflict raises the odds of a regional supply disruption.",
+      "explain": "The East-West pipeline lets Saudi Arabia move crude to Red Sea terminals without transiting the Strait of Hormuz, so shutting it removes a key safety valve and raises the chance that any Hormuz disruption becomes a full supply shock rather than a reroutable one. Oil feeds directly into headline CPI through energy and transportation costs and indirectly into core goods and services — exactly the inflation channel the Fed is weighing two days before its rate decision."
     },
     {
       "cat": "MARKETS",
-      "headline": "STOCKS CLOSE OUT THE WEEK STRONG HEADING INTO A HEAVY CATALYST CALENDAR",
-      "body": "Friday's close left the S&P 500 at 7,657 (+0.86%) and the Nasdaq-100 at 29,368 (+0.91%), both snapping a four-session slide, heading into a week that stacks the FOMC decision, the BOJ meeting, and a new tariff deadline inside five trading days. Gold added 0.49% to $4,366 even as the dollar index slipped 0.03% to 99.12.",
-      "explain": "Markets typically discount known catalysts individually, but when several land in the same week \u2014 a live Fed decision, a foreign central bank hike, and a tariff deadline \u2014 realized volatility tends to run higher than any single-event pricing would suggest, because dealers must hedge against multiple simultaneous scenarios rather than one. That's part of why implied volatility gauges tend to tick up heading into weeks like this one, even before any of the actual news arrives."
+      "headline": "NASDAQ SLIDES 1.7% AS CHIP STOCKS LEAD AI-FEAR SELLOFF",
+      "body": "The Nasdaq-100 fell 1.69% to 28,872.85 after AI industry leaders publicly called for a slower development pace, spooking chip and hyperscaler names. The S&P 500 fell a more modest 0.46% to 7,621.54 and the Dow slipped 0.29%, with all three recovering somewhat off session lows.",
+      "explain": "Semiconductor and AI-infrastructure stocks carry some of the market's longest valuation duration, since their prices assume years of compounding capex and revenue growth — so any signal the buildout could slow forces a larger repricing than in the broader index. That concentration is why the AI-heavy Nasdaq-100 dropped nearly four times as much as the S&P 500 on the same day's news."
     },
     {
-      "cat": "CENTRAL BANKS",
-      "headline": "BANK OF JAPAN SET TO HIKE TO 1.25% THURSDAY, ADDING TO GLOBAL TIGHTENING PUSH",
-      "body": "Economists surveyed are nearly unanimous that the Bank of Japan will raise its policy rate 25 basis points to 1.25% at its Sept. 17-18 meeting, continuing the tightening path that began with the end of decades of near-zero rates. The BOJ decision lands just a day after the Fed's own move, giving global rates markets two central-bank catalysts within the same week.",
-      "explain": "Japan has historically been the world's largest exporter of cheap capital \u2014 Japanese investors borrow yen at low rates and buy higher-yielding assets abroad in what's called the carry trade \u2014 so a BOJ hike raises the cost of that funding leg and can pull capital back toward yen assets. When that unwind happens quickly, as it did in August 2024, it can spill into global equity and currency volatility well beyond Japan, which is why a widely expected 25bp move still gets flagged as a risk event."
+      "cat": "COMMODITIES",
+      "headline": "GOLD SINKS 1.5% DESPITE MIDEAST WAR RISK AS RATE-HIKE BETS DOMINATE",
+      "body": "Gold fell 1.5% to $4,284.70 an ounce even as the Saudi pipeline attacks escalated regional tensions, with the metal's usual safe-haven bid overwhelmed by expectations the Fed hikes rates Wednesday. Silver also slid, dropping to around $63 an ounce.",
+      "explain": "Gold pays no yield, so its opportunity cost rises directly with real interest rates — when hike odds jump, as they did to ~90% today, nominal yields rise faster than inflation expectations, pushing real yields up and making a zero-income asset less attractive even as headline risk climbs. Today is a clean case of the rate channel beating the safe-haven channel, which historically only flips when a shock threatens systemic growth or liquidity, not just supply."
+    },
+    {
+      "cat": "MACRO",
+      "headline": "AUGUST CPI MATCHES FORECASTS AT 3.4% BUT CORE PRINT RUNS HOT",
+      "body": "Headline CPI rose 0.4% month-over-month and 3.4% year-over-year in August, both in line with consensus, but core CPI climbed 0.3% versus the 0.2% expected, even as core inflation eased slightly to 2.4% annually. The hotter core print, landing two days before this week's Fed meeting, reinforced hike expectations.",
+      "explain": "Core CPI strips out food and energy to isolate underlying price pressure that's less driven by volatile commodity swings like this week's oil spike, which is why a core beat matters more to the Fed's reaction function than an in-line headline number. Coming right before the FOMC decision, the report effectively closed the door on the Fed holding rates steady this week."
     },
     {
       "cat": "MCBB",
-      "headline": "FLORIDA, ILLINOIS HEADLINE PRESEASON TOP 25 AS TRANSFER PORTAL RESHAPES CONTENDERS",
-      "body": "Florida checks in at No. 1 in CBS Sports' preseason Top 25 And 1, projected to return six of its top seven scorers from last season's SEC champion and No. 1 NCAA Tournament seed, while Illinois debuts at No. 2 in FOX Sports' poll \u2014 the Illini's highest preseason ranking since 1985 \u2014 after a wave of transfer additions. North Carolina, Missouri, and Gonzaga also landed notable portal hauls as programs finalize rosters ahead of November tip-off."
+      "headline": "DUKE HEADLINES PRESEASON POWER RANKINGS AS 2026-27 SLATE TAKES SHAPE",
+      "body": "Duke topped Andy Katz's first Power 44 rankings for the 2026-27 season, and the Big East released its full conference schedule. The early buzz comes five months after Michigan beat UConn for the 2026 national title at Lucas Oil Stadium."
     },
     {
       "cat": "NBA",
-      "headline": "NBA STRIPS CLIPPERS OF FIVE FIRST-ROUND PICKS, FINES BALLMER $30 MILLION",
-      "body": "The NBA concluded its investigation into alleged salary-cap circumvention tied to Kawhi Leonard and stripped the Los Angeles Clippers of five first-round draft picks while fining owner Steve Ballmer $30 million, one of the harshest penalties in league history. The ruling reshapes the Clippers' asset base for the rest of the decade, in a week that also saw Trail Blazers guard Shaedon Sharpe go down with a torn meniscus expected to cost him roughly six months."
+      "headline": "SIXERS ENTER SEASON WITH FOUR 'SUPER-USERS' AFTER BROWN, LEBRON MOVES",
+      "body": "Philadelphia traded for Jaylen Brown this offseason, then landed LeBron James in free agency three weeks later, giving the Sixers four players with career usage rates above 25% alongside Joel Embiid and Tyrese Maxey. Elsewhere, Pacers star Tyrese Haliburton continues a gradual return from the Achilles tear he suffered in Game 7 of the 2025 Finals."
     },
     {
       "cat": "NFL",
-      "headline": "PACKERS RB JOSH JACOBS REMAINS ON COMMISSIONER'S EXEMPT LIST AS LEGAL CASE PLAYS OUT",
-      "body": "Green Bay running back Josh Jacobs opened the season on the NFL's commissioner's exempt list following a May arrest on domestic-violence-related charges that were later reduced to two misdemeanors \u2014 battery and criminal damage to property. Jacobs continues to draw his salary but cannot practice or play until the league lifts the designation; his initial court date is Nov. 17, and any time already spent on the list would count toward a future suspension."
+      "headline": "BILLS OPEN NEW STADIUM HOSTING LIONS IN WEEK 2 THURSDAY NIGHT SHOWCASE",
+      "body": "Buffalo christens its new stadium against Detroit on Thursday Night Football to open Week 2, after a Week 1 slate in which the Cardinals upset the Chargers on the road and the Jets beat the Titans. The Bears-Panthers opener alone produced 96 combined points."
     },
     {
       "cat": "NCAA CFB",
-      "headline": "TEXAS STUNS NO. 1 OHIO STATE 24-23, ERASING 20-POINT FOURTH-QUARTER DEFICIT",
-      "body": "No. 4 Texas rallied from a 20-point fourth-quarter hole to beat top-ranked Ohio State 24-23 in Austin, the first time since 2004 that an AP No. 1 has lost after leading by 20-plus points that late in a game (previously 197-0). The result vaults Texas to No. 1 in the new Week 3 poll and drops Ohio State to No. 6, on the same weekend Oklahoma State upset then-No. 6 Oregon and Michigan knocked off Oklahoma."
+      "headline": "OREGON, OKLAHOMA UPSETS SCRAMBLE COLLEGE FOOTBALL PLAYOFF PICTURE",
+      "body": "Oregon lost 39-31 at Oklahoma State and No. 11 Oklahoma fell 17-10 to Michigan in Week 2, upending playoff projections after Oregon had been viewed as a near-lock contender. Oregon still has to play at USC and Ohio State this season."
     }
   ],
   "sports": [
-    {
-      "team": "WASHINGTON HUSKIES FOOTBALL",
-      "pill": "W 16-14",
-      "pillClass": "s-w",
-      "detail": "No. 19 Washington escaped Utah State 16-14 Saturday behind freshman Ansu Sanoe's touchdown, another slow start for an offense still searching for rhythm. Next: hosts Eastern Washington, Saturday, Sept. 19."
-    },
-    {
-      "team": "WASHINGTON HUSKIES BASKETBALL",
-      "pill": "OFFSEASON",
-      "pillClass": "s-up",
-      "detail": "Rutgers transfer Harun Zrno and Texas Tech transfer LeJuan Watts (11.8 ppg last season) continue to round out Danny Sprinkle's roster; UW's non-conference slate includes a marquee matchup with Baylor at Climate Pledge Arena."
-    },
-    {
-      "team": "SEATTLE SEAHAWKS",
-      "pill": "1-0",
-      "pillClass": "s-w",
-      "detail": "Sit 1-0 after a Week 1 win over New England; Drew Lock remains the starter while Sam Darnold works back from a hip injury. Next: at Arizona, Sunday, Sept. 20."
-    },
-    {
-      "team": "DETROIT PISTONS",
-      "pill": "OFFSEASON",
-      "pillClass": "s-up",
-      "detail": "Contract talks with restricted free agent Jalen Duren remain stalled \u2014 Detroit's latest offer is five years around $35M per year, while Duren is seeking north of $40M \u2014 with about three weeks left before an Oct. 1 qualifying-offer deadline."
-    },
-    {
-      "team": "SEATTLE MARINERS",
-      "pill": "W 19-1",
-      "pillClass": "s-w",
-      "detail": "Routed the Athletics 19-1 Saturday behind a Dominic Canzone two-run homer, improving to 70-79 and keeping a faint wild-card pulse alive. Continue the series at Oakland this weekend."
-    }
+    { "team": "WASHINGTON HUSKIES FOOTBALL", "pill": "W 16-14", "pillClass": "s-w", "detail": "Beat Utah State on a late TD from freshman Ansu Sanoe. No. 19 Huskies host Eastern Washington Saturday, Sept. 19 (4:15 PM PT, BTN)." },
+    { "team": "WASHINGTON HUSKIES BASKETBALL", "pill": "OFFSEASON", "pillClass": "s-up", "detail": "Added transfers LeJuan Watts (Texas Tech) and Harun Zrno (Rutgers) plus a new assistant under Danny Sprinkle. 2026-27 slate includes a marquee non-conference clash vs. Baylor at Climate Pledge Arena." },
+    { "team": "SEATTLE SEAHAWKS", "pill": "W 13-10", "pillClass": "s-w", "detail": "Beat the Patriots in the Week 1 banner-raising game, but QB Sam Darnold left with a hip injury and is expected to miss Week 2. Drew Lock (16-of-22, 187 yds, 1 TD in relief) starts at Arizona on Sunday, Sept. 20." },
+    { "team": "DETROIT PISTONS", "pill": "OFFSEASON", "pillClass": "s-up", "detail": "Restricted free agent Jalen Duren remains unsigned after a summer-long stalemate; Detroit fully guaranteed Paul Reed's $5.6M deal. No second star has joined Cade Cunningham this offseason." },
+    { "team": "SEATTLE MARINERS", "pill": "L 7-8", "pillClass": "s-l", "detail": "Fell to the Athletics 8-7, dropping to 69-79 with a steep climb back into playoff contention. Next: a 3-game series at the Angels starting tonight, Sept. 14." }
   ],
   "watchlist": [
-    "FOMC rate decision Tuesday-Wednesday, Sept. 15-16 \u2014 SEP/dot plot release, ~85% odds of a 25bp hike",
-    "Bank of Japan meeting Thursday-Friday, Sept. 17-18 \u2014 expected 25bp hike to 1.25%",
-    "50% U.S. tariff on Canadian mattresses, motorboats, and golf carts takes effect Monday, Sept. 15",
-    "Seahawks at Cardinals \u2014 Sunday, Sept. 20, Drew Lock's first road start with Darnold still out",
-    "Huskies host Eastern Washington \u2014 Saturday, Sept. 19, Husky Stadium"
+    "FOMC rate decision Wednesday, Sept. 16 — markets pricing ~90% odds of a 25 bps hike, the Fed's first since 2023",
+    "Fed Chair press conference Wednesday afternoon following the rate decision",
+    "WTI crude near $101 amid the Saudi pipeline outage — watch for further Hormuz-area escalation",
+    "Seahawks at Cardinals — Sunday, Sept. 20, 4:25 PM ET, Drew Lock's first career start",
+    "Mariners at Angels — series opens tonight, Sept. 14, 6:38 PM PT"
   ],
   "deepDive": {
-    "title": "What the Fed's Dot Plot Actually Measures \u2014 And Why Wednesday Matters More Than the Rate Itself",
+    "title": "Why Gold Fell While Missiles Flew: Real Rates vs. Safe-Haven Demand",
     "content": [
-      "Tuesday and Wednesday's FOMC meeting is drawing attention almost entirely to whether the committee hikes 25 basis points, with market pricing near 85% in favor. But the September meeting is one of four each year that also releases the Summary of Economic Projections, commonly known as the dot plot, and that document usually moves markets more than the rate decision itself when the decision is this widely expected. Understanding what the dot plot is \u2014 and isn't \u2014 measuring is the difference between reading Wednesday's headline and understanding what actually shifted underneath it.",
-      "Each of the FOMC's voting and non-voting participants submits an anonymous dot representing where they think the fed funds rate should sit at the end of the current year and each of the next few years, plus a longer-run estimate. The Fed plots all the dots on a scatter chart and reports the median \u2014 that median becomes shorthand for \"the Fed's\" rate path, even though it's really a set of individual, non-binding guesses updated only four times a year. A hike that's fully priced in moves nothing on its own; it's the median dot for 2027 shifting up or down by even a single quarter-point increment that resets the entire forward curve traders actually price off of.",
-      "In December 2018, the Fed hiked as expected but the dot plot signaled two more hikes for 2019 instead of the three markets had partially priced in \u2014 a seemingly small revision that helped trigger a nearly 20% stock selloff into Christmas Eve, before the Fed reversed course within weeks. The lesson wasn't that the Fed made a policy mistake; it was that a small change in a handful of anonymous guesses can outweigh the actual rate move that already happened, because markets discount decisions but re-price expectations in real time. Most casual market-watchers read the headline \"Fed hikes\" and miss this second, more consequential layer entirely.",
-      "This week's setup makes that second layer unusually loaded: an 85%-priced hike gives the committee cover to either validate a hawkish path if core inflation stays sticky, or signal a pause if July's softer labor and retail data carry more weight behind closed doors than Friday's CPI beat suggested publicly. With the Bank of Japan hiking three days later and a fresh Canada tariff deadline landing the same week, Wednesday's dot plot won't just set the tone for U.S. rates \u2014 it will be read as the Fed's answer to whether this week's stacked catalysts are net inflationary or net growth-slowing."
+      "Gold fell 1.5% to $4,284.70 today even as attacks on a Saudi pipeline escalated the Iran conflict and pushed WTI crude to $101.35. That looks backwards at first glance — geopolitical shocks are the textbook gold trade — but nothing is broken in how the market is pricing bullion. Today is actually a clean lesson in which variable drives gold day to day, and it isn't headline risk on its own. It's the price of holding a zero-yield asset relative to the alternative of holding something that pays interest.",
+      "Gold generates no coupon, dividend, or rental income, so the real cost of owning it is whatever yield you give up by not holding a Treasury or TIPS instead — economists call this the real interest rate, the nominal yield minus expected inflation. When Fed hike odds jumped to roughly 90% today for Wednesday's meeting, nominal yields rose faster than inflation expectations did: the 10-year touched 5.01% intraday, its highest since October 2023. That widened real yields, and every basis point of that widening makes an ounce of bullion that pays nothing a little less attractive to hold, geopolitics notwithstanding.",
+      "This is not a new pattern. During the 2013 taper tantrum, gold fell roughly 28% for the year even as emerging-market currencies were in turmoil, because real yields spiked as the Fed signaled it would slow bond purchases. Through most of 2022, gold stayed range-bound despite Russia's invasion of Ukraine, because the Fed was mid-hiking cycle and real yields kept climbing. The real-rate channel only loses to the safe-haven channel when a shock threatens the financial system's plumbing itself — 2008 and March 2020 both saw gold initially sell off in a liquidity scramble before rallying hard once real yields collapsed. An oil-supply shock in the Gulf, however severe, is a different kind of event than a dollar-funding freeze.",
+      "That distinction is the setup to watch this week. If Wednesday's hike lands as priced and the Fed's guidance stays cautious about further moves given growth risk from $100-plus oil, real yields could ease back and give gold room to recover. But if the FOMC signals more hikes are coming to fight oil-driven inflation, the same real-rate math that dragged gold down 1.5% today keeps pressing on it even with a live conflict disrupting Middle East supply — a reminder that for gold, the Fed's reaction function usually matters more than the headlines that provoke it."
     ]
   }
 }
