@@ -1,37 +1,61 @@
 {
-  "lastUpdated": "2026-09-14T16:36:50-06:00",
+  "lastUpdated": "2026-09-14T17:00:18-06:00",
   "market": {
-    "sp500":  { "price": "7,621.54",  "change": "-0.46%", "dir": "down" },
-    "nasdaq": { "price": "28,872.85", "change": "-1.69%", "dir": "down" },
-    "yield":  { "price": "4.99%",     "change": "+3 bps", "dir": "down" },
-    "wti":    { "price": "$101.35",   "change": "+1.3%",  "dir": "up"   },
-    "gold":   { "price": "$4,284.70", "change": "-1.5%",  "dir": "down" },
-    "dxy":    { "price": "99.44",     "change": "+0.3%",  "dir": "up"   }
+    "sp500": {
+      "price": "7620",
+      "change": "-0.48%",
+      "dir": "down"
+    },
+    "nasdaq": {
+      "price": "29127",
+      "change": "-0.82%",
+      "dir": "down"
+    },
+    "yield": {
+      "price": "4.96%",
+      "change": "-1 bps",
+      "dir": "up"
+    },
+    "wti": {
+      "price": "$102",
+      "change": "-1.27%",
+      "dir": "down"
+    },
+    "gold": {
+      "price": "$4337",
+      "change": "-0.77%",
+      "dir": "down"
+    },
+    "dxy": {
+      "price": "99.47",
+      "change": "+0.14%",
+      "dir": "up"
+    }
   },
   "stories": [
     {
       "cat": "MACRO",
       "headline": "FED SEES ~90% ODDS OF FIRST RATE HIKE SINCE 2023 AS INFLATION RISK BUILDS",
       "body": "Fed funds futures now price an 88-90% probability of a 25 bps hike when the FOMC concludes its two-day meeting Wednesday, which would be the central bank's first increase since 2023. The 10-year Treasury yield touched 5.01% intraday, its highest since October 2023, before settling near 4.99%, while the 2-year rose to 4.66%.",
-      "explain": "A hike now would reverse the Fed's recent easing cycle because $100+ oil and a hotter core CPI print (0.3% MoM vs. 0.2% expected) threaten to re-accelerate inflation just as the labor market has stayed resilient. Short-end yields like the 2-year move first because they track the expected policy path most directly, while the 10-year also carries a term/inflation premium. Higher policy rates raise the discount rate on future corporate cash flows, compressing valuations hardest on long-duration growth names — which is why the Nasdaq-100 fell nearly four times as much as the S&P 500 today."
+      "explain": "A hike now would reverse the Fed's recent easing cycle because $100+ oil and a hotter core CPI print (0.3% MoM vs. 0.2% expected) threaten to re-accelerate inflation just as the labor market has stayed resilient. Short-end yields like the 2-year move first because they track the expected policy path most directly, while the 10-year also carries a term/inflation premium. Higher policy rates raise the discount rate on future corporate cash flows, compressing valuations hardest on long-duration growth names \u2014 which is why the Nasdaq-100 fell nearly four times as much as the S&P 500 today."
     },
     {
       "cat": "GEOPOLITICS",
       "headline": "OIL TOPS $100 AS ATTACKS HIT SAUDI PIPELINE NEAR HORMUZ",
       "body": "WTI crude rose 1.3% to $101.35 and Brent traded near $105 after weekend attacks struck a Saudi Arabian pipeline, homes, and a mosque, forcing Saudi Arabia to shut its East-West pipeline. Crude is now at its highest level in roughly four months as the Iran conflict raises the odds of a regional supply disruption.",
-      "explain": "The East-West pipeline lets Saudi Arabia move crude to Red Sea terminals without transiting the Strait of Hormuz, so shutting it removes a key safety valve and raises the chance that any Hormuz disruption becomes a full supply shock rather than a reroutable one. Oil feeds directly into headline CPI through energy and transportation costs and indirectly into core goods and services — exactly the inflation channel the Fed is weighing two days before its rate decision."
+      "explain": "The East-West pipeline lets Saudi Arabia move crude to Red Sea terminals without transiting the Strait of Hormuz, so shutting it removes a key safety valve and raises the chance that any Hormuz disruption becomes a full supply shock rather than a reroutable one. Oil feeds directly into headline CPI through energy and transportation costs and indirectly into core goods and services \u2014 exactly the inflation channel the Fed is weighing two days before its rate decision."
     },
     {
       "cat": "MARKETS",
       "headline": "NASDAQ SLIDES 1.7% AS CHIP STOCKS LEAD AI-FEAR SELLOFF",
       "body": "The Nasdaq-100 fell 1.69% to 28,872.85 after AI industry leaders publicly called for a slower development pace, spooking chip and hyperscaler names. The S&P 500 fell a more modest 0.46% to 7,621.54 and the Dow slipped 0.29%, with all three recovering somewhat off session lows.",
-      "explain": "Semiconductor and AI-infrastructure stocks carry some of the market's longest valuation duration, since their prices assume years of compounding capex and revenue growth — so any signal the buildout could slow forces a larger repricing than in the broader index. That concentration is why the AI-heavy Nasdaq-100 dropped nearly four times as much as the S&P 500 on the same day's news."
+      "explain": "Semiconductor and AI-infrastructure stocks carry some of the market's longest valuation duration, since their prices assume years of compounding capex and revenue growth \u2014 so any signal the buildout could slow forces a larger repricing than in the broader index. That concentration is why the AI-heavy Nasdaq-100 dropped nearly four times as much as the S&P 500 on the same day's news."
     },
     {
       "cat": "COMMODITIES",
       "headline": "GOLD SINKS 1.5% DESPITE MIDEAST WAR RISK AS RATE-HIKE BETS DOMINATE",
       "body": "Gold fell 1.5% to $4,284.70 an ounce even as the Saudi pipeline attacks escalated regional tensions, with the metal's usual safe-haven bid overwhelmed by expectations the Fed hikes rates Wednesday. Silver also slid, dropping to around $63 an ounce.",
-      "explain": "Gold pays no yield, so its opportunity cost rises directly with real interest rates — when hike odds jump, as they did to ~90% today, nominal yields rise faster than inflation expectations, pushing real yields up and making a zero-income asset less attractive even as headline risk climbs. Today is a clean case of the rate channel beating the safe-haven channel, which historically only flips when a shock threatens systemic growth or liquidity, not just supply."
+      "explain": "Gold pays no yield, so its opportunity cost rises directly with real interest rates \u2014 when hike odds jump, as they did to ~90% today, nominal yields rise faster than inflation expectations, pushing real yields up and making a zero-income asset less attractive even as headline risk climbs. Today is a clean case of the rate channel beating the safe-haven channel, which historically only flips when a shock threatens systemic growth or liquidity, not just supply."
     },
     {
       "cat": "MACRO",
@@ -61,26 +85,51 @@
     }
   ],
   "sports": [
-    { "team": "WASHINGTON HUSKIES FOOTBALL", "pill": "W 16-14", "pillClass": "s-w", "detail": "Beat Utah State on a late TD from freshman Ansu Sanoe. No. 19 Huskies host Eastern Washington Saturday, Sept. 19 (4:15 PM PT, BTN)." },
-    { "team": "WASHINGTON HUSKIES BASKETBALL", "pill": "OFFSEASON", "pillClass": "s-up", "detail": "Added transfers LeJuan Watts (Texas Tech) and Harun Zrno (Rutgers) plus a new assistant under Danny Sprinkle. 2026-27 slate includes a marquee non-conference clash vs. Baylor at Climate Pledge Arena." },
-    { "team": "SEATTLE SEAHAWKS", "pill": "W 13-10", "pillClass": "s-w", "detail": "Beat the Patriots in the Week 1 banner-raising game, but QB Sam Darnold left with a hip injury and is expected to miss Week 2. Drew Lock (16-of-22, 187 yds, 1 TD in relief) starts at Arizona on Sunday, Sept. 20." },
-    { "team": "DETROIT PISTONS", "pill": "OFFSEASON", "pillClass": "s-up", "detail": "Restricted free agent Jalen Duren remains unsigned after a summer-long stalemate; Detroit fully guaranteed Paul Reed's $5.6M deal. No second star has joined Cade Cunningham this offseason." },
-    { "team": "SEATTLE MARINERS", "pill": "L 7-8", "pillClass": "s-l", "detail": "Fell to the Athletics 8-7, dropping to 69-79 with a steep climb back into playoff contention. Next: a 3-game series at the Angels starting tonight, Sept. 14." }
+    {
+      "team": "WASHINGTON HUSKIES FOOTBALL",
+      "pill": "W 16-14",
+      "pillClass": "s-w",
+      "detail": "Beat Utah State on a late TD from freshman Ansu Sanoe. No. 19 Huskies host Eastern Washington Saturday, Sept. 19 (4:15 PM PT, BTN)."
+    },
+    {
+      "team": "WASHINGTON HUSKIES BASKETBALL",
+      "pill": "OFFSEASON",
+      "pillClass": "s-up",
+      "detail": "Added transfers LeJuan Watts (Texas Tech) and Harun Zrno (Rutgers) plus a new assistant under Danny Sprinkle. 2026-27 slate includes a marquee non-conference clash vs. Baylor at Climate Pledge Arena."
+    },
+    {
+      "team": "SEATTLE SEAHAWKS",
+      "pill": "W 13-10",
+      "pillClass": "s-w",
+      "detail": "Beat the Patriots in the Week 1 banner-raising game, but QB Sam Darnold left with a hip injury and is expected to miss Week 2. Drew Lock (16-of-22, 187 yds, 1 TD in relief) starts at Arizona on Sunday, Sept. 20."
+    },
+    {
+      "team": "DETROIT PISTONS",
+      "pill": "OFFSEASON",
+      "pillClass": "s-up",
+      "detail": "Restricted free agent Jalen Duren remains unsigned after a summer-long stalemate; Detroit fully guaranteed Paul Reed's $5.6M deal. No second star has joined Cade Cunningham this offseason."
+    },
+    {
+      "team": "SEATTLE MARINERS",
+      "pill": "L 7-8",
+      "pillClass": "s-l",
+      "detail": "Fell to the Athletics 8-7, dropping to 69-79 with a steep climb back into playoff contention. Next: a 3-game series at the Angels starting tonight, Sept. 14."
+    }
   ],
   "watchlist": [
-    "FOMC rate decision Wednesday, Sept. 16 — markets pricing ~90% odds of a 25 bps hike, the Fed's first since 2023",
+    "FOMC rate decision Wednesday, Sept. 16 \u2014 markets pricing ~90% odds of a 25 bps hike, the Fed's first since 2023",
     "Fed Chair press conference Wednesday afternoon following the rate decision",
-    "WTI crude near $101 amid the Saudi pipeline outage — watch for further Hormuz-area escalation",
-    "Seahawks at Cardinals — Sunday, Sept. 20, 4:25 PM ET, Drew Lock's first career start",
-    "Mariners at Angels — series opens tonight, Sept. 14, 6:38 PM PT"
+    "WTI crude near $101 amid the Saudi pipeline outage \u2014 watch for further Hormuz-area escalation",
+    "Seahawks at Cardinals \u2014 Sunday, Sept. 20, 4:25 PM ET, Drew Lock's first career start",
+    "Mariners at Angels \u2014 series opens tonight, Sept. 14, 6:38 PM PT"
   ],
   "deepDive": {
     "title": "Why Gold Fell While Missiles Flew: Real Rates vs. Safe-Haven Demand",
     "content": [
-      "Gold fell 1.5% to $4,284.70 today even as attacks on a Saudi pipeline escalated the Iran conflict and pushed WTI crude to $101.35. That looks backwards at first glance — geopolitical shocks are the textbook gold trade — but nothing is broken in how the market is pricing bullion. Today is actually a clean lesson in which variable drives gold day to day, and it isn't headline risk on its own. It's the price of holding a zero-yield asset relative to the alternative of holding something that pays interest.",
-      "Gold generates no coupon, dividend, or rental income, so the real cost of owning it is whatever yield you give up by not holding a Treasury or TIPS instead — economists call this the real interest rate, the nominal yield minus expected inflation. When Fed hike odds jumped to roughly 90% today for Wednesday's meeting, nominal yields rose faster than inflation expectations did: the 10-year touched 5.01% intraday, its highest since October 2023. That widened real yields, and every basis point of that widening makes an ounce of bullion that pays nothing a little less attractive to hold, geopolitics notwithstanding.",
-      "This is not a new pattern. During the 2013 taper tantrum, gold fell roughly 28% for the year even as emerging-market currencies were in turmoil, because real yields spiked as the Fed signaled it would slow bond purchases. Through most of 2022, gold stayed range-bound despite Russia's invasion of Ukraine, because the Fed was mid-hiking cycle and real yields kept climbing. The real-rate channel only loses to the safe-haven channel when a shock threatens the financial system's plumbing itself — 2008 and March 2020 both saw gold initially sell off in a liquidity scramble before rallying hard once real yields collapsed. An oil-supply shock in the Gulf, however severe, is a different kind of event than a dollar-funding freeze.",
-      "That distinction is the setup to watch this week. If Wednesday's hike lands as priced and the Fed's guidance stays cautious about further moves given growth risk from $100-plus oil, real yields could ease back and give gold room to recover. But if the FOMC signals more hikes are coming to fight oil-driven inflation, the same real-rate math that dragged gold down 1.5% today keeps pressing on it even with a live conflict disrupting Middle East supply — a reminder that for gold, the Fed's reaction function usually matters more than the headlines that provoke it."
+      "Gold fell 1.5% to $4,284.70 today even as attacks on a Saudi pipeline escalated the Iran conflict and pushed WTI crude to $101.35. That looks backwards at first glance \u2014 geopolitical shocks are the textbook gold trade \u2014 but nothing is broken in how the market is pricing bullion. Today is actually a clean lesson in which variable drives gold day to day, and it isn't headline risk on its own. It's the price of holding a zero-yield asset relative to the alternative of holding something that pays interest.",
+      "Gold generates no coupon, dividend, or rental income, so the real cost of owning it is whatever yield you give up by not holding a Treasury or TIPS instead \u2014 economists call this the real interest rate, the nominal yield minus expected inflation. When Fed hike odds jumped to roughly 90% today for Wednesday's meeting, nominal yields rose faster than inflation expectations did: the 10-year touched 5.01% intraday, its highest since October 2023. That widened real yields, and every basis point of that widening makes an ounce of bullion that pays nothing a little less attractive to hold, geopolitics notwithstanding.",
+      "This is not a new pattern. During the 2013 taper tantrum, gold fell roughly 28% for the year even as emerging-market currencies were in turmoil, because real yields spiked as the Fed signaled it would slow bond purchases. Through most of 2022, gold stayed range-bound despite Russia's invasion of Ukraine, because the Fed was mid-hiking cycle and real yields kept climbing. The real-rate channel only loses to the safe-haven channel when a shock threatens the financial system's plumbing itself \u2014 2008 and March 2020 both saw gold initially sell off in a liquidity scramble before rallying hard once real yields collapsed. An oil-supply shock in the Gulf, however severe, is a different kind of event than a dollar-funding freeze.",
+      "That distinction is the setup to watch this week. If Wednesday's hike lands as priced and the Fed's guidance stays cautious about further moves given growth risk from $100-plus oil, real yields could ease back and give gold room to recover. But if the FOMC signals more hikes are coming to fight oil-driven inflation, the same real-rate math that dragged gold down 1.5% today keeps pressing on it even with a live conflict disrupting Middle East supply \u2014 a reminder that for gold, the Fed's reaction function usually matters more than the headlines that provoke it."
     ]
   }
 }
