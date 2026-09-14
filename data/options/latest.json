@@ -1,11 +1,11 @@
 {
-  "as_of": "2026-09-14T04:15:46-06:00",
+  "as_of": "2026-09-14T05:15:47-06:00",
   "is_mock": false,
   "market": {
     "vix": {
-      "value": 18.08,
-      "change": 2.24,
-      "change_pct": 14.14
+      "value": 17.61,
+      "change": 1.77,
+      "change_pct": 11.17
     },
     "vix_term_structure": [
       {
@@ -14,7 +14,7 @@
       },
       {
         "label": "VIX",
-        "value": 18.08
+        "value": 17.61
       },
       {
         "label": "VIX3M",
@@ -33,7 +33,7 @@
         "change": 6.46,
         "change_pct": 0.85,
         "pc_volume": 1.6526,
-        "pc_oi": null,
+        "pc_oi": 2.3456,
         "sentiment": "bearish"
       },
       {
@@ -43,7 +43,7 @@
         "change": 6.19,
         "change_pct": 0.87,
         "pc_volume": 2.068,
-        "pc_oi": null,
+        "pc_oi": 2.1844,
         "sentiment": "bearish"
       },
       {
@@ -53,12 +53,12 @@
         "change": 1.19,
         "change_pct": 0.41,
         "pc_volume": 1.1298,
-        "pc_oi": null,
+        "pc_oi": 1.1097,
         "sentiment": "neutral"
       }
     ],
     "regime": "risk-off",
-    "regime_summary": "SPY P/C 1.65 bearish \u00b7 VIX 18.1 moderate."
+    "regime_summary": "SPY P/C 1.65 bearish \u00b7 VIX 17.6 moderate."
   },
   "sectors": [
     {
@@ -141,12 +141,12 @@
       "change_pct": 1.75,
       "volume": 50659000,
       "pc_volume_ratio": 0.7142,
-      "pc_oi_ratio": 1.2081,
+      "pc_oi_ratio": 0.8901,
       "iv_atm": 0.2,
       "iv_rank": 0.1,
       "iv_percentile": 7.7,
       "skew_25d": 0.0,
-      "unusual_activity": false,
+      "unusual_activity": true,
       "sentiment": "bullish",
       "sentiment_reason": "P/C volume 0.71 below the 0.80 bullish threshold \u00b7 IV rank 0 low (complacency)."
     },
@@ -158,12 +158,12 @@
       "change_pct": 0.52,
       "volume": 30091300,
       "pc_volume_ratio": 0.854,
-      "pc_oi_ratio": 95.9773,
+      "pc_oi_ratio": 0.8312,
       "iv_atm": 0.39,
       "iv_rank": 0.1,
       "iv_percentile": 32.1,
       "skew_25d": 0.0,
-      "unusual_activity": false,
+      "unusual_activity": true,
       "sentiment": "neutral",
       "sentiment_reason": "P/C volume 0.85 in the neutral zone (0.80\u20131.20) \u00b7 IV rank 0 low (complacency)."
     },
@@ -175,12 +175,12 @@
       "change_pct": -0.03,
       "volume": 88804100,
       "pc_volume_ratio": 0.505,
-      "pc_oi_ratio": null,
+      "pc_oi_ratio": 0.8197,
       "iv_atm": 0.78,
       "iv_rank": 0.4,
       "iv_percentile": 41.0,
       "skew_25d": 0.0,
-      "unusual_activity": false,
+      "unusual_activity": true,
       "sentiment": "bullish",
       "sentiment_reason": "P/C volume 0.51 below the 0.80 bullish threshold \u00b7 IV rank 0 low (complacency)."
     },
@@ -192,12 +192,12 @@
       "change_pct": 0.65,
       "volume": 14510500,
       "pc_volume_ratio": 0.5798,
-      "pc_oi_ratio": 0.0,
+      "pc_oi_ratio": 0.6214,
       "iv_atm": 0.39,
       "iv_rank": 0.2,
       "iv_percentile": 32.1,
       "skew_25d": 0.0,
-      "unusual_activity": false,
+      "unusual_activity": true,
       "sentiment": "bullish",
       "sentiment_reason": "P/C volume 0.58 below the 0.80 bullish threshold \u00b7 IV rank 0 low (complacency)."
     },
@@ -209,12 +209,12 @@
       "change_pct": 0.57,
       "volume": 16908400,
       "pc_volume_ratio": 0.6615,
-      "pc_oi_ratio": 1.8485,
+      "pc_oi_ratio": 0.3681,
       "iv_atm": 0.2,
       "iv_rank": 0.1,
       "iv_percentile": 10.3,
       "skew_25d": 0.0,
-      "unusual_activity": false,
+      "unusual_activity": true,
       "sentiment": "bullish",
       "sentiment_reason": "P/C volume 0.66 below the 0.80 bullish threshold \u00b7 IV rank 0 low (complacency)."
     },
@@ -226,12 +226,12 @@
       "change_pct": 1.77,
       "volume": 24677500,
       "pc_volume_ratio": 0.4625,
-      "pc_oi_ratio": 54.6905,
+      "pc_oi_ratio": 0.5953,
       "iv_atm": 1.56,
       "iv_rank": 1.4,
       "iv_percentile": 42.3,
       "skew_25d": 0.0,
-      "unusual_activity": false,
+      "unusual_activity": true,
       "sentiment": "bullish",
       "sentiment_reason": "P/C volume 0.46 below the 0.80 bullish threshold \u00b7 IV rank 1 low (complacency)."
     },
@@ -243,12 +243,12 @@
       "change_pct": 1.94,
       "volume": 26682800,
       "pc_volume_ratio": 0.4689,
-      "pc_oi_ratio": null,
+      "pc_oi_ratio": 0.6264,
       "iv_atm": 0.78,
       "iv_rank": 0.4,
       "iv_percentile": 38.5,
       "skew_25d": 0.0,
-      "unusual_activity": false,
+      "unusual_activity": true,
       "sentiment": "bullish",
       "sentiment_reason": "P/C volume 0.47 below the 0.80 bullish threshold \u00b7 IV rank 0 low (complacency)."
     },
@@ -260,12 +260,12 @@
       "change_pct": 2.49,
       "volume": 19001000,
       "pc_volume_ratio": 0.7258,
-      "pc_oi_ratio": 1.152,
+      "pc_oi_ratio": 1.4834,
       "iv_atm": 0.78,
       "iv_rank": 0.1,
       "iv_percentile": 42.3,
       "skew_25d": 0.0,
-      "unusual_activity": false,
+      "unusual_activity": true,
       "sentiment": "bullish",
       "sentiment_reason": "P/C volume 0.73 below the 0.80 bullish threshold \u00b7 IV rank 0 low (complacency)."
     },
@@ -277,7 +277,7 @@
       "change_pct": 0.76,
       "volume": 5354600,
       "pc_volume_ratio": 0.7497,
-      "pc_oi_ratio": 0.0,
+      "pc_oi_ratio": 1.3804,
       "iv_atm": 0.39,
       "iv_rank": 0.2,
       "iv_percentile": 32.1,
@@ -294,12 +294,12 @@
       "change_pct": 0.92,
       "volume": 1163000,
       "pc_volume_ratio": 0.2428,
-      "pc_oi_ratio": 0.0101,
+      "pc_oi_ratio": 1.318,
       "iv_atm": 0.1,
       "iv_rank": 0.0,
       "iv_percentile": 5.1,
       "skew_25d": 0.0,
-      "unusual_activity": false,
+      "unusual_activity": true,
       "sentiment": "bullish",
       "sentiment_reason": "P/C volume 0.24 below the 0.80 bullish threshold \u00b7 IV rank 0 low (complacency)."
     }
