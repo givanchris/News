@@ -1,135 +1,111 @@
 {
-  "lastUpdated": "2026-09-16T16:30:17-06:00",
+  "lastUpdated": "2026-09-16T16:37:00-06:00",
   "market": {
-    "sp500": {
-      "price": "7552",
-      "change": "-0.45%",
-      "dir": "down"
-    },
-    "nasdaq": {
-      "price": "28945",
-      "change": "+0.02%",
-      "dir": "up"
-    },
-    "yield": {
-      "price": "5.01%",
-      "change": "+1 bps",
-      "dir": "down"
-    },
-    "wti": {
-      "price": "$102",
-      "change": "-2.70%",
-      "dir": "down"
-    },
-    "gold": {
-      "price": "$4297",
-      "change": "-1.61%",
-      "dir": "down"
-    },
-    "dxy": {
-      "price": "100.34",
-      "change": "+0.68%",
-      "dir": "up"
-    }
+    "sp500": { "price": "7,551.81", "change": "-0.45%", "dir": "down" },
+    "nasdaq": { "price": "29,104.35", "change": "+0.58%", "dir": "up" },
+    "yield": { "price": "5.01%", "change": "+21 bps", "dir": "down" },
+    "wti": { "price": "$102.31", "change": "-3.3%", "dir": "down" },
+    "gold": { "price": "$4,310", "change": "-1.0%", "dir": "down" },
+    "dxy": { "price": "100.28", "change": "+0.61%", "dir": "up" }
   },
   "stories": [
     {
       "cat": "CENTRAL BANKS",
-      "headline": "10-YEAR YIELD HITS 19-YEAR HIGH AS FED HIKE ODDS TOP 92%",
-      "body": "The 10-year Treasury yield touched 5.04% intraday, its highest since July 2007, as the FOMC opened its two-day meeting with CME FedWatch pricing a 92.5% chance of a quarter-point hike Wednesday \u2014 the Fed's first hike since 2023. The 2-year yield climbed to 4.66%.",
-      "explain": "A hike bet this close to certainty means the move is already priced into short-term yields, so the real market risk Wednesday is the dot plot and Powell's language on the pace of further hikes, not the hike itself. Because the Fed is raising into an oil-driven inflation scare rather than an overheating labor market, traders are watching whether officials treat energy costs as transitory or embed them into the forecast \u2014 that distinction will move the long end of the curve more than the decision itself."
-    },
-    {
-      "cat": "GEOPOLITICS",
-      "headline": "OIL SPIKES TOWARD FOUR-MONTH HIGH ON MIDDLE EAST SUPPLY SCARE",
-      "body": "WTI crude jumped 4.0% to $105.49 and Brent pushed near $109 after Saudi Arabia shut its East-West pipeline amid the Iran conflict, stripping out a key alternative export route that bypasses the Strait of Hormuz.",
-      "explain": "The pipeline's role is to let Saudi crude reach the Red Sea without transiting the Strait of Hormuz, so shutting it removes a supply buffer right as tensions raise the odds of a Hormuz disruption \u2014 the market is pricing tail risk, not just today's barrel count. That matters for tomorrow's Fed decision because a sustained oil shock is a cost-push input the Fed can't offset with rate policy, forcing officials to choose between tolerating higher headline inflation or hiking into a supply shock that could also slow growth."
+      "headline": "FED HIKES RATES FOR FIRST TIME SINCE 2023, WARSH SIGNALS MORE TO COME",
+      "body": "The FOMC voted 12-0 to raise the federal funds rate a quarter point to 3.75%-4.00%, its first hike in three years. Chairman Kevin Warsh said \"this summer's inflation readings do not tell me that underlying trends have meaningfully improved,\" and 16 of 18 officials penciled in at least one more hike before year-end.",
+      "explain": "A unanimous vote paired with hawkish dot-plot guidance is a stronger signal than the hike itself, because markets had already priced a 25 bp move at roughly 90%+ odds going in. What wasn't fully priced was Warsh explicitly rejecting the \"inflation is cooling\" narrative, which is why yields, the dollar, and gold all moved sharply on his press conference rather than on the 2:00 PM statement release."
     },
     {
       "cat": "MARKETS",
-      "headline": "STOCKS FALL FOR SECOND STRAIGHT DAY AS SEMICONDUCTORS LEAD DECLINE",
-      "body": "The S&P 500 slid 0.45% to 7,585.73 and the Dow lost 328 points (-0.63%) to 52,093.11, while chip stocks were hit hardest: Lam Research -8.3%, GE Vernova -8.6%, Intel -5.6%, Micron -5.2%, Broadcom -4.8%, and Nvidia -3.4%.",
-      "explain": "Semiconductor stocks carry some of the highest duration-sensitivity in the index because their valuations lean on distant future earnings, so a spike in the discount rate (the 10-year yield) compresses their present value disproportionately versus the broader market. That's why the Nasdaq 100 is underperforming the S&P 500 today \u2014 it's not a chip-specific news event, it's a rates-driven repricing of the sector most exposed to higher-for-longer yields."
+      "headline": "DOW SHEDS 631 POINTS AS RATE-SENSITIVE STOCKS SLIDE, CHIPS BUCK THE TREND",
+      "body": "The S&P 500 fell 0.45% to 7,551.81 and the Dow dropped 1.21% to 51,461.90 after Warsh's hawkish remarks, with J.B. Hunt's surprise profit warning also dragging transports lower. The Nasdaq 100 held up better, adding 0.58% to 29,104.35 as an AI-and-semiconductor rally led by AMD, Marvell, and Intel offset the broader selloff.",
+      "explain": "The Dow and S&P are more exposed to cyclical, rate-sensitive sectors like industrials and financials, which get hit hardest when the discount rate on future cash flows rises unexpectedly. The Nasdaq 100's resilience shows investors are treating this week's chip rally as an idiosyncratic, fundamentals-driven story (AI capex demand) that's strong enough to offset the same higher-rate headwind dragging down the rest of the index."
+    },
+    {
+      "cat": "GEOPOLITICS",
+      "headline": "WTI CRUDE TUMBLES 3.3% ON SURPRISE INVENTORY BUILD DESPITE MIDDLE EAST DISRUPTIONS",
+      "body": "WTI fell to $102.31 a barrel even as Brent held near $108 on Saudi Arabia's East-West pipeline outage, after industry data showed a surprise build in U.S. crude inventories. Energy Secretary Chris Wright said the Saudi pipeline, which routes 7 million barrels a day away from the blockaded Strait of Hormuz, should resume \"within days,\" though independent analysts see a multi-week repair.",
+      "explain": "The WTI-Brent split here is a domestic-supply-versus-geopolitical-risk story: a bigger-than-expected U.S. inventory build signals near-term oversupply at home, while Brent stays elevated because it's the benchmark most exposed to the Hormuz/Red Sea routing risk. If Wright's \"within days\" timeline proves wrong, expect Brent's premium over WTI to widen further as the market re-prices a longer Saudi outage."
     },
     {
       "cat": "COMMODITIES",
-      "headline": "GOLD SLIDES TO MULTI-WEEK LOW AS RATE-HIKE BETS FIRM UP",
-      "body": "Gold fell 1.4% to trade near $4,290, its lowest level in about a month, as the near-certain Fed hike and surging real yields raised the opportunity cost of holding a non-yielding asset.",
-      "explain": "Gold pays no interest, so its attractiveness is inversely tied to real yields \u2014 when the 10-year nominal yield jumps to 5% and inflation expectations stay contained, the real (inflation-adjusted) return on bonds rises and gold becomes comparatively less attractive to hold. That relationship is why gold is falling even as an oil-driven geopolitical shock unfolds, a scenario where gold's safe-haven bid would normally be expected to kick in."
+      "headline": "GOLD DROPS TO $4,310 AS REAL YIELDS SPIKE ON HAWKISH FED",
+      "body": "Gold gave back its morning gains within a half hour of the Fed's decision, sliding roughly 1% to $4,310 an ounce as the 10-year yield jumped 21 basis points to 5.01% on Warsh's inflation comments.",
+      "explain": "Gold carries no coupon, so its opportunity cost rises directly with real (inflation-adjusted) yields — when the 10-year jumps 21 bps in an afternoon and near-term inflation expectations don't move nearly as much, the real yield on Treasuries rises and gold becomes comparatively less attractive to hold. That's why gold sold off even with an active Middle East oil-supply shock in the background, a scenario that would normally support a safe-haven bid."
     },
     {
       "cat": "MACRO",
-      "headline": "DOLLAR INDEX RALLIES TO TWO-WEEK HIGH AHEAD OF FOMC",
-      "body": "The DXY climbed to 99.75 (+0.3%), extending a fourth straight session of gains as traders positioned for the Fed to raise rates while other major central banks hold steady.",
-      "explain": "A rate hike widens the interest-rate differential in the dollar's favor relative to currencies like the euro and yen, making dollar-denominated assets more attractive on a yield basis and pulling capital toward the U.S. \u2014 that's the direct channel behind DXY's climb into the decision. A stronger dollar also acts as a partial offset to the oil shock for U.S. consumers, since crude is priced in dollars and a stronger greenback makes imported barrels marginally cheaper than the headline price move alone suggests."
+      "headline": "DOLLAR POSTS BIGGEST ONE-DAY GAIN SINCE JUNE, DXY TOPS 100 FOR FIRST TIME SINCE JULY",
+      "body": "The DXY jumped 0.61% to 100.28, its highest close since July 31 and biggest single-day gain since mid-June, as traders repriced toward three total Fed hikes through next June following Warsh's remarks.",
+      "explain": "A hike that comes with a hawkish forward path widens the expected interest-rate differential between the dollar and other major currencies for longer than a single 25 bp move would on its own, which is what pulls capital toward dollar assets. The move also partially offsets today's oil story for U.S. consumers, since a stronger dollar makes dollar-priced Brent crude marginally cheaper in real terms even as the headline barrel price stays elevated."
     },
     {
       "cat": "MCBB",
-      "headline": "ST. JOHN'S FORWARD DONNIE FREEMAN OUT FOR SEASON WITH ACHILLES INJURY",
-      "body": "Freeman, a key returning piece for St. John's, ruptured his Achilles during a team workout this week and will miss the entire 2026-27 season. Separately, Duke opened Andy Katz's preseason Power 44 at No. 1 for 2026-27."
+      "headline": "PROTECT COLLEGE SPORTS ACT CLEARS FIRST PROCEDURAL VOTE, 74-24",
+      "body": "The Senate advanced the Protect College Sports Act in the first of three required procedural votes, with a second vote possible as soon as Thursday and a final vote expected next week. Separately, Indiana landed a 2027 commitment from German 7-footer Felix Kiehlneker, and the NCAA won another court victory keeping several transfer-eligibility cases, including Gonzaga's Javon Bennett, on hold."
     },
     {
       "cat": "NBA",
-      "headline": "TRAIL BLAZERS LAND JA MORANT IN TRADE WITH GRIZZLIES",
-      "body": "Portland acquired former All-Star guard Ja Morant from Memphis in one of the offseason's biggest moves, headlining a summer that also saw the Celtics lock up forward Jordan Walsh on a three-year, $15 million extension."
+      "headline": "KAWHI LEONARD TRADE TO RAPTORS OFFICIALLY COMPLETE AFTER MONTHS-LONG LEAGUE INVESTIGATION",
+      "body": "The Clippers and Raptors finalized the deal sending Leonard to Toronto for Brandon Ingram, Gradey Dick, two unprotected first-round picks, a pick swap, and two second-rounders, after the trade was held up since June 30 while the league investigated Clippers cap-circumvention allegations. Leonard, coming off a 27.9 ppg season, waived a $7.45M trade kicker and is expected to sign an extension in Toronto."
     },
     {
       "cat": "NFL",
-      "headline": "CHIEFS ROUT BRONCOS AS WEEK 1 TIES SCORING RECORD",
-      "body": "Kansas City dominated Denver in Week 1 as the league's opening slate tied the Super Bowl-era record for most points scored in a single week. Attention now turns to Week 2, including the Bills christening their new stadium against the Lions."
+      "headline": "CHIEFS' KENNETH WALKER III RUSHES FOR 173 YARDS IN DEBUT AS KC ROUTS DENVER 31-10",
+      "body": "Walker III broke a 60-yard touchdown run in his first game in Kansas City as the Chiefs dominated the Broncos on Monday Night Football, while Travis Kelce moved into second place all-time in receiving yards by a tight end. The Chiefs-Broncos game helped tie the Super Bowl-era record for combined points scored in a Week 1 slate."
     },
     {
       "cat": "NCAA CFB",
-      "headline": "TEXAS STUNS NO. 1 OHIO STATE WITH 20-POINT COMEBACK",
-      "body": "Texas erased a 20-point deficit to upset top-ranked Ohio State, with the Longhorns' quarterback leading the rally and delivering in the clutch to hand the Buckeyes their first loss of the season."
+      "headline": "LSU DEMOLISHES CLEMSON 51-10, PILING PRESSURE ON DABO SWINNEY",
+      "body": "LSU blew out Clemson 51-10 in one of the most lopsided results of the season's opening weeks, while Michigan survived a controversial finish to escape Western Michigan 13-12. Texas QB Arch Manning, Ohio State WR Jeremiah Smith, and Notre Dame QB CJ Carr remain the top names on early Heisman watch lists."
     }
   ],
   "sports": [
     {
       "team": "WASHINGTON HUSKIES FOOTBALL",
-      "pill": "W 16-14",
+      "pill": "2-0",
       "pillClass": "s-w",
-      "detail": "Beat Utah State 16-14 to move to 2-0. Next: vs. Eastern Washington, Sat. Sept. 19, 4:15 PM."
+      "detail": "Opened 24-10 over Washington State, then beat Utah State to move to 2-0. Next: vs. Eastern Washington, Sat. Sept. 19, 4:15 PM — Big Ten opener vs. Minnesota follows Sept. 26."
     },
     {
       "team": "WASHINGTON HUSKIES BASKETBALL",
       "pill": "OFFSEASON",
       "pillClass": "s-up",
-      "detail": "Landed transfer LeJuan Watts (Texas Tech, 11.8 ppg) and commit Harun Zrno (Rutgers) as Danny Sprinkle rebuilds the roster."
+      "detail": "Landed transfer LeJuan Watts (Texas Tech, 11.8 ppg) and commit Harun Zrno (Rutgers) as Danny Sprinkle enters year two rebuilding the roster in the Big Ten."
     },
     {
       "team": "SEATTLE SEAHAWKS",
-      "pill": "W 13-10",
+      "pill": "1-0",
       "pillClass": "s-w",
-      "detail": "Rallied from 10-0 down to beat New England in the opener after Sam Darnold's hip injury; Darnold update was positive. Next: at Cardinals, Sun. Sept. 20, 4:25 PM ET."
+      "detail": "Beat New England 13-10 in the Super Bowl LX rematch season opener, but starting QB Sam Darnold exited with a hip injury after Seattle's first series. Next: at Cardinals, Sun. Sept. 20, 1:25 PM PT."
     },
     {
       "team": "DETROIT PISTONS",
       "pill": "OFFSEASON",
       "pillClass": "s-up",
-      "detail": "Coming off a 60-22 season; still unable to reach a long-term deal with RFA center Jalen Duren, who could take his $9.6M qualifying offer. Paul Reed's $5.6M deal was fully guaranteed."
+      "detail": "Coming off a 60-22 No. 1 seed in the East; still can't reach a long-term deal with All-NBA RFA center Jalen Duren, who could take his $9.6M qualifying offer. Paul Reed's $5.6M deal is fully guaranteed as the backup plan."
     },
     {
       "team": "SEATTLE MARINERS",
-      "pill": "TODAY 9:38 PM ET",
+      "pill": "TONIGHT 6:38 PM PT",
       "pillClass": "s-up",
-      "detail": "At Angels tonight while trying to snap a 3-game skid; still lead the AL West after going 7-3 in their last 10. Davis, Evans, and Davila all on the 60-day IL."
+      "detail": "At the Angels tonight (70-82) trying to snap a 3-game skid, 6.5 games back with the postseason window narrowing. Davis, Evans, and Davila remain on the 60-day IL."
     }
   ],
   "watchlist": [
-    "FOMC rate decision Wednesday 2:00 PM ET \u2014 92.5% odds of a 25 bp hike, the Fed's first since 2023",
-    "Powell press conference Wednesday 2:30 PM ET \u2014 watch for guidance on the pace of further hikes",
-    "Mariners at Angels \u2014 tonight 9:38 PM ET, protecting AL West lead amid a 3-game skid",
-    "Huskies host Eastern Washington \u2014 Saturday 4:15 PM PT, Husky Stadium",
-    "Seahawks at Cardinals \u2014 Sunday 4:25 PM ET, State Farm Stadium"
+    "Fed funds rate now 3.75%-4.00% after today's hike — 16 of 18 officials see at least one more hike in 2026",
+    "10-year Treasury yield at 5.01% (+21 bps) — watch for follow-through as markets price three hikes through June",
+    "Senate's second procedural vote on the Protect College Sports Act possible as soon as Thursday",
+    "Mariners at Angels — tonight 6:38 PM PT, trying to halt a 3-game skid with 6.5 games back",
+    "Seahawks at Cardinals — Sunday, Sept. 20, 1:25 PM PT, State Farm Stadium"
   ],
   "deepDive": {
-    "title": "Why an Oil Shock Complicates a Fed That's About to Hike",
+    "title": "Why the Dot Plot Moved Markets More Than the Rate Hike Itself",
     "content": [
-      "Today's brief has an unusual pairing: crude oil spiking 4% on a Middle East supply scare on the same day the 10-year Treasury yield hit its highest level since 2007, one day before the Fed is expected to raise rates for the first time since 2023. Those two moves aren't coincidental. Energy shocks and Fed policy interact directly, because oil is one of the few inputs that shows up almost immediately in the inflation data the Fed is legally obligated to respond to. Understanding that transmission mechanism explains why markets are bracing for hawkish language tomorrow even though the rate decision itself is already fully priced.",
-      "Oil enters CPI two ways: directly, through the energy component (gasoline, heating oil, natural gas), which makes up roughly 7% of the headline basket, and indirectly, through freight, plastics, fertilizer, and any input that's refined from or transported using petroleum. The direct effect shows up within a month, as retail gas prices track crude futures closely. The indirect effect lags two to four months as businesses pass higher input costs through their supply chains into finished-good prices. That lag is exactly why a supply shock today becomes a live inflation problem for the Fed's outlook well into the winter, not just a one-day headline.",
-      "This is a textbook cost-push shock, and it's the hardest kind of inflation for a central bank to manage, because raising rates doesn't fix a pipeline shutdown \u2014 it just slows the rest of the economy while the supply constraint runs its course. The 1973 oil embargo is the canonical case: the Fed under Arthur Burns hiked into an oil shock and got stagflation, high inflation and weak growth simultaneously, because rate hikes attack demand while the actual problem was supply. Most people miss that the Fed's preferred gauge, core PCE, strips out food and energy specifically to avoid overreacting to exactly this kind of shock \u2014 but headline CPI still matters because it's what shapes the public's inflation expectations.",
-      "That tension is precisely what's live in tomorrow's decision. A near-certain hike is already baked into yields, so the market-moving variable is whether Powell's dot plot treats today's oil spike as noise to look through or as a reason to keep hiking into 2027. If officials lean hawkish and cite energy-driven inflation risk, expect the yield curve to stay inverted or flatten further and the dollar to extend its rally, since dollar strength is the closest thing to a natural offset \u2014 a stronger dollar makes dollar-priced oil marginally cheaper for U.S. buyers even as the headline barrel price rises."
+      "Today's Fed decision was almost a non-event by the time it hit the tape — a quarter-point hike to 3.75%-4.00% had been priced at well over 90% odds for weeks. Yet the 10-year yield jumped 21 basis points, the dollar posted its biggest one-day gain since June, and gold gave back its entire morning rally within thirty minutes. The mover wasn't the vote count; it was Chairman Warsh's press conference and the committee's updated Summary of Economic Projections, better known as the dot plot. Understanding why forward guidance can swamp the actual policy action explains almost every market move in today's brief.",
+      "The dot plot is a scatter chart where each of the 18 FOMC participants marks their own projection for where the fed funds rate will sit at the end of each of the next several years, plus a longer-run estimate. It says nothing binding — no one votes on the dots, and individual policymakers can and do abandon their own projections within a quarter — but it's the clearest signal the Fed gives about its reaction function, the internal model of how officials will respond to incoming data. Today's dots showed 16 of 18 participants expecting at least one more hike in 2026, with four seeing two. That distribution matters more than today's single hike because it prices an entire path, not one data point.",
+      "This is why markets can rally on a rate cut and sell off on a rate hike, or vice versa, depending entirely on guidance: in December 2018, the Fed hiked rates as expected but Chair Powell's press conference described the balance-sheet runoff as being on \"autopilot,\" and the S&P 500 fell nearly 2% that day and kept falling into a near-bear-market by Christmas Eve, purely on the forward-guidance language. Most people conflate \"what the Fed did\" with \"what the Fed said it will do next,\" but bond and currency markets are pricing machines built on expectations — they had already settled today's hike into yields over the prior weeks, leaving Warsh's hawkish framing as the only genuinely new information of the day.",
+      "For a student watching this unfold, the practical lesson is where to look next: the CME FedWatch-style probability of additional 2026 hikes, the pace of core PCE readings between now and the next meeting, and whether Warsh's language holds or softens at the October meeting. If the coming CPI and PCE prints come in soft, expect today's hawkish repricing — the higher 10-year, the stronger dollar, the weaker gold — to partially unwind, since the dot plot is a snapshot of officials' current thinking, not a commitment. The next real test of today's guidance isn't the next Fed meeting; it's the next inflation print."
     ]
   }
 }
