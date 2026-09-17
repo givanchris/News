@@ -1,48 +1,72 @@
 {
-  "lastUpdated": "2026-09-17T16:35:08-06:00",
+  "lastUpdated": "2026-09-17T17:00:18-06:00",
   "market": {
-    "sp500":  { "price": "7,596",   "change": "+0.59%",  "dir": "up"   },
-    "nasdaq": { "price": "29,413",  "change": "+1.62%",  "dir": "up"   },
-    "yield":  { "price": "4.93%",   "change": "-7 bps",  "dir": "down" },
-    "wti":    { "price": "$102",    "change": "-0.44%",  "dir": "down" },
-    "gold":   { "price": "$4,364",  "change": "+1.1%",   "dir": "up"   },
-    "dxy":    { "price": "100.23",  "change": "-0.03%",  "dir": "flat" }
+    "sp500": {
+      "price": "7638",
+      "change": "+1.14%",
+      "dir": "up"
+    },
+    "nasdaq": {
+      "price": "29447",
+      "change": "+1.73%",
+      "dir": "up"
+    },
+    "yield": {
+      "price": "4.95%",
+      "change": "-6 bps",
+      "dir": "up"
+    },
+    "wti": {
+      "price": "$101",
+      "change": "-1.04%",
+      "dir": "down"
+    },
+    "gold": {
+      "price": "$4382",
+      "change": "+1.07%",
+      "dir": "up"
+    },
+    "dxy": {
+      "price": "100.24",
+      "change": "-0.08%",
+      "dir": "down"
+    }
   },
   "stories": [
     {
       "cat": "CENTRAL BANKS",
       "headline": "10-YEAR YIELD FALLS 7 BPS TO 4.93% A DAY AFTER THE FED'S HAWKISH HIKE",
       "body": "One day after the FOMC raised the fed funds rate a quarter point to 3.75%-4.00% and signaled more tightening ahead, the 10-year Treasury yield actually retreated to 4.93% while the 2-year held near 4.39%. Stocks rallied alongside the pullback, with the S&P 500 up 0.59% and the Nasdaq 100 up 1.62%.",
-      "explain": "The Fed only directly sets the overnight rate; the 10-year is priced off the market's expected average path of future short rates plus a term premium, so it can move opposite the policy rate. Wednesday's hawkish hike raised the odds of front-loaded tightening, which paradoxically lowers the market's expected rate path further out if investors think aggressive near-term hikes increase the chance of slower growth or earlier cuts later — a classic bull-flattening move."
+      "explain": "The Fed only directly sets the overnight rate; the 10-year is priced off the market's expected average path of future short rates plus a term premium, so it can move opposite the policy rate. Wednesday's hawkish hike raised the odds of front-loaded tightening, which paradoxically lowers the market's expected rate path further out if investors think aggressive near-term hikes increase the chance of slower growth or earlier cuts later \u2014 a classic bull-flattening move."
     },
     {
       "cat": "MARKETS",
       "headline": "S&P 500, NASDAQ 100 REBOUND AS TECH LEADS RECOVERY FROM FED-DAY SELLOFF",
       "body": "The S&P 500 climbed 0.59% to 7,596 and the Nasdaq 100 jumped 1.62% to 29,413, clawing back Wednesday's Fed-day losses as falling yields eased pressure on rate-sensitive growth names.",
-      "explain": "Wednesday's selloff was driven by discount-rate math: a hawkish Fed pushes up the rate used to value future cash flows, which hits long-duration growth and tech stocks hardest. Today's yield pullback reverses that math directly, which is why the Nasdaq 100's outsized gain today mirrors its underperformance the day before — same mechanism, opposite direction."
+      "explain": "Wednesday's selloff was driven by discount-rate math: a hawkish Fed pushes up the rate used to value future cash flows, which hits long-duration growth and tech stocks hardest. Today's yield pullback reverses that math directly, which is why the Nasdaq 100's outsized gain today mirrors its underperformance the day before \u2014 same mechanism, opposite direction."
     },
     {
       "cat": "COMMODITIES",
       "headline": "GOLD RALLIES 1.1% TO $4,364 AS REAL YIELDS PULL BACK FROM WEDNESDAY'S SPIKE",
       "body": "Gold rebounded to roughly $4,364 an ounce, recovering ground lost during Wednesday's Fed-driven real-yield spike as nominal 10-year yields eased 7 bps.",
-      "explain": "Gold pays no coupon, so its relative attractiveness is set by real (inflation-adjusted) yields, not the fed funds rate itself. When nominal yields fall while inflation expectations stay roughly anchored, real yields decline, lowering the opportunity cost of holding a zero-yield asset — which is exactly what's pulling gold back up today after Wednesday's spike-driven selloff."
+      "explain": "Gold pays no coupon, so its relative attractiveness is set by real (inflation-adjusted) yields, not the fed funds rate itself. When nominal yields fall while inflation expectations stay roughly anchored, real yields decline, lowering the opportunity cost of holding a zero-yield asset \u2014 which is exactly what's pulling gold back up today after Wednesday's spike-driven selloff."
     },
     {
       "cat": "GEOPOLITICS",
       "headline": "WTI SLIPS TO $102 WHILE BRENT HOLDS ITS MIDDLE EAST PREMIUM NEAR $104",
       "body": "WTI crude eased 0.44% to roughly $102 a barrel even as Brent stayed elevated near $103.60, with the spread reflecting an ongoing Saudi pipeline outage tied to Middle East shipping disruptions that has yet to fully resolve.",
-      "explain": "WTI is a domestic U.S. benchmark most sensitive to inventory data, while Brent is more exposed to international supply risk — in this case, a Saudi pipeline outage rerouting several million barrels a day away from Hormuz. As long as the outage lingers, expect Brent to keep trading at a premium to WTI regardless of what U.S. inventory reports show week to week."
+      "explain": "WTI is a domestic U.S. benchmark most sensitive to inventory data, while Brent is more exposed to international supply risk \u2014 in this case, a Saudi pipeline outage rerouting several million barrels a day away from Hormuz. As long as the outage lingers, expect Brent to keep trading at a premium to WTI regardless of what U.S. inventory reports show week to week."
     },
     {
       "cat": "MACRO",
       "headline": "DOLLAR INDEX HOLDS NEAR 100 AS TRADERS PRICE THE FED'S FORWARD HIKE PATH",
       "body": "The DXY was essentially flat at 100.23, consolidating just above the psychological 100 level as markets digest Wednesday's guidance that a majority of Fed officials see at least one more hike before year-end.",
-      "explain": "A currency's value tracks the expected interest-rate differential against other major economies, not just the most recent policy move, so the dollar's flat session here reflects a market that had already priced most of Wednesday's hawkish signal into Thursday's open. The next real catalyst is incoming inflation data — a hot print would reinforce the case for another hike and likely push the DXY higher; a soft one could unwind today's stability."
+      "explain": "A currency's value tracks the expected interest-rate differential against other major economies, not just the most recent policy move, so the dollar's flat session here reflects a market that had already priced most of Wednesday's hawkish signal into Thursday's open. The next real catalyst is incoming inflation data \u2014 a hot print would reinforce the case for another hike and likely push the DXY higher; a soft one could unwind today's stability."
     },
     {
       "cat": "MCBB",
       "headline": "DUKE TOPS PRESEASON POWER 44 AS PROGRAMS RAMP UP TOWARD MIDNIGHT MADNESS",
-      "body": "With the 2026-27 season still weeks away, Duke was named the No. 1 team in the first major preseason power ranking, while Arizona — coming off a 36-win season and its first Final Four since 2001 — has scheduled its Midnight Madness-style kickoff event for Sept. 26."
+      "body": "With the 2026-27 season still weeks away, Duke was named the No. 1 team in the first major preseason power ranking, while Arizona \u2014 coming off a 36-win season and its first Final Four since 2001 \u2014 has scheduled its Midnight Madness-style kickoff event for Sept. 26."
     },
     {
       "cat": "NBA",
@@ -65,7 +89,7 @@
       "team": "WASHINGTON HUSKIES FOOTBALL",
       "pill": "2-0",
       "pillClass": "s-w",
-      "detail": "Opened 24-10 over Washington State, then held off Utah State 16-14 to start 2-0. Next: vs. Eastern Washington, Sat. Sept. 19, 4:15 PM PT (BTN) — Big Ten opener vs. Minnesota follows Sept. 26."
+      "detail": "Opened 24-10 over Washington State, then held off Utah State 16-14 to start 2-0. Next: vs. Eastern Washington, Sat. Sept. 19, 4:15 PM PT (BTN) \u2014 Big Ten opener vs. Minnesota follows Sept. 26."
     },
     {
       "team": "WASHINGTON HUSKIES BASKETBALL",
@@ -89,23 +113,23 @@
       "team": "SEATTLE MARINERS",
       "pill": "W 7-2",
       "pillClass": "s-w",
-      "detail": "Beat the Angels 7-2 Wednesday to avoid a sweep, but sit 6.5 games back in the AL wild card (5.5 back in the AL West) with just 9 games left — the postseason window is nearly shut."
+      "detail": "Beat the Angels 7-2 Wednesday to avoid a sweep, but sit 6.5 games back in the AL wild card (5.5 back in the AL West) with just 9 games left \u2014 the postseason window is nearly shut."
     }
   ],
   "watchlist": [
-    "Next FOMC meeting Oct. 27-28 — markets watching for a possible second hike after Wednesday's move to 3.75%-4.00%",
-    "Core PCE inflation data due next week — first real test of whether Wednesday's hawkish Fed guidance holds",
-    "Seahawks at Cardinals — Sunday, Sept. 20, 1:25 PM PT, State Farm Stadium (Drew Lock starts for injured Sam Darnold)",
-    "Chiefs host Colts on Sunday Night Football — Sept. 20, 8:20 PM ET, Arrowhead Stadium",
-    "Mariners: 9 games remain, 6.5 back in the AL wild card — playoff window nearly closed"
+    "Next FOMC meeting Oct. 27-28 \u2014 markets watching for a possible second hike after Wednesday's move to 3.75%-4.00%",
+    "Core PCE inflation data due next week \u2014 first real test of whether Wednesday's hawkish Fed guidance holds",
+    "Seahawks at Cardinals \u2014 Sunday, Sept. 20, 1:25 PM PT, State Farm Stadium (Drew Lock starts for injured Sam Darnold)",
+    "Chiefs host Colts on Sunday Night Football \u2014 Sept. 20, 8:20 PM ET, Arrowhead Stadium",
+    "Mariners: 9 games remain, 6.5 back in the AL wild card \u2014 playoff window nearly closed"
   ],
   "deepDive": {
     "title": "Why the 10-Year Yield Fell the Day After the Fed Raised Rates",
     "content": [
-      "Yesterday the Fed hiked its policy rate for the first time in three years and Chair Warsh talked tough on inflation, pushing the 10-year Treasury yield toward 5% and hitting stocks. Today, with no new Fed action at all, the 10-year fell 7 basis points to 4.93% and both the S&P 500 and Nasdaq 100 rallied. That split — a rate hike followed a day later by falling long-term borrowing costs — looks contradictory until you separate what the Fed actually controls from what the bond market is pricing on its own.",
-      "The Fed sets one number directly: the overnight fed funds rate. The 10-year yield is not set by the Fed at all — it's the market's own estimate of the average short-term rate it expects over the next decade, plus a term premium for the extra risk of lending long. When the Fed hikes and signals more hikes are coming, bond investors have to decide whether that front-loaded tightening raises or lowers their expectation for rates several years out. If aggressive near-term hikes are read as increasing the odds of slower growth or earlier cuts down the road, the expected average path actually falls, even though the here-and-now policy rate just rose. That's a bull-flattening move: short yields up, long yields down.",
-      "The 2004-2006 tightening cycle is the textbook case of this dynamic taking over completely. The Fed hiked the fed funds rate seventeen straight times, from 1% to 5.25%, yet the 10-year yield barely budged and at points fell — a pattern Alan Greenspan famously called a \"conundrum.\" Bond markets simply didn't believe the hikes would stick long-term, given disinflation trends already in motion, so they refused to reprice the long end in step with the short end. Today's 54-basis-point gap between the 2-year (4.39%) and 10-year (4.93%) is nowhere near that extreme, but the underlying skepticism — will this hiking cycle actually hold — is the same force at work.",
-      "The practical takeaway: a Fed hike does not raise all borrowing costs equally. Overnight-linked costs — credit cards, HELOCs, most variable-rate debt — move almost immediately with the fed funds rate. Mortgages and corporate bonds track the 10-year far more closely, which is why a flattening curve can leave a 30-year mortgage rate roughly unchanged, or even a touch lower, the same week the Fed tightens. Watch next week's core PCE print as the real test: a soft number would validate today's long-yield pullback and likely extend it, while a hot one would force the bond market to reprice the long end back toward Wednesday's levels."
+      "Yesterday the Fed hiked its policy rate for the first time in three years and Chair Warsh talked tough on inflation, pushing the 10-year Treasury yield toward 5% and hitting stocks. Today, with no new Fed action at all, the 10-year fell 7 basis points to 4.93% and both the S&P 500 and Nasdaq 100 rallied. That split \u2014 a rate hike followed a day later by falling long-term borrowing costs \u2014 looks contradictory until you separate what the Fed actually controls from what the bond market is pricing on its own.",
+      "The Fed sets one number directly: the overnight fed funds rate. The 10-year yield is not set by the Fed at all \u2014 it's the market's own estimate of the average short-term rate it expects over the next decade, plus a term premium for the extra risk of lending long. When the Fed hikes and signals more hikes are coming, bond investors have to decide whether that front-loaded tightening raises or lowers their expectation for rates several years out. If aggressive near-term hikes are read as increasing the odds of slower growth or earlier cuts down the road, the expected average path actually falls, even though the here-and-now policy rate just rose. That's a bull-flattening move: short yields up, long yields down.",
+      "The 2004-2006 tightening cycle is the textbook case of this dynamic taking over completely. The Fed hiked the fed funds rate seventeen straight times, from 1% to 5.25%, yet the 10-year yield barely budged and at points fell \u2014 a pattern Alan Greenspan famously called a \"conundrum.\" Bond markets simply didn't believe the hikes would stick long-term, given disinflation trends already in motion, so they refused to reprice the long end in step with the short end. Today's 54-basis-point gap between the 2-year (4.39%) and 10-year (4.93%) is nowhere near that extreme, but the underlying skepticism \u2014 will this hiking cycle actually hold \u2014 is the same force at work.",
+      "The practical takeaway: a Fed hike does not raise all borrowing costs equally. Overnight-linked costs \u2014 credit cards, HELOCs, most variable-rate debt \u2014 move almost immediately with the fed funds rate. Mortgages and corporate bonds track the 10-year far more closely, which is why a flattening curve can leave a 30-year mortgage rate roughly unchanged, or even a touch lower, the same week the Fed tightens. Watch next week's core PCE print as the real test: a soft number would validate today's long-yield pullback and likely extend it, while a hot one would force the bond market to reprice the long end back toward Wednesday's levels."
     ]
   }
 }
