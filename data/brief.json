@@ -1,87 +1,63 @@
 {
-  "lastUpdated": "2026-09-18T16:30:18-06:00",
+  "lastUpdated": "2026-09-18T16:34:41-06:00",
   "market": {
-    "sp500": {
-      "price": "7650",
-      "change": "+0.17%",
-      "dir": "up"
-    },
-    "nasdaq": {
-      "price": "29644",
-      "change": "+0.67%",
-      "dir": "up"
-    },
-    "yield": {
-      "price": "5.00%",
-      "change": "+5 bps",
-      "dir": "down"
-    },
-    "wti": {
-      "price": "$95",
-      "change": "-5.63%",
-      "dir": "down"
-    },
-    "gold": {
-      "price": "$4416",
-      "change": "+0.44%",
-      "dir": "up"
-    },
-    "dxy": {
-      "price": "100.21",
-      "change": "-0.02%",
-      "dir": "down"
-    }
+    "sp500": { "price": "7,650", "change": "+0.17%", "dir": "up" },
+    "nasdaq": { "price": "29,644", "change": "+0.67%", "dir": "up" },
+    "yield": { "price": "5.01%", "change": "+6 bps", "dir": "down" },
+    "wti": { "price": "$100", "change": "-1.6%", "dir": "down" },
+    "gold": { "price": "$4,391", "change": "+1.1%", "dir": "up" },
+    "dxy": { "price": "100.21", "change": "-0.02%", "dir": "down" }
   },
   "stories": [
     {
       "cat": "CENTRAL BANKS",
-      "headline": "10-YEAR YIELD FALLS 7 BPS TO 4.93% A DAY AFTER THE FED'S HAWKISH HIKE",
-      "body": "One day after the FOMC raised the fed funds rate a quarter point to 3.75%-4.00% and signaled more tightening ahead, the 10-year Treasury yield actually retreated to 4.93% while the 2-year held near 4.39%. Stocks rallied alongside the pullback, with the S&P 500 up 0.59% and the Nasdaq 100 up 1.62%.",
-      "explain": "The Fed only directly sets the overnight rate; the 10-year is priced off the market's expected average path of future short rates plus a term premium, so it can move opposite the policy rate. Wednesday's hawkish hike raised the odds of front-loaded tightening, which paradoxically lowers the market's expected rate path further out if investors think aggressive near-term hikes increase the chance of slower growth or earlier cuts later \u2014 a classic bull-flattening move."
+      "headline": "10-YEAR YIELD PUSHES BACK ABOVE 5% AS HAWKISH FED REPRICING CONTINUES",
+      "body": "Two days after the FOMC's quarter-point hike to 3.75%-4.00%, the 10-year Treasury yield climbed roughly 6 bps to 5.01%, closing out a losing week for stocks even as the S&P 500 and Nasdaq 100 both ticked higher Friday.",
+      "explain": "Wednesday's initial move lower in long yields reflected skepticism that the hiking cycle would stick; today's reversal back above 5% shows that skepticism fading as the market digests Fed officials' signal that at least one more hike is likely before year-end. When investors raise their expected path of future short rates, the 10-year's pricing formula — expected average short rate plus term premium — pushes higher even without any new Fed action that day."
     },
     {
       "cat": "MARKETS",
-      "headline": "S&P 500, NASDAQ 100 REBOUND AS TECH LEADS RECOVERY FROM FED-DAY SELLOFF",
-      "body": "The S&P 500 climbed 0.59% to 7,596 and the Nasdaq 100 jumped 1.62% to 29,413, clawing back Wednesday's Fed-day losses as falling yields eased pressure on rate-sensitive growth names.",
-      "explain": "Wednesday's selloff was driven by discount-rate math: a hawkish Fed pushes up the rate used to value future cash flows, which hits long-duration growth and tech stocks hardest. Today's yield pullback reverses that math directly, which is why the Nasdaq 100's outsized gain today mirrors its underperformance the day before \u2014 same mechanism, opposite direction."
+      "headline": "S&P 500, NASDAQ 100 EKE OUT GAINS BUT STILL POST WEEKLY LOSSES ON RATE JITTERS",
+      "body": "The S&P 500 rose 0.17% to 7,650 and the Nasdaq 100 climbed 0.67% to 29,644 on Friday, but both indexes still finished the week lower as the 10-year yield's return to 5% kept pressure on valuations.",
+      "explain": "A single day's bounce doesn't undo a week's worth of discount-rate math: when the rate used to value future corporate cash flows rises, present values of those cash flows fall, hitting long-duration growth stocks hardest. Friday's modest gain reflects some dip-buying and short-covering, but the weekly net loss shows the market still repricing for a Fed that means what it said about more hikes."
     },
     {
       "cat": "COMMODITIES",
-      "headline": "GOLD RALLIES 1.1% TO $4,364 AS REAL YIELDS PULL BACK FROM WEDNESDAY'S SPIKE",
-      "body": "Gold rebounded to roughly $4,364 an ounce, recovering ground lost during Wednesday's Fed-driven real-yield spike as nominal 10-year yields eased 7 bps.",
-      "explain": "Gold pays no coupon, so its relative attractiveness is set by real (inflation-adjusted) yields, not the fed funds rate itself. When nominal yields fall while inflation expectations stay roughly anchored, real yields decline, lowering the opportunity cost of holding a zero-yield asset \u2014 which is exactly what's pulling gold back up today after Wednesday's spike-driven selloff."
+      "headline": "WTI FALLS THIRD STRAIGHT SESSION TO $100 AS SAUDI PIPELINE FEARS EASE",
+      "body": "WTI crude dropped 1.6% to roughly $100 a barrel while Brent slipped 0.9% to about $103.87, with both benchmarks finishing the week essentially flat as traders concluded Saudi Arabia's East-West pipeline outage will dent supply less than first feared.",
+      "explain": "WTI and Brent are priced off different supply pools — WTI off U.S. domestic inventories and pipeline flows, Brent off seaborne international cargoes more exposed to Middle East disruptions. The narrowing spread here reflects the market unwinding its initial fear premium: if the pipeline outage reroutes rather than removes barrels from the global market, the risk discount priced into Brent has less reason to persist."
     },
     {
-      "cat": "GEOPOLITICS",
-      "headline": "WTI SLIPS TO $102 WHILE BRENT HOLDS ITS MIDDLE EAST PREMIUM NEAR $104",
-      "body": "WTI crude eased 0.44% to roughly $102 a barrel even as Brent stayed elevated near $103.60, with the spread reflecting an ongoing Saudi pipeline outage tied to Middle East shipping disruptions that has yet to fully resolve.",
-      "explain": "WTI is a domestic U.S. benchmark most sensitive to inventory data, while Brent is more exposed to international supply risk \u2014 in this case, a Saudi pipeline outage rerouting several million barrels a day away from Hormuz. As long as the outage lingers, expect Brent to keep trading at a premium to WTI regardless of what U.S. inventory reports show week to week."
+      "cat": "COMMODITIES",
+      "headline": "GOLD HITS WEEKLY HIGH NEAR $4,400 AS FALLING OIL COOLS INFLATION EXPECTATIONS",
+      "body": "Gold rallied about 1.1% to roughly $4,391 an ounce, touching a weekly high near $4,440 intraday, even as nominal Treasury yields ticked higher — a sign investors read this week's oil pullback as taking pressure off the inflation outlook.",
+      "explain": "Gold is priced off real (inflation-adjusted) yields, not nominal ones, so nominal yields and gold can move in the same direction when inflation expectations fall faster than nominal rates rise. A third straight down session for crude lowers near-term breakeven inflation pricing (the gap between nominal and TIPS yields), which can pull real yields down or flat even while the nominal 10-year pushes back above 5% on Fed-hike repricing."
     },
     {
       "cat": "MACRO",
-      "headline": "DOLLAR INDEX HOLDS NEAR 100 AS TRADERS PRICE THE FED'S FORWARD HIKE PATH",
-      "body": "The DXY was essentially flat at 100.23, consolidating just above the psychological 100 level as markets digest Wednesday's guidance that a majority of Fed officials see at least one more hike before year-end.",
-      "explain": "A currency's value tracks the expected interest-rate differential against other major economies, not just the most recent policy move, so the dollar's flat session here reflects a market that had already priced most of Wednesday's hawkish signal into Thursday's open. The next real catalyst is incoming inflation data \u2014 a hot print would reinforce the case for another hike and likely push the DXY higher; a soft one could unwind today's stability."
+      "headline": "DOLLAR INDEX HOLDS FLAT NEAR 100.21 AS TRADERS AWAIT NEXT INFLATION PRINT",
+      "body": "The DXY was essentially unchanged at 100.21, down 0.02%, consolidating just above the psychological 100 level as this week's hawkish Fed hike is already largely priced in.",
+      "explain": "A currency's level reflects the market's expected interest-rate differential against other major economies over the relevant horizon, not just the most recent policy headline, so a flat DXY here means Wednesday's hike surprise has already been absorbed into forward pricing. Next week's core PCE print is the next real catalyst: a hot number would reinforce the case for another hike and likely push the dollar higher, while a soft one could undercut it."
     },
     {
       "cat": "MCBB",
-      "headline": "DUKE TOPS PRESEASON POWER 44 AS PROGRAMS RAMP UP TOWARD MIDNIGHT MADNESS",
-      "body": "With the 2026-27 season still weeks away, Duke was named the No. 1 team in the first major preseason power ranking, while Arizona \u2014 coming off a 36-win season and its first Final Four since 2001 \u2014 has scheduled its Midnight Madness-style kickoff event for Sept. 26."
+      "headline": "SENATE ADVANCES PROTECT COLLEGE SPORTS ACT 74-24 AS NCAA ELIGIBILITY CHAOS PERSISTS",
+      "body": "The Senate voted 74-24 to advance the bipartisan Protect College Sports Act, an NCAA-backed bill setting federal guardrails on NIL spending and legal exposure, the same week a federal judge certified a nationwide class of Division I athletes barred from a fifth season and issued a preliminary injunction letting them keep playing pending the case. The bill still needs final Senate passage and House approval."
     },
     {
       "cat": "NBA",
-      "headline": "DOJ OPENS CRIMINAL PROBE INTO CLIPPERS OVER ALLEGED KAWHI LEONARD SPONSORSHIP SCHEME",
-      "body": "The U.S. Justice Department has opened a criminal investigation into whether the Clippers arranged secret sponsorship deals benefiting Kawhi Leonard in violation of the salary cap; reported potential penalties under discussion include a steep franchise fine and lost future first-round picks, though no punishment has been finalized. Separately, Portland acquired former All-Star guard Ja Morant in a trade with Memphis."
+      "headline": "DOJ CRIMINAL PROBE DEEPENS CLIPPERS' KAWHI LEONARD SAGA WEEKS AFTER RECORD LEAGUE PENALTY",
+      "body": "Federal prosecutors in the Eastern District of New York are now criminally investigating the same endorsement arrangement that cost the Clippers five first-round picks, a $30 million fine, and a one-year league-wide ban for owner Steve Ballmer when the NBA handed down its penalties on Sept. 2 — the harshest salary-cap discipline in league history."
     },
     {
       "cat": "NFL",
-      "headline": "MAHOMES, CHIEFS HOST COLTS IN SUNDAY NIGHT PRIMETIME AFTER DOMINANT WEEK 1",
-      "body": "Kansas City, fresh off a lopsided Week 1 win over Denver in Mahomes' return from a knee issue, is a 6.5-point favorite hosting Indianapolis on Sunday Night Football (8:20 PM ET, NBC) after the Colts opened 0-1 with a 41-23 home loss to Baltimore."
+      "headline": "JOSH ALLEN ACCOUNTS FOR 5 TDS AS BILLS CHRISTEN NEW $2.1B STADIUM WITH 41-31 WIN OVER LIONS",
+      "body": "Allen threw three touchdown passes and ran for two more Thursday night as Buffalo routed Detroit 41-31 in the first regular-season game at the new Highmark Stadium; Bills receiver DJ Moore suffered an AC joint sprain and is questionable for Week 3 against the Chargers."
     },
     {
       "cat": "NCAA CFB",
-      "headline": "NO. 2 GEORGIA VISITS ARKANSAS HEADLINES A LOADED WEEK 3 SLATE",
-      "body": "Week 3 opened Thursday with Pitt hosting Syracuse and continues Friday with No. 5 Miami at Wake Forest and No. 13 Texas Tech vs. No. 22 Houston, before Saturday's marquee matchup: No. 2 Georgia at Arkansas (ABC), with Arizona State facing Kansas in London the same day."
+      "headline": "NO. 1 TEXAS HEADLINES LOADED WEEK 3 AS NO. 2 GEORGIA TRAVELS TO ARKANSAS",
+      "body": "Texas enters Week 3 ranked No. 1 in the AP Poll at 2-0. Saturday's marquee game sends No. 2 Georgia (2-0), a 24.5-point favorite after a 70-20 rout of Western Kentucky, to Arkansas (1-1, coming off a 49-14 loss at Utah) at noon ET on ABC."
     }
   ],
   "sports": [
@@ -89,47 +65,47 @@
       "team": "WASHINGTON HUSKIES FOOTBALL",
       "pill": "2-0",
       "pillClass": "s-w",
-      "detail": "Opened 24-10 over Washington State, then held off Utah State 16-14 to start 2-0. Next: vs. Eastern Washington, Sat. Sept. 19, 4:15 PM PT (BTN) \u2014 Big Ten opener vs. Minnesota follows Sept. 26."
+      "detail": "Opened 24-10 over Washington State, then held off Utah State 16-14 to start 2-0. Hosts Eastern Washington (1-2) Sat. Sept. 19, 4:15 PM PT (BTN/FOX One) — last tune-up before the Big Ten opener vs. Minnesota on Sept. 26."
     },
     {
       "team": "WASHINGTON HUSKIES BASKETBALL",
       "pill": "OFFSEASON",
       "pillClass": "s-up",
-      "detail": "Danny Sprinkle enters year two after adding transfers LeJuan Watts (Texas Tech, 11.8 ppg) and Harun Zrno (Rutgers) and hiring longtime Oregon assistant Mike Mennenga to the staff."
+      "detail": "Transfers LeJuan Watts (Texas Tech, 11.8 ppg) and Harun Zrno (Rutgers) join Danny Sprinkle's roster for year two. On the women's side, UW released its full 2026-27 schedule this week with legitimate Big Ten title expectations."
     },
     {
       "team": "SEATTLE SEAHAWKS",
       "pill": "1-0",
       "pillClass": "s-w",
-      "detail": "Beat New England 13-10 in a Super Bowl LX rematch to open the season, but starter Sam Darnold was injured early and will miss Week 2; Drew Lock starts at Arizona. Next: at Cardinals, Sun. Sept. 20, 1:25 PM PT."
+      "detail": "Opened 13-10 over New England in a Super Bowl LX rematch, but starter Sam Darnold is out for Week 2; Drew Lock starts at Arizona. Next: at Cardinals, Sun. Sept. 20, 1:25 PM PT (FOX)."
     },
     {
       "team": "DETROIT PISTONS",
       "pill": "OFFSEASON",
       "pillClass": "s-up",
-      "detail": "Coming off a 60-22 No. 1 seed in the East, still unresolved on a long-term deal with restricted free agent Jalen Duren, who could take his $9.6M qualifying offer. Paul Reed's $5.6M deal is fully guaranteed. Season tips off Oct. 20."
+      "detail": "Restricted free agent Jalen Duren's future remains unresolved — Sacramento has made an offer, but Detroit hasn't budged. Duren has until Oct. 1 to accept his $9.6M qualifying offer. Media day is Sept. 28."
     },
     {
       "team": "SEATTLE MARINERS",
       "pill": "W 7-2",
       "pillClass": "s-w",
-      "detail": "Beat the Angels 7-2 Wednesday to avoid a sweep, but sit 6.5 games back in the AL wild card (5.5 back in the AL West) with just 9 games left \u2014 the postseason window is nearly shut."
+      "detail": "Beat the Angels 7-2 last Wednesday to salvage the series finale. Sit 5 games back in the AL Wild Card at 70-79 with the season winding down. Next: at Rockies, tonight 8:10 PM ET (Bryan Woo starts) to open a season-closing three-game series."
     }
   ],
   "watchlist": [
-    "Next FOMC meeting Oct. 27-28 \u2014 markets watching for a possible second hike after Wednesday's move to 3.75%-4.00%",
-    "Core PCE inflation data due next week \u2014 first real test of whether Wednesday's hawkish Fed guidance holds",
-    "Seahawks at Cardinals \u2014 Sunday, Sept. 20, 1:25 PM PT, State Farm Stadium (Drew Lock starts for injured Sam Darnold)",
-    "Chiefs host Colts on Sunday Night Football \u2014 Sept. 20, 8:20 PM ET, Arrowhead Stadium",
-    "Mariners: 9 games remain, 6.5 back in the AL wild card \u2014 playoff window nearly closed"
+    "Core PCE inflation data due next week — first real test of whether this week's hawkish Fed guidance holds",
+    "Next FOMC meeting Oct. 27-28 — markets watching for a possible second hike after this week's move to 3.75%-4.00%",
+    "Washington Huskies host Eastern Washington — Sat. Sept. 19, 4:15 PM PT, Husky Stadium (BTN/FOX One)",
+    "Seahawks at Cardinals — Sun. Sept. 20, 1:25 PM PT, State Farm Stadium (Drew Lock starts for injured Sam Darnold)",
+    "Mariners at Rockies — tonight, 8:10 PM ET, Coors Field, first of a season-closing three-game series"
   ],
   "deepDive": {
-    "title": "Why the 10-Year Yield Fell the Day After the Fed Raised Rates",
+    "title": "Why Oil, Gold, and the 10-Year Yield Can All Move at Once — and Not Contradict Each Other",
     "content": [
-      "Yesterday the Fed hiked its policy rate for the first time in three years and Chair Warsh talked tough on inflation, pushing the 10-year Treasury yield toward 5% and hitting stocks. Today, with no new Fed action at all, the 10-year fell 7 basis points to 4.93% and both the S&P 500 and Nasdaq 100 rallied. That split \u2014 a rate hike followed a day later by falling long-term borrowing costs \u2014 looks contradictory until you separate what the Fed actually controls from what the bond market is pricing on its own.",
-      "The Fed sets one number directly: the overnight fed funds rate. The 10-year yield is not set by the Fed at all \u2014 it's the market's own estimate of the average short-term rate it expects over the next decade, plus a term premium for the extra risk of lending long. When the Fed hikes and signals more hikes are coming, bond investors have to decide whether that front-loaded tightening raises or lowers their expectation for rates several years out. If aggressive near-term hikes are read as increasing the odds of slower growth or earlier cuts down the road, the expected average path actually falls, even though the here-and-now policy rate just rose. That's a bull-flattening move: short yields up, long yields down.",
-      "The 2004-2006 tightening cycle is the textbook case of this dynamic taking over completely. The Fed hiked the fed funds rate seventeen straight times, from 1% to 5.25%, yet the 10-year yield barely budged and at points fell \u2014 a pattern Alan Greenspan famously called a \"conundrum.\" Bond markets simply didn't believe the hikes would stick long-term, given disinflation trends already in motion, so they refused to reprice the long end in step with the short end. Today's 54-basis-point gap between the 2-year (4.39%) and 10-year (4.93%) is nowhere near that extreme, but the underlying skepticism \u2014 will this hiking cycle actually hold \u2014 is the same force at work.",
-      "The practical takeaway: a Fed hike does not raise all borrowing costs equally. Overnight-linked costs \u2014 credit cards, HELOCs, most variable-rate debt \u2014 move almost immediately with the fed funds rate. Mortgages and corporate bonds track the 10-year far more closely, which is why a flattening curve can leave a 30-year mortgage rate roughly unchanged, or even a touch lower, the same week the Fed tightens. Watch next week's core PCE print as the real test: a soft number would validate today's long-yield pullback and likely extend it, while a hot one would force the bond market to reprice the long end back toward Wednesday's levels."
+      "Today's tape looks like it shouldn't add up: WTI fell for a third straight session to $100, gold rallied to a weekly high near $4,400, and the 10-year Treasury yield pushed back above 5%. If oil weakness signals cooling inflation, why didn't yields fall too? And if yields rose, why did gold — an asset that competes with real yields for investor dollars — rally at the same time? The answer is that these three markets are pricing three different things: nominal rate expectations, real rate expectations, and near-term inflation compensation, and they don't have to move together just because they're all reacting to the same day's headlines.",
+      "The transmission channel runs through breakeven inflation — the gap between a nominal Treasury yield and its inflation-protected (TIPS) counterpart, which the market treats as a real-time forecast of future CPI. Energy carries roughly a 7% weight in the CPI basket, and unlike most components, oil's pass-through to gas prices and transportation costs is fast, often showing up within a month. A third consecutive down session for crude gets read almost immediately as lower expected near-term inflation, which compresses breakevens even on a day when the nominal 10-year yield is rising for an entirely separate reason — in this case, the market catching up to Wednesday's hawkish Fed signal about further hikes.",
+      "What most people miss is that gold isn't priced off the nominal yield investors read in headlines — it's priced off the real yield, which is nominal yield minus breakeven inflation. If breakevens fall faster than nominal yields rise, real yields can hold flat or even decline, which is exactly the setup that lets gold rally through a day when the 10-year is grabbing headlines for crossing back above 5%. The 2014-2015 oil crash is the textbook version of this at scale: crude's roughly 50% collapse dragged breakeven inflation down for over a year, holding real yields low and helping gold hold up even as the Fed was preparing to lift off from zero.",
+      "The practical read for next week: core PCE is the data point that either confirms or unwinds today's setup. If the energy-driven disinflation signal shows up in the actual print, expect breakevens to keep compressing and gold to keep finding support even in a higher-nominal-yield environment. If PCE runs hot instead — meaning today's oil-driven optimism was premature — breakevens should snap back up, real yields should follow nominal yields higher, and gold's rally here would look like it got ahead of itself."
     ]
   }
 }
