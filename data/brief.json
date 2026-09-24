@@ -1,87 +1,57 @@
 {
-  "lastUpdated": "2026-09-24T16:30:16-06:00",
+  "lastUpdated": "2026-09-24T16:38:46-06:00",
   "market": {
-    "sp500": {
-      "price": "7704",
-      "change": "-0.02%",
-      "dir": "down"
-    },
-    "nasdaq": {
-      "price": "30479",
-      "change": "+0.03%",
-      "dir": "up"
-    },
-    "yield": {
-      "price": "5.16%",
-      "change": "+5 bps",
-      "dir": "down"
-    },
-    "wti": {
-      "price": "$94",
-      "change": "+3.30%",
-      "dir": "up"
-    },
-    "gold": {
-      "price": "$4303",
-      "change": "-0.36%",
-      "dir": "down"
-    },
-    "dxy": {
-      "price": "101.25",
-      "change": "+0.10%",
-      "dir": "up"
-    }
+    "sp500": { "price": "7,704", "change": "-0.02%", "dir": "down" },
+    "nasdaq": { "price": "30,479", "change": "+0.03%", "dir": "up" },
+    "yield": { "price": "5.16%", "change": "+5 bps", "dir": "down" },
+    "wti": { "price": "$94", "change": "+3.30%", "dir": "up" },
+    "gold": { "price": "$4,303", "change": "-0.36%", "dir": "down" },
+    "dxy": { "price": "101.25", "change": "+0.10%", "dir": "up" }
   },
   "stories": [
     {
-      "cat": "MACRO",
-      "headline": "TREASURY YIELDS SURGE TO 19-YEAR HIGH, STOCKS SLIDE",
-      "body": "The 10-year Treasury yield spiked above 5.10% intraday, its highest level since July 2007, dragging the S&P 500 down 0.75% to 7,706.03 and the Nasdaq 100 off roughly 1.1%. The Dow fell 352 points as utilities and consumer discretionary stocks each dropped more than 1%.",
-      "explain": "Rising yields raise the discount rate used to value future corporate cash flows, which hits long-duration growth and rate-sensitive stocks (utilities, consumer discretionary) hardest since more of their value sits further out in time. Today's spike was compounded by weak demand at a 5-year Treasury auction \u2014 a sign investors are demanding a higher term premium to hold long-dated debt while the Fed may still be hiking."
-    },
-    {
       "cat": "CENTRAL BANKS",
-      "headline": "FED'S BARR OPENS DOOR TO OCTOBER RATE HIKE",
-      "body": "Fed Governor Michael Barr said 'further policy adjustments are likely to be needed' to bring inflation to target, the most hawkish signal yet that the Fed could hike again at its October meeting. Strong manufacturing survey data added to the case.",
-      "explain": "Barr is a voting FOMC member, so hawkish remarks from him shift market-implied hike odds immediately \u2014 futures markets reprice within minutes of any voter's comments, without waiting for the actual meeting. That's the direct channel from one official's sentence today to the jump in the 10-year yield above."
+      "headline": "FED HIKE ODDS JUMP TO 70% FOR OCTOBER MEETING",
+      "body": "CME FedWatch odds of an October 27-28 rate hike jumped to roughly 70%, up from about 55% a day earlier, after Fed Governor Michael Barr said 'further policy adjustments are likely to be needed' to bring inflation to target. It's a striking reversal for a Fed that was cutting just months ago.",
+      "explain": "Barr is a voting FOMC member, so his remarks reprice 30-day Fed funds futures within minutes, without waiting for an actual meeting. Because the market-implied path of short-term rates is a direct input into longer-dated yields, one official's sentence today mechanically pushed up borrowing costs across the curve before the committee has cast a single vote."
     },
     {
-      "cat": "GEOPOLITICS",
-      "headline": "OIL JUMPS AS STRAIT OF HORMUZ STANDOFF DRAGS ON",
-      "body": "WTI crude rose 2.4% to $92.71 a barrel and Brent gained a similar amount to $101.61, snapping a five-session losing streak, as uncertainty persists over whether a formal deal to reopen the Strait of Hormuz can be reached.",
-      "explain": "The Strait of Hormuz carries roughly a fifth of global oil supply, so doubt about its status adds a geopolitical risk premium straight into the price, separate from actual supply and demand. That premium can unwind fast on a deal headline, which is why crude swings several percent on diplomacy news rather than on barrels actually withheld."
+      "cat": "MACRO",
+      "headline": "10-YEAR YIELD PUSHES TOWARD 19-YEAR HIGH",
+      "body": "The 10-year Treasury yield rose another 5 bps to 5.16%, within striking distance of its highest level since 2007, while the 2-year climbed near 4.90% and the 30-year touched roughly 5.44%. Rate-sensitive sectors underperformed as the curve repriced around a hawkish Fed.",
+      "explain": "The 10-year yield is roughly the market's expected average path of the Fed's overnight rate over the next decade plus a term premium investors demand for duration risk. Today's move came almost entirely from the first piece — futures-implied hike odds — rather than any change in actual policy, which is why stocks with cash flows further out in time (growth, utilities) felt it hardest."
     },
     {
       "cat": "COMMODITIES",
-      "headline": "GOLD SLIPS AS HAWKISH FED TALK OUTWEIGHS OIL-DRIVEN INFLATION FEARS",
-      "body": "Gold fell roughly 0.8% to about $4,298 an ounce, pulling back from Tuesday's $4,332 close, as Barr's hawkish comments outweighed the inflationary pull of rising oil prices.",
-      "explain": "Gold pays no yield, so it competes directly with Treasuries for capital \u2014 when real yields rise on hawkish Fed talk, the opportunity cost of holding gold rises too. Oil's rally is normally gold-supportive as an inflation signal, but today the rates channel dominated, pulling gold lower even as crude climbed."
+      "headline": "OIL CLIMBS 3.3% AS HORMUZ STANDOFF PERSISTS",
+      "body": "WTI crude rose 3.3% to $94 a barrel, trimming a surge that peaked near $97 earlier in the session, as reports of phased U.S.-Iran talks to reopen the Strait of Hormuz offered partial relief without resolving the standoff. Roughly a fifth of global oil supply transits the strait.",
+      "explain": "Prices carry a geopolitical risk premium on top of actual supply and demand whenever a chokepoint like Hormuz is contested, so headlines about diplomacy move crude as much as barrels physically withheld do. That premium can unwind fast on a real deal, which is why WTI gave back roughly $3 from its intraday peak the moment reopening talk resurfaced."
     },
     {
       "cat": "MARKETS",
-      "headline": "DOLLAR INDEX HITS SEVEN-WEEK HIGH ON HAWKISH FED REPRICING",
-      "body": "The DXY dollar index climbed roughly 0.35% to near 100.90, its highest level in more than seven weeks, as traders priced in higher odds of an October Fed hike.",
-      "explain": "A more hawkish Fed widens the expected rate gap between the U.S. and other major economies, pulling yield-seeking capital into dollar assets and lifting the currency. It's the same repricing lifting the 10-year yield and pressuring gold today \u2014 one macro story showing up across four asset prices at once."
+      "headline": "ORACLE SLIDES ON DATA-CENTER FORCE MAJEURE NOTICE",
+      "body": "Oracle fell as much as 7% intraday after sending a force majeure notice on its $165 billion, 2.45-gigawatt New Mexico data center tied to the OpenAI/SoftBank Stargate initiative, citing a delayed natural gas pipeline. TD Synnex sank 13% on a 'sell the news' reaction to a record earnings beat, while MGM Resorts dropped nearly 10% after a $18 billion buyout offer was withdrawn; Charles River Labs (+5.4%) and Agilent (+3.7%) led gainers.",
+      "explain": "A force majeure notice lets Oracle delay payment obligations if the site misses its 2028 target, which investors read as an admission that AI infrastructure buildout timelines are slipping — a direct hit to the capex narrative propping up AI-linked valuations. Combined with a rate backdrop that raises the discount rate on those same long-dated cash flows, it's why tech lagged even as the S&P 500 finished nearly flat."
     },
     {
       "cat": "MCBB",
-      "headline": "TRANSFER PORTAL AND ELIGIBILITY FIGHTS RESHAPE 2026-27 CONTENDERS",
-      "body": "With practice underway, several rosters remain in limbo: Emmanuel Ogbole was granted a temporary restraining order for an extra year of eligibility, and Texas A&M has preliminary injunction hearings this week over transfers Jordan Pope and Rylan Griffen. Washington filled its roster with six transfer-portal additions, including Rutgers guard Harun Zrno."
+      "headline": "ARIZONA HEADLINES MIDNIGHT MADNESS AS ELIGIBILITY FIGHTS LINGER",
+      "body": "Arizona, coming off a 36-win season and its first Final Four since 2001, holds its Midnight Madness event Saturday at McKale Center carrying national title expectations. Elsewhere, Texas A&M has preliminary injunction hearings this week over transfers Jordan Pope and Rylan Griffen, and Washington filled out its backcourt by signing Nevada transfer guard Tayshawn Comer."
     },
     {
       "cat": "NBA",
-      "headline": "TRAIL BLAZERS LAND JA MORANT IN TRADE WITH GRIZZLIES",
-      "body": "Portland acquired former All-Star guard Ja Morant from Memphis, one of several major offseason moves alongside Kawhi Leonard's two-year, $115 million extension with Toronto and DeMar DeRozan's one-year deal with Denver. NBA training camps open September 29."
+      "headline": "KAWHI EXTENSION TALKS, GIANNIS-HEAT FIT DOMINATE PRESEASON BUZZ",
+      "body": "The Raptors are exploring a two-year extension to keep Kawhi Leonard, while Pat Riley welcomed Giannis Antetokounmpo to Miami at a formal press conference and LeBron James chose the 76ers over reunions with the Heat or Cavaliers. NBA media days begin September 28 with training camps opening September 29."
     },
     {
       "cat": "NFL",
-      "headline": "49ERS OPEN 2-0 WITH 62 POINTS IN TWO BLOWOUT WINS",
-      "body": "Brock Purdy has yet to be sacked through two games as Kyle Shanahan's offense rolls to a 2-0 start. Elsewhere, Giants QB Jaxson Dart is set for season-ending knee surgery after a reported sprained MCL, and the Cowboys head to Rio de Janeiro this week for the NFL's first-ever game in Brazil against Lamar Jackson and the Ravens."
+      "headline": "WINSTON TAKES OVER GIANTS AS HERBERT'S CHARGERS SPIRAL AT 0-2",
+      "body": "Jameis Winston returns to New York's starting job after Jaxson Dart's injury forced him into emergency action Monday night. Meanwhile Justin Herbert's winless Chargers face mounting scrutiny after an 0-2 start, and Week 3 IR moves included the Rams (Ronnie Rivers), Panthers (Jonathon Brooks) and Cardinals (Will Johnson)."
     },
     {
       "cat": "NCAA CFB",
-      "headline": "OLE MISS' TRINIDAD CHAMBLISS MAKES HEISMAN CASE VS. LSU",
-      "body": "Chambliss went 33-for-48 for 363 yards and two touchdowns through the air, adding 24 rushing yards and a score on the ground, in a statement performance against LSU. Elsewhere, No. 11 Texas Tech improved to 3-0 and Indiana's Josh Hoover has the Hoosiers rolling in their national title defense."
+      "headline": "NO. 1 TEXAS AT NO. 14 TENNESSEE HEADLINES LOADED WEEK 4 SATURDAY",
+      "body": "Saturday's slate features No. 1 Texas at No. 14 Tennessee, No. 2 Georgia, No. 4 Ole Miss at No. 21 Florida, and No. 17 Iowa at No. 18 Michigan, plus Colorado at Baylor. Week 4 opened Thursday night with Coastal Carolina hosting Liberty, and No. 5 Indiana hosts Northwestern Friday night on FOX."
     }
   ],
   "sports": [
@@ -89,47 +59,47 @@
       "team": "WASHINGTON HUSKIES FOOTBALL",
       "pill": "W 48-16",
       "pillClass": "s-w",
-      "detail": "Beat Eastern Washington 48-16 to move to 3-0. Next: vs. Minnesota, Saturday Sept. 26 at Husky Stadium (FOX)."
+      "detail": "Beat Eastern Washington 48-16 to move to 3-0. Next: vs. Minnesota, Saturday Sept. 26 at Husky Stadium (FOX) — the Big Ten opener and first meeting since 1977."
     },
     {
       "team": "WASHINGTON HUSKIES BASKETBALL",
-      "pill": "PREVIEW",
+      "pill": "OFFSEASON",
       "pillClass": "s-up",
-      "detail": "Big Ten schedule released for Danny Sprinkle's third season; roster filled via six returners, a 2026 signee, and five transfer additions, including Rutgers guard Harun Zrno."
+      "detail": "Signed Nevada transfer guard Tayshawn Comer to round out the backcourt behind Danny Sprinkle. Season opens with a WSU exhibition Oct. 25, then the regular-season opener vs. Colgate."
     },
     {
       "team": "SEATTLE SEAHAWKS",
       "pill": "W 31-7",
       "pillClass": "s-w",
-      "detail": "Beat the Cardinals 31-7 behind Jaxon Smith-Njigba's 82-yard TD; Seattle is 2-0 atop the NFC West. Next: at Commanders, Sunday Sept. 27."
+      "detail": "Beat the Cardinals 31-7 behind Jaxon Smith-Njigba's big day; Seattle is 2-0 atop the NFC West. Next: at Commanders, Sunday Sept. 27, 10:00 AM PT."
     },
     {
       "team": "DETROIT PISTONS",
       "pill": "OFFSEASON",
       "pillClass": "s-up",
-      "detail": "Signed Ausar Thompson to a 5-year, $155M extension; contract talks with Jalen Duren remain stalled after he turned down a 5-year, $200M offer, with camp days away."
+      "detail": "Signed Ausar Thompson to a contract extension through 2031-32; talks with Jalen Duren remain stalled and reportedly contentious. Training camp opens Sept. 29."
     },
     {
       "team": "SEATTLE MARINERS",
-      "pill": "73-84",
-      "pillClass": "s-up",
-      "detail": "Sit outside playoff position with the season winding down. Next: vs. Astros tonight, 7:10 PM PT, T-Mobile Park."
+      "pill": "74-84",
+      "pillClass": "s-l",
+      "detail": "Officially eliminated from playoff contention Thursday after beating the Astros 6-5 in extra innings Wednesday. Final series vs. Angels begins tonight, 6:40 PM PT, T-Mobile Park."
     }
   ],
   "watchlist": [
-    "October FOMC odds rising after Fed Gov. Barr's hawkish remarks \u2014 watch Thursday's economic data for confirmation",
-    "10-year Treasury yield near 5.10%, highest since 2007 \u2014 watch for further term-premium widening",
-    "Mariners vs. Astros \u2014 tonight 7:10 PM PT, T-Mobile Park",
-    "Seahawks at Commanders \u2014 Sunday Sept. 27, Northwest Stadium",
-    "Huskies vs. Minnesota \u2014 Saturday Sept. 26, Husky Stadium (FOX)"
+    "October 27-28 FOMC meeting — CME FedWatch odds of a hike near 70%, up from ~55% a day earlier",
+    "10-year Treasury yield at 5.16%, near its highest since 2007 — watch for further term-premium widening",
+    "Huskies vs. Minnesota — Saturday Sept. 26, Husky Stadium (FOX), Big Ten opener",
+    "Seahawks at Commanders — Sunday Sept. 27, 10:00 AM PT",
+    "Mariners' season-closing series vs. Angels — tonight through Sunday, T-Mobile Park"
   ],
   "deepDive": {
-    "title": "Why a Hawkish Fed Speech Moves the 10-Year More Than the Actual Rate Hike",
+    "title": "The Bond Market Is Pricing a Fed Hike — Here's the Mechanism",
     "content": [
-      "Today's headline number \u2014 the 10-year Treasury yield spiking above 5.10%, its highest since July 2007 \u2014 didn't come from an actual Fed rate decision. It came from one governor's prepared remarks. Michael Barr isn't the Fed chair, and no committee vote happened today, yet the reaction across asset classes was immediate: stocks fell across the board, the dollar index jumped to a seven-week high, and gold slid even as oil rallied. That's the tell that this was a repricing of expectations, not a reaction to new economic data. Understanding why one voting member's sentence can move a multi-trillion-dollar Treasury market requires separating two very different things the 10-year yield actually contains.",
-      "The 10-year yield is approximately the market's expected average path of the Fed's overnight rate over the next decade, plus a term premium \u2014 extra compensation investors demand for the risk of holding a bond that long. Barr's comment shifted the first piece: futures markets, which trade continuously and reprice within minutes of any FOMC voter's remarks, immediately raised the implied probability of an October hike. That mechanically lifts the average expected short rate baked into the 10-year before the Fed has actually done anything. Today's weak 5-year auction added to the second piece, as investors demanded a higher premium just to absorb the new government debt supply.",
-      "This same channel produced the 2022 bond selloff, when Fed officials' hawkish talk repeatedly outran the actual pace of hikes and 10-year yields rose nearly 250 basis points in a single year, most of it priced in ahead of meetings rather than on decision day itself. What most people miss is that a single non-chair official can move markets precisely because Fed communication is designed to be forward-looking: officials deliberately telegraph intentions between meetings so markets absorb the shock gradually instead of all at once. The cost is volatility on an ordinary Wednesday whenever any voter departs from the consensus script, exactly as happened today.",
-      "For a portfolio, this matters more than the eventual hike itself: growth stocks, which carry longer-duration cash flows further out in time, got hit hardest today precisely because their valuations are most sensitive to the expected-rate-path component of yields, not just the term premium. Watch Thursday's economic data and any further Fed commentary before the October meeting \u2014 each hawkish data point or speech will keep repricing the curve incrementally, which is why the 10-year could keep drifting toward or past 5.10% well before the FOMC actually convenes. The lesson: in modern monetary policy, the meeting itself is often the least informative day of the cycle."
+      "Today's headline number — the 10-year Treasury yield pushing to 5.16%, within reach of its highest level since 2007 — didn't come from an actual Fed decision. It came from CME FedWatch odds of an October rate hike jumping to roughly 70%, up from about 55% the day before, on the back of one Fed governor's remarks and a hot inflation print. That's a striking reversal: this is a Fed that was cutting rates earlier in the year, now being priced to hike. Understanding why markets can flip that fast, without a single vote being cast, means separating what the 10-year yield actually contains.",
+      "The 10-year yield is approximately the market's expected average path of the Fed's overnight rate over the next decade, plus a term premium — extra compensation investors demand for the risk of holding a bond that long. Michael Barr's comment that 'further policy adjustments are likely to be needed' shifted the first piece directly: 30-day Fed funds futures, which trade continuously, repriced within minutes to reflect higher hike odds. That mechanically raises the expected short-rate path baked into every longer-dated Treasury, before the FOMC has actually moved its target range at all.",
+      "This channel isn't new. In 2022, hawkish Fed communication repeatedly outran the actual pace of hikes, and 10-year yields rose nearly 250 basis points that year, with most of the move priced in ahead of meetings rather than on decision day itself. What people miss is that this is by design: the Fed deliberately telegraphs its thinking between meetings so markets absorb shifts gradually rather than all at once on a single Wednesday. The tradeoff is volatility whenever any voting member — even one, like Barr, who isn't the chair — departs from the prior consensus script, exactly as happened today.",
+      "For a portfolio, that matters more than whether the Fed actually hikes on October 28. Growth and long-duration names, including the AI-infrastructure trade that dragged Oracle down as much as 7% today, are priced off exactly this expected-rate-path component, which is why they underperform on hawkish repricing even without a rate change. Watch economic data releases between now and the October meeting: each one will keep nudging futures-implied odds, and with them the 10-year, before the committee ever convenes — a reminder that in modern monetary policy, the meeting itself is often the least informative day of the cycle."
     ]
   }
 }
