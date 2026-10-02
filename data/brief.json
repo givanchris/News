@@ -1,135 +1,111 @@
 {
-  "lastUpdated": "2026-10-02T16:30:15-06:00",
+  "lastUpdated": "2026-10-02T16:39:00-06:00",
   "market": {
-    "sp500": {
-      "price": "7723",
-      "change": "+0.73%",
-      "dir": "up"
-    },
-    "nasdaq": {
-      "price": "30808",
-      "change": "+1.00%",
-      "dir": "up"
-    },
-    "yield": {
-      "price": "5.28%",
-      "change": "+4 bps",
-      "dir": "down"
-    },
-    "wti": {
-      "price": "$91",
-      "change": "-1.48%",
-      "dir": "down"
-    },
-    "gold": {
-      "price": "$4172",
-      "change": "-0.79%",
-      "dir": "down"
-    },
-    "dxy": {
-      "price": "101.92",
-      "change": "-0.01%",
-      "dir": "down"
-    }
+    "sp500": { "price": "7,723", "change": "+0.73%", "dir": "up" },
+    "nasdaq": { "price": "30,808", "change": "+1.00%", "dir": "up" },
+    "yield": { "price": "5.28%", "change": "+5 bps", "dir": "down" },
+    "wti": { "price": "$91", "change": "-1.48%", "dir": "down" },
+    "gold": { "price": "$4,172", "change": "-0.79%", "dir": "down" },
+    "dxy": { "price": "101.92", "change": "-0.08%", "dir": "down" }
   },
   "stories": [
     {
       "cat": "MACRO",
-      "headline": "10-YEAR TREASURY YIELD TOUCHES 24-YEAR HIGH BEFORE PARING BACK TO 5.24%",
-      "body": "The 10-year Treasury yield spiked as high as 5.34% intraday Thursday \u2014 its highest level since 2002 \u2014 before easing 5 bps to close at 5.24% as traders took profits into the weekend. The move capped a seventh straight monthly climb, the longest streak since 2011, with the 30-year now above 5.68%.",
-      "explain": "Rising long-end yields reflect a higher term premium \u2014 compensation investors demand to hold duration \u2014 rather than a change in the Fed's policy rate itself, and here it's being driven by oil-led inflation fears and concern over heavy Treasury issuance funding the deficit. Because the 10-year anchors mortgage rates and corporate borrowing costs, financial conditions are tightening economy-wide even though Thursday's intraday pullback suggests some investors see the move as overextended."
+      "headline": "SEPTEMBER PAYROLLS MISS BADLY AT 29,000 VS. 90,000 FORECAST",
+      "body": "U.S. employers added just 29,000 jobs in September, less than a third of the 90,000 consensus estimate, in a report that still managed to come out despite the shutdown chaos since it covers data collected before the lapse. Treasury yields and the dollar both whipsawed on the release before the 10-year settled near 5.28%, up about 5 bps on the day.",
+      "explain": "A payrolls miss this large should normally pull yields lower by reducing the odds of further Fed tightening, and the dollar did dip through 102 briefly on the headline. But the 10-year still finished higher because the bigger story this week is term premium — Hormuz-driven oil, heavy Treasury issuance, and the Sept. 16 surprise hike — overwhelming the growth signal from one weak jobs print."
     },
     {
       "cat": "CENTRAL BANKS",
-      "headline": "FED'S SURPRISE HIKE TO 3.75%-4.00% NOW COLLIDES WITH A DATA BLACKOUT",
-      "body": "The FOMC voted 12-0 on Sept. 16 to lift the federal funds rate 25 bps to 3.75%-4.00%, its first hike in more than three years, wrong-footing markets that had been pricing cuts. With the federal shutdown now forcing the BLS to skip October's jobs report entirely, the Fed heads into its next meeting without the data releases it normally relies on.",
-      "explain": "A policy rate hike raises the risk-free rate used to discount every future cash flow, the direct channel compressing equity valuations and raising the bar for growth stocks to justify current multiples. The data blackout compounds that because the Fed can't confirm whether the labor market still justifies September's hawkish turn, so it will likely lean on noisier private substitutes like ADP payrolls and ISM surveys, which raises the odds of a policy misstep in either direction."
+      "headline": "RATE-HIKE ODDS FADE AFTER THE MISS, BUT THE FED'S NEXT CLEAN READ MAY NOT COME FOR MONTHS",
+      "body": "Futures markets trimmed the odds of another Fed hike following the September miss, a reversal from the hawkish repricing that followed the FOMC's surprise 25 bp hike to 3.75%-4.00% on Sept. 16. With the government shutdown now in its second day, the BLS has confirmed October's jobs report will be skipped entirely, meaning today's print could be the last clean labor read policymakers get before the next meeting.",
+      "explain": "The Fed sets policy off the expected path of the labor market, not a single data point, which is why a 29K print moves odds without fully reversing September's hawkish turn. Losing the October report removes the Fed's ability to confirm or refute that signal with hard data, pushing it toward noisier high-frequency substitutes like ADP, ISM employment subindexes, and weekly jobless claims for its next decision."
     },
     {
       "cat": "GEOPOLITICS",
-      "headline": "IRAN REJECTS CEASEFIRE TERMS, STRAIT OF HORMUZ STAYS SHUT AS CRUDE RALLIES",
-      "body": "The Trump administration rejected Iran's ceasefire conditions this week, prolonging the closure of the Strait of Hormuz \u2014 the chokepoint for roughly a fifth of global oil flows. Brent crude is now up about 42% from its late-June lows, and WTI touched $91.49 (+1.18%) Thursday with no formal talks scheduled.",
-      "explain": "Hormuz-transiting crude has no easy substitute route, so futures markets price in the probability-weighted risk of a prolonged disruption rather than waiting for an actual supply cut to materialize \u2014 which is why prices stay elevated even while oil is still technically flowing. Energy is a direct input into headline CPI and an indirect one into core goods via transport costs, making this the clearest channel tying the Hormuz standoff to the Fed's inflation calculus and this week's Treasury selloff."
+      "headline": "BRENT HOLDS ABOVE $100 AS A THIRD U.S. CARRIER DEPLOYS NEAR THE STRAIT OF HORMUZ",
+      "body": "Brent crude is trading above $100 a barrel after reports that a third U.S. carrier group has moved into the region, with the Strait of Hormuz standoff with Iran still unresolved and no ceasefire talks scheduled. WTI eased slightly to around $91 (-1.48%) even as Brent stayed elevated, widening the Brent-WTI spread.",
+      "explain": "Futures price the probability-weighted risk of a Hormuz disruption rather than waiting for an actual supply cut, which is why Brent can hold near $100 even with oil still flowing through the strait. A third carrier deployment reads as an escalation signal to traders, reinforcing the risk premium baked into Brent specifically because it is the benchmark most exposed to Middle East supply routes."
     },
     {
       "cat": "TRADE",
-      "headline": "SHUTDOWN BLACKS OUT OCTOBER JOBS REPORT, LEAVES FED 'FLYING BLIND'",
-      "body": "The Bureau of Labor Statistics confirmed it will not publish the October jobs report at all, with the November release pushed back to Dec. 16 \u2014 a near two-month gap in labor-market data. Federal employment alone is estimated to have fallen 162,000 in October, though furloughed workers who receive back pay are still counted as employed in the data that does exist.",
-      "explain": "Official labor and inflation data are the Fed's primary policy inputs, so a near-complete blackout forces reliance on higher-frequency but noisier proxies \u2014 ADP payrolls, job-postings trackers, the ISM services employment subindex \u2014 that track BLS prints imperfectly. Markets price in a wider range of outcomes when the Fed itself is uncertain, part of why Treasury volatility stayed elevated Thursday even as the headline yield level eased."
+      "headline": "GOVERNMENT SHUTDOWN ENTERS DAY TWO AS THE 22ND LAPSE SINCE 1976",
+      "body": "Congressional funding lapsed Oct. 1, triggering the 22nd U.S. government shutdown since 1976. Markets have largely shrugged it off so far — stocks have historically posted gains during more than half of prior shutdowns — but betting markets are pricing a multi-week impasse with the October jobs report already a confirmed casualty.",
+      "explain": "Shutdowns rarely move markets directly because furloughed federal spending is a small share of GDP and typically gets backfilled once funding resumes. The real transmission channel here is informational, not fiscal: the data blackout forces the Fed and investors alike to fly with degraded visibility into the labor market at exactly the moment policy just turned hawkish."
     },
     {
       "cat": "MARKETS",
-      "headline": "S&P 500 EDGES HIGHER, NASDAQ-100 SLIPS AS SMALL CAPS LEAD THE REBOUND",
-      "body": "The S&P 500 added 0.19% to 7,666.45 while the Nasdaq-100 slipped 0.16% to 30,359.21 as megacap tech lagged; the Russell 2000 jumped roughly 0.8% in afternoon trading, clawing back part of a rough September for small caps.",
-      "explain": "Small caps carry more floating-rate, shorter-duration debt, so they're more sensitive to the path of the Fed's policy rate and less to the 10-year's term-premium-driven climb, which is why they rebounded even as long yields stayed near 24-year highs. Megacap tech derives more of its valuation from cash flows far in the future, making it the more direct casualty of a higher discount rate even when the move is concentrated in the long end rather than the policy rate itself."
+      "headline": "S&P 500 ADDS 0.73% TO 7,722.72, NASDAQ-100 JUMPS 1.00% ON FADING HIKE BETS",
+      "body": "The S&P 500 closed at 7,722.72 and the Nasdaq-100 climbed to 30,807.93 as megacap tech led the advance, with investors reading the weak payrolls print as reducing the odds of a second Fed hike this cycle. The rally came even as the 10-year yield held near 24-year highs.",
+      "explain": "Growth stocks carry valuations built on cash flows far out in the future, so they're the most sensitive to shifts in expected Fed policy — a lower odds of further hikes lifts their present value even when the discount rate implied by the 10-year hasn't actually fallen. That's the mechanism letting the Nasdaq-100 outrun the S&P 500 today despite Treasury yields moving the other way."
     },
     {
       "cat": "MCBB",
-      "headline": "BIG EAST KICKS OFF 2026-27 SEASON AS FIRST POWER CONFERENCE TO HOLD MEDIA DAY",
-      "body": "The Big East hosted its Basketball Media Day at the Marriott Marquis in Times Square on Thursday, the first power conference to do so ahead of the 2026-27 season. The conference's 11 members open a preseason exhibition slate the first weekend of October as teams shift into full practice roughly five weeks from tip-off."
+      "headline": "ACC TIPOFF SET FOR OCT. 5-7 IN CHARLOTTE WITH THREE TOP-10 TEAMS HEADLINING",
+      "body": "The ACC announced its full roster of attendees for the 2026 ACC Tipoff event, running Oct. 5-7 at the Hilton Charlotte Uptown. Three ACC teams sit in the preseason top 10 and four land in ESPN's way-too-early Top 25 as the conference's 18 programs ramp toward November tip-off."
     },
     {
       "cat": "NBA",
-      "headline": "RAPTORS LOCK UP JAMAL SHEAD AS OCTOBER ROSTER DEADLINES LOOM LEAGUEWIDE",
-      "body": "Jamal Shead and the Toronto Raptors agreed to a three-year, $24 million extension tying the guard to the team through 2029-30. The deal comes as October brings a wave of roster and contract deadlines across the league, with several restricted free agents \u2014 including Detroit's Jalen Duren \u2014 still working through decisions as training camps open."
+      "headline": "PISTONS AND JALEN DUREN AGREE TO FIVE-YEAR, $200 MILLION EXTENSION",
+      "body": "Detroit ended Jalen Duren's restricted free agency saga with a fully guaranteed five-year, $200 million deal, locking up the center who averaged 19.5 points and 10.5 rebounds on 65% shooting last season. The extension caps an active Pistons offseason that also added Isaiah Joe and John Collins and re-signed Ausar Thompson for five years, $155 million."
     },
     {
       "cat": "NFL",
-      "headline": "STEELERS SEND JOEY PORTER JR. TO COWBOYS FOR 2027 AND 2028 PICKS",
-      "body": "Pittsburgh traded cornerback Joey Porter Jr. to Dallas for a 2027 sixth-round pick and a 2028 second-round pick. The move came in a week otherwise dominated by injury news, with Vikings WR Justin Jefferson (ankle) sitting out Thursday's practice and Seahawks RB Zach Charbonnet opening his 21-day practice window as he nears a return from a torn ACL."
+      "headline": "BROWNS TOP STEELERS 27-24 ON THURSDAY NIGHT FOOTBALL",
+      "body": "Cleveland beat Pittsburgh 27-24 in Thursday's primetime matchup, with Steelers DL Mason Graham exiting with an MCL and ankle sprain. The result sets up a marquee Sunday in the AFC West as the 3-0 Chiefs travel to face the 3-0 Raiders in Las Vegas."
     },
     {
       "cat": "NCAA CFB",
-      "headline": "WEEK 5 HEADLINED BY NO. 7 ALABAMA AT NO. 16 MISSISSIPPI STATE, NOTRE DAME AT UNC",
-      "body": "College football's Week 5 slate spans Thursday through Saturday with 114 matchups across FBS and FCS. Saturday's headliners include No. 7 Alabama at No. 16 Mississippi State, No. 3 Notre Dame at North Carolina, and UCF at No. 20 Houston \u2014 a weekend several ranked teams face as their first real test of the season."
+      "headline": "WEEK 5 HEADLINED BY OHIO STATE AT IOWA, ALABAMA AT MISSISSIPPI STATE, NOTRE DAME AT UNC",
+      "body": "College football's Week 5 slate spans Friday into Saturday, led by No. 5 Ohio State traveling to No. 14 Iowa, No. 7 Alabama at No. 16 Mississippi State, and No. 3 Notre Dame at North Carolina. No. 2 Georgia and No. 7 Alabama, both 4-0 entering the weekend, are the early favorites to host College GameDay in Week 6 at Tuscaloosa."
     }
   ],
   "sports": [
     {
       "team": "WASHINGTON HUSKIES FOOTBALL",
-      "pill": "L 24-27",
-      "pillClass": "s-l",
-      "detail": "Dropped their Big Ten opener to Minnesota 27-24 on Sept. 26, falling to 3-1 (0-1 Big Ten) as the offense struggled to find rhythm. Next: at No. 18 USC, Saturday Oct. 3, 4:30 PM PT."
+      "pill": "AT USC SAT",
+      "pillClass": "s-up",
+      "detail": "3-1 (0-1 Big Ten) after the Sept. 26 loss to Minnesota. Travel to No. 18 USC Saturday, Oct. 3, 7:30 PM ET on NBC/Peacock, looking to right the ship in Big Ten play."
     },
     {
       "team": "WASHINGTON HUSKIES BASKETBALL",
       "pill": "PRESEASON",
       "pillClass": "s-up",
-      "detail": "Third-year coach Danny Sprinkle added former Oregon assistant Mike Mennenga to the staff ahead of Big Ten play. First look: an exhibition at Boise State Oct. 17, then a historic first-ever October meeting with rival Washington State on Oct. 25."
+      "detail": "Danny Sprinkle's staff added former Oregon assistant Mike Mennenga, and the incoming freshman class is drawing early optimism despite the program's rebuilding challenges. First look: an exhibition vs. rival Washington State Oct. 25 — the first-ever October meeting in the 110-year rivalry, with no regular-season game this year."
     },
     {
       "team": "SEATTLE SEAHAWKS",
-      "pill": "L 31-33",
-      "pillClass": "s-l",
-      "detail": "Lost their first game of the season 33-31 to Washington on costly turnovers, falling to 2-1. The defending Super Bowl champs, now owned by the Khosla family after a record $9.61B sale closed last month, host the winless (0-3) Chargers Sunday."
+      "pill": "VS LAC SUN",
+      "pillClass": "s-up",
+      "detail": "2-1 after their first loss of the season to Washington. Host the still-winless (0-3) Chargers Sunday, Oct. 4, 1:25 PM PT at Lumen Field; coach Mike Macdonald says only minor tweaks are needed, not an overhaul."
     },
     {
       "team": "DETROIT PISTONS",
-      "pill": "PRESEASON OCT. 5",
-      "pillClass": "s-up",
-      "detail": "Media day is done and training camp is underway; preseason opens Monday vs. Phoenix. Restricted free agent center Jalen Duren faced a Thursday deadline on his qualifying offer, with president Trajan Langdon expecting him on the roster either way."
+      "pill": "DUREN SIGNED",
+      "pillClass": "s-w",
+      "detail": "Ended Jalen Duren's restricted free agency with a five-year, $200M extension. Preseason opens Monday, Oct. 5 vs. Phoenix — first look at a roster that also added Isaiah Joe and John Collins."
     },
     {
       "team": "SEATTLE MARINERS",
       "pill": "ELIMINATED",
       "pillClass": "s-l",
-      "detail": "Seattle was eliminated from playoff contention on Sept. 24 and finished third in the AL West, its first losing season since 2020 \u2014 a stark comedown from last year's ALCS run."
+      "detail": "Finished third in the AL West, the franchise's first losing season since 2020. President Jerry Dipoto confirmed the team will look outside the organization for its next manager to replace Dan Wilson."
     }
   ],
   "watchlist": [
-    "Fed enters its next meeting flying blind \u2014 BLS will skip the October jobs report entirely; watch ADP and ISM prints for a read on the labor market",
-    "10-year Treasury yield near 24-year highs (5.24%) \u2014 further Hormuz escalation could push oil, and yields, higher still",
-    "Huskies at No. 18 USC \u2014 Saturday Oct. 3, 4:30 PM PT",
-    "Seahawks host the winless Chargers \u2014 Sunday at Lumen Field",
-    "Pistons open preseason vs. the Suns \u2014 Monday Oct. 5, first look at the retooled roster"
+    "October jobs report will be skipped entirely due to the shutdown — today's 29K miss may be the last clean labor read for months",
+    "Brent crude holding above $100 as the Hormuz standoff persists — watch for any ceasefire breakthrough as the key downside catalyst for oil",
+    "Huskies at No. 18 USC — Saturday, Oct. 3, 7:30 PM ET, NBC/Peacock",
+    "Seahawks host winless Chargers — Sunday, Oct. 4, 1:25 PM PT, Lumen Field",
+    "Pistons open preseason vs. Suns — Monday, Oct. 5, first look with Duren's extension signed"
   ],
   "deepDive": {
-    "title": "Why an Oil Shock Can Move the Fed Even Without Jobs Data",
+    "title": "What a 29K Payrolls Miss Really Tells the Fed During a Data Blackout",
     "content": [
-      "Thursday tied together three threads that look separate but aren't: a 10-year Treasury yield that hit 5.34% intraday \u2014 a 24-year high \u2014 before settling at 5.24%; a Fed that hiked rates on Sept. 16 for the first time in three-plus years; and a government shutdown that just wiped October's jobs report off the calendar entirely. The common driver underneath all three is an energy-led inflation scare, with Brent crude up roughly 42% since late June as Iran keeps the Strait of Hormuz closed. Understanding how an oil shock moves a central bank that currently can't see official labor data is the single most useful mechanism in today's brief.",
-      "Oil feeds into inflation through two channels markets price differently. The direct channel is mechanical: gasoline and heating costs sit inside headline CPI, so a 42% crude rally shows up in next month's number almost automatically. The indirect channel is slower and more worrying to a central bank \u2014 transport and input costs filter into core goods prices over two to three quarters, and if the move lasts long enough, it can un-anchor the inflation expectations embedded in TIPS breakeven rates. It's that second channel, not the first month's headline print, that determines whether the Fed treats an oil shock as transitory or structural.",
-      "History's clearest parallel is 1973-74: an OPEC embargo quadrupled oil prices, and the Fed initially treated the shock as a one-off \u2014 a mistake that let inflation expectations de-anchor and ultimately forced the much harsher Volcker tightening cycle of the early 1980s. The lesson the Fed has internalized since is to watch inflation *expectations*, not just the current print, which is exactly the proxy problem today's shutdown creates: with CPI delayed and the jobs report skipped outright, the Fed is pushed toward higher-frequency stand-ins like the ISM prices-paid subindex and five-year breakeven rates, both of which tend to lead official CPI by several weeks but carry far more noise.",
-      "For a finance student, the practical takeaway is where to look next. With BLS data gated by the shutdown, the more informative numbers this month are ISM manufacturing and services prices-paid, weekly initial jobless claims (which keep publishing), and the 5-year TIPS breakeven \u2014 not the headline payrolls print everyone is used to watching. The 10-year's pullback off 5.34% Thursday hints the market may already see this oil shock as nearer the 1990 Gulf War case (a sharp, reversible spike) than the 1973 case (a durable regime change) \u2014 but that read will firm up only as the Hormuz standoff either resolves or drags into a second month."
+      "Today's jobs report landed at 29,000 new payrolls against a 90,000 consensus — a miss large enough to move futures on Fed hike odds, even as the 10-year yield still finished higher on oil and term-premium concerns. What makes this print unusually important isn't just the size of the miss; it's the timing. The government shutdown that began Oct. 1 has already taken October's jobs report off the calendar entirely, meaning this September read may be the last official, comprehensive labor-market data the Fed sees before its next meeting. A report that would normally be one data point among many just became the anchor for weeks of policy judgment.",
+      "The mechanics of why a single print can move markets this much come down to sampling error and the Fed's reaction function. The BLS's own published standard error on the monthly payrolls change is roughly 130,000 jobs — meaning a single month's number, taken alone, carries real statistical noise. A miss of 61,000 jobs below consensus is large relative to typical month-to-month revisions, which is why it registered as a genuine signal rather than noise, prompting investors to reprice the odds of another hike lower after September's surprise 25 bp move to 3.75%-4.00%. The Fed's own doctrine, going back to the Bernanke era, is to weight the three-month moving average over any single print — but with October's report gone, that moving average can't be refreshed on schedule.",
+      "What most casual market-watchers miss is how much of the payrolls number itself rests on modeling assumptions rather than a hard headcount. The BLS's birth-death model adds an estimate of jobs created by new business formation that the establishment survey can't directly sample, and that adjustment is largest and least reliable during periods of economic transition — exactly the kind of moment a shutdown and a hawkish surprise rate hike combine to create. The clearest historical parallel is the 2013 shutdown, when the delayed September report that followed was revised meaningfully in subsequent months once the model's seasonal assumptions caught up with reality, a reminder that any single print made this consequential should be treated as provisional, not final.",
+      "For the next two months, the practical implication is that the Fed — and anyone trying to anticipate it — has to lean on substitutes that are directionally useful but far noisier than payrolls: ADP's private payrolls estimate, the ISM services and manufacturing employment subindexes, and weekly initial jobless claims, which keep publishing regardless of the shutdown. None of these is a clean replacement for the BLS survey's sample size and methodology. That gap is precisely why today's 29K print carries more weight than it would in a normal month, and why the path of oil prices and the shutdown's duration — not just this one data point — will likely decide whether September's hike ages well or turns into a policy mistake."
     ]
   }
 }
