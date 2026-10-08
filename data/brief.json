@@ -1,81 +1,57 @@
 {
-  "lastUpdated": "2026-10-08T16:30:16-06:00",
+  "lastUpdated": "2026-10-08T16:39:09-06:00",
   "market": {
-    "sp500": {
-      "price": "7765",
-      "change": "-0.47%",
-      "dir": "down"
-    },
-    "nasdaq": {
-      "price": "30726",
-      "change": "-1.39%",
-      "dir": "down"
-    },
-    "yield": {
-      "price": "5.23%",
-      "change": "-5 bps",
-      "dir": "up"
-    },
-    "wti": {
-      "price": "$91",
-      "change": "+1.26%",
-      "dir": "up"
-    },
-    "gold": {
-      "price": "$4160",
-      "change": "+0.00%",
-      "dir": "flat"
-    },
-    "dxy": {
-      "price": "102.11",
-      "change": "-0.11%",
-      "dir": "down"
-    }
+    "sp500":  { "price": "7,765",  "change": "-0.47%", "dir": "down" },
+    "nasdaq": { "price": "30,726", "change": "-1.39%", "dir": "down" },
+    "yield":  { "price": "5.23%",  "change": "-5 bps",  "dir": "down" },
+    "wti":    { "price": "$91",    "change": "+1.26%", "dir": "up"   },
+    "gold":   { "price": "$4,160", "change": "+0.00%", "dir": "flat" },
+    "dxy":    { "price": "102.11", "change": "-0.11%", "dir": "down" }
   },
   "stories": [
     {
       "cat": "MACRO",
-      "headline": "S&P 500, NASDAQ-100 SLIP OFF RECORD HIGHS AS 10-YEAR YIELD TICKS BACK UP TO 5.28%",
-      "body": "The S&P 500 eased 0.22% to 7,802 and the Nasdaq-100 fell 0.21% to 31,160, giving back a slice of Monday's record close near 7,819 after the 10-year Treasury yield edged 1 bp higher to 5.28%, still within shouting distance of its highest level since 2007.",
-      "explain": "A 1-basis-point move looks trivial, but it's happening after the yield already failed to hold a modest pullback from 5.27% \u2014 a sign that the term premium investors demand for long-duration risk isn't coming down even as the acute oil-shock story fades. Richly valued mega-cap tech carries the most duration risk in the index because so much of its value sits in cash flows far in the future, so even small upward wobbles in the discount rate show up disproportionately in the Nasdaq-100."
-    },
-    {
-      "cat": "CENTRAL BANKS",
-      "headline": "FED HOLDS AT 3.75%-4% RANGE AS MARKETS AWAIT THIS WEEK'S CPI AND INFLATION-EXPECTATIONS READ",
-      "body": "The fed funds rate remains at 3.75%-4% following September's hike into the Strait of Hormuz oil shock, with traders now treating this week's CPI print and the University of Michigan inflation-expectations survey as the next real test of whether that hike was sufficient.",
-      "explain": "The Fed's September move was aimed at expectations, not the current price level \u2014 inflation caused by a supply disruption can't be fixed by raising rates, but a central bank can use rate hikes to signal it won't let a one-time shock become a permanent one. September's Michigan survey put year-ahead expectations at 4.6%; a reading that climbs further this week would argue the hike wasn't enough and the 10-year's term premium has further to rise, while a stabilizing print would validate the Fed's bet and open room for the yield relief markets have been pricing in fits and starts."
+      "headline": "S&P 500, NASDAQ-100 SLIDE AS AI-REVENUE DOUBTS HIT MEGA-CAP TECH",
+      "body": "The S&P 500 fell 0.47% to 7,765 and the Nasdaq-100 dropped 1.39% to 30,726 after a Financial Times report cast doubt on OpenAI's revenue trajectory, dragging Nvidia, Micron, and Intel lower; the Dow Jones bucked the trend, adding roughly 0.1% as money rotated into value names outside the AI trade.",
+      "explain": "Mega-cap AI suppliers trade on a long-duration growth story: today's price embeds years of assumed compute demand from a small number of customers, chief among them OpenAI, so any doubt about that demand materializing resets the present value of distant cash flows disproportionately hard. The Dow's gain while the Nasdaq-100 fell shows the selling is concentrated rotation out of AI-exposed names rather than a broad risk-off move, which matters because the two patterns call for very different responses from investors."
     },
     {
       "cat": "COMMODITIES",
-      "headline": "OIL EASES TO $89 AS HORMUZ RISK PREMIUM CONTINUES TO FADE; GOLD RETREATS TO $4,132",
-      "body": "WTI crude fell 1.41% to roughly $89, extending its pullback from last week's post-closure spike above $93, while gold dropped 0.91% to $4,132 as a firming dollar made the metal more expensive for foreign buyers.",
-      "explain": "Oil and gold are moving for related but distinct reasons: crude is sliding because tanker traffic through the strait is normalizing, directly easing the supply-shock premium, while gold is giving ground because the dollar's bounce raises gold's price in every other currency and makes competing dollar assets marginally more attractive. Both moves are consistent with markets pricing the acute phase of the shock as past, even though the inflation it already generated is still working through the CPI data the Fed is waiting on."
+      "headline": "OIL CLIMBS ON REPORTS OF POTENTIAL U.S. STRIKES ON IRAN AS 10-YEAR YIELD HOLDS NEAR 2007 HIGHS",
+      "body": "WTI crude rose 1.26% to roughly $91 a barrel after reports that the Pentagon is preparing contingency options for potential military action against Iran, while the 10-year Treasury yield eased 5 basis points to 5.23% but remains close to its highest level since 2007.",
+      "explain": "Oil's move is a geopolitical risk premium, not a demand story: traders price in the probability that an escalation could disrupt tanker traffic through the Strait of Hormuz, so the barrel price rises even before any actual supply is lost. The 10-year's stickiness near 5.2% compounds today's tech selloff because it raises the discount rate applied to exactly the kind of long-duration cash flows the AI trade depends on, so elevated yields and AI-revenue doubts are pulling on the same valuation lever from different directions."
     },
     {
-      "cat": "GEOPOLITICS",
-      "headline": "DOLLAR INDEX CLIMBS TO 102.25 AS HAVEN FLOWS RETURN AFTER LAST WEEK'S PULLBACK",
-      "body": "The DXY rose 0.22% to 102.25, recovering ground after slipping to 101.85 last week, as some of the safety bid tied to European fiscal jitters crept back into the dollar even without a fresh catalyst.",
-      "explain": "The dollar's moves this month have had less to do with the U.S. economic picture and more to do with relative safety \u2014 capital flows toward the deepest, most liquid market during any bout of European sovereign stress, and dollars and Treasuries are still that market even with U.S. yields near two-decade highs. A bounce back toward 102 without new U.S. data suggests today's move is a continuation of that relative-safety trade rather than a fresh vote of confidence in the Fed's path."
+      "cat": "TRADE",
+      "headline": "GOVERNMENT FUNDED THROUGH DEC. 11 AS FY27 APPROPRIATIONS FIGHT STALLS IN THE SENATE",
+      "body": "The government remains funded through December 11 under the continuing resolution President Trump signed September 2 (House vote: 370-48), but none of the twelve FY2027 appropriations bills have yet been taken up by the Senate Appropriations Committee, setting up a funding cliff just after the midterm elections.",
+      "explain": "A continuing resolution freezes spending at prior-year levels rather than passing new appropriations, which avoids an immediate shutdown but pushes the harder fights over specific agency funding levels down the calendar. Punting the fight to right after the midterms raises the stakes because the incoming Congress's composition could change the bargaining leverage on both sides, and unresolved appropriations uncertainty is itself a small drag on Treasury issuance planning and the term premium investors demand for holding long bonds."
+    },
+    {
+      "cat": "MARKETS",
+      "headline": "DOLLAR DIPS, GOLD HOLDS NEAR $4,160 AS HAVEN DEMAND NETS OUT FLAT",
+      "body": "The DXY slipped 0.11% to 102.11 while gold held essentially flat near $4,160 an ounce, as safe-haven demand tied to the Iran headlines roughly offset the dollar's own modest pullback.",
+      "explain": "Gold and the dollar are both haven assets that usually move in opposite directions because gold is priced in dollars, so a weaker dollar should mechanically lift gold's price for dollar-based buyers. Today's flat gold price despite the softer dollar suggests the geopolitical bid for gold specifically is roughly balanced against reduced haven demand for the dollar itself, a sign investors aren't yet treating the Iran headlines as a major escalation."
     },
     {
       "cat": "MCBB",
       "headline": "ST. JOHN'S LOSES GUARD DONNIE FREEMAN FOR THE SEASON TO ACHILLES INJURY BEFORE TIP-OFF",
-      "body": "Rising junior guard Donnie Freeman underwent surgery for a non-contact Achilles injury suffered in a team workout, ruling him out for all of 2026-27 before the season even begins. Coach Rick Pitino called it a major blow to the Red Storm's depth heading into Big East play, which opens in November, while Duke enters the year as a popular preseason pick after adding a deep transfer and freshman class under coach Jon Scheyer."
+      "body": "Rising junior guard Donnie Freeman underwent surgery for a non-contact Achilles injury suffered in a team workout, ruling him out for all of 2026-27 before the season even begins. Coach Rick Pitino called it a major blow to the Red Storm's depth heading into Big East play, which opens in November; separately, NCAA.com's preseason breakdown named Arkansas freshman Jordan Smith Jr. and Kansas freshman Tyran Stokes among the class's most impactful newcomers."
     },
     {
       "cat": "NBA",
-      "headline": "LAKERS' REPORTED $12 BILLION SALE HEADLINES PRESEASON AS LEBRON DEBUTS WITH SIXERS",
-      "body": "A reported $12 billion sale of the Lakers \u2014 a North American sports-franchise record \u2014 is the backdrop to a 67-game preseason slate now underway league-wide. LeBron James opened his 24th season with his fourth franchise after signing with Philadelphia, pairing with Jaylen Brown, Joel Embiid, and Tyrese Maxey."
+      "headline": "LAKERS' REPORTED $12 BILLION SALE HEADLINES PRESEASON AS WIZARDS' ALEX SARR HAS FOOT SURGERY",
+      "body": "A reported $12 billion sale of the Lakers — a North American sports-franchise record — is the backdrop to a preseason slate now underway league-wide, with LeBron James opening his 24th season with his fourth franchise after signing with Philadelphia. Washington center Alex Sarr had surgery to repair a fractured right foot and is expected to be ready for opening night, while the league released its 2026 NBA Cup group-stage schedule, headlined by a Knicks-Sixers and Lakers-Warriors doubleheader on opening day, Oct. 30."
     },
     {
       "cat": "NFL",
       "headline": "FALCONS' JAMES PEARCE JR. SUSPENDED 8 GAMES FOR CONDUCT POLICY VIOLATION",
-      "body": "Atlanta edge rusher James Pearce Jr. was suspended eight games without pay for violating the NFL's personal-conduct policy, a significant loss for the Falcons' pass rush. The league is also reviewing possible discipline for 49ers owner Jed York following his arrest in Ohio, adding a second integrity headache in the same week."
+      "body": "Atlanta edge rusher James Pearce Jr. was suspended eight games without pay for violating the NFL's personal-conduct policy, a significant loss for the Falcons' pass rush. The league is also reviewing possible discipline for 49ers owner Jed York following his arrest in Ohio, while tonight's Thursday Night Football matchup — Tampa Bay at Dallas, 8:15 p.m. ET at AT&T Stadium — kicks off Week 5 later this evening."
     },
     {
       "cat": "NCAA CFB",
-      "headline": "OHIO STATE'S JEREMIAH SMITH SETS PROGRAM RECORDS AS THE SENATE PASSES THE PROTECT COLLEGE SPORTS ACT",
-      "body": "Ohio State receiver Jeremiah Smith broke the program's career receptions and touchdown records last weekend, while Alabama's 56-23 rout of Mississippi State and Missouri's 45-17 upset of Florida were the week's signature results. Off the field, the Senate passed the Protect College Sports Act 77-22 Friday, setting a uniform national NIL standard and protecting Olympic-sport scholarships, with backers pushing for a House vote before Election Day. The slate is quiet until Friday, when No. 20 Iowa visits No. 18 Washington."
+      "headline": "NO. 20 IOWA VISITS NO. 18 WASHINGTON FRIDAY AS SENATE PASSES NATIONAL NIL STANDARD",
+      "body": "Washington (3-2) hosts Iowa (4-1) Friday night at Husky Stadium — the Hawkeyes' first trip to Montlake in 63 years — after the Huskies dropped back-to-back games to Minnesota (27-24) and at USC (21-25); Washington is favored by roughly 1.5 to 2.5 points despite an offense ranked 124th nationally in rushing. Elsewhere, Ohio State's Jeremiah Smith broke the program's career receptions and touchdown records last weekend, and the Senate passed the Protect College Sports Act 77-22, setting a uniform national NIL standard ahead of a planned House vote before Election Day."
     }
   ],
   "sports": [
@@ -83,47 +59,47 @@
       "team": "WASHINGTON HUSKIES FOOTBALL",
       "pill": "L 21-25",
       "pillClass": "s-l",
-      "detail": "Fell to 3-1 (0-1 Big Ten) in a road loss at No. 18 USC Saturday. Punter Hunter Green was named to the Ray Guy Award's \"Ray's 8\" for Week Five. Next: host No. 20 Iowa at Husky Stadium Friday, Oct. 9 \u2014 the Hawkeyes' first trip to Montlake in 63 years."
+      "detail": "Dropped to 3-2 (0-2 Big Ten) after consecutive losses to Minnesota (27-24) and at No. 18 USC (21-25). Punter Hunter Green was named to the Ray Guy Award's \"Ray's 8\" for Week Five. Next: host No. 20 Iowa at Husky Stadium Friday, Oct. 9 — the Hawkeyes' first trip to Montlake in 63 years."
     },
     {
       "team": "WASHINGTON HUSKIES BASKETBALL",
       "pill": "PRESEASON",
       "pillClass": "s-up",
-      "detail": "Added former Oregon assistant Mike Mennenga to the staff and brought in transfers Harun Zrno, Steele Venters, and others to pair with returning leading scorer Wesley Yates III. First look comes in an exhibition at Boise State Oct. 17, before hosting rival Washington State Oct. 25."
+      "detail": "Nine new players are competing for roles after losing both of last year's top scorers — Hannes Steinbach (2026 NBA Draft, Charlotte Hornets) and Zoom Diallo (transferred to Kentucky). Returning starter Wesley Yates III and transfer point guard Ryan Beasley lead the projected lineup under third-year coach Danny Sprinkle. Next: exhibition at Boise State Oct. 17, hosts rival Washington State Oct. 25."
     },
     {
       "team": "SEATTLE SEAHAWKS",
       "pill": "W 30-23",
       "pillClass": "s-w",
-      "detail": "Beat the Chargers 30-23 Sunday to improve to 3-1, bouncing back from a loss to Washington the week before. Sam Darnold threw for 168 yards and two touchdowns and jumped 51 spots to No. 21 in the NFL's new Top 100 rankings. Next: host San Francisco Sunday, Oct. 11."
+      "detail": "Beat the Chargers 30-23 to improve to 3-1, bouncing back after an earlier loss. Sam Darnold threw for 168 yards and two touchdowns and jumped 51 spots to No. 21 in the NFL's new Top 100 rankings. Next: host San Francisco Sunday, Oct. 11 at Lumen Field."
     },
     {
       "team": "DETROIT PISTONS",
       "pill": "W 109-91",
       "pillClass": "s-w",
-      "detail": "Beat Phoenix 109-91 in Monday's preseason opener at Little Caesars Arena; Cade Cunningham led with 25 points and 12 rebounds. Center Jalen Duren ended his restricted free-agency standoff this week, signing a fully guaranteed five-year, $200 million deal just ahead of the qualifying-offer deadline and rejoining the roster for camp. Next: at Washington Wizards Oct. 10."
+      "detail": "Beat Phoenix 109-91 in Monday's preseason opener at Little Caesars Arena; Cade Cunningham led with 25 points and 12 rebounds. Center Jalen Duren signed a fully guaranteed five-year, $200 million deal Oct. 2, ending his restricted free-agency standoff and rejoining the roster for camp. Next: at Washington Wizards Oct. 10; regular-season opener is Oct. 20 vs. Boston."
     },
     {
       "team": "SEATTLE MARINERS",
       "pill": "73-85",
       "pillClass": "s-l",
-      "detail": "Closed the season 73-85, missing the playoffs for the first time since 2019 \u2014 a stunning reversal after last year's Game 7 ALCS run. GM Jerry Dipoto confirmed the club \"will go outside to hire our manager\" after Torey Lovullo, a leading candidate, re-signed with Arizona instead."
+      "detail": "Closed the season 73-85, missing the playoffs for the first time since 2019 — a stunning reversal after last year's Game 7 ALCS run. GM Jerry Dipoto confirmed the club \"will go outside to hire our manager\" after Torey Lovullo, a leading candidate, re-signed with Arizona instead."
     }
   ],
   "watchlist": [
-    "CPI report and University of Michigan inflation-expectations survey this week \u2014 a reading above September's 4.6% would argue the Fed needs to stay restrictive",
-    "Strait of Hormuz shipping traffic \u2014 any new disruption could reverse oil's slide toward $89",
-    "Huskies host No. 20 Iowa at Husky Stadium \u2014 Friday, Oct. 9, Hawkeyes' first trip to Montlake in 63 years",
-    "NBA preseason runs through Oct. 16; opening night is Oct. 20 with the Pistons hosting Boston",
-    "Mariners managerial search \u2014 Dipoto says the club will hire from outside after missing the 2026 playoffs"
+    "Hyperscaler Q3 earnings season approaches — Microsoft, Alphabet, and Meta's AI capex guidance will test today's OpenAI-revenue doubts",
+    "FY2027 appropriations fight — government funded only through Dec. 11; Senate Appropriations Committee hasn't taken up any bills yet",
+    "Pentagon reportedly weighing further options on Iran — any escalation could spike oil and reignite yield pressure",
+    "Huskies host No. 18 Washington vs. No. 20 Iowa — Friday, Oct. 9, Hawkeyes' first trip to Montlake in 63 years",
+    "NBA preseason runs through Oct. 16; Pistons' regular-season opener vs. Boston is Oct. 20"
   ],
   "deepDive": {
-    "title": "The Term Premium: Why a 5.28% 10-Year Isn't Just About Fed Expectations",
+    "title": "Vendor Financing in the AI Trade: Why One FT Report Can Move Nvidia, Micron, and the S&P 500",
     "content": [
-      "Today's brief has the 10-year Treasury yield ticking up another basis point to 5.28%, even as the acute driver of this cycle \u2014 the Strait of Hormuz oil shock \u2014 keeps fading, with WTI down to $89 from above $93. If the long-term yield just reflected where investors expect the fed funds rate to average over the next decade, it should be easing in step with oil and the Fed's own signals that September's hike may be enough. It isn't, and the gap between what simple rate expectations predict and what the market is actually charging is called the term premium \u2014 and right now it's doing most of the work keeping the 10-year this high.",
-      "The 10-year yield can be decomposed into two pieces: the average expected path of short-term rates over the life of the bond, and a term premium that compensates investors for the risk of holding a 10-year bond instead of just rolling over short-term Treasuries. The New York Fed's ACM model is the standard way economists estimate this split, and it typically finds the term premium adds anywhere from zero to over 100 basis points depending on the environment. When the term premium rises, it means investors are demanding extra compensation for duration risk itself \u2014 uncertainty about future inflation, future Treasury issuance, and how reliably the bond will hold its value \u2014 separate from whatever they think the Fed will actually do with the funds rate.",
-      "What gets missed is that a rising term premium is often a signal about fiscal and institutional credibility, not just inflation math. The clearest precedent is 1994, when the 10-year yield jumped more than 200 basis points over the year even as the Fed's hikes were well-telegraphed, because investors repriced the premium for holding long-duration paper amid heavy Treasury issuance and inflation uncertainty \u2014 a move nicknamed the \"bond market massacre.\" Heavy issuance to fund deficits, like the kind the U.S. is running now, tends to push the term premium up mechanically: more supply of long bonds requires a higher yield to clear the market, independent of where the Fed sets overnight rates.",
-      "That framing changes how to read this week's setup. If the CPI print and Michigan survey come in soft, expectations for the funds rate can fall while the term premium stays elevated \u2014 meaning the 10-year, and the mortgage and corporate borrowing costs tied to it, may not fall nearly as much as a rate-expectations-only view would suggest. For a portfolio, that argues for treating the 10-year's stickiness above 5% as partly structural \u2014 tied to issuance and duration-risk appetite \u2014 rather than purely a referendum on whether the Fed's September hike was the right call."
+      "Today's selloff — the S&P 500 down 0.47%, the Nasdaq-100 down 1.39% — traces back to a single catalyst: a Financial Times report questioning OpenAI's revenue trajectory. That one story moved Nvidia, Micron, and Intel, none of which sell anything directly to OpenAI's consumers. For a finance student, the interesting question isn't that AI stocks fell, but why doubt about one company's revenue ripples through an entire supply chain of chipmakers, cloud providers, and infrastructure builders that sit several steps removed from it.",
+      "The mechanism is what's often called vendor financing, or more precisely a circular revenue structure. OpenAI commits to massive multi-year compute purchases from cloud providers like Microsoft, Oracle, and CoreWeave. Those providers in turn buy chips from Nvidia to build out that capacity, and in some deals Nvidia and other chipmakers have taken minority equity stakes in, or structured revenue-share arrangements with, the AI labs buying their hardware. Each layer's reported revenue growth depends on continued spending by the layer above it — so when confidence in OpenAI's revenue wavers, the market has to ask whether the capex commitments funding Nvidia's and Micron's growth are actually backed by durable end-demand, or just by financing commitments between parties with overlapping incentives to keep the cycle going.",
+      "The closest historical parallel is the telecom buildout of 1999-2000. Equipment makers like Lucent and Nortel extended billions in vendor financing to telecom carriers so those carriers could buy the fiber-optic and switching equipment needed to build out capacity — revenue that looked real on the equipment makers' books but was contingent on carriers' ability to repay loans made possible only by that same spending. When end-user demand for bandwidth didn't arrive on the assumed timeline, carriers defaulted, and Lucent alone wrote off billions in vendor-financing losses. Today's AI capex is funded more by hyperscalers' own free cash flow than by debt, which genuinely lowers the systemic risk — but it doesn't eliminate the question of whether reported growth reflects real terminal demand or spending that depends on the next link in the chain holding up.",
+      "For a portfolio, the practical takeaway is to watch where the selling shows up. The Dow gained roughly 0.1% today while the Nasdaq-100 fell 1.39%, which looks like rotation within equities rather than broad risk-off selling — money moving out of AI-exposed names into everything else, not out of stocks altogether. The next real test arrives with hyperscaler earnings this quarter: if Microsoft, Alphabet, and Meta reaffirm AI capex guidance with commentary on actual utilization and return on that spending, today's doubt likely fades as noise. If guidance softens instead, the vendor-financing logic that's inflated chipmaker revenue for two years starts to unwind for real, and the 10-year yield's stubborn perch near 5.2% means that unwind would happen at the worst possible moment for a group of stocks priced on cash flows far in the future."
     ]
   }
 }
