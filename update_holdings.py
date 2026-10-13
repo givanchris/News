@@ -22,8 +22,7 @@ PAT = os.environ.get("GITHUB_PAT", "")
 WEIGHTS_URL = "https://api.github.com/repos/givanchris/News/contents/data/portfolio_weights.json"
 
 FALLBACK_TICKERS = [
-    "ALAB", "MRVL", "NVDA", "PLTR", "GOOG", "AMAT", "CEG", "COHR", "AMZN", "HOOD",
-    "MOG.A", "BABA", "CCJ", "ZBRA", "IREN", "LEU", "SOLS", "SPCX", "RVII",
+    "MRVL", "ALAB", "PLTR", "NVDA", "GOOG", "AMAT", "CEG", "AMZN", "COHR", "MOG.A", "BABA", "HOOD", "ZBRA", "CCJ", "SPCX", "IREN", "TSEM", "RMBS", "LEU",
 ]
 
 NAMES = {
@@ -56,6 +55,8 @@ NAMES = {
     "CCJ":   "Cameco",
     "IREN":  "IREN Limited",
     "RVII":  "Robinhood Ventures Fund II",
+    "RMBS":  "Rambus",
+    "TSEM":  "Tower Semiconductor",
 }
 
 YF_MAP = {"MOG.A": "MOG-A", "BTC": "BTC-USD"}
@@ -147,8 +148,10 @@ def load_tickers():
 
 
 def main():
+    # portfolio_weights.json (in the repo) is the source of truth for which
+    # holdings show and in what order; the local holdings file is a fallback.
     weight_order = fetch_weight_order()
-    tickers = load_tickers()
+    tickers = weight_order or load_tickers()
     print(f"Fetching {len(tickers)} tickers…\n")
 
     results = []
