@@ -1,130 +1,111 @@
 {
-  "lastUpdated": "2026-10-13T16:30:16-06:00",
+  "lastUpdated": "2026-10-13T16:39:20-06:00",
   "market": {
-    "sp500": {
-      "price": "7805",
-      "change": "-0.02%",
-      "dir": "down"
-    },
-    "nasdaq": {
-      "price": "30569",
-      "change": "-0.31%",
-      "dir": "down"
-    },
-    "yield": {
-      "price": "5.22%",
-      "change": "-2 bps",
-      "dir": "up"
-    },
-    "wti": {
-      "price": "$95",
-      "change": "+2.28%",
-      "dir": "up"
-    },
-    "gold": {
-      "price": "$4182",
-      "change": "-0.68%",
-      "dir": "down"
-    },
-    "dxy": {
-      "price": "102.21",
-      "change": "-0.19%",
-      "dir": "down"
-    }
+    "sp500":  { "price": "7,805.45", "change": "-0.02%",  "dir": "flat" },
+    "nasdaq": { "price": "30,457",   "change": "-0.59%",  "dir": "down" },
+    "yield":  { "price": "5.22%",    "change": "-2 bps",  "dir": "down" },
+    "wti":    { "price": "$92.80",   "change": "-0.6%",   "dir": "down" },
+    "gold":   { "price": "$4,160",   "change": "-0.5%",   "dir": "down" },
+    "dxy":    { "price": "102.58",   "change": "+0.3%",   "dir": "up"   }
   },
   "stories": [
     {
       "cat": "GEOPOLITICS",
-      "headline": "OIL WHIPSAWS AS HORMUZ TANKER ATTACKS HIT WARTIME HIGH",
-      "body": "Brent swung from roughly $105.63 to $102.33 Monday as traders weighed an 'energy ceasefire' headline against IMO data showing 11 tankers attacked in the Strait of Hormuz in the week through Oct. 4 \u2014 the worst week since the US-Iran war began in February. WTI settled near $90.58, down about 1.4%, after reports that the White House won't strike Iran before the Nov. 3 midterms while keeping its naval blockade in place.",
-      "explain": "The Strait of Hormuz carries roughly a fifth of global oil consumption, so every tanker strike adds a war-risk premium to crude even when physical barrels keep flowing \u2014 that premium is what spikes and reverses within a single session, not changes in actual supply. Energy remains the single biggest swing factor in near-term CPI prints, so today's price action is really the market pricing both the geopolitical tail risk and its read-through to Wednesday's inflation data at the same time."
+      "headline": "IRAN WAR OIL SHOCK NOW COSTING U.S. HOUSEHOLDS $2,000 A YEAR, MOODY'S FINDS",
+      "body": "Moody's estimates the eight-month-old U.S.-Iran conflict is costing the average American household roughly $2,000 a year as Brent crude trades near $105.60/bbl and WTI near $92.80/bbl, with 30-year mortgage rates near 7.4%, the highest in nearly three years.",
+      "explain": "Oil is both a direct CPI component (gasoline, heating) and an input cost that ripples through transportation, plastics, and agriculture, so a sustained Mideast supply shock shows up in headline inflation within weeks, not quarters. That's why the Fed, not just the energy sector, is in the headlines: a cost-push shock forces a choice between tolerating higher inflation or raising rates into weaker growth, since a hike can't add a barrel of oil to the market — it only slows demand enough to offset the price pressure."
     },
     {
-      "cat": "MACRO",
-      "headline": "10-YEAR YIELD HOLDS NEAR 5.24%, HIGHEST SINCE 2007, AHEAD OF CPI",
-      "body": "The 10-year Treasury yield sat at 5.24% Monday, matching its highest level since 2007, as the bond market stayed defensive into Wednesday's CPI release. Mortgage rates ticked higher in sympathy, giving back some of their recent pullback from the cycle's peak.",
-      "explain": "Yields this high reflect the market pricing persistent inflation risk from tariffs and energy prices on top of heavy Treasury issuance to fund the deficit \u2014 more supply and more inflation risk both push bond prices down and yields up simultaneously. A hot CPI print Wednesday could push the 10-year through 5.25%, which would ripple into mortgage rates, corporate borrowing costs, and equity valuations via the discount rate applied to future earnings."
-    },
-    {
-      "cat": "MARKETS",
-      "headline": "DOW EXTENDS WIN STREAK TO THREE AS S&P 500, NASDAQ SLIP INTO EARNINGS SEASON",
-      "body": "The Dow Jones Industrial Average rose 195.60 points (+0.38%) to 51,850.55, its third straight gain, while the S&P 500 dipped 0.06% to 7,807.24 and the Nasdaq 100 fell about 0.5% as investors rotated out of megacap tech \u2014 Micron dropped nearly 4% \u2014 and into value names ahead of bank earnings later this week.",
-      "explain": "A rotation into value alongside a down day for Micron and other memory-chip names suggests investors are trimming exposure to the most crowded AI trades before Q3 earnings test whether hyperscaler capex still justifies current valuations. Big bank earnings (JPMorgan, Wells Fargo, and peers) later this week will be the first real read on credit quality and loan demand in an economy facing both high long-end yields and elevated oil prices."
+      "cat": "CENTRAL BANKS",
+      "headline": "FED HIKES FOR FIRST TIME IN THREE YEARS AS 10-YEAR YIELD SITS NEAR A 24-YEAR HIGH",
+      "body": "The Fed raised its target range in September for the first time since 2023 on war-driven inflation fears, and the 10-year Treasury yield — which touched 5.365% last week, its highest since 2002 — eased about 2 bps to roughly 5.22% today. The Fed's own projections imply one more quarter-point hike by year-end, to about 4.1%.",
+      "explain": "Yields move opposite to hopes for Fed easing: when the Fed signals it will hold rates higher for longer to fight oil-driven inflation, long-term yields reprice upward because bond buyers demand more compensation for holding duration risk in a higher-rate world. That 24-year-high 10-year yield is also the direct channel pushing 30-year mortgage rates toward 7.4%, since fixed mortgages are priced off the 10-year plus a spread."
     },
     {
       "cat": "COMMODITIES",
-      "headline": "GOLD PUSHES TOWARD $4,200 AS SAFE-HAVEN DEMAND OUTWEIGHS HIGH YIELDS",
-      "body": "Gold traded near $4,195 an ounce, up about 0.5%, as Middle East tensions and a wobbly dollar kept safe-haven bids in place even with the 10-year yield sitting near a two-decade high.",
-      "explain": "Gold normally struggles when real yields rise, since it pays no coupon, so today's gain shows geopolitical risk from the Strait of Hormuz is currently outweighing the usual drag from a 5.24% 10-year. Gold rallying alongside yields instead of against them is a classic sign markets are pricing a tail-risk premium rather than trading on the standard rates framework."
+      "headline": "OIL EASES OFF MULTI-MONTH HIGHS ON RUSSIAN DIESEL RELIEF, BUT GOLDMAN SEES MORE UPSIDE RISK",
+      "body": "Brent slipped about 1% to $105.60/bbl and WTI eased to $92.80/bbl today as extra Russian diesel supply eased some tightness, even as Goldman Sachs raised its December Brent forecast to $90/bbl from $85, calling renewed Iran-war escalation a 'significant upside risk.'",
+      "explain": "Goldman's $90 forecast sits below today's spot price, which signals the market is still pricing a meaningful geopolitical risk premium into oil beyond what fundamentals alone justify. If a ceasefire materializes, that premium could unwind quickly and pull inflation expectations, Treasury yields, and the Fed's hiking path down with it."
+    },
+    {
+      "cat": "MARKETS",
+      "headline": "NASDAQ-100 SLIDES TOWARD CORRECTION AS CHIP AND MEMORY STOCKS SELL OFF FOR A FIFTH STRAIGHT SESSION",
+      "body": "The Nasdaq-100 fell to roughly 30,457 (-0.59%) as the Philadelphia Semiconductor Index dropped for a fifth consecutive session, with Micron down 3.6% and Applied Materials off nearly 7%. The S&P 500 was essentially flat at 7,805.45 (-0.02%) and the Dow fell 180 points (-0.35%).",
+      "explain": "Chip and memory names carry outsized weight in the Nasdaq-100 after years of AI-driven gains, so a sector-specific unwind — here tied to memory-pricing and capex-sentiment worries — can drag the whole index toward correction territory (a 10%+ pullback from highs) even while the broader, more diversified S&P 500 barely moves."
+    },
+    {
+      "cat": "EARNINGS",
+      "headline": "BIG BANKS TOP ESTIMATES BUT SHARES WHIPSAW AS MIDEAST RISK CLOUDS THE OUTLOOK",
+      "body": "Major banks reporting this week, including Goldman Sachs, beat profit expectations for the quarter, but shares flipped between gains and losses intraday as investors weighed strong trading and lending results against the inflation and growth risks from the Iran war and higher-for-longer rates.",
+      "explain": "Higher rates are a double-edged sword for banks: net interest margins widen as banks earn more on loans funded by cheaper deposits, which flattered this quarter's results, but a rate shock driven by an external supply crisis also raises credit risk and the odds of a growth slowdown, so the market is still deciding whether this quarter's beat is sustainable or a last good print before the cycle turns."
     },
     {
       "cat": "MCBB",
-      "headline": "FLORIDA OPENS AS NO. 1 IN PRESEASON TOP 25 AS TIP-OFF NEARS",
-      "body": "With the season opening Nov. 2, Florida sits atop ESPN's preseason Top 25. Rosters across the sport are being reshuffled by the NCAA's new age-based eligibility rules, which did not grandfather in seniors who expected one more year, sparking several player lawsuits."
+      "headline": "FLORIDA TOPS ESPN'S WAY-TOO-EARLY PRESEASON TOP 25 AS MICHIGAN AND UCONN OPEN NEW ERAS",
+      "body": "With tip-off three weeks away (Nov. 2), ESPN's preseason Top 25 projects Florida at No. 1, while KenPom's model favors Duke. Reigning champion Michigan and runner-up UConn both enter the season under heavy roster turnover, and the AP's official preseason poll has not yet been released."
     },
     {
       "cat": "NBA",
-      "headline": "GIANNIS'S MOVE TO MIAMI HEADLINES LOADED PRESEASON BEFORE OCT. 21 TIP-OFF",
-      "body": "Giannis Antetokounmpo is settling into a 'fresh start' with the Miami Heat after an offseason trade, while Victor Wembanyama has climbed past Nikola Jokic on the early MVP ladder and Shai Gilgeous-Alexander has stacked a streak of 20-point games beyond a mark long held by Wilt Chamberlain. The regular season tips off Oct. 21."
+      "headline": "LAKERS FRANCHISE SALE CLOSES AT A RECORD $12 BILLION AMID A ROCKY START TO THE SEASON",
+      "body": "ESPN reports the Lakers' ownership sale has closed at a record $12 billion valuation for an NBA franchise, even as the team opened the preseason without Luka Doncic, whom coach JJ Redick says is out indefinitely, and with LeBron James reportedly managing chronic arthritis entering the year."
     },
     {
       "cat": "NFL",
-      "headline": "BILLS AT RAMS HEADLINES MONDAY NIGHT PRIMETIME SLATE",
-      "body": "Tonight's Monday Night Football matchup, Buffalo at the Rams (8:15 p.m. ET, ESPN/ABC), kicks off after this brief goes out, with Los Angeles favored by 3.5 points at home in the week's marquee primetime game."
+      "headline": "49ERS STAY UNBEATEN AT 5-0, RALLYING PAST SEAHAWKS 32-29 ON TWO LATE PURDY DRIVES",
+      "body": "Brock Purdy led two fourth-quarter scoring drives as San Francisco overcame a 26-21 deficit to beat Seattle 32-29 at Lumen Field on Sunday, improving to 5-0 and dropping the Seahawks to 3-2 in a chippy game with three Seattle turnovers."
     },
     {
       "cat": "NCAA CFB",
-      "headline": "OKLAHOMA STUNS TEXAS IN RED RIVER RIVALRY, GEORGIA JUMPS TO NO. 1",
-      "body": "Oklahoma beat No. 6 Texas 27-24 in the Red River Rivalry Saturday \u2014 Arch Manning threw a late interception that set up Oklahoma's game-winning field goal \u2014 dropping Texas to No. 7 in the AP poll. Georgia moved to No. 1 after beating Alabama 20-17.",
-      "explain": null
+      "headline": "GEORGIA RISES TO NO. 1 IN LATEST AP TOP 25 AS TEXAS AND OREGON TUMBLE",
+      "body": "Georgia (6-0) moved to No. 1 with 66 first-place votes in this week's AP poll, followed by Notre Dame, Miami, Ohio State, and Indiana. Texas dropped to No. 7 after a loss, and Oregon fell out of the rankings entirely despite drawing votes."
     }
   ],
   "sports": [
     {
-      "team": "WASHINGTON HUSKIES FOOTBALL",
-      "pill": "L 24-41",
-      "pillClass": "s-l",
-      "detail": "Lost to Iowa, now 3-3 (0-3 Big Ten). Next: at Purdue, Fri. Oct. 16."
-    },
-    {
-      "team": "WASHINGTON HUSKIES BASKETBALL",
-      "pill": "OCT 17",
-      "pillClass": "s-up",
-      "detail": "Opens exhibition slate at Boise State Oct. 17 under third-year coach Danny Sprinkle. Only six players return; chasing the program's first winning season since joining the Big Ten."
-    },
-    {
-      "team": "SEATTLE SEAHAWKS",
-      "pill": "THU @ DEN",
-      "pillClass": "s-up",
-      "detail": "3-1 through Week 4; hosted the 49ers Sunday. Next: Thursday Night Football at Denver, Oct. 15."
-    },
-    {
       "team": "DETROIT PISTONS",
-      "pill": "W 109-107",
-      "pillClass": "s-w",
-      "detail": "Rallied from 18 down to beat Phoenix in the preseason opener on a last-second bucket from rookie PG Ebuka Okorie. Next: Wed. at Minnesota; regular season opens Oct. 20 vs. Celtics."
+      "pill": "L 114-108 (OT)",
+      "pillClass": "s-l",
+      "detail": "Preseason split: beat Phoenix 109-107, then fell in OT at Washington with Duren rested. His new 5-year, $200M extension is locked in; he's expected back before Detroit opens defense of its East-best 60-22 record Oct. 20 vs. Boston."
     },
     {
       "team": "SEATTLE MARINERS",
-      "pill": "76-86",
+      "pill": "SEASON OVER",
       "pillClass": "s-l",
-      "detail": "Finished third in the AL West, missing the postseason after last year's division title. Offseason focus turns to rotation and infield depth."
+      "detail": "Eliminated from playoff contention Sept. 24; finished with a losing record for the first time since 2020 after Brendan Donovan's injury-shortened season (39 games) and a Cal Raleigh slump sank a team with the AL's best preseason odds."
+    },
+    {
+      "team": "SEATTLE SEAHAWKS",
+      "pill": "L 29-32",
+      "pillClass": "s-l",
+      "detail": "Fell to 3-2 after blowing a 26-21 fourth-quarter lead to the unbeaten 49ers (5-0) on Sunday. Next: Thursday, Oct. 15 at Denver Broncos (TNF)."
+    },
+    {
+      "team": "WASHINGTON HUSKIES FOOTBALL",
+      "pill": "L 24-41",
+      "pillClass": "s-l",
+      "detail": "Dropped to 3-3 (0-3 Big Ten) in a blowout home loss to No. 20 Iowa; starter Demond Williams Jr. left with an injury. Next: Friday, Oct. 16 at Purdue."
+    },
+    {
+      "team": "WASHINGTON HUSKIES BASKETBALL",
+      "pill": "OPENS NOV. 2",
+      "pillClass": "s-up",
+      "detail": "Danny Sprinkle's roster turned over heavily after top scorer Hannes Steinbach left for the NBA Draft (Charlotte Hornets). Exhibition vs. Washington State is Oct. 25; the regular-season opener vs. Colgate is Nov. 2, with a return to the Maui Invitational on tap."
     }
   ],
   "watchlist": [
-    "CPI data Wednesday 8:30 AM ET \u2014 consensus watching whether the 10Y yield holds near 5.24%",
-    "Q3 bank earnings kick off this week \u2014 JPMorgan, Wells Fargo, Citi report",
-    "Huskies at Purdue \u2014 Friday, Oct. 16, 5:00 PM ET",
-    "Seahawks at Broncos \u2014 Thursday Night Football, Oct. 15",
-    "Pistons preseason at Minnesota \u2014 Wednesday, Oct. 14, 8:00 PM ET"
+    "Fed's December FOMC meeting — dot plot implies one more quarter-point hike to ~4.1% by year-end",
+    "Iran war ceasefire headlines could reverse the oil/yield spike quickly — watch for de-escalation signs",
+    "MLB ALCS Game 2 (Rays-Guardians) tonight; NLCS Game 3 (Brewers-Dodgers) Wednesday, Oct. 14",
+    "Seahawks at Broncos — Thursday, Oct. 15, Denver (Thursday Night Football)",
+    "Pistons open the 2026-27 season Oct. 20 vs. Celtics, with Jalen Duren eyeing a preseason return"
   ],
   "deepDive": {
-    "title": "The war-risk premium: how Hormuz tanker attacks move oil without moving a single barrel",
+    "title": "Supply Shocks vs. the Fed: Why an Oil War Forces a Hawkish Pivot",
     "content": [
-      "Monday's oil action was a case study in miniature: Brent spiked toward $105.63 then fell back to $102.33 within the same session, even though nothing changed about how much crude is physically moving through the Strait of Hormuz. That gap between a headline and a settlement price is the 'war-risk premium' \u2014 the extra dollars traders pay for the possibility that today's attack becomes tomorrow's blockade, layered on top of a 10-year Treasury yield already sitting near a 2007 high and a CPI print two days out.",
-      "Mechanically, the premium shows up first in the options and freight markets before it ever hits the front-month futures price most people watch. Insurers widen war-risk cover on tankers transiting Hormuz, raising the all-in cost of moving a barrel; options skew shifts as traders bid up out-of-the-money calls that pay off on a supply shock; and shipping companies reroute or idle vessels rather than run the strait, tightening available supply even before a single barrel is lost to an actual strike. Each of these channels prices risk, not quantity \u2014 which is exactly why the premium can evaporate as fast as it appears once a 'ceasefire' headline crosses the wire.",
-      "The historical playbook here is the September 2019 Abqaiq-Khurais drone strikes, which knocked out roughly 5% of global oil supply overnight and sent Brent up nearly 15% in a single day \u2014 the largest one-day move since the 1991 Gulf War \u2014 only for prices to fully retrace within three weeks once Saudi Arabia restored output faster than feared. What markets misprice in these episodes is usually the duration, not the direction: traders are good at recognizing that risk has gone up, much worse at estimating how long the disruption will actually last, which is why Hormuz headlines keep producing round trips rather than sustained trends.",
-      "For Chris's purposes heading into Wednesday, the mechanism matters because it decouples two numbers that normally move together: oil and the 10-year yield. A durable supply disruption would push both energy prices and breakeven inflation expectations higher, forcing the Fed's hand; a pure risk premium that fades does the opposite, meaning Wednesday's CPI print is likely to be read as the more informative signal about where the 10-year actually goes next, not today's Brent whipsaw. That is also why gold rallying alongside a 5.24% yield today is a tell \u2014 it is pricing the tail-risk scenario the oil market is simultaneously second-guessing."
+      "Today's brief has three numbers that all trace back to one cause: oil near $105.60 Brent and $92.80 WTI, a 10-year Treasury yield sitting near a 24-year high at 5.22%, and a Fed that just hiked for the first time in three years. The common thread is the eight-month-old U.S.-Iran conflict, which Moody's now estimates costs the average American household about $2,000 a year. That is an unusual combination — a central bank tightening policy while a war, not an overheating economy, is doing most of the damage — and it is exactly the kind of setup that tests whether monetary policy is built to handle a supply shock at all.",
+      "The mechanism starts with oil's dual role in the price level. It is a direct line item in CPI through gasoline and home heating, so a Brent move from the mid-$70s to the $100s shows up in headline inflation within a single reporting cycle. But oil is also an input cost for trucking, plastics, fertilizer, and air travel, so the effect compounds over the following months as businesses pass through higher shipping and production costs. A central bank facing this has no tool that adds a barrel of oil to the market. All it can do is raise the cost of borrowing enough that consumers and businesses pull back on everything else, which cools demand until it roughly offsets the energy-driven price pressure — a blunt, recessionary way to fight an inflation problem that didn't originate in excess demand to begin with.",
+      "This is precisely the dilemma that defined the 1973-74 oil embargo, when OPEC's price shock hit a Fed that chose to look through it rather than tighten aggressively, on the theory that a supply shock wasn't a monetary problem. Inflation expectations de-anchored instead, and the 1970s ended in stagflation that took Paul Volcker's brutal rate hikes years later to unwind. Today's Fed is explicitly trying not to repeat that mistake: hiking into a war-driven shock is a bet that acting early on expectations is cheaper than waiting and having to act later with much higher rates. The market is pricing that bet directly — Goldman's $90 December Brent forecast sits below today's spot price precisely because it assumes some of today's war premium eventually fades.",
+      "For the here and now, that framework explains why a 24-year-high 10-year yield is squeezing markets on two fronts at once. It is pushing 30-year mortgage rates toward 7.4%, since fixed mortgages price directly off the 10-year plus a spread, and it is the discount-rate pressure behind the Nasdaq-100's slide toward correction, since higher-duration growth and chip stocks get hit hardest when the rate used to discount their future earnings rises. The next data point to watch isn't a jobs report — it's any Iran ceasefire headline, because that's the one shock that could pull oil, yields, and the Fed's remaining rate-hike path back down together, faster than any single piece of economic data."
     ]
   }
 }
