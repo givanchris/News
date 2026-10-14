@@ -1,87 +1,57 @@
 {
-  "lastUpdated": "2026-10-14T16:30:17-06:00",
+  "lastUpdated": "2026-10-14T16:42:00-06:00",
   "market": {
-    "sp500": {
-      "price": "7719",
-      "change": "-1.11%",
-      "dir": "down"
-    },
-    "nasdaq": {
-      "price": "29951",
-      "change": "-2.02%",
-      "dir": "down"
-    },
-    "yield": {
-      "price": "5.19%",
-      "change": "-3 bps",
-      "dir": "up"
-    },
-    "wti": {
-      "price": "$95",
-      "change": "+0.23%",
-      "dir": "up"
-    },
-    "gold": {
-      "price": "$4127",
-      "change": "-1.40%",
-      "dir": "down"
-    },
-    "dxy": {
-      "price": "102.53",
-      "change": "+0.40%",
-      "dir": "up"
-    }
+    "sp500":  { "price": "7,719",  "change": "-1.11%", "dir": "down" },
+    "nasdaq": { "price": "29,902", "change": "-2.10%", "dir": "down" },
+    "yield":  { "price": "5.28%",  "change": "+6 bps",  "dir": "down" },
+    "wti":    { "price": "$95",    "change": "+0.5%",  "dir": "up"   },
+    "gold":   { "price": "$4,100", "change": "-1.6%",  "dir": "down" },
+    "dxy":    { "price": "102.6",  "change": "+0.3%",  "dir": "up"   }
   },
   "stories": [
     {
-      "cat": "GEOPOLITICS",
-      "headline": "IRAN WAR OIL SHOCK NOW COSTING U.S. HOUSEHOLDS $2,000 A YEAR, MOODY'S FINDS",
-      "body": "Moody's estimates the eight-month-old U.S.-Iran conflict is costing the average American household roughly $2,000 a year as Brent crude trades near $105.60/bbl and WTI near $92.80/bbl, with 30-year mortgage rates near 7.4%, the highest in nearly three years.",
-      "explain": "Oil is both a direct CPI component (gasoline, heating) and an input cost that ripples through transportation, plastics, and agriculture, so a sustained Mideast supply shock shows up in headline inflation within weeks, not quarters. That's why the Fed, not just the energy sector, is in the headlines: a cost-push shock forces a choice between tolerating higher inflation or raising rates into weaker growth, since a hike can't add a barrel of oil to the market \u2014 it only slows demand enough to offset the price pressure."
+      "cat": "MACRO",
+      "headline": "HOT SEPTEMBER CPI TRIGGERS S&P'S FIFTH LOSS IN SIX SESSIONS, NASDAQ'S WORST DAY SINCE JULY",
+      "body": "The S&P 500 fell 1.11% to 7,718.94 and the Nasdaq Composite dropped 1.88% to 26,692.87 — its sharpest one-day decline since July 23 — after a hotter-than-forecast September CPI report raised doubts the Fed can keep easing into year-end. AI-linked names led the slide, with CoreWeave plunging 15% on renewed debt-financing worries.",
+      "explain": "A CPI surprise doesn't just move the inflation headline — it instantly resets the market's model of the Fed's next several meetings, since traders price future rate paths into Fed funds futures in real time. That repricing raises the discount rate used to value future corporate cash flows, and the hit lands hardest on long-duration growth and AI names whose value sits mostly in earnings years away, which is exactly why chip and AI infrastructure stocks fell more than the broader index today."
     },
     {
       "cat": "CENTRAL BANKS",
-      "headline": "FED HIKES FOR FIRST TIME IN THREE YEARS AS 10-YEAR YIELD SITS NEAR A 24-YEAR HIGH",
-      "body": "The Fed raised its target range in September for the first time since 2023 on war-driven inflation fears, and the 10-year Treasury yield \u2014 which touched 5.365% last week, its highest since 2002 \u2014 eased about 2 bps to roughly 5.22% today. The Fed's own projections imply one more quarter-point hike by year-end, to about 4.1%.",
-      "explain": "Yields move opposite to hopes for Fed easing: when the Fed signals it will hold rates higher for longer to fight oil-driven inflation, long-term yields reprice upward because bond buyers demand more compensation for holding duration risk in a higher-rate world. That 24-year-high 10-year yield is also the direct channel pushing 30-year mortgage rates toward 7.4%, since fixed mortgages are priced off the 10-year plus a spread."
+      "headline": "10-YEAR YIELD JUMPS TOWARD 5.3% AS HOT CPI FORCES A HAWKISH REPRICING",
+      "body": "The 10-year Treasury yield rose about 6 bps to roughly 5.28% and the 2-year jumped more than 10 bps to near 4.89% following the CPI print, extending a move that has already pushed 30-year mortgage rates toward 7.4%. The Fed hiked in September for the first time in three years, and its own projections imply one more quarter-point move by year-end — today's data makes markets more confident that happens.",
+      "explain": "The 2-year yield is the most sensitive to Fed-path expectations because it matures within the horizon of the next several meetings, so it jumped harder than the 10-year on today's news — a flattening move that signals the market sees the Fed staying restrictive for longer rather than growth expectations deteriorating. That's the mechanism directly behind the renewed pressure on mortgage rates and the discount-rate hit to equities in the same session."
     },
     {
-      "cat": "COMMODITIES",
-      "headline": "OIL EASES OFF MULTI-MONTH HIGHS ON RUSSIAN DIESEL RELIEF, BUT GOLDMAN SEES MORE UPSIDE RISK",
-      "body": "Brent slipped about 1% to $105.60/bbl and WTI eased to $92.80/bbl today as extra Russian diesel supply eased some tightness, even as Goldman Sachs raised its December Brent forecast to $90/bbl from $85, calling renewed Iran-war escalation a 'significant upside risk.'",
-      "explain": "Goldman's $90 forecast sits below today's spot price, which signals the market is still pricing a meaningful geopolitical risk premium into oil beyond what fundamentals alone justify. If a ceasefire materializes, that premium could unwind quickly and pull inflation expectations, Treasury yields, and the Fed's hiking path down with it."
-    },
-    {
-      "cat": "MARKETS",
-      "headline": "NASDAQ-100 SLIDES TOWARD CORRECTION AS CHIP AND MEMORY STOCKS SELL OFF FOR A FIFTH STRAIGHT SESSION",
-      "body": "The Nasdaq-100 fell to roughly 30,457 (-0.59%) as the Philadelphia Semiconductor Index dropped for a fifth consecutive session, with Micron down 3.6% and Applied Materials off nearly 7%. The S&P 500 was essentially flat at 7,805.45 (-0.02%) and the Dow fell 180 points (-0.35%).",
-      "explain": "Chip and memory names carry outsized weight in the Nasdaq-100 after years of AI-driven gains, so a sector-specific unwind \u2014 here tied to memory-pricing and capex-sentiment worries \u2014 can drag the whole index toward correction territory (a 10%+ pullback from highs) even while the broader, more diversified S&P 500 barely moves."
+      "cat": "GEOPOLITICS",
+      "headline": "OIL CLIMBS AS HOUTHI STRIKES ON SAUDI ARABIA AND IRAN'S HORMUZ THREATS COMPOUND THE INFLATION SHOCK",
+      "body": "Brent rose toward $106.60/bbl and WTI near $95 after Houthi forces struck targets inside Saudi Arabia and Iranian officials vowed to intensify tanker attacks in the Strait of Hormuz, where traffic is already running roughly 30% below normal. Moody's estimates the eight-month-old U.S.-Iran conflict is now costing the average American household about $2,000 a year.",
+      "explain": "Oil is a direct line item in CPI through gasoline and heating costs, so today's twin shocks — a hot inflation print and a fresh supply threat at one of the world's most important chokepoints — reinforce each other: higher oil raises the odds of the next CPI report running hot too, which is exactly the feedback loop that makes energy-driven inflation so hard for a central bank to tame with interest rates alone."
     },
     {
       "cat": "EARNINGS",
-      "headline": "BIG BANKS TOP ESTIMATES BUT SHARES WHIPSAW AS MIDEAST RISK CLOUDS THE OUTLOOK",
-      "body": "Major banks reporting this week, including Goldman Sachs, beat profit expectations for the quarter, but shares flipped between gains and losses intraday as investors weighed strong trading and lending results against the inflation and growth risks from the Iran war and higher-for-longer rates.",
-      "explain": "Higher rates are a double-edged sword for banks: net interest margins widen as banks earn more on loans funded by cheaper deposits, which flattered this quarter's results, but a rate shock driven by an external supply crisis also raises credit risk and the odds of a growth slowdown, so the market is still deciding whether this quarter's beat is sustainable or a last good print before the cycle turns."
+      "headline": "BANK EARNINGS WEEK TURNS MIXED AS BOFA AND MORGAN STANLEY REPORT INTO A RATE SHOCK",
+      "body": "Citigroup ($2.85) and Wells Fargo ($1.87) topped profit estimates Tuesday while JPMorgan's $5.57 EPS missed the $5.93 consensus; Bank of America and Morgan Stanley reported Wednesday as the financial sector — down roughly 4% over the past month and about $270 billion in combined market value across the five majors — absorbs the fastest yield spike since September's hike.",
+      "explain": "Rising yields are a double-edged sword for banks: net interest margins widen as loan yields reprice faster than deposit costs, which flatters this quarter's trading and lending results, but a rate shock tied to an external inflation surprise also raises credit risk and recession odds, so the market is still deciding whether this week's results reflect a durable tailwind or a peak before the cycle turns."
     },
     {
       "cat": "MCBB",
-      "headline": "FLORIDA TOPS ESPN'S WAY-TOO-EARLY PRESEASON TOP 25 AS MICHIGAN AND UCONN OPEN NEW ERAS",
-      "body": "With tip-off three weeks away (Nov. 2), ESPN's preseason Top 25 projects Florida at No. 1, while KenPom's model favors Duke. Reigning champion Michigan and runner-up UConn both enter the season under heavy roster turnover, and the AP's official preseason poll has not yet been released."
+      "headline": "FLORIDA TOPS PRESEASON TOP 25 AS MICHIGAN AND UCONN OPEN NEW ERAS WITH TIP-OFF THREE WEEKS AWAY",
+      "body": "With the Nov. 2 opener roughly three weeks out, ESPN's preseason Top 25 projects Florida at No. 1, while KenPom's model favors Duke. Reigning champion Michigan and runner-up UConn both enter the season under heavy roster turnover, and the AP's official preseason poll has not yet been released."
     },
     {
       "cat": "NBA",
-      "headline": "LAKERS FRANCHISE SALE CLOSES AT A RECORD $12 BILLION AMID A ROCKY START TO THE SEASON",
-      "body": "ESPN reports the Lakers' ownership sale has closed at a record $12 billion valuation for an NBA franchise, even as the team opened the preseason without Luka Doncic, whom coach JJ Redick says is out indefinitely, and with LeBron James reportedly managing chronic arthritis entering the year."
+      "headline": "LAKERS' RECORD $12 BILLION SALE CLOSES AS LUKA DONCIC SITS OUT INDEFINITELY",
+      "body": "ESPN reports the Lakers' ownership sale has closed at a record $12 billion NBA valuation, even as the team opens the preseason without Luka Doncic — ruled out indefinitely by coach JJ Redick — and with LeBron James reportedly managing chronic arthritis. Elsewhere, Heat center Bam Adebayo exited a preseason game early with a lower-back injury, and the NBA Cup group-stage schedule kicks off Oct. 30 with the Lakers at the Warriors."
     },
     {
       "cat": "NFL",
-      "headline": "49ERS STAY UNBEATEN AT 5-0, RALLYING PAST SEAHAWKS 32-29 ON TWO LATE PURDY DRIVES",
-      "body": "Brock Purdy led two fourth-quarter scoring drives as San Francisco overcame a 26-21 deficit to beat Seattle 32-29 at Lumen Field on Sunday, improving to 5-0 and dropping the Seahawks to 3-2 in a chippy game with three Seattle turnovers."
+      "headline": "49ERS STAY UNBEATEN AT 5-0; SEAHAWKS GET QUICK TURNAROUND AT BRONCOS THURSDAY",
+      "body": "San Francisco improved to 5-0 Sunday, rallying from a fourth-quarter deficit to beat Seattle 32-29 and drop the Seahawks to 3-2. Seattle gets a short week before visiting Denver for Thursday Night Football (8:15 p.m. ET), with both teams debuting throwback uniforms for the Week 6 showdown."
     },
     {
       "cat": "NCAA CFB",
-      "headline": "GEORGIA RISES TO NO. 1 IN LATEST AP TOP 25 AS TEXAS AND OREGON TUMBLE",
-      "body": "Georgia (6-0) moved to No. 1 with 66 first-place votes in this week's AP poll, followed by Notre Dame, Miami, Ohio State, and Indiana. Texas dropped to No. 7 after a loss, and Oregon fell out of the rankings entirely despite drawing votes."
+      "headline": "GEORGIA HOLDS NO. 1 IN AP POLL AS HUSKIES DROP TO 3-3 AHEAD OF FRIDAY AT PURDUE",
+      "body": "Georgia (6-0) remains No. 1 in this week's AP Top 25 with Notre Dame, Miami, Ohio State, and Indiana rounding out the top five, while Texas and Oregon continue to slide. Washington fell to 3-3 (0-3 Big Ten) in a blowout loss to Iowa and visits Purdue Friday, Oct. 16 — the Huskies' first trip to West Lafayette since 1990."
     }
   ],
   "sports": [
@@ -89,7 +59,7 @@
       "team": "DETROIT PISTONS",
       "pill": "L 114-108 (OT)",
       "pillClass": "s-l",
-      "detail": "Preseason split: beat Phoenix 109-107, then fell in OT at Washington with Duren rested. His new 5-year, $200M extension is locked in; he's expected back before Detroit opens defense of its East-best 60-22 record Oct. 20 vs. Boston."
+      "detail": "Split their first two preseason games: beat Phoenix 109-107, then fell in OT at Washington without Cade Cunningham or Jalen Duren. At Minnesota tonight, then host Toronto Oct. 16 before opening the regular season Oct. 20 vs. Boston."
     },
     {
       "team": "SEATTLE MARINERS",
@@ -101,35 +71,35 @@
       "team": "SEATTLE SEAHAWKS",
       "pill": "L 29-32",
       "pillClass": "s-l",
-      "detail": "Fell to 3-2 after blowing a 26-21 fourth-quarter lead to the unbeaten 49ers (5-0) on Sunday. Next: Thursday, Oct. 15 at Denver Broncos (TNF)."
+      "detail": "Fell to 3-2 after blowing a 26-21 fourth-quarter lead to the unbeaten 49ers (5-0) on Sunday. Next: Thursday, Oct. 15 at Denver Broncos, 8:15 p.m. ET (TNF), both teams in throwback uniforms."
     },
     {
       "team": "WASHINGTON HUSKIES FOOTBALL",
       "pill": "L 24-41",
       "pillClass": "s-l",
-      "detail": "Dropped to 3-3 (0-3 Big Ten) in a blowout home loss to No. 20 Iowa; starter Demond Williams Jr. left with an injury. Next: Friday, Oct. 16 at Purdue."
+      "detail": "Dropped to 3-3 (0-3 Big Ten) in a blowout home loss to No. 20 Iowa; starter Demond Williams Jr. left with an injury. Next: Friday, Oct. 16 at Purdue — UW's first trip there since 1990."
     },
     {
       "team": "WASHINGTON HUSKIES BASKETBALL",
       "pill": "OPENS NOV. 2",
       "pillClass": "s-up",
-      "detail": "Danny Sprinkle's roster turned over heavily after top scorer Hannes Steinbach left for the NBA Draft (Charlotte Hornets). Exhibition vs. Washington State is Oct. 25; the regular-season opener vs. Colgate is Nov. 2, with a return to the Maui Invitational on tap."
+      "detail": "Danny Sprinkle's roster turned over heavily — top scorers Hannes Steinbach (NBA Draft, Hornets) and Zoom Diallo (transferred to Kentucky) are both gone. Exhibition at Boise State is Oct. 17, home vs. Washington State Oct. 25, then the opener vs. Colgate Nov. 2 and a return to the Maui Invitational Nov. 23 vs. BYU."
     }
   ],
   "watchlist": [
-    "Fed's December FOMC meeting \u2014 dot plot implies one more quarter-point hike to ~4.1% by year-end",
-    "Iran war ceasefire headlines could reverse the oil/yield spike quickly \u2014 watch for de-escalation signs",
-    "MLB ALCS Game 2 (Rays-Guardians) tonight; NLCS Game 3 (Brewers-Dodgers) Wednesday, Oct. 14",
-    "Seahawks at Broncos \u2014 Thursday, Oct. 15, Denver (Thursday Night Football)",
-    "Pistons open the 2026-27 season Oct. 20 vs. Celtics, with Jalen Duren eyeing a preseason return"
+    "Fed's October/December meetings — today's hot CPI print raises the odds of the dot-plot's implied year-end hike actually happening",
+    "Strait of Hormuz tanker traffic — watch for further Iran/Houthi escalation or any ceasefire headline that could reverse the oil/yield spike quickly",
+    "Seahawks at Broncos — Thursday, Oct. 15, 8:15 p.m. ET (TNF)",
+    "Washington at Purdue — Friday, Oct. 16, 5 p.m. PT on FOX",
+    "Pistons regular-season opener — Tuesday, Oct. 20 vs. Celtics"
   ],
   "deepDive": {
-    "title": "Supply Shocks vs. the Fed: Why an Oil War Forces a Hawkish Pivot",
+    "title": "How One CPI Print Repriced the Entire Yield Curve in a Single Session",
     "content": [
-      "Today's brief has three numbers that all trace back to one cause: oil near $105.60 Brent and $92.80 WTI, a 10-year Treasury yield sitting near a 24-year high at 5.22%, and a Fed that just hiked for the first time in three years. The common thread is the eight-month-old U.S.-Iran conflict, which Moody's now estimates costs the average American household about $2,000 a year. That is an unusual combination \u2014 a central bank tightening policy while a war, not an overheating economy, is doing most of the damage \u2014 and it is exactly the kind of setup that tests whether monetary policy is built to handle a supply shock at all.",
-      "The mechanism starts with oil's dual role in the price level. It is a direct line item in CPI through gasoline and home heating, so a Brent move from the mid-$70s to the $100s shows up in headline inflation within a single reporting cycle. But oil is also an input cost for trucking, plastics, fertilizer, and air travel, so the effect compounds over the following months as businesses pass through higher shipping and production costs. A central bank facing this has no tool that adds a barrel of oil to the market. All it can do is raise the cost of borrowing enough that consumers and businesses pull back on everything else, which cools demand until it roughly offsets the energy-driven price pressure \u2014 a blunt, recessionary way to fight an inflation problem that didn't originate in excess demand to begin with.",
-      "This is precisely the dilemma that defined the 1973-74 oil embargo, when OPEC's price shock hit a Fed that chose to look through it rather than tighten aggressively, on the theory that a supply shock wasn't a monetary problem. Inflation expectations de-anchored instead, and the 1970s ended in stagflation that took Paul Volcker's brutal rate hikes years later to unwind. Today's Fed is explicitly trying not to repeat that mistake: hiking into a war-driven shock is a bet that acting early on expectations is cheaper than waiting and having to act later with much higher rates. The market is pricing that bet directly \u2014 Goldman's $90 December Brent forecast sits below today's spot price precisely because it assumes some of today's war premium eventually fades.",
-      "For the here and now, that framework explains why a 24-year-high 10-year yield is squeezing markets on two fronts at once. It is pushing 30-year mortgage rates toward 7.4%, since fixed mortgages price directly off the 10-year plus a spread, and it is the discount-rate pressure behind the Nasdaq-100's slide toward correction, since higher-duration growth and chip stocks get hit hardest when the rate used to discount their future earnings rises. The next data point to watch isn't a jobs report \u2014 it's any Iran ceasefire headline, because that's the one shock that could pull oil, yields, and the Fed's remaining rate-hike path back down together, faster than any single piece of economic data."
+      "Today's brief has a tight common thread: a hotter-than-forecast September CPI report, a 10-year yield pushing toward 5.28%, a 2-year yield up over 10 bps to near 4.89%, and a Nasdaq having its worst day since July. None of those moved because new information arrived about the economy's long-run growth path — they moved because one data print changed what traders think the Federal Reserve will do at its next two or three meetings. That distinction matters for understanding why markets can swing so hard on a single release that, on its face, is just one month of price data.",
+      "The mechanism runs through Fed funds futures, a market where traders bet directly on the policy rate at future meeting dates. The moment CPI prints above consensus, that market repricing happens within seconds, before any Fed official says a word, because futures prices simply reflect the new probability distribution over future rate paths. Treasury yields then adjust to stay consistent with that repriced path: short-dated notes like the 2-year move most because they mature inside the window where the next few hikes would actually occur, while the 10-year moves less because it blends near-term policy with decades of long-run growth and inflation assumptions that one data point barely touches. That is exactly why the 2-year's 10+ bp move outpaced the 10-year's 6 bp move today.",
+      "What most people miss is that this is a flattening move, not a simple ‘rates up’ move — and flattening on a hawkish inflation surprise is a specific signal that the market expects the Fed to stay restrictive without conceding ground on long-run growth. The closest historical analogue is the string of 2022 CPI-day selloffs, when single above-consensus prints repeatedly produced 2%+ one-day drops in the S&P 500 as markets repriced a much steeper hiking path in real time; the September 2026 hike after three years on hold shows the Fed is explicitly trying to avoid repeating that era's slow, reactive policy path.",
+      "For today's setup specifically, the oil shock from Houthi strikes and Iran's Hormuz threats isn't a separate story from the CPI surprise — it's the channel that could keep feeding it. Energy costs run straight into next month's CPI basket, so a sustained supply shock raises the odds of another hot print, which would force Fed funds futures to reprice even further before the Fed's own meeting gets the chance to. That's why the single most important thing to watch isn't the next jobs report; it's whether oil holds its gains or a ceasefire headline unwinds the risk premium, because that outcome will likely determine whether today's yield spike is a one-day event or the start of a trend into the Fed's final two meetings of the year."
     ]
   }
 }
