@@ -1,67 +1,43 @@
 {
-  "lastUpdated": "2026-10-20T16:30:16-06:00",
+  "lastUpdated": "2026-10-20T16:45:12-06:00",
   "market": {
-    "sp500": {
-      "price": "7713",
-      "change": "+0.28%",
-      "dir": "up"
-    },
-    "nasdaq": {
-      "price": "29490",
-      "change": "-0.13%",
-      "dir": "down"
-    },
-    "yield": {
-      "price": "5.12%",
-      "change": "-2 bps",
-      "dir": "up"
-    },
-    "wti": {
-      "price": "$98",
-      "change": "-0.55%",
-      "dir": "down"
-    },
-    "gold": {
-      "price": "$4148",
-      "change": "-0.43%",
-      "dir": "down"
-    },
-    "dxy": {
-      "price": "101.73",
-      "change": "-0.08%",
-      "dir": "down"
-    }
+    "sp500":  { "price": "7,713",  "change": "+0.28%", "dir": "up" },
+    "nasdaq": { "price": "29,490", "change": "-0.13%", "dir": "down" },
+    "yield":  { "price": "5.12%",  "change": "-2 bps",  "dir": "up" },
+    "wti":    { "price": "$98",    "change": "-0.55%", "dir": "down" },
+    "gold":   { "price": "$4,148", "change": "-0.43%", "dir": "down" },
+    "dxy":    { "price": "101.73", "change": "-0.08%", "dir": "down" }
   },
   "stories": [
     {
       "cat": "MACRO",
-      "headline": "NASDAQ-100 REBOUNDS 1.17% AS CHIPS LEAD AN AI-OPTIMISM BOUNCE",
-      "body": "The Nasdaq 100 climbed 1.17% to 29,529 and the S&P 500 added 0.41% to 7,691, clawing back a chunk of last week's AI-capex-driven selloff as Nvidia and chipmakers rallied on renewed optimism and earnings that beat lowered bars.",
-      "explain": "Because the Nasdaq 100 is cap-weighted, a handful of mega-cap chip and hyperscaler names rallying 2-4% can lift the whole index over a point even when breadth is unremarkable. Today's bounce reads less like a reversal of the underlying AI-capex-ROI doubts from last week than an oversold technical snapback: once short-term positioning gets this stretched, better-than-feared earnings from a couple of bellwethers are enough to trigger relief buying, even if the structural question about whether capex spending is matched by returns stays unresolved."
+      "headline": "S&P 500 HOLDS GAINS, NASDAQ-100 SLIPS AS WALL STREET AWAITS BIG TECH EARNINGS",
+      "body": "The S&P 500 added 0.28% to 7,713 while the Nasdaq 100 eased 0.13% to 29,490, a quiet session sandwiched between Monday's 530-point Dow rally and a earnings-heavy back half of the week.",
+      "explain": "A cap-weighted tech index can lag a broad-market gain on a single day when just a few megacap names rotate lower even as breadth improves elsewhere, which is roughly what happened here. With the Fed's Oct. 28 decision and a wave of hyperscaler earnings both on deck, traders have little incentive to add risk aggressively today; the market is effectively marking time until those two catalysts clarify whether the AI-capex spending cycle and the rate path both stay supportive."
     },
     {
       "cat": "CENTRAL BANKS",
-      "headline": "10-YEAR YIELD TICKS UP TO 5.14% AS SUPPLY WEIGHS ON BONDS",
-      "body": "The 10-year Treasury yield rose 4 basis points to 5.14%, back above last week's peak, as this week's Treasury auction calendar and today's equity rally pulled money out of the safe-haven bid that had briefly capped yields.",
-      "explain": "When stocks are selling off, Treasuries attract a flight-to-quality bid that pushes yields down even if the macro backdrop argues for higher rates; today's rally reverses that flow, so some of the move is simply the safety premium coming back out of bonds. Layer on a heavy slate of new issuance this week and the government competing for the same pool of buyers, and yields drift higher on supply/demand mechanics alone. At 5.14%, the 10-year sits near multi-decade highs that directly raise the discount rate used to value every future cash flow, which is why equity valuations stay sensitive to every basis point here."
+      "headline": "10-YEAR YIELD EASES TO 5.12% AS TRADERS LOCK IN A FED HOLD",
+      "body": "The 10-year Treasury yield slipped 2 basis points to 5.12% ahead of next Wednesday's FOMC decision, where futures markets assign an overwhelming probability to the Fed holding its target range at 3.75%-4.00%.",
+      "explain": "When a rate decision is this close to fully priced, the yield curve stops moving on the decision itself and starts moving on the tone that's expected to accompany it, in this case a 'hawkish hold' that keeps a December hike or cut on the table. A government data backlog from earlier this year has also pushed the Fed toward leaning on private data like ADP payrolls instead of delayed official releases, which adds a layer of uncertainty to the dot plot that traders are already pricing into term premium at the long end."
     },
     {
       "cat": "COMMODITIES",
-      "headline": "WTI CLIMBS TO $98 AS HORMUZ RISK PREMIUM PERSISTS",
-      "body": "WTI crude added 0.91% to $98 a barrel, holding onto most of last week's geopolitical-driven spike tied to tension around the Strait of Hormuz even as the most extreme pricing has started to unwind.",
-      "explain": "A risk premium tied to a shipping chokepoint gets built from war-risk insurance costs and options skew well before any barrel actually fails to move, so prices can stay elevated purely on the threat even without a realized supply disruption. That premium persisting at $98 rather than fully round-tripping back toward pre-spike levels signals traders still see the Hormuz risk as live rather than resolved, which keeps a floor under the price until there's a clear de-escalation headline."
+      "headline": "WTI SLIPS TO $98 BUT HOLDS MOST OF ITS HORMUZ RISK PREMIUM",
+      "body": "WTI crude fell 0.55% to $98 a barrel while Brent held above $108, both still carrying a geopolitical premium tied to reported tanker attacks near the Strait of Hormuz and Houthi strikes on Saudi infrastructure.",
+      "explain": "A chokepoint risk premium is priced through war-risk insurance and options skew long before a single barrel actually fails to ship, so crude can stay elevated purely on the threat of disruption. The fact that WTI is pulling back only modestly, rather than round-tripping back toward pre-spike levels, tells you traders still see the Hormuz situation as unresolved rather than de-escalating, which matters directly for CPI given how quickly pump prices pass through."
     },
     {
       "cat": "COMMODITIES",
-      "headline": "GOLD RETREATS 0.97% TO $4,160 AS RISK APPETITE RETURNS",
-      "body": "Spot gold fell 0.97% to roughly $4,160 an ounce as today's equity rebound and a firmer dollar curbed demand for the metal as a defensive hedge.",
-      "explain": "Gold competes with Treasuries and cash as a place to park money, and it pays no yield, so when risk appetite returns and the dollar strengthens, the opportunity cost of holding bullion rises and some of that haven money rotates back into stocks or rate-bearing assets. The pullback also reflects today's bond weakness: gold often tracks real yields inversely, so a 10-year yield pushing back above 5.1% removes some of the relative appeal gold had when yields were capped by safe-haven flows."
+      "headline": "GOLD RETREATS TO $4,148 AS THE DOLLAR FIRMS AND HAVEN DEMAND COOLS",
+      "body": "Spot gold fell 0.43% to roughly $4,148 an ounce as the dollar index inched down only modestly to 101.73, with the metal's pullback driven more by easing safe-haven demand than by any single dollar move.",
+      "explain": "Gold pays no yield, so every basis point the 10-year holds near 5.12% raises the opportunity cost of parking money in bullion instead of interest-bearing assets. With equities steady and no fresh escalation headline out of the Middle East today, some of the tactical haven bid that built up over the past two weeks is unwinding back into cash and short-duration Treasuries."
     },
     {
-      "cat": "MACRO",
-      "headline": "DOLLAR FIRMS TO 101.97 AS RATE-DIFFERENTIAL TRADE REASSERTS",
-      "body": "The dollar index rose 0.15% to 101.97 as the greenback's yield advantage over the euro and yen reasserted itself alongside today's rise in Treasury yields.",
-      "explain": "The dollar index is a basket weighted roughly 58% to the euro and 14% to the yen, so it moves mainly on relative rate expectations between the Fed and the ECB or Bank of Japan. When U.S. yields rise faster than peers', as they did today with the 10-year up 4 bps, the carry advantage of holding dollar-denominated assets widens, and that pulls flows into the dollar almost mechanically, independent of any U.S.-specific news."
+      "cat": "EARNINGS",
+      "headline": "SPACEX'S 161% REVENUE JUMP SETS THE TONE FOR THIS WEEK'S BIG TECH GAUNTLET",
+      "body": "SpaceX reported third-quarter revenue up 161% year over year to $14.58 billion after the bell Monday, a number that's lifting futures sentiment into a week stacked with hyperscaler and AI-adjacent earnings that will test whether capex spending is translating into actual growth.",
+      "explain": "SpaceX isn't in the S&P 500, but its print functions as an early read on demand for launch, satellite broadband and the infrastructure layer that underpins a lot of the AI buildout narrative. A beat this size gives risk appetite a tailwind heading into names investors actually hold, which is why index futures ticked higher almost immediately after the number crossed the wire."
     },
     {
       "cat": "MCBB",
@@ -70,18 +46,18 @@
     },
     {
       "cat": "NBA",
-      "headline": "LAKERS' RECORD $12.5B SALE AWAITS LEAGUE VOTE AS SEASON OPENS TUESDAY",
-      "body": "The agreed sale of the Lakers to Bob Iger and Josh Kushner for a record $12.5 billion, topping last year's $10B Buss-to-Walter deal, still needs NBA Board of Governors approval next month, even as the 2026-27 season tips off Tuesday with a three-game opening slate led by Celtics at Pistons."
+      "headline": "2026-27 SEASON TIPS OFF AS RECORD $12.5B LAKERS SALE AWAITS LEAGUE VOTE",
+      "body": "The league's new season opened tonight with a three-game slate, Celtics at Pistons, 76ers at Knicks and Thunder at Spurs, while the agreed $12.5 billion sale of the Lakers to Bob Iger and Josh Kushner still needs NBA Board of Governors approval next month. Final scores from tonight's openers were not yet available at publication time."
     },
     {
       "cat": "NFL",
-      "headline": "COMMANDERS AT 49ERS HEADLINE MNF AS TRADE FRENZY ROLLS ON",
-      "body": "San Francisco (5-0) hosts Washington (1-3-1) tonight on Monday Night Football, kickoff 8:15 PM ET/6:15 PM MT, with the Commanders 0-2 on the road this year against a Niners team that's 3-0 at home. The game is still to be played; it caps a week in which J.J. McCarthy, Joey Porter Jr. and Cam Jurgens all switched teams ahead of the Nov. 10 trade deadline."
+      "headline": "TRADE DEADLINE BUILDS AS WEEK 7 LEAVES PLAYOFF PICTURE SCRAMBLED",
+      "body": "With the Nov. 10 trade deadline two and a half weeks out, front offices are working the phones after a Week 7 slate that saw Seattle fall 17-14 in overtime at Denver, dropping the Seahawks to 3-3 and tightening the NFC West race ahead of their Oct. 25 home date with Kansas City."
     },
     {
       "cat": "NCAA CFB",
       "headline": "WEEK 7'S UPSETS RESHAPE THE PLAYOFF PICTURE HEADING INTO WEEK 8",
-      "body": "Saturday's chaos, BYU's 28-24 stunner over Notre Dame, Ohio State's shaky 19-15 escape past Indiana (losing QB Julian Sayin to injury), Florida's comeback past Texas, and Tennessee's rout of Alabama, has scrambled the committee picture with the AP's updated Top 25 still digesting the results."
+      "body": "Last weekend's chaos, BYU's 28-24 stunner over Notre Dame, Ohio State's shaky 19-15 escape past Indiana that cost it QB Julian Sayin to injury, Florida's comeback win over Texas, and Tennessee's rout of Alabama, has scrambled the committee picture as teams turn toward Week 8."
     }
   ],
   "sports": [
@@ -105,31 +81,31 @@
     },
     {
       "team": "DETROIT PISTONS",
-      "pill": "OPENER TOM",
+      "pill": "OPENER TODAY",
       "pillClass": "s-up",
-      "detail": "Open the 2026-27 season Tuesday at home vs. Boston (3 PM ET, NBC). Detroit went 60-22 last year and won 3 of 4 meetings with a retooled Celtics team that added Paul George and Mitchell Robinson."
+      "detail": "Opened the 2026-27 season tonight at home vs. Boston (3 PM ET, NBC/Peacock); final score unverified at publication time. Detroit went 60-22 last year atop the Central and traded center Isaiah Stewart to Memphis this offseason while drafting Stanford guard Ebuka Okorie."
     },
     {
       "team": "SEATTLE MARINERS",
       "pill": "SEARCHING",
       "pillClass": "s-l",
-      "detail": "Managerial search continues after the 76-86 finish and Dan Wilson's exit. POBO Jerry Dipoto is set to interview Astros' Joe Espada, who recently parted ways with Houston, with Seattle targeting a hire by Halloween."
+      "detail": "Finished below .500 for the first time since 2019 after being eliminated from playoff contention in late September. A managerial search is underway, with reports linking the opening to Houston's Joe Espada, recently let go by the Astros."
     }
   ],
   "watchlist": [
-    "Heavy Treasury auction slate this week as the 10-year holds near 5.14%",
-    "NBA's 2026-27 season tips off Tuesday, Oct. 20 \u2014 Celtics at Pistons, 3 PM ET",
+    "FOMC rate decision Wednesday, Oct. 28, 2 PM ET — hold expected, target range 3.75%-4.00%",
+    "Big tech earnings week continues after SpaceX's blowout Q3 print Monday night",
     "Seahawks host Chiefs on Sunday Night Football, Oct. 25 at Lumen Field",
-    "October CPI (Nov.-dated release) lands Tuesday, Nov. 10 at 8:30 AM ET, ahead of the Fed's Dec. 9 decision",
-    "Mariners managerial search: Dipoto to interview Astros' Joe Espada, hire targeted by Halloween"
+    "World Series Game 1: Brewers host the AL champion Friday, Oct. 23, 8 PM ET on FOX",
+    "Huskies football at Nebraska, Oct. 31 — both teams off a bye"
   ],
   "deepDive": {
-    "title": "How AI Capex Debt Is Turning a Tech Story Into a Credit Story",
+    "title": "The Hawkish Hold: Why the Fed's Words Will Matter More Than Its Rate Next Week",
     "content": [
-      "Today's bounce, the Nasdaq 100 up 1.17% to 29,529, reads as relief after last week's AI-capex-driven selloff, but the relief is narrower than the headline number suggests. The underlying worry was never just whether AI spending is too aggressive; it's whether that spending is increasingly financed with debt rather than free cash flow. A hyperscaler funding a data center out of operating cash flow is a capital-allocation question. The same hyperscaler funding it by issuing investment-grade bonds, or routing it through an off-balance-sheet joint venture, is a leverage question, and leverage questions get priced in the bond market before they show up in the stock.",
-      "The mechanism is straightforward once you separate the two financing paths. When a company spends from cash flow, a disappointing return on that capex shows up as a lower ROIC and a multiple compression, painful but contained. When the same spend is debt-funded, a disappointing return also raises leverage ratios and can pressure the credit rating, which widens the spread investors demand to hold that company's bonds. Wider spreads raise the cost of the next round of borrowing, which is exactly the dynamic now showing up as hyperscaler capex runs near an estimated $400 billion annualized pace for 2026, with a growing share routed through debt-financed vehicles rather than paid for outright.",
-      "What most people watching the stock price miss is that credit spreads tend to move first. The closest historical parallel is the late-1990s telecom buildout, when carriers like WorldCom and Global Crossing issued tens of billions in bonds to lay fiber ahead of demand that never fully materialized. Telecom bond spreads began widening noticeably in 2000, a full year before the equity collapse that followed in 2001-02, because bondholders were pricing the leverage mismatch well before equity investors gave up on the growth story. The lesson isn't that AI capex will fail the same way; it's that the credit market is the earlier, more honest read on whether the spending is sustainable.",
-      "That's the lens worth applying to today's setup: a 10-year yield at 5.14% already raises the bar for any debt-funded project to clear, since the risk-free rate against which corporate borrowing is priced keeps climbing. Chris's practical takeaway is to watch investment-grade spreads on megacap tech issuers alongside the equity tape, not instead of it, over the next few weeks. If spreads stay tight even as the 10-year grinds higher, the market is still underwriting the AI capex cycle. If they start widening before the Nov. 10 CPI print or the Fed's Dec. 9 decision, that's the credit market signaling a leverage problem well before it shows up in anyone's earnings call."
+      "Futures markets are pricing an overwhelming probability that the Fed holds its target range at 3.75%-4.00% on Oct. 28, and the 10-year sitting at 5.12% today reflects a bond market that has already absorbed that outcome. When a decision is this fully priced, the rate itself stops being the market-moving event. What moves yields and equities instead is the forward guidance: the statement's language, the quarterly Summary of Economic Projections (the 'dot plot'), and Chair Powell's tone in the press conference, because those are the inputs that tell investors what happens at the next meeting, not this one.",
+      "Forward guidance works because the Fed's job isn't just to set today's rate, it's to manage the entire expected path of rates, since long-term borrowing costs for mortgages, corporate bonds and credit cards are priced off expectations years out, not off the fed funds rate alone. A 'hawkish hold,' the outcome most analysts expect this month, means the Fed keeps rates unchanged but signals it isn't done tightening if inflation data firms up. That single word choice can move the 2-year yield, which is more sensitive to near-term policy expectations, by several basis points within minutes of the statement's release, well before anyone parses the dot plot in detail.",
+      "What a lot of people miss is that the Fed is making this call with an unusually thin data set this cycle. A backlog from earlier-year data disruptions pushed back official releases like the jobs report, forcing policymakers to lean more heavily on private substitutes such as ADP's payroll count. The closest historical parallel is 1996, when Alan Greenspan famously navigated a government shutdown-driven data gap by trusting internal Fed models and anecdotal evidence over hard numbers, and still managed a soft landing. The lesson from that episode is that forward guidance becomes more, not less, important when the underlying data is noisy, because it's the clearest signal the Fed can send when its own inputs are degraded.",
+      "For Chris, the practical read-through sits right in today's numbers: a 10-year at 5.12% already prices in a hold, so the trade isn't guessing the rate, it's gauging whether next week's language shifts the probability of a December move. Watch the 2-year yield's reaction in the minutes after the statement drops; a sharp move there, more than any single day's S&P print, is the cleanest tell for whether markets think the Fed just got more or less worried about inflation reaccelerating into year-end."
     ]
   }
 }
