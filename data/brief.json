@@ -1,135 +1,86 @@
 {
-  "lastUpdated": "2026-10-21T16:30:16-06:00",
+  "lastUpdated": "2026-10-21T16:44:00-06:00",
   "market": {
-    "sp500": {
-      "price": "7757",
-      "change": "+0.58%",
-      "dir": "up"
-    },
-    "nasdaq": {
-      "price": "29823",
-      "change": "+1.13%",
-      "dir": "up"
-    },
-    "yield": {
-      "price": "5.15%",
-      "change": "+3 bps",
-      "dir": "down"
-    },
-    "wti": {
-      "price": "$98",
-      "change": "-1.40%",
-      "dir": "down"
-    },
-    "gold": {
-      "price": "$4154",
-      "change": "+0.44%",
-      "dir": "up"
-    },
-    "dxy": {
-      "price": "101.69",
-      "change": "-0.08%",
-      "dir": "down"
-    }
+    "sp500":  { "price": "7,757",  "change": "+0.58%",  "dir": "up" },
+    "nasdaq": { "price": "31,320", "change": "+1.1%",   "dir": "up" },
+    "yield":  { "price": "4.58%",  "change": "+9 bps",  "dir": "up" },
+    "wti":    { "price": "$97",    "change": "+3.2%",   "dir": "up" },
+    "gold":   { "price": "$4,150", "change": "-0.4%",   "dir": "down" },
+    "dxy":    { "price": "101.9",  "change": "+0.3%",   "dir": "up" }
   },
   "stories": [
     {
-      "cat": "MACRO",
-      "headline": "S&P 500 HOLDS GAINS, NASDAQ-100 SLIPS AS WALL STREET AWAITS BIG TECH EARNINGS",
-      "body": "The S&P 500 added 0.28% to 7,713 while the Nasdaq 100 eased 0.13% to 29,490, a quiet session sandwiched between Monday's 530-point Dow rally and a earnings-heavy back half of the week.",
-      "explain": "A cap-weighted tech index can lag a broad-market gain on a single day when just a few megacap names rotate lower even as breadth improves elsewhere, which is roughly what happened here. With the Fed's Oct. 28 decision and a wave of hyperscaler earnings both on deck, traders have little incentive to add risk aggressively today; the market is effectively marking time until those two catalysts clarify whether the AI-capex spending cycle and the rate path both stay supportive."
+      "cat": "MARKETS",
+      "headline": "AI RALLY LIFTS NASDAQ AS SPACEX POSTS FIRST PROFIT, MUSK FLOATS TESLA MERGER",
+      "body": "The S&P 500 gained 0.58% to 7,757 while the Nasdaq added roughly 1.1% as SpaceX surged nearly 8% after reporting its first profitable quarter as a public company; CEO Elon Musk said a merger with Tesla would be \"a good idea.\" Nvidia and other chipmakers led gains, offsetting a Netflix selloff after a disappointing forecast.",
+      "explain": "SpaceX's maiden profit report removes a key uncertainty for investors pricing the space-launch and satellite-broadband business, and Musk's merger comment raises the possibility of combining Tesla's manufacturing scale with SpaceX's growth profile — the kind of headline markets treat as a potential re-rating catalyst for both. Because mega-cap and high-growth names carry outsized index weight, a single sentiment-driving comment can move the Nasdaq's percentage change disproportionately versus the broader, more diversified S&P 500."
+    },
+    {
+      "cat": "GEOPOLITICS",
+      "headline": "OIL SURGES ON MIDEAST ESCALATION, WTI TOPS $97",
+      "body": "Crude jumped more than 3% as reports of fresh Middle East tensions, including a tanker security scare, pushed WTI above $97 a barrel and Brent near $109, reviving inflation worries just as markets had been pricing in a calmer rate path.",
+      "explain": "Oil is a direct input into headline CPI and a cost input across transportation, manufacturing, and agriculture, so a geopolitical supply shock passes through to consumer prices within weeks rather than quarters. That's why bond markets react to oil spikes almost as fast as equity markets do — traders immediately reprice breakeven inflation expectations, which flow straight into nominal Treasury yields."
     },
     {
       "cat": "CENTRAL BANKS",
-      "headline": "10-YEAR YIELD EASES TO 5.12% AS TRADERS LOCK IN A FED HOLD",
-      "body": "The 10-year Treasury yield slipped 2 basis points to 5.12% ahead of next Wednesday's FOMC decision, where futures markets assign an overwhelming probability to the Fed holding its target range at 3.75%-4.00%.",
-      "explain": "When a rate decision is this close to fully priced, the yield curve stops moving on the decision itself and starts moving on the tone that's expected to accompany it, in this case a 'hawkish hold' that keeps a December hike or cut on the table. A government data backlog from earlier this year has also pushed the Fed toward leaning on private data like ADP payrolls instead of delayed official releases, which adds a layer of uncertainty to the dot plot that traders are already pricing into term premium at the long end."
+      "headline": "TREASURY YIELDS CLIMB AS OIL-DRIVEN INFLATION FEARS RESURFACE",
+      "body": "The 10-year yield rose roughly 9 basis points to 4.58% as the oil spike reignited concern that the Fed's easing path could stall; the 2-year also ticked higher, flattening the curve modestly.",
+      "explain": "Rising oil prices lift near-term inflation expectations without necessarily changing the long-run growth outlook, which is why today's move was concentrated more in inflation compensation than in real yields. A Fed that has been signaling a cautious cutting cycle has less room to keep easing if headline inflation reaccelerates, so the bond market is effectively pricing a higher chance the Fed pauses its rate-cut path at the next meeting."
     },
     {
       "cat": "COMMODITIES",
-      "headline": "WTI SLIPS TO $98 BUT HOLDS MOST OF ITS HORMUZ RISK PREMIUM",
-      "body": "WTI crude fell 0.55% to $98 a barrel while Brent held above $108, both still carrying a geopolitical premium tied to reported tanker attacks near the Strait of Hormuz and Houthi strikes on Saudi infrastructure.",
-      "explain": "A chokepoint risk premium is priced through war-risk insurance and options skew long before a single barrel actually fails to ship, so crude can stay elevated purely on the threat of disruption. The fact that WTI is pulling back only modestly, rather than round-tripping back toward pre-spike levels, tells you traders still see the Hormuz situation as unresolved rather than de-escalating, which matters directly for CPI given how quickly pump prices pass through."
-    },
-    {
-      "cat": "COMMODITIES",
-      "headline": "GOLD RETREATS TO $4,148 AS THE DOLLAR FIRMS AND HAVEN DEMAND COOLS",
-      "body": "Spot gold fell 0.43% to roughly $4,148 an ounce as the dollar index inched down only modestly to 101.73, with the metal's pullback driven more by easing safe-haven demand than by any single dollar move.",
-      "explain": "Gold pays no yield, so every basis point the 10-year holds near 5.12% raises the opportunity cost of parking money in bullion instead of interest-bearing assets. With equities steady and no fresh escalation headline out of the Middle East today, some of the tactical haven bid that built up over the past two weeks is unwinding back into cash and short-duration Treasuries."
+      "headline": "GOLD SLIPS AS OIL REBOUND LIFTS THE DOLLAR",
+      "body": "Gold eased about 0.4% to near $4,150 an ounce as the dollar index firmed roughly 0.3% to 101.9, with safe-haven demand from the oil-driven geopolitical scare offset by a stronger greenback and rising yields.",
+      "explain": "Gold competes with Treasuries and the dollar as a safe-haven asset, so when yields and the dollar rise together — as they did today on the oil shock — gold's relative appeal as a non-yielding, non-dollar store of value diminishes even amid geopolitical stress. This decoupling, where gold falls despite rising geopolitical risk, signals investors are treating today's move as inflationary rather than purely risk-off."
     },
     {
       "cat": "EARNINGS",
-      "headline": "SPACEX'S 161% REVENUE JUMP SETS THE TONE FOR THIS WEEK'S BIG TECH GAUNTLET",
-      "body": "SpaceX reported third-quarter revenue up 161% year over year to $14.58 billion after the bell Monday, a number that's lifting futures sentiment into a week stacked with hyperscaler and AI-adjacent earnings that will test whether capex spending is translating into actual growth.",
-      "explain": "SpaceX isn't in the S&P 500, but its print functions as an early read on demand for launch, satellite broadband and the infrastructure layer that underpins a lot of the AI buildout narrative. A beat this size gives risk appetite a tailwind heading into names investors actually hold, which is why index futures ticked higher almost immediately after the number crossed the wire."
+      "headline": "LAM RESEARCH, IBM, CSX HEADLINE AFTER-HOURS EARNINGS SLATE",
+      "body": "Semiconductor equipment maker Lam Research, IBM, and railroad CSX all report after today's close, giving investors a read on AI-driven capital spending (Lam), enterprise software demand (IBM), and freight volumes as a proxy for industrial activity (CSX).",
+      "explain": "Lam Research's results are watched as a leading indicator for semiconductor capital expenditure, since equipment orders placed today show up as chip supply six to twelve months out — a direct read on whether the AI buildout is still accelerating. CSX's freight volumes are one of the oldest real-economy proxies on Wall Street because rail carloads move with industrial production and consumer shipments well ahead of GDP data."
     },
     {
       "cat": "MCBB",
-      "headline": "AP PRESEASON TOP 25 LOOMS AS FLORIDA, DUKE HEADLINE NO. 1 RACE",
-      "body": "With the men's regular season tipping off Nov. 2, the AP's preseason Top 25 is expected any day. Florida was tabbed No. 1 in the SEC's preseason media poll and is widely projected as Duke's closest rival for the national top spot; the two meet Dec. 1 in Gainesville as part of the ACC/SEC Challenge."
+      "headline": "FLORIDA OPENS NO. 1 IN AP PRESEASON POLL FOR FIRST TIME SINCE 2006-07",
+      "body": "The defending national champion Gators received 47 of 59 first-place votes in Monday's preseason AP Top 25, with Duke at No. 2 and Illinois and UConn rounding out the top four. Michigan, last season's champion, fell to No. 16 after coach Dusty May departed; Texas (No. 7), Tennessee (No. 8), and Arkansas (No. 12) also crack the top dozen ahead of a season that tips off in two weeks."
     },
     {
       "cat": "NBA",
-      "headline": "2026-27 SEASON TIPS OFF AS RECORD $12.5B LAKERS SALE AWAITS LEAGUE VOTE",
-      "body": "The league's new season opened tonight with a three-game slate, Celtics at Pistons, 76ers at Knicks and Thunder at Spurs, while the agreed $12.5 billion sale of the Lakers to Bob Iger and Josh Kushner still needs NBA Board of Governors approval next month. Final scores from tonight's openers were not yet available at publication time."
+      "headline": "NBA TIPS OFF 2026-27 SEASON AS KNICKS RAISE CHAMPIONSHIP BANNER",
+      "body": "The league opened its season Tuesday, headlined by New York raising its 2025-26 championship banner before hosting Philadelphia, while Boston visited Detroit and Oklahoma City played at San Antonio in the other openers. Tonight's slate features Minnesota at Miami (7:30 ET) and Golden State at the Lakers (10 ET), with Warriors center Kristaps Porzingis's health still a question mark entering the season."
     },
     {
       "cat": "NFL",
-      "headline": "TRADE DEADLINE BUILDS AS WEEK 7 LEAVES PLAYOFF PICTURE SCRAMBLED",
-      "body": "With the Nov. 10 trade deadline two and a half weeks out, front offices are working the phones after a Week 7 slate that saw Seattle fall 17-14 in overtime at Denver, dropping the Seahawks to 3-3 and tightening the NFC West race ahead of their Oct. 25 home date with Kansas City."
+      "headline": "BUCCANEERS' VITA VEA TRADE REQUEST STILL UNRESOLVED AS DEADLINE NEARS",
+      "body": "The two-time Pro Bowl defensive tackle requested a trade after contract extension talks stalled, and with the Nov. 4 deadline approaching, the Rams remain the reported frontrunner to land him. Tampa Bay is also still without a long-term deal for QB Baker Mayfield, adding uncertainty to the roster's direction."
     },
     {
       "cat": "NCAA CFB",
-      "headline": "WEEK 7'S UPSETS RESHAPE THE PLAYOFF PICTURE HEADING INTO WEEK 8",
-      "body": "Last weekend's chaos, BYU's 28-24 stunner over Notre Dame, Ohio State's shaky 19-15 escape past Indiana that cost it QB Julian Sayin to injury, Florida's comeback win over Texas, and Tennessee's rout of Alabama, has scrambled the committee picture as teams turn toward Week 8."
+      "headline": "MIAMI AND BYU ARE LAST UNDEFEATED TEAMS ATOP THE POLL AS TEXAS, OREGON FALL",
+      "body": "Only six FBS teams remain unbeaten entering Week 8, with Miami (FL) and BYU at 6-0 atop the rankings after Texas lost to rival Oklahoma and Oregon fell to UCLA in Week 6. Defending champion Indiana is also still unbeaten and faces its biggest test yet at home against No. 5 Ohio State."
     }
   ],
   "sports": [
-    {
-      "team": "WASHINGTON HUSKIES FOOTBALL",
-      "pill": "BYE WEEK",
-      "pillClass": "s-up",
-      "detail": "Sit 4-3 (1-3 Big Ten) and on their lone bye after a 38-26 win at Purdue snapped a three-game skid. Next up: a road trip to Nebraska on Oct. 31, also off a bye."
-    },
-    {
-      "team": "WASHINGTON HUSKIES BASKETBALL",
-      "pill": "NEXT: WSU 10/25",
-      "pillClass": "s-up",
-      "detail": "Dropped their second exhibition 109-91 at Boise State Saturday; all five starters fouled out. Host Washington State in an exhibition Oct. 25 before the regular-season opener Nov. 2 vs. Colgate."
-    },
-    {
-      "team": "SEATTLE SEAHAWKS",
-      "pill": "HOST KC SUN",
-      "pillClass": "s-up",
-      "detail": "Sit at 3-3 after Thursday's 17-14 OT loss at Denver. Host Kansas City on Sunday Night Football Oct. 25 at Lumen Field, with RB Zach Charbonnet in line for his season debut."
-    },
-    {
-      "team": "DETROIT PISTONS",
-      "pill": "OPENER TODAY",
-      "pillClass": "s-up",
-      "detail": "Opened the 2026-27 season tonight at home vs. Boston (3 PM ET, NBC/Peacock); final score unverified at publication time. Detroit went 60-22 last year atop the Central and traded center Isaiah Stewart to Memphis this offseason while drafting Stanford guard Ebuka Okorie."
-    },
-    {
-      "team": "SEATTLE MARINERS",
-      "pill": "SEARCHING",
-      "pillClass": "s-l",
-      "detail": "Finished below .500 for the first time since 2019 after being eliminated from playoff contention in late September. A managerial search is underway, with reports linking the opening to Houston's Joe Espada, recently let go by the Astros."
-    }
+    { "team": "WASHINGTON HUSKIES FOOTBALL", "pill": "W 38-26", "pillClass": "s-w", "detail": "Beat Purdue 38-26 on the road with backup QB Elijah Brown (28-39, 251 yds, 3 TD) filling in for injured starter Demond Williams Jr. (ribs). On bye this week; next: at Nebraska, Sat. Oct. 31." },
+    { "team": "WASHINGTON HUSKIES BASKETBALL", "pill": "UPCOMING", "pillClass": "s-up", "detail": "Returning starter Wesley Yates III leads a retooled roster under Danny Sprinkle after Hannes Steinbach (drafted by Charlotte) and Zoom Diallo departed. Exhibition vs. Washington State Sun. Oct. 25; regular-season opener Nov. 2 vs. Colgate." },
+    { "team": "SEATTLE SEAHAWKS", "pill": "3-3", "pillClass": "s-up", "detail": "Sit at 3-3 after a Week 1 Super Bowl-rematch win over New England (13-10); Thursday's Week 6 result at Denver wasn't independently confirmed as of this brief. Next: Sun. Oct. 25 vs. Chiefs (SNF), where RB Zach Charbonnet could return from injury." },
+    { "team": "DETROIT PISTONS", "pill": "UPCOMING", "pillClass": "s-up", "detail": "Opened the season at home vs. Boston on Oct. 20; final score unconfirmed as of this writing. Enter the year as reigning East No. 1 seed (60-22) after dealing Isaiah Stewart to Memphis and drafting Stanford's Ebuka Okorie. Next: at Miami, Fri. Oct. 23." },
+    { "team": "SEATTLE MARINERS", "pill": "SEASON OVER", "pillClass": "s-l", "detail": "Season ended in September with Seattle's first losing record since 2020 and no playoff berth; manager Dan Wilson has since parted ways with the club. Offseason focus turns to a managerial search and roster retooling." }
   ],
   "watchlist": [
-    "FOMC rate decision Wednesday, Oct. 28, 2 PM ET \u2014 hold expected, target range 3.75%-4.00%",
-    "Big tech earnings week continues after SpaceX's blowout Q3 print Monday night",
-    "Seahawks host Chiefs on Sunday Night Football, Oct. 25 at Lumen Field",
-    "World Series Game 1: Brewers host the AL champion Friday, Oct. 23, 8 PM ET on FOX",
-    "Huskies football at Nebraska, Oct. 31 \u2014 both teams off a bye"
+    "CSX, IBM, Lam Research earnings after Wednesday's close — read on freight, enterprise IT, and AI chip capex",
+    "WTI above $97 on Mideast tensions — watch for pass-through into breakeven inflation ahead of the next CPI print",
+    "Seahawks vs. Chiefs, Sunday Oct. 25 (SNF) — Zach Charbonnet's potential return",
+    "Huskies MBB exhibition vs. Washington State, Sunday Oct. 25",
+    "Huskies football at Nebraska, Saturday Oct. 31, after this week's bye"
   ],
   "deepDive": {
-    "title": "The Hawkish Hold: Why the Fed's Words Will Matter More Than Its Rate Next Week",
+    "title": "How an Oil Shock Travels Through Breakevens to the Treasury Curve",
     "content": [
-      "Futures markets are pricing an overwhelming probability that the Fed holds its target range at 3.75%-4.00% on Oct. 28, and the 10-year sitting at 5.12% today reflects a bond market that has already absorbed that outcome. When a decision is this fully priced, the rate itself stops being the market-moving event. What moves yields and equities instead is the forward guidance: the statement's language, the quarterly Summary of Economic Projections (the 'dot plot'), and Chair Powell's tone in the press conference, because those are the inputs that tell investors what happens at the next meeting, not this one.",
-      "Forward guidance works because the Fed's job isn't just to set today's rate, it's to manage the entire expected path of rates, since long-term borrowing costs for mortgages, corporate bonds and credit cards are priced off expectations years out, not off the fed funds rate alone. A 'hawkish hold,' the outcome most analysts expect this month, means the Fed keeps rates unchanged but signals it isn't done tightening if inflation data firms up. That single word choice can move the 2-year yield, which is more sensitive to near-term policy expectations, by several basis points within minutes of the statement's release, well before anyone parses the dot plot in detail.",
-      "What a lot of people miss is that the Fed is making this call with an unusually thin data set this cycle. A backlog from earlier-year data disruptions pushed back official releases like the jobs report, forcing policymakers to lean more heavily on private substitutes such as ADP's payroll count. The closest historical parallel is 1996, when Alan Greenspan famously navigated a government shutdown-driven data gap by trusting internal Fed models and anecdotal evidence over hard numbers, and still managed a soft landing. The lesson from that episode is that forward guidance becomes more, not less, important when the underlying data is noisy, because it's the clearest signal the Fed can send when its own inputs are degraded.",
-      "For Chris, the practical read-through sits right in today's numbers: a 10-year at 5.12% already prices in a hold, so the trade isn't guessing the rate, it's gauging whether next week's language shifts the probability of a December move. Watch the 2-year yield's reaction in the minutes after the statement drops; a sharp move there, more than any single day's S&P print, is the cleanest tell for whether markets think the Fed just got more or less worried about inflation reaccelerating into year-end."
+      "Today's tape looks contradictory at first glance: oil jumped more than 3% on Middle East tension, the 10-year yield rose 9 basis points to 4.58%, and gold — the classic safe haven — actually fell. If geopolitical risk were the whole story, gold should have rallied and yields should have dropped as investors fled to safety. The fact that yields rose instead is the tell: markets aren't pricing a growth scare today, they're pricing an inflation scare, and those two scenarios move the Treasury curve in opposite directions.",
+      "The mechanism runs through breakeven inflation, the gap between a nominal Treasury's yield and the yield on its inflation-protected twin (TIPS) of the same maturity. Oil feeds almost immediately into headline CPI through gasoline, diesel, and freight costs, so a sustained price spike pulls near-term inflation expectations higher within days. Because a nominal bond's yield is, roughly, the real yield plus expected inflation, a jump in breakevens drags the nominal yield up even if the real, inflation-adjusted return investors demand hasn't changed at all. That's the channel that moved the 10-year today, not a reassessment of long-run economic growth.",
+      "What most people miss is that not all yield increases carry the same message, and conflating them is the single most common mistake in reading daily rate moves. A yield rise driven by stronger growth expectations is typically bullish for cyclical stocks and bearish for gold on genuine risk-appetite grounds. A yield rise driven by cost-push inflation, like today's, is bearish for gold through the real-yield-and-dollar channel but offers no such growth comfort to equities. The closest precedent is March 2022, when Brent spiked toward $130 after Russia's invasion of Ukraine; breakevens surged, the Fed read it as confirmation that inflation wasn't transitory, and policy tightened faster than markets had priced just weeks earlier.",
+      "That history is exactly why this matters heading into the next CPI print and Fed meeting. The Fed has been signaling a cautious, data-dependent cutting path, and officials have repeatedly said they'll treat energy-driven inflation spikes differently if they look persistent rather than one-off. A single day's oil spike won't change the Fed's reaction function, but if WTI holds near $97 into next month's CPI release, the breakeven move seen today stops being a one-day curiosity and starts being the reason the Fed holds rather than cuts — the same transmission belt that turned a 2022 tanker-route headline into several extra hikes."
     ]
   }
 }
