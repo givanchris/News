@@ -1,135 +1,111 @@
 {
-  "lastUpdated": "2026-10-22T16:30:16-06:00",
+  "lastUpdated": "2026-10-22T16:45:03-06:00",
   "market": {
-    "sp500": {
-      "price": "7663",
-      "change": "-1.21%",
-      "dir": "down"
-    },
-    "nasdaq": {
-      "price": "28959",
-      "change": "-2.88%",
-      "dir": "down"
-    },
-    "yield": {
-      "price": "4.95%",
-      "change": "-19 bps",
-      "dir": "up"
-    },
-    "wti": {
-      "price": "$99",
-      "change": "+0.51%",
-      "dir": "up"
-    },
-    "gold": {
-      "price": "$4044",
-      "change": "-1.54%",
-      "dir": "down"
-    },
-    "dxy": {
-      "price": "101.62",
-      "change": "+0.02%",
-      "dir": "up"
-    }
+    "sp500":  { "price": "7,663",  "change": "-1.21%", "dir": "down" },
+    "nasdaq": { "price": "28,959", "change": "-2.88%", "dir": "down" },
+    "yield":  { "price": "4.95%",  "change": "-19 bps", "dir": "up" },
+    "wti":    { "price": "$99",    "change": "+0.51%", "dir": "up" },
+    "gold":   { "price": "$4,044", "change": "-1.54%", "dir": "down" },
+    "dxy":    { "price": "101.62", "change": "+0.02%", "dir": "up" }
   },
   "stories": [
     {
-      "cat": "MARKETS",
-      "headline": "AI RALLY LIFTS NASDAQ AS SPACEX POSTS FIRST PROFIT, MUSK FLOATS TESLA MERGER",
-      "body": "The S&P 500 gained 0.58% to 7,757 while the Nasdaq added roughly 1.1% as SpaceX surged nearly 8% after reporting its first profitable quarter as a public company; CEO Elon Musk said a merger with Tesla would be \"a good idea.\" Nvidia and other chipmakers led gains, offsetting a Netflix selloff after a disappointing forecast.",
-      "explain": "SpaceX's maiden profit report removes a key uncertainty for investors pricing the space-launch and satellite-broadband business, and Musk's merger comment raises the possibility of combining Tesla's manufacturing scale with SpaceX's growth profile \u2014 the kind of headline markets treat as a potential re-rating catalyst for both. Because mega-cap and high-growth names carry outsized index weight, a single sentiment-driving comment can move the Nasdaq's percentage change disproportionately versus the broader, more diversified S&P 500."
+      "cat": "MACRO",
+      "headline": "AI FINANCING FEARS TRIGGER WORST TECH SELLOFF SINCE JUNE",
+      "body": "The S&P 500 fell 1.21% to 7,663 and the Nasdaq 100 dropped 2.88% to 28,959 as renewed worry over how the AI buildout is being financed spread from data-center lender CoreWeave into chipmakers and hyperscalers, a day after Tesla and Meta's earnings drew scrutiny over capex and margins.",
+      "explain": "CoreWeave's bonds have been trading at yields near 14.8-14.9% against 9.6-9.75% coupons, and credit-default-swap spreads on its debt have pushed above 1,000 basis points — levels that imply the market now sees a real chance it struggles to refinance its debt. Because CoreWeave, Oracle, and other AI infrastructure builders fund their buildouts with leverage against long-dated cloud contracts, a spike in their borrowing costs forces equity investors to re-underwrite every AI-capex story at once, which is why the selloff hit chipmakers and hyperscalers broadly rather than staying contained to one name."
     },
     {
-      "cat": "GEOPOLITICS",
-      "headline": "OIL SURGES ON MIDEAST ESCALATION, WTI TOPS $97",
-      "body": "Crude jumped more than 3% as reports of fresh Middle East tensions, including a tanker security scare, pushed WTI above $97 a barrel and Brent near $109, reviving inflation worries just as markets had been pricing in a calmer rate path.",
-      "explain": "Oil is a direct input into headline CPI and a cost input across transportation, manufacturing, and agriculture, so a geopolitical supply shock passes through to consumer prices within weeks rather than quarters. That's why bond markets react to oil spikes almost as fast as equity markets do \u2014 traders immediately reprice breakeven inflation expectations, which flow straight into nominal Treasury yields."
+      "cat": "MARKETS",
+      "headline": "CREDIT STRESS SPREADS FROM COREWEAVE TO ORACLE, NEBIUS, IREN",
+      "body": "Shares of AI-infrastructure names Oracle, Nebius, and Iren fell alongside CoreWeave as investors questioned the private-credit financing underpinning the sector; CoreWeave carries roughly $52 billion in debt and lease obligations and must address $4.4 billion of maturities before year-end.",
+      "explain": "Much of this capex has been funded outside traditional bank lending, through private-credit funds and high-yield bonds that priced on the assumption cloud-compute demand would keep growing indefinitely; when that assumption gets questioned, the repricing hits every borrower using the same playbook, not just the weakest one. Nvidia's own financing guarantees to some of these chip buyers add a second-order risk: if a customer like CoreWeave can't service its debt, Nvidia's balance sheet has direct exposure to that default, which is why its stock also moves on days like today."
     },
     {
       "cat": "CENTRAL BANKS",
-      "headline": "TREASURY YIELDS CLIMB AS OIL-DRIVEN INFLATION FEARS RESURFACE",
-      "body": "The 10-year yield rose roughly 9 basis points to 4.58% as the oil spike reignited concern that the Fed's easing path could stall; the 2-year also ticked higher, flattening the curve modestly.",
-      "explain": "Rising oil prices lift near-term inflation expectations without necessarily changing the long-run growth outlook, which is why today's move was concentrated more in inflation compensation than in real yields. A Fed that has been signaling a cautious cutting cycle has less room to keep easing if headline inflation reaccelerates, so the bond market is effectively pricing a higher chance the Fed pauses its rate-cut path at the next meeting."
+      "headline": "TREASURY YIELDS FALL 19 BPS AS SELLOFF SPARKS FLIGHT TO SAFETY",
+      "body": "The 10-year yield dropped roughly 19 basis points to 4.95% as investors rotated out of equities and into Treasuries, treating today's move as a growth-and-credit scare rather than an inflation problem.",
+      "explain": "When a selloff is driven by fears that specific borrowers can't service debt — a credit event — rather than by resurgent inflation, investors typically buy government bonds as the risk-free alternative, pushing yields down even without any change in Fed policy expectations. That's the opposite mechanism from an oil-driven inflation scare, where yields would rise on higher breakevens; today's drop signals the market is pricing a modest growth and liquidity risk centered on AI-linked credit, not a reason for the Fed to reconsider its rate path."
     },
     {
       "cat": "COMMODITIES",
-      "headline": "GOLD SLIPS AS OIL REBOUND LIFTS THE DOLLAR",
-      "body": "Gold eased about 0.4% to near $4,150 an ounce as the dollar index firmed roughly 0.3% to 101.9, with safe-haven demand from the oil-driven geopolitical scare offset by a stronger greenback and rising yields.",
-      "explain": "Gold competes with Treasuries and the dollar as a safe-haven asset, so when yields and the dollar rise together \u2014 as they did today on the oil shock \u2014 gold's relative appeal as a non-yielding, non-dollar store of value diminishes even amid geopolitical stress. This decoupling, where gold falls despite rising geopolitical risk, signals investors are treating today's move as inflationary rather than purely risk-off."
+      "headline": "OIL EDGES HIGHER EVEN AS EQUITIES SINK ON RISK PREMIUM",
+      "body": "WTI crude rose 0.51% to $99 a barrel, holding near recent highs as a persistent Middle East geopolitical risk premium offset the demand-destruction signal normally sent by a broad equity selloff.",
+      "explain": "Oil usually falls alongside stocks in a risk-off session because traders price in weaker future demand from a slowing economy, but today's move shows the supply-side risk premium is currently the dominant force in the barrel price. That decoupling matters for the Fed's inflation read: if crude stays elevated into next month's CPI print, it keeps headline inflation stickier even as a credit-driven growth scare argues for easier policy — a genuine tension for policymakers."
     },
     {
-      "cat": "EARNINGS",
-      "headline": "LAM RESEARCH, IBM, CSX HEADLINE AFTER-HOURS EARNINGS SLATE",
-      "body": "Semiconductor equipment maker Lam Research, IBM, and railroad CSX all report after today's close, giving investors a read on AI-driven capital spending (Lam), enterprise software demand (IBM), and freight volumes as a proxy for industrial activity (CSX).",
-      "explain": "Lam Research's results are watched as a leading indicator for semiconductor capital expenditure, since equipment orders placed today show up as chip supply six to twelve months out \u2014 a direct read on whether the AI buildout is still accelerating. CSX's freight volumes are one of the oldest real-economy proxies on Wall Street because rail carloads move with industrial production and consumer shipments well ahead of GDP data."
+      "cat": "COMMODITIES",
+      "headline": "GOLD SLIPS 1.5% DESPITE RISK-OFF TAPE IN A DASH-FOR-CASH MOVE",
+      "body": "Gold fell about 1.54% to $4,044 an ounce even as stocks sold off sharply, a move consistent with investors liquidating winning positions to raise cash or cover losses elsewhere rather than rotating into traditional safe havens.",
+      "explain": "In a classic risk-off day, gold should catch a safe-haven bid; its decline today alongside a merely flat dollar (DXY +0.02%) points instead to forced or precautionary selling of a profitable asset to fund margin needs created by the equity and credit-market stress — a pattern seen in acute deleveraging episodes. That gold and equities fell together, rather than gold acting as a hedge, is itself informative: it suggests today's stress is being treated as a liquidity event specific to AI-linked credit rather than a broad flight from risk assets generally."
     },
     {
       "cat": "MCBB",
-      "headline": "FLORIDA OPENS NO. 1 IN AP PRESEASON POLL FOR FIRST TIME SINCE 2006-07",
-      "body": "The defending national champion Gators received 47 of 59 first-place votes in Monday's preseason AP Top 25, with Duke at No. 2 and Illinois and UConn rounding out the top four. Michigan, last season's champion, fell to No. 16 after coach Dusty May departed; Texas (No. 7), Tennessee (No. 8), and Arkansas (No. 12) also crack the top dozen ahead of a season that tips off in two weeks."
+      "headline": "FLORIDA OPENS NO. 1 IN AP PRESEASON POLL AHEAD OF EARLY-NOVEMBER TIP-OFF",
+      "body": "The defending national champion Gators received 47 of 59 first-place votes in the preseason AP Top 25, with Duke at No. 2 and Illinois and UConn rounding out the top four; Michigan, last season's champion, fell to No. 16 after coach Dusty May's departure, while Texas (No. 7), Tennessee (No. 8), and Arkansas (No. 12) also crack the top dozen with tip-off roughly two weeks away."
     },
     {
       "cat": "NBA",
-      "headline": "NBA TIPS OFF 2026-27 SEASON AS KNICKS RAISE CHAMPIONSHIP BANNER",
-      "body": "The league opened its season Tuesday, headlined by New York raising its 2025-26 championship banner before hosting Philadelphia, while Boston visited Detroit and Oklahoma City played at San Antonio in the other openers. Tonight's slate features Minnesota at Miami (7:30 ET) and Golden State at the Lakers (10 ET), with Warriors center Kristaps Porzingis's health still a question mark entering the season."
+      "headline": "WEMBANYAMA OPENS AS MVP FAVORITE AFTER SPURS' FINALS RUN",
+      "body": "Victor Wembanyama enters his third season as the odds-on MVP favorite (around +200 to +210) after leading San Antonio to last season's NBA Finals, with defending MVP Shai Gilgeous-Alexander, Nikola Jokic, and Luka Doncic rounding out the top contenders as the league enters its first full week of the 2026-27 season."
     },
     {
       "cat": "NFL",
-      "headline": "BUCCANEERS' VITA VEA TRADE REQUEST STILL UNRESOLVED AS DEADLINE NEARS",
-      "body": "The two-time Pro Bowl defensive tackle requested a trade after contract extension talks stalled, and with the Nov. 4 deadline approaching, the Rams remain the reported frontrunner to land him. Tampa Bay is also still without a long-term deal for QB Baker Mayfield, adding uncertainty to the roster's direction."
+      "headline": "VITA VEA TRADE SAGA STAYS UNRESOLVED AS NOV. 4 DEADLINE NEARS",
+      "body": "The two-time Pro Bowl defensive tackle's trade request from Tampa Bay remains unsettled; the Rams are oddsmakers' favorite to land him, but coach Sean McVay and Bucs GM Jason Licht have both publicly downplayed a deal, leaving the 49ers, Chargers, and Raiders as reported alternate suitors with the trade deadline just under two weeks away."
     },
     {
       "cat": "NCAA CFB",
-      "headline": "MIAMI AND BYU ARE LAST UNDEFEATED TEAMS ATOP THE POLL AS TEXAS, OREGON FALL",
-      "body": "Only six FBS teams remain unbeaten entering Week 8, with Miami (FL) and BYU at 6-0 atop the rankings after Texas lost to rival Oklahoma and Oregon fell to UCLA in Week 6. Defending champion Indiana is also still unbeaten and faces its biggest test yet at home against No. 5 Ohio State."
+      "headline": "UNBEATEN FIELD NARROWS TO A HANDFUL AS INDIANA EYES OHIO STATE TEST",
+      "body": "Only a handful of FBS teams remain unbeaten this deep into the season, with Miami (FL) and BYU still perfect and defending national champion Indiana also undefeated heading into its biggest test yet, at home against Ohio State, as the College Football Playoff picture starts to take shape."
     }
   ],
   "sports": [
     {
       "team": "WASHINGTON HUSKIES FOOTBALL",
-      "pill": "W 38-26",
-      "pillClass": "s-w",
-      "detail": "Beat Purdue 38-26 on the road with backup QB Elijah Brown (28-39, 251 yds, 3 TD) filling in for injured starter Demond Williams Jr. (ribs). On bye this week; next: at Nebraska, Sat. Oct. 31."
+      "pill": "BYE WEEK",
+      "pillClass": "s-up",
+      "detail": "Beat Purdue 38-26 on the road behind backup QB Elijah Brown (28-39, 251 yds, 3 TD) filling in for injured starter Demond Williams Jr. (ribs). On a bye this week; next: at Nebraska, Sat. Oct. 31."
     },
     {
       "team": "WASHINGTON HUSKIES BASKETBALL",
       "pill": "UPCOMING",
       "pillClass": "s-up",
-      "detail": "Returning starter Wesley Yates III leads a retooled roster under Danny Sprinkle after Hannes Steinbach (drafted by Charlotte) and Zoom Diallo departed. Exhibition vs. Washington State Sun. Oct. 25; regular-season opener Nov. 2 vs. Colgate."
+      "detail": "Returning starter Wesley Yates III leads a retooled roster under Danny Sprinkle, who is chasing the program's first winning Big Ten season, after Hannes Steinbach (drafted by Charlotte, scored 7 in his NBA preseason debut) and Zoom Diallo departed. Exhibition vs. Washington State Sun. Oct. 25; regular-season opener Nov. 2 vs. Colgate."
     },
     {
       "team": "SEATTLE SEAHAWKS",
-      "pill": "3-3",
-      "pillClass": "s-up",
-      "detail": "Sit at 3-3 after a Week 1 Super Bowl-rematch win over New England (13-10); Thursday's Week 6 result at Denver wasn't independently confirmed as of this brief. Next: Sun. Oct. 25 vs. Chiefs (SNF), where RB Zach Charbonnet could return from injury."
+      "pill": "L 14-17 (OT)",
+      "pillClass": "s-l",
+      "detail": "Fell at Denver in overtime Thursday, dropping to 3-3 (2nd, NFC West). Next: Sun. Oct. 25 vs. Chiefs (SNF), where RB Zach Charbonnet's return from injury is in question."
     },
     {
       "team": "DETROIT PISTONS",
       "pill": "UPCOMING",
       "pillClass": "s-up",
-      "detail": "Opened the season at home vs. Boston on Oct. 20; final score unconfirmed as of this writing. Enter the year as reigning East No. 1 seed (60-22) after dealing Isaiah Stewart to Memphis and drafting Stanford's Ebuka Okorie. Next: at Miami, Fri. Oct. 23."
+      "detail": "Opened the season at home vs. Boston on Oct. 20; final score unconfirmed as of this writing. Enter the year as reigning East No. 1 seed (60-22) after dealing Isaiah Stewart to Memphis and drafting Stanford's Ebuka Okorie at No. 17. Next: at Miami, Fri. Oct. 23."
     },
     {
       "team": "SEATTLE MARINERS",
       "pill": "SEASON OVER",
       "pillClass": "s-l",
-      "detail": "Season ended in September with Seattle's first losing record since 2020 and no playoff berth; manager Dan Wilson has since parted ways with the club. Offseason focus turns to a managerial search and roster retooling."
+      "detail": "Finished 76-86, 3rd in the AL West, missing the playoffs after a second-half collapse (13-14 June, 9-15 July). Manager Dan Wilson, who went 187-171 in Seattle, was fired Sept. 27; the front office is now searching for his replacement."
     }
   ],
   "watchlist": [
-    "CSX, IBM, Lam Research earnings after Wednesday's close \u2014 read on freight, enterprise IT, and AI chip capex",
-    "WTI above $97 on Mideast tensions \u2014 watch for pass-through into breakeven inflation ahead of the next CPI print",
-    "Seahawks vs. Chiefs, Sunday Oct. 25 (SNF) \u2014 Zach Charbonnet's potential return",
-    "Huskies MBB exhibition vs. Washington State, Sunday Oct. 25",
-    "Huskies football at Nebraska, Saturday Oct. 31, after this week's bye"
+    "CoreWeave's $4.4B in debt maturing before year-end — a refinancing test that's the epicenter of today's AI-credit selloff",
+    "Next CPI print and any Fed commentary on whether the AI-financing stress bleeds into the real economy",
+    "Seahawks vs. Chiefs, Sunday Oct. 25 (SNF) — Zach Charbonnet's potential return",
+    "Pistons at Miami, Friday Oct. 23 — first look at the post-Stewart rotation",
+    "Huskies MBB exhibition vs. Washington State, Sunday Oct. 25"
   ],
   "deepDive": {
-    "title": "How an Oil Shock Travels Through Breakevens to the Treasury Curve",
+    "title": "How Private Credit Financed the AI Buildout — and Why Its Cracks Are Showing",
     "content": [
-      "Today's tape looks contradictory at first glance: oil jumped more than 3% on Middle East tension, the 10-year yield rose 9 basis points to 4.58%, and gold \u2014 the classic safe haven \u2014 actually fell. If geopolitical risk were the whole story, gold should have rallied and yields should have dropped as investors fled to safety. The fact that yields rose instead is the tell: markets aren't pricing a growth scare today, they're pricing an inflation scare, and those two scenarios move the Treasury curve in opposite directions.",
-      "The mechanism runs through breakeven inflation, the gap between a nominal Treasury's yield and the yield on its inflation-protected twin (TIPS) of the same maturity. Oil feeds almost immediately into headline CPI through gasoline, diesel, and freight costs, so a sustained price spike pulls near-term inflation expectations higher within days. Because a nominal bond's yield is, roughly, the real yield plus expected inflation, a jump in breakevens drags the nominal yield up even if the real, inflation-adjusted return investors demand hasn't changed at all. That's the channel that moved the 10-year today, not a reassessment of long-run economic growth.",
-      "What most people miss is that not all yield increases carry the same message, and conflating them is the single most common mistake in reading daily rate moves. A yield rise driven by stronger growth expectations is typically bullish for cyclical stocks and bearish for gold on genuine risk-appetite grounds. A yield rise driven by cost-push inflation, like today's, is bearish for gold through the real-yield-and-dollar channel but offers no such growth comfort to equities. The closest precedent is March 2022, when Brent spiked toward $130 after Russia's invasion of Ukraine; breakevens surged, the Fed read it as confirmation that inflation wasn't transitory, and policy tightened faster than markets had priced just weeks earlier.",
-      "That history is exactly why this matters heading into the next CPI print and Fed meeting. The Fed has been signaling a cautious, data-dependent cutting path, and officials have repeatedly said they'll treat energy-driven inflation spikes differently if they look persistent rather than one-off. A single day's oil spike won't change the Fed's reaction function, but if WTI holds near $97 into next month's CPI release, the breakeven move seen today stops being a one-day curiosity and starts being the reason the Fed holds rather than cuts \u2014 the same transmission belt that turned a 2022 tanker-route headline into several extra hikes."
+      "Today's selloff looks like an ordinary bad tech day — Nasdaq 100 down 2.88% — but the trigger is unusual: a credit-market story, not an earnings miss or a rate shock. CoreWeave's 2031 and 2032 bonds are trading at yields near 14.8-14.9%, roughly five points above their coupons, and credit-default swaps on its debt imply the market now prices a meaningful chance it can't refinance smoothly. That stress has already spread to Oracle, Nebius, and Iren, three other companies that borrowed heavily to build the data centers powering the AI boom, which is why the damage showed up across the sector rather than in one stock.",
+      "The mechanism is straightforward once you separate it from equity-market logic. These companies don't fund multibillion-dollar data centers with cash flow; they borrow against long-dated cloud-computing contracts, often through private-credit funds and high-yield bonds rather than bank loans, betting that contracted revenue will comfortably cover debt service. When a bond's market yield rises far above its coupon, it means buyers are demanding a much higher return to hold that risk — effectively a verdict that the borrower's actual credit quality is worse than when the bond was issued. CoreWeave's total debt and lease obligations near $52 billion, against $4.4 billion due before year-end, is the specific number the market is now stress-testing.",
+      "What's easy to miss is the second-order exposure running through Nvidia. Nvidia has reportedly extended financing guarantees to some of the same companies buying its chips, meaning if a customer like CoreWeave can't service its debt, Nvidia's own balance sheet is on the hook — a vendor-financing loop that concentrates risk rather than spreading it. The closest historical parallel is the telecom buildout of 1999-2001, when CLECs and fiber-optic carriers issued junk bonds against assumed future bandwidth demand; many defaulted, but the fiber itself ended up underpinning the internet for a decade afterward. The lesson wasn't that the technology was wrong, but that debt-financed infrastructure booms can go bust years before the technology's value is realized.",
+      "That history is exactly why today's 19-basis-point drop in the 10-year matters more than it might seem. Falling yields here reflect a growth-and-credit scare, not an inflation story — investors buying Treasuries because they see this as company-specific financing stress, not a reason the Fed needs to move. If CoreWeave or a peer actually misses a payment in the next six weeks, that calculus changes fast: credit contagion could force real tightening in financial conditions well before any Fed meeting does. Watching whether CDS spreads keep widening or start to normalize over the next few sessions is the single clearest signal of whether this stays a one-day scare or becomes the story of the quarter."
     ]
   }
 }
