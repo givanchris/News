@@ -64,6 +64,19 @@ th { color: var(--text-muted); font-weight: 600; font-size: 11px; text-transform
 .warnings li { margin: 2px 0; }
 .note { color: var(--text-muted); font-size: 12px; margin: 8px 0 0; }
 details summary { cursor: pointer; color: var(--text-secondary); }
+.read h3 { font-size: 16px; margin: 0 0 8px; line-height: 1.35; }
+.notes { list-style: none; margin: 10px 0 0; padding: 0; }
+.notes li { padding: 7px 0; border-top: 1px solid var(--border); }
+.notes li:first-child { border-top: 0; }
+.notes .txt { color: var(--text-primary); }
+.learn { margin-top: 3px; }
+.learn summary { font-size: 12px; color: var(--series-1); list-style: none; display: inline; }
+.learn summary::-webkit-details-marker { display: none; }
+.learn summary::before { content: "Learn ▸"; }
+.learn[open] summary::before { content: "Learn ▾"; }
+.learn p { margin: 6px 0 2px; padding: 8px 10px; border-left: 2px solid var(--series-1);
+  background: var(--surface-0); color: var(--text-secondary); font-size: 13px; border-radius: 0 6px 6px 0; }
+.chart-notes { margin-top: 6px; font-size: 13px; }
 @media (max-width: 760px) { .grid2 { grid-template-columns: 1fr; } #surface { height: 400px; } }
 </style>
 </head>
@@ -79,7 +92,14 @@ details summary { cursor: pointer; color: var(--text-secondary); }
   </div>
   <div id="error" class="warnings" hidden></div>
   <div class="tiles" id="tiles"></div>
-  <div id="warn" class="warnings" hidden><strong>Checks flagged</strong><ul id="warnlist"></ul></div>
+  <section class="card read" id="read" hidden>
+    <h2>Market read</h2>
+    <h3 id="read-headline"></h3>
+    <ul class="notes" id="read-notes"></ul>
+    <p class="note">Written by the engine from today's numbers with fixed rules — no AI. Open "Learn" on any line for the concept behind it.</p>
+  </section>
+  <div id="warn" class="warnings" hidden><strong>Checks flagged</strong><ul id="warnlist"></ul>
+    <details class="learn"><summary></summary><p id="warn-learn"></p></details></div>
 
   <section class="card">
     <h2>Implied volatility surface</h2>
@@ -94,16 +114,19 @@ details summary { cursor: pointer; color: var(--text-secondary); }
         <select id="expiry" aria-label="Expiry"></select>
       </div>
       <div id="smile" class="chart"></div>
+      <ul class="notes chart-notes" id="smile-notes"></ul>
     </section>
     <section class="card">
       <h2>ATM term structure</h2>
       <div id="term" class="chart"></div>
+      <ul class="notes chart-notes" id="term-notes"></ul>
     </section>
   </div>
 
   <section class="card">
     <h2>Three-model check — ATM strike, selected expiry</h2>
     <div class="scroll"><table id="models"></table></div>
+    <ul class="notes chart-notes" id="model-notes"></ul>
     <p class="note">Same inputs (smile vol at the strike, parity-implied dividend yield, Treasury curve rate) through each pricer. Black-Scholes and the European tree/MC should agree; the American columns add the early-exercise premium. "Market" is the bid/ask mid.</p>
   </section>
 
@@ -170,6 +193,21 @@ function layout(extra = {}) {
 }
 const CONFIG = { displayModeBar: false, responsive: true };
 
+function notes(target, items) {
+  const ul = document.getElementById(target);
+  ul.replaceChildren(...(items || []).map(item => {
+    const li = el("li");
+    li.appendChild(el("span", item.text, { class: "txt" }));
+    const lesson = (DATA.learn || {})[item.learn];
+    if (lesson) {
+      const d = el("details", null, { class: "learn" });
+      d.append(el("summary"), el("p", lesson));
+      li.appendChild(d);
+    }
+    return li;
+  }));
+}
+
 function tile(label, value, sub) {
   const t = el("div", null, { class: "tile" });
   t.append(el("div", label, { class: "label" }), el("div", value, { class: "value" }), el("div", sub || "", { class: "sub" }));
@@ -182,8 +220,9 @@ function render() {
   const t = current();
   document.querySelectorAll("#tabs button").forEach(b => b.setAttribute("aria-pressed", b.dataset.t === state.ticker));
   const err = document.getElementById("error");
-  const sections = document.querySelectorAll("main > section, .grid2, #tiles, #warn");
+  const sections = document.querySelectorAll("main > section:not(#read), .grid2, #tiles, #warn");
   if (t.error) {
+    document.getElementById("read").hidden = true;
     err.hidden = false; err.textContent = `${t.ticker}: ${t.error}`;
     sections.forEach(s => s.hidden = true); return;
   }
@@ -199,6 +238,15 @@ function render() {
     tile("25Δ butterfly", pct(ref.bf25), "wing premium over ATM"),
     tile("Rate / implied carry", `${pct(ref.rate, 2)} / ${pct(ref.div_yield, 2)}`, "Treasury rate · dividend + funding implied by put-call parity"),
   );
+
+  const ins = t.insights;
+  document.getElementById("read").hidden = !ins;
+  if (ins) {
+    document.getElementById("read-headline").textContent = ins.overview.headline;
+    notes("read-notes", ins.overview.items);
+  }
+  notes("term-notes", ins ? ins.term : []);
+  document.getElementById("warn-learn").textContent = (DATA.learn || {}).arbitrage || "";
 
   const warn = document.getElementById("warn"), list = document.getElementById("warnlist");
   list.replaceChildren(...t.warnings.map(w => el("li", w)));
@@ -262,6 +310,10 @@ function renderExpiry() {
     quoteTrace("call", css("--series-2"), "OTM calls"),
   ], layout({ xaxis: { title: { text: `Strike (forward ${num(e.forward)})` } }, yaxis: { title: { text: "Implied vol %" } },
     rest: { shapes: [{ type: "line", x0: e.forward, x1: e.forward, yref: "paper", y0: 0, y1: 1, line: { color: css("--grid"), width: 1, dash: "dot" } }] } }), CONFIG);
+
+  const ins = t.insights;
+  notes("smile-notes", ins ? ins.smiles[state.expiry] : []);
+  notes("model-notes", ins ? ins.models[state.expiry] : []);
 
   const m = e.model_check;
   if (m) {
