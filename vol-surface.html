@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Options Vol Surface</title>
+<script src="https://cdn.jsdelivr.net/npm/plotly.js-dist-min@2.35.2/plotly.min.js"></script>
+<style>
+:root {
+  color-scheme: light;
+  --surface-0: #f4f3f0; --surface-1: #fcfcfb; --border: #e2e1dc;
+  --text-primary: #0b0b0b; --text-secondary: #52514e; --text-muted: #7a7974;
+  --grid: #e8e7e2; --series-1: #2a78d6; --series-2: #eb6834; --fit: #52514e;
+  --warn-bg: #fff6e0; --warn-border: #fab219;
+  --seq: #cde2fb,#9ec5f4,#6da7ec,#3987e5,#256abf,#184f95,#0d366b;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --surface-0: #111110; --surface-1: #1a1a19; --border: #2f2f2c;
+    --text-primary: #f0efec; --text-secondary: #c3c2b7; --text-muted: #8f8e87;
+    --grid: #2a2a27; --series-1: #3987e5; --series-2: #d95926; --fit: #c3c2b7;
+    --warn-bg: #2a2210; --warn-border: #c98500;
+    --seq: #0d366b,#184f95,#256abf,#3987e5,#6da7ec,#9ec5f4,#cde2fb;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --surface-0: #111110; --surface-1: #1a1a19; --border: #2f2f2c;
+  --text-primary: #f0efec; --text-secondary: #c3c2b7; --text-muted: #8f8e87;
+  --grid: #2a2a27; --series-1: #3987e5; --series-2: #d95926; --fit: #c3c2b7;
+  --warn-bg: #2a2210; --warn-border: #c98500;
+  --seq: #0d366b,#184f95,#256abf,#3987e5,#6da7ec,#9ec5f4,#cde2fb;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--surface-0); color: var(--text-primary);
+  font: 14px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+main { max-width: 1180px; margin: 0 auto; padding: 20px 16px 48px; }
+header { display: flex; flex-wrap: wrap; gap: 12px; align-items: baseline; justify-content: space-between; }
+h1 { font-size: 20px; margin: 0; }
+h2 { font-size: 13px; text-transform: uppercase; letter-spacing: .06em; color: var(--text-secondary); margin: 0 0 10px; }
+.meta { color: var(--text-muted); font-size: 12px; }
+.controls { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; align-items: center; }
+.tabs button { font: inherit; padding: 6px 14px; border-radius: 6px; border: 1px solid var(--border);
+  background: var(--surface-1); color: var(--text-primary); cursor: pointer; }
+.tabs button[aria-pressed="true"] { background: var(--text-primary); color: var(--surface-1); border-color: var(--text-primary); }
+select { font: inherit; padding: 5px 8px; border-radius: 6px; border: 1px solid var(--border);
+  background: var(--surface-1); color: var(--text-primary); }
+.tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin-bottom: 16px; }
+.tile, .card { background: var(--surface-1); border: 1px solid var(--border); border-radius: 10px; padding: 14px 16px; }
+.tile .label { color: var(--text-muted); font-size: 11px; text-transform: uppercase; letter-spacing: .05em; }
+.tile .value { font-size: 24px; font-weight: 650; font-variant-numeric: tabular-nums; margin-top: 2px; }
+.tile .sub { color: var(--text-secondary); font-size: 12px; }
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.card { margin-bottom: 14px; min-width: 0; }
+.chart { width: 100%; height: 360px; }
+#surface { height: 520px; }
+table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; font-size: 13px; }
+th, td { padding: 6px 8px; text-align: right; border-bottom: 1px solid var(--border); white-space: nowrap; }
+th:first-child, td:first-child { text-align: left; }
+th { color: var(--text-muted); font-weight: 600; font-size: 11px; text-transform: uppercase; letter-spacing: .04em; }
+.scroll { overflow-x: auto; }
+.warnings { background: var(--warn-bg); border: 1px solid var(--warn-border); border-radius: 10px; padding: 10px 14px; margin-bottom: 14px; }
+.warnings li { margin: 2px 0; }
+.note { color: var(--text-muted); font-size: 12px; margin: 8px 0 0; }
+details summary { cursor: pointer; color: var(--text-secondary); }
+@media (max-width: 760px) { .grid2 { grid-template-columns: 1fr; } #surface { height: 400px; } }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <div><a id="home" href="index.html" hidden style="color:var(--text-secondary);font-size:12px;text-decoration:none">&larr; givanchris.github.io/News</a>
+    <h1>Options Pricing &amp; Vol Surface</h1></div>
+    <span class="meta" id="asof"></span>
+  </header>
+  <div class="controls">
+    <div class="tabs" id="tabs" role="group" aria-label="Ticker"></div>
+  </div>
+  <div id="error" class="warnings" hidden></div>
+  <div class="tiles" id="tiles"></div>
+  <div id="warn" class="warnings" hidden><strong>Checks flagged</strong><ul id="warnlist"></ul></div>
+
+  <section class="card">
+    <h2>Implied volatility surface</h2>
+    <div id="surface" class="chart"></div>
+    <p class="note">SVI smile fitted per expiry, interpolated in total variance across expiries. Strike shown as % of each expiry's forward. Blank cells = no quotes there (not extrapolated).</p>
+  </section>
+
+  <div class="grid2">
+    <section class="card">
+      <div class="controls" style="margin:0 0 8px;justify-content:space-between">
+        <h2 style="margin:0">Smile</h2>
+        <select id="expiry" aria-label="Expiry"></select>
+      </div>
+      <div id="smile" class="chart"></div>
+    </section>
+    <section class="card">
+      <h2>ATM term structure</h2>
+      <div id="term" class="chart"></div>
+    </section>
+  </div>
+
+  <section class="card">
+    <h2>Three-model check — ATM strike, selected expiry</h2>
+    <div class="scroll"><table id="models"></table></div>
+    <p class="note">Same inputs (smile vol at the strike, parity-implied dividend yield, Treasury curve rate) through each pricer. Black-Scholes and the European tree/MC should agree; the American columns add the early-exercise premium. "Market" is the bid/ask mid.</p>
+  </section>
+
+  <section class="card">
+    <h2>Greeks — ATM strike</h2>
+    <div class="scroll"><table id="greeks"></table></div>
+    <p class="note">Vega per 1 vol point, theta per calendar day, rho per 1% rate. Per contract multiply by 100.</p>
+  </section>
+
+  <section class="card">
+    <details>
+      <summary>Every quote used for this expiry (OTM options)</summary>
+      <div class="scroll" style="margin-top:10px"><table id="quotes"></table></div>
+    </details>
+  </section>
+</main>
+<script id="payload" type="application/json" data-src="data/vol-surface/latest.json"></script>
+<script>
+let DATA;
+const state = { ticker: null, expiry: 0 };
+
+function expand(d) {
+  // Website copies store quotes as arrays (see report.compact); turn them back into objects.
+  if (!d.quote_fields) return d;
+  d.tickers.forEach(t => (t.expiries || []).forEach(e => {
+    e.quotes = e.quotes.map(row => Object.fromEntries(d.quote_fields.map((f, i) => [f, row[i]])));
+    e.quotes.forEach(q => { q.k = Math.log(q.strike / e.forward); });
+  }));
+  return d;
+}
+const css = name => getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+const pct = (v, d = 1) => v == null ? "—" : (v * 100).toFixed(d) + "%";
+const num = (v, d = 2) => v == null ? "—" : Number(v).toFixed(d);
+
+function el(tag, text, attrs = {}) {
+  const e = document.createElement(tag);
+  if (text != null) e.textContent = text;
+  for (const [k, v] of Object.entries(attrs)) e.setAttribute(k, v);
+  return e;
+}
+
+function table(target, head, rows) {
+  const t = document.getElementById(target);
+  t.replaceChildren();
+  const tr = el("tr");
+  head.forEach(h => tr.appendChild(el("th", h)));
+  t.appendChild(el("thead")).appendChild(tr);
+  const body = t.appendChild(el("tbody"));
+  rows.forEach(r => { const row = el("tr"); r.forEach(c => row.appendChild(el("td", c))); body.appendChild(row); });
+}
+
+function layout(extra = {}) {
+  const ink = css("--text-secondary"), grid = css("--grid");
+  const axis = { gridcolor: grid, zerolinecolor: grid, linecolor: grid, tickfont: { color: ink }, title: { font: { color: ink } } };
+  return {
+    paper_bgcolor: "rgba(0,0,0,0)", plot_bgcolor: "rgba(0,0,0,0)",
+    font: { family: "-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif", color: css("--text-primary"), size: 12 },
+    margin: { l: 52, r: 16, t: 10, b: 44 }, hovermode: "closest",
+    hoverlabel: { bgcolor: css("--surface-1"), bordercolor: css("--border"), font: { color: css("--text-primary") } },
+    legend: { orientation: "h", y: 1.1, x: 0, font: { color: ink } },
+    xaxis: { ...axis, ...(extra.xaxis || {}) }, yaxis: { ...axis, ...(extra.yaxis || {}) },
+    ...(extra.rest || {}),
+  };
+}
+const CONFIG = { displayModeBar: false, responsive: true };
+
+function tile(label, value, sub) {
+  const t = el("div", null, { class: "tile" });
+  t.append(el("div", label, { class: "label" }), el("div", value, { class: "value" }), el("div", sub || "", { class: "sub" }));
+  return t;
+}
+
+function current() { return DATA.tickers.find(t => t.ticker === state.ticker); }
+
+function render() {
+  const t = current();
+  document.querySelectorAll("#tabs button").forEach(b => b.setAttribute("aria-pressed", b.dataset.t === state.ticker));
+  const err = document.getElementById("error");
+  const sections = document.querySelectorAll("main > section, .grid2, #tiles, #warn");
+  if (t.error) {
+    err.hidden = false; err.textContent = `${t.ticker}: ${t.error}`;
+    sections.forEach(s => s.hidden = true); return;
+  }
+  err.hidden = true; sections.forEach(s => s.hidden = false);
+
+  const ex = t.expiries;
+  const ref = ex.find(e => e.days >= 25) || ex[ex.length - 1];
+  const tiles = document.getElementById("tiles");
+  tiles.replaceChildren(
+    tile("Spot", "$" + num(t.spot), t.ticker),
+    tile("ATM IV", pct(ref.atm_iv), `${ref.expiry} · ${Math.round(ref.days)}d`),
+    tile("25Δ risk reversal", pct(ref.rr25), ref.rr25 < 0 ? "puts richer than calls" : "calls richer than puts"),
+    tile("25Δ butterfly", pct(ref.bf25), "wing premium over ATM"),
+    tile("Rate / implied carry", `${pct(ref.rate, 2)} / ${pct(ref.div_yield, 2)}`, "Treasury rate · dividend + funding implied by put-call parity"),
+  );
+
+  const warn = document.getElementById("warn"), list = document.getElementById("warnlist");
+  list.replaceChildren(...t.warnings.map(w => el("li", w)));
+  warn.hidden = t.warnings.length === 0;
+
+  const s = t.surface;
+  const seq = css("--seq").split(",").map(c => c.trim());
+  const scale = seq.map((c, i) => [i / (seq.length - 1), c]);
+  const sceneAxis = (title) => ({ title: { text: title, font: { color: css("--text-secondary") } },
+    gridcolor: css("--grid"), tickfont: { color: css("--text-secondary") }, backgroundcolor: "rgba(0,0,0,0)" });
+  Plotly.react("surface", [{
+    type: "surface", x: s.moneyness_pct, y: s.days, z: s.iv.map(r => r.map(v => v == null ? null : v * 100)),
+    colorscale: scale, showscale: true,
+    colorbar: { title: { text: "IV %", font: { color: css("--text-secondary") } }, tickfont: { color: css("--text-secondary") }, thickness: 12, len: 0.7 },
+    hovertemplate: "Strike %{x:.1f}% of fwd<br>%{y:.0f} days<br>IV %{z:.2f}%<extra></extra>",
+    contours: { z: { show: true, usecolormap: true, project: { z: false }, width: 1 } },
+  }], {
+    ...layout(), margin: { l: 0, r: 0, t: 0, b: 0 },
+    scene: { xaxis: sceneAxis("Strike % fwd"), yaxis: sceneAxis("Days"), zaxis: sceneAxis("IV %"),
+      camera: { eye: { x: -1.5, y: -1.6, z: 0.8 } }, aspectmode: "manual", aspectratio: { x: 1.3, y: 1.1, z: 0.7 } },
+  }, CONFIG);
+
+  const sel = document.getElementById("expiry");
+  sel.replaceChildren(...ex.map((e, i) => el("option", `${e.expiry} (${Math.round(e.days)}d)`, { value: i })));
+  state.expiry = Math.min(state.expiry, ex.length - 1);
+  sel.value = state.expiry;
+
+  Plotly.react("term", [{
+    type: "scatter", mode: "lines+markers", name: "ATM IV",
+    x: ex.map(e => e.days), y: ex.map(e => e.atm_iv * 100),
+    customdata: ex.map(e => e.expiry),
+    line: { color: css("--series-1"), width: 2 }, marker: { size: 8, color: css("--series-1"), line: { color: css("--surface-1"), width: 2 } },
+    hovertemplate: "%{customdata}<br>%{x:.0f} days<br>ATM IV %{y:.2f}%<extra></extra>",
+  }], layout({ xaxis: { title: { text: "Days to expiry" } }, yaxis: { title: { text: "ATM IV %" } }, rest: { showlegend: false } }), CONFIG);
+
+  renderExpiry();
+}
+
+function sviIv(p, k, T) {
+  const x = k - p.m;
+  const w = p.a + p.b * (p.rho * x + Math.sqrt(x * x + p.s * p.s));
+  return Math.sqrt(Math.max(w, 1e-12) / T);
+}
+
+function renderExpiry() {
+  const t = current(), e = t.expiries[state.expiry];
+  const pts = kind => e.quotes.filter(q => q.kind === kind);
+  const ks = e.quotes.map(q => q.k), kLo = Math.min(...ks), kHi = Math.max(...ks);
+  const fitK = Array.from({ length: 120 }, (_, i) => kLo + (kHi - kLo) * i / 119);
+  const marker = c => ({ size: 8, color: c, line: { color: css("--surface-1"), width: 2 } });
+  const quoteTrace = (kind, color, name) => ({
+    type: "scatter", mode: "markers", name, x: pts(kind).map(q => q.strike), y: pts(kind).map(q => q.iv * 100),
+    customdata: pts(kind).map(q => [q.bid, q.ask, q.delta, q.volume, q.open_interest]), marker: marker(color),
+    hovertemplate: `${name.slice(0, -1)} %{x}<br>IV %{y:.2f}%<br>bid %{customdata[0]} / ask %{customdata[1]}<br>Δ %{customdata[2]:.3f} · vol %{customdata[3]} · OI %{customdata[4]}<extra></extra>`,
+  });
+  Plotly.react("smile", [
+    { type: "scatter", mode: "lines", name: "SVI fit", x: fitK.map(k => e.forward * Math.exp(k)),
+      y: fitK.map(k => sviIv(e.svi, k, e.T) * 100), line: { color: css("--fit"), width: 2 },
+      hovertemplate: "Strike %{x:.1f}<br>fit IV %{y:.2f}%<extra></extra>" },
+    quoteTrace("put", css("--series-1"), "OTM puts"),
+    quoteTrace("call", css("--series-2"), "OTM calls"),
+  ], layout({ xaxis: { title: { text: `Strike (forward ${num(e.forward)})` } }, yaxis: { title: { text: "Implied vol %" } },
+    rest: { shapes: [{ type: "line", x0: e.forward, x1: e.forward, yref: "paper", y0: 0, y1: 1, line: { color: css("--grid"), width: 1, dash: "dot" } }] } }), CONFIG);
+
+  const m = e.model_check;
+  if (m) {
+    const row = (label, key, se) => [label, ...["call", "put"].map(k => {
+      const v = m[k][key]; if (v == null) return "—";
+      return se ? `${num(v, 3)} ± ${num(m[k][se], 3)}` : num(v, 3);
+    })];
+    table("models", ["Model", `Call $${num(m.strike)}`, `Put $${num(m.strike)}`], [
+      row("Market mid", "market"), row("Black-Scholes (European)", "black_scholes"),
+      row("Binomial tree (European)", "binomial_european"), row("Monte Carlo (European)", "mc_european", "mc_se"),
+      row("Binomial tree (American)", "binomial_american"), row("Longstaff-Schwartz MC (American)", "lsm_american", "lsm_se"),
+    ]);
+    const G = ["delta", "gamma", "vega", "theta", "rho"];
+    table("greeks", ["Model", ...G.map(g => g[0].toUpperCase() + g.slice(1))], [
+      ["Call · Black-Scholes", ...G.map(g => num(m.call.greeks_bs[g], 4))],
+      ["Call · Binomial American", ...G.map(g => num(m.call.greeks_binomial_american[g], 4))],
+      ["Put · Black-Scholes", ...G.map(g => num(m.put.greeks_bs[g], 4))],
+      ["Put · Binomial American", ...G.map(g => num(m.put.greeks_binomial_american[g], 4))],
+    ]);
+  } else {
+    table("models", ["Model check runs on the first expiries only — pick an earlier one"], []);
+    table("greeks", ["Greeks shown for the first expiries — see quotes table below"], []);
+  }
+
+  table("quotes", ["Strike", "Type", "Bid", "Ask", "IV", "Delta", "Gamma", "Vega", "Theta", "Volume", "OI"],
+    e.quotes.map(q => [num(q.strike), q.kind, num(q.bid), num(q.ask), pct(q.iv, 2), num(q.delta, 3),
+      num(q.gamma, 4), num(q.vega, 3), num(q.theta, 3), String(q.volume), String(q.open_interest)]));
+}
+
+function boot(d) {
+DATA = expand(d);
+const tabs = document.getElementById("tabs");
+DATA.tickers.forEach(t => {
+  const b = el("button", t.ticker, { type: "button", "data-t": t.ticker });
+  b.addEventListener("click", () => { state.ticker = t.ticker; state.expiry = 0; render(); });
+  tabs.appendChild(b);
+});
+document.getElementById("expiry").addEventListener("change", ev => { state.expiry = +ev.target.value; renderExpiry(); });
+document.getElementById("asof").textContent =
+  `As of ${new Date(DATA.as_of).toLocaleString()} · ${DATA.source} · ${DATA.runtime_sec}s run`;
+matchMedia("(prefers-color-scheme: dark)").addEventListener("change", render);
+state.ticker = (DATA.tickers.find(t => !t.error) || DATA.tickers[0]).ticker;
+render();
+}
+
+const payload = document.getElementById("payload");
+if (payload.textContent.trim()) {
+  boot(JSON.parse(payload.textContent));
+} else {
+  document.getElementById("home").hidden = false;
+  fetch(payload.dataset.src + "?v=" + Date.now())
+    .then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
+    .then(boot)
+    .catch(err => {
+      const box = document.getElementById("error");
+      box.hidden = false;
+      box.textContent = "Couldn't load vol surface data (" + err.message + "). It updates a few times each trading day.";
+    });
+}
+</script>
+</body>
+</html>
