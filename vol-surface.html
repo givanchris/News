@@ -77,6 +77,7 @@ details summary { cursor: pointer; color: var(--text-secondary); }
 .learn p { margin: 6px 0 2px; padding: 8px 10px; border-left: 2px solid var(--series-1);
   background: var(--surface-0); color: var(--text-secondary); font-size: 13px; border-radius: 0 6px 6px 0; }
 .chart-notes { margin-top: 6px; font-size: 13px; }
+.notes li.more { color: var(--text-muted); font-size: 11px; text-transform: uppercase; letter-spacing: .05em; padding-top: 12px; }
 @media (max-width: 760px) { .grid2 { grid-template-columns: 1fr; } #surface { height: 400px; } }
 </style>
 </head>
@@ -95,8 +96,9 @@ details summary { cursor: pointer; color: var(--text-secondary); }
   <section class="card read" id="read" hidden>
     <h2>Market read</h2>
     <h3 id="read-headline"></h3>
+    <p class="note" id="read-ai" hidden style="margin:-4px 0 6px"></p>
     <ul class="notes" id="read-notes"></ul>
-    <p class="note">Written by the engine from today's numbers with fixed rules — no AI. Open "Learn" on any line for the concept behind it.</p>
+    <p class="note" id="read-foot"></p>
   </section>
   <div id="warn" class="warnings" hidden><strong>Checks flagged</strong><ul id="warnlist"></ul>
     <details class="learn"><summary></summary><p id="warn-learn"></p></details></div>
@@ -193,19 +195,20 @@ function layout(extra = {}) {
 }
 const CONFIG = { displayModeBar: false, responsive: true };
 
+function noteItem(item) {
+  const li = el("li");
+  li.appendChild(el("span", item.text, { class: "txt" }));
+  const lesson = (DATA.learn || {})[item.learn];
+  if (lesson) {
+    const d = el("details", null, { class: "learn" });
+    d.append(el("summary"), el("p", lesson));
+    li.appendChild(d);
+  }
+  return li;
+}
+
 function notes(target, items) {
-  const ul = document.getElementById(target);
-  ul.replaceChildren(...(items || []).map(item => {
-    const li = el("li");
-    li.appendChild(el("span", item.text, { class: "txt" }));
-    const lesson = (DATA.learn || {})[item.learn];
-    if (lesson) {
-      const d = el("details", null, { class: "learn" });
-      d.append(el("summary"), el("p", lesson));
-      li.appendChild(d);
-    }
-    return li;
-  }));
+  document.getElementById(target).replaceChildren(...(items || []).map(noteItem));
 }
 
 function tile(label, value, sub) {
@@ -242,8 +245,28 @@ function render() {
   const ins = t.insights;
   document.getElementById("read").hidden = !ins;
   if (ins) {
-    document.getElementById("read-headline").textContent = ins.overview.headline;
-    notes("read-notes", ins.overview.items);
+    // AI lead (local model, numbers checked) when present; otherwise the rule-based headline.
+    const n = ins.overview.narration, ai = document.getElementById("read-ai");
+    const facts = ins.overview.items.concat(ins.term);
+    document.getElementById("read-foot").textContent = n
+      ? "Only the bold line is AI: a local model picks the framing and the order of the facts, and may not write numbers. Every line below is the engine's own sentence, built from today's data with fixed rules. Open \"Learn\" on any line for the concept behind it."
+      : "Written by the engine from today's numbers with fixed rules — no AI. Open \"Learn\" on any line for the concept behind it.";
+    if (n) {
+      document.getElementById("read-headline").textContent = n.lead;
+      ai.hidden = false;
+      ai.textContent = `AI summary (${n.model}, running locally) · ${ins.overview.headline}`;
+      const chosen = n.order.map(i => facts[i]).filter(Boolean);
+      const rest = ins.overview.items.filter(item => !chosen.includes(item));
+      notes("read-notes", chosen);
+      if (rest.length) {
+        const ul = document.getElementById("read-notes");
+        ul.append(el("li", "More", { class: "more" }), ...rest.map(noteItem));
+      }
+    } else {
+      document.getElementById("read-headline").textContent = ins.overview.headline;
+      ai.hidden = true;
+      notes("read-notes", ins.overview.items);
+    }
   }
   notes("term-notes", ins ? ins.term : []);
   document.getElementById("warn-learn").textContent = (DATA.learn || {}).arbitrage || "";
