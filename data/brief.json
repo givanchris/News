@@ -1,135 +1,105 @@
 {
-  "lastUpdated": "2026-10-25T16:44:29-06:00",
+  "lastUpdated": "2026-10-26T16:41:00-06:00",
   "market": {
-    "sp500": {
-      "price": "7624",
-      "change": "-0.52%",
-      "dir": "down"
-    },
-    "nasdaq": {
-      "price": "28958",
-      "change": "-0.02%",
-      "dir": "down"
-    },
-    "yield": {
-      "price": "4.99%",
-      "change": "+3 bps",
-      "dir": "down"
-    },
-    "wti": {
-      "price": "$103",
-      "change": "+3.45%",
-      "dir": "up"
-    },
-    "gold": {
-      "price": "$4010",
-      "change": "-0.50%",
-      "dir": "down"
-    },
-    "dxy": {
-      "price": "101.75",
-      "change": "+0.11%",
-      "dir": "up"
-    }
+    "sp500":  { "price": "7,676.77", "change": "+0.70%", "dir": "up"   },
+    "nasdaq": { "price": "29,273",   "change": "+1.10%", "dir": "up"   },
+    "yield":  { "price": "4.98%",    "change": "+3 bps",  "dir": "down" },
+    "wti":    { "price": "$100.85",  "change": "-1.1%",  "dir": "up"   },
+    "gold":   { "price": "$4,026",   "change": "+0.5%",  "dir": "up"   },
+    "dxy":    { "price": "101.70",   "change": "+0.2%",  "dir": "up"   }
   },
   "stories": [
     {
-      "cat": "GEOPOLITICS",
-      "headline": "OIL JUMPS TO FIVE-MONTH HIGH AS HOUTHI ATTACKS RATTLE MIDDLE EAST, DOW SHEDS 600+ POINTS",
-      "body": "Brent crude surged toward $114-115 a barrel and WTI topped $100 after Houthi attacks inside Saudi Arabia revived fears of a wider regional disruption and renewed talk of U.S. strikes on Iran; the Dow fell 1.23% (-600+ pts) to 52,215.16 and the S&P 500 slipped 0.52% to 7,623.68 to close out Wall Street's roughest week since June. Markets are closed for the weekend, so this remains the most current read heading into the Fed's Tuesday-Wednesday meeting.",
-      "explain": "Oil's jump isn't about a confirmed supply loss yet — it's a risk premium, the price the market pays to insure against the chance that tanker routes near the Strait of Hormuz or Saudi export infrastructure actually get hit next. That premium gets priced into crude immediately through futures and options, long before a single barrel stops flowing, which is why Brent can spike 5%+ on an attack that caused no direct production outage. For equities, the read-through is twofold: higher energy costs squeeze corporate margins and consumer spending power, and a sustained oil spike complicates the Fed's inflation math right as it heads into a live rate decision this week."
-    },
-    {
-      "cat": "MARKETS",
-      "headline": "COREWEAVE SLIDES ANOTHER 2.5% AS MORGAN STANLEY SLASHES PRICE TARGET TO $70",
-      "body": "CoreWeave shares fell to $54.24 (-2.46%) Friday, extending Thursday's 10% plunge to $55.60, after Morgan Stanley cut its price target to $70 from $99 — following Bernstein's cut to $51 from $74 a day earlier — as Wall Street keeps re-underwriting the roughly $51 billion in debt and lease obligations behind the AI-infrastructure buildout.",
-      "explain": "A price-target cut is an analyst publicly lowering their estimate of a company's discounted future cash flows, usually because new information (here, mounting doubt that CoreWeave's contracted cloud revenue can comfortably service its debt load) changes the risk embedded in that model. Two independent banks cutting targets within 24 hours signals the concern is spreading across sell-side desks, not confined to one skeptical analyst, and it reinforces the equity-market version of the same stress already visible in CoreWeave's deeply discounted bonds."
+      "cat": "MACRO",
+      "headline": "ANTHROPIC IPO FILING IGNITES AI-LED RALLY, S&P 500 BACK ABOVE 7,650",
+      "body": "News that Anthropic has advanced toward a public listing — last privately valued near $965B and reportedly targeting a Nasdaq debut — sent AI-linked names sharply higher, lifting the S&P 500 +0.70% to 7,676.77 and the Nasdaq 100 +1.10%. The rally snapped a two-week losing streak for both indexes heading into a week stacked with Big Tech earnings and a Fed decision.",
+      "explain": "A high-profile IPO filing acts as a fresh, public data point on how the market is pricing the entire AI trade, so money managers immediately re-rate comparable names like Nvidia, Microsoft and Alphabet off the implied multiple. It also signals an open new-issue window: when a deal this size can price, other private AI companies and their venture backers gain a visible path to liquidity, which pulls capital off the sidelines and into the sector broadly rather than just into Anthropic itself."
     },
     {
       "cat": "CENTRAL BANKS",
-      "headline": "HOT INFLATION DATA REVIVES HAWKISH-FED WORRIES, 10-YEAR YIELD REBOUNDS TO 4.98%",
-      "body": "The 10-year Treasury yield bounced back to near 4.98% Friday, clawing back most of Thursday's sharp flight-to-safety drop, after hotter-than-expected inflation data pushed chipmakers like Nvidia lower and revived doubts about how much further the Fed can cut rates at Wednesday's decision.",
-      "explain": "Thursday's yield drop was a growth-and-credit scare — investors buying Treasuries because they feared AI-debt stress would slow the economy. Friday's rebound flips the driver to inflation: when a CPI-adjacent data point surprises to the upside, markets reprice the expected path of Fed policy toward fewer or later cuts, which pushes yields back up almost mechanically since bond prices move inversely to the rate future buyers will demand. Layering a fresh oil shock on top of that inflation surprise is exactly the combination that makes a central bank's job hardest: it can't cut aggressively into rising energy-driven inflation without risking its credibility on price stability."
+      "headline": "FED SEEN HOLDING STEADY THIS WEEK AS YIELDS CLIMB TOWARD 5%",
+      "body": "The FOMC's two-day meeting wraps Wednesday, and futures markets are pricing effectively no chance of a cut at this meeting or through the remainder of 2027. The 10-year Treasury yield pushed toward 4.98% (+3 bps) on the back of the risk-on tape and resilient recent inflation prints.",
+      "explain": "When the market prices zero cuts for over a year out, every incremental growth or inflation surprise gets reflected almost entirely in the long end of the curve rather than in near-term policy expectations, which is why the 10-year has drifted higher even on a day stocks rallied. Higher long-end yields raise the discount rate used to value future corporate cash flows, a headwind that's currently being offset by AI-driven earnings optimism but won't be indefinitely."
     },
     {
       "cat": "COMMODITIES",
-      "headline": "GOLD SLIDES TOWARD $4,000 FOR A SECOND SESSION AS THE HAVEN TRADE BREAKS DOWN",
-      "body": "Gold fell roughly 0.75% to about $3,995 an ounce, its second straight decline and a more-than-two-month low, even as oil spiked on Middle East risk and equities wobbled — a divergence that shows real yields, not geopolitical fear, are currently setting the price.",
-      "explain": "Gold pays no yield, so its attractiveness is driven largely by the real (inflation-adjusted) interest rate: when nominal yields rise on hawkish-Fed repricing faster than inflation expectations do, the opportunity cost of holding zero-yield gold instead of Treasuries goes up, and gold gets sold even amid a geopolitical scare that would normally support it. That's the opposite mechanism from oil, where the risk premium is dominating; seeing gold and oil move in opposite directions on the same headline is a tell that this week's stress is being read as an inflation-and-rates story more than a pure flight-to-safety one."
+      "headline": "CRUDE SLIDES ON IRAN MEDIATION PROGRESS, WTI BACK UNDER $101",
+      "body": "WTI fell about 1.1% to roughly $100.85 and Brent eased in tandem as diplomatic efforts to de-escalate Middle East supply risk gained traction. Oil remains well above its summer range, keeping energy-sensitive CPI components in focus ahead of Wednesday's Fed decision.",
+      "explain": "Crude prices embed a geopolitical risk premium on top of pure supply-demand fundamentals, so credible mediation news gets priced out almost immediately as traders unwind hedges against a disruption that now looks less likely. Because energy costs flow directly into transportation and production costs across the economy, a sustained pullback here is one of the cleaner levers for cooling headline inflation without the Fed having to move rates at all."
     },
     {
       "cat": "EARNINGS",
-      "headline": "APPLE BRIEFLY RECLAIMS TITLE OF WORLD'S MOST VALUABLE COMPANY FROM NVIDIA",
-      "body": "Apple's market capitalization briefly surpassed Nvidia's intraday Friday as investors rotated out of AI-infrastructure risk and into steadier, services-driven cash flows during the week's debt-fueled selloff in chip and cloud names.",
-      "explain": "When a sector carrying high leverage and capex risk (AI infrastructure) gets repriced lower, capital doesn't just disappear — it often rotates into comparably large companies seen as safer, like Apple, whose earnings depend more on recurring hardware upgrade cycles and services revenue than on debt-financed data-center bets. The swap in market-cap rankings is a visible, real-time snapshot of that rotation, and it tends to reverse quickly once the catalyst (here, CoreWeave-linked credit fear) stabilizes."
+      "headline": "MEGA-CAP TECH EARNINGS BLITZ AND $95B META AI SPEND PLAN IN FOCUS",
+      "body": "Several of the largest Nasdaq components report this week, with investors parsing capital-expenditure guidance after Meta's reported plan to commit roughly $95B to AI infrastructure drew mixed reactions — a tailwind for chip and data-center suppliers but a margin concern for Meta's own near-term free cash flow.",
+      "explain": "Capex guidance on these calls matters more than the headline revenue beat right now because the market is trying to figure out whether AI spending is still accelerating or starting to plateau, and that answer sets the earnings trajectory for the whole semiconductor and cloud-infrastructure complex. A company announcing heavier spend also effectively tells investors to discount near-term free cash flow in exchange for a bet on future AI monetization, which is why single capex numbers can move a stock more than the quarter's actual results."
     },
     {
       "cat": "MCBB",
-      "headline": "FLORIDA OPENS AS CONSENSUS NO. 1 DESPITE OVERTIME LOSS TO BAYLOR IN EXHIBITION",
-      "body": "Florida drew 47 of 59 first-place votes in the AP preseason poll and also topped the Coaches Poll, even after falling to Baylor 82-76 in overtime in its exhibition opener; Duke, Illinois, UConn and Arizona round out the AP top five, with preseason All-American Thomas Haugh leading the Gators into the Nov. 2-3 regular-season tip-off."
+      "headline": "FLORIDA OPENS SEASON NO. 1 IN AP POLL FOR FIRST TIME SINCE 2006",
+      "body": "Florida received 47 of 59 first-place votes in the preseason AP Top 25, with Duke second, Illinois third and UConn and Arizona rounding out the top five. Defending champion Michigan tumbled to No. 16 after head coach Dusty May left for the NBA. The season tips off Nov. 2, headlined by No. 1 Florida hosting No. 18 Miami."
     },
     {
       "cat": "NBA",
-      "headline": "BEN SIMMONS TEARS ACHILLES AT PRACTICE, OUT FOR SEASON BEFORE KINGS DEBUT",
-      "body": "Simmons suffered a torn Achilles tendon in practice just days before his first regular-season appearance since 2024-25, ending his Kings season before it started, part of an early-season injury wave that also includes Magic forward Paolo Banchero's high-ankle sprain and Pistons center Jalen Duren's lower-body strain."
+      "headline": "RECORD $12.5B LAKERS SALE AWAITS BOARD OF GOVERNORS VOTE",
+      "body": "The Josh Kushner-Bob Iger agreement to buy the Lakers from Mark Walter — reported between $12B and $12.5B depending on the source — remains the largest sports-franchise sale on record and is still pending NBA Board of Governors approval. The price marks a 20-25% jump from the $10B Walter paid the Buss family in June 2025, barely 16 months ago."
     },
     {
       "cat": "NFL",
-      "headline": "49ERS' PERFECT SEASON ENDS AS FALCONS UPSET SAN FRANCISCO 29-20",
-      "body": "Atlanta snapped San Francisco's unbeaten start with a 29-20 win as Brock Purdy threw two interceptions, while the Buccaneers (2-5) throttled division-leading Carolina 43-13 behind Baker Mayfield and the Vikings improved to 6-0 by beating Indianapolis 16-10 in Sunday's Week 7 slate."
+      "headline": "SEAHAWKS HAND CHIEFS FIRST LOSS OF THE SEASON, 20-3",
+      "body": "Seattle dominated Kansas City on Sunday Night Football at Lumen Field, improving to 4-3 and dropping the Chiefs to 5-1. Jaxon Smith-Njigba caught nine passes for 150 yards and a touchdown, Emanuel Wilson added 100 rushing yards and a fourth-quarter score, and the defense held Patrick Mahomes and Kansas City to a single field goal."
     },
     {
       "cat": "NCAA CFB",
-      "headline": "MIAMI ROUTS PITT 52-23, HURRICANES REACH NO. 1 FOR FIRST TIME SINCE 2002",
-      "body": "Miami improved to 7-0 (5-0 ACC) behind Darian Mensah's 387 passing yards and four touchdowns and a school-record 16 catches from Malachi Toney, setting up the Hurricanes to open atop the AP poll when the first College Football Playoff rankings drop Nov. 3; BYU remains the sport's only other unbeaten power-conference team."
+      "headline": "BYU'S COMEBACK WIN OVER NOTRE DAME RESHAPES THE PLAYOFF PICTURE",
+      "body": "No. 8 BYU's 28-24 win over No. 2 Notre Dame on Oct. 17 — sealed by Bear Bachmeier's go-ahead touchdown pass with 1:47 left and a goal-line stop — pushed the then-unbeaten Cougars into the thick of the four-team playoff conversation heading into this week's updated rankings. Notre Dame (6-1) remains in the mix but can afford little margin for error the rest of the way."
     }
   ],
   "sports": [
     {
-      "team": "WASHINGTON HUSKIES FOOTBALL",
-      "pill": "BYE WEEK",
-      "pillClass": "s-up",
-      "detail": "On a bye after beating Purdue 38-26 behind backup QB Elijah Brown (28-39, 251 yds, 3 TD) filling in for injured starter Demond Williams Jr. Next: at Nebraska, Sat. Oct. 31 (BTN) — Washington's first trip to Lincoln in 15 years and its first Big Ten meeting with the Huskers."
-    },
-    {
-      "team": "WASHINGTON HUSKIES BASKETBALL",
-      "pill": "TODAY",
-      "pillClass": "s-up",
-      "detail": "Closes out its exhibition slate today vs. Washington State (1 p.m. PT, Alaska Airlines Arena) after dropping its opener 109-91 at Boise State, where all five Husky starters fouled out. Regular-season opener: Sun., Nov. 2 vs. Colgate."
-    },
-    {
       "team": "SEATTLE SEAHAWKS",
-      "pill": "TONIGHT",
-      "pillClass": "s-up",
-      "detail": "Host the unbeaten Chiefs (5-0) tonight on Sunday Night Football (5:20 p.m. PT, NBC) at 3-3, looking to snap a two-game skid; former Seahawk RB Kenneth Walker III, Seattle's Super Bowl MVP a year ago, returns to Lumen Field in Kansas City red."
+      "pill": "W 20-3",
+      "pillClass": "s-w",
+      "detail": "Beat the Chiefs on SNF, handing KC its first loss and improving to 4-3. Smith-Njigba: 9 catches, 150 yds, TD."
     },
     {
       "team": "DETROIT PISTONS",
-      "pill": "W 128-111",
+      "pill": "2-0",
       "pillClass": "s-w",
-      "detail": "Beat Miami 128-111 Friday to improve to 2-0, but lost Jalen Duren (right leg strain, re-eval in ~2 weeks) and Ausar Thompson (ankle, undisclosed) to injury; John Collins (23 pts) and Paul Reed (19 pts, 11 reb) picked up the slack. Next: at Philadelphia, tonight."
+      "detail": "Opened the 2026-27 season 2-0, including a road win over Boston, building on last year's 60-win campaign."
+    },
+    {
+      "team": "WASHINGTON HUSKIES FOOTBALL",
+      "pill": "NEXT: 10/31 AT NEBRASKA",
+      "pillClass": "s-up",
+      "detail": "Off a bye week at 4-3 (1-3 Big Ten). Hosts Penn State and Michigan State at home in November before closing at Oregon."
+    },
+    {
+      "team": "WASHINGTON HUSKIES BASKETBALL",
+      "pill": "OPENS 11/2 vs COLGATE",
+      "pillClass": "s-up",
+      "detail": "Full 15-man roster features transfers Harun Zrno (Rutgers), Steele Venters (Gonzaga) and LeJuan Watts (Texas Tech). Wesley Yates III is the lone returning starter after leading scorer Hannes Steinbach went 14th in the NBA Draft."
     },
     {
       "team": "SEATTLE MARINERS",
-      "pill": "SEASON OVER",
+      "pill": "OFFSEASON",
       "pillClass": "s-l",
-      "detail": "Still searching for Dan Wilson's replacement with a self-imposed Halloween target; Houston's Joe Espada is the top candidate now that his Astros contract has expired, with Carlos Correa among a reported 40-name list POBO Jerry Dipoto is considering."
+      "detail": "Missed the playoffs after clinching their first losing season since 2020, falling short of last year's 90-72 mark. Roster questions headline the winter ahead."
     }
   ],
   "watchlist": [
-    "Fed rate decision Tue.-Wed. (Oct. 27-28) — hot inflation data and the oil spike muddy the case for another cut; Chair Kevin Warsh's tone is the focus",
-    "CoreWeave's debt-refinancing stress — watch bond yields and CDS spreads after Morgan Stanley's price-target cut to $70",
-    "Brent crude near a 5-month high on Houthi attacks — risk of further escalation toward Iran",
-    "Seahawks vs. Chiefs, tonight (SNF, 5:20 p.m. PT) — Kenneth Walker III's return to Seattle",
-    "First College Football Playoff rankings reveal, Nov. 3 — Miami (7-0) opens at No. 1 for the first time since 2002"
+    "FOMC rate decision Wednesday — markets pricing no cut, press conference to follow",
+    "Big Tech earnings this week (Microsoft, Alphabet, Meta, Amazon) — AI capex guidance in focus",
+    "Anthropic IPO process advances — watch for formal public S-1 and roadshow details",
+    "Huskies at Nebraska — Saturday 10/31",
+    "NBA Cup group stage opens Friday 10/30"
   ],
   "deepDive": {
-    "title": "What the Fed's Dot Plot Actually Shows — and Why This Week's Meeting Doesn't Have One",
+    "title": "How a Confidential IPO Filing Moves Markets Before a Single Share Trades",
     "content": [
-      "This week's brief is dominated by a Fed decision that lands Wednesday with an unusually messy backdrop: a hot inflation print, a fresh oil shock from the Houthi attacks, and credit stress bleeding out of CoreWeave's AI-infrastructure debt. All of that would normally make investors turn to the Fed's \"dot plot\" for guidance on where rates are headed next. The catch is that October's meeting doesn't produce one — the Summary of Economic Projections is only released quarterly, in March, June, September and December. That makes Wednesday's statement language and Chair Kevin Warsh's press-conference tone the entire signal this week, carrying more weight than usual.",
-      "The dot plot itself is simple in construction but widely misread. At each quarterly meeting, all 19 FOMC participants (the seven Fed governors plus the presidents of the twelve regional Reserve Banks) anonymously plot where they expect the federal funds rate to sit at the end of the current year, each of the next two years, and in the \"longer run.\" Each dot is one person's individual projection, not a commitment, and the median of those dots — not any vote — is the number markets fixate on as \"the Fed's forecast.\" Only the rate-setting vote at that same meeting is binding; the dots are a snapshot of sentiment that the Fed itself is free to abandon by the very next meeting.",
-      "What most people miss is how fast that snapshot can move, and how little it actually binds future policy. In December 2021, the median dot showed roughly three quarter-point hikes for all of 2022. By March 2022, with inflation accelerating, the Fed had already raised once and the updated dots implied seven hikes for the year — a complete reversal within one quarter, based entirely on incoming data rather than any dot ever being \"wrong\" in a binding sense. That history is the reason serious market participants treat the dot plot as a conditional forecast, not a roadmap, and why a single hot CPI print — like the one that hit Friday — can scramble the expected path overnight.",
-      "Applied to this week: without a fresh SEP to anchor expectations, markets have to infer the Fed's reaction function from the statement's wording (does \"elevated inflation\" reappear, does \"gradual\" survive) and from how directly Warsh addresses the oil shock in his press conference. A hold with hawkish language would read as the Fed prioritizing the inflation scare over the CoreWeave-adjacent credit stress; a hold paired with dovish hedging on oil as \"transitory\" would signal the opposite. Either way, the next actual dot plot doesn't arrive until December, so Wednesday's words — not a chart — are what will move yields, gold, and the dollar this week."
+      "Today's rally was triggered not by a completed deal but by the mere advancement of Anthropic toward a public listing — a company that hasn't sold a single share to public investors yet. That a filing alone can move the S&P 500 seven-tenths of a percent says something important about how markets price information: it's not the event itself that matters most, it's the resolution of uncertainty about whether the event will happen at all, and on what terms.",
+      "Mechanically, large private companies can submit a confidential draft registration statement (Form S-1) to the SEC under the JOBS Act's emerging-growth-company provisions, keeping financials and structure out of public view while regulators review it. Once the company is ready — typically weeks before the actual IPO — it unseals the filing publicly, and underwriters begin a roadshow to gauge institutional demand and set a price range. Today's move was driven by signals that this process is progressing, not by the unsealed S-1 itself, which is why the reaction showed up in comparable public stocks like Nvidia, Microsoft and Alphabet rather than in a new ticker.",
+      "What's easy to miss is the gap between private \"paper\" valuations and what the market will actually pay once a stock is liquid and shortable. Anthropic's last official funding round valued it near $965B, but crypto-adjacent prediction markets were implying over $2 trillion weeks ago — speculative froth with no settlement mechanism behind it. History is full of this gap closing painfully: Facebook's 2012 IPO priced at a rich multiple built on pre-IPO enthusiasm and then fell nearly 50% in three months as public investors demanded proof, not projections, of mobile monetization.",
+      "Set against a Fed that's pricing essentially zero rate cuts through 2027 and a 10-year yield pushing toward 5%, a successful mega-cap AI IPO window is a genuine signal about risk appetite — it means investors are willing to underwrite long-duration, cash-burning growth stories even as the risk-free rate sits near multi-year highs. If Anthropic's eventual pricing undershoots the private-market chatter, expect that gap to ripple through every AI-adjacent valuation on the Nasdaq, including the Big Tech capex spenders reporting this same week."
     ]
   }
 }
