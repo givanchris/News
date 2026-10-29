@@ -1,37 +1,61 @@
 {
-  "lastUpdated": "2026-10-29T16:41:17-06:00",
+  "lastUpdated": "2026-10-29T17:00:18-06:00",
   "market": {
-    "sp500":  { "price": "7,720.39", "change": "-0.31%", "dir": "down" },
-    "nasdaq": { "price": "29,350",   "change": "-1.61%", "dir": "down" },
-    "yield":  { "price": "5.06%",    "change": "+4 bps", "dir": "up"   },
-    "wti":    { "price": "$99.75",   "change": "-2.9%",  "dir": "down" },
-    "gold":   { "price": "$4,062",   "change": "+0.7%",  "dir": "up"   },
-    "dxy":    { "price": "102.25",   "change": "-0.2%",  "dir": "down" }
+    "sp500": {
+      "price": "7720",
+      "change": "-0.36%",
+      "dir": "down"
+    },
+    "nasdaq": {
+      "price": "29403",
+      "change": "-1.43%",
+      "dir": "down"
+    },
+    "yield": {
+      "price": "4.99%",
+      "change": "-6 bps",
+      "dir": "up"
+    },
+    "wti": {
+      "price": "$103",
+      "change": "+1.42%",
+      "dir": "up"
+    },
+    "gold": {
+      "price": "$4037",
+      "change": "-0.34%",
+      "dir": "down"
+    },
+    "dxy": {
+      "price": "101.85",
+      "change": "-0.31%",
+      "dir": "down"
+    }
   },
   "stories": [
     {
       "cat": "MARKETS",
       "headline": "ALPHABET'S 12% PLUNGE SNAPS S&P'S THREE-DAY WIN STREAK, DRAGS NASDAQ DOWN 1.6%",
-      "body": "Alphabet shares cratered roughly 12% after Google Cloud's growth missed estimates and AI-capex guidance spooked investors, pulling the S&P 500 down 0.31% to 7,720.39 and the Nasdaq 100 off about 1.6% to roughly 29,350 — erasing most of the week's post-Fed gains. Amazon reports after today's close, setting up another cap-weighted swing.",
-      "explain": "The S&P 500 and Nasdaq 100 are cap-weighted, so a single multi-trillion-dollar company's earnings miss can move the whole index even if every other constituent is flat — Alphabet alone is a high-single-digit percentage of both benchmarks. The specific worry, cloud growth decelerating against ballooning AI capital spending, directly questions whether the AI buildout is converting into revenue fast enough to justify its cost, which is exactly the thesis propping up this year's market multiple."
+      "body": "Alphabet shares cratered roughly 12% after Google Cloud's growth missed estimates and AI-capex guidance spooked investors, pulling the S&P 500 down 0.31% to 7,720.39 and the Nasdaq 100 off about 1.6% to roughly 29,350 \u2014 erasing most of the week's post-Fed gains. Amazon reports after today's close, setting up another cap-weighted swing.",
+      "explain": "The S&P 500 and Nasdaq 100 are cap-weighted, so a single multi-trillion-dollar company's earnings miss can move the whole index even if every other constituent is flat \u2014 Alphabet alone is a high-single-digit percentage of both benchmarks. The specific worry, cloud growth decelerating against ballooning AI capital spending, directly questions whether the AI buildout is converting into revenue fast enough to justify its cost, which is exactly the thesis propping up this year's market multiple."
     },
     {
       "cat": "GEOPOLITICS",
       "headline": "OIL GIVES BACK YESTERDAY'S SPIKE AS SAUDI ARABIA REPORTS NO DAMAGE AT RAS TANURA",
       "body": "WTI crude slid to roughly $99.75 a barrel, down about 2.9%, unwinding almost exactly Wednesday's spike after Saudi officials said inspections found no damage at the Ras Tanura export terminal from the unconfirmed Houthi strike claim. Brent fell in step as the entire geopolitical risk premium priced in less than 24 hours earlier evaporated just as quickly.",
-      "explain": "Yesterday's move was a probability-weighted bet on an unverified claim, not a repricing of actual supply; once Riyadh's inspection ruled out physical damage, the risk premium had nothing left to price and traders unwound the position almost dollar-for-dollar. This round trip is a clean example of how headline risk in oil resolves discontinuously — the price doesn't drift back to baseline, it snaps back the moment uncertainty clears."
+      "explain": "Yesterday's move was a probability-weighted bet on an unverified claim, not a repricing of actual supply; once Riyadh's inspection ruled out physical damage, the risk premium had nothing left to price and traders unwound the position almost dollar-for-dollar. This round trip is a clean example of how headline risk in oil resolves discontinuously \u2014 the price doesn't drift back to baseline, it snaps back the moment uncertainty clears."
     },
     {
       "cat": "MACRO",
       "headline": "10-YEAR YIELD JUMPS BACK ABOVE 5% AS TERM PREMIUM REASSERTS ITSELF",
-      "body": "The 10-year Treasury yield climbed about 4 basis points to roughly 5.06%, pushing back above the psychologically important 5% threshold a day after the Fed's hawkish hold. The move came even as equities sold off on Alphabet — a sign bond investors are more focused on deficit financing and AI-capex borrowing than on tech's earnings jitters.",
-      "explain": "In a typical stock selloff, investors rotate into Treasuries and yields fall; today they didn't, which tells you the long end is being driven by supply — heavy Treasury issuance plus corporate AI-capex debt competing for the same pool of capital — rather than by a flight-to-safety bid. When the term premium (the extra yield investors demand to hold duration through that uncertainty) dominates like this, equities lose their usual hedge, since both stocks and bonds can fall together."
+      "body": "The 10-year Treasury yield climbed about 4 basis points to roughly 5.06%, pushing back above the psychologically important 5% threshold a day after the Fed's hawkish hold. The move came even as equities sold off on Alphabet \u2014 a sign bond investors are more focused on deficit financing and AI-capex borrowing than on tech's earnings jitters.",
+      "explain": "In a typical stock selloff, investors rotate into Treasuries and yields fall; today they didn't, which tells you the long end is being driven by supply \u2014 heavy Treasury issuance plus corporate AI-capex debt competing for the same pool of capital \u2014 rather than by a flight-to-safety bid. When the term premium (the extra yield investors demand to hold duration through that uncertainty) dominates like this, equities lose their usual hedge, since both stocks and bonds can fall together."
     },
     {
       "cat": "COMMODITIES",
       "headline": "GOLD CLIMBS TO $4,062 AS DOLLAR SOFTENS DESPITE YIELDS HOLDING ABOVE 5%",
       "body": "Spot gold rose about 0.7% to roughly $4,062 an ounce even as the 10-year yield pushed back above 5%, with the dollar index slipping roughly 0.2% to 102.25 providing the offsetting tailwind.",
-      "explain": "Gold's price is a tug-of-war between the opportunity cost of holding a non-yielding asset (higher real yields hurt it) and the currency it's priced in (a weaker dollar helps it, since gold gets cheaper for foreign buyers). Today the dollar leg won out over the yield leg, a reminder that gold doesn't move on rates alone — it moves on whichever of its two main drivers sends the stronger signal that day."
+      "explain": "Gold's price is a tug-of-war between the opportunity cost of holding a non-yielding asset (higher real yields hurt it) and the currency it's priced in (a weaker dollar helps it, since gold gets cheaper for foreign buyers). Today the dollar leg won out over the yield leg, a reminder that gold doesn't move on rates alone \u2014 it moves on whichever of its two main drivers sends the stronger signal that day."
     },
     {
       "cat": "MCBB",
@@ -41,7 +65,7 @@
     {
       "cat": "NBA",
       "headline": "THUNDER'S TY JEROME DROPS CAREER-HIGH 45 AS OKC LEANS ON BENCH AMID INJURY WAVE",
-      "body": "With Jalen Williams and Cason Wallace both out after surgery, reserve guard Ty Jerome erupted for a career-high 45 points to carry Oklahoma City, underscoring how thin the defending champions' depth has gotten — and why rival executives say OKC is already fielding calls about moving him before the trade market tightens."
+      "body": "With Jalen Williams and Cason Wallace both out after surgery, reserve guard Ty Jerome erupted for a career-high 45 points to carry Oklahoma City, underscoring how thin the defending champions' depth has gotten \u2014 and why rival executives say OKC is already fielding calls about moving him before the trade market tightens."
     },
     {
       "cat": "NFL",
@@ -87,18 +111,18 @@
     }
   ],
   "watchlist": [
-    "Amazon reports Q3 earnings after today's close — another cap-weighted swing risk for the Nasdaq 100",
-    "NFL trade deadline Tuesday 11/10, 1 p.m. PT — Cardinals-Texans Harrison Jr. deal already in, more expected",
-    "Huskies at Nebraska — Saturday 10/31, Lincoln (first-ever Big Ten meeting)",
-    "Seahawks vs. Bears (MNF) — Monday 11/2, Lumen Field",
-    "College Football Playoff committee's first rankings show — Tuesday 11/3"
+    "Amazon reports Q3 earnings after today's close \u2014 another cap-weighted swing risk for the Nasdaq 100",
+    "NFL trade deadline Tuesday 11/10, 1 p.m. PT \u2014 Cardinals-Texans Harrison Jr. deal already in, more expected",
+    "Huskies at Nebraska \u2014 Saturday 10/31, Lincoln (first-ever Big Ten meeting)",
+    "Seahawks vs. Bears (MNF) \u2014 Monday 11/2, Lumen Field",
+    "College Football Playoff committee's first rankings show \u2014 Tuesday 11/3"
   ],
   "deepDive": {
     "title": "Why One Earnings Miss Can Move the Whole Index: Cap Weighting and the Discount-Rate Squeeze",
     "content": [
-      "Today Alphabet's post-earnings 12% drop pulled the S&P 500 down 0.31% and the Nasdaq 100 down 1.6% largely on its own, while the 10-year Treasury yield pushed back above 5% in the same session. Those two facts aren't a coincidence — they're the same mechanism viewed from two different assets. For a finance student watching a cap-weighted index and a bond yield move together against an earnings-driven equity selloff, the useful question isn't whether the market liked Alphabet's quarter. It's what a 5%-plus discount rate does to a stock whose value depends heavily on cash flows a decade out.",
-      "A cap-weighted index like the S&P 500 or Nasdaq 100 assigns each constituent a weight proportional to its market capitalization, so the index's daily return is the weighted sum of its constituents' returns. Alphabet alone represents a high-single-digit percentage of both benchmarks; a 12% single-stock drop on a multi-trillion-dollar market cap therefore mechanically subtracts roughly that weight times 12% from the index return, independent of what the other 490-plus S&P names did. Layer on a rising 10-year yield — the rate used to discount a company's distant future cash flows back to present value — and a growth stock trading on 2030-and-beyond AI revenue gets hit twice: once on today's number, once on the rate used to value tomorrow's.",
-      "What most people miss is that this compounding effect is nonlinear with duration — the longer a stock's expected cash flows are pushed into the future, the more sensitive its present value is to a given change in the discount rate, much like a long-duration bond. That's why AI-capex names with minimal current free cash flow, financed instead by heavy capital spending against a multi-year payoff story, tend to fall harder than the index average on days like today, and it's the same dynamic behind 2022's historic growth-stock drawdown when the Fed hiked from near zero to over 5% in a single year. A 1-percentage-point move in the 10-year is mechanically worth far more to a 15-year cash-flow stream than to a 3-year one.",
+      "Today Alphabet's post-earnings 12% drop pulled the S&P 500 down 0.31% and the Nasdaq 100 down 1.6% largely on its own, while the 10-year Treasury yield pushed back above 5% in the same session. Those two facts aren't a coincidence \u2014 they're the same mechanism viewed from two different assets. For a finance student watching a cap-weighted index and a bond yield move together against an earnings-driven equity selloff, the useful question isn't whether the market liked Alphabet's quarter. It's what a 5%-plus discount rate does to a stock whose value depends heavily on cash flows a decade out.",
+      "A cap-weighted index like the S&P 500 or Nasdaq 100 assigns each constituent a weight proportional to its market capitalization, so the index's daily return is the weighted sum of its constituents' returns. Alphabet alone represents a high-single-digit percentage of both benchmarks; a 12% single-stock drop on a multi-trillion-dollar market cap therefore mechanically subtracts roughly that weight times 12% from the index return, independent of what the other 490-plus S&P names did. Layer on a rising 10-year yield \u2014 the rate used to discount a company's distant future cash flows back to present value \u2014 and a growth stock trading on 2030-and-beyond AI revenue gets hit twice: once on today's number, once on the rate used to value tomorrow's.",
+      "What most people miss is that this compounding effect is nonlinear with duration \u2014 the longer a stock's expected cash flows are pushed into the future, the more sensitive its present value is to a given change in the discount rate, much like a long-duration bond. That's why AI-capex names with minimal current free cash flow, financed instead by heavy capital spending against a multi-year payoff story, tend to fall harder than the index average on days like today, and it's the same dynamic behind 2022's historic growth-stock drawdown when the Fed hiked from near zero to over 5% in a single year. A 1-percentage-point move in the 10-year is mechanically worth far more to a 15-year cash-flow stream than to a 3-year one.",
       "That's the lens for reading the next six weeks: every incremental AI-capex earnings report, starting with Amazon tonight, then Microsoft and Nvidia, will be judged less on the quarter itself and more on whether it moves the market's confidence in that distant payoff, while every basis point the 10-year adds on top of 5% raises the bar those payoffs have to clear. Watching index-level cap weighting alongside the Treasury curve, rather than either in isolation, is what separates 'the market fell because of bad news' from the more precise 'the market's longest-duration bets just got repriced against a higher cost of patience.'"
     ]
   }
