@@ -1,81 +1,63 @@
 {
-  "lastUpdated": "2026-10-30T16:30:16-06:00",
+  "lastUpdated": "2026-10-30T16:43:34-06:00",
   "market": {
-    "sp500": {
-      "price": "7580",
-      "change": "-1.83%",
-      "dir": "down"
-    },
-    "nasdaq": {
-      "price": "28385",
-      "change": "-3.48%",
-      "dir": "down"
-    },
-    "yield": {
-      "price": "4.93%",
-      "change": "-6 bps",
-      "dir": "up"
-    },
-    "wti": {
-      "price": "$103",
-      "change": "-0.21%",
-      "dir": "down"
-    },
-    "gold": {
-      "price": "$3885",
-      "change": "-2.97%",
-      "dir": "down"
-    },
-    "dxy": {
-      "price": "101.96",
-      "change": "+0.19%",
-      "dir": "up"
-    }
+    "sp500": { "price": "7,580", "change": "-1.83%", "dir": "down" },
+    "nasdaq": { "price": "28,385", "change": "-3.48%", "dir": "down" },
+    "yield": { "price": "4.93%", "change": "-6 bps", "dir": "up" },
+    "wti": { "price": "$103", "change": "-0.21%", "dir": "down" },
+    "gold": { "price": "$3,885", "change": "-2.97%", "dir": "down" },
+    "dxy": { "price": "101.96", "change": "+0.19%", "dir": "up" }
   },
   "stories": [
     {
       "cat": "MARKETS",
-      "headline": "ALPHABET'S 12% PLUNGE SNAPS S&P'S THREE-DAY WIN STREAK, DRAGS NASDAQ DOWN 1.6%",
-      "body": "Alphabet shares cratered roughly 12% after Google Cloud's growth missed estimates and AI-capex guidance spooked investors, pulling the S&P 500 down 0.31% to 7,720.39 and the Nasdaq 100 off about 1.6% to roughly 29,350 \u2014 erasing most of the week's post-Fed gains. Amazon reports after today's close, setting up another cap-weighted swing.",
-      "explain": "The S&P 500 and Nasdaq 100 are cap-weighted, so a single multi-trillion-dollar company's earnings miss can move the whole index even if every other constituent is flat \u2014 Alphabet alone is a high-single-digit percentage of both benchmarks. The specific worry, cloud growth decelerating against ballooning AI capital spending, directly questions whether the AI buildout is converting into revenue fast enough to justify its cost, which is exactly the thesis propping up this year's market multiple."
-    },
-    {
-      "cat": "GEOPOLITICS",
-      "headline": "OIL GIVES BACK YESTERDAY'S SPIKE AS SAUDI ARABIA REPORTS NO DAMAGE AT RAS TANURA",
-      "body": "WTI crude slid to roughly $99.75 a barrel, down about 2.9%, unwinding almost exactly Wednesday's spike after Saudi officials said inspections found no damage at the Ras Tanura export terminal from the unconfirmed Houthi strike claim. Brent fell in step as the entire geopolitical risk premium priced in less than 24 hours earlier evaporated just as quickly.",
-      "explain": "Yesterday's move was a probability-weighted bet on an unverified claim, not a repricing of actual supply; once Riyadh's inspection ruled out physical damage, the risk premium had nothing left to price and traders unwound the position almost dollar-for-dollar. This round trip is a clean example of how headline risk in oil resolves discontinuously \u2014 the price doesn't drift back to baseline, it snaps back the moment uncertainty clears."
-    },
-    {
-      "cat": "MACRO",
-      "headline": "10-YEAR YIELD JUMPS BACK ABOVE 5% AS TERM PREMIUM REASSERTS ITSELF",
-      "body": "The 10-year Treasury yield climbed about 4 basis points to roughly 5.06%, pushing back above the psychologically important 5% threshold a day after the Fed's hawkish hold. The move came even as equities sold off on Alphabet \u2014 a sign bond investors are more focused on deficit financing and AI-capex borrowing than on tech's earnings jitters.",
-      "explain": "In a typical stock selloff, investors rotate into Treasuries and yields fall; today they didn't, which tells you the long end is being driven by supply \u2014 heavy Treasury issuance plus corporate AI-capex debt competing for the same pool of capital \u2014 rather than by a flight-to-safety bid. When the term premium (the extra yield investors demand to hold duration through that uncertainty) dominates like this, equities lose their usual hedge, since both stocks and bonds can fall together."
+      "headline": "AI-CAPEX ROUT DEEPENS AS NASDAQ 100 SHEDS 3.48%, S&P DROPS 1.83%",
+      "body": "A day after Alphabet's post-earnings plunge, Amazon's results extended the hyperscaler selloff, dragging the Nasdaq 100 down 3.48% to roughly 28,385 and the S&P 500 off 1.83% to about 7,580 — the worst session of the week. Traders are now pricing a second straight quarter where AI capital spending outruns the revenue showing up to justify it.",
+      "explain": "When two of the index's largest cap-weighted constituents disappoint on the same metric — cloud growth versus capex — in back-to-back days, the market stops treating it as company-specific noise and starts repricing the whole AI-infrastructure trade at once, which is why the drawdown accelerated rather than stabilized. That kind of correlated, sector-wide repricing is exactly what shows up as a sharp one-day move in a cap-weighted benchmark, since the same handful of names that drove the index up on the way in are now driving it down on the way out."
     },
     {
       "cat": "COMMODITIES",
-      "headline": "GOLD CLIMBS TO $4,062 AS DOLLAR SOFTENS DESPITE YIELDS HOLDING ABOVE 5%",
-      "body": "Spot gold rose about 0.7% to roughly $4,062 an ounce even as the 10-year yield pushed back above 5%, with the dollar index slipping roughly 0.2% to 102.25 providing the offsetting tailwind.",
-      "explain": "Gold's price is a tug-of-war between the opportunity cost of holding a non-yielding asset (higher real yields hurt it) and the currency it's priced in (a weaker dollar helps it, since gold gets cheaper for foreign buyers). Today the dollar leg won out over the yield leg, a reminder that gold doesn't move on rates alone \u2014 it moves on whichever of its two main drivers sends the stronger signal that day."
+      "headline": "GOLD TUMBLES 2.97% TO $3,885 EVEN AS STOCKS SELL OFF — A SIGN OF FORCED LIQUIDATION, NOT RISK APPETITE",
+      "body": "Spot gold fell nearly 3% to roughly $3,885 an ounce in the same session the S&P 500 lost 1.83% and the Nasdaq 100 lost 3.48% — an unusual pairing, since gold typically rallies when equities sell off. The move lines up more with funds raising cash to cover losses elsewhere than with a shift in investors' safe-haven preference.",
+      "explain": "Gold's normal role is a safe-haven hedge that gains when stocks fall, but that correlation flips during a 'dash for cash': when a leveraged portfolio takes losses on one asset, margin calls force the sale of whatever is most liquid and still has a profit cushion — often gold — regardless of that asset's own outlook. The same mechanism showed up in the 2008 crisis and March 2020, when gold fell alongside equities for days before resuming its traditional inverse relationship once the liquidity scramble eased."
+    },
+    {
+      "cat": "MACRO",
+      "headline": "10-YEAR YIELD RETREATS TO 4.93% AS TREASURIES CATCH THE FLIGHT-TO-QUALITY BID GOLD DIDN'T",
+      "body": "The 10-year Treasury yield slipped about 6 basis points to 4.93%, pulling back from Thursday's push above 5%, as investors rotated into government debt rather than gold while equities sold off. The divergence — bonds rallying, gold falling — shows today's flight-to-safety flow is going almost exclusively into Treasuries.",
+      "explain": "Falling yields mean rising bond prices, so the drop in the 10-year is the market's conventional safe-haven response to the equity selloff — investors bidding up government debt for its credit quality and liquidity. That Treasuries, not gold, are absorbing the flow confirms the gold decline is a liquidity-driven anomaly rather than a broad repricing of risk appetite, since the two assets are supposed to move together, not apart, in a classic flight to quality."
+    },
+    {
+      "cat": "COMMODITIES",
+      "headline": "WTI HOLDS NEAR $103, DECOUPLING FROM THE EQUITY AND GOLD ROUT",
+      "body": "WTI crude was little changed, down just 0.21% to roughly $103 a barrel, essentially sitting out the broader risk-asset selloff that hit stocks and gold alike. Steady supply conditions and OPEC+ discipline are keeping oil anchored even as other markets reprice AI-capex risk.",
+      "explain": "Oil's price is driven primarily by physical supply-and-demand fundamentals — inventories, OPEC+ output quotas, refinery runs — rather than by the equity-market narrative about AI spending, so it has little reason to move just because tech earnings disappoint. That decoupling is itself informative: when a selloff doesn't spread into commodities tied to the real economy, it signals a sector-specific valuation unwind rather than a broader recession scare, which would typically hit oil demand expectations too."
+    },
+    {
+      "cat": "MACRO",
+      "headline": "DOLLAR FIRMS TO 101.96 ON DXY, ADDING A THIRD LEG TO TODAY'S RISK-OFF COMPLEX",
+      "body": "The dollar index rose 0.19% to 101.96, extending its advance as capital rotated out of risk assets and into dollar-denominated safety alongside Treasuries. A firmer dollar is itself a modest headwind for gold priced in dollars, compounding today's forced-selling pressure on the metal.",
+      "explain": "The dollar tends to strengthen in a global risk-off episode because it remains the world's primary funding and reserve currency — investors and institutions unwinding leveraged positions need dollars to repay dollar-denominated liabilities, which mechanically bids the currency up. That dollar strength then feeds back into gold, which is priced in dollars, so a stronger greenback makes gold costlier for foreign buyers even before accounting for the liquidation pressure described above."
     },
     {
       "cat": "MCBB",
-      "headline": "DEFENDING CHAMP MICHIGAN TUMBLES TO NO. 16 IN PRESEASON AP POLL AFTER DUSTY MAY'S DEPARTURE",
-      "body": "Florida debuts at No. 1 in the preseason AP Top 25 for the first time since 2006, with Duke at No. 2, while reigning national champion Michigan fell to No. 16 after coach Dusty May left for SMU in the offseason. The poll's top 10 also features Illinois, UConn and Texas, with roughly 54 head-coaching changes and an unresolved wave of eligibility lawsuits still shadowing the season."
+      "headline": "REGULAR SEASON OPENS MONDAY WITH NO. 1 FLORIDA AS PRESEASON FAVORITE, MICHIGAN STILL SHADOWED BY COACHING CHANGE",
+      "body": "With tip-off four days away on Monday, Nov. 2, Florida enters as the unanimous preseason No. 1 for the first time since 2006, ahead of Duke, Illinois, UConn and Texas, while defending champion Michigan (No. 16) heads into the season still adjusting to Dusty May's departure for SMU. Roughly 54 head-coaching changes across the sport this offseason make the opening week's results an early test of how much those moves actually move the needle."
     },
     {
       "cat": "NBA",
-      "headline": "THUNDER'S TY JEROME DROPS CAREER-HIGH 45 AS OKC LEANS ON BENCH AMID INJURY WAVE",
-      "body": "With Jalen Williams and Cason Wallace both out after surgery, reserve guard Ty Jerome erupted for a career-high 45 points to carry Oklahoma City, underscoring how thin the defending champions' depth has gotten \u2014 and why rival executives say OKC is already fielding calls about moving him before the trade market tightens."
+      "headline": "EMIRATES NBA CUP GROUP PLAY TIPS OFF FRIDAY, ADDING IN-SEASON STAKES TO AN ALREADY FRONT-LOADED SCHEDULE",
+      "body": "The Emirates NBA Cup's group-play slate begins tonight, with teams across all four groups opening their push toward the knockout rounds and a $500,000-per-player prize pool for the eventual champions. The early-season tournament format means tonight's games count double — toward both standings and group seeding — adding real stakes to what would otherwise be a quiet late-October slate."
     },
     {
       "cat": "NFL",
-      "headline": "CARDINALS SHIP MARVIN HARRISON JR. TO TEXANS AS TRADE DEADLINE BUZZ BUILDS TOWARD NOV. 10",
-      "body": "Arizona traded 2024 first-round receiver Marvin Harrison Jr. to Houston in one of the first major moves of trade-deadline season, with the Giants (adding QB J.J. McCarthy) and Steelers (sending CB Joey Porter Jr. to Dallas) also already active ahead of the Nov. 10, 1 p.m. PT deadline."
+      "headline": "SAINTS HAND ROOKIE TYLER SHOUGH THE STARTING JOB FOR SUNDAY AS WEEK 8 TRADE-DEADLINE MANEUVERING CONTINUES",
+      "body": "New Orleans named rookie quarterback Tyler Shough its starter for Sunday's Week 8 game, the latest sign of the Saints' pivot toward evaluating young talent down the stretch. The move comes as trade speculation keeps building across the league ahead of the Nov. 10 deadline, with the Cardinals-Texans Marvin Harrison Jr. swap and the Giants' and Steelers' deals already setting the tone for a busy final two weeks of dealing."
     },
     {
       "cat": "NCAA CFB",
-      "headline": "OHIO STATE SURVIVES INDIANA 19-15, SNAPPING HOOSIERS' 22-GAME WIN STREAK",
-      "body": "Ohio State held off previously unbeaten Indiana 19-15 in the week's marquee Big Ten clash, ending the Hoosiers' 22-game winning streak and reshuffling the conference's College Football Playoff picture ahead of the committee's first rankings show, set for Nov. 3."
+      "headline": "ALL EYES ON LINCOLN: WASHINGTON-NEBRASKA SATURDAY HEADLINES A SLATE SET UP BY THE CFP COMMITTEE'S FIRST RANKINGS NEXT WEEK",
+      "body": "Saturday's Washington-at-Nebraska game — the programs' first-ever meeting as Big Ten members — is the marquee storyline heading into a weekend that effectively serves as the last major audition before the College Football Playoff committee releases its first rankings on Tuesday, Nov. 3. Ohio State's survival of Indiana last week reshuffled the conference picture, and one more full slate of results will shape how the committee frames the field."
     }
   ],
   "sports": [
@@ -87,9 +69,9 @@
     },
     {
       "team": "DETROIT PISTONS",
-      "pill": "3-1",
-      "pillClass": "s-l",
-      "detail": "Snapped a 3-0 start with Tuesday's 111-97 loss at the Knicks, where Detroit shot just 3-for-21 in the second quarter after leading by 13; back in action this week looking to tighten up that unit."
+      "pill": "TONIGHT vs NETS",
+      "pillClass": "s-up",
+      "detail": "3-1 after Tuesday's 111-97 loss at the Knicks, where Detroit shot just 3-for-21 in the second quarter after leading by 13; back in action tonight at home against Brooklyn looking to tighten up that unit."
     },
     {
       "team": "WASHINGTON HUSKIES FOOTBALL",
@@ -101,7 +83,7 @@
       "team": "WASHINGTON HUSKIES BASKETBALL",
       "pill": "OPENS 11/2 vs COLGATE",
       "pillClass": "s-up",
-      "detail": "Danny Sprinkle's Year 3 roster returns only starter Wesley Yates III after Hannes Steinbach (now with Charlotte) and Zoom Diallo departed; season tips off at Alaska Airlines Arena."
+      "detail": "Danny Sprinkle's Year 3 roster returns only starter Wesley Yates III after Hannes Steinbach (now with Charlotte) and Zoom Diallo departed; season tips off at home after a tune-up exhibition win over Washington State."
     },
     {
       "team": "SEATTLE MARINERS",
@@ -111,19 +93,19 @@
     }
   ],
   "watchlist": [
-    "Amazon reports Q3 earnings after today's close \u2014 another cap-weighted swing risk for the Nasdaq 100",
-    "NFL trade deadline Tuesday 11/10, 1 p.m. PT \u2014 Cardinals-Texans Harrison Jr. deal already in, more expected",
-    "Huskies at Nebraska \u2014 Saturday 10/31, Lincoln (first-ever Big Ten meeting)",
-    "Seahawks vs. Bears (MNF) \u2014 Monday 11/2, Lumen Field",
-    "College Football Playoff committee's first rankings show \u2014 Tuesday 11/3"
+    "AI-capex selloff follow-through — watch Microsoft and Nvidia earnings for whether the Amazon/Alphabet pattern spreads further",
+    "NFL trade deadline Tuesday 11/10, 1 p.m. PT — Cardinals-Texans Harrison Jr. deal already in, more expected",
+    "Huskies at Nebraska — Saturday 10/31, Lincoln (first-ever Big Ten meeting)",
+    "MCBB regular season tips off — Monday 11/2, No. 1 Florida and Huskies vs. Colgate both open",
+    "College Football Playoff committee's first rankings show — Tuesday 11/3"
   ],
   "deepDive": {
-    "title": "Why One Earnings Miss Can Move the Whole Index: Cap Weighting and the Discount-Rate Squeeze",
+    "title": "When Gold Falls With Stocks: Margin Calls, the 'Dash for Cash,' and Why Correlations Break",
     "content": [
-      "Today Alphabet's post-earnings 12% drop pulled the S&P 500 down 0.31% and the Nasdaq 100 down 1.6% largely on its own, while the 10-year Treasury yield pushed back above 5% in the same session. Those two facts aren't a coincidence \u2014 they're the same mechanism viewed from two different assets. For a finance student watching a cap-weighted index and a bond yield move together against an earnings-driven equity selloff, the useful question isn't whether the market liked Alphabet's quarter. It's what a 5%-plus discount rate does to a stock whose value depends heavily on cash flows a decade out.",
-      "A cap-weighted index like the S&P 500 or Nasdaq 100 assigns each constituent a weight proportional to its market capitalization, so the index's daily return is the weighted sum of its constituents' returns. Alphabet alone represents a high-single-digit percentage of both benchmarks; a 12% single-stock drop on a multi-trillion-dollar market cap therefore mechanically subtracts roughly that weight times 12% from the index return, independent of what the other 490-plus S&P names did. Layer on a rising 10-year yield \u2014 the rate used to discount a company's distant future cash flows back to present value \u2014 and a growth stock trading on 2030-and-beyond AI revenue gets hit twice: once on today's number, once on the rate used to value tomorrow's.",
-      "What most people miss is that this compounding effect is nonlinear with duration \u2014 the longer a stock's expected cash flows are pushed into the future, the more sensitive its present value is to a given change in the discount rate, much like a long-duration bond. That's why AI-capex names with minimal current free cash flow, financed instead by heavy capital spending against a multi-year payoff story, tend to fall harder than the index average on days like today, and it's the same dynamic behind 2022's historic growth-stock drawdown when the Fed hiked from near zero to over 5% in a single year. A 1-percentage-point move in the 10-year is mechanically worth far more to a 15-year cash-flow stream than to a 3-year one.",
-      "That's the lens for reading the next six weeks: every incremental AI-capex earnings report, starting with Amazon tonight, then Microsoft and Nvidia, will be judged less on the quarter itself and more on whether it moves the market's confidence in that distant payoff, while every basis point the 10-year adds on top of 5% raises the bar those payoffs have to clear. Watching index-level cap weighting alongside the Treasury curve, rather than either in isolation, is what separates 'the market fell because of bad news' from the more precise 'the market's longest-duration bets just got repriced against a higher cost of patience.'"
+      "Today's session broke a rule most people treat as fixed: gold fell 2.97% in the same hours the S&P 500 dropped 1.83% and the Nasdaq 100 dropped 3.48%, even as Treasury yields fell in a textbook flight-to-safety move. For a finance student, the natural question is why the market's two classic safe havens — gold and government bonds — split apart on the same bad day. The answer isn't that gold's fundamentals changed. It's that a sharp, sudden equity drawdown forces a different kind of selling than a typical risk-off rotation, and gold is often the first hostage.",
+      "The mechanism is leverage. Funds and institutions that hold concentrated, often-levered positions in the assets now selling off — in this case AI-capex-exposed tech — face margin calls when those positions lose value fast. A margin call demands cash immediately, and the fastest way to raise it isn't necessarily selling the losing position (which may be illiquid or down too much to sell without crystallizing a bigger loss); it's selling whatever is liquid and still profitable. Gold, after a strong multi-year run, fit that description perfectly today, so it got sold not because anyone turned bearish on gold, but because it was convenient cash.",
+      "This isn't a new phenomenon — it has a name among traders: the 'dash for cash.' It showed up starkly in October 2008, when gold fell alongside the S&P 500 for several sessions even as the financial system was clearly in crisis, and again in March 2020, when gold dropped nearly 10% in the same week equities crashed on COVID fears, before snapping back to new highs within a month once margin pressure eased. In both cases, the correlation didn't break because gold's safe-haven case was wrong — it broke because forced sellers don't get to choose what they sell based on long-term thesis; they sell what's liquid.",
+      "The practical takeaway for reading today's tape: watch whether gold's decline reverses quickly, the way it did in 2020, or persists, the way a genuine shift in safe-haven preference would. A fast reversal over the next few sessions would confirm this was forced liquidation tied to the AI-capex unwind rather than a signal that investors have stopped wanting hedges. It also means today's Treasury rally is the more reliable signal of actual risk sentiment right now — bonds absorbed the flight-to-quality flow that gold, for purely mechanical reasons, couldn't."
     ]
   }
 }
