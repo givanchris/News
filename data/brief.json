@@ -1,20 +1,20 @@
 {
-  "lastUpdated": "2026-11-02T16:30:16-06:00",
+  "lastUpdated": "2026-11-02T15:46:01-07:00",
   "market": {
     "sp500": {
-      "price": "7541",
+      "price": "7,541",
       "change": "-0.52%",
       "dir": "down"
     },
     "nasdaq": {
-      "price": "27990",
+      "price": "27,990",
       "change": "-1.39%",
       "dir": "down"
     },
     "yield": {
       "price": "4.89%",
       "change": "-3 bps",
-      "dir": "up"
+      "dir": "down"
     },
     "wti": {
       "price": "$96",
@@ -22,7 +22,7 @@
       "dir": "down"
     },
     "gold": {
-      "price": "$3957",
+      "price": "$3,957",
       "change": "+1.19%",
       "dir": "up"
     },
@@ -34,39 +34,33 @@
   },
   "stories": [
     {
+      "cat": "GEOPOLITICS",
+      "headline": "OIL CRASHES 4.49% ON U.S.-IRAN DE-ESCALATION HOPES, SPLITTING STOCKS",
+      "body": "WTI crude tumbled 4.49% to roughly $96 a barrel after reports that Washington and Tehran are nearing a framework to ease tensions, lifting energy-cost-sensitive cyclicals even as the S&P 500 slipped 0.52% and the tech-heavy Nasdaq 100 fell a sharper 1.39%. The divergence shows traders rotating out of richly valued AI-infrastructure names into the sectors that benefit most directly from cheaper crude.",
+      "explain": "Lower oil prices cut input costs for airlines, transports, and industrials while easing the inflation pipeline that feeds into Fed policy, so cyclical and value-tilted stocks typically catch a bid on days like this even when the broad tape is mixed. Mega-cap tech, by contrast, trades more on long-duration earnings assumptions and crowded positioning than on the price of a barrel of crude, so it sold off anyway as some of the year's most popular AI trades got trimmed."
+    },
+    {
+      "cat": "CENTRAL BANKS",
+      "headline": "10-YEAR YIELD EASES TO 4.89% AS TRADERS LEAN INTO A DECEMBER FED CUT",
+      "body": "The 10-year Treasury yield slipped 3 basis points to 4.89%, continuing its retreat from last month's highs, as markets priced a growing chance the Fed trims rates again at its Dec. 9 meeting. The move came ahead of next week's CPI print (Tuesday, Nov. 10), the last major inflation read before that decision.",
+      "explain": "Yields fall when bond prices rise, and prices rise when investors expect either slower growth or lower future short-term rates — both of which got a boost today from the prospect of cheaper oil feeding through into softer inflation data. A lower 10-year also lowers the discount rate used to value long-duration assets like growth stocks, which is why today's yield move and the Nasdaq's underperformance look contradictory at first glance but actually reflect two different forces — rate expectations versus a crowded-trade unwind — pulling on the same market at once."
+    },
+    {
+      "cat": "COMMODITIES",
+      "headline": "GOLD CLIMBS TO $3,957 EVEN AS THE GEOPOLITICAL RISK IT USUALLY TRACKS FADES",
+      "body": "Spot gold rose 1.19% to roughly $3,957 an ounce, extending its 2026 rally even on a day when easing Iran tensions would normally argue for less safe-haven demand. The move points to a separate driver: falling real yields and continued central-bank buying, not war risk, are what's underpinning gold right now.",
+      "explain": "Gold pays no yield, so its opportunity cost falls — making it relatively more attractive — whenever real interest rates (nominal yields minus inflation expectations) decline, which is consistent with today's drop in the 10-year. Central banks, particularly in emerging markets, have also been steady buyers for several years as a hedge against dollar-reserve concentration, a structural bid that can keep gold rising even when the day's newsflow would otherwise argue for a pullback."
+    },
+    {
       "cat": "MARKETS",
-      "headline": "AI-CAPEX ROUT DEEPENS AS NASDAQ 100 SHEDS 3.48%, S&P DROPS 1.83%",
-      "body": "A day after Alphabet's post-earnings plunge, Amazon's results extended the hyperscaler selloff, dragging the Nasdaq 100 down 3.48% to roughly 28,385 and the S&P 500 off 1.83% to about 7,580 \u2014 the worst session of the week. Traders are now pricing a second straight quarter where AI capital spending outruns the revenue showing up to justify it.",
-      "explain": "When two of the index's largest cap-weighted constituents disappoint on the same metric \u2014 cloud growth versus capex \u2014 in back-to-back days, the market stops treating it as company-specific noise and starts repricing the whole AI-infrastructure trade at once, which is why the drawdown accelerated rather than stabilized. That kind of correlated, sector-wide repricing is exactly what shows up as a sharp one-day move in a cap-weighted benchmark, since the same handful of names that drove the index up on the way in are now driving it down on the way out."
-    },
-    {
-      "cat": "COMMODITIES",
-      "headline": "GOLD TUMBLES 2.62% TO $3,899 EVEN AS STOCKS SELL OFF \u2014 A SIGN OF FORCED LIQUIDATION, NOT RISK APPETITE",
-      "body": "Spot gold fell nearly 3% to roughly $3,899 an ounce in the same session the S&P 500 lost 1.83% and the Nasdaq 100 lost 3.48% \u2014 an unusual pairing, since gold typically rallies when equities sell off. The move lines up more with funds raising cash to cover losses elsewhere than with a shift in investors' safe-haven preference.",
-      "explain": "Gold's normal role is a safe-haven hedge that gains when stocks fall, but that correlation flips during a 'dash for cash': when a leveraged portfolio takes losses on one asset, margin calls force the sale of whatever is most liquid and still has a profit cushion \u2014 often gold \u2014 regardless of that asset's own outlook. The same mechanism showed up in the 2008 crisis and March 2020, when gold fell alongside equities for days before resuming its traditional inverse relationship once the liquidity scramble eased."
-    },
-    {
-      "cat": "MACRO",
-      "headline": "10-YEAR YIELD RETREATS TO 4.93% AS TREASURIES CATCH THE FLIGHT-TO-QUALITY BID GOLD DIDN'T",
-      "body": "The 10-year Treasury yield slipped about 6 basis points to 4.93%, pulling back from last week's push above 5%, as investors rotated into government debt rather than gold while equities sold off. The divergence \u2014 bonds rallying, gold falling \u2014 shows the flight-to-safety flow is going almost exclusively into Treasuries.",
-      "explain": "Falling yields mean rising bond prices, so the drop in the 10-year is the market's conventional safe-haven response to the equity selloff \u2014 investors bidding up government debt for its credit quality and liquidity. That Treasuries, not gold, are absorbing the flow confirms the gold decline is a liquidity-driven anomaly rather than a broad repricing of risk appetite, since the two assets are supposed to move together, not apart, in a classic flight to quality."
-    },
-    {
-      "cat": "COMMODITIES",
-      "headline": "WTI HOLDS NEAR $104, DECOUPLING FROM THE EQUITY AND GOLD ROUT",
-      "body": "WTI crude was little changed, up about 0.92% to roughly $104 a barrel, essentially sitting out the broader risk-asset selloff that hit stocks and gold alike. Steady supply conditions and OPEC+ discipline are keeping oil anchored even as other markets reprice AI-capex risk.",
-      "explain": "Oil's price is driven primarily by physical supply-and-demand fundamentals \u2014 inventories, OPEC+ output quotas, refinery runs \u2014 rather than by the equity-market narrative about AI spending, so it has little reason to move just because tech earnings disappoint. That decoupling is itself informative: when a selloff doesn't spread into commodities tied to the real economy, it signals a sector-specific valuation unwind rather than a broader recession scare, which would typically hit oil demand expectations too."
-    },
-    {
-      "cat": "MACRO",
-      "headline": "DOLLAR FIRMS TO 101.88 ON DXY, ADDING A THIRD LEG TO THE RISK-OFF COMPLEX",
-      "body": "The dollar index rose 0.11% to 101.88, extending its advance as capital rotated out of risk assets and into dollar-denominated safety alongside Treasuries. A firmer dollar is itself a modest headwind for gold priced in dollars, compounding the forced-selling pressure on the metal.",
-      "explain": "The dollar tends to strengthen in a global risk-off episode because it remains the world's primary funding and reserve currency \u2014 investors and institutions unwinding leveraged positions need dollars to repay dollar-denominated liabilities, which mechanically bids the currency up. That dollar strength then feeds back into gold, which is priced in dollars, so a stronger greenback makes gold costlier for foreign buyers even before accounting for the liquidation pressure described above."
+      "headline": "DOLLAR SLIPS TO 101.78 AS RATE-CUT BETS BUILD",
+      "body": "The ICE U.S. Dollar Index eased 0.12% to 101.78, tracking the pullback in Treasury yields as traders add to bets on a December Fed cut. A softer dollar is a modest tailwind for dollar-priced commodities, including today's gold rally.",
+      "explain": "The dollar's value against other major currencies is closely tied to the interest-rate differential between the U.S. and its trading partners — when U.S. rate-cut expectations rise relative to, say, the eurozone or Japan, the yield advantage of holding dollars narrows and the currency tends to soften. That's a direct, mechanical link back to the 10-year yield move in today's brief, and it's also why dollar direction is one of the more reliable day-to-day predictors of gold's dollar-denominated price."
     },
     {
       "cat": "MCBB",
       "headline": "DIVISION I SEASON TIPS OFF MONDAY WITH NO. 1 FLORIDA HOSTING MIAMI, REIGNING CHAMP MICHIGAN ON THE ROAD",
-      "body": "Preseason No. 1 Florida opens its title defense bid Monday at 6 p.m. ET against Miami in Tampa, while reigning national champion Michigan \u2014 unranked inside the top 15 after Dusty May left for SMU \u2014 tips off on the road. Washington's own opener comes the same night against Colgate at Alaska Airlines Arena, and the Champions Classic doubleheader (Duke-Michigan State, Kansas-Kentucky) follows Nov. 10 in Chicago."
+      "body": "Preseason No. 1 Florida opens its title defense bid Monday at 6 p.m. ET against Miami in Tampa, while reigning national champion Michigan — unranked inside the top 15 after Dusty May left for SMU — tips off on the road. Washington's own opener comes the same night against Colgate at Alaska Airlines Arena, and the Champions Classic doubleheader (Duke-Michigan State, Kansas-Kentucky) follows Nov. 10 in Chicago."
     },
     {
       "cat": "NBA",
@@ -75,13 +69,13 @@
     },
     {
       "cat": "NFL",
-      "headline": "COLTS, SEAHAWKS STILL TALKING JONATHAN TAYLOR, BUT SEATTLE'S $3.8M IN CAP SPACE CLOUDS A DEAL",
-      "body": "Indianapolis remains open to moving its All-Pro back with the Nov. 10, 4 p.m. ET deadline approaching, and Seattle is among the teams that have checked in \u2014 but the Seahawks have just $3.8 million in cap room after the Nelson trade and the Christian Haynes waiver, complicating any realistic offer. Seattle hosts Chicago on Monday Night Football looking to stay alone in second place in the NFC West."
+      "headline": "GIANTS LAND J.J. McCARTHY IN TRADE WITH VIKINGS AFTER DART'S SEASON-ENDING KNEE INJURY",
+      "body": "New York acquired quarterback J.J. McCarthy from Minnesota for a 2027 fifth-round pick, filling the void left by Jaxson Dart's season-ending knee surgery, in one of several deals completed ahead of the Nov. 10, 4 p.m. ET trade deadline. Dallas also landed cornerback Joey Porter Jr. from Pittsburgh, and Baltimore added center Cam Jurgens from Philadelphia, as contenders reposition before the clock runs out."
     },
     {
       "cat": "NCAA CFB",
       "headline": "UNRANKED USC STUNS NO. 2 OHIO STATE 30-18 AS TRUE FRESHMAN FAHEY'S DEBUT FALLS SHORT",
-      "body": "True freshman Luke Fahey went 21-of-38 for 260 yards and a touchdown to Jeremiah Smith in his first career start, but Ohio State settled for four field goals and a 2-of-10 red-zone clip in the 30-18 loss at the Coliseum \u2014 the week's biggest upset. The result drops the Buckeyes outside the top 10 ahead of Tuesday's first College Football Playoff rankings, the same weekend Indiana beat Minnesota in overtime on dueling 60-yard field goals."
+      "body": "True freshman Luke Fahey went 21-of-38 for 260 yards and a touchdown to Jeremiah Smith in his first career start, but Ohio State settled for four field goals and a 2-of-10 red-zone clip in the 30-18 loss at the Coliseum — the week's biggest upset. The result drops the Buckeyes outside the top 10 ahead of Tuesday's first College Football Playoff rankings, the same weekend No. 1 Miami and No. 5 Notre Dame set up a top-five showdown for Week 10."
     }
   ],
   "sports": [
@@ -93,21 +87,21 @@
     },
     {
       "team": "WASHINGTON HUSKIES BASKETBALL",
-      "pill": "OPENS TOMORROW vs COLGATE",
+      "pill": "OPENS TONIGHT vs COLGATE",
       "pillClass": "s-up",
-      "detail": "Danny Sprinkle's Year 3 roster, with nine newcomers filling out all 15 scholarship spots, tips off the regular season Monday at Alaska Airlines Arena chasing the program's first NCAA tournament bid since 2019."
+      "detail": "Danny Sprinkle's Year 3 roster, with nine newcomers filling out all 15 scholarship spots, tips off the regular season tonight at Alaska Airlines Arena chasing the program's first NCAA tournament bid since 2019."
     },
     {
       "team": "SEATTLE SEAHAWKS",
-      "pill": "NEXT: MON. vs BEARS (MNF)",
+      "pill": "TONIGHT vs BEARS (MNF)",
       "pillClass": "s-up",
-      "detail": "4-3 and alone in 2nd place in the NFC West; Seattle has checked in on Colts RB Jonathan Taylor but carries just $3.8M in cap space after the Nelson trade and Christian Haynes waiver, clouding any deal before the Nov. 10 deadline. Hosts Chicago at Lumen Field Monday night."
+      "detail": "4-3 and alone in 2nd place in the NFC West; Seattle has checked in on Colts RB Jonathan Taylor but carries just $3.8M in cap space after the Nelson trade and Christian Haynes waiver, clouding any deal before the Nov. 10 deadline. Hosts Chicago at Lumen Field tonight, 8:15 p.m. ET."
     },
     {
       "team": "DETROIT PISTONS",
       "pill": "5-1, BEST START SINCE '15-16",
       "pillClass": "s-w",
-      "detail": "Beat Brooklyn 110-94 Friday behind Cade Cunningham's 20 points, capped by a 37-17 third quarter. Jalen Duren is out at least two weeks with a hamstring strain; Detroit is back in action Monday at Charlotte."
+      "detail": "Beat Brooklyn 110-94 Friday behind Cade Cunningham's 20 points, capped by a 37-17 third quarter. Jalen Duren is out at least two weeks with a hamstring strain; Detroit is back in action tonight at Charlotte."
     },
     {
       "team": "SEATTLE MARINERS",
@@ -118,18 +112,18 @@
   ],
   "watchlist": [
     "First College Football Playoff rankings release Tuesday, Nov. 3, 7 p.m. ET on ESPN",
-    "NFL trade deadline Tuesday, Nov. 10, 4 p.m. ET \u2014 Jonathan Taylor still the biggest name in play",
-    "Men's college basketball season tips off Monday, Nov. 2 \u2014 No. 1 Florida vs. Miami, Huskies host Colgate",
-    "Mariners managerial announcement expected this week \u2014 Espada or Kanzler",
+    "CPI report Tuesday, Nov. 10, 8:30 a.m. ET — final inflation read before the Dec. 9 FOMC decision",
+    "NFL trade deadline Tuesday, Nov. 10, 4 p.m. ET — Jonathan Taylor still the biggest name in play",
+    "Mariners managerial announcement expected this week — Espada or Kanzler",
     "Seahawks host Bears on Monday Night Football, 8:15 p.m. ET, Lumen Field"
   ],
   "deepDive": {
-    "title": "Why $3.8 Million Changes Everything: The NFL Salary Cap as a Balance-Sheet Constraint",
+    "title": "Duration Risk: Why Falling Yields Didn't Save the Nasdaq Today",
     "content": [
-      "Seattle wants Jonathan Taylor, Indianapolis is willing to deal him, and the two sides are reportedly talking \u2014 yet the single biggest obstacle isn't draft-pick value, it's a number: $3.8 million in Seahawks cap space. Unlike the NBA's trade exceptions and luxury-tax aprons, which give teams some room to absorb a bigger contract mid-transaction, the NFL's hard cap requires a team's total cap charges to fit under the league limit at the instant a trade is processed \u2014 no grace period, no partial credit. That makes a trade for an All-Pro running back less a scouting decision than a balance-sheet problem, and it's the same mechanical constraint quietly shaping every other rumored deal around the league this week.",
-      "The mechanism is straightforward bookkeeping, but it's unforgiving. Every player's cap charge is his current-year salary plus the prorated share of any signing bonus; when a team trades for a player, it inherits that full charge immediately, and the acquiring team's cap room must absorb it the moment the trade is official. Seattle's $3.8 million is what's left after absorbing the cap hit from trading for guard Quenton Nelson and the dead money from waiving running back Christian Haynes \u2014 commitments that already exist on the books and can't be waved away. There is no 'we'll figure it out after the season' in-season; the room has to exist today.",
-      "What most fans miss is that teams can defer cap pain, but never eliminate it \u2014 restructuring is refinancing, not forgiveness. Converting a player's base salary into a signing bonus lets a team prorate that money over the remaining years of his contract, shrinking this year's charge while inflating future years' obligations and dead-cap exposure if he's later cut or traded. The New Orleans Saints became the league's cautionary tale for this over the 2010s, repeatedly restructuring veteran deals to stay competitive in the short term until the accumulated future charges made their cap sheet nearly unmanageable for years afterward.",
-      "Read against tonight's brief, the parallel to this week's AI-capex selloff is almost exact: both are stories about commitments made today constraining flexibility tomorrow, whether that's a hyperscaler's multi-year capex budget or a cornerback's prorated bonus. For Seattle, acquiring Taylor almost certainly requires a correlated move \u2014 a cut, a restructure, or outgoing salary in the same trade \u2014 before the Nov. 10 deadline, not just draft-capital horse-trading. The lesson for a finance student watching trade rumors: the interesting number is never just willingness to deal, it's whether the balance sheet actually has room, and that's knowable in advance if you bother to check the cap sheet."
+      "Today's tape looks contradictory at first glance — the 10-year Treasury yield fell to 4.89%, oil crashed nearly 4.5% on Iran de-escalation hopes, and by the textbook, both of those should be unambiguously good for the Nasdaq 100's long-duration growth stocks. Instead, the Nasdaq fell 1.39%, underperforming a modestly weaker S&P 500. Understanding why requires separating two things that get conflated in everyday market commentary: the mechanical effect of a lower discount rate on a stock's valuation, and the behavioral effect of crowded positioning unwinding when a popular trade stops working. Today was mostly the second one overriding the first.",
+      "In theory, a stock's value is the present value of all its future cash flows, discounted back at a rate tied to prevailing interest rates. A company whose biggest profits are expected five-plus years out — think AI infrastructure spending — has 'long duration': its valuation is unusually sensitive to that discount rate, the same way a 30-year bond's price swings more than a 2-year note's for an identical change in yields. When the 10-year drops 3 basis points, the math says those far-out cash flows are worth slightly more today, which is why falling yields are normally a tailwind for growth stocks. That relationship held for most of the AI rally over 2024 and 2025.",
+      "What the pure duration math misses is positioning. When a trade is as crowded as mega-cap AI has been, with enormous dollar amounts concentrated in a handful of names, any catalyst that makes investors reassess the pace of earnings catching up to that capital spending can trigger outsized selling regardless of what's happening to yields that same day. The clearest precedent is the 'Magnificent Seven' wobble of mid-2024, when several of those same stocks fell on softer-than-hoped earnings even as rate-cut expectations were building — duration said buy, crowding said sell, and crowding won for several sessions before the two forces realigned.",
+      "That tension is exactly what to watch heading into next week's catalysts. If falling yields and a softer dollar start pulling capital back into long-duration names once the current round of position-trimming exhausts itself, the Nasdaq could outperform again regardless of what the Nov. 10 CPI report shows. But if CPI comes in hot enough to push the 10-year back above 5% and revive a 'higher for longer' narrative, duration and crowding would both point the same direction — down — and today's modest 1.39% dip could look tame by comparison. The rule for an economics student: don't read one session's cross-asset moves as proof a relationship has broken; wait to see which force is driving the next one."
     ]
   }
 }
