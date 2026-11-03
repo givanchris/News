@@ -78,6 +78,16 @@ details summary { cursor: pointer; color: var(--text-secondary); }
   background: var(--surface-0); color: var(--text-secondary); font-size: 13px; border-radius: 0 6px 6px 0; }
 .chart-notes { margin-top: 6px; font-size: 13px; }
 .notes li.more { color: var(--text-muted); font-size: 11px; text-transform: uppercase; letter-spacing: .05em; padding-top: 12px; }
+.desk-block { margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--border); }
+.desk h3 { font-size: 15px; margin: 0 0 6px; line-height: 1.35; }
+.desk .lead { font-size: 16px; font-weight: 600; margin: 0 0 4px; }
+.lesson-body p { margin: 0 0 9px; color: var(--text-secondary); }
+.worked { margin: 4px 0 0; padding: 9px 11px; border-left: 2px solid var(--series-2); background: var(--surface-0);
+  border-radius: 0 6px 6px 0; font-variant-numeric: tabular-nums; }
+.worked strong { display: block; font-size: 11px; text-transform: uppercase; letter-spacing: .05em; color: var(--text-muted); margin-bottom: 2px; }
+.reveal { margin-top: 6px; }
+.reveal summary { color: var(--series-1); font-size: 13px; }
+.reveal p { margin: 6px 0 0; padding: 8px 10px; background: var(--surface-0); border-radius: 6px; font-variant-numeric: tabular-nums; }
 @media (max-width: 760px) { .grid2 { grid-template-columns: 1fr; } #surface { height: 400px; } }
 </style>
 </head>
@@ -99,6 +109,31 @@ details summary { cursor: pointer; color: var(--text-secondary); }
     <p class="note" id="read-ai" hidden style="margin:-4px 0 6px"></p>
     <ul class="notes" id="read-notes"></ul>
     <p class="note" id="read-foot"></p>
+  </section>
+  <section class="card desk" id="desk" hidden>
+    <div class="controls" style="margin:0 0 6px;justify-content:space-between">
+      <h2 style="margin:0">Daily desk note</h2>
+      <select id="desk-date" aria-label="Desk note date" hidden></select>
+    </div>
+    <p class="note" id="desk-meta" style="margin:0 0 8px"></p>
+    <p class="lead" id="desk-lead" hidden></p>
+    <p class="note" id="desk-lead-note" hidden style="margin:0 0 4px"></p>
+    <div id="desk-empty" class="note" hidden></div>
+    <div id="desk-content">
+      <div class="desk-block" id="desk-watch"><h3>Across the watchlist</h3><ul class="notes" id="desk-watch-notes"></ul></div>
+      <div id="desk-body"></div>
+      <div class="desk-block" id="desk-lesson">
+        <h3 id="desk-lesson-title"></h3>
+        <div class="lesson-body" id="desk-lesson-body"></div>
+        <p class="worked" id="desk-lesson-worked"></p>
+        <p class="note" id="desk-lesson-foot"></p>
+      </div>
+      <div class="desk-block" id="desk-quiz">
+        <h3>Test yourself</h3>
+        <p id="desk-quiz-q" style="margin:0"></p>
+        <details class="reveal"><summary>Show answer</summary><p id="desk-quiz-a"></p></details>
+      </div>
+    </div>
   </section>
   <div id="warn" class="warnings" hidden><strong>Checks flagged</strong><ul id="warnlist"></ul>
     <details class="learn"><summary></summary><p id="warn-learn"></p></details></div>
@@ -148,7 +183,7 @@ details summary { cursor: pointer; color: var(--text-secondary); }
 <script id="payload" type="application/json" data-src="data/vol-surface/latest.json"></script>
 <script>
 let DATA;
-const state = { ticker: null, expiry: 0 };
+const state = { ticker: null, expiry: 0, deskDate: null };
 
 function expand(d) {
   // Website copies store quotes as arrays (see report.compact); turn them back into objects.
@@ -195,10 +230,10 @@ function layout(extra = {}) {
 }
 const CONFIG = { displayModeBar: false, responsive: true };
 
-function noteItem(item) {
+function noteItem(item, learn) {
   const li = el("li");
   li.appendChild(el("span", item.text, { class: "txt" }));
-  const lesson = (DATA.learn || {})[item.learn];
+  const lesson = (learn || DATA.learn || {})[item.learn];
   if (lesson) {
     const d = el("details", null, { class: "learn" });
     d.append(el("summary"), el("p", lesson));
@@ -207,8 +242,88 @@ function noteItem(item) {
   return li;
 }
 
-function notes(target, items) {
-  document.getElementById(target).replaceChildren(...(items || []).map(noteItem));
+function notes(target, items, learn) {
+  document.getElementById(target).replaceChildren(...(items || []).map(i => noteItem(i, learn)));
+}
+
+// ── Daily desk note (today's from DATA.desk; past days fetched from the archive) ──
+const DESK_CACHE = {};
+function deskSource() { return state.deskDate ? DESK_CACHE[state.deskDate] : DATA.desk; }
+
+function renderDesk() {
+  const box = document.getElementById("desk"), d = deskSource();
+  if (!d || !d.tickers) { box.hidden = true; return; }
+  box.hidden = false;
+  const learn = d.learn || DATA.learn || {};
+  const lessons = d.lessons || (DATA.desk || {}).lessons || {};
+  const note = d.tickers[state.ticker];
+  document.getElementById("desk-meta").textContent = state.deskDate
+    ? `${d.date} · archived note from that day's last publish`
+    : `${d.date} · rebuilt on every run; the 2:30 PM MT publish carries the day's closing note`;
+  const content = document.getElementById("desk-content"), empty = document.getElementById("desk-empty");
+  const lead = document.getElementById("desk-lead"), leadNote = document.getElementById("desk-lead-note");
+  if (!note) {
+    content.hidden = true; lead.hidden = true; leadNote.hidden = true;
+    empty.hidden = false; empty.textContent = `No desk note for ${state.ticker} on ${d.date}.`;
+    return;
+  }
+  content.hidden = false; empty.hidden = true;
+  lead.hidden = false;
+  lead.textContent = note.lead || note.headline;
+  leadNote.hidden = !note.lead;
+  leadNote.textContent = note.lead ? `AI lead (local model, no numbers allowed) · ${note.headline}` : "";
+
+  const watch = d.watchlist || [];
+  document.getElementById("desk-watch").hidden = watch.length === 0;
+  notes("desk-watch-notes", watch, learn);
+
+  document.getElementById("desk-body").replaceChildren(...note.sections.map(s => {
+    const block = el("div", null, { class: "desk-block" });
+    const ul = el("ul", null, { class: "notes" });
+    ul.append(...s.items.map(i => noteItem(i, learn)));
+    block.append(el("h3", s.title), ul);
+    return block;
+  }));
+
+  const ls = note.lesson, full = lessons[ls.key] || { body: [] };
+  document.getElementById("desk-lesson-title").textContent = "Lesson of the day: " + ls.title;
+  document.getElementById("desk-lesson-body").replaceChildren(...full.body.map(p => el("p", p)));
+  const worked = document.getElementById("desk-lesson-worked");
+  worked.hidden = !ls.worked;
+  worked.replaceChildren(el("strong", "With today's numbers"), document.createTextNode(ls.worked || ""));
+  document.getElementById("desk-lesson-foot").textContent = ls.picked_by
+    ? `Topic picked by ${ls.picked_by} (local model) from the engine's top three for today's data.`
+    : "Topic picked by the engine's rules: the concept today's data shows most clearly.";
+
+  const qz = document.getElementById("desk-quiz");
+  qz.hidden = !note.quiz;
+  if (note.quiz) {
+    document.getElementById("desk-quiz-q").textContent = note.quiz.question;
+    document.getElementById("desk-quiz-a").textContent = note.quiz.answer;
+    qz.querySelector("details").open = false;
+  }
+}
+
+function loadDeskArchive(base) {
+  const sel = document.getElementById("desk-date");
+  fetch(base + "desk/index.json?v=" + Date.now())
+    .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then(dates => {
+      if (!dates.length) return;
+      sel.replaceChildren(el("option", "Today (live)", { value: "" }), ...dates.map(dt => el("option", dt, { value: dt })));
+      sel.hidden = false;
+      sel.addEventListener("change", ev => {
+        const dt = ev.target.value;
+        if (!dt) { state.deskDate = null; renderDesk(); return; }
+        const go = () => { state.deskDate = dt; renderDesk(); };
+        if (DESK_CACHE[dt]) return go();
+        fetch(base + "desk/" + dt + ".json")
+          .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
+          .then(d => { DESK_CACHE[dt] = d; go(); })
+          .catch(() => { sel.value = state.deskDate || ""; });
+      });
+    })
+    .catch(() => {});  // no archive yet — the picker just stays hidden
 }
 
 function tile(label, value, sub) {
@@ -268,6 +383,7 @@ function render() {
       notes("read-notes", ins.overview.items);
     }
   }
+  renderDesk();
   notes("term-notes", ins ? ins.term : []);
   document.getElementById("warn-learn").textContent = (DATA.learn || {}).arbitrage || "";
 
@@ -387,6 +503,7 @@ if (payload.textContent.trim()) {
   boot(JSON.parse(payload.textContent));
 } else {
   document.getElementById("home").hidden = false;
+  loadDeskArchive(payload.dataset.src.replace(/[^/]*$/, ""));
   fetch(payload.dataset.src + "?v=" + Date.now())
     .then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
     .then(boot)
