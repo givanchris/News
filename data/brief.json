@@ -1,129 +1,59 @@
 {
-  "lastUpdated": "2026-11-03T16:30:17-06:00",
+  "lastUpdated": "2026-11-03T15:42:21-07:00",
   "market": {
-    "sp500": {
-      "price": "7569",
-      "change": "+0.35%",
-      "dir": "up"
-    },
-    "nasdaq": {
-      "price": "28180",
-      "change": "+0.66%",
-      "dir": "up"
-    },
-    "yield": {
-      "price": "4.95%",
-      "change": "+6 bps",
-      "dir": "down"
-    },
-    "wti": {
-      "price": "$97",
-      "change": "-0.33%",
-      "dir": "down"
-    },
-    "gold": {
-      "price": "$3940",
-      "change": "+0.19%",
-      "dir": "up"
-    },
-    "dxy": {
-      "price": "101.87",
-      "change": "+0.09%",
-      "dir": "up"
-    }
+    "sp500": { "price": "7,569", "change": "+0.35%", "dir": "up" },
+    "nasdaq": { "price": "28,180", "change": "+0.66%", "dir": "up" },
+    "yield": { "price": "4.95%", "change": "+6 bps", "dir": "down" },
+    "wti": { "price": "$97", "change": "-0.33%", "dir": "down" },
+    "gold": { "price": "$3,940", "change": "+0.19%", "dir": "up" },
+    "dxy": { "price": "101.87", "change": "+0.09%", "dir": "up" }
   },
   "stories": [
     {
-      "cat": "GEOPOLITICS",
-      "headline": "OIL CRASHES 4.49% ON U.S.-IRAN DE-ESCALATION HOPES, SPLITTING STOCKS",
-      "body": "WTI crude tumbled 4.49% to roughly $96 a barrel after reports that Washington and Tehran are nearing a framework to ease tensions, lifting energy-cost-sensitive cyclicals even as the S&P 500 slipped 0.52% and the tech-heavy Nasdaq 100 fell a sharper 1.39%. The divergence shows traders rotating out of richly valued AI-infrastructure names into the sectors that benefit most directly from cheaper crude.",
-      "explain": "Lower oil prices cut input costs for airlines, transports, and industrials while easing the inflation pipeline that feeds into Fed policy, so cyclical and value-tilted stocks typically catch a bid on days like this even when the broad tape is mixed. Mega-cap tech, by contrast, trades more on long-duration earnings assumptions and crowded positioning than on the price of a barrel of crude, so it sold off anyway as some of the year's most popular AI trades got trimmed."
+      "cat": "CENTRAL BANKS",
+      "headline": "FED RATE-HIKE ODDS JUMP TOWARD 85% FOR DEC. 9 AFTER HAWKISH DISSENTS, 10-YEAR TOPS 4.95%",
+      "body": "CME FedWatch pricing swung sharply this week to show roughly an 85% probability the Fed raises rates at its Dec. 9 meeting, after two FOMC members dissented in favor of a hike at the Oct. 28 meeting where the committee held its target range at 3.75%-4%. The 10-year Treasury yield climbed 6 bps to 4.95% as traders repriced away from rate cuts, citing inflation risk from elevated energy prices.",
+      "explain": "Fed funds futures embed the market's probability-weighted expectation of the policy rate, and FedWatch simply backs that probability out of the futures price; when two sitting governors dissent toward tightening, traders infer the committee's reaction function has shifted hawkish, and that repriced the whole curve within a day. A rising 10-year yield alongside rising hike odds is mechanically intuitive: investors demand more compensation to hold duration when the expected path of short rates is higher, and bond prices move inversely to yields."
     },
     {
-      "cat": "CENTRAL BANKS",
-      "headline": "10-YEAR YIELD EASES TO 4.89% AS TRADERS LEAN INTO A DECEMBER FED CUT",
-      "body": "The 10-year Treasury yield slipped 3 basis points to 4.89%, continuing its retreat from last month's highs, as markets priced a growing chance the Fed trims rates again at its Dec. 9 meeting. The move came ahead of next week's CPI print (Tuesday, Nov. 10), the last major inflation read before that decision.",
-      "explain": "Yields fall when bond prices rise, and prices rise when investors expect either slower growth or lower future short-term rates \u2014 both of which got a boost today from the prospect of cheaper oil feeding through into softer inflation data. A lower 10-year also lowers the discount rate used to value long-duration assets like growth stocks, which is why today's yield move and the Nasdaq's underperformance look contradictory at first glance but actually reflect two different forces \u2014 rate expectations versus a crowded-trade unwind \u2014 pulling on the same market at once."
+      "cat": "POLITICS",
+      "headline": "WALL STREET STAYS RANGEBOUND AS MIDTERM POLLS CLOSE, PREDICTION MARKETS PRICE 75%+ ODDS OF A DEMOCRATIC SWEEP",
+      "body": "Prediction markets priced better than 75% odds of a Democratic sweep of both chambers of Congress as polls closed Tuesday evening, a result traders are watching for its implications for fiscal policy, trade tariffs, and future Fed-board appointments. The S&P 500 held a tight band for most of the session, finishing up 0.35% at 7,569 as investors largely kept positioning steady ahead of results.",
+      "explain": "Elections move markets less through the vote itself than through the policy paths they unlock — a shift in congressional control changes the odds of extending or reversing tariff authority, spending bills, and the pace of future Fed appointments, and that shows up first in options-implied volatility rather than in the cash index before results are known. That's why today's S&P move stayed muted despite the stakes: implied vol tends to spike into a binary event and collapse once the uncertainty resolves, a classic 'vol crush' pattern."
+    },
+    {
+      "cat": "EARNINGS",
+      "headline": "CHIP RALLY LIFTS NASDAQ 100 AS AMD, ARISTA TOP FORECASTS; APPLE'S MARGIN WARNING STILL WEIGHS ON THE TAPE",
+      "body": "AMD and Arista Networks both topped Wall Street's sales estimates in results reported after Tuesday's close, sending both stocks higher in extended trading and capping a session in which chip names helped push the Nasdaq 100 up 0.66% to 28,180. The gains came one session after Apple's Nov. 2 report, in which management guided gross margin toward the high-40% range and the stock sold off, a drag that's kept pressure on the broader tape since.",
+      "explain": "Guidance, not trailing results, usually drives the stock reaction because the share price already embeds consensus expectations for the quarter just reported — what moves shares is whether forward numbers beat or miss the model, not the backward-looking print. AMD's and Arista's forecasts beating already-elevated expectations signal continued capex strength in AI infrastructure, while Apple's margin guide below its historical run rate signaled rising component and tariff-related costs eating into forward profitability, which is why the two earnings reactions pulled the index in opposite directions within the same week."
     },
     {
       "cat": "COMMODITIES",
-      "headline": "GOLD CLIMBS TO $3,957 EVEN AS THE GEOPOLITICAL RISK IT USUALLY TRACKS FADES",
-      "body": "Spot gold rose 1.19% to roughly $3,957 an ounce, extending its 2026 rally even on a day when easing Iran tensions would normally argue for less safe-haven demand. The move points to a separate driver: falling real yields and continued central-bank buying, not war risk, are what's underpinning gold right now.",
-      "explain": "Gold pays no yield, so its opportunity cost falls \u2014 making it relatively more attractive \u2014 whenever real interest rates (nominal yields minus inflation expectations) decline, which is consistent with today's drop in the 10-year. Central banks, particularly in emerging markets, have also been steady buyers for several years as a hedge against dollar-reserve concentration, a structural bid that can keep gold rising even when the day's newsflow would otherwise argue for a pullback."
+      "headline": "GOLD HOLDS NEAR $3,940 AS DOLLAR AND YIELDS FIRM INTO ELECTION NIGHT",
+      "body": "Spot gold ticked up 0.19% to roughly $3,940 an ounce even as the dollar index rose 0.09% to 101.87 and the 10-year yield climbed to 4.95% — a combination that would typically pressure gold, given it pays no yield. WTI crude slipped 0.33% to about $97 a barrel, holding near multi-month highs on an elevated geopolitical risk premium.",
+      "explain": "Gold normally trades inversely to real yields and the dollar because higher rates raise the opportunity cost of holding a non-yielding asset, so today's simultaneous gains in gold, yields, and the dollar point to a separate bid — likely safe-haven positioning around election-night uncertainty and continued central-bank buying — temporarily overriding the usual relationship. Crude's pullback near $97 still keeps it a live input into next week's CPI print, since energy costs flow directly into both headline inflation and the inflation expectations the Fed is now citing as a reason to weigh another hike."
     },
     {
       "cat": "MARKETS",
-      "headline": "DOLLAR SLIPS TO 101.78 AS RATE-CUT BETS BUILD",
-      "body": "The ICE U.S. Dollar Index eased 0.12% to 101.78, tracking the pullback in Treasury yields as traders add to bets on a December Fed cut. A softer dollar is a modest tailwind for dollar-priced commodities, including today's gold rally.",
-      "explain": "The dollar's value against other major currencies is closely tied to the interest-rate differential between the U.S. and its trading partners \u2014 when U.S. rate-cut expectations rise relative to, say, the eurozone or Japan, the yield advantage of holding dollars narrows and the currency tends to soften. That's a direct, mechanical link back to the 10-year yield move in today's brief, and it's also why dollar direction is one of the more reliable day-to-day predictors of gold's dollar-denominated price."
-    },
-    {
-      "cat": "MCBB",
-      "headline": "DIVISION I SEASON TIPS OFF MONDAY WITH NO. 1 FLORIDA HOSTING MIAMI, REIGNING CHAMP MICHIGAN ON THE ROAD",
-      "body": "Preseason No. 1 Florida opens its title defense bid Monday at 6 p.m. ET against Miami in Tampa, while reigning national champion Michigan \u2014 unranked inside the top 15 after Dusty May left for SMU \u2014 tips off on the road. Washington's own opener comes the same night against Colgate at Alaska Airlines Arena, and the Champions Classic doubleheader (Duke-Michigan State, Kansas-Kentucky) follows Nov. 10 in Chicago."
-    },
-    {
-      "cat": "NBA",
-      "headline": "WEMBANYAMA POURS IN 43 AS SPURS ROUT TIMBERWOLVES FOR FOURTH STRAIGHT WIN",
-      "body": "San Antonio's Victor Wembanyama scored 43 points with six blocks and seven rebounds in a 121-111 win over Minnesota, extending the Spurs' winning streak to four games and keeping him squarely in the early MVP conversation. Elsewhere Sunday, Memphis improved to a league-best 6-0 with a 136-105 rout of Sacramento."
-    },
-    {
-      "cat": "NFL",
-      "headline": "GIANTS LAND J.J. McCARTHY IN TRADE WITH VIKINGS AFTER DART'S SEASON-ENDING KNEE INJURY",
-      "body": "New York acquired quarterback J.J. McCarthy from Minnesota for a 2027 fifth-round pick, filling the void left by Jaxson Dart's season-ending knee surgery, in one of several deals completed ahead of the Nov. 10, 4 p.m. ET trade deadline. Dallas also landed cornerback Joey Porter Jr. from Pittsburgh, and Baltimore added center Cam Jurgens from Philadelphia, as contenders reposition before the clock runs out."
-    },
-    {
-      "cat": "NCAA CFB",
-      "headline": "UNRANKED USC STUNS NO. 2 OHIO STATE 30-18 AS TRUE FRESHMAN FAHEY'S DEBUT FALLS SHORT",
-      "body": "True freshman Luke Fahey went 21-of-38 for 260 yards and a touchdown to Jeremiah Smith in his first career start, but Ohio State settled for four field goals and a 2-of-10 red-zone clip in the 30-18 loss at the Coliseum \u2014 the week's biggest upset. The result drops the Buckeyes outside the top 10 ahead of Tuesday's first College Football Playoff rankings, the same weekend No. 1 Miami and No. 5 Notre Dame set up a top-five showdown for Week 10."
+      "headline": "S&P 500, NASDAQ 100 EKE OUT GAINS AS TRADERS LOOK PAST ELECTION NOISE TO THIS WEEK'S JOBS DATA",
+      "body": "The S&P 500 added 0.35% to 7,569 and the Nasdaq 100 rose 0.66% to 28,180 Tuesday, with chip-sector strength offsetting Apple-related weakness, while the 10-year yield's climb to 4.95% capped gains in rate-sensitive sectors. Attention now turns to Thursday's jobs report and next week's CPI release, the last major data points before the Fed's Dec. 9 decision.",
+      "explain": "With rate-hike odds now the dominant market narrative, upcoming data carries outsized weight because each print can swing the Fed-funds-futures-implied probability by double digits in a single session — a hot CPI would likely push hike odds further above 85%, while a soft print could unwind much of today's yield move. That data dependency is exactly why volatility tends to cluster around scheduled releases rather than trading randomly through the month."
     }
   ],
-  "sports": [
-    {
-      "team": "WASHINGTON HUSKIES FOOTBALL",
-      "pill": "W 17-10 AT NEBRASKA",
-      "pillClass": "s-w",
-      "detail": "Chris Lawson's 25-yard go-ahead touchdown catch with 1:30 left and Alex McLaughlin's 48-yard pick-six off Anthony Colandrea's third interception sealed it; both teams finish 5-3 (2-3 Big Ten). Next: Saturday vs. Penn State at Husky Stadium."
-    },
-    {
-      "team": "WASHINGTON HUSKIES BASKETBALL",
-      "pill": "OPENS TONIGHT vs COLGATE",
-      "pillClass": "s-up",
-      "detail": "Danny Sprinkle's Year 3 roster, with nine newcomers filling out all 15 scholarship spots, tips off the regular season tonight at Alaska Airlines Arena chasing the program's first NCAA tournament bid since 2019."
-    },
-    {
-      "team": "SEATTLE SEAHAWKS",
-      "pill": "TONIGHT vs BEARS (MNF)",
-      "pillClass": "s-up",
-      "detail": "4-3 and alone in 2nd place in the NFC West; Seattle has checked in on Colts RB Jonathan Taylor but carries just $3.8M in cap space after the Nelson trade and Christian Haynes waiver, clouding any deal before the Nov. 10 deadline. Hosts Chicago at Lumen Field tonight, 8:15 p.m. ET."
-    },
-    {
-      "team": "DETROIT PISTONS",
-      "pill": "5-1, BEST START SINCE '15-16",
-      "pillClass": "s-w",
-      "detail": "Beat Brooklyn 110-94 Friday behind Cade Cunningham's 20 points, capped by a 37-17 third quarter. Jalen Duren is out at least two weeks with a hamstring strain; Detroit is back in action tonight at Charlotte."
-    },
-    {
-      "team": "SEATTLE MARINERS",
-      "pill": "OFFSEASON",
-      "pillClass": "s-l",
-      "detail": "A managerial hire between finalists Joe Espada and Jason Kanzler is expected within days, with president of baseball ops Jerry Dipoto and GM Justin Hollander making the call before the GM meetings; the club has already added CJ Gillman as hitting coach."
-    }
-  ],
+  "sports": [],
   "watchlist": [
-    "First College Football Playoff rankings release Tuesday, Nov. 3, 7 p.m. ET on ESPN",
-    "CPI report Tuesday, Nov. 10, 8:30 a.m. ET \u2014 final inflation read before the Dec. 9 FOMC decision",
-    "NFL trade deadline Tuesday, Nov. 10, 4 p.m. ET \u2014 Jonathan Taylor still the biggest name in play",
-    "Mariners managerial announcement expected this week \u2014 Espada or Kanzler",
-    "Seahawks host Bears on Monday Night Football, 8:15 p.m. ET, Lumen Field"
+    "Nonfarm payrolls Thursday, Nov. 5, 8:30 AM ET — first clean jobs read since shutdown-delayed data",
+    "CPI release Tuesday, Nov. 10 — last major inflation print before the Dec. 9 FOMC decision",
+    "FOMC meeting Dec. 9 — CME FedWatch pricing roughly 85% odds of a quarter-point hike",
+    "Midterm election results finalize control of Congress, with implications for fiscal and trade policy"
   ],
   "deepDive": {
-    "title": "Duration Risk: Why Falling Yields Didn't Save the Nasdaq Today",
+    "title": "How Fed Funds Futures Turn a Vote Into a Probability",
     "content": [
-      "Today's tape looks contradictory at first glance \u2014 the 10-year Treasury yield fell to 4.89%, oil crashed nearly 4.5% on Iran de-escalation hopes, and by the textbook, both of those should be unambiguously good for the Nasdaq 100's long-duration growth stocks. Instead, the Nasdaq fell 1.39%, underperforming a modestly weaker S&P 500. Understanding why requires separating two things that get conflated in everyday market commentary: the mechanical effect of a lower discount rate on a stock's valuation, and the behavioral effect of crowded positioning unwinding when a popular trade stops working. Today was mostly the second one overriding the first.",
-      "In theory, a stock's value is the present value of all its future cash flows, discounted back at a rate tied to prevailing interest rates. A company whose biggest profits are expected five-plus years out \u2014 think AI infrastructure spending \u2014 has 'long duration': its valuation is unusually sensitive to that discount rate, the same way a 30-year bond's price swings more than a 2-year note's for an identical change in yields. When the 10-year drops 3 basis points, the math says those far-out cash flows are worth slightly more today, which is why falling yields are normally a tailwind for growth stocks. That relationship held for most of the AI rally over 2024 and 2025.",
-      "What the pure duration math misses is positioning. When a trade is as crowded as mega-cap AI has been, with enormous dollar amounts concentrated in a handful of names, any catalyst that makes investors reassess the pace of earnings catching up to that capital spending can trigger outsized selling regardless of what's happening to yields that same day. The clearest precedent is the 'Magnificent Seven' wobble of mid-2024, when several of those same stocks fell on softer-than-hoped earnings even as rate-cut expectations were building \u2014 duration said buy, crowding said sell, and crowding won for several sessions before the two forces realigned.",
-      "That tension is exactly what to watch heading into next week's catalysts. If falling yields and a softer dollar start pulling capital back into long-duration names once the current round of position-trimming exhausts itself, the Nasdaq could outperform again regardless of what the Nov. 10 CPI report shows. But if CPI comes in hot enough to push the 10-year back above 5% and revive a 'higher for longer' narrative, duration and crowding would both point the same direction \u2014 down \u2014 and today's modest 1.39% dip could look tame by comparison. The rule for an economics student: don't read one session's cross-asset moves as proof a relationship has broken; wait to see which force is driving the next one."
+      "Today's brief leans on one number that would have sounded strange a few weeks ago: an 85% probability the Fed hikes rates on Dec. 9, derived from the CME FedWatch tool, with the 10-year yield already up 6 bps to 4.95% in response. For a finance student, the interesting part isn't that the Fed might raise rates — it's that a committee vote and two dissents got translated, within hours, into a single precise percentage that moved the entire Treasury curve. Understanding how that number is built explains why markets react so fast to Fed-adjacent news, and why today's yield move is not an overreaction but a mechanical repricing.",
+      "FedWatch doesn't survey anyone; it extracts probability from 30-day Fed funds futures prices. Each contract's price equals 100 minus the average effective fed funds rate the market expects for that delivery month, so a contract priced at 95.80 implies an expected average rate of 4.20%. Because the Fed only moves in known increments — typically 25 bps — and only at scheduled meetings, the tool can solve a simple weighted-average equation: if the current rate is 4.00% and the futures-implied rate for the December contract is 4.21%, the market must be pricing roughly an 84% chance of a 25 bp hike and a 16% chance of no move, since 0.84 × 4.25% + 0.16 × 4.00% ≈ 4.21%. That arithmetic, not a poll or a model, is where today's 85% figure comes from.",
+      "What most people miss is how sensitive that number is to the composition of a vote, not just its outcome. The Fed held rates steady on Oct. 28, but Governor Lisa Cook and Cleveland Fed President Beth Hammack dissented in favor of a hike — a hawkish dissent, where officials wanted tighter policy than the majority delivered. Markets treat dissents as information about the committee's future reaction function: a 10-2 vote with hawkish dissenters signals the center of gravity on the FOMC has shifted, even though the policy rate itself didn't change that day. A similar dynamic played out in 2022, when hawkish commentary from regional Fed presidents repeatedly moved futures-implied hike odds well before any actual rate decision, underscoring that FedWatch prices expectations about the committee, not just its last action.",
+      "That mechanism is exactly why Thursday's jobs report and next week's CPI print matter so much more than an ordinary data release. Each print gets fed back into the same futures pricing: a hot CPI number raises the market's implied probability that the Fed needs to hike to contain inflation, which should push the December-contract price down and the implied rate up, mechanically dragging the 10-year yield higher again. A soft print does the reverse. Because the probability is a continuous, market-derived number rather than a fixed forecast, it will keep moving — sometimes by ten points in a single session — right up until the Dec. 9 decision itself removes the uncertainty it was pricing."
     ]
   }
 }
