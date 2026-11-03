@@ -432,6 +432,9 @@
     .brief-sidebar {
       padding: 1.75rem 1.5rem 1.75rem 1.75rem;
     }
+    .brief-body.no-sidebar { grid-template-columns: 1fr; }
+    .brief-body.no-sidebar .brief-sidebar { display: none; }
+    .brief-body.no-sidebar .brief-main { border-right: none; }
 
     .sidebar-section-label {
       font-family: 'IBM Plex Mono', ui-monospace, monospace;
@@ -946,16 +949,12 @@
       </div>
     </div>
 
-    <!-- RIGHT: EDITORIAL (live feed mode only) + SPORTS + HOLDINGS -->
+    <!-- RIGHT: EDITORIAL (live feed mode only) -->
     <div class="brief-sidebar">
       <div id="editorial-sidebar-wrapper" style="display:none; margin-bottom:1.5rem;">
         <div class="sidebar-section-label">4:30 PM Editorial</div>
         <div id="brief-stories-sidebar"><p class="brief-no-data">Runs at 4:30 PM MT daily</p></div>
       </div>
-
-      <div class="sidebar-section-label">Scoreboard</div>
-      <div id="brief-sports"><p class="brief-no-data">—</p></div>
-      <div id="brief-sports-headlines"></div>
     </div>
 
   </div>
@@ -1045,6 +1044,8 @@
     var esw  = document.getElementById('editorial-sidebar-wrapper');
     var sub  = document.getElementById('brief-subtitle-text');
     var tab  = document.getElementById('nav-tab-feed');
+    var body = document.querySelector('.brief-body');
+    if (body) body.classList.toggle('no-sidebar', !live);
 
     if (live) {
       if (rnw) rnw.style.display = 'block';
@@ -1223,37 +1224,6 @@
     // Stories — render to both slots; visibility is controlled by applyTimeGate()
     renderMainStories(d.stories);
     renderSidebarStories(d.stories, document.getElementById('brief-stories-sidebar'));
-
-    // Sports
-    var sportsEl = document.getElementById('brief-sports');
-    if (sportsEl && d.sports && d.sports.length) {
-      sportsEl.innerHTML = d.sports.map(function(s) {
-        return '<div class="sport-item">'
-          + '<div class="sport-name">' + esc(s.team)
-          + ' <span class="s-pill ' + esc(s.pillClass) + '">' + esc(s.pill) + '</span></div>'
-          + '<div class="sport-detail">' + esc(s.detail) + '</div>'
-          + '</div>';
-      }).join('');
-    } else if (sportsEl) {
-      sportsEl.innerHTML = '<p class="brief-no-data">—</p>';
-    }
-
-    // National sports headlines
-    var shEl = document.getElementById('brief-sports-headlines');
-    if (shEl) {
-      if (d.sportsHeadlines && d.sportsHeadlines.length) {
-        shEl.innerHTML = '<div style="margin-top:1rem; padding-top:0.75rem; border-top:1px solid rgba(255,255,255,0.07);">'
-          + '<div class="sidebar-section-label" style="margin-bottom:0.6rem;">Top Headlines</div>'
-          + d.sportsHeadlines.slice(0, 4).map(function(h) {
-              return '<div style="font-size:0.76rem;color:rgba(255,255,255,0.45);line-height:1.5;padding:0.45rem 0;border-bottom:1px solid rgba(255,255,255,0.04);">'
-                + (h.league ? '<span style="font-family:\'IBM Plex Mono\',mono;font-size:0.55rem;color:var(--blue2);letter-spacing:0.06em;margin-right:0.4rem;">' + esc(h.league) + '</span>' : '')
-                + esc(h.title) + '</div>';
-            }).join('')
-          + '</div>';
-      } else {
-        shEl.innerHTML = '';
-      }
-    }
 
     // Watchlist bar
     var watchEl = document.getElementById('brief-watchlist');
@@ -1441,12 +1411,11 @@
 
     var live = isRollingNewsActive();
 
-    // Always fetch brief/markets/sports/holdings; only fetch headlines in live mode
+    // Always fetch brief/markets/holdings; only fetch headlines in live mode
     var fetches = [
       live ? tryFetch('data/headlines.json') : Promise.resolve(null),
       tryFetch('data/brief.json'),
       tryFetch('data/markets.json'),
-      tryFetch('data/sports.json'),
       tryFetch('data/holdings.json')
     ];
 
@@ -1454,8 +1423,7 @@
       var headlines = results[0];
       var brief     = results[1];
       var markets   = results[2];
-      var sports    = results[3];
-      var holdings  = results[4];
+      var holdings  = results[3];
 
       renderHoldings(holdings);
 
@@ -1469,10 +1437,6 @@
           if (markets.lastUpdated && markets.lastUpdated > (merged.lastUpdated || '')) {
             merged.lastUpdated = markets.lastUpdated;
           }
-        }
-        if (sports) {
-          if (sports.teams && sports.teams.length)         merged.sports = sports.teams;
-          if (sports.headlines && sports.headlines.length) merged.sportsHeadlines = sports.headlines;
         }
         renderBrief(merged);
       } else if (markets) {
