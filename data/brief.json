@@ -1,20 +1,20 @@
 {
-  "lastUpdated": "2026-11-05T16:30:17-06:00",
+  "lastUpdated": "2026-11-05T15:41:04-07:00",
   "market": {
     "sp500": {
-      "price": "7354",
+      "price": "7,354",
       "change": "-4.36%",
       "dir": "down"
     },
     "nasdaq": {
-      "price": "26630",
+      "price": "26,630",
       "change": "-6.36%",
       "dir": "down"
     },
     "yield": {
       "price": "4.84%",
       "change": "-6 bps",
-      "dir": "up"
+      "dir": "down"
     },
     "wti": {
       "price": "$91",
@@ -22,7 +22,7 @@
       "dir": "up"
     },
     "gold": {
-      "price": "$4098",
+      "price": "$4,098",
       "change": "-1.25%",
       "dir": "down"
     },
@@ -34,50 +34,57 @@
   },
   "stories": [
     {
-      "cat": "POLITICS",
-      "headline": "DEMOCRATS SWEEP MIDTERMS, DOW SURGES 3% IN BEST SESSION SINCE APRIL 2025 AS ELECTION UNCERTAINTY CLEARS",
-      "body": "Democrats won control of both the House and a projected 54-44 Senate majority in Tuesday's midterms, prompting the Dow to jump roughly 3% to about 53,356 and the S&P 500 to add 1.59% to 7,689 Wednesday, its best day in over a year. Apple and Microsoft both touched record highs as traders priced in a reduced path for further tariff escalation and a check on unilateral executive trade actions.",
-      "explain": "Equity markets dislike unresolved binary risk more than any specific outcome, so the rally reflects the removal of two-sided uncertainty as much as any particular policy view; implied volatility, which tends to spike ahead of a closely watched vote and collapse once the result is known, unwound sharply as the outcome became clear. A Democratic Congress also constrains the executive's ability to expand tariffs unilaterally and gives Senate Democrats a voice in future Fed Board confirmations, both of which traders read as reducing tail risk to the policy outlook even though near-term rate uncertainty is unresolved."
-    },
-    {
-      "cat": "COMMODITIES",
-      "headline": "WTI CRUDE PLUNGES 8.1% TO $88 AS IRAN DE-ESCALATION HOPES COMPOUND AN ELECTION-DRIVEN RISK UNWIND",
-      "body": "WTI crude cratered 8.10% to roughly $88 a barrel and Brent fell about 8.7% to near $94.62, one of the sharpest one-day drops in months, as reports that the Iran conflict could wind down further combined with a broader unwind of political risk premium following Tuesday's midterm results. The move ranks among crude's largest single-session declines since the ceasefire scare earlier this year.",
-      "explain": "Oil's price embeds a forward-looking risk premium for potential supply disruption, chiefly the risk that escalation restricts flows through the Strait of Hormuz, which carries roughly a fifth of global seaborne oil, and that premium gets priced into futures instantly even though no barrel of actual supply has changed yet. When the market reassesses the probability of disruption downward, as it did today on de-escalation hopes, the premium can unwind within a single session, producing an outsized price move that reflects a probability repricing rather than any shift in current production or inventories."
-    },
-    {
-      "cat": "CENTRAL BANKS",
-      "headline": "10-YEAR YIELD SLIPS 6 BPS TO 4.89% EVEN AS FED HOLDS NEAR 85% ODDS OF A DEC. 9 RATE HIKE",
-      "body": "The 10-year Treasury yield eased 6 bps to 4.89% Wednesday even though CME FedWatch pricing continued to show roughly 85% odds the Fed raises rates at its Dec. 9 meeting, as traders weighed a Democratic Congress's capacity to check both further tariff-driven inflation risk and future executive pressure on the Fed. The move came alongside crude's 8% plunge, which also eased the energy-driven inflation argument behind this week's hawkish repricing.",
-      "explain": "The 10-year yield compensates investors for three things: the expected path of short-term rates, expected inflation, and a term premium for uncertainty, and today's drop shows the inflation and term-premium components falling even as the near-term policy-rate expectation stayed hawkish. A Democratic Congress reduces the odds of additional tariff passthrough into prices and of political interference with Fed independence, while crude's slide directly lowers near-term inflation expectations, so both factors pulled down the non-policy components of the yield even as rate-hike odds held near 85%."
+      "cat": "MARKETS",
+      "headline": "S&P 500 SINKS 4.36%, NASDAQ 100 ENTERS CORRECTION IN WORST AI-DRIVEN SELLOFF SINCE MARCH 2020",
+      "body": "The S&P 500 fell 4.36% to 7,354 and the Nasdaq 100 dropped 6.36% to 26,630, its worst session since the pandemic crash, erasing all of Wednesday's post-midterm rally in a single day. The Philadelphia Semiconductor Index (SOX) plunged roughly 12%, also its worst day since March 2020, as investors dumped AI infrastructure names across the board.",
+      "explain": "Wednesday's rally priced in reduced policy risk from a clean midterm outcome, but Thursday's reversal shows the market re-pricing a different risk: that a Democratic Congress means tighter scrutiny of AI data-center buildout, power consumption, and antitrust exposure for the hyperscalers funding it. Because so much of the AI trade's valuation sits in cash flows years out, even a modest rise in the perceived odds of slower buildout forces a disproportionately large markdown in present value, which is why the Nasdaq 100 fell nearly 50% more than the S&P 500 on the same day."
     },
     {
       "cat": "EARNINGS",
-      "headline": "MEGA-CAP TECH POWERS RALLY AS APPLE, MICROSOFT HIT RECORD HIGHS; CVS SINKS 12.5% ON WEAK GUIDANCE",
-      "body": "Apple and Microsoft both closed at record highs Wednesday as large-cap tech led the broad post-election rally, while McDonald's jumped about 6.5% on an earnings beat and CVS Health slid roughly 12.5% after disappointing results weighed on the health-insurance and pharmacy-benefits complex. Nvidia was a laggard within the otherwise strong tape, slipping even as the Nasdaq 100 added 0.91% to 28,437.",
-      "explain": "The dispersion within today's rally, mega-caps at records while Nvidia lags and CVS craters, shows a broad macro tailwind of reduced political risk and falling yields lifting the median stock while idiosyncratic, earnings-specific news still dominates individual names; CVS's drop reflects a company-specific margin or reimbursement problem that a market-wide rally can't offset. That dispersion matters for index investors because today's S&P and Nasdaq gains are a blend of genuine macro re-rating and mechanical index-weight effects from a handful of record-setting mega-caps."
+      "headline": "CHIP STOCKS LEAD THE ROUT: AMD DROPS 17%, NVIDIA FALLS 9%, QUALCOMM AND ARM SINK ON WEAK OUTLOOKS",
+      "body": "Advanced Micro Devices fell about 17% and Nvidia dropped roughly 9%, dragging the SOX index down 12%, after Qualcomm and Arm Holdings both issued underwhelming forward guidance in Wednesday-night earnings. Neoclouds CoreWeave and Nebius, which rent out AI compute capacity, slid about 10% and 15% respectively as the selling spread from chipmakers to the infrastructure layer built on top of them.",
+      "explain": "Qualcomm and Arm's guidance matters less for its own numbers than for what it implies about the next leg of chip demand, since both companies sit upstream of the smartphone and data-center buildout that has anchored the AI trade's growth story. When bellwether suppliers signal decelerating orders, algorithmic and momentum strategies tend to sell the entire supply chain at once rather than wait to confirm the slowdown name by name, which is why the damage cascaded from chipmakers into neoclouds that have no direct earnings link to Qualcomm or Arm."
+    },
+    {
+      "cat": "POLITICS",
+      "headline": "DEMOCRATIC MIDTERM SWEEP TURNS FROM TAILWIND TO HEADWIND AS INVESTORS PRICE IN AI REGULATION RISK",
+      "body": "Tuesday's Democratic sweep of the House and a projected 54-44 Senate lifted stocks Wednesday on reduced trade-policy uncertainty, but by Thursday the same result was being read as a threat to the AI buildout, as traders weighed incoming Democratic state governors pausing data-center permits and tighter federal scrutiny of AI power demand. Palantir and CrowdStrike, both widely held AI-adjacent software names, fell more than 10% on the reassessment.",
+      "explain": "A single election result can carry offsetting implications for different parts of the market, and today's reversal shows the AI-capex trade losing out to the trade-policy relief that drove Wednesday's gain. The mechanism is the same one behind Wednesday's rally, just flipped: traders are repricing the probability that a Democratic Congress constrains a specific growth driver, here data-center permitting and AI oversight, rather than reassessing the economy's near-term fundamentals, which is why the reversal hit AI-linked names far harder than the broader market."
+    },
+    {
+      "cat": "CENTRAL BANKS",
+      "headline": "10-YEAR YIELD SLIPS 6 BPS TO 4.84% AS FLIGHT-TO-SAFETY BID OFFSETS 85% ODDS OF A DEC. 9 HIKE",
+      "body": "The 10-year Treasury yield eased 6 bps to 4.84% even as CME FedWatch pricing continued to show roughly 85% odds of a quarter-point hike at the Fed's Dec. 9 meeting, as the equity rout drove safe-haven demand for government debt. The move is notable because a rate hike that's still priced at 85% would ordinarily keep yields elevated or rising, not falling.",
+      "explain": "Treasury yields compensate investors for the expected policy-rate path, inflation, and a term premium for uncertainty, and today's drop shows the flight-to-safety component overwhelming the policy-rate component for one session. A sharp, broad-based equity selloff typically triggers reflexive buying of Treasurys as the default safe asset regardless of what the Fed is expected to do weeks later, so yields can fall even while hike odds hold steady, a divergence that tends to close quickly once the immediate risk-off impulse fades."
     },
     {
       "cat": "COMMODITIES",
-      "headline": "GOLD RISES 2.7% TO $4,072 AS SAFE-HAVEN DEMAND PERSISTS DESPITE A RISK-ON RALLY AND A FLAT DOLLAR",
-      "body": "Spot gold climbed 2.66% to roughly $4,072 an ounce Wednesday even as equities rallied sharply and the dollar index was essentially flat, up just 0.07% to 101.53, an unusual combination since gold typically underperforms when risk appetite and real yields both improve. The move suggests continued central-bank and institutional buying is overriding the metal's normal correlation to the dollar and Treasury yields in the near term.",
-      "explain": "Gold ordinarily trades inversely to real yields and the dollar because higher rates and a stronger dollar raise the opportunity cost of holding a non-yielding, non-dollar-denominated asset, so a simultaneous equity rally, falling yields, and a roughly flat dollar should be a mixed-to-negative setup for bullion. Today's gain instead points to a structural bid, likely continued central-bank reserve diversification and hedging against longer-run fiscal and political uncertainty, large enough to override the usual short-term correlation, a pattern that has recurred repeatedly through 2026 as official-sector gold buying has stayed elevated."
+      "headline": "OIL JUMPS 5.2% TO $91 ON RENEWED MIDDLE EAST RISK PREMIUM EVEN AS EQUITIES CRATER",
+      "body": "WTI crude rose 5.24% to about $91 a barrel, a sharp reversal from this week's de-escalation-driven slide, as renewed concern over the durability of any Iran wind-down reintroduced supply-disruption risk into the price. The move is unusual timing-wise, since oil typically falls alongside equities in a broad risk-off session rather than rallying against it.",
+      "explain": "Oil's price embeds a forward-looking premium for the probability that conflict disrupts flows through chokepoints like the Strait of Hormuz, and that premium can swing in either direction within a single session as headlines shift the market's read on disruption odds, independent of what is happening in equities. Today's rally shows the commodity-specific geopolitical risk channel dominating the macro risk-off channel that would normally pull oil down with stocks, underscoring that crude's 2026 moves have been driven more by headline-to-headline probability repricing than by actual changes in supply or demand."
+    },
+    {
+      "cat": "MARKETS",
+      "headline": "APPLOVIN SURGES 30% ON EARNINGS, A LONE BRIGHT SPOT AS AI-ADJACENT NAMES ARE SOLD INDISCRIMINATELY",
+      "body": "AppLovin jumped nearly 30% after beating on both revenue and profit, standing out against a tape where Tesla fell roughly 10% and most AI-linked software and chip names were down double digits regardless of their own fundamentals. Retail investors sold a reported $358 million of equities, their heaviest single-day selling since 2020.",
+      "explain": "AppLovin's gain against the grain shows that company-specific earnings quality still matters even inside a macro-driven selloff, since its results gave investors a concrete reason to buy rather than a narrative to fear. The broader pattern, heavy, indiscriminate selling across AI-adjacent names regardless of individual balance sheets, is the hallmark of a sentiment-and-positioning-driven unwind rather than a fundamentals-driven repricing, which is also why record retail selling volume is a useful signal: it shows the deleveraging reaching even the buy-the-dip cohort that had been a reliable source of support all year."
     }
   ],
   "sports": [],
   "watchlist": [
-    "Nonfarm payrolls Friday, Nov. 6, 8:30 AM ET \u2014 October jobs data",
-    "CPI release Tuesday, Nov. 10 \u2014 last major inflation print before the Dec. 9 FOMC decision",
-    "FOMC meeting Dec. 9 \u2014 CME FedWatch pricing roughly 85% odds of a quarter-point hike",
-    "Incoming Democratic House and Senate majorities take shape, with early focus on government funding talks and future Fed Board appointments"
+    "Nonfarm payrolls Friday, Nov. 6, 8:30 AM ET — October jobs data, first major release after today's AI-driven selloff",
+    "CPI release Tuesday, Nov. 10 — last major inflation print before the Dec. 9 FOMC decision",
+    "FOMC meeting Dec. 9 — CME FedWatch pricing roughly 85% odds of a quarter-point hike",
+    "Remaining Q3 earnings from hyperscalers and chipmakers — watch capex guidance for signs of a genuine AI-spending pullback versus a sentiment-driven overreaction",
+    "SOX semiconductor index technical retest after its worst session since March 2020"
   ],
   "deepDive": {
-    "title": "What an 8% One-Day Oil Crash Reveals About the Geopolitical Risk Premium",
+    "title": "Why Chip Stocks Fell 3x Harder Than the Market: Duration Risk in the AI Trade",
     "content": [
-      "Today's brief leans on one of the sharpest single-session commodity moves in months: WTI crude fell 8.1% to about $88 a barrel and Brent dropped roughly 8.7%, on nothing more than reports that the Iran conflict could be winding down. No tanker loaded, no pipeline reopened, no inventory data changed between Tuesday's close and Wednesday's. For a finance student, that's the interesting part: an 8% move on a probability reassessment, not a supply-and-demand fact, is a clean window into how much of crude's price was never about barrels in the ground at all, but about the market's estimate of what might happen to them.",
-      "That estimate is called a geopolitical risk premium, and it works like an embedded option. Oil traders price in the probability-weighted cost of disruption scenarios, chiefly the risk that escalation closes or restricts the Strait of Hormuz, through which roughly a fifth of global seaborne crude transits daily. Analysts typically back this premium out by comparing the spot price to a model-implied 'fundamental' price built from inventories, OPEC+ spare capacity, and demand data; the gap between the two is attributed to risk. When new information shifts the probability of disruption, that gap can close almost instantly, because futures markets reprice continuously while physical supply adjusts only over weeks or months.",
-      "What's easy to miss is how unevenly these premiums unwind depending on whether the underlying risk is a threat or a fact. In 1990, oil spiked over 100% on the Gulf War threat and unwound almost as fast once the ground war resolved quickly, because the premium had been pricing a worst case that didn't materialize. By contrast, the 2022 Russia-Ukraine premium persisted for over a year, because sanctions and rerouted trade flows were a structural, not threatened, change to supply. Today's 8% move looks closer to the 1990 pattern: a threat-based premium unwinding on reduced probability, not a reaction to any actual change in flows.",
-      "That distinction connects directly to this week's Fed debate. Energy prices feed straight into headline CPI and into the inflation-expectations components that have been cited as part of the case for an 85%-priced December hike. A sustained unwind of oil's risk premium would mechanically lower near-term inflation prints and breakeven rates, giving the Fed more room to stay on hold even if other price pressures persist. The next test is whether crude's drop holds through next week's CPI release; if the ceasefire talk reverses, so does part of the disinflationary case the bond market priced in today."
+      "Today's brief centers on a lopsided move: the S&P 500 fell 4.36% while the Philadelphia Semiconductor Index (SOX) plunged roughly 12%, nearly three times the broad market's decline, on the same day and the same news. Nvidia, AMD, CoreWeave, and Nebius, companies with no shared earnings report that day, all fell together, while a company like AppLovin that actually beat estimates rallied 30%. For a finance student, the gap between the index-level move and the chip-sector move is the real story, and it has a precise name: duration risk.",
+      "Equity duration works like bond duration, measuring how sensitive a stock's present value is to changes in the discount rate or in the timing of its cash flows. A mature, profitable company earning most of its cash now has low duration; a company whose valuation depends on data-center capacity, power contracts, and chip demand materializing over the next five to ten years has high duration. In a simplified Gordon-growth framing, value equals expected cash flow divided by the discount rate minus the growth rate, so when growth is priced in far out and skewed to the high end, small changes in either the discount rate or the perceived probability of that growth arriving produce outsized swings in present value, exactly the mechanism behind AMD's 17% drop and Nvidia's 9% drop on a single news catalyst.",
+      "What's easy to miss is that the trigger here wasn't new legislation; nothing restricting AI data centers has actually been enacted. The move was a probability repricing, the market raising its estimate that a Democratic Congress and incoming state governors will eventually constrain permitting, power use, or antitrust exposure for the hyperscalers funding the buildout. That is structurally similar to 2000, when Cisco fell more than 80% from its peak over the following two years not because its revenue collapsed immediately, but because the market had priced in a growth trajectory that required near-perfect execution for decades, and any doubt about that trajectory forced a severe markdown even while the underlying business kept growing.",
+      "That same duration lens explains why Friday's payrolls, next week's CPI, and the Dec. 9 FOMC decision matter disproportionately for chip and AI-infrastructure stocks from here, more than for the index as a whole. Each of those releases feeds directly into the discount-rate assumption embedded in every long-duration AI valuation: a soft jobs number that lowers hike odds would mechanically ease the pressure on exactly the stocks that fell hardest today, while a hot CPI print would compound it. Understanding duration is what lets you separate a stock-specific regulatory scare, which may fade once nothing is actually enacted, from a genuine repricing of the discount rate, which would not."
     ]
   }
 }
