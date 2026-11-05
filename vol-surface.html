@@ -74,6 +74,11 @@ details summary { cursor: pointer; color: var(--text-secondary); }
 .learn summary::-webkit-details-marker { display: none; }
 .learn summary::before { content: "Learn ▸"; }
 .learn[open] summary::before { content: "Learn ▾"; }
+.learn.today summary::before { content: "What this means today ▸"; }
+.learn.today[open] summary::before { content: "What this means today ▾"; }
+.learn p.means { border-left-color: var(--series-2); color: var(--text-primary); background: var(--surface-0); }
+.learn p.concept { margin-top: 4px; }
+.learn p.concept strong { display: block; font-size: 11px; text-transform: uppercase; letter-spacing: .05em; color: var(--text-muted); }
 .learn p { margin: 6px 0 2px; padding: 8px 10px; border-left: 2px solid var(--series-1);
   background: var(--surface-0); color: var(--text-secondary); font-size: 13px; border-radius: 0 6px 6px 0; }
 .chart-notes { margin-top: 6px; font-size: 13px; }
@@ -234,7 +239,17 @@ function noteItem(item, learn) {
   const li = el("li");
   li.appendChild(el("span", item.text, { class: "txt" }));
   const lesson = (learn || DATA.learn || {})[item.learn];
-  if (lesson) {
+  if (item.means) {
+    // Day-specific read first; the general concept underneath for reference.
+    const d = el("details", null, { class: "learn today" });
+    d.append(el("summary"), el("p", item.means, { class: "means" }));
+    if (lesson) {
+      const c = el("p", null, { class: "concept" });
+      c.append(el("strong", "The concept"), document.createTextNode(lesson));
+      d.appendChild(c);
+    }
+    li.appendChild(d);
+  } else if (lesson) {
     const d = el("details", null, { class: "learn" });
     d.append(el("summary"), el("p", lesson));
     li.appendChild(d);
@@ -364,8 +379,8 @@ function render() {
     const n = ins.overview.narration, ai = document.getElementById("read-ai");
     const facts = ins.overview.items.concat(ins.term);
     document.getElementById("read-foot").textContent = n
-      ? "Only the bold line is AI: a local model picks the framing and the order of the facts, and may not write numbers. Every line below is the engine's own sentence, built from today's data with fixed rules. Open \"Learn\" on any line for the concept behind it."
-      : "Written by the engine from today's numbers with fixed rules — no AI. Open \"Learn\" on any line for the concept behind it.";
+      ? "Only the bold line is AI: a local model picks the framing and the order of the facts, and may not write numbers. Every line below is the engine's own sentence, built from today's data with fixed rules. Open \"What this means today\" on any line for a plain-English read of it."
+      : "Written by the engine from today's numbers with fixed rules — no AI. Open \"What this means today\" on any line for a plain-English read of it.";
     if (n) {
       document.getElementById("read-headline").textContent = n.lead;
       ai.hidden = false;
