@@ -28,6 +28,11 @@ class YFinanceProvider(Provider):
         if hist is None or hist.empty:
             return None
 
+        # Yahoo can return a trailing row with no close. Use the last real one.
+        hist = hist.dropna(subset=["Close"])
+        if hist.empty:
+            return None
+
         last = hist.iloc[-1]
         price = float(last["Close"])
         if len(hist) >= 2:

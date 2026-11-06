@@ -100,3 +100,9 @@ positive GEX, put OI is negative (matches the page's own "dealers net short puts
 calls" assumption). The profile snapshot writes to `data/options/gamma.json`;
 `src/charts/gamma.py::generate()` reads it back and redraws `charts/gamma.svg`. No
 history is kept (unlike put/call) — it's a same-day snapshot each run, not a trend chart.
+
+## Strict JSON rule (added 2026-11-05)
+
+- Yahoo can return blank closing prices. Python's `json` accepts `NaN`, but browsers reject it and the
+  whole dashboard shows "Data load failed." Providers skip rows with no close, and every snapshot writes
+  through `storage/snapshots.py::_to_json`, which turns non-finite values into `null`.

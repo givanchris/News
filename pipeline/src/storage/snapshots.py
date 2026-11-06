@@ -7,17 +7,34 @@
 """
 from __future__ import annotations
 import json
+import math
 from pathlib import Path
 from typing import Any
 
 from .. import config
 
 
+def _finite(value: Any) -> Any:
+    """Recursively replace NaN/Infinity with None; they are not valid JSON."""
+    if isinstance(value, float) and not math.isfinite(value):
+        return None
+    if isinstance(value, dict):
+        return {k: _finite(v) for k, v in value.items()}
+    if isinstance(value, (list, tuple)):
+        return [_finite(v) for v in value]
+    return value
+
+
+def _to_json(payload: Any) -> str:
+    """Serialize strict JSON so browsers can always parse what we publish."""
+    return json.dumps(_finite(payload), indent=2, default=str, allow_nan=False)
+
+
 # ── latest snapshot ──────────────────────────────────────────────────────
 def write_latest(payload: dict[str, Any]) -> Path:
     config.OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     path = config.OUTPUT_DIR / "latest.json"
-    path.write_text(json.dumps(payload, indent=2, default=str))
+    path.write_text(_to_json(payload))
     return path
 
 
@@ -51,7 +68,7 @@ def append_ticker_history(ticker: str, snapshot: dict[str, Any]) -> Path:
     tdir.mkdir(parents=True, exist_ok=True)
     path = tdir / f"{ticker}.json"
     history = _upsert_by_date(read_ticker_history(ticker), snapshot)
-    path.write_text(json.dumps(history, indent=2, default=str))
+    path.write_text(_to_json(history))
     return path
 
 
@@ -76,7 +93,7 @@ def append_sectors_history(date: str, sectors: list[dict]) -> Path:
     config.OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     path = config.OUTPUT_DIR / "sectors.json"
     history = _upsert_by_date(_read_list(path), {"date": date, "sectors": sectors})
-    path.write_text(json.dumps(history, indent=2, default=str))
+    path.write_text(_to_json(history))
     return path
 
 
@@ -89,7 +106,7 @@ def append_indices_history(date: str, indices: list[dict]) -> Path:
     config.OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     path = config.OUTPUT_DIR / "indices.json"
     history = _upsert_by_date(_read_list(path), {"date": date, "indices": indices})
-    path.write_text(json.dumps(history, indent=2, default=str))
+    path.write_text(_to_json(history))
     return path
 
 
@@ -108,7 +125,7 @@ def read_gamma_snapshot() -> dict | None:
 def write_gamma_snapshot(payload: dict[str, Any]) -> Path:
     config.OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     path = config.OUTPUT_DIR / "gamma.json"
-    path.write_text(json.dumps(payload, indent=2, default=str))
+    path.write_text(_to_json(payload))
     return path
 
 
@@ -124,5 +141,5 @@ def append_vix_history(date: str, vix: dict, term: list[dict]) -> Path:
         "term": term,
     }
     history = _upsert_by_date(_read_list(path), record)
-    path.write_text(json.dumps(history, indent=2, default=str))
+    path.write_text(_to_json(history))
     return path
