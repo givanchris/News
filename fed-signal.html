@@ -963,10 +963,10 @@
           <img src="charts/yield_curve.svg" alt="US Treasury par yield curve now versus six months ago, positively sloped after a long inversion" loading="lazy" style="width:100%;height:auto;display:block" />
         </div>
         <p class="viz-note">
-          The Fed's last cut landed the range at <strong>3.50–3.75%</strong> in Dec 2025; every meeting since has
-          been a hold, three of them (Apr, Jun, Jul) carrying hawkish dissents pushing for a hike. The curve has
-          stayed <strong>positively sloped</strong> post-inversion, but the front end is now the more volatile end —
-          Jackson Hole alone moved the 2Y more than the 10Y.
+          After five holds at 3.50–3.75%, the Fed hiked <strong>+25 bp to 3.75–4.00%</strong> on Sep 16, 2026 —
+          its first hike since 2023 — then held in October with two dissents (Cook, Hammack) for another hike. The curve
+          has stayed <strong>positively sloped</strong>, with the 10Y now above 5%; Fed days alternate between
+          front-end-led flattening (Sep) and long-end-led steepening (Jul, Oct).
         </p>
       </div>
 
@@ -980,9 +980,9 @@
           <img src="charts/fed_path.svg" alt="Bar chart of market-implied probability of a rate hike by each upcoming FOMC meeting, rising into 2027" loading="lazy" style="width:100%;height:auto;display:block" />
         </div>
         <p class="viz-note">
-          Futures-implied odds of a <strong>hike</strong> by each meeting — the real print here is
-          <strong>60.4% for September</strong>, up from ~56% before Warsh's Jackson Hole speech. Further-out
-          meetings shown are illustrative, extrapolating the current hawkish momentum.
+          Snapshot from <strong>Sep 1, 2026</strong>, before the September hike: futures priced
+          <strong>60.4% for September</strong>, up from ~56% before Warsh's Jackson Hole speech — and the hike was
+          delivered. Further-out meetings shown are illustrative; this chart has not been refreshed for December pricing.
         </p>
       </div>
 
@@ -999,31 +999,31 @@
         <div class="cmp-cols">
           <div class="cmp-col">
             <div class="cmp-meta">
-              <span class="cmp-date">Jun 17, 2026</span>
+              <span class="cmp-date">Sep 16, 2026</span>
               <span class="stance hawkish">hawkish</span>
-              <span class="decision-cell hold">Hold</span>
+              <span class="decision-cell hike">+25 bp</span>
             </div>
             <p class="cmp-line">
-              Warsh's inaugural meeting as Chair. Statement slashed from ~341 to ~130 words —
-              <span class="del">all forward guidance and balance-of-risks language</span> stripped, replaced with
-              <span class="ins">"This Committee will deliver price stability."</span>
+              First hike since 2023. Middle East reference broadened to <span class="chg">"geopolitical developments"</span>;
+              the <span class="del">supply-shock/energy explanation for inflation</span> dropped, and
+              <span class="ins">"Today's policy action will support a timelier return to the Committee's 2 percent goal"</span> added.
             </p>
             <p class="cmp-line" style="color:var(--muted);font-size:0.82rem;">
-              Dot plot flipped to an implied hike; 2Y +15 bp — largest Fed-day move since March 2008. Unanimous 12–0.
+              Unanimous 12–0. 16 of 18 dots see another 2026 hike; 2Y +7 bp vs 10Y +1 bp (bear-flattening).
             </p>
           </div>
           <div class="cmp-col">
             <div class="cmp-meta">
-              <span class="cmp-date">Jul 29, 2026</span>
+              <span class="cmp-date">Oct 28, 2026</span>
               <span class="stance hawkish">hawkish</span>
               <span class="decision-cell hold">Hold</span>
             </div>
             <p class="cmp-line">
-              Statement expanded back out — <span class="ins">full economic-activity and labor-market description restored</span>,
-              including reinstated Middle East uncertainty language — while keeping June's price-stability declaration.
+              Growth upgraded from "solid" to <span class="chg">"strong pace"</span>; the September hike rationale
+              <span class="del">removed</span> and replaced with <span class="ins">"The accumulation of more information will help the Committee determine the policy stance appropriate…"</span>
             </p>
             <p class="cmp-line" style="color:var(--muted);font-size:0.82rem;">
-              9–3 vote: Hammack, Kashkari, Logan dissented for a hike. 30Y yield hit its highest since 2007.
+              10–2 vote: Cook (first dissent since 2022) and Hammack wanted +25 bp. 2Y −3 bp vs 10Y +6 bp (bear-steepening).
             </p>
           </div>
         </div>
@@ -1204,7 +1204,7 @@
 
 <script>
 (() => {
-  const DATA_URL = 'data/fed-meetings.json?v=20260901';
+  const DATA_URL = 'data/fed-meetings.json?v=20261109';
   const $ = sel => document.querySelector(sel);
 
   const esc = s => String(s == null ? '' : s)

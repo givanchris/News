@@ -4,7 +4,7 @@
     "description": "Curated FOMC meeting log cross-referencing statement language shifts with rate outcomes and Treasury-market reactions.",
     "author": "Christopher Givan",
     "methodology": "Same-day (2pm statement to 3pm close) yield changes sourced from Treasury.gov H.15 series and cross-checked against Fed statement archive. Stance reflects the statement + SEP composite, not just the decision. This dataset is curated by hand — not an automated feed.",
-    "last_curated": "2026-09-01",
+    "last_curated": "2026-11-09",
     "coverage": "Selected inflection meetings from the 2022 hiking cycle through the 2026 Warsh-era hold cycle, plus Jackson Hole symposium speeches."
   },
   "meetings": [
@@ -673,7 +673,7 @@
         }
       ],
       "decision": "Hold",
-      "next_decision": "Hike risk rising (Sep 2026)",
+      "next_decision": "+25 bp (Sep 2026)",
       "dissents": [
         {
           "name": "Hammack",
@@ -693,6 +693,89 @@
       "curve_bp": 9,
       "curve_direction": "steepening",
       "notes": "30-year yield hit its highest level since 2007 the same day. The 2Y/10Y split (front end down, long end up) reads as the market pricing near-term patience against rising longer-run inflation risk premium — not a dovish signal despite the front-end dip. Three consecutive meetings (Apr, Jun, Jul) have now carried hawkish dissents pushing for tighter policy, the longest such stretch since 1992–94. Sourced from federalreserve.gov statement text and CNBC/CNN Fed-day coverage; H.15 cross-check pending."
+    },
+    {
+      "id": "2026-09",
+      "date": "2026-09-16",
+      "target_range": "3.75–4.00%",
+      "stance": "hawkish",
+      "statement_summary": "First rate hike since July 2023: +25 bp to 3.75–4.00%, approved 12–0 — even the July hawks' dissent became the consensus. The statement stayed in Warsh-era compact form but swapped the explicit Middle East reference for broader ‘geopolitical developments’ and added a resilient-spending clause. The inflation paragraph was cut to ‘Inflation remains elevated,’ dropping the supply-shock/energy explanation, and a new line framed the hike as supporting ‘a timelier return’ to 2 percent. SEP: 16 of 18 participants see at least one more hike in 2026; 2026 PCE raised to 3.7% (core 3.4%), unemployment lowered to 4.1%.",
+      "phrase_changes": [
+        {
+          "type": "changed",
+          "phrase": "While uncertainty remains elevated owing, in part, to geopolitical developments, domestic spending has been resilient."
+        },
+        {
+          "type": "changed",
+          "phrase": "Productivity growth is strong, and capital investment is robust."
+        },
+        {
+          "type": "removed",
+          "phrase": "in part reflecting supply shocks that have driven price increases in certain sectors, including energy"
+        },
+        {
+          "type": "added",
+          "phrase": "Today's policy action will support a timelier return to the Committee's 2 percent goal."
+        },
+        {
+          "type": "retained",
+          "phrase": "The Committee will deliver price stability."
+        }
+      ],
+      "decision": "+25 bp",
+      "next_decision": "Hold (Oct 2026)",
+      "dissents": [],
+      "y2_bp": 7,
+      "y10_bp": 1,
+      "curve_bp": -6,
+      "curve_direction": "flattening",
+      "notes": "Bear-flattener: 2Y +7 bp to 4.74% vs 10Y +1 bp to 5.01%. Markets had ~60% hike odds after Jackson Hole, so the hike itself was not a shock — the front end moved on the dots signaling more to come. Warsh: inflation has been ‘too high … for too long’; the standard of confidence that underlying inflation is moving to target ‘has not been satisfied.’ Fourth straight meeting with a hawkish tilt. Statement text from federalreserve.gov; yield moves are close-to-close changes from Treasury.gov daily par yield curve."
+    },
+    {
+      "id": "2026-10",
+      "date": "2026-10-28",
+      "target_range": "3.75–4.00%",
+      "stance": "hawkish",
+      "statement_summary": "Hold at 3.75–4.00% after September's hike, but a 10–2 vote: Governor Lisa Cook and Cleveland's Beth Hammack dissented for another +25 bp. Cook's was her first dissent since joining the Board in 2022 and a rare governor dissent. The text upgraded growth from ‘solid’ to ‘strong pace’ and replaced September's hike rationale with a wait-and-see line about ‘the accumulation of more information.’ The Fed also announced that from 2027 one of its eight meetings will be strategy-only, with no rate vote or statement.",
+      "phrase_changes": [
+        {
+          "type": "changed",
+          "phrase": "Economic activity is expanding at a strong pace."
+        },
+        {
+          "type": "removed",
+          "phrase": "Today's policy action will support a timelier return to the Committee's 2 percent goal."
+        },
+        {
+          "type": "added",
+          "phrase": "The accumulation of more information will help the Committee determine the policy stance appropriate to ensure a timely return of inflation to the Committee's 2 percent goal."
+        },
+        {
+          "type": "retained",
+          "phrase": "Inflation remains elevated."
+        },
+        {
+          "type": "retained",
+          "phrase": "The Committee will deliver price stability."
+        }
+      ],
+      "decision": "Hold",
+      "next_decision": "Dec 9, 2026 (pending)",
+      "dissents": [
+        {
+          "name": "Cook",
+          "preference": "+25 bp"
+        },
+        {
+          "name": "Hammack",
+          "preference": "+25 bp"
+        }
+      ],
+      "y2_bp": -3,
+      "y10_bp": 6,
+      "curve_bp": 9,
+      "curve_direction": "steepening",
+      "notes": "Bear-steepener: 2Y −3 bp to 4.67% while 10Y +6 bp to 5.05% — a replay of July's split, with the front end relieved by the pause and the long end pricing a stronger growth/inflation outlook (‘strong pace’). Warsh called policy ‘tighter, but not tight’ and said politics played ‘no role’ ahead of the midterms. Principal's Seema Shah expects a December hike; Jefferies' Thomas Simons declined to label the communication hawkish or dovish. Statement text from federalreserve.gov; yield moves are close-to-close changes from Treasury.gov daily par yield curve."
     }
   ],
   "predictive_phrases": [
