@@ -948,7 +948,7 @@
     <h2 class="section-heading">THE MARKET CONTEXT</h2>
     <p style="font-size:0.95rem;color:var(--muted);line-height:1.75;max-width:700px;margin-bottom:2rem;">
       The reaction data in the log only means something against the curve and the path the market is
-      pricing. <span class="illus-flag">Representative levels · current hold-to-hike-risk cycle</span>
+      pricing. <span class="illus-flag">Market data as of Nov 9, 2026 · hiking cycle resumed</span>
     </p>
 
     <div class="viz-grid">
@@ -957,16 +957,17 @@
       <div class="viz-card">
         <div class="viz-card-head">
           <span class="viz-card-title">Treasury Yield Curve</span>
-          <span class="viz-card-tag">Now vs 6M ago</span>
+          <span class="viz-card-tag">Nov 9 vs May 8</span>
         </div>
         <div class="viz-figure">
-          <img src="charts/yield_curve.svg" alt="US Treasury par yield curve now versus six months ago, positively sloped after a long inversion" loading="lazy" style="width:100%;height:auto;display:block" />
+          <img src="charts/yield_curve.svg" alt="US Treasury par yield curve on Nov 9, 2026 versus May 8, 2026, shifted up roughly 50 to 65 basis points through the 10-year" loading="lazy" style="width:100%;height:auto;display:block" />
         </div>
         <p class="viz-note">
           After five holds at 3.50–3.75%, the Fed hiked <strong>+25 bp to 3.75–4.00%</strong> on Sep 16, 2026 —
           its first hike since 2023 — then held in October with two dissents (Cook, Hammack) for another hike. The curve
-          has stayed <strong>positively sloped</strong>, with the 10Y now above 5%; Fed days alternate between
-          front-end-led flattening (Sep) and long-end-led steepening (Jul, Oct).
+          has shifted up ~50–65 bp out to the 10Y in six months (30Y +31 bp) and <strong>flattened</strong> (2s10s +32 bp, from +48 bp in May) as
+          the front end reprices hikes; the 10Y is at 4.88%. Fed days alternate between front-end-led flattening (Sep)
+          and long-end-led steepening (Jul, Oct).
         </p>
       </div>
 
@@ -977,12 +978,13 @@
           <span class="viz-card-tag">By meeting</span>
         </div>
         <div class="viz-figure">
-          <img src="charts/fed_path.svg" alt="Bar chart of market-implied probability of a rate hike by each upcoming FOMC meeting, rising into 2027" loading="lazy" style="width:100%;height:auto;display:block" />
+          <img src="charts/fed_path.svg" alt="Bar chart of market-implied probability that the fed funds rate is above 3.75–4.00% by each FOMC meeting: 77% by December 2026 rising to 94% by June 2027" loading="lazy" style="width:100%;height:auto;display:block" />
         </div>
         <p class="viz-note">
-          Snapshot from <strong>Sep 1, 2026</strong>, before the September hike: futures priced
-          <strong>60.4% for September</strong>, up from ~56% before Warsh's Jackson Hole speech — and the hike was
-          delivered. Further-out meetings shown are illustrative; this chart has not been refreshed for December pricing.
+          Cumulative odds the rate is <strong>above today's 3.75–4.00%</strong> by each meeting. CME FedWatch put a
+          December hike at <strong>76.8%</strong> on Nov 6, up from 66.9% a week earlier after a strong October jobs
+          report. 2027 bars are futures-implied (~1.8 hikes priced in total). The last snapshot here — 60.4% for
+          September, after Jackson Hole — was delivered.
         </p>
       </div>
 
@@ -1204,7 +1206,7 @@
 
 <script>
 (() => {
-  const DATA_URL = 'data/fed-meetings.json?v=20261109';
+  const DATA_URL = 'data/fed-meetings.json?v=20261109b';
   const $ = sel => document.querySelector(sel);
 
   const esc = s => String(s == null ? '' : s)
