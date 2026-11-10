@@ -96,6 +96,26 @@ details summary { cursor: pointer; color: var(--text-secondary); }
 .reveal summary { color: var(--series-1); font-size: 13px; }
 .reveal p { margin: 6px 0 0; padding: 8px 10px; background: var(--surface-0); border-radius: 6px; font-variant-numeric: tabular-nums; }
 
+.chat-status { font-size: 12px; color: var(--text-muted); margin-bottom: 8px; }
+.chat-status.offline { color: var(--series-2); }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px; }
+.chips button { font: inherit; font-size: 12px; padding: 4px 10px; border-radius: 999px; border: 1px solid var(--border);
+  background: var(--surface-0); color: var(--text-secondary); cursor: pointer; }
+.chips button[disabled] { opacity: .5; cursor: default; }
+.chat-log { background: var(--surface-0); border: 1px solid var(--border); border-radius: 8px; padding: 10px 12px;
+  max-height: 420px; overflow: auto; white-space: pre-wrap; }
+.chat-log:empty { display: none; }
+.chat-turn { margin-bottom: 10px; }
+.chat-turn .who { font-size: 11px; text-transform: uppercase; letter-spacing: .05em; color: var(--text-muted); }
+.chat-turn.err .text { color: var(--series-2); }
+.chat-turn .src { font-size: 11px; color: var(--text-muted); }
+.chat-form { display: flex; gap: 8px; margin-top: 8px; }
+.chat-form input { flex: 1; min-width: 0; font: inherit; padding: 8px 10px; border-radius: 6px; border: 1px solid var(--border);
+  background: var(--surface-1); color: var(--text-primary); }
+.chat-form button { font: inherit; padding: 8px 14px; border-radius: 6px; border: 1px solid var(--text-primary);
+  background: var(--text-primary); color: var(--surface-1); cursor: pointer; }
+.chat-form button[disabled] { opacity: .5; cursor: default; }
+
 @media (max-width: 760px) { .grid2 { grid-template-columns: 1fr; } #surface { height: 400px; } }
 </style>
 </head>
@@ -142,6 +162,20 @@ details summary { cursor: pointer; color: var(--text-secondary); }
         <details class="reveal"><summary>Show answer</summary><p id="desk-quiz-a"></p></details>
       </div>
     </div>
+  </section>
+
+  <section class="card chat" id="chat">
+    <h2>Ask about this surface</h2>
+    <p class="note" style="margin:0 0 8px">A small local model answers from this page's engine output for the ticker you're viewing. It explains; it doesn't predict direction or give advice.</p>
+    <div class="chat-status" id="chat-status">checking assistant…</div>
+    <div class="chips" id="chat-chips"></div>
+    <div class="chat-log" id="chat-log" aria-live="polite"></div>
+    <form class="chat-form" id="chat-form" autocomplete="off">
+      <input id="chat-q" maxlength="2000" placeholder="Ask about skew, the term structure, Greeks…" required>
+      <button id="chat-send" type="submit">Ask</button>
+    </form>
+    <div id="chat-ts" aria-label="bot check"></div>
+    <p class="note">Questions go through a relay to a model on a home server and are not stored. One question at a time, a few per minute.</p>
   </section>
 
   <div id="warn" class="warnings" hidden><strong>Checks flagged</strong><ul id="warnlist"></ul>
@@ -538,6 +572,157 @@ if (payload.textContent.trim()) {
       box.textContent = "Couldn't load vol surface data (" + err.message + "). It updates a few times each trading day.";
     });
 }
+</script>
+
+<script>window.__turnstileReady = false; window.onTurnstileLoad = function () { window.__turnstileReady = true; };</script>
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit&onload=onTurnstileLoad" async defer></script>
+<script>
+(() => {
+  const RELAY_ORIGIN = "https://news-chat-relay.givanchris.workers.dev";
+  const TURNSTILE_SITE_KEY = "0x4AAAAAAE5stCGTHYmDo4Rq";
+  const TURNSTILE_ACTION = "news-chat";        // must match the Worker's TURNSTILE_ACTION
+  const MAX_HISTORY_TURNS = 6, MAX_HISTORY_CHARS = 3000;
+  const FOCUS_RE = /^[A-Z]{1,6}$/;             // mirrors datasets.FOCUS_PATTERN
+  const $ = (id) => document.getElementById(id);
+  const statusEl = $("chat-status"), logEl = $("chat-log"), form = $("chat-form"),
+        input = $("chat-q"), send = $("chat-send"), chips = $("chat-chips");
+  const history = [];
+  let busy = false, offline = false, widgetId = null, pendingResolve = null, healthTimer = null, historyTicker = null;
+
+  function viewing() {
+    try { return (typeof state === "object" && state && FOCUS_RE.test(state.ticker)) ? state.ticker : null; }
+    catch { return null; }
+  }
+  function lock(on) {
+    send.disabled = on || offline; input.disabled = on;
+    chips.querySelectorAll("button").forEach((b) => { b.disabled = on || offline; });
+  }
+  function turn(who, text, cls) {
+    const d = document.createElement("div"); d.className = "chat-turn" + (cls ? " " + cls : "");
+    const w = document.createElement("div"); w.className = "who"; w.textContent = who;
+    const t = document.createElement("div"); t.className = "text"; t.textContent = text;
+    const s = document.createElement("div"); s.className = "src";
+    d.appendChild(w); d.appendChild(t); d.appendChild(s);
+    logEl.appendChild(d); logEl.scrollTop = logEl.scrollHeight; return { d, t, s };
+  }
+  function setOffline(msg) {
+    offline = true; statusEl.textContent = msg || "assistant offline — the rest of the page still works";
+    statusEl.className = "chat-status offline"; lock(busy);
+    clearTimeout(healthTimer); healthTimer = setTimeout(checkHealth, 30000);
+  }
+  function setReady() {
+    offline = false; clearTimeout(healthTimer); healthTimer = null;
+    statusEl.textContent = "assistant ready"; statusEl.className = "chat-status"; lock(busy);
+  }
+  async function checkHealth() {
+    try {
+      const r = await fetch(RELAY_ORIGIN + "/health", { cache: "no-store" });
+      const j = await r.json();
+      if (j.status === "ok") setReady();
+      else if (j.status === "degraded") setOffline("assistant temporarily unavailable — checking again soon");
+      else setOffline();
+    } catch { setOffline(); }
+  }
+
+  const tsReady = () => window.__turnstileReady === true && window.turnstile && typeof turnstile.render === "function";
+  function waitForTurnstile(ms) {
+    return new Promise((resolve) => { const t0 = Date.now(); (function poll() {
+      if (tsReady()) return resolve(true);
+      if (Date.now() - t0 > ms) return resolve(false); setTimeout(poll, 100); })(); });
+  }
+  function settle(v) { if (pendingResolve) { const r = pendingResolve; pendingResolve = null; r(v); } }
+  function ensureWidget() {
+    if (widgetId !== null) return true;
+    if (!tsReady()) return false;
+    widgetId = turnstile.render("#chat-ts", {
+      sitekey: TURNSTILE_SITE_KEY, action: TURNSTILE_ACTION, execution: "execute", appearance: "interaction-only",
+      callback: (token) => settle(token),
+      "error-callback": () => settle(null), "expired-callback": () => settle(null),
+    });
+    return true;
+  }
+  function getToken() {
+    return new Promise(async (resolve) => {
+      if (!(await waitForTurnstile(8000)) || !ensureWidget()) return resolve(null);
+      pendingResolve = resolve;
+      try { turnstile.reset(widgetId); turnstile.execute(widgetId); } catch { pendingResolve = null; resolve(null); }
+      setTimeout(() => { if (pendingResolve === resolve) { pendingResolve = null; resolve(null); } }, 30000);
+    });
+  }
+  function boundedHistory() {
+    const h = history.slice(-MAX_HISTORY_TURNS); let total = h.reduce((n, t) => n + t.content.length, 0);
+    while (h.length && total > MAX_HISTORY_CHARS) { for (let i = 0; i < 2 && h.length; i++) total -= h.shift().content.length; }
+    return h;
+  }
+
+  async function ask(message) {
+    busy = true; lock(true);
+    const focus = viewing();
+    // A conversation is about one ticker; switching tabs starts a fresh context.
+    if (focus !== historyTicker) { history.length = 0; historyTicker = focus; }
+    turn(focus ? "you · " + focus : "you", message);
+    const a = turn("assistant", "checking…");
+    let answer = "", meta = null, completed = false, failed = false;
+    const fail = (msg) => { failed = true; a.d.className += " err"; a.t.textContent = msg; };
+    try {
+      const token = await getToken();
+      if (!token) return fail("Bot check did not complete. Please try again.");
+      a.t.textContent = "";
+      const body = { message, history: boundedHistory(), datasets: ["volsurface"], turnstile: token };
+      if (focus) body.focus = focus;
+      const r = await fetch(RELAY_ORIGIN + "/chat/stream", {
+        method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body),
+      });
+      if (r.status === 429) return fail("Too many questions — please wait a minute.");
+      if (r.status === 403 || r.status === 503 || r.status === 504) {
+        let d = r.status === 403 ? "Verification failed. Please try again." : "The assistant is unavailable right now.";
+        try { d = (await r.json()).detail || d; } catch {}
+        fail(d); if (r.status === 503) checkHealth(); return;
+      }
+      if (!r.ok || !r.body) return fail("Request failed (" + r.status + ").");
+      const reader = r.body.getReader(), dec = new TextDecoder(); let buf = "";
+      for (;;) {
+        const { value, done } = await reader.read(); if (done) break;
+        buf += dec.decode(value, { stream: true });
+        let i; while ((i = buf.indexOf("\n\n")) >= 0) {
+          const frame = buf.slice(0, i); buf = buf.slice(i + 2);
+          const ev = (frame.match(/^event: (\w+)/m) || [])[1]; const dl = (frame.match(/^data: (.*)$/m) || [])[1];
+          if (!ev || dl === undefined) continue; let data = {}; try { data = JSON.parse(dl); } catch {}
+          if (ev === "token") { answer += data.t || ""; a.t.textContent = answer; logEl.scrollTop = logEl.scrollHeight; }
+          else if (ev === "meta") meta = data;
+          else if (ev === "error") fail(data.detail || "error");
+          else if (ev === "done") { completed = true; a.s.textContent = "from: " + ((meta && meta.datasets_used) || []).join(", ") + " · " + (data.total_s || "?") + "s"; }
+        }
+      }
+      if (failed) return;
+      if (!completed) return fail("Connection ended before the answer finished. Please try again.");
+      if (!answer) return fail("The assistant returned no answer. Please try again.");
+      history.push({ role: "user", content: message }, { role: "assistant", content: answer });
+      while (history.length > MAX_HISTORY_TURNS) history.shift();
+    } catch {
+      fail("Connection lost."); checkHealth();
+    } finally { busy = false; lock(false); input.focus(); }
+  }
+
+  const SUGGESTIONS = [
+    (t) => `What is the put skew telling me about ${t} today?`,
+    (t) => `Explain ${t}'s term structure in plain English.`,
+    (t) => `Walk me through today's ${t} desk quiz step by step.`,
+    (t) => `What does implied vs realized vol mean for ${t} right now?`,
+  ];
+  SUGGESTIONS.forEach((make) => {
+    const b = document.createElement("button"); b.type = "button";
+    const label = () => make(viewing() || "this ticker");
+    b.textContent = label();
+    b.addEventListener("click", () => { if (!busy && !offline) ask(label()); });
+    chips.appendChild(b);
+  });
+  document.getElementById("tabs").addEventListener("click", () => {
+    setTimeout(() => chips.querySelectorAll("button").forEach((b, i) => { b.textContent = SUGGESTIONS[i](viewing() || "this ticker"); }), 0);
+  });
+  form.addEventListener("submit", (e) => { e.preventDefault(); if (busy || offline) return; const m = input.value.trim(); if (!m) return; input.value = ""; ask(m); });
+  checkHealth();
+})();
 </script>
 
 </body>
