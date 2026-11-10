@@ -717,9 +717,12 @@ if (payload.textContent.trim()) {
     b.addEventListener("click", () => { if (!busy && !offline) ask(label()); });
     chips.appendChild(b);
   });
-  document.getElementById("tabs").addEventListener("click", () => {
-    setTimeout(() => chips.querySelectorAll("button").forEach((b, i) => { b.textContent = SUGGESTIONS[i](viewing() || "this ticker"); }), 0);
-  });
+  // The page fetches its data after this script runs, so the ticker is unknown when the
+  // chips are first labelled. Relabel when the ticker tabs appear and on every tab click.
+  const relabel = () => setTimeout(() => chips.querySelectorAll("button").forEach((b, i) => { b.textContent = SUGGESTIONS[i](viewing() || "this ticker"); }), 0);
+  const tabsEl = document.getElementById("tabs");
+  tabsEl.addEventListener("click", relabel);
+  if (typeof MutationObserver === "function") new MutationObserver(relabel).observe(tabsEl, { childList: true });
   form.addEventListener("submit", (e) => { e.preventDefault(); if (busy || offline) return; const m = input.value.trim(); if (!m) return; input.value = ""; ask(m); });
   checkHealth();
 })();
