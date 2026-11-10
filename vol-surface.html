@@ -76,6 +76,8 @@ details summary { cursor: pointer; color: var(--text-secondary); }
 .learn[open] summary::before { content: "Learn ▾"; }
 .learn.today summary::before { content: "What this means today ▸"; }
 .learn.today[open] summary::before { content: "What this means today ▾"; }
+.learn.howto summary::before { content: "How to read this chart ▸"; }
+.learn.howto[open] summary::before { content: "How to read this chart ▾"; }
 .learn p.means { border-left-color: var(--series-2); color: var(--text-primary); background: var(--surface-0); }
 .learn p.concept { margin-top: 4px; }
 .learn p.concept strong { display: block; font-size: 11px; text-transform: uppercase; letter-spacing: .05em; color: var(--text-muted); }
@@ -93,6 +95,7 @@ details summary { cursor: pointer; color: var(--text-secondary); }
 .reveal { margin-top: 6px; }
 .reveal summary { color: var(--series-1); font-size: 13px; }
 .reveal p { margin: 6px 0 0; padding: 8px 10px; background: var(--surface-0); border-radius: 6px; font-variant-numeric: tabular-nums; }
+
 @media (max-width: 760px) { .grid2 { grid-template-columns: 1fr; } #surface { height: 400px; } }
 </style>
 </head>
@@ -140,12 +143,15 @@ details summary { cursor: pointer; color: var(--text-secondary); }
       </div>
     </div>
   </section>
+
   <div id="warn" class="warnings" hidden><strong>Checks flagged</strong><ul id="warnlist"></ul>
     <details class="learn"><summary></summary><p id="warn-learn"></p></details></div>
 
   <section class="card">
     <h2>Implied volatility surface</h2>
     <div id="surface" class="chart"></div>
+    <details class="learn howto"><summary></summary><p id="surface-howto"></p></details>
+    <ul class="notes chart-notes" id="surface-notes"></ul>
     <p class="note">SVI smile fitted per expiry, interpolated in total variance across expiries. Strike shown as % of each expiry's forward. Blank cells = no quotes there (not extrapolated).</p>
   </section>
 
@@ -400,6 +406,10 @@ function render() {
   }
   renderDesk();
   notes("term-notes", ins ? ins.term : []);
+  notes("surface-notes", ins ? ins.surface : []);
+  const howto = (DATA.learn || {}).surface_read || "";
+  document.getElementById("surface-howto").textContent = howto;
+  document.querySelector(".learn.howto").hidden = !howto;   // older data files have no guide
   document.getElementById("warn-learn").textContent = (DATA.learn || {}).arbitrage || "";
 
   const warn = document.getElementById("warn"), list = document.getElementById("warnlist");
@@ -529,5 +539,6 @@ if (payload.textContent.trim()) {
     });
 }
 </script>
+
 </body>
 </html>
