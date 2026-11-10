@@ -985,7 +985,7 @@
   const TURNSTILE_ACTION = "news-chat";        // must match the Worker's TURNSTILE_ACTION
   const MAX_HISTORY_TURNS = 6, MAX_HISTORY_CHARS = 3000;
   const FOCUS_RE = /^[A-Z]{1,6}$/;             // mirrors datasets.FOCUS_PATTERN
-  const MODE = {"datasets": null, "focus": false, "suggestions": ["What moved markets today?", "Summarize today's brief in plain English.", "Explain today's deep dive like I'm new to it.", "What has the Fed been signaling lately?"]};                       // datasets, whether to send focus, suggestions
+  const MODE = {"datasets": null, "focus": false, "suggestions": ["What moved markets today?", "Summarize the latest brief in plain English.", "Explain today's deep dive like I'm new to it.", "What has the Fed been signaling lately?"]};                       // datasets, whether to send focus, suggestions
   const $ = (id) => document.getElementById(id);
   const statusEl = $("chat-status"), logEl = $("chat-log"), form = $("chat-form"),
         input = $("chat-q"), send = $("chat-send"), chips = $("chat-chips");
