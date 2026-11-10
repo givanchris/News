@@ -103,7 +103,7 @@ details summary { cursor: pointer; color: var(--text-secondary); }
 .chat-brief { max-width: 1180px; margin: 28px auto; padding: 18px 20px; border: 1px solid var(--ch-border);
   border-radius: 10px; background: var(--ch-bg1); color: var(--ch-text); }
 .chat-brief h2 { font-size: 13px; text-transform: uppercase; letter-spacing: .08em; margin: 0 0 6px; }
-.chat-brief .note { color: var(--ch-muted); font-size: 12px; }
+.chat .chat-note { color: var(--ch-muted); font-size: 12px; margin: 8px 0 0; padding: 0; border: 0; background: none; }
 @media (max-width: 760px) { .chat-brief { margin: 20px 16px; } }
 .chat-status { font-size: 12px; color: var(--ch-muted); margin-bottom: 8px; }
 .chat-status.offline { color: var(--ch-accent); }
@@ -141,7 +141,7 @@ details summary { cursor: pointer; color: var(--text-secondary); }
 
   <section class="card chat" id="chat">
     <h2>Ask about this surface</h2>
-    <p class="note" style="margin:0 0 8px">A small local model answers from this page&#x27;s engine output for the ticker you&#x27;re viewing. It explains; it doesn&#x27;t predict direction or give advice.</p>
+    <p class="chat-note" style="margin:0 0 8px">A small local model answers from this page&#x27;s engine output for the ticker you&#x27;re viewing. It explains; it doesn&#x27;t predict direction or give advice.</p>
     <div class="chat-status" id="chat-status">checking assistant…</div>
     <div class="chips" id="chat-chips"></div>
     <div class="chat-log" id="chat-log" aria-live="polite"></div>
@@ -150,7 +150,7 @@ details summary { cursor: pointer; color: var(--text-secondary); }
       <button id="chat-send" type="submit">Ask</button>
     </form>
     <div id="chat-ts" aria-label="bot check"></div>
-    <p class="note">Questions go through a relay to a model on a home server and are not stored. One question at a time, a few per minute.</p>
+    <p class="chat-note">Questions go through a relay to a model on a home server and are not stored. One question at a time, a few per minute.</p>
   </section>
 
   <div id="error" class="warnings" hidden></div>
