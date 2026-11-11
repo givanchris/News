@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; frame-ancestors 'none';" />
+  <title>DCF Valuation Models — Christopher Givan</title>
+  <meta name="description" content="Bull-case DCF scenario models for 19 companies: guidance-anchored five-year operating forecasts, company-specific WACC, and terminal value, with a downloadable Excel workbook." />
+  <meta name="author" content="Christopher Givan" />
+  <meta name="theme-color" content="#0e2240" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="DCF Valuation Models — Christopher Givan" />
+  <meta property="og:description" content="Bull-case DCF scenario models for 19 companies, with a downloadable Excel workbook." />
+  <meta property="og:image" content="headshot.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="DCF Valuation Models — Christopher Givan" />
+  <meta name="twitter:description" content="Bull-case DCF scenario models for 19 companies, with a downloadable Excel workbook." />
+  <meta name="twitter:image" content="headshot.jpg" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230e2240'/%3E%3Ctext x='16' y='22' font-family='-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif' font-size='14' font-weight='800' fill='white' text-anchor='middle'%3ECG%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500;1,6..72,600;1,6..72,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="Assets/site.css" />
+  <style>
+    .mono { font-family: 'IBM Plex Mono', ui-monospace, monospace; }
+
+    /* ── HERO ── */
+    .dcf-header { background: var(--navy); padding: 8rem 3rem 0; position: relative; overflow: hidden; }
+    .dcf-header::before {
+      content: ''; position: absolute; inset: 0; pointer-events: none;
+      background-image: radial-gradient(circle, rgba(220,144,56,0.10) 1px, transparent 1px);
+      background-size: 28px 28px;
+    }
+    .dcf-inner { max-width: 1200px; margin: 0 auto; position: relative; }
+    .dcf-eyebrow {
+      font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 0.65rem; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--blue2); display: flex; align-items: center; gap: 0.65rem; margin-bottom: 1.75rem;
+    }
+    .dcf-eyebrow::before { content: ''; width: 28px; height: 1px; background: var(--blue2); }
+    .dcf-title {
+      font-family: 'Newsreader', Georgia, serif; font-weight: 700; font-size: clamp(3rem, 8vw, 6.5rem);
+      line-height: 0.92; letter-spacing: -0.02em; color: var(--white); margin-bottom: 2rem;
+    }
+    .dcf-title .outline { color: transparent; -webkit-text-stroke: 2px rgba(255,255,255,0.22); }
+    .dcf-hero-body { display: grid; grid-template-columns: 1.3fr 1fr; gap: 3rem; align-items: end; margin-bottom: 3rem; }
+    .dcf-sub { font-size: 0.95rem; color: rgba(255,255,255,0.55); line-height: 1.85; max-width: 560px; }
+    .dcf-sub strong { color: rgba(255,255,255,0.88); font-weight: 500; }
+    .dcf-actions { display: flex; flex-direction: column; gap: 0.75rem; align-items: flex-start; }
+    .dl-btn {
+      display: inline-flex; align-items: center; gap: 0.6rem; padding: 0.85rem 1.4rem;
+      background: var(--blue2); color: var(--navy); text-decoration: none;
+      font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 0.72rem; font-weight: 600;
+      letter-spacing: 0.08em; text-transform: uppercase; transition: background 0.15s;
+    }
+    .dl-btn:hover { background: #e9a352; }
+    .dl-note { font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 0.62rem; letter-spacing: 0.05em; color: rgba(255,255,255,0.4); }
+    .flag {
+      display: inline-block; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 0.6rem;
+      letter-spacing: 0.1em; text-transform: uppercase; padding: 0.3rem 0.65rem;
+      border: 1px solid rgba(220,144,56,0.5); color: var(--blue2);
+    }
+    .kpis { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid rgba(255,255,255,0.08); }
+    .kpi { padding: 2rem 0 2rem 2rem; border-left: 1px solid rgba(255,255,255,0.08); }
+    .kpi:first-child { padding-left: 0; border-left: none; }
+    .kpi-label { font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 0.57rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--blue2); margin-bottom: 0.5rem; }
+    .kpi-value { font-family: 'Newsreader', Georgia, serif; font-size: 2.5rem; font-weight: 800; color: var(--white); line-height: 1; font-variant-numeric: tabular-nums; }
+    .kpi-sub { font-size: 0.75rem; color: rgba(255,255,255,0.4); margin-top: 0.4rem; }
+
+    /* ── SECTIONS ── */
+    .sec { padding: 5rem 3rem; border-bottom: 1px solid var(--border); }
+    .sec.off { background: var(--off); }
+    .sec-inner { max-width: 1200px; margin: 0 auto; }
+    .sec-eyebrow { font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 0.62rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--blue); margin-bottom: 0.65rem; }
+    .sec-heading { font-family: 'Newsreader', Georgia, serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; text-transform: uppercase; color: var(--navy); line-height: 0.95; margin-bottom: 1rem; }
+    .sec-intro { color: var(--muted); max-width: 720px; margin-bottom: 2.25rem; line-height: 1.75; }
+
+    /* ── TABLE ── */
+    .table-wrap { overflow-x: auto; border: 1px solid var(--border); background: var(--white); -webkit-overflow-scrolling: touch; }
+    table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; min-width: 860px; }
+    thead th {
+      font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 0.6rem; font-weight: 500; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--muted); text-align: right; padding: 0.85rem 0.9rem;
+      border-bottom: 1px solid var(--border); background: var(--off); white-space: nowrap; cursor: pointer; user-select: none;
+    }
+    thead th.l, td.l { text-align: left; }
+    thead th:hover { color: var(--navy); }
+    thead th[aria-sort="ascending"]::after { content: ' ▲'; color: var(--blue); }
+    thead th[aria-sort="descending"]::after { content: ' ▼'; color: var(--blue); }
+    tbody td { padding: 0.8rem 0.9rem; border-bottom: 1px solid var(--border); text-align: right; font-size: 0.86rem; white-space: nowrap; }
+    tbody tr:last-child td { border-bottom: none; }
+    tbody tr:hover { background: var(--off); }
+    .tk { font-family: 'IBM Plex Mono', ui-monospace, monospace; font-weight: 600; color: var(--navy); }
+    .co { color: var(--muted); font-size: 0.8rem; }
+    .scen { font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 0.6rem; letter-spacing: 0.06em; text-transform: uppercase; padding: 0.18rem 0.45rem; border: 1px solid var(--border); color: var(--muted); }
+    .scen.bull { border-color: rgba(176,106,31,0.45); color: var(--blue); }
+    .thesis { color: var(--text); font-size: 0.82rem; }
+    .upcell { display: flex; align-items: center; justify-content: flex-end; gap: 0.6rem; }
+    .bar { width: 64px; height: 6px; background: var(--light); position: relative; }
+    .bar i { position: absolute; top: 0; bottom: 0; }
+    .bar i.pos { left: 50%; background: var(--green); }
+    .bar i.neg { right: 50%; background: var(--red); }
+    .bar::after { content: ''; position: absolute; left: 50%; top: -2px; bottom: -2px; width: 1px; background: var(--muted); }
+    .table-foot { font-size: 0.75rem; color: var(--muted); margin-top: 0.85rem; line-height: 1.6; }
+
+    /* ── METHOD ── */
+    .method-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); }
+    .m-card { background: var(--white); padding: 1.75rem 1.5rem; }
+    .m-num { font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--blue); margin-bottom: 0.6rem; }
+    .m-title { font-family: 'Newsreader', Georgia, serif; font-size: 1.3rem; font-weight: 700; color: var(--navy); margin-bottom: 0.6rem; line-height: 1.15; }
+    .m-desc { font-size: 0.85rem; color: var(--muted); line-height: 1.7; }
+    .m-desc code { font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 0.78rem; color: var(--text); }
+    .notes { margin-top: 2.5rem; display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+    .note h3 { font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--navy); margin-bottom: 0.6rem; }
+    .note p { font-size: 0.85rem; color: var(--muted); line-height: 1.75; }
+
+    footer { display: flex; justify-content: space-between; align-items: center; }
+
+    @media (max-width: 960px) {
+      .method-grid { grid-template-columns: repeat(2, 1fr); }
+      .dcf-hero-body { grid-template-columns: 1fr; gap: 2rem; }
+    }
+    @media (max-width: 820px) {
+      nav { padding: 0 1.25rem; }
+      .dcf-header { padding: 7rem 1.25rem 0; }
+      .sec { padding: 4rem 1.25rem; }
+      .kpis { grid-template-columns: repeat(2, 1fr); }
+      .kpi:nth-child(3) { border-left: none; padding-left: 0; }
+      .kpi:nth-child(3), .kpi:nth-child(4) { border-top: 1px solid rgba(255,255,255,0.08); }
+      .notes { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 560px) {
+      .method-grid { grid-template-columns: 1fr; }
+      .kpi { padding: 1.5rem 0 1.5rem 1.25rem; }
+      .kpi-value { font-size: 2rem; }
+      .nav-links { display: none; }
+      .nav-cta { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html#hero" class="nav-logo">CG</a>
+  <ul class="nav-links">
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#projects" class="active">Projects</a></li>
+    <li><a href="brief.html">Brief</a></li>
+    <li><a href="index.html#resume">Resume</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+  <a href="mailto:givanchris@icloud.com" class="nav-cta">Get in Touch →</a>
+</nav>
+
+<!-- HERO -->
+<header class="dcf-header page-main">
+  <div class="dcf-inner">
+    <div class="dcf-eyebrow">Valuation · Excel</div>
+    <h1 class="dcf-title">DCF Valuation<br><span class="outline">Models</span></h1>
+    <div class="dcf-hero-body">
+      <p class="dcf-sub">
+        A workbook of <strong>19 single-company DCF models</strong>, centered on the AI build-out: semiconductors, cloud, networking and power.
+        Each tab anchors a <strong>five-year operating forecast</strong> to the company's latest results and guidance,
+        builds a <strong>company-specific WACC</strong>, and discounts unlevered free cash flow plus a terminal value
+        to an implied value per share. A rotating <strong>Ticker Model</strong> tab runs the same framework on any stored ticker.
+      </p>
+      <div class="dcf-actions">
+        <span class="flag">Bull-case scenarios · not price targets</span>
+        <a class="dl-btn" href="files/dcf-valuation-models.xlsx" download>Download workbook (.xlsx) ↓</a>
+        <span class="dl-note">Excel · formulas live · AI-assisted build</span>
+      </div>
+    </div>
+    <div class="kpis">
+      <div class="kpi"><div class="kpi-label">Companies</div><div class="kpi-value">19</div><div class="kpi-sub">One full model per tab</div></div>
+      <div class="kpi"><div class="kpi-label">Median upside</div><div class="kpi-value">+13%</div><div class="kpi-sub">Bull-case DCF vs. price</div></div>
+      <div class="kpi"><div class="kpi-label">Above price</div><div class="kpi-value">16 of 19</div><div class="kpi-sub">Even bull cases can come out below</div></div>
+      <div class="kpi"><div class="kpi-label">WACC range</div><div class="kpi-value" style="font-size:2rem">8.5–13.5%</div><div class="kpi-sub">CAPM, company-specific beta</div></div>
+    </div>
+  </div>
+</header>
+
+<!-- TABLE -->
+<section class="sec">
+  <div class="sec-inner">
+    <div class="sec-eyebrow">Model outputs</div>
+    <h2 class="sec-heading">Implied Value vs. Price</h2>
+    <p class="sec-intro">
+      Every model is built on a deliberately optimistic thesis, so read the upside column as
+      <em>“what you have to believe”</em>, not a forecast. The useful cases are the ones where even the
+      bull scenario lands below the market price. Click a column to sort.
+    </p>
+    <div class="table-wrap">
+      <table id="dcf">
+        <thead>
+          <tr>
+            <th class="l" data-k="t">Ticker</th>
+            <th class="l" data-k="thesis">Thesis</th>
+            <th class="l" data-k="scen">Scenario</th>
+            <th data-k="price">Price</th>
+            <th data-k="dcf">DCF value</th>
+            <th data-k="up" aria-sort="descending">Upside</th>
+            <th data-k="wacc">WACC</th>
+            <th data-k="g">Terminal g</th>
+            <th data-k="cagr">5-yr rev. CAGR</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <p class="table-foot">
+      Prices are the snapshot used in the workbook (early Nov. 2026 closes; SpaceX uses the latest public/private reference).
+      Revenue CAGR runs from the last reported fiscal year to year five of the forecast. Values are per share, USD.
+      Not investment advice.
+    </p>
+  </div>
+</section>
+
+<!-- METHOD -->
+<section class="sec off">
+  <div class="sec-inner">
+    <div class="sec-eyebrow">Methodology</div>
+    <h2 class="sec-heading">How Each Model Works</h2>
+    <p class="sec-intro">Every company tab follows the same four-step structure, so the models can be compared side by side.</p>
+    <div class="method-grid">
+      <div class="m-card">
+        <div class="m-num">01 · Operating model</div>
+        <div class="m-title">Guidance-anchored forecast</div>
+        <p class="m-desc">Five years of revenue, gross and operating margin, cash taxes, D&amp;A, capex and working capital. Year one is tied to reported results and management guidance; later years carry the scenario.</p>
+      </div>
+      <div class="m-card">
+        <div class="m-num">02 · Cash flow</div>
+        <div class="m-title">Unlevered FCF + fade</div>
+        <p class="m-desc"><code>NOPAT + D&amp;A − capex − ΔNWC</code> for the explicit years, then a second five-year stage where FCF growth steps down toward the terminal rate.</p>
+      </div>
+      <div class="m-card">
+        <div class="m-num">03 · Discount rate</div>
+        <div class="m-title">Company-specific WACC</div>
+        <p class="m-desc">CAPM cost of equity from the 10-year Treasury (4.9%), Damodaran's implied equity risk premium (4.18%) and a company beta, blended with an after-tax cost of debt.</p>
+      </div>
+      <div class="m-card">
+        <div class="m-num">04 · Valuation</div>
+        <div class="m-title">Value per share</div>
+        <p class="m-desc">Gordon-growth terminal value, discounted with the forecast cash flows to enterprise value, plus net cash, divided by diluted shares. Compared with the market price for implied upside.</p>
+      </div>
+    </div>
+    <div class="notes">
+      <div class="note">
+        <h3>Why bull cases</h3>
+        <p>Each tab asks the same question: if the optimistic AI-demand story plays out, what is the business worth today? Where even that scenario comes out below the current price, the market is already pricing in more than the bull case.</p>
+      </div>
+      <div class="note">
+        <h3>How it was built</h3>
+        <p>An AI-assisted build. Every forecast input is tied to a cited source on the workbook's Sources tab (10-Ks, 10-Qs, earnings releases and investor-day materials), so each assumption can be traced and changed.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span class="f-left">© 2026 Christopher Givan</span>
+  <span class="f-logo">CG</span>
+  <span class="f-right">DCF Valuation Models</span>
+</footer>
+
+<script>
+(function () {
+  var DATA = [{"t":"ALAB","name":"Astera Labs","scen":"Bull","thesis":"Connectivity","price":179.47,"dcf":226.99167162430692,"up":0.26478894313426715,"wacc":0.105,"g":0.04,"y0":"FY25A","y5":"FY30E","rev0":852.525,"rev5":7800.0,"cagr":0.5569601457249518},{"t":"MRVL","name":"Marvell Technology","scen":"Bull","thesis":"AI connectivity","price":133.55,"dcf":201.6925708625122,"up":0.5102401412393276,"wacc":0.11000000000000001,"g":0.035,"y0":"FY26A","y5":"FY31E","rev0":8195.0,"rev5":50000.0,"cagr":0.435767800372586},{"t":"NVDA","name":"NVIDIA","scen":"Bull","thesis":"Accelerated compute","price":181.6,"dcf":193.52214975012967,"up":0.0656506043509344,"wacc":0.11000000000000001,"g":0.035,"y0":"FY26A","y5":"FY31E","rev0":215900.0,"rev5":860000.0,"cagr":0.3184059725926731},{"t":"PLTR","name":"Palantir Technologies","scen":"Bull","thesis":"AIP adoption","price":154.99,"dcf":173.7369945366992,"up":0.12095615547260596,"wacc":0.095,"g":0.045,"y0":"FY25A","y5":"FY30E","rev0":4475.446,"rev5":44000.0,"cagr":0.5795132413366975},{"t":"GOOG","name":"Alphabet","scen":"Bull","thesis":"AI cloud monetization","price":281.74,"dcf":457.835715122376,"up":0.625029158523376,"wacc":0.085,"g":0.04,"y0":"FY25A","y5":"FY30E","rev0":402840.0,"rev5":1080000.0,"cagr":0.21803069712921186},{"t":"AMAT","name":"Applied Materials","scen":"Bull","thesis":"AI equipment","price":319.25,"dcf":372.89867234226125,"up":0.1680459587854699,"wacc":0.095,"g":0.035,"y0":"FY25A","y5":"FY30E","rev0":28373.0,"rev5":63000.0,"cagr":0.17297041480263076},{"t":"CEG","name":"Constellation Energy","scen":"Balanced bull","thesis":"AI power","price":276.17,"dcf":346.0191235517152,"up":0.2529207500876822,"wacc":0.08500000000000002,"g":0.035,"y0":"FY25A","y5":"FY30E","rev0":23574.0,"rev5":58000.0,"cagr":0.19728886325539086},{"t":"AMZN","name":"Amazon","scen":"Bull","thesis":"AWS AI","price":260.21,"dcf":293.09218088017303,"up":0.12636786011365064,"wacc":0.085,"g":0.035,"y0":"FY25A","y5":"FY30E","rev0":716000.0,"rev5":1450000.0,"cagr":0.1515717330983657},{"t":"COHR","name":"Coherent","scen":"Bull","thesis":"Optical AI","price":169.76,"dcf":265.5457282876331,"up":0.5642420375096202,"wacc":0.105,"g":0.035,"y0":"FY26A","y5":"FY31E","rev0":7100.0,"rev5":21500.0,"cagr":0.24806160313736303},{"t":"MOG.A","name":"Moog Class A","scen":"Bull","thesis":"Aero + cooling","price":308.53,"dcf":336.101881570658,"up":0.08936531802631209,"wacc":0.09,"g":0.035,"y0":"FY25A","y5":"FY30E","rev0":3900.0,"rev5":6200.0,"cagr":0.09714850709074052},{"t":"HOOD","name":"Robinhood Markets","scen":"Bull","thesis":"Platform","price":78.39,"dcf":78.56260088474839,"up":0.002201822742038395,"wacc":0.1,"g":0.04,"y0":"FY25A","y5":"FY30E","rev0":4200.0,"rev5":13000.0,"cagr":0.25354177711631976},{"t":"BABA","name":"Alibaba Group","scen":"Bull","thesis":"China AI cloud","price":108.07,"dcf":156.1581646608137,"up":0.4449723758750228,"wacc":0.11000000000000001,"g":0.03,"y0":"FY26A","y5":"FY31E","rev0":145000.0,"rev5":300000.0,"cagr":0.15651335043291614},{"t":"IREN","name":"IREN","scen":"Bull","thesis":"AI cloud build","price":18.03,"dcf":27.43711806769389,"up":0.5217480902769767,"wacc":0.135,"g":0.03,"y0":"FY26A","y5":"FY31E","rev0":707.0,"rev5":7800.0,"cagr":0.6163486237591609},{"t":"TSEM","name":"Tower Semiconductor","scen":"Balanced bull","thesis":"AI connectivity","price":152.29,"dcf":113.93674455135175,"up":-0.25184355800543856,"wacc":0.10543,"g":0.035,"y0":"FY25A","y5":"FY30E","rev0":1566.1,"rev5":4800.0,"cagr":0.2510778916863363},{"t":"NET","name":"Cloudflare","scen":"Bull","thesis":"Agentic web","price":305.8,"dcf":139.57309256910474,"up":-0.5435804690349747,"wacc":0.11379,"g":0.035,"y0":"FY25A","y5":"FY30E","rev0":2167.9,"rev5":8500.0,"cagr":0.3142437975055554},{"t":"AEVA","name":"Aeva Technologies","scen":"Balanced bull","thesis":"Autonomy + optical","price":12.3,"dcf":8.741845637999754,"up":-0.2892808424390444,"wacc":0.12841999999999998,"g":0.035,"y0":"FY25A","y5":"FY30E","rev0":18.1,"rev5":750.0,"cagr":1.1060881167568826},{"t":"RMBS","name":"Rambus","scen":"Bull","thesis":"Memory interface","price":69.68,"dcf":76.73001686221828,"up":0.10117705026145618,"wacc":0.1,"g":0.035,"y0":"FY25A","y5":"FY30E","rev0":680.0,"rev5":1580.0,"cagr":0.1836672588284154},{"t":"LEU","name":"Centrus Energy","scen":"Bull","thesis":"HALEU scale","price":89.03,"dcf":127.53934108516133,"up":0.43254342452163685,"wacc":0.12,"g":0.035,"y0":"FY25A","y5":"FY30E","rev0":440.0,"rev5":2500.0,"cagr":0.4154595614681085},{"t":"SPCX","name":"SpaceX","scen":"Bull","thesis":"Starlink + AI","price":123.62,"dcf":133.2792694934508,"up":0.07813678606577268,"wacc":0.105,"g":0.04,"y0":"FY25A","y5":"FY30E","rev0":18670.0,"rev5":500000.0,"cagr":0.9300347890593916}];
+  var tbody = document.querySelector('#dcf tbody');
+  var usd = function (v) { return '$' + v.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }); };
+  var pct = function (v, sign) { return (sign && v > 0 ? '+' : '') + (v * 100).toFixed(1) + '%'; };
+  var maxAbs = Math.max.apply(null, DATA.map(function (d) { return Math.abs(d.up); }));
+  function render(rows) {
+    tbody.innerHTML = rows.map(function (d) {
+      var w = Math.min(50, Math.abs(d.up) / maxAbs * 50);
+      var cls = d.up >= 0 ? 'up' : 'down';
+      return '<tr>' +
+        '<td class="l"><div class="tk">' + d.t + '</div><div class="co">' + d.name + '</div></td>' +
+        '<td class="l thesis">' + d.thesis + '</td>' +
+        '<td class="l"><span class="scen' + (d.scen === 'Bull' ? ' bull' : '') + '">' + d.scen + '</span></td>' +
+        '<td>' + usd(d.price) + '</td>' +
+        '<td><strong>' + usd(d.dcf) + '</strong></td>' +
+        '<td><div class="upcell"><span class="' + cls + '">' + pct(d.up, true) + '</span>' +
+          '<span class="bar" aria-hidden="true"><i class="' + (d.up >= 0 ? 'pos' : 'neg') + '" style="width:' + w + '%"></i></span></div></td>' +
+        '<td>' + pct(d.wacc) + '</td>' +
+        '<td>' + pct(d.g) + '</td>' +
+        '<td>' + pct(d.cagr) + '</td>' +
+      '</tr>';
+    }).join('');
+  }
+  var state = { k: 'up', dir: -1 };
+  function sort() {
+    var k = state.k, dir = state.dir;
+    render(DATA.slice().sort(function (a, b) {
+      var x = a[k], y = b[k];
+      if (typeof x === 'string') return x.localeCompare(y) * dir;
+      return (x - y) * dir;
+    }));
+  }
+  document.querySelectorAll('#dcf thead th').forEach(function (th) {
+    th.addEventListener('click', function () {
+      var k = th.getAttribute('data-k');
+      state.dir = state.k === k ? -state.dir : (typeof DATA[0][k] === 'string' ? 1 : -1);
+      state.k = k;
+      document.querySelectorAll('#dcf thead th').forEach(function (o) { o.removeAttribute('aria-sort'); });
+      th.setAttribute('aria-sort', state.dir === 1 ? 'ascending' : 'descending');
+      sort();
+    });
+  });
+  sort();
+})();
+</script>
+<script src="Assets/motion.js"></script>
+</body>
+</html>
