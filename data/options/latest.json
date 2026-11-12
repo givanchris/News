@@ -1,307 +1,307 @@
 {
-  "as_of": "2026-11-12T08:15:44-07:00",
+  "as_of": "2026-11-12T09:15:45-07:00",
   "is_mock": false,
   "market": {
     "vix": {
-      "value": 18.21,
-      "change": 0.72,
-      "change_pct": 4.12
+      "value": 17.52,
+      "change": 0.03,
+      "change_pct": 0.17
     },
     "vix_term_structure": [
       {
         "label": "VIX9D",
-        "value": 17.31
+        "value": 16.24
       },
       {
         "label": "VIX",
-        "value": 18.21
+        "value": 17.52
       },
       {
         "label": "VIX3M",
-        "value": 19.67
+        "value": 19.26
       },
       {
         "label": "VIX6M",
-        "value": 21.37
+        "value": 21.1
       }
     ],
     "indices": [
       {
         "ticker": "SPY",
         "name": "S&P 500",
-        "price": 756.64,
-        "change": -3.17,
-        "change_pct": -0.42,
-        "pc_volume": 0.8706,
+        "price": 761.87,
+        "change": 2.06,
+        "change_pct": 0.27,
+        "pc_volume": 0.8851,
         "pc_oi": 1.4876,
         "sentiment": "neutral"
       },
       {
         "ticker": "QQQ",
         "name": "Nasdaq 100",
-        "price": 685.25,
-        "change": -5.13,
-        "change_pct": -0.74,
-        "pc_volume": 0.8873,
+        "price": 692.6,
+        "change": 2.22,
+        "change_pct": 0.32,
+        "pc_volume": 0.9141,
         "pc_oi": 1.2576,
         "sentiment": "neutral"
       },
       {
         "ticker": "IWM",
         "name": "Russell 2000",
-        "price": 279.16,
-        "change": -3.93,
-        "change_pct": -1.39,
-        "pc_volume": 1.5666,
+        "price": 281.46,
+        "change": -1.62,
+        "change_pct": -0.57,
+        "pc_volume": 1.2505,
         "pc_oi": 1.3499,
         "sentiment": "bearish"
       }
     ],
     "regime": "mixed",
-    "regime_summary": "SPY P/C 0.87 neutral \u00b7 VIX 18.2 moderate."
+    "regime_summary": "SPY P/C 0.89 neutral \u00b7 VIX 17.5 moderate."
   },
   "sectors": [
     {
       "ticker": "XLK",
       "name": "Technology",
-      "pc_volume": 0.5655,
-      "iv_rank": null,
-      "sentiment": "bullish"
-    },
-    {
-      "ticker": "XLF",
-      "name": "Financials",
-      "pc_volume": 0.6979,
-      "iv_rank": null,
-      "sentiment": "bullish"
-    },
-    {
-      "ticker": "XLE",
-      "name": "Energy",
-      "pc_volume": 1.1785,
-      "iv_rank": null,
-      "sentiment": "neutral"
-    },
-    {
-      "ticker": "XLV",
-      "name": "Health Care",
-      "pc_volume": 1.6046,
+      "pc_volume": 1.6116,
       "iv_rank": null,
       "sentiment": "bearish"
     },
     {
+      "ticker": "XLF",
+      "name": "Financials",
+      "pc_volume": 0.9159,
+      "iv_rank": null,
+      "sentiment": "neutral"
+    },
+    {
+      "ticker": "XLE",
+      "name": "Energy",
+      "pc_volume": 0.159,
+      "iv_rank": null,
+      "sentiment": "bullish"
+    },
+    {
+      "ticker": "XLV",
+      "name": "Health Care",
+      "pc_volume": 1.0552,
+      "iv_rank": null,
+      "sentiment": "neutral"
+    },
+    {
       "ticker": "XLY",
       "name": "Consumer Disc.",
-      "pc_volume": 3.255,
+      "pc_volume": 4.1839,
       "iv_rank": null,
       "sentiment": "bearish"
     },
     {
       "ticker": "XLP",
       "name": "Consumer Staples",
-      "pc_volume": 2.2436,
+      "pc_volume": 1.2474,
       "iv_rank": null,
       "sentiment": "bearish"
     },
     {
       "ticker": "XLI",
       "name": "Industrials",
-      "pc_volume": 1.6664,
+      "pc_volume": 1.5482,
       "iv_rank": null,
       "sentiment": "bearish"
     },
     {
       "ticker": "XLU",
       "name": "Utilities",
-      "pc_volume": 3.2414,
+      "pc_volume": 1.4362,
       "iv_rank": null,
       "sentiment": "bearish"
     },
     {
       "ticker": "XLB",
       "name": "Materials",
-      "pc_volume": 3.1982,
+      "pc_volume": 1.2624,
       "iv_rank": null,
       "sentiment": "bearish"
     },
     {
       "ticker": "XLRE",
       "name": "Real Estate",
-      "pc_volume": 0.8189,
+      "pc_volume": 0.6281,
       "iv_rank": null,
-      "sentiment": "neutral"
+      "sentiment": "bullish"
     }
   ],
   "tickers": [
     {
       "ticker": "AAPL",
       "name": "Apple Inc.",
-      "price": 357.28,
-      "change": 1.65,
-      "change_pct": 0.46,
-      "volume": 7519676,
-      "pc_volume_ratio": 0.8072,
+      "price": 357.99,
+      "change": 2.36,
+      "change_pct": 0.66,
+      "volume": 10839113,
+      "pc_volume_ratio": 0.8564,
       "pc_oi_ratio": 1.1923,
-      "iv_atm": 23.2,
-      "iv_rank": 11.5,
-      "iv_percentile": 84.7,
-      "skew_25d": 5.08,
+      "iv_atm": 19.89,
+      "iv_rank": 9.9,
+      "iv_percentile": 79.7,
+      "skew_25d": 8.4,
       "unusual_activity": true,
       "sentiment": "neutral",
-      "sentiment_reason": "P/C volume 0.81 in the neutral zone (0.80\u20131.20) \u00b7 IV rank 12 low (complacency)."
+      "sentiment_reason": "P/C volume 0.86 in the neutral zone (0.80\u20131.20) \u00b7 IV rank 10 low (complacency)."
     },
     {
       "ticker": "TSLA",
       "name": "Tesla, Inc.",
-      "price": 391.53,
-      "change": 0.69,
-      "change_pct": 0.18,
-      "volume": 6115164,
-      "pc_volume_ratio": 0.4357,
+      "price": 391.27,
+      "change": 0.43,
+      "change_pct": 0.11,
+      "volume": 8894407,
+      "pc_volume_ratio": 0.5555,
       "pc_oi_ratio": 1.2752,
-      "iv_atm": 41.55,
-      "iv_rank": 15.5,
-      "iv_percentile": 89.0,
-      "skew_25d": 3.96,
+      "iv_atm": 36.93,
+      "iv_rank": 13.8,
+      "iv_percentile": 84.7,
+      "skew_25d": 6.35,
       "unusual_activity": true,
       "sentiment": "bullish",
-      "sentiment_reason": "P/C volume 0.44 below the 0.80 bullish threshold \u00b7 IV rank 16 low (complacency)."
+      "sentiment_reason": "P/C volume 0.56 below the 0.80 bullish threshold \u00b7 IV rank 14 low (complacency)."
     },
     {
       "ticker": "NVDA",
       "name": "NVIDIA Corporation",
-      "price": 162.46,
-      "change": -11.27,
-      "change_pct": -6.49,
-      "volume": 335055263,
-      "pc_volume_ratio": 0.8071,
+      "price": 166.34,
+      "change": -7.39,
+      "change_pct": -4.26,
+      "volume": 456738210,
+      "pc_volume_ratio": 0.8412,
       "pc_oi_ratio": 0.6375,
-      "iv_atm": 87.52,
-      "iv_rank": 41.9,
-      "iv_percentile": 98.3,
-      "skew_25d": 2.15,
+      "iv_atm": 75.38,
+      "iv_rank": 36.1,
+      "iv_percentile": 97.5,
+      "skew_25d": 6.79,
       "unusual_activity": true,
       "sentiment": "neutral",
-      "sentiment_reason": "P/C volume 0.81 in the neutral zone (0.80\u20131.20) \u00b7 IV rank 42 moderate."
+      "sentiment_reason": "P/C volume 0.84 in the neutral zone (0.80\u20131.20) \u00b7 IV rank 36 moderate."
     },
     {
       "ticker": "MSFT",
       "name": "Microsoft Corporation",
-      "price": 524.61,
-      "change": 3.48,
-      "change_pct": 0.67,
-      "volume": 3582628,
-      "pc_volume_ratio": 0.4648,
+      "price": 529.16,
+      "change": 8.03,
+      "change_pct": 1.54,
+      "volume": 5430061,
+      "pc_volume_ratio": 0.415,
       "pc_oi_ratio": 0.7365,
-      "iv_atm": 28.38,
-      "iv_rank": 17.4,
-      "iv_percentile": 90.7,
-      "skew_25d": 7.32,
+      "iv_atm": 26.24,
+      "iv_rank": 16.0,
+      "iv_percentile": 86.4,
+      "skew_25d": 8.59,
       "unusual_activity": true,
       "sentiment": "bullish",
-      "sentiment_reason": "P/C volume 0.46 below the 0.80 bullish threshold \u00b7 IV rank 17 low (complacency)."
+      "sentiment_reason": "P/C volume 0.41 below the 0.80 bullish threshold \u00b7 IV rank 16 low (complacency)."
     },
     {
       "ticker": "META",
       "name": "Meta Platforms, Inc.",
-      "price": 620.76,
-      "change": -8.01,
-      "change_pct": -1.27,
-      "volume": 2148521,
-      "pc_volume_ratio": 0.7954,
+      "price": 626.21,
+      "change": -2.57,
+      "change_pct": -0.41,
+      "volume": 3474633,
+      "pc_volume_ratio": 0.9261,
       "pc_oi_ratio": 0.6786,
-      "iv_atm": 42.13,
-      "iv_rank": 31.5,
-      "iv_percentile": 93.2,
-      "skew_25d": -5.27,
+      "iv_atm": 35.49,
+      "iv_rank": 26.5,
+      "iv_percentile": 89.8,
+      "skew_25d": 1.32,
       "unusual_activity": true,
-      "sentiment": "bullish",
-      "sentiment_reason": "P/C volume 0.80 below the 0.80 bullish threshold \u00b7 IV rank 31 moderate."
+      "sentiment": "neutral",
+      "sentiment_reason": "P/C volume 0.93 in the neutral zone (0.80\u20131.20) \u00b7 IV rank 27 low (complacency)."
     },
     {
       "ticker": "GOOGL",
       "name": "Alphabet Inc.",
-      "price": 294.98,
-      "change": 1.53,
-      "change_pct": 0.52,
-      "volume": 9068161,
-      "pc_volume_ratio": 0.1634,
+      "price": 299.23,
+      "change": 5.78,
+      "change_pct": 1.97,
+      "volume": 13461833,
+      "pc_volume_ratio": 0.2014,
       "pc_oi_ratio": 0.3603,
-      "iv_atm": 35.07,
-      "iv_rank": 31.2,
-      "iv_percentile": 93.2,
-      "skew_25d": -1.95,
+      "iv_atm": 33.94,
+      "iv_rank": 30.2,
+      "iv_percentile": 92.4,
+      "skew_25d": 6.05,
       "unusual_activity": true,
       "sentiment": "bullish",
-      "sentiment_reason": "P/C volume 0.16 below the 0.80 bullish threshold \u00b7 IV rank 31 moderate."
+      "sentiment_reason": "P/C volume 0.20 below the 0.80 bullish threshold \u00b7 IV rank 30 moderate."
     },
     {
       "ticker": "AMZN",
       "name": "Amazon.com, Inc.",
-      "price": 271.44,
-      "change": 5.27,
-      "change_pct": 1.98,
-      "volume": 10073158,
-      "pc_volume_ratio": 0.2011,
+      "price": 270.15,
+      "change": 3.98,
+      "change_pct": 1.5,
+      "volume": 14063661,
+      "pc_volume_ratio": 0.3538,
       "pc_oi_ratio": 0.7148,
-      "iv_atm": 33.7,
-      "iv_rank": 17.0,
-      "iv_percentile": 91.5,
-      "skew_25d": 2.15,
+      "iv_atm": 30.46,
+      "iv_rank": 15.3,
+      "iv_percentile": 89.8,
+      "skew_25d": 7.52,
       "unusual_activity": true,
       "sentiment": "bullish",
-      "sentiment_reason": "P/C volume 0.20 below the 0.80 bullish threshold \u00b7 IV rank 17 low (complacency)."
+      "sentiment_reason": "P/C volume 0.35 below the 0.80 bullish threshold \u00b7 IV rank 15 low (complacency)."
     },
     {
       "ticker": "AMD",
       "name": "Advanced Micro Devices, Inc.",
-      "price": 562.42,
-      "change": 9.52,
-      "change_pct": 1.72,
-      "volume": 19610937,
-      "pc_volume_ratio": 0.5364,
+      "price": 588.38,
+      "change": 35.48,
+      "change_pct": 6.42,
+      "volume": 29636808,
+      "pc_volume_ratio": 0.5189,
       "pc_oi_ratio": 0.9485,
-      "iv_atm": 77.81,
-      "iv_rank": 12.5,
-      "iv_percentile": 91.5,
-      "skew_25d": -11.95,
+      "iv_atm": 74.47,
+      "iv_rank": 12.0,
+      "iv_percentile": 85.6,
+      "skew_25d": 10.88,
       "unusual_activity": true,
       "sentiment": "bullish",
-      "sentiment_reason": "P/C volume 0.54 below the 0.80 bullish threshold \u00b7 IV rank 13 low (complacency)."
+      "sentiment_reason": "P/C volume 0.52 below the 0.80 bullish threshold \u00b7 IV rank 12 low (complacency)."
     },
     {
       "ticker": "JPM",
       "name": "JP Morgan Chase & Co.",
-      "price": 343.36,
-      "change": -0.03,
-      "change_pct": -0.01,
-      "volume": 535478,
-      "pc_volume_ratio": 0.567,
+      "price": 345.35,
+      "change": 1.96,
+      "change_pct": 0.57,
+      "volume": 1055704,
+      "pc_volume_ratio": 0.6322,
       "pc_oi_ratio": 0.9481,
-      "iv_atm": 26.82,
-      "iv_rank": 12.0,
-      "iv_percentile": 88.1,
-      "skew_25d": 2.34,
+      "iv_atm": 22.07,
+      "iv_rank": 9.9,
+      "iv_percentile": 63.6,
+      "skew_25d": -23.73,
       "unusual_activity": true,
       "sentiment": "bullish",
-      "sentiment_reason": "P/C volume 0.57 below the 0.80 bullish threshold \u00b7 IV rank 12 low (complacency)."
+      "sentiment_reason": "P/C volume 0.63 below the 0.80 bullish threshold \u00b7 IV rank 10 low (complacency)."
     },
     {
       "ticker": "GS",
       "name": "Goldman Sachs Group, Inc. (The)",
-      "price": 918.86,
-      "change": -7.95,
-      "change_pct": -0.86,
-      "volume": 235774,
-      "pc_volume_ratio": 1.9793,
+      "price": 928.45,
+      "change": 1.64,
+      "change_pct": 0.18,
+      "volume": 523064,
+      "pc_volume_ratio": 1.5523,
       "pc_oi_ratio": 0.9931,
-      "iv_atm": 34.3,
-      "iv_rank": 19.2,
-      "iv_percentile": 79.7,
-      "skew_25d": 4.61,
+      "iv_atm": 29.89,
+      "iv_rank": 16.8,
+      "iv_percentile": 66.9,
+      "skew_25d": 1.15,
       "unusual_activity": true,
       "sentiment": "bearish",
-      "sentiment_reason": "P/C volume 1.98 above the 1.20 bearish threshold \u00b7 IV rank 19 low (complacency)."
+      "sentiment_reason": "P/C volume 1.55 above the 1.20 bearish threshold \u00b7 IV rank 17 low (complacency)."
     }
   ]
 }
