@@ -1,14 +1,14 @@
 {
-  "lastUpdated": "2026-11-14T15:41:02-07:00",
+  "lastUpdated": "2026-11-15T15:41:09-07:00",
   "storiesPublishedAt": "2026-11-13T15:41:33-07:00",
   "market": {
     "sp500": {
-      "price": "7562",
+      "price": "7,562",
       "change": "-0.40%",
       "dir": "down"
     },
     "nasdaq": {
-      "price": "27944",
+      "price": "27,944",
       "change": "-1.21%",
       "dir": "down"
     },
@@ -23,7 +23,7 @@
       "dir": "up"
     },
     "gold": {
-      "price": "$3886",
+      "price": "$3,886",
       "change": "-0.79%",
       "dir": "down"
     },
@@ -74,12 +74,12 @@
     "November retail sales and jobs data — the next readings the Fed will weigh before the December meeting"
   ],
   "deepDive": {
-    "title": "Why One Stock Can Move Two Different Benchmarks: Cap-Weighting and the Nvidia Effect",
+    "title": "Where \"82-85% Odds of a Hike\" Actually Comes From: Reading Fed Funds Futures",
     "content": [
-      "Friday's tape delivered an odd-looking split: the Dow advanced while the S&P 500 slipped 0.40% and the Nasdaq 100 dropped 1.21%, and Nvidia's fall below a $4 trillion market cap was the common thread tying both declines together. That a single company's governance shock — not a broad economic shift — produced simultaneous losses in two benchmarks built from completely different stock universes is not a coincidence. It is a direct consequence of how the S&P 500 and Nasdaq 100 are constructed: both are capitalization-weighted indices, meaning the biggest companies move the index the most, by design.",
-      "In a cap-weighted index, each constituent's influence on the daily return is its percentage price change multiplied by its weight, which is its free-float market value divided by the index's total market value. Nvidia's weight sits in the mid-to-high single digits in both benchmarks, so a roughly 2% drop on Friday subtracted somewhere in the neighborhood of 0.12 to 0.15 index points from each headline return before any other constituent even traded. Because the Nasdaq 100 holds only 100 names concentrated in technology, Nvidia's weight there is proportionally larger than in the 500-name S&P, which is exactly why the Nasdaq 100 fell nearly three times as hard on the same news.",
-      "What's easy to miss is that index diversification by name count is largely cosmetic once weighting concentrates that heavily at the top — the S&P 500's ten largest holdings have at points controlled roughly 35-40% of the entire index's value, meaning an investor in a plain index fund is making a much more concentrated bet than '500 stocks' suggests. The precedent is 2000, when Cisco and Microsoft's collapse dragged down cap-weighted tech benchmarks even as hundreds of smaller constituents were barely moving, and more recently 2022, when Apple and Microsoft alone explained a disproportionate share of the S&P's drawdown. Passive index funds amplify this mechanically: they must sell proportionally as a stock's price falls relative to the index, which is flow-driven selling layered on top of the original fundamental story.",
-      "That mechanism is exactly why Nvidia's Nov. 17 earnings call matters more to the S&P 500 and Nasdaq 100 headline numbers than almost any other single print this quarter — a sharp move in either direction will shift both indices by a measurable amount independent of what the other 499 or 99 constituents do that day. It also means Monday's open and the days leading into the Dec. 8-9 FOMC meeting carry two separable risks: the macro path the Fed is actually voting on, and the index-level noise one stock's earnings reaction can inject on top of it. A finance student watching the tape should learn to separate the two before reading too much into a headline index move as a verdict on the broader economy."
+      "This week's brief keeps citing a strikingly specific number: 82-85% odds of a quarter-point hike at the Dec. 8-9 FOMC meeting. That figure isn't a Wall Street poll or a guess extracted from a Fed speech — it's calculated mechanically, in real time, from the price of a single futures contract. Every time a headline cites \"market-implied probability\" of a Fed move, it is almost always drawing on the CME Group's 30-Day Fed Funds futures market, the same data feed that powers the widely-quoted FedWatch tool. Understanding how that number is built explains why it moved so little even as a hot PPI print rattled equities on Friday.",
+      "The 30-Day Fed Funds futures contract settles based on the average effective fed funds rate over its contract month, and its price is quoted as 100 minus that expected average rate. So if December fed funds futures trade at 95.85, the implied average rate for December is 4.15%. Because the FOMC meets partway through the month, that average blends a known pre-meeting rate with an unknown post-meeting rate, weighted by how many days of the month fall on each side of Dec. 9. Solving that weighted average backward for the only unknown — the post-meeting rate — and comparing it to the two possible outcomes (hold vs. a 25-basis-point hike) yields the implied probability split, which is exactly how today's 82-85% range is derived.",
+      "What's easy to miss is that this number represents the market's probability-weighted expectation of the average rate, not a nose count of how FOMC voters are leaning — and it can swing hard on a single data surprise without a single official changing their view, simply because traders are repricing the distribution of likely outcomes. The clearest historical illustration is March 2023: Fed funds futures were pricing roughly 70% odds of a hike days before Silicon Valley Bank failed, and within 72 hours that pricing flipped toward a cut, even though no FOMC member had said a word. That volatility is the baseline against which today's stability — holding near 82-85% through both a hot CPI and a hot PPI print in the same week — looks notable.",
+      "The practical takeaway for reading markets right now: this futures-implied probability is a more current, continuously updated gauge of policy expectations than the Fed's own quarterly dot plot, which is already six weeks stale heading into December. Because the odds barely moved on today's PPI, the bond market is signaling it had already priced most of this inflation path in after this week's CPI — meaning the two data points still left on the watchlist, November retail sales and the jobs report, are the releases most likely to actually move that 82-85% number before the Dec. 8-9 decision, rather than anything from Nvidia's earnings or the equity tape."
     ]
   }
 }
