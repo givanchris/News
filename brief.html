@@ -1161,11 +1161,8 @@
 
   </div>
 
-  <!-- HOLDINGS: full-width, below the news/sidebar columns -->
-  <div class="brief-holdings-section">
-    <div class="sidebar-section-label">Holdings</div>
-    <div id="brief-holdings"><p class="brief-no-data">Loading…</p></div>
-  </div>
+  <!-- HOLDINGS: hidden during recruiting (2026-11-17). Restore this block and the
+       holdings fetches in init() to bring it back. -->
 
   <!-- WATCHLIST BAR (below both columns) -->
   <div class="brief-watch" id="brief-watchlist" style="display:none;"></div>
@@ -1617,18 +1614,13 @@
     var fetches = [
       live ? tryFetch('data/headlines.json') : Promise.resolve(null),
       tryFetch('data/brief.json'),
-      tryFetch('data/markets.json'),
-      tryFetch('data/holdings.json')
+      tryFetch('data/markets.json')
     ];
 
     Promise.all(fetches).then(function(results) {
       var headlines = results[0];
       var brief     = results[1];
       var markets   = results[2];
-      var holdings  = results[3];
-
-      renderHoldings(holdings);
-
       if (live) renderNews(headlines);
 
       var merged = brief ? JSON.parse(JSON.stringify(brief)) : null;
@@ -1654,11 +1646,6 @@
     if (live) {
       setInterval(function() {
         loadNews();
-        tryFetch('data/holdings.json').then(renderHoldings);
-      }, NEWS_REFRESH_MS);
-    } else {
-      setInterval(function() {
-        tryFetch('data/holdings.json').then(renderHoldings);
       }, NEWS_REFRESH_MS);
     }
   }
