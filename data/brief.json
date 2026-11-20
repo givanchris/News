@@ -1,91 +1,67 @@
 {
-  "lastUpdated": "2026-11-20T16:30:02-06:00",
-  "storiesPublishedAt": "2026-11-19T15:45:00-07:00",
+  "lastUpdated": "2026-11-20T15:45:00-07:00",
+  "storiesPublishedAt": "2026-11-20T15:45:00-07:00",
   "market": {
-    "sp500": {
-      "price": "6910",
-      "change": "-3.72%",
-      "dir": "down"
-    },
-    "nasdaq": {
-      "price": "25029",
-      "change": "-5.63%",
-      "dir": "down"
-    },
-    "yield": {
-      "price": "4.91%",
-      "change": "-14 bps",
-      "dir": "up"
-    },
-    "wti": {
-      "price": "$84",
-      "change": "+0.76%",
-      "dir": "up"
-    },
-    "gold": {
-      "price": "$3539",
-      "change": "+0.17%",
-      "dir": "up"
-    },
-    "dxy": {
-      "price": "103.84",
-      "change": "+0.05%",
-      "dir": "up"
-    }
+    "sp500": { "price": "6,910", "change": "-3.72%", "dir": "down" },
+    "nasdaq": { "price": "25,029", "change": "-5.63%", "dir": "down" },
+    "yield": { "price": "4.91%", "change": "-14 bps", "dir": "up" },
+    "wti": { "price": "$84", "change": "+0.76%", "dir": "up" },
+    "gold": { "price": "$3,539", "change": "+0.17%", "dir": "up" },
+    "dxy": { "price": "103.84", "change": "+0.05%", "dir": "up" }
   },
   "stories": [
     {
       "cat": "MARKETS",
-      "headline": "S&P 500 SHEDS 2.00% TO 7,176, NASDAQ 100 DROPS 2.18% TO 26,517 AS RISK-OFF TONE DEEPENS",
-      "body": "The S&P 500 fell 2.00% to 7,176 and the Nasdaq 100 dropped 2.18% to 26,517, extending the index's multi-week slide as traders priced in firmer Fed hawkishness, leadership turmoil at Nvidia, and a volatile debut from the year's largest tech IPO all on the same session.",
-      "explain": "A broad decline across both a value-tilted benchmark like the S&P 500 and a tech-heavy one like the Nasdaq 100 signals a market-wide repricing of discount rates and risk appetite rather than a single-sector story, since idiosyncratic news in one name can't move either index by two full percentage points on its own. With fed funds futures now leaning toward a December hike rather than a cut, higher expected real rates mechanically lower the present value of long-duration growth stocks' future cash flows, which is why the sell-off hit richly-valued AI-linked names hardest."
-    },
-    {
-      "cat": "TRADE",
-      "headline": "ANTHROPIC'S ANT POPS 34% AT THE OPEN, THEN FADES TO CLOSE UP 17% IN LARGEST AI IPO ON RECORD",
-      "body": "Anthropic priced its IPO at $83 a share, raising $81.3 billion, then opened trading on the Nasdaq at $111.50 \u2014 up 34% \u2014 before giving back most of the gain to close its first session at $97.17, up 17.07%, valuing the company near $1.25 trillion.",
-      "explain": "The 34% gap between the $83 offer price and the $111.50 opening trade is the first-day 'IPO pop,' the premium underwriters build in by pricing below their own estimate of fair value to guarantee allocated institutional buyers an immediate profit and ensure the deal doesn't fail to clear. The fade from $111.50 to a $97.17 close shows those early buyers taking profit once the stock became freely tradable, a pattern known as flipping, which is also why a strong open is a weak predictor of where a new listing settles once real two-sided price discovery takes over."
-    },
-    {
-      "cat": "CENTRAL BANKS",
-      "headline": "DECEMBER HIKE ODDS RISE TO 77% AS TRADERS AWAIT OCT. PCE NOV. 25, NOVEMBER JOBS DEC. 4",
-      "body": "Futures-implied odds of a quarter-point hike at the Fed's Dec. 8-9 meeting climbed to roughly 77%, up from 28% in mid-August, with the fed funds rate still at 3.75%-4.00% following October's hold; the Oct. core PCE report on Nov. 25 and the November jobs report on Dec. 4 are the last two data points before the decision.",
-      "explain": "Fed funds futures embed a probability-weighted average of possible rate paths, so the climb from 28% to 77% in three months reflects a string of data \u2014 not one release \u2014 convincing traders that inflation has proven stickier than the market assumed when cut odds still dominated. Because both the core PCE and jobs reports land in the eight days before the meeting, each has the mechanical power to swing that 77% figure sharply in either direction, which is exactly why equity and bond desks are positioning defensively into both prints rather than waiting for the FOMC itself."
-    },
-    {
-      "cat": "POLITICS",
-      "headline": "HUANG'S CONGRESSIONAL TESTIMONY SET FOR DEC. 1, NVIDIA GENERAL COUNSEL TETER TO FOLLOW DEC. 2",
-      "body": "Former Nvidia CEO Jensen Huang, who resigned Nov. 12 after disclosures about a relationship with a businesswoman U.S. intelligence suspects of ties to Chinese espionage, is now scheduled for a closed-door transcribed interview before House committees on Dec. 1, with Nvidia general counsel Tim Teter following Dec. 2; interim CEO Colette Kress continues running the company as the board searches for a permanent successor.",
-      "explain": "A transcribed interview, unlike a public hearing, is negotiated privately between committee staff and counsel and carries no subpoena deadline, which is why the date has already slipped twice since mid-November. For Nvidia shareholders, the overhang is less about the testimony's content and more about duration of uncertainty at the top of a company whose stock trades heavily on confidence in its product roadmap and export-control posture, with no permanent CEO named and the national-security angle still unresolved."
-    },
-    {
-      "cat": "COMMODITIES",
-      "headline": "GOLD SINKS 2.59% TO ~$3,628 ON FIRMER RATE PATH AS WTI CRUDE ADDS 1.14% TO ~$83",
-      "body": "Gold fell 2.59% to roughly $3,628 an ounce, extending its slide from a one-year high near $3,880 earlier this month, as rising December hike odds lifted real yields and dulled the appeal of a non-yielding asset, while WTI crude rose 1.14% to about $83 a barrel.",
-      "explain": "Gold pays no coupon or dividend, so its opportunity cost rises in lockstep with real yields; when Fed hike odds jump from 28% to 77% over a few months, the implied real rate path steepens and institutional gold holdings become more expensive to carry, which is the direct mechanism behind today's drop. Oil's smaller, opposite move reflects a separate driver \u2014 supply and geopolitical risk pricing rather than the discount-rate channel \u2014 which is why the two 'inflation hedge' commodities aren't moving together today."
+      "headline": "S&P 500 TUMBLES 3.72% TO 6,910, NASDAQ 100 SINKS 5.63% TO 25,029 AS AI-CAPEX ROUT DEEPENS",
+      "body": "The S&P 500 dropped 3.72% to 6,910 and the Nasdaq 100 fell 5.63% to 25,029, the sharpest single-session declines of the month and a steep acceleration from Thursday's 2% slide, as the tech-led selloff that began in early November widened further.",
+      "explain": "The Nasdaq 100's loss running more than 50% worse than the S&P 500's is the signature of a narrow, valuation-driven unwind rather than a broad macro shock: the index's heaviest weights are the AI hyperscalers and chipmakers whose share prices embed years of assumed data-center revenue growth, so any doubt about that growth compresses their multiples far more than it hits the diversified S&P. With the Nasdaq already down double digits from its October high, today's move confirms investors are repricing AI capital-spending plans rather than reacting to a single day's headline."
     },
     {
       "cat": "MACRO",
-      "headline": "DOLLAR INDEX STEADY AT 103.93 AS TREASURY YIELD HOLDS NEAR 5.05% HEADING INTO KEY DATA WEEK",
-      "body": "The DXY dollar index was roughly flat at 103.93 (+0.02%) and the 10-year Treasury yield held near 5.05%, both consolidating just below multi-month highs as traders position ahead of next week's core PCE print, the last major inflation read before the Fed's December decision.",
-      "explain": "A dollar index and long-end yield that are both holding near cycle highs without further upside is often a sign the hawkish repricing has largely run its course for now, with the market waiting for confirming data rather than pushing positioning further on sentiment alone. Because the 10-year yield reflects expected short-term rates plus a term premium, its stall near 5.05% even as equities sold off 2% suggests today's stock move was driven more by risk-premium repricing in equities specifically than by a fresh leg up in the broader rate outlook."
+      "headline": "10-YEAR YIELD FALLS 14 BPS TO 4.91% AS TREASURIES RALLY INTO THE EQUITY ROUT",
+      "body": "The 10-year Treasury yield slid 14 basis points to 4.91% even as the Fed's implied odds of a December hike rose, a combination that marks today as a growth scare rather than an inflation scare, with bond buyers treating Treasuries as the haven trade against the AI-led stock slide.",
+      "explain": "Yields usually rise alongside firmer hike odds, since a more hawkish path lifts the short-rate component of the curve; today's drop instead shows a flight-to-quality bid overwhelming that effect, as investors dump richly-valued equities and buy duration to hedge a slowing-growth scenario. That combination — stocks down hard, yields down too — tells a different story than a hot-inflation selloff: traders are pricing weaker forward earnings and GDP, not a Fed forced to tighten into strong growth, which is why the curve rallied on a day risk assets were pummeled."
+    },
+    {
+      "cat": "CENTRAL BANKS",
+      "headline": "DECEMBER HIKE ODDS NEAR 88% ON PREDICTION MARKETS AS OCT. PCE LOOMS NOV. 25",
+      "body": "Fed funds futures and prediction markets now put the odds of a quarter-point hike at the Dec. 8-9 FOMC meeting near 88%, up from roughly 77% a day earlier and 28% in mid-August, with the funds rate still at 3.75%-4.00%; the Oct. core PCE report on Nov. 25 and the November jobs report on Dec. 4 are the final inputs before the decision.",
+      "explain": "A jump of more than ten points in implied hike odds in a single day reflects traders pulling forward their inflation-persistence view faster than any one data release can explain, which usually means positioning catching up to a string of recent prints rather than one new shock. Because both the core PCE and payrolls reports land in the eight days before the meeting, either one has the mechanical power to swing that 88% figure sharply — a hot PCE print would cement the hike, while a soft jobs number could reopen the debate even this late in the cycle."
+    },
+    {
+      "cat": "COMMODITIES",
+      "headline": "GOLD EDGES UP 0.17% TO $3,539, WTI CRUDE ADDS 0.76% TO $84 AS HAVEN FLOWS DIVERGE",
+      "body": "Gold rose a modest 0.17% to roughly $3,539 an ounce and WTI crude gained 0.76% to about $84 a barrel, both far calmer than the equity rout, while the dollar index was essentially flat at 103.84 (+0.05%).",
+      "explain": "Gold's muted move despite a sharp risk-off day shows the haven bid going overwhelmingly into Treasuries rather than bullion today, likely because falling yields already do most of gold's job of lowering the opportunity cost of holding a non-yielding asset, leaving less incremental demand for gold specifically. A flat dollar alongside falling yields is also notable: normally lower U.S. rates would pressure the dollar versus other currencies, so DXY holding steady suggests other major economies are seeing comparable safe-haven demand for their own currencies today."
+    },
+    {
+      "cat": "POLITICS",
+      "headline": "HUANG'S CLOSED-DOOR HOUSE TESTIMONY CONFIRMED FOR DEC. 1, NVIDIA GC TETER TO FOLLOW DEC. 2",
+      "body": "Former Nvidia CEO Jensen Huang, who resigned Nov. 12 amid national-security concerns about his ties to a businesswoman U.S. intelligence suspects of links to Chinese espionage, is confirmed for a closed-door, transcribed interview before the House Foreign Affairs, Intelligence, and China select committees on Dec. 1, with Nvidia general counsel Tim Teter following Dec. 2.",
+      "explain": "A transcribed interview is negotiated privately between committee staff and counsel with no public broadcast and no subpoena deadline, which is why these dates slipped from an initially floated pre-Thanksgiving appearance to early December. For Nvidia shareholders already absorbing today's Nasdaq-led selloff, the lingering leadership vacuum compounds the AI-capex anxiety: a chipmaker at the center of the data-center buildout trading without a permanent CEO or resolved national-security question adds idiosyncratic risk on top of the sector-wide growth scare."
+    },
+    {
+      "cat": "TRADE",
+      "headline": "AI DATA-CENTER SPENDING DOUBTS WIDEN NASDAQ'S UNDERPERFORMANCE VERSUS S&P",
+      "body": "The gap between today's 5.63% Nasdaq 100 decline and the S&P 500's 3.72% drop underscores a selloff concentrated in AI infrastructure names, as investors increasingly question whether hyperscalers' data-center capital spending will generate profits fast enough to justify current valuations.",
+      "explain": "When a cap-weighted tech index falls meaningfully more than a broad index, the arithmetic says a handful of mega-cap names are doing most of the damage — here, the chipmakers and cloud providers whose capital expenditure guidance has been the market's main AI-growth proxy all year. The mechanism investors are repricing is straightforward: AI capex is booked as depreciation against future revenue that has to materialize on a multi-year timeline, and any sign that timeline is slipping forces a markdown of expected returns on hundreds of billions in committed spending, which hits the Nasdaq's AI-heavy weighting far harder than the diversified S&P."
     }
   ],
   "sports": [],
   "watchlist": [
-    "Oct. core PCE inflation data \u2014 Nov. 25, the last major print before the Fed's Dec. 8-9 meeting",
-    "November jobs report \u2014 Dec. 4, landing four days before the FOMC decision",
-    "Fed's Dec. 8-9 FOMC meeting \u2014 hike odds near 77% with the funds rate at 3.75%-4.00%",
-    "Jensen Huang's closed-door House testimony \u2014 Dec. 1, with Nvidia GC Tim Teter following Dec. 2",
-    "ANT's post-IPO trading \u2014 closed first session at $97.17 (+17% from offer); index-inclusion speculation building"
+    "Oct. core PCE inflation data — Nov. 25, the last major print before the Fed's Dec. 8-9 meeting; Oxford Economics projects headline PCE near 3.8% y/y",
+    "November jobs report — Dec. 4, landing four days before the FOMC decision",
+    "Fed's Dec. 8-9 FOMC meeting — hike odds near 88% with the funds rate at 3.75%-4.00%",
+    "Jensen Huang's closed-door House testimony — Dec. 1, with Nvidia GC Tim Teter following Dec. 2",
+    "Hyperscaler AI capex guidance — watch for any cuts to 2027 data-center spending plans as the key catalyst for the Nasdaq's underperformance"
   ],
   "deepDive": {
-    "title": "Why Anthropic's IPO Popped 34% at the Open and Still Faded to 17%",
+    "title": "Why Treasury Yields Fell as Stocks Cratered — and Hike Odds Rose",
     "content": [
-      "Today's biggest market story wasn't just that Anthropic went public \u2014 it's the shape of the move. ANT priced at $83 a share, opened at $111.50, and closed at $97.17. That 34%-then-17% pattern is not random noise; it's the signature of how IPO pricing actually works, and it shows up in nearly every hot offering, from Airbnb's 2020 debut to SpaceX's recent record-setting listing. Understanding why underwriters leave that much money on the table \u2014 and why the market claws some of it back within hours \u2014 is one of the clearest windows into how primary and secondary markets price the same share differently.",
-      "The mechanism starts with book-building. Underwriters survey institutional demand before the deal prices, then deliberately set the offer price below their own estimate of where the stock will trade once public \u2014 academics call this 'IPO underpricing.' It exists for a practical reason: allocated buyers (the banks' best clients) need a near-certain profit to keep participating in future deals, and a price that's too aggressive risks a deal failing to clear entirely. For a $1.3 trillion-plus valuation company with $26 billion in strategic commitments from chipmakers and cloud providers, as Anthropic had, the bank's incentive to avoid a failed or flat debut is enormous \u2014 so they leave room to pop.",
-      "What's less obvious is why the pop fades. The investors who got $83 allocations have an immediate, nearly risk-free gain once the stock opens at $111.50, and many sell into that strength within the first session \u2014 a behavior the Street calls 'flipping.' That selling pressure meets a public market that hasn't yet done its own independent valuation work; retail and late-arriving institutional demand that chased the open absorbs the flip-driven supply, and the price settles lower. This is exactly the pattern seen in 2021's hottest SPAC and tech debuts, where some first-day pops exceeding 100% were cut by more than half within the first week once allocation-driven buying was exhausted.",
-      "For a market already repricing Fed hike odds and digesting Nvidia's leadership vacancy, ANT's fade matters beyond one stock. A close at 17% above offer \u2014 strong, but a third of the opening move \u2014 tells you real secondary-market demand for a $1.2+ trillion AI bet is genuine but not unlimited, especially with the 10-year yield near 5.05% raising the discount rate applied to any long-duration growth story. Watch whether ANT holds above $97 into next week; a further slide toward the IPO price would suggest the index-inclusion and strategic-investor narrative isn't enough to offset a market broadly repricing for higher-for-longer rates."
+      "Today's brief contains a combination that looks contradictory at first glance: the S&P 500 fell 3.72%, the Nasdaq 100 fell 5.63%, the 10-year Treasury yield fell 14 basis points to 4.91%, and the market's implied odds of a December Fed hike climbed to roughly 88%. Stocks and bonds both selling off together, or both rallying together, is common. Stocks falling while bonds rally even as hike odds rise is a more specific signature, and it tells you something precise about what kind of fear is driving the tape — a growth scare concentrated in a sector, not a broad inflation shock.",
+      "The mechanism runs through what each asset is actually pricing. A bond yield is roughly the expected path of short-term rates plus a term premium for locking up money over time. When investors expect weaker growth or earnings ahead, two things happen simultaneously: equity holders demand a lower price for future cash flows they now see as riskier or smaller, and bond buyers bid up Treasuries because a safe, fixed coupon becomes relatively more attractive than a risky equity stake — that buying pressure pushes bond prices up and yields down, regardless of what the Fed does next. The December-hike pricing is a separate, slower-moving signal rooted in recent inflation data, not today's equity move; the two are being driven by different information, which is exactly why they can move in opposite directions on the same day.",
+      "What's easy to miss is that this pattern discriminates between selloff types with real predictive value. In 2022, when inflation was the dominant fear, stocks and bond yields frequently fell and rose together — a hot CPI print hurt equities and pushed yields higher at the same time, because the market was pricing a more aggressive, growth-killing Fed. The opposite pattern, seen in several AI-related selloffs through 2026, has instead shown yields falling on weak days for AI-linked stocks, which traders and strategists have explicitly read as the market treating this as a capital-spending and earnings-durability risk rather than something the Fed needs to fight with tighter policy.",
+      "For a student watching this market, the practical takeaway is to use the yield move as a diagnostic, not just a number. If the Nasdaq keeps underperforming the S&P while yields keep falling, that is the bond market voting that the risk is concentrated AI-capex disappointment, which argues against expecting the Fed to come to the rescue with faster cuts — a Fed facing 88% hike odds is in no position to ease even if tech keeps sliding. Watch whether Monday's Oct. PCE print pushes yields the other way: a hot inflation number arriving on top of a growth scare would be a genuinely worse setup, since it would remove the one offsetting force — falling rates — that has partly cushioned equity valuations so far this month."
     ]
   }
 }
